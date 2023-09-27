@@ -1,0 +1,5 @@
+<map id="LevelSet::WrapperClass" name="LevelSet::WrapperClass">
+<area shape="rect" id="node1" title="Wrapper executing stages while mesh refinement." alt="" coords="126,5,288,31"/>
+<area shape="rect" id="node2" href="$struct_level_set_1_1_wrapper_class_error_projection.html" title="Use peculated errors on all levels while mesh projection." alt="" coords="5,79,196,120"/>
+<area shape="rect" id="node3" href="$struct_level_set_1_1_wrapper_class_inital_solution.html" title="Used to execute inital mesh approximation while mesh refinement." alt="" coords="220,79,410,120"/>
+</map>

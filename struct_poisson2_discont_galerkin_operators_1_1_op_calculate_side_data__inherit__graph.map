@@ -1,0 +1,4 @@
+<map id="Poisson2DiscontGalerkinOperators::OpCalculateSideData" name="Poisson2DiscontGalerkinOperators::OpCalculateSideData">
+<area shape="rect" id="node1" title="Operator tp collect data from elements on the side of Edge/Face." alt="" coords="5,79,231,120"/>
+<area shape="rect" id="node2" href="$class_face_side_op.html" title=" " alt="" coords="71,5,165,31"/>
+</map>

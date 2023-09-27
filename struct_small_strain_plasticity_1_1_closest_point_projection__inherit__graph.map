@@ -1,0 +1,5 @@
+<map id="SmallStrainPlasticity::ClosestPointProjection" name="SmallStrainPlasticity::ClosestPointProjection">
+<area shape="rect" id="node1" title="Closest point projection algorithm." alt="" coords="106,5,269,46"/>
+<area shape="rect" id="node2" href="$struct_small_strain_j2_plasticity.html" title="J2 plasticity (Kinematic Isotropic (Linear) Hardening)" alt="" coords="5,94,162,120"/>
+<area shape="rect" id="node3" href="$struct_small_strain_paraboloidal_plasticity.html" title="Small strain plasticity with paraboloidal yield criterion (Isotropic Hardening)" alt="" coords="186,94,400,120"/>
+</map>

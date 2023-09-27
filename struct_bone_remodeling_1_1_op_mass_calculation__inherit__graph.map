@@ -1,0 +1,6 @@
+<map id="BoneRemodeling::OpMassCalculation" name="BoneRemodeling::OpMassCalculation">
+<area shape="rect" id="node1" title="Calculate mass before approximation." alt="" coords="5,256,248,282"/>
+<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="9,168,244,208"/>
+<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="19,79,234,120"/>
+<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="50,5,203,31"/>
+</map>

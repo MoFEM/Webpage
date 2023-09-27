@@ -1,0 +1,4 @@
+<map id="MoFEM::MeshsetsManager" name="MoFEM::MeshsetsManager">
+<area shape="rect" id="node1" title="Interface for managing meshsets containing materials and boundary conditions." alt="" coords="5,79,188,105"/>
+<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_unknown_interface.html" title="base class for all interface classes" alt="" coords="6,5,187,31"/>
+</map>

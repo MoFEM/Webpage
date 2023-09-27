@@ -1,0 +1,4 @@
+<map id="MoFEM::PrismInterface" name="MoFEM::PrismInterface">
+<area shape="rect" id="node1" title="Create interface from given surface and insert flat prisms in&#45;between." alt="" coords="16,79,176,105"/>
+<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_unknown_interface.html" title="base class for all interface classes" alt="" coords="5,5,187,31"/>
+</map>

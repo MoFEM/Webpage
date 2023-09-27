@@ -1,0 +1,5 @@
+<map id="GroundSurfaceTemperature::OpGetTriTemperatureAtGaussPts" name="GroundSurfaceTemperature::OpGetTriTemperatureAtGaussPts">
+<area shape="rect" id="node1" title="opearator to caulate temperature at Gauss points \infroup mofem_thermal_elem" alt="" coords="87,109,312,150"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,215,46"/>
+<area shape="rect" id="node3" title=" " alt="" coords="239,13,339,39"/>
+</map>

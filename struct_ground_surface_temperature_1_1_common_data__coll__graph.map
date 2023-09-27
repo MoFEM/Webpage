@@ -1,0 +1,4 @@
+<map id="GroundSurfaceTemperature::CommonData" name="GroundSurfaceTemperature::CommonData">
+<area shape="rect" id="node1" title="common data used by volume elements \infroup mofem_thermal_elem" alt="" coords="5,94,186,135"/>
+<area shape="rect" id="node2" title=" " alt="" coords="45,5,146,31"/>
+</map>

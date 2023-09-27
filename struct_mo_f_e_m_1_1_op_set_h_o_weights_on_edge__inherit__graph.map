@@ -1,0 +1,7 @@
+<map id="MoFEM::OpSetHOWeightsOnEdge" name="MoFEM::OpSetHOWeightsOnEdge">
+<area shape="rect" id="node1" title="Modify integration weights on face to take in account higher&#45;order geometry." alt="" coords="9,256,236,282"/>
+<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_op_set_h_o_weights_on_sub_dim_3_012_01_4.html" title=" " alt="" coords="13,330,232,371"/>
+<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_edge_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for EDGE element" alt="" coords="5,168,240,208"/>
+<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="15,79,230,120"/>
+<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="46,5,199,31"/>
+</map>

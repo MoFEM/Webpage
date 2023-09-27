@@ -1,0 +1,4 @@
+<map id="MoFEM::OpGetHOTangentOnEdge" name="MoFEM::OpGetHOTangentOnEdge">
+<area shape="rect" id="node1" title="Calculate tangent vector on edge form HO geometry approximation." alt="" coords="5,79,232,105"/>
+<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="42,5,195,31"/>
+</map>

@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['x_0',['x',['../struct_coords_and_handle.html#a64679e38ffd74d99e4622630c0dbafac',1,'CoordsAndHandle::x()'],['../struct_mo_f_e_m_1_1_petsc_data.html#ac2a6f6f72f81d4e62d1d58deb591827b',1,'MoFEM::PetscData::x()'],['../struct_mix_transport_1_1_generic_material.html#a6301e029084b9ee94736b7c6b8ae2da5',1,'MixTransport::GenericMaterial::x()']]],
+  ['x_1',['X',['../struct_constrain_matrix_ctx.html#a154d8a86aacb337ac439f149f17a2325',1,'ConstrainMatrixCtx::X()'],['../struct_p_c_m_g_sub_matrix_ctx.html#ac9c84943a7a9558a0eefcdc6c8f51f6d',1,'PCMGSubMatrixCtx::X()'],['../struct_clipper_lib_1_1_int_point.html#a608d16d39c8762e6c3c0a688efb310b6',1,'ClipperLib::IntPoint::X()'],['../struct_clipper_lib_1_1_double_point.html#a675837cc05f20447313789b82d84ad31',1,'ClipperLib::DoublePoint::X()']]],
+  ['x0_2',['x0',['../struct_arc_length_ctx.html#aa47c4ba25887157b3d100b379b0047bb',1,'ArcLengthCtx::x0()'],['../structspa__data.html#a359117bec7996406b4426a09eb500345',1,'spa_data::x0()']]],
+  ['x1_3',['x1',['../structspa__data.html#af6a343a18c23b68a0512c1317de10cce',1,'spa_data']]],
+  ['x2_4',['x2',['../structspa__data.html#a85c9f7c951226f131061bc050cebcb19',1,'spa_data']]],
+  ['x2fieldptr_5',['x2FieldPtr',['../struct_monitor.html#acffc024537dbec0f23d3f961fc898ed0',1,'Monitor']]],
+  ['x3_6',['x3',['../structspa__data.html#a6ec16299c6c46b63f76d9591999dd243',1,'spa_data']]],
+  ['x4_7',['x4',['../structspa__data.html#af9aee436eea5b58a52b34a447d536a3c',1,'spa_data']]],
+  ['x_5fmat_8',['X_mat',['../struct_b_cs___r_v_e_lagrange___disp_1_1_op_dmat_rhs.html#a6a38fc2aa9359da4f50799dda773977a',1,'BCs_RVELagrange_Disp::OpDmatRhs::X_mat()'],['../struct_b_cs___r_v_e_lagrange___periodic_1_1_op_dmat_rhs.html#a8b23e1a1fe250c82952f1d12c5ae17a1',1,'BCs_RVELagrange_Periodic::OpDmatRhs::X_mat()'],['../struct_b_cs___r_v_e_lagrange___trac_1_1_op_r_v_e_b_cs_rhs___cal.html#a4e7261e04e56b0b69946871f3ab1f895',1,'BCs_RVELagrange_Trac::OpRVEBCsRhs_Cal::X_mat()']]],
+  ['x_5ft_9',['x_t',['../struct_mo_f_e_m_1_1_petsc_data.html#a5d1f1347bd40cee1c3ea4f420303a444',1,'MoFEM::PetscData']]],
+  ['x_5ftt_10',['x_tt',['../struct_mo_f_e_m_1_1_petsc_data.html#a86b1c7acded830926ac953e2e06ae742',1,'MoFEM::PetscData']]],
+  ['xatpts_11',['xAtPts',['../struct_data_at_integration_pts_simple_rods.html#a40dd7465cd397f9c3d76aa7c3baf2a2b',1,'DataAtIntegrationPtsSimpleRods::xAtPts()'],['../struct_meta_spring_b_c_1_1_data_at_integration_pts_springs.html#a6f25b1a51a85ec8e2c3358704990edda',1,'MetaSpringBC::DataAtIntegrationPtsSprings::xAtPts()']]],
+  ['xcoord_12',['xcoord',['../struct_face___cen_pos___handle.html#ad1dbbb91447d120d0bd877ca0226fcd0',1,'Face_CenPos_Handle']]],
+  ['xcoord_5ftag_13',['xcoord_tag',['../structxcoord__tag.html',1,'']]],
+  ['xdotptr_14',['xDotPtr',['../struct_op_rhs.html#a1e8f4607fb9165bb0bf9525c6b66c154',1,'OpRhs::xDotPtr()'],['../struct_op_lhs.html#a58cdc4f598bde462bba54372fc6cf472',1,'OpLhs::xDotPtr()']]],
+  ['xi_15',['xi',['../structspa__data.html#aa0d6ea1b647b2b8175fd44f9b51a3832',1,'spa_data']]],
+  ['xif_16',['xiF',['../struct_op_calculate_f_stab.html#afbcffd3e198f1d430b34af807012714b',1,'OpCalculateFStab']]],
+  ['xinitatpts_17',['xInitAtPts',['../struct_data_at_integration_pts_simple_rods.html#ad4c84d8715c1fde555829e4491fb02c6',1,'DataAtIntegrationPtsSimpleRods::xInitAtPts()'],['../struct_meta_spring_b_c_1_1_data_at_integration_pts_springs.html#a017a4d1a92d25161cb1ca455bb4969c6',1,'MetaSpringBC::DataAtIntegrationPtsSprings::xInitAtPts()']]],
+  ['xlambda_18',['xLambda',['../struct_arc_length_ctx.html#aec9a2f23580294ea2ddd716ffb0d09b3',1,'ArcLengthCtx']]],
+  ['xproblem_19',['xProblem',['../struct_constrain_matrix_ctx.html#ad71b7f918bfeccc1b07064f5c5e27961',1,'ConstrainMatrixCtx']]],
+  ['xptr_20',['xPtr',['../struct_op_calculate_displacement.html#a9f487540b1c464fa526ec48503576d3e',1,'OpCalculateDisplacement::xPtr()'],['../struct_op_rhs.html#a0b633a47f7cc85ac61f4017d3658333a',1,'OpRhs::xPtr()'],['../struct_op_lhs.html#a4ea79acbffd4f08e006a02cf24532b69',1,'OpLhs::xPtr()'],['../struct_op_error.html#abfd8efe196d77591369994a47f64d804',1,'OpError::xPtr()']]],
+  ['xptr_21',['XPtr',['../struct_op_calculate_displacement.html#a5ece6a707a4bfe1a7b7be1938d1d8f33',1,'OpCalculateDisplacement']]],
+  ['xy_5fterm_5fsummation_22',['xy_term_summation',['../spa_8c.html#a9ddd069137295ed94b90f8db0e46ba75',1,'spa.c']]]
+];

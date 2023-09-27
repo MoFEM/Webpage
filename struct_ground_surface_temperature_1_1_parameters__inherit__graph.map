@@ -1,0 +1,6 @@
+<map id="GroundSurfaceTemperature::Parameters" name="GroundSurfaceTemperature::Parameters">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,186,111"/>
+<area shape="rect" id="node2" href="$struct_ground_surface_temperature_1_1_asphalt.html" title=" " alt="" coords="234,5,414,46"/>
+<area shape="rect" id="node3" href="$struct_ground_surface_temperature_1_1_bare_soil.html" title=" " alt="" coords="234,71,414,111"/>
+<area shape="rect" id="node4" href="$struct_ground_surface_temperature_1_1_concrete.html" title=" " alt="" coords="234,136,414,177"/>
+</map>
