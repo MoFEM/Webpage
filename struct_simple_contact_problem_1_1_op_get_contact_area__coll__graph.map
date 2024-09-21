@@ -1,9 +1,0 @@
-<map id="SimpleContactProblem::OpGetContactArea" name="SimpleContactProblem::OpGetContactArea">
-<area shape="rect" id="node1" title=" " alt="" coords="478,139,633,180"/>
-<area shape="rect" id="node2" href="$class_contact_op.html" title=" " alt="" coords="91,5,176,31"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,55,262,96"/>
-<area shape="rect" id="node4" href="$classdouble.html" title=" " alt="" coords="104,120,163,146"/>
-<area shape="rect" id="node5" href="$classbool.html" title=" " alt="" coords="111,169,156,195"/>
-<area shape="rect" id="node6" title=" " alt="" coords="83,219,184,244"/>
-<area shape="rect" id="node7" href="$class_range.html" title=" " alt="" coords="104,268,163,294"/>
-</map>

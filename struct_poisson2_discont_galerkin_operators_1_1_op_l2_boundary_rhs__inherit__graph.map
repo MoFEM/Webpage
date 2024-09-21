@@ -1,6 +1,0 @@
-<map id="Poisson2DiscontGalerkinOperators::OpL2BoundaryRhs" name="Poisson2DiscontGalerkinOperators::OpL2BoundaryRhs">
-<area shape="rect" id="node1" title="Operator to evaluate Dirichlet boundary conditions using DG." alt="" coords="5,241,231,282"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for TRI element" alt="" coords="62,168,174,193"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="11,79,225,120"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="41,5,195,31"/>
-</map>

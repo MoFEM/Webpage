@@ -1,6 +1,0 @@
-<map id="MixTransport::MixTransportElement::OpSkeleton" name="MixTransport::MixTransportElement::OpSkeleton">
-<area shape="rect" id="node1" title="calculate jump on entities" alt="" coords="32,256,213,297"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for TRI element" alt="" coords="5,168,240,208"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="15,79,230,120"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="46,5,199,31"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="BCs_RVELagrange_Trac::OpRVEBCsRhs_Assemble" name="BCs_RVELagrange_Trac::OpRVEBCsRhs_Assemble">
-<area shape="rect" id="node1" title="\biref operator to calculate the RHS of the constrain for the RVE boundary conditions" alt="" coords="536,120,725,161"/>
-<area shape="rect" id="node2" title=" " alt="" coords="195,5,404,46"/>
-<area shape="rect" id="node3" title=" " alt="" coords="241,70,358,96"/>
-<area shape="rect" id="node4" href="$struct_b_cs___r_v_e_lagrange___trac_1_1_common_data.html" title=" " alt="" coords="215,120,384,161"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,128,104,153"/>
-<area shape="rect" id="node6" title=" " alt="" coords="241,185,358,211"/>
-<area shape="rect" id="node7" title=" " alt="" coords="249,240,350,265"/>
-</map>

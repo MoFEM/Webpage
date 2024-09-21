@@ -1,7 +1,0 @@
-<map id="MyOp&lt; OP &gt;" name="MyOp&lt; OP &gt;">
-<area shape="rect" id="node1" title="Operator used to check consistency between local coordinates and global cooridnates for integrated po..." alt="" coords="53,271,153,297"/>
-<area shape="rect" id="node2" href="$class_o_p.html" title=" " alt="" coords="5,183,46,208"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_contact_prism_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for Contact Prism element" alt="" coords="69,168,294,223"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="74,79,289,120"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="105,5,258,31"/>
-</map>

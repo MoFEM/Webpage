@@ -1,9 +1,0 @@
-<map id="NonlinearElasticElement::OpRhsPiolaKirchhoff" name="NonlinearElasticElement::OpRhsPiolaKirchhoff">
-<area shape="rect" id="node1" title=" " alt="" coords="751,77,916,118"/>
-<area shape="rect" id="node5" href="$struct_nonlinear_elastic_element_1_1_op_rhs_eshelby_stress.html" title=" " alt="" coords="991,5,1156,46"/>
-<area shape="rect" id="node6" href="$struct_periodic_nitsche_constrains_1_1_op_calculate_homogenised_stress_volume_integral.html" title=" " alt="" coords="964,70,1183,126"/>
-<area shape="rect" id="node7" href="$struct_smoother_1_1_op_rhs_smoother.html" title=" " alt="" coords="982,150,1165,176"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="469,77,703,118"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="207,77,421,118"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,85,159,111"/>
-</map>

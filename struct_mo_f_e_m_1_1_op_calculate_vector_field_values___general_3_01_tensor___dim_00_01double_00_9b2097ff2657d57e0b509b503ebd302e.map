@@ -1,9 +1,0 @@
-<map id="MoFEM::OpCalculateVectorFieldValues_General&lt; Tensor_Dim, double, ublas::row_major, DoubleAllocator &gt;" name="MoFEM::OpCalculateVectorFieldValues_General&lt; Tensor_Dim, double, ublas::row_major, DoubleAllocator &gt;">
-<area shape="rect" id="node1" title="Calculate field values (template specialization) for tensor field rank 1, i.e. vector field." alt="" coords="469,85,677,156"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_op_calculate_scalar_field_gradient___general_3_01_tensor___dim_00_01double_039e398c0a63edb11ecf76b11e70640f4.html" title="Evaluate field gradient values for scalar field, i.e. gradient is tensor rank 1 (vector),..." alt="" coords="725,5,926,76"/>
-<area shape="rect" id="node6" href="$struct_mo_f_e_m_1_1_op_calculate_scalar_field_hessian.html" title="Evaluate field gradient values for scalar field, i.e. gradient is tensor rank 1 (vector),..." alt="" coords="730,100,921,141"/>
-<area shape="rect" id="node7" href="$struct_mo_f_e_m_1_1_op_calculate_vector_field_values.html" title="Get values at integration pts for tensor filed rank 1, i.e. vector field." alt="" coords="733,166,918,206"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="207,100,421,141"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,108,159,134"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_op_calculate_scalar_field_gradient.html" title="Get field gradients at integration pts for scalar filed rank 0, i.e. vector field." alt="" coords="974,20,1166,61"/>
-</map>

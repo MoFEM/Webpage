@@ -1,0 +1,13 @@
+<map id="MoFEM::GenericCubitBcData" name="MoFEM::GenericCubitBcData">
+<area shape="rect" id="node1" title="Generic bc data structure." alt="" coords="5,214,215,241"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1AccelerationCubitBcData.html" title="Definition of the acceleration bc data structure." alt="" coords="287,5,480,47"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1CfgCubitBcData.html" title="Definition of the cfd_bc data structure." alt="" coords="293,71,474,98"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1DisplacementCubitBcData.html" title="Definition of the displacement bc data structure." alt="" coords="282,123,485,164"/>
+<area shape="rect" id="node7" href="$structMoFEM_1_1ForceCubitBcData.html" title="Definition of the force bc data structure." alt="" coords="286,189,481,215"/>
+<area shape="rect" id="node8" href="$structMoFEM_1_1HeatFluxCubitBcData.html" title="Definition of the heat flux bc data structure." alt="" coords="274,239,493,266"/>
+<area shape="rect" id="node9" href="$structMoFEM_1_1PressureCubitBcData.html" title="Definition of the pressure bc data structure." alt="" coords="276,290,491,317"/>
+<area shape="rect" id="node10" href="$structMoFEM_1_1TemperatureCubitBcData.html" title="Definition of the temperature bc data structure." alt="" coords="263,341,504,367"/>
+<area shape="rect" id="node11" href="$structMoFEM_1_1VelocityCubitBcData.html" title="Definition of the velocity bc data structure." alt="" coords="278,391,489,418"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1DisplacementCubitBcDataWithRotation.html" title="A specialized version of DisplacementCubitBcData that includes an additional rotation offset." alt="" coords="552,93,755,135"/>
+<area shape="rect" id="node6" href="$structMoFEM_1_1MPCsType.html" title=" " alt="" coords="581,159,725,186"/>
+</map>

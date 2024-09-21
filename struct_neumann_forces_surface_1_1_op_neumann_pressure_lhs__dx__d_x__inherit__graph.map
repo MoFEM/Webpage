@@ -1,6 +1,0 @@
-<map id="NeumannForcesSurface::OpNeumannPressureLhs_dx_dX" name="NeumannForcesSurface::OpNeumannPressureLhs_dx_dX">
-<area shape="rect" id="node1" title="LHS&#45;operator for pressure element (spatial configuration)" alt="" coords="5,241,225,282"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for TRI element" alt="" coords="51,168,179,193"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="8,79,222,120"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="38,5,192,31"/>
-</map>

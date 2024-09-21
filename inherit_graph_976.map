@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_meta_simple_rod_element.html" title="Set of functions declaring elements and setting operators for simple rod element." alt="" coords="5,5,168,31"/>
+<area shape="rect" id="node1" href="$structMixTransport_1_1GenericMaterial.html" title="Generic material model for unsaturated water transport." alt="" coords="5,35,224,61"/>
+<area shape="rect" id="node2" href="$structMixTransport_1_1CommonMaterialData.html" title=" " alt="" coords="272,35,531,61"/>
+<area shape="rect" id="node3" href="$structMixTransport_1_1MaterialDarcy.html" title=" " alt="" coords="579,5,785,32"/>
+<area shape="rect" id="node4" href="$structMixTransport_1_1MaterialWithAutomaticDifferentiation.html" title=" " alt="" coords="583,57,781,98"/>
+<area shape="rect" id="node5" href="$structMixTransport_1_1MaterialVanGenuchten.html" title=" " alt="" coords="833,57,1025,98"/>
 </map>

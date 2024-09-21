@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['how_20to_20add_20a_20new_20module_20and_20program_0',['How to add a new module and program',['../how_to_add_new_module_and_program.html',1,'']]],
-  ['how_20to_20compile_20a_20program_1',['How to compile a program',['../how_to_compile_program.html',1,'']]],
-  ['how_20to_20run_20this_2',['How to run this',['../md_users_modules_tutorials_scl_9__r_e_a_d_m_e.html',1,'']]],
-  ['how_20to_3a_20squashing_20for_20an_20external_20pr_3',['How to: Squashing for an external PR',['../_squash_f_a_q.html',1,'']]]
+  ['installation_20with_20docker_20_2d_20advanced_26089',['Installation with Docker - advanced',['../install_docker_advanced.html',1,'']]],
+  ['installation_20with_20docker_20_2d_20jupyterhub_26090',['Installation with Docker - JupyterHub',['../install_docker_jupyterhub.html',1,'']]],
+  ['installation_20on_20macos_26091',['Installation on macOS',['../install_macosx.html',1,'']]],
+  ['installation_20with_20spack_20_28advanced_29_26092',['Installation with Spack (Advanced)',['../install_spack.html',1,'installation']]],
+  ['installation_20on_20ubuntu_26093',['Installation on Ubuntu',['../install_ubuntu.html',1,'']]],
+  ['installation_20with_20spack_20_28scripts_29_26094',['Installation with Spack (Scripts)',['../installation.html',1,'']]],
+  ['introduction_26095',['Introduction',['../md_tutorials_scl-11_README.html',1,'']]],
+  ['introduction_26096',['Introduction',['../md_tutorials_scl-1_README.html',1,'']]]
 ];

@@ -1,9 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,150,160,176"/>
-<area shape="rect" id="node2" href="$struct_thermal_element_1_1_op_get_field_at_gauss_pts.html" title=" " alt="" coords="208,55,458,111"/>
-<area shape="rect" id="node5" href="$struct_thermal_element_1_1_op_get_field_at_gauss_pts.html" title=" " alt="" coords="215,135,451,191"/>
-<area shape="rect" id="node7" href="$struct_thermal_element_1_1_op_get_field_at_gauss_pts.html" title="operator to calculate temperature and rate of temperature at Gauss points" alt="" coords="238,215,428,255"/>
-<area shape="rect" id="node3" href="$struct_thermal_element_1_1_op_get_tet_rate_at_gauss_pts.html" title="operator to calculate temperature rate at Gauss pts" alt="" coords="506,5,686,46"/>
-<area shape="rect" id="node4" href="$struct_thermal_element_1_1_op_get_tet_temperature_at_gauss_pts.html" title="operator to calculate temperature at Gauss pts" alt="" coords="506,71,686,111"/>
-<area shape="rect" id="node6" href="$struct_thermal_element_1_1_op_get_tri_temperature_at_gauss_pts.html" title="operator to calculate temperature at Gauss pts" alt="" coords="508,143,685,183"/>
+<area shape="rect" id="node1" href="$structMoFEM_1_1TSAdaptMoFEM.html" title="Custom TSAdaptivity in MoFEM." alt="" coords="5,5,187,32"/>
 </map>

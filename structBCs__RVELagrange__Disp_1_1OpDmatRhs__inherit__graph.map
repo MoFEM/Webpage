@@ -1,0 +1,7 @@
+<map id="BCs_RVELagrange_Disp::OpDmatRhs" name="BCs_RVELagrange_Disp::OpDmatRhs">
+<area shape="rect" id="node1" title=" " alt="" coords="193,71,369,112"/>
+<area shape="rect" id="node3" href="$structBCs__RVELagrange__Disp_1_1OpRVEBCsRhs.html" title="\biref operator to calculate the RHS of the constrain for the RVE boundary conditions" alt="" coords="417,5,593,47"/>
+<area shape="rect" id="node4" href="$structBCs__RVELagrange__Disp_1_1OpRVEBCsRhsHomoC.html" title="\biref operator to calculate the RHS for the calculation of the homgoensied stiffness matrix" alt="" coords="417,71,593,112"/>
+<area shape="rect" id="node5" href="$structBCs__RVELagrange__Disp_1_1OpRVEHomoStress.html" title="\biref operator to calculate the RVE homogenised stress" alt="" coords="417,136,593,177"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,78,145,105"/>
+</map>

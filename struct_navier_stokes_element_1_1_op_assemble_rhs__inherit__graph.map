@@ -1,9 +1,0 @@
-<map id="NavierStokesElement::OpAssembleRhs" name="NavierStokesElement::OpAssembleRhs">
-<area shape="rect" id="node1" title="Base class for operators assembling RHS." alt="" coords="644,71,793,111"/>
-<area shape="rect" id="node5" href="$struct_navier_stokes_element_1_1_op_assemble_rhs_pressure.html" title="Assemble the pressure component of the RHS vector." alt="" coords="859,5,1039,46"/>
-<area shape="rect" id="node6" href="$struct_navier_stokes_element_1_1_op_assemble_rhs_velocity_lin.html" title="Assemble linear part of the velocity component of the RHS vector." alt="" coords="853,71,1045,111"/>
-<area shape="rect" id="node7" href="$struct_navier_stokes_element_1_1_op_assemble_rhs_velocity_non_lin.html" title="Assemble non&#45;linear part of the velocity component of the RHS vector." alt="" coords="841,136,1057,177"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="469,78,596,104"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="207,71,421,111"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,78,159,104"/>
-</map>

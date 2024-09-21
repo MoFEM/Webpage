@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_mo_f_e_m_1_1_petsc_global_idx__mi__tag.html" title=" " alt="" coords="5,5,170,46"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,57,164,98"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1OpEssentialRhsImpl_3_01TemperatureCubitBcData_00_011_00_011_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="212,5,420,61"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01UNKNOWNSET_01_4_00_011_00_011_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="224,86,408,157"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01BLOCKSET_01_4_00_011_00_011_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="469,38,647,109"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01HEATFLUXSET_01_4_00_011_00_011_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="468,133,648,203"/>
 </map>

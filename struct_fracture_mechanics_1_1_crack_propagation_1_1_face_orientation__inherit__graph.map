@@ -1,4 +1,0 @@
-<map id="FractureMechanics::CrackPropagation::FaceOrientation" name="FractureMechanics::CrackPropagation::FaceOrientation">
-<area shape="rect" id="node1" title="Determine face orientation." alt="" coords="5,94,231,135"/>
-<area shape="rect" id="node2" href="$struct_surface_sliding_constrains_1_1_driver_element_orientation.html" title="Class implemented by user to detect face orientation." alt="" coords="30,5,206,46"/>
-</map>

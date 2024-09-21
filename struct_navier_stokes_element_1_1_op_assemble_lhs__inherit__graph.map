@@ -1,9 +1,0 @@
-<map id="NavierStokesElement::OpAssembleLhs" name="NavierStokesElement::OpAssembleLhs">
-<area shape="rect" id="node1" title="Base class for operators assembling LHS." alt="" coords="644,71,793,111"/>
-<area shape="rect" id="node5" href="$struct_navier_stokes_element_1_1_op_assemble_lhs_diag_lin.html" title="Assemble linear (symmetric) part of the diagonal block of the LHS Operator for assembling linear (sym..." alt="" coords="853,5,1022,46"/>
-<area shape="rect" id="node6" href="$struct_navier_stokes_element_1_1_op_assemble_lhs_diag_non_lin.html" title="Assemble non&#45;linear (non&#45;symmetric) part of the diagonal block of the LHS Operator for assembling non..." alt="" coords="841,71,1034,111"/>
-<area shape="rect" id="node7" href="$struct_navier_stokes_element_1_1_op_assemble_lhs_off_diag.html" title="Assemble off&#45;diagonal block of the LHS Operator for assembling off&#45;diagonal block of the LHS." alt="" coords="852,136,1023,177"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="469,78,596,104"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="207,71,421,111"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,78,159,104"/>
-</map>

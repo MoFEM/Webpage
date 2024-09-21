@@ -1,6 +1,0 @@
-<map id="ThermalElement::OpGetTriTemperatureAtGaussPts" name="ThermalElement::OpGetTriTemperatureAtGaussPts">
-<area shape="rect" id="node1" title="operator to calculate temperature at Gauss pts" alt="" coords="34,304,212,345"/>
-<area shape="rect" id="node2" href="$struct_thermal_element_1_1_op_get_field_at_gauss_pts.html" title=" " alt="" coords="5,199,241,255"/>
-<area shape="rect" id="node3" title=" " alt="" coords="41,5,195,31"/>
-<area shape="rect" id="node4" href="$struct_thermal_element_1_1_op_get_field_at_gauss_pts.html" title="operator to calculate temperature and rate of temperature at Gauss points" alt="" coords="139,80,329,121"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="MoFEM::FatPrismPolynomialBase" name="MoFEM::FatPrismPolynomialBase">
-<area shape="rect" id="node1" title="Calculate base functions on tetrahedralFIXME: Need moab and mofem finite element structure to work (t..." alt="" coords="5,241,228,267"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_base_function.html" title="Base class if inherited used to calculate base functions." alt="" coords="39,168,194,193"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_base_function_unknown_interface.html" title=" " alt="" coords="11,79,222,120"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_unknown_interface.html" title="base class for all interface classes" alt="" coords="26,5,207,31"/>
-</map>

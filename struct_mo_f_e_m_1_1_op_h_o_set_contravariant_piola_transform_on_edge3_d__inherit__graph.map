@@ -1,6 +1,0 @@
-<map id="MoFEM::OpHOSetContravariantPiolaTransformOnEdge3D" name="MoFEM::OpHOSetContravariantPiolaTransformOnEdge3D">
-<area shape="rect" id="node1" title="transform Hcurl base fluxes from reference element to physical edge" alt="" coords="17,256,228,297"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_edge_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for EDGE element" alt="" coords="5,168,240,208"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="15,79,230,120"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="46,5,199,31"/>
-</map>

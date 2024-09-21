@@ -1,7 +1,0 @@
-<map id="SmallStrainPlasticity::OpAssembleRhs" name="SmallStrainPlasticity::OpAssembleRhs">
-<area shape="rect" id="node1" title=" " alt="" coords="751,39,894,79"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="469,5,703,46"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="207,5,421,46"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,13,159,39"/>
-<area shape="rect" id="node5" href="$struct_small_strain_plasticity_1_1_make_b.html" title=" " alt="" coords="515,71,657,111"/>
-</map>

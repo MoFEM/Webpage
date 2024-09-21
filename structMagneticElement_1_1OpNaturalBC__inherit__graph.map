@@ -1,0 +1,6 @@
+<map id="MagneticElement::OpNaturalBC" name="MagneticElement::OpNaturalBC">
+<area shape="rect" id="node1" title="calculate essential boundary conditions" alt="" coords="19,259,247,285"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html" title="default operator for TRI element" alt="" coords="5,169,260,211"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="19,80,246,121"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="49,5,216,32"/>
+</map>

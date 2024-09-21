@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_post_proc_common_on_ref_mesh.html" title="Set of operators and data structures used for post&#45;processing." alt="" coords="5,5,204,31"/>
+<area shape="rect" id="node1" href="$classOPBASE.html" title=" " alt="" coords="5,13,80,39"/>
+<area shape="rect" id="node2" href="$structPoissonExample_1_1OpBaseRhs.html" title="template class for integration oh the right hand side" alt="" coords="128,5,339,47"/>
 </map>

@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['features_0',['Features',['../motivation.html',1,'']]],
-  ['fracture_20mechanics_20_28usage_20examples_29_1',['Fracture Mechanics (Usage Examples)',['../frac_mech_simple_examples.html',1,'running_code']]],
-  ['fracture_20mechanics_20module_2',['Fracture mechanics module',['../um_fracture_module_readme.html',1,'mod_gallery']]],
-  ['fracture_20module_20v0_2e12_2e0_3',['Fracture Module v0.12.0',['../md_users_modules_fracture_mechanics__c_h_a_n_g_e_l_o_g.html',1,'']]],
-  ['frequently_20asked_20questions_4',['Frequently Asked Questions',['../faqs.html',1,'']]],
-  ['ftensor_20library_5',['FTensor library',['../group__ftensor.html',1,'']]],
-  ['fun_2d0_3a_20hello_20world_6',['FUN-0: Hello world',['../hello_world_tut1.html',1,'']]],
-  ['fun_2d1_3a_20integration_20on_20finite_20element_20mesh_7',['FUN-1: Integration on finite element mesh',['../integration.html',1,'']]],
-  ['fun_2d2_3a_20hierarchical_20approximation_8',['FUN-2: Hierarchical approximation',['../hierarchical_approximation_1.html',1,'']]]
+  ['gel_20model_20creep_20_28response_20due_20to_20external_20load_29_26078',['Gel Model Creep (response due to external load)',['../gel_creep.html',1,'runningprograms']]],
+  ['gel_20model_20_28usage_20example_29_26079',['Gel Model (Usage example)',['../gel_model_example.html',1,'runningprograms']]],
+  ['gel_20module_26080',['Gel Module',['../group__gel.html',1,'']]],
+  ['gel_20model_20sorption_20_28response_20to_20an_20environmental_20change_29_26081',['Gel Model Sorption (response to an environmental change)',['../gel_sorption.html',1,'runningprograms']]],
+  ['guidelines_20for_20bug_20reporting_26082',['Guidelines for bug reporting',['../guidelines_bug_reporting.html',1,'']]],
+  ['genarting_20base_20functions_26083',['Genarting base functions',['../md_tutorials_fun-2_README.html',1,'']]]
 ];

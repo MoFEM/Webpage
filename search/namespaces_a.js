@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nonlinearpoissonops_0',['NonlinearPoissonOps',['../namespace_nonlinear_poisson_ops.html',1,'']]]
+  ['nonlinearpoissonops_14725',['NonlinearPoissonOps',['../namespaceNonlinearPoissonOps.html',1,'']]]
 ];

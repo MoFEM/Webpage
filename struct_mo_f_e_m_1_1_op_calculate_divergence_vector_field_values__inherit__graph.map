@@ -1,5 +1,0 @@
-<map id="MoFEM::OpCalculateDivergenceVectorFieldValues&lt; Tensor_Dim, COORDINATE_SYSTEM &gt;" name="MoFEM::OpCalculateDivergenceVectorFieldValues&lt; Tensor_Dim, COORDINATE_SYSTEM &gt;">
-<area shape="rect" id="node1" title="Calculate field values (template specialization) for tensor field rank 1, i.e. vector field." alt="" coords="5,168,229,223"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="10,79,224,120"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="40,5,194,31"/>
-</map>

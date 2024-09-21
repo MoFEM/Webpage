@@ -1,4 +1,0 @@
-<map id="MoFEM::OpSetInvJacHdivAndHcurl" name="MoFEM::OpSetInvJacHdivAndHcurl">
-<area shape="rect" id="node1" title="brief Transform local reference derivatives of shape function to global derivatives" alt="" coords="5,79,207,120"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="29,5,183,31"/>
-</map>

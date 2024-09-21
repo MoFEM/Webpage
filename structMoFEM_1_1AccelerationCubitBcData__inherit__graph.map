@@ -1,0 +1,4 @@
+<map id="MoFEM::AccelerationCubitBcData" name="MoFEM::AccelerationCubitBcData">
+<area shape="rect" id="node1" title="Definition of the acceleration bc data structure." alt="" coords="13,80,207,121"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1GenericCubitBcData.html" title="Generic bc data structure." alt="" coords="5,5,215,32"/>
+</map>

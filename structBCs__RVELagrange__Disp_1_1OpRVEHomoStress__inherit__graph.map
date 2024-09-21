@@ -1,0 +1,5 @@
+<map id="BCs_RVELagrange_Disp::OpRVEHomoStress" name="BCs_RVELagrange_Disp::OpRVEHomoStress">
+<area shape="rect" id="node1" title="\biref operator to calculate the RVE homogenised stress" alt="" coords="5,169,181,211"/>
+<area shape="rect" id="node2" href="$structBCs__RVELagrange__Disp_1_1OpDmatRhs.html" title=" " alt="" coords="5,80,181,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="23,5,163,32"/>
+</map>

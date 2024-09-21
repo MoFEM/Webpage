@@ -1,8 +1,0 @@
-<map id="PhotonDiffusion::CommonData" name="PhotonDiffusion::CommonData">
-<area shape="rect" id="node1" title=" " alt="" coords="768,33,971,59"/>
-<area shape="rect" id="node2" title=" " alt="" coords="466,5,652,31"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="477,55,641,96"/>
-<area shape="rect" id="node4" title=" " alt="" coords="211,12,359,67"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title="intrusive_ptr for managing petsc objects" alt="" coords="203,91,367,132"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,84,154,139"/>
-</map>

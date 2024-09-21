@@ -1,4 +1,4 @@
 <map id="Distributed mesh manager" name="Distributed mesh manager">
-<area shape="rect" id="node1" title="Implementation of PETSc DM, managing interactions between mesh data structures and vectors and matric..." alt="" coords="121,5,295,31"/>
-<area shape="rect" id="node2" href="$group__mofem.html" title=" " alt="" coords="5,5,73,31"/>
+<area shape="rect" id="node1" title="Implementation of PETSc DM, managing interactions between mesh data structures and vectors and matric..." alt="" coords="124,5,320,31"/>
+<area shape="rect" id="node2" href="$group__mofem.html" title=" " alt="" coords="5,5,76,31"/>
 </map>

@@ -1,7 +1,0 @@
-<map id="BoneRemodeling::DataFromMetaIO" name="BoneRemodeling::DataFromMetaIO">
-<area shape="rect" id="node1" title="Load data from MetaImage file, translate grayscale values to densities." alt="" coords="122,199,308,240"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,105,31"/>
-<area shape="rect" id="node3" href="$classdouble.html" title=" " alt="" coords="129,5,189,31"/>
-<area shape="rect" id="node4" title=" " alt="" coords="252,5,290,31"/>
-<area shape="rect" id="node5" href="$classublas_1_1vector_3_01double_01_4.html" title=" " alt="" coords="314,5,433,31"/>
-</map>

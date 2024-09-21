@@ -1,5 +1,0 @@
-<map id="GenericSliding" name="GenericSliding">
-<area shape="rect" id="node1" title="Implementation of surface sliding constrains." alt="" coords="121,5,227,31"/>
-<area shape="rect" id="node2" href="$struct_edge_sliding_constrains.html" title=" " alt="" coords="5,79,159,105"/>
-<area shape="rect" id="node3" href="$struct_surface_sliding_constrains.html" title="Shape preserving constrains, i.e. nodes sliding on body surface." alt="" coords="183,79,352,105"/>
-</map>

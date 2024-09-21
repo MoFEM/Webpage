@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_contact_ops_1_1_contact_integrators.html" title=" " alt="" coords="5,5,213,46"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,192,145,219"/>
+<area shape="rect" id="node2" href="$structCohesiveElement_1_1CohesiveInterfaceElement_1_1OpCalculateGapGlobal.html" title="Operator calculate gap, normal vector and rotation matrix." alt="" coords="211,5,457,61"/>
+<area shape="rect" id="node3" href="$structCohesiveElement_1_1CohesiveInterfaceElement_1_1OpCalculateGapLocal.html" title="Operator calculate gap in local coordinate system." alt="" coords="193,86,475,127"/>
+<area shape="rect" id="node4" href="$structCohesiveElement_1_1CohesiveInterfaceElement_1_1OpHistory.html" title="Operator update history variables." alt="" coords="231,151,437,193"/>
+<area shape="rect" id="node5" href="$structCohesiveElement_1_1CohesiveInterfaceElement_1_1OpLhs.html" title="Operator calculate element stiffens matrix." alt="" coords="232,217,436,258"/>
+<area shape="rect" id="node6" href="$structCohesiveElement_1_1CohesiveInterfaceElement_1_1OpRhs.html" title="Operator calculate right hand side vector." alt="" coords="232,282,436,323"/>
+<area shape="rect" id="node7" href="$structCohesiveElement_1_1CohesiveInterfaceElement_1_1OpSetSignToShapeFunctions.html" title="Set negative sign to shape functions on face 4." alt="" coords="203,348,465,404"/>
 </map>

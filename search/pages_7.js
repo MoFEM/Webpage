@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['gel_20model_20_28usage_20example_29_0',['Gel Model (Usage example)',['../gel_model_example.html',1,'runningprograms']]],
-  ['gel_20model_20creep_20_28response_20due_20to_20external_20load_29_1',['Gel Model Creep (response due to external load)',['../gel_creep.html',1,'runningprograms']]],
-  ['gel_20model_20sorption_20_28response_20to_20an_20environmental_20change_29_2',['Gel Model Sorption (response to an environmental change)',['../gel_sorption.html',1,'runningprograms']]],
-  ['gel_20module_3',['Gel Module',['../group__gel.html',1,'']]],
-  ['genarting_20base_20functions_4',['Genarting base functions',['../md_users_modules_tutorials_fun_2__r_e_a_d_m_e.html',1,'']]],
-  ['guidelines_20for_20bug_20reporting_5',['Guidelines for bug reporting',['../guidelines_bug_reporting.html',1,'']]]
+  ['how_20to_20add_20a_20new_20module_20and_20program_26084',['How to add a new module and program',['../how_to_add_new_module_and_program.html',1,'']]],
+  ['how_20to_20compile_20a_20program_26085',['How to compile a program',['../how_to_compile_program.html',1,'']]],
+  ['how_20to_20run_20this_26086',['How to run this',['../md_tutorials_scl-9_README.html',1,'']]],
+  ['how_20to_20copy_20a_20tutorial_20from_20core_26087',['How to Copy a Tutorial from Core',['../md_users_modules_HowToCopyTutorial.html',1,'']]],
+  ['how_20to_3a_20squashing_20for_20an_20external_20pr_26088',['How to: Squashing for an external PR',['../SquashFAQ.html',1,'']]]
 ];

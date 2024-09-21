@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_mo_f_e_m_1_1_numered_dof_entity__local__idx__change.html" title=" " alt="" coords="5,5,189,46"/>
+<area shape="rect" id="node1" href="$structMoFEM_1_1interface__RefEntity.html" title="interface to RefEntity" alt="" coords="5,46,247,73"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1interface__FieldImpl.html" title=" " alt="" coords="322,8,525,49"/>
+<area shape="rect" id="node6" href="$structMoFEM_1_1interface__RefElement.html" title="intrface to RefElement" alt="" coords="295,75,552,102"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1interface__Field_3_01T_00_01T_01_4.html" title=" " alt="" coords="629,5,804,47"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1interface__FieldEntity.html" title="Interface to FieldEntity." alt="" coords="881,13,1132,39"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1interface__DofEntity.html" title="Interface to DofEntity." alt="" coords="1180,13,1423,39"/>
+<area shape="rect" id="node7" href="$structMoFEM_1_1interface__FiniteElementImpl.html" title=" " alt="" coords="600,71,833,112"/>
+<area shape="rect" id="node8" href="$structMoFEM_1_1interface__FiniteElement_3_01T_00_01T_01_4.html" title=" " alt="" coords="890,71,1123,112"/>
+<area shape="rect" id="node9" href="$structMoFEM_1_1interface__EntFiniteElement.html" title="interface to EntFiniteElement" alt="" coords="1201,71,1401,112"/>
 </map>

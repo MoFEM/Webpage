@@ -1,0 +1,5 @@
+<map id="FaceSideOp" name="FaceSideOp">
+<area shape="rect" id="node1" title=" " alt="" coords="150,5,247,32"/>
+<area shape="rect" id="node2" href="$structOpCalculateSideData.html" title="Operator tp collect data from elements on the side of Edge/Face." alt="" coords="5,87,165,114"/>
+<area shape="rect" id="node3" href="$structPoisson2DiscontGalerkinOperators_1_1OpCalculateSideData.html" title="Operator tp collect data from elements on the side of Edge/Face." alt="" coords="189,80,437,121"/>
+</map>

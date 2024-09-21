@@ -1,7 +1,0 @@
-<map id="MoFEM::OpSchurAssembleEndImpl" name="MoFEM::OpSchurAssembleEndImpl">
-<area shape="rect" id="node1" title="Assemble Schur complement (Implementation)" alt="" coords="109,168,341,193"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_op_schur_assemble_end_3_01_s_c_h_u_r___d_g_e_s_v_01_4.html" title=" " alt="" coords="5,241,213,282"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_op_schur_assemble_end_3_01_s_c_h_u_r___d_s_y_s_v_01_4.html" title=" " alt="" coords="237,241,445,282"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="118,79,332,120"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="148,5,302,31"/>
-</map>

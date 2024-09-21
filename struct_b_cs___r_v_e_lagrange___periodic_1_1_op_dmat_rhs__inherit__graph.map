@@ -1,7 +1,0 @@
-<map id="BCs_RVELagrange_Periodic::OpDmatRhs" name="BCs_RVELagrange_Periodic::OpDmatRhs">
-<area shape="rect" id="node1" title="\biref operator to calculate the RHS of the constrain for the RVE boundary conditions" alt="" coords="258,71,447,111"/>
-<area shape="rect" id="node3" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_rhs.html" title=" " alt="" coords="522,5,711,46"/>
-<area shape="rect" id="node4" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_rhs__given_strain.html" title=" " alt="" coords="495,71,738,111"/>
-<area shape="rect" id="node5" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_homo_stress.html" title="\biref operator to calculate the RVE homogenised stress" alt="" coords="522,136,711,177"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,71,210,111"/>
-</map>

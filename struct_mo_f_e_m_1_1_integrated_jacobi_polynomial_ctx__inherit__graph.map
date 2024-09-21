@@ -1,7 +1,0 @@
-<map id="MoFEM::IntegratedJacobiPolynomialCtx" name="MoFEM::IntegratedJacobiPolynomialCtx">
-<area shape="rect" id="node1" title=" " alt="" coords="5,315,262,341"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_jacobi_polynomial_ctx.html" title="Class used to give arguments to Legendre base functions." alt="" coords="34,241,233,267"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_base_function_ctx.html" title="Base class used to exchange data between element data structures and class calculating base functions..." alt="" coords="45,168,222,193"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_base_function_unknown_interface.html" title=" " alt="" coords="28,79,239,120"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_unknown_interface.html" title="base class for all interface classes" alt="" coords="43,5,224,31"/>
-</map>

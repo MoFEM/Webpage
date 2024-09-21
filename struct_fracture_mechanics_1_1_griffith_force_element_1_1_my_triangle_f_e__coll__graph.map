@@ -1,6 +1,0 @@
-<map id="FractureMechanics::GriffithForceElement::MyTriangleFE" name="FractureMechanics::GriffithForceElement::MyTriangleFE">
-<area shape="rect" id="node1" title=" " alt="" coords="217,94,359,150"/>
-<area shape="rect" id="node2" href="$class_face_element_forces_and_sources_core.html" title=" " alt="" coords="5,5,243,31"/>
-<area shape="rect" id="node3" title=" " alt="" coords="266,5,310,31"/>
-<area shape="rect" id="node4" title=" " alt="" coords="334,5,378,31"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="SmallStrainParaboloidalPlasticity" name="SmallStrainParaboloidalPlasticity">
-<area shape="rect" id="node1" title="Small strain plasticity with paraboloidal yield criterion (Isotropic Hardening)" alt="" coords="5,94,219,120"/>
-<area shape="rect" id="node2" href="$struct_small_strain_plasticity_1_1_closest_point_projection.html" title="Closest point projection algorithm." alt="" coords="31,5,193,46"/>
-</map>

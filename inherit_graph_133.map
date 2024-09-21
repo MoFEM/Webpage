@@ -1,3 +1,22 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_d_rhs_u__u.html" title=" " alt="" coords="5,5,85,31"/>
+<area shape="rect" id="node1" href="$classDomainEleOp.html" title=" " alt="" coords="5,581,116,608"/>
+<area shape="rect" id="node2" href="$structAtomTest_1_1OpError_3_011_01_4.html" title=" " alt="" coords="220,5,399,32"/>
+<area shape="rect" id="node3" href="$structDomainEleOpStab.html" title="Element used to specialise assembly." alt="" coords="239,56,379,83"/>
+<area shape="rect" id="node4" href="$structExample_1_1OpError_3_011_01_4.html" title=" " alt="" coords="222,107,397,133"/>
+<area shape="rect" id="node5" href="$structExample_1_1OpRhs.html" title=" " alt="" coords="245,157,374,184"/>
+<area shape="rect" id="node6" href="$structHenckyOps_1_1OpCalculateEigenValsImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_01_4.html" title=" " alt="" coords="167,209,451,250"/>
+<area shape="rect" id="node7" href="$structHenckyOps_1_1OpCalculateHenckyPlasticStressImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_00_01S_01_4.html" title=" " alt="" coords="194,275,425,331"/>
+<area shape="rect" id="node8" href="$structHenckyOps_1_1OpCalculateHenckyStressImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_00_01S_01_4.html" title=" " alt="" coords="194,355,425,411"/>
+<area shape="rect" id="node9" href="$structHenckyOps_1_1OpCalculateLogC__dCImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_01_4.html" title=" " alt="" coords="164,435,455,477"/>
+<area shape="rect" id="node10" href="$structHenckyOps_1_1OpCalculateLogCImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_01_4.html" title=" " alt="" coords="176,501,443,542"/>
+<area shape="rect" id="node11" href="$structHenckyOps_1_1OpCalculatePiolaStressImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_00_01S_01_4.html" title=" " alt="" coords="202,567,417,623"/>
+<area shape="rect" id="node12" href="$structHenckyOps_1_1OpHenckyTangentImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_00_01S_01_4.html" title=" " alt="" coords="173,647,446,689"/>
+<area shape="rect" id="node13" href="$structMixedPoisson_1_1OpError.html" title=" " alt="" coords="225,713,393,740"/>
+<area shape="rect" id="node14" href="$structOpError.html" title=" " alt="" coords="274,764,345,791"/>
+<area shape="rect" id="node15" href="$structOpValsDiffVals.html" title=" " alt="" coords="251,815,368,841"/>
+<area shape="rect" id="node16" href="$structPlasticOps_1_1OpCalculatePlasticityImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_01_4.html" title=" " alt="" coords="181,866,438,907"/>
+<area shape="rect" id="node17" href="$structPlasticOps_1_1OpCalculatePlasticSurfaceImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_01_4.html" title="[Auxiliary functions functions" alt="" coords="199,932,419,988"/>
+<area shape="rect" id="node18" href="$structPlasticOps_1_1OpPlasticStressImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_01_4.html" title=" " alt="" coords="181,1013,438,1054"/>
+<area shape="rect" id="node19" href="$structStandardPoisson_1_1OpError.html" title=" " alt="" coords="216,1079,403,1105"/>
+<area shape="rect" id="node20" href="$structThermoElasticOps_1_1OpStressThermal.html" title=" " alt="" coords="206,1130,413,1171"/>
 </map>

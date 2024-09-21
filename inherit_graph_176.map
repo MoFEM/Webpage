@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_eshelbian_plasticity_1_1_tensor_type_extractor_3_01_f_tensor_1_1_pack_ptr_3_01_t_00_01_i_01_4_01_4.html" title=" " alt="" coords="5,5,163,76"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,175,105"/>
+<area shape="rect" id="node2" href="$structEshelbianPlasticity_1_1OpPostProcDataStructure.html" title=" " alt="" coords="236,5,431,47"/>
+<area shape="rect" id="node3" href="$structEshelbianPlasticity_1_1OpTractionBc.html" title=" " alt="" coords="261,71,406,112"/>
+<area shape="rect" id="node4" href="$structEshelbianPlasticity_1_1OpAssembleBasic.html" title=" " alt="" coords="223,137,444,193"/>
+<area shape="rect" id="node5" href="$structEshelbianPlasticity_1_1OpAssembleFace.html" title=" " alt="" coords="492,144,637,185"/>
+<area shape="rect" id="node6" href="$structEshelbianPlasticity_1_1OpDispBc.html" title=" " alt="" coords="685,45,831,87"/>
+<area shape="rect" id="node7" href="$structEshelbianPlasticity_1_1OpDispBc__dx.html" title=" " alt="" coords="685,111,831,152"/>
+<area shape="rect" id="node8" href="$structEshelbianPlasticity_1_1OpRotationBc.html" title=" " alt="" coords="685,176,831,217"/>
+<area shape="rect" id="node9" href="$structEshelbianPlasticity_1_1OpRotationBc__dx.html" title=" " alt="" coords="685,241,831,283"/>
 </map>

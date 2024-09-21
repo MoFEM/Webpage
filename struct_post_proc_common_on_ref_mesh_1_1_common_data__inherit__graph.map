@@ -1,7 +1,0 @@
-<map id="PostProcCommonOnRefMesh::CommonData" name="PostProcCommonOnRefMesh::CommonData">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,204,111"/>
-<area shape="rect" id="node2" href="$struct_post_proc_common_on_ref_mesh_1_1_common_data_for_volume.html" title=" " alt="" coords="252,5,451,46"/>
-<area shape="rect" id="node4" href="$struct_post_proc_edge_on_refined_mesh_1_1_common_data.html" title=" " alt="" coords="252,71,451,111"/>
-<area shape="rect" id="node5" href="$struct_post_proc_face_on_refined_mesh_1_1_common_data.html" title=" " alt="" coords="252,136,451,177"/>
-<area shape="rect" id="node3" href="$struct_post_proc_fat_prism_on_refined_mesh_1_1_common_data.html" title=" " alt="" coords="499,5,689,46"/>
-</map>

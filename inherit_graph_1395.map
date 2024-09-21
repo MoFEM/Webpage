@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_post_proc_ele_by_dim_3_012_01_4.html" title=" " alt="" coords="5,5,171,31"/>
+<area shape="rect" id="node1" href="$classOpBrokenBase.html" title=" " alt="" coords="5,60,123,87"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1OpBrokenSpaceConstrainDFluxImpl_3_01FIELD__DIM_00_01GAUSS_00_01OpBrokenBase_01_4.html" title=" " alt="" coords="179,5,422,61"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1OpBrokenSpaceConstrainImpl_3_01FIELD__DIM_00_01GAUSS_00_01OpBrokenBase_01_4.html" title=" " alt="" coords="171,85,431,141"/>
 </map>

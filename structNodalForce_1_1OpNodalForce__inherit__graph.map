@@ -1,0 +1,6 @@
+<map id="NodalForce::OpNodalForce" name="NodalForce::OpNodalForce">
+<area shape="rect" id="node1" title="Operator to assemble nodal force into right hand side vector." alt="" coords="35,259,230,285"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1VertexElementForcesAndSourcesCore_1_1UserDataOperator.html" title="default operator for VERTEX element" alt="" coords="5,169,260,211"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="19,80,246,121"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="49,5,216,32"/>
+</map>

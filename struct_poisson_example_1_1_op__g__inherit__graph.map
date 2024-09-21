@@ -1,9 +1,0 @@
-<map id="PoissonExample::Op_g" name="PoissonExample::Op_g">
-<area shape="rect" id="node1" title="Assemble constrains vector." alt="" coords="891,45,1049,71"/>
-<area shape="rect" id="node6" href="$struct_poisson_example_1_1_op_res_f___boundary.html" title=" " alt="" coords="1102,8,1278,49"/>
-<area shape="rect" id="node7" href="$struct_poisson_example_1_1_op_res__g.html" title=" " alt="" coords="1099,73,1281,99"/>
-<area shape="rect" id="node2" href="$struct_poisson_example_1_1_op_base_rhs.html" title=" " alt="" coords="592,30,842,86"/>
-<area shape="rect" id="node3" title=" " alt="" coords="131,5,340,46"/>
-<area shape="rect" id="node4" href="$struct_poisson_example_1_1_op_base_rhs.html" title="template class for integration oh the right hand side" alt="" coords="137,71,335,111"/>
-<area shape="rect" id="node5" href="$class_o_p_b_a_s_e.html" title=" " alt="" coords="5,78,82,104"/>
-</map>

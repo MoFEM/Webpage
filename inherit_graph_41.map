@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_b_cs___r_v_e_lagrange___disp_1_1_common_functions.html" title=" " alt="" coords="5,5,175,46"/>
+<area shape="rect" id="node1" href="$classAssemblyBoundaryEleOp.html" title=" " alt="" coords="5,111,192,138"/>
+<area shape="rect" id="node2" href="$structFreeSurfaceOps_1_1OpNormalConstrainLhs.html" title=" " alt="" coords="241,5,439,47"/>
+<area shape="rect" id="node3" href="$structFreeSurfaceOps_1_1OpNormalConstrainRhs.html" title=" " alt="" coords="241,71,439,112"/>
+<area shape="rect" id="node4" href="$structFreeSurfaceOps_1_1OpNormalForceRhs.html" title=" " alt="" coords="241,136,439,177"/>
+<area shape="rect" id="node5" href="$structFreeSurfaceOps_1_1OpWettingAngleRhs.html" title=" " alt="" coords="240,201,440,243"/>
 </map>

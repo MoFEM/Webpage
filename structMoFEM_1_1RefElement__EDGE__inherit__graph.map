@@ -1,0 +1,6 @@
+<map id="MoFEM::RefElement_EDGE" name="MoFEM::RefElement_EDGE">
+<area shape="rect" id="node1" title="keeps data about abstract EDGE finite element" alt="" coords="27,261,225,288"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1RefElement.html" title="keeps data about abstract refined finite element" alt="" coords="49,185,203,212"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1interface__RefEntity.html" title=" " alt="" coords="25,95,227,136"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1interface__RefEntity.html" title="interface to RefEntity" alt="" coords="5,5,247,32"/>
+</map>

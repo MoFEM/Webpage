@@ -1,9 +1,0 @@
-<map id="MoFEM::interface_FiniteElement&lt; FE, REFENT &gt;" name="MoFEM::interface_FiniteElement&lt; FE, REFENT &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="120,386,332,426"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1interface___ref_element.html" title=" " alt="" coords="32,282,233,323"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1interface___ref_entity.html" title="interface to RefEntity" alt="" coords="5,144,225,169"/>
-<area shape="rect" id="node4" title=" " alt="" coords="89,5,203,31"/>
-<area shape="rect" id="node6" href="$struct_mo_f_e_m_1_1interface___ref_entity.html" title="interface to RefEntity" alt="" coords="155,94,374,120"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1interface___ref_element.html" title="intrface to RefElement" alt="" coords="149,193,382,219"/>
-<area shape="rect" id="node7" title=" " alt="" coords="257,290,381,315"/>
-</map>

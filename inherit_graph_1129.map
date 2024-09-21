@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_mo_f_e_m_1_1_get_f_tensor1_from_array_3_013_00_01_s_01_4.html" title=" " alt="" coords="5,5,217,46"/>
+<area shape="rect" id="node1" href="$structMoFEM_1_1GenericAttributeData.html" title="Generic attribute data structure." alt="" coords="5,199,221,225"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1Block__BodyForces.html" title="Body force data structure." alt="" coords="271,5,467,32"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1BlockSetAttributes.html" title="Arbitrary block attributes data structure." alt="" coords="269,56,468,83"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1Mat__Elastic.html" title="Elastic material data structure." alt="" coords="292,107,445,133"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1Mat__Elastic__EberleinHolzapfel1.html" title="Mat_Elastic with Fibres." alt="" coords="292,158,445,199"/>
+<area shape="rect" id="node6" href="$structMoFEM_1_1Mat__Elastic__TransIso.html" title="Transverse Isotropic material data structure." alt="" coords="292,223,445,265"/>
+<area shape="rect" id="node7" href="$structMoFEM_1_1Mat__Interf.html" title="Linear interface data structure." alt="" coords="296,289,441,316"/>
+<area shape="rect" id="node8" href="$structMoFEM_1_1Mat__Moisture.html" title="moisture transport material data structure" alt="" coords="285,340,452,367"/>
+<area shape="rect" id="node9" href="$structMoFEM_1_1Mat__Thermal.html" title="Thermal material data structure." alt="" coords="287,391,451,417"/>
 </map>

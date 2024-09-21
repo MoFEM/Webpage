@@ -1,0 +1,13 @@
+<map id="MoFEM::RefElement_PRISM" name="MoFEM::RefElement_PRISM">
+<area shape="rect" id="node1" title="keeps data about abstract PRISM finite element" alt="" coords="1725,168,1928,195"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1RefElement.html" title="keeps data about abstract refined finite element" alt="" coords="1411,135,1565,161"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1interface__RefEntity.html" title=" " alt="" coords="939,39,1141,81"/>
+<area shape="rect" id="node4" href="$classboost_1_1shared__ptr_3_01RefEntity_01_4.html" title=" " alt="" coords="242,5,423,32"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1interface__RefEntity.html" title="interface to RefEntity" alt="" coords="212,56,453,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,56,135,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="969,105,1111,132"/>
+<area shape="rect" id="node8" title=" " alt="" coords="853,157,1227,315"/>
+<area shape="rect" id="node9" title=" " alt="" coords="249,223,416,249"/>
+<area shape="rect" id="node10" title=" " alt="" coords="959,339,1121,381"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1432,185,1544,212"/>
+</map>

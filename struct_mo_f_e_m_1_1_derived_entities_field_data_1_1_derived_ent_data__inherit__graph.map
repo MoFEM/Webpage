@@ -1,4 +1,0 @@
-<map id="MoFEM::DerivedEntitiesFieldData::DerivedEntData" name="MoFEM::DerivedEntitiesFieldData::DerivedEntData">
-<area shape="rect" id="node1" title="Derived ata on single entity (This is passed as argument to DataOperator::doWork)" alt="" coords="5,94,198,135"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html" title="Data on single entity (This is passed as argument to DataOperator::doWork)" alt="" coords="14,5,189,46"/>
-</map>

@@ -1,5 +1,5 @@
 <map id="Mass Element" name="Mass Element">
-<area shape="rect" id="node1" title=" " alt="" coords="157,38,262,63"/>
-<area shape="rect" id="node2" href="$group__nonlinear__elastic__elem.html" title=" " alt="" coords="456,38,633,63"/>
-<area shape="rect" id="node3" href="$group__user__modules.html" title=" " alt="" coords="5,38,108,63"/>
+<area shape="rect" id="node1" href="$group__nonlinear__elastic__elem.html" title=" " alt="" coords="479,7,672,33"/>
+<area shape="rect" id="node2" title=" " alt="" coords="167,7,281,33"/>
+<area shape="rect" id="node3" href="$group__user__modules.html" title=" " alt="" coords="5,7,117,33"/>
 </map>

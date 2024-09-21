@@ -1,0 +1,11 @@
+<map id="MoFEM::FieldSeries" name="MoFEM::FieldSeries">
+<area shape="rect" id="node1" title="Structure for recording (time) series." alt="" coords="376,241,525,268"/>
+<area shape="rect" id="node2" title=" " alt="" coords="25,31,163,57"/>
+<area shape="rect" id="node3" href="$classEntityHandle.html" title=" " alt="" coords="41,81,147,108"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,132,183,159"/>
+<area shape="rect" id="node5" title=" " alt="" coords="72,215,116,241"/>
+<area shape="rect" id="node6" title=" " alt="" coords="44,265,144,292"/>
+<area shape="rect" id="node7" title=" " alt="" coords="39,323,149,349"/>
+<area shape="rect" id="node8" title=" " alt="" coords="75,373,113,400"/>
+<area shape="rect" id="node9" href="$classbool.html" title=" " alt="" coords="69,431,119,457"/>
+</map>

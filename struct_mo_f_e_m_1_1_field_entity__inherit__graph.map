@@ -1,9 +1,0 @@
-<map id="MoFEM::FieldEntity" name="MoFEM::FieldEntity">
-<area shape="rect" id="node1" title="Struct keeps handle to entity in the field." alt="" coords="1547,41,1684,67"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1interface___field.html" title=" " alt="" coords="1337,33,1498,74"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1interface___field_impl.html" title="Pointer interface for MoFEM::Field." alt="" coords="801,5,986,46"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1interface___ref_entity.html" title=" " alt="" coords="355,35,542,75"/>
-<area shape="rect" id="node7" href="$struct_mo_f_e_m_1_1interface___field_impl.html" title="Pointer interface for MoFEM::Field." alt="" coords="591,63,777,103"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1interface___ref_entity.html" title="interface to RefEntity" alt="" coords="5,42,225,68"/>
-<area shape="rect" id="node6" href="$struct_mo_f_e_m_1_1interface___field.html" title=" " alt="" coords="1010,63,1170,103"/>
-</map>

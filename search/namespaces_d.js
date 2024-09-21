@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quadops_0',['QuadOps',['../namespace_quad_ops.html',1,'']]]
+  ['reactiondiffusionequation_14734',['ReactionDiffusionEquation',['../namespaceReactionDiffusionEquation.html',1,'']]]
 ];

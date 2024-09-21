@@ -1,0 +1,18 @@
+<map id="MoFEM::LogManager::InternalData" name="MoFEM::LogManager::InternalData">
+<area shape="rect" id="node1" title=" " alt="" coords="912,245,1079,286"/>
+<area shape="rect" id="node2" title=" " alt="" coords="577,5,763,61"/>
+<area shape="rect" id="node3" href="$classMoFEM_1_1LogManager_1_1InternalData_1_1NulOStream.html" title=" " alt="" coords="575,86,765,127"/>
+<area shape="rect" id="node4" href="$classMoFEM_1_1LogManager_1_1InternalData_1_1NulStreambuf.html" title=" " alt="" coords="264,30,465,71"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,12,123,39"/>
+<area shape="rect" id="node6" title=" " alt="" coords="39,63,89,89"/>
+<area shape="rect" id="node7" title=" " alt="" coords="313,96,417,123"/>
+<area shape="rect" id="node8" href="$structMoFEM_1_1LogManager_1_1InternalData_1_1WorldStreamBuf.html" title=" " alt="" coords="561,151,779,193"/>
+<area shape="rect" id="node9" title=" " alt="" coords="311,148,419,175"/>
+<area shape="rect" id="node10" title=" " alt="" coords="317,219,413,245"/>
+<area shape="rect" id="node16" href="$structMoFEM_1_1LogManager_1_1InternalData_1_1SynchronizedStreamBuf.html" title=" " alt="" coords="571,217,769,273"/>
+<area shape="rect" id="node11" href="$classbool.html" title=" " alt="" coords="645,364,695,391"/>
+<area shape="rect" id="node12" href="$classMoFEM_1_1LogManager_1_1InternalData_1_1SelfStreamBuf.html" title=" " alt="" coords="567,298,773,339"/>
+<area shape="rect" id="node13" title=" " alt="" coords="325,283,405,309"/>
+<area shape="rect" id="node14" title=" " alt="" coords="579,415,761,457"/>
+<area shape="rect" id="node15" title=" " alt="" coords="632,491,708,517"/>
+</map>

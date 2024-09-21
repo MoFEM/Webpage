@@ -1,4 +1,4 @@
 <map id="Vertex Element" name="Vertex Element">
-<area shape="rect" id="node1" href="$group__mofem__forces__and__sources.html" title="Manages complexities related to assembly of vector and matrices at single finite element level." alt="" coords="5,5,142,31"/>
-<area shape="rect" id="node2" title="Finite element and operators for vertex entity." alt="" coords="190,5,301,31"/>
+<area shape="rect" id="node1" href="$group__mofem__forces__and__sources.html" title="Manages complexities related to assembly of vector and matrices at single finite element level." alt="" coords="5,5,152,31"/>
+<area shape="rect" id="node2" title="Finite element and operators for vertex entity." alt="" coords="200,5,323,31"/>
 </map>

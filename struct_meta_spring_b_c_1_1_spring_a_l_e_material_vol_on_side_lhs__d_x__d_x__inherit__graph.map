@@ -1,8 +1,0 @@
-<map id="MetaSpringBC::SpringALEMaterialVolOnSideLhs_dX_dX" name="MetaSpringBC::SpringALEMaterialVolOnSideLhs_dX_dX">
-<area shape="rect" id="node1" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="11,419,234,459"/>
-<area shape="rect" id="node2" href="$struct_meta_spring_b_c_1_1_spring_a_l_e_material_vol_on_side_lhs.html" title="Base class for LHS&#45;operators (material) on side volumes." alt="" coords="11,330,234,371"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_on_side_1_1_user_data_operator.html" title="default operator for TET element" alt="" coords="28,256,217,282"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="5,168,240,208"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="15,79,230,120"/>
-<area shape="rect" id="node6" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="46,5,199,31"/>
-</map>

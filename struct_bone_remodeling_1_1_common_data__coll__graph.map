@@ -1,9 +1,0 @@
-<map id="BoneRemodeling::CommonData" name="BoneRemodeling::CommonData">
-<area shape="rect" id="node1" title="Data structure for storing global and local matrix K and vector f." alt="" coords="341,143,550,168"/>
-<area shape="rect" id="node2" title=" " alt="" coords="48,9,148,35"/>
-<area shape="rect" id="node3" title=" " alt="" coords="49,68,147,94"/>
-<area shape="rect" id="node4" title=" " alt="" coords="76,117,120,143"/>
-<area shape="rect" id="node5" title=" " alt="" coords="76,167,120,192"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,216,191,242"/>
-<area shape="rect" id="node7" title=" " alt="" coords="6,265,190,291"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="MoFEM::VelocityCubitBcData" name="MoFEM::VelocityCubitBcData">
-<area shape="rect" id="node1" title="Definition of the velocity bc data structure." alt="" coords="5,79,203,105"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_generic_cubit_bc_data.html" title="Generic bc data structure." alt="" coords="6,5,202,31"/>
-</map>

@@ -1,19 +1,18 @@
 <map id="User modules" name="User modules">
-<area shape="rect" id="node1" href="$group___dirichlet__bc.html" title=" " alt="" coords="181,5,307,46"/>
-<area shape="rect" id="node2" href="$group__arc__length__control.html" title=" " alt="" coords="180,70,308,96"/>
-<area shape="rect" id="node3" href="$group__bone__remodelling.html" title="Bone remodeling module." alt="" coords="185,120,303,145"/>
-<area shape="rect" id="node4" href="$group__convective__mass__elem.html" title=" " alt="" coords="191,169,297,195"/>
-<area shape="rect" id="node5" href="$group__gel.html" title=" " alt="" coords="204,218,284,244"/>
-<area shape="rect" id="node6" href="$group__minimal__surface__area.html" title=" " alt="" coords="173,268,315,293"/>
-<area shape="rect" id="node7" href="$group__mofem__body__forces.html" title=" " alt="" coords="170,317,318,343"/>
-<area shape="rect" id="node8" href="$group__mofem__fs__post__proc.html" title=" " alt="" coords="194,366,294,392"/>
-<area shape="rect" id="node9" href="$group__mofem__mix__transport__elem.html" title=" " alt="" coords="170,416,318,441"/>
-<area shape="rect" id="node10" href="$group__mofem__static__boundary__conditions.html" title=" " alt="" coords="178,465,310,506"/>
-<area shape="rect" id="node11" href="$group__mofem__thermal__elem.html" title=" " alt="" coords="185,530,303,556"/>
-<area shape="rect" id="node12" href="$group__nitsche__method.html" title=" " alt="" coords="187,580,301,605"/>
-<area shape="rect" id="node13" href="$group__nonlinear__elastic__elem.html" title=" " alt="" coords="156,629,332,655"/>
-<area shape="rect" id="node14" href="$group__projection__matrix.html" title=" " alt="" coords="174,679,314,719"/>
-<area shape="rect" id="node15" href="$group__small__strain__plasticity.html" title=" " alt="" coords="169,744,319,769"/>
-<area shape="rect" id="node16" href="$group__solid__shell__prism__element.html" title=" " alt="" coords="157,793,331,819"/>
-<area shape="rect" id="node17" title=" " alt="" coords="5,392,108,417"/>
+<area shape="rect" id="node1" href="$group__minimal__surface__area.html" title=" " alt="" coords="182,5,342,31"/>
+<area shape="rect" id="node2" href="$group__mofem__fs__post__proc.html" title=" " alt="" coords="210,55,314,80"/>
+<area shape="rect" id="node3" href="$group__Dirichlet__bc.html" title=" " alt="" coords="191,105,333,145"/>
+<area shape="rect" id="node4" href="$group__arc__length__control.html" title=" " alt="" coords="191,169,333,195"/>
+<area shape="rect" id="node5" href="$group__nonlinear__elastic__elem.html" title=" " alt="" coords="165,219,359,244"/>
+<area shape="rect" id="node6" href="$group__nitsche__method.html" title=" " alt="" coords="200,268,324,293"/>
+<area shape="rect" id="node7" href="$group__projection__matrix.html" title=" " alt="" coords="185,318,339,358"/>
+<area shape="rect" id="node8" href="$group__mofem__body__forces.html" title=" " alt="" coords="180,383,344,408"/>
+<area shape="rect" id="node9" href="$group__mofem__thermal__elem.html" title=" " alt="" coords="195,432,329,457"/>
+<area shape="rect" id="node10" href="$group__mofem__static__boundary__conditions.html" title="conditions" alt="" coords="191,482,333,522"/>
+<area shape="rect" id="node11" href="$group__adoc__plasticity.html" title=" " alt="" coords="194,547,330,572"/>
+<area shape="rect" id="node12" href="$group__bone__remodelling.html" title="Bone remodeling module." alt="" coords="195,596,329,621"/>
+<area shape="rect" id="node13" href="$group__convective__mass__elem.html" title=" " alt="" coords="205,645,319,671"/>
+<area shape="rect" id="node14" href="$group__gel.html" title=" " alt="" coords="217,695,307,720"/>
+<area shape="rect" id="node15" title=" " alt="" coords="5,383,117,408"/>
+<area shape="rect" id="node16" href="$group__mofem__mix__transport__elem.html" title=" " alt="" coords="179,744,345,769"/>
 </map>

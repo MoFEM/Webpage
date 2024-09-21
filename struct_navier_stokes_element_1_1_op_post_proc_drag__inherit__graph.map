@@ -1,6 +1,0 @@
-<map id="NavierStokesElement::OpPostProcDrag" name="NavierStokesElement::OpPostProcDrag">
-<area shape="rect" id="node1" title="Post processing output of drag traction on the fluid&#45;solid interface." alt="" coords="38,241,187,282"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for TRI element" alt="" coords="34,168,191,193"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="5,79,220,120"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="36,5,189,31"/>
-</map>

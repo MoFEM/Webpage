@@ -1,4 +1,0 @@
-<map id="MoFEM::OpSetCovariantPiolaTransform" name="MoFEM::OpSetCovariantPiolaTransform">
-<area shape="rect" id="node1" title="apply covariant transfer to Hcurl space" alt="" coords="5,79,203,120"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="27,5,181,31"/>
-</map>

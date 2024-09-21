@@ -1,7 +1,0 @@
-<map id="MoFEM::OpCalculateVectorFieldGradient&lt; Tensor_Dim0, Tensor_Dim1 &gt;" name="MoFEM::OpCalculateVectorFieldGradient&lt; Tensor_Dim0, Tensor_Dim1 &gt;">
-<area shape="rect" id="node1" title="Get field gradients at integration pts for scalar filed rank 0, i.e. vector field." alt="" coords="1000,20,1185,76"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_op_calculate_vector_field_gradient___general_3_01_tensor___dim0_00_01_tensord3873d3f3bba3f424c59237f2abef65b.html" title=" " alt="" coords="752,5,952,91"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_op_calculate_tensor2_field_values___general_3_01_tensor___dim0_00_01_tensor_8e55d70b0c1020bc0fd1e600d58a89f4.html" title=" " alt="" coords="469,13,704,84"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="207,28,421,69"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,35,159,61"/>
-</map>

@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_electro_physiology_1_1_previous_data.html" title=" " alt="" coords="5,5,140,46"/>
+<area shape="rect" id="node1" href="$classELEMENT.html" title=" " alt="" coords="5,57,88,84"/>
+<area shape="rect" id="node2" href="$structFractureMechanics_1_1CrackFrontSingularBase.html" title=" " alt="" coords="136,5,359,61"/>
+<area shape="rect" id="node3" href="$structPostProcTemplateOnRefineMesh.html" title="Generic post&#45;processing class." alt="" coords="149,86,346,127"/>
 </map>

@@ -1,8 +1,0 @@
-<map id="SimpleContactProblem::OpCalMatForcesALESlave" name="SimpleContactProblem::OpCalMatForcesALESlave">
-<area shape="rect" id="node1" title="RHS &#45; operator for the contact element (material configuration) Integrates virtual work of contact tr..." alt="" coords="478,109,664,149"/>
-<area shape="rect" id="node2" href="$class_contact_op.html" title=" " alt="" coords="91,5,176,31"/>
-<area shape="rect" id="node3" title=" " alt="" coords="96,55,171,80"/>
-<area shape="rect" id="node4" title=" " alt="" coords="114,109,153,135"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,159,262,200"/>
-<area shape="rect" id="node6" title=" " alt="" coords="83,224,184,250"/>
-</map>

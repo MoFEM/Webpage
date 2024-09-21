@@ -1,5 +1,0 @@
-<map id="MoFEM::OpSourceImpl&lt; 3, FIELD_DIM, I, SourceBoundaryNormalSpecialization::S&lt; OpBase &gt; &gt;" name="MoFEM::OpSourceImpl&lt; 3, FIELD_DIM, I, SourceBoundaryNormalSpecialization::S&lt; OpBase &gt; &gt;">
-<area shape="rect" id="node1" title="This is specialisation for sources on boundary which depends on normal." alt="" coords="5,229,250,285"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_op_normal_mix_vec_times_scalar_impl.html" title=" " alt="" coords="20,124,235,180"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_op_normal_mix_vec_times_scalar_impl.html" title="Multiply vector times normal on the face times scalar function." alt="" coords="20,5,235,61"/>
-</map>

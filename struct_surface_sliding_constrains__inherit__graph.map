@@ -1,4 +1,0 @@
-<map id="SurfaceSlidingConstrains" name="SurfaceSlidingConstrains">
-<area shape="rect" id="node1" title="Shape preserving constrains, i.e. nodes sliding on body surface." alt="" coords="5,79,174,105"/>
-<area shape="rect" id="node2" href="$struct_generic_sliding.html" title="Implementation of surface sliding constrains." alt="" coords="37,5,142,31"/>
-</map>

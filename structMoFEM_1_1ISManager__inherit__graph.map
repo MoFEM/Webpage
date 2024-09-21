@@ -1,0 +1,4 @@
+<map id="MoFEM::ISManager" name="MoFEM::ISManager">
+<area shape="rect" id="node1" title="Section manager is used to create indexes and sections." alt="" coords="31,80,177,107"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="5,5,203,32"/>
+</map>

@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$struct_solid_shell_module_1_1_run_adaptivity.html" title=" " alt="" coords="5,5,217,31"/>
+<area shape="rect" id="node1" href="$structPostProcCommonOnRefMesh_1_1CommonData.html" title=" " alt="" coords="5,71,217,112"/>
+<area shape="rect" id="node2" href="$structPostProcCommonOnRefMesh_1_1CommonDataForVolume.html" title=" " alt="" coords="265,5,477,47"/>
+<area shape="rect" id="node4" href="$structPostProcEdgeOnRefinedMesh_1_1CommonData.html" title=" " alt="" coords="265,71,477,112"/>
+<area shape="rect" id="node5" href="$structPostProcFaceOnRefinedMesh_1_1CommonData.html" title=" " alt="" coords="267,136,476,177"/>
+<area shape="rect" id="node3" href="$structPostProcFatPrismOnRefinedMesh_1_1CommonData.html" title=" " alt="" coords="525,5,727,47"/>
 </map>

@@ -1,7 +1,0 @@
-<map id="NeumannForcesSurface::OpNeumannSurfaceForceMaterialLhs_dX_dx" name="NeumannForcesSurface::OpNeumannSurfaceForceMaterialLhs_dX_dx">
-<area shape="rect" id="node1" title="LHS&#45;operator for the surface force element (material configuration)" alt="" coords="16,330,242,386"/>
-<area shape="rect" id="node2" href="$struct_neumann_forces_surface_1_1_op_neumann_surface_force_material_lhs.html" title="Base class for LHS&#45;operators for pressure element (material configuration)" alt="" coords="5,241,253,282"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for TRI element" alt="" coords="65,168,193,193"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="22,79,236,120"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="52,5,206,31"/>
-</map>

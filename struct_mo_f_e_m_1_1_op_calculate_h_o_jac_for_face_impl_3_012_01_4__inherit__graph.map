@@ -1,8 +1,0 @@
-<map id="MoFEM::OpCalculateHOJacForFaceImpl&lt; 2 &gt;" name="MoFEM::OpCalculateHOJacForFaceImpl&lt; 2 &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="130,256,337,297"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_op_calculate_h_o_jac_3_012_01_4.html" title=" " alt="" coords="5,353,225,378"/>
-<area shape="rect" id="node6" href="$struct_mo_f_e_m_1_1_op_calculate_h_o_jac_for_face_impl_3_013_01_4.html" title=" " alt="" coords="249,345,456,386"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for TRI element" alt="" coords="117,168,351,208"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="127,79,341,120"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="157,5,310,31"/>
-</map>

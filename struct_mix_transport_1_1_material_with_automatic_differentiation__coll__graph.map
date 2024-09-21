@@ -1,9 +1,0 @@
-<map id="MixTransport::MaterialWithAutomaticDifferentiation" name="MixTransport::MaterialWithAutomaticDifferentiation">
-<area shape="rect" id="node1" title=" " alt="" coords="5,562,184,603"/>
-<area shape="rect" id="node2" href="$struct_mix_transport_1_1_common_material_data.html" title=" " alt="" coords="138,487,371,513"/>
-<area shape="rect" id="node3" href="$struct_mix_transport_1_1_generic_material.html" title="Generic material model for unsaturated water transport." alt="" coords="156,314,353,339"/>
-<area shape="rect" id="node4" href="$classdouble.html" title=" " alt="" coords="62,5,122,31"/>
-<area shape="rect" id="node5" href="$class_range.html" title=" " alt="" coords="225,5,284,31"/>
-<area shape="rect" id="node6" title=" " alt="" coords="377,314,415,339"/>
-<area shape="rect" id="node7" title=" " alt="" coords="443,314,496,339"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="MixTransport::MixTransportElement" name="MixTransport::MixTransportElement">
-<area shape="rect" id="node1" title="Mix transport problem." alt="" coords="163,5,344,46"/>
-<area shape="rect" id="node2" href="$struct_mix_transport_1_1_unsaturated_flow_element.html" title="Implementation of operators, problem and finite elements for unsaturated flow." alt="" coords="5,94,182,135"/>
-<area shape="rect" id="node3" href="$struct_my_transport.html" title="Application of mix transport data structure." alt="" coords="206,102,301,127"/>
-</map>

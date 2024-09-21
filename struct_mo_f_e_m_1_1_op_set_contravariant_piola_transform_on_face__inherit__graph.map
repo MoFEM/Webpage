@@ -1,4 +1,0 @@
-<map id="MoFEM::OpSetContravariantPiolaTransformOnFace" name="MoFEM::OpSetContravariantPiolaTransformOnFace">
-<area shape="rect" id="node1" title="transform Hdiv base fluxes from reference element to physical triangle" alt="" coords="5,79,196,120"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="24,5,177,31"/>
-</map>

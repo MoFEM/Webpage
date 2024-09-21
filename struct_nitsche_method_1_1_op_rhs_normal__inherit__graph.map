@@ -1,8 +1,0 @@
-<map id="NitscheMethod::OpRhsNormal" name="NitscheMethod::OpRhsNormal">
-<area shape="rect" id="node1" title="Calculate Nitsche method terms on right hand side." alt="" coords="22,404,223,429"/>
-<area shape="rect" id="node2" href="$struct_nitsche_method_1_1_op_common.html" title="Calculate jacobian and variation of tractions." alt="" coords="29,330,216,356"/>
-<area shape="rect" id="node3" href="$struct_nitsche_method_1_1_op_basic_common.html" title="Basic operated shared between all Nitsche operators." alt="" coords="12,256,233,282"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="5,168,240,208"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="15,79,230,120"/>
-<area shape="rect" id="node6" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="46,5,199,31"/>
-</map>

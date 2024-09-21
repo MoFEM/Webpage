@@ -1,0 +1,7 @@
+<map id="MoFEM::FaceElementForcesAndSourcesCoreOnSide::UserDataOperator" name="MoFEM::FaceElementForcesAndSourcesCoreOnSide::UserDataOperator">
+<area shape="rect" id="node1" title="default operator for Face element" alt="" coords="31,259,234,315"/>
+<area shape="rect" id="node5" href="$structSkeletonFE_1_1OpFaceSide.html" title=" " alt="" coords="44,363,221,389"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html" title="default operator for TRI element" alt="" coords="5,169,260,211"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="19,80,246,121"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="49,5,216,32"/>
+</map>

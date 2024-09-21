@@ -1,14 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,300,210,341"/>
-<area shape="rect" id="node2" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_dmat_rhs.html" title="\biref operator to calculate the RHS of the constrain for the RVE boundary conditions" alt="" coords="303,71,493,111"/>
-<area shape="rect" id="node6" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_cal_assem_cmat.html" title="\biref operator to calculate and assemble Cmat" alt="" coords="278,136,518,177"/>
-<area shape="rect" id="node7" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_cal_c_t_lam.html" title=" " alt="" coords="293,201,503,242"/>
-<area shape="rect" id="node8" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_cal_c_u.html" title=" " alt="" coords="303,267,493,307"/>
-<area shape="rect" id="node9" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_cal_disp_at_gauss_pts.html" title=" " alt="" coords="265,332,531,373"/>
-<area shape="rect" id="node10" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_cal_lag_mul_at_gauss_pts.html" title=" " alt="" coords="258,397,538,438"/>
-<area shape="rect" id="node11" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_col_ind.html" title=" " alt="" coords="303,463,493,503"/>
-<area shape="rect" id="node12" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_row_ind.html" title=" " alt="" coords="302,528,494,569"/>
-<area shape="rect" id="node3" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_rhs.html" title=" " alt="" coords="613,5,802,46"/>
-<area shape="rect" id="node4" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_rhs__given_strain.html" title=" " alt="" coords="586,71,829,111"/>
-<area shape="rect" id="node5" href="$struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_homo_stress.html" title="\biref operator to calculate the RVE homogenised stress" alt="" coords="613,136,802,177"/>
+<area shape="rect" id="node1" href="$structFractureMechanics_1_1ConstantArea_1_1CommonData.html" title=" " alt="" coords="5,5,213,47"/>
 </map>

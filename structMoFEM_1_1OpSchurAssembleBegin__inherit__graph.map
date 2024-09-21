@@ -1,0 +1,7 @@
+<map id="MoFEM::OpSchurAssembleBegin" name="MoFEM::OpSchurAssembleBegin">
+<area shape="rect" id="node1" title="Clear Schur complement internal data." alt="" coords="17,319,251,345"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1OpSchurAssembleBaseImpl.html" title=" " alt="" coords="5,244,263,271"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1OpSchurAssembleBase.html" title=" " alt="" coords="20,169,248,196"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="21,80,247,121"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="51,5,217,32"/>
+</map>

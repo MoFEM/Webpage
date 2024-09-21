@@ -1,6 +1,0 @@
-<map id="MoFEM::ForceCubitBcData" name="MoFEM::ForceCubitBcData">
-<area shape="rect" id="node1" title="Definition of the force bc data structure." alt="" coords="87,183,271,208"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_generic_cubit_bc_data.html" title="Generic bc data structure." alt="" coords="5,94,201,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="35,5,171,31"/>
-<area shape="rect" id="node4" title=" " alt="" coords="225,94,285,120"/>
-</map>

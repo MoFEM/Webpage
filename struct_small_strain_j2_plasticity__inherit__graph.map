@@ -1,4 +1,0 @@
-<map id="SmallStrainJ2Plasticity" name="SmallStrainJ2Plasticity">
-<area shape="rect" id="node1" title="J2 plasticity (Kinematic Isotropic (Linear) Hardening)" alt="" coords="8,94,165,120"/>
-<area shape="rect" id="node2" href="$struct_small_strain_plasticity_1_1_closest_point_projection.html" title="Closest point projection algorithm." alt="" coords="5,5,168,46"/>
-</map>

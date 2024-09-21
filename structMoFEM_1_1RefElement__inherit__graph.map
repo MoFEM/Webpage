@@ -1,0 +1,11 @@
+<map id="MoFEM::RefElement" name="MoFEM::RefElement">
+<area shape="rect" id="node1" title="keeps data about abstract refined finite element" alt="" coords="641,132,796,159"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1RefElement__EDGE.html" title="keeps data about abstract EDGE finite element" alt="" coords="858,5,1055,32"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1RefElement__MESHSET.html" title="keeps data about abstract MESHSET finite element" alt="" coords="845,56,1068,83"/>
+<area shape="rect" id="node6" href="$structMoFEM_1_1RefElement__PRISM.html" title="keeps data about abstract PRISM finite element" alt="" coords="855,107,1058,133"/>
+<area shape="rect" id="node7" href="$structMoFEM_1_1RefElement__VERTEX.html" title="keeps data about abstract VERTEX finite element" alt="" coords="851,157,1062,184"/>
+<area shape="rect" id="node8" href="$structMoFEM_1_1RefElementFace.html" title="keeps data about abstract TRI finite element" alt="" coords="865,208,1048,235"/>
+<area shape="rect" id="node9" href="$structMoFEM_1_1RefElementVolume.html" title="keeps data about abstract TET finite element" alt="" coords="855,259,1058,285"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1interface__RefEntity.html" title=" " alt="" coords="389,125,592,166"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1interface__RefEntity.html" title="interface to RefEntity" alt="" coords="5,132,247,159"/>
+</map>

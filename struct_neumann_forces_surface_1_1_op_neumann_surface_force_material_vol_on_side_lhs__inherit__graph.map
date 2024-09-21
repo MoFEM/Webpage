@@ -1,9 +1,0 @@
-<map id="NeumannForcesSurface::OpNeumannSurfaceForceMaterialVolOnSideLhs" name="NeumannForcesSurface::OpNeumannSurfaceForceMaterialVolOnSideLhs">
-<area shape="rect" id="node1" title="Base class for LHS&#45;operators (material) on side volumes." alt="" coords="989,45,1215,101"/>
-<area shape="rect" id="node6" href="$struct_neumann_forces_surface_1_1_op_neumann_surface_force_material_vol_on_side_lhs__d_x__d_x.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1263,5,1489,61"/>
-<area shape="rect" id="node7" href="$struct_neumann_forces_surface_1_1_op_neumann_surface_force_material_vol_on_side_lhs__d_x__dx.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1263,85,1489,141"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_on_side_1_1_user_data_operator.html" title="default operator for TET element" alt="" coords="751,60,941,86"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="469,53,703,94"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html" title=" " alt="" coords="207,53,421,94"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_data_operator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,60,159,86"/>
-</map>

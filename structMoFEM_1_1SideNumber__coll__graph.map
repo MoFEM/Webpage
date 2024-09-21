@@ -1,0 +1,5 @@
+<map id="MoFEM::SideNumber" name="MoFEM::SideNumber">
+<area shape="rect" id="node1" title="keeps information about side number for the finite element" alt="" coords="30,139,189,165"/>
+<area shape="rect" id="node2" href="$classEntityHandle.html" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="136,5,187,32"/>
+</map>

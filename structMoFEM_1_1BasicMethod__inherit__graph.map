@@ -1,0 +1,106 @@
+<map id="MoFEM::BasicMethod" name="MoFEM::BasicMethod">
+<area shape="rect" id="node1" title="Data structure to exchange data between mofem and User Loop Methods." alt="" coords="649,269,812,295"/>
+<area shape="rect" id="node7" href="$structMoFEM_1_1DofMethod.html" title="Data structure to exchange data between mofem and User Loop Methods on entities." alt="" coords="867,123,1018,150"/>
+<area shape="rect" id="node12" href="$structMoFEM_1_1EntityMethod.html" title="Data structure to exchange data between mofem and User Loop Methods on entities." alt="" coords="860,269,1025,295"/>
+<area shape="rect" id="node16" href="$structMoFEM_1_1FEMethod.html" title="structure for User Loop Methods on finite elements" alt="" coords="871,698,1014,725"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1KspMethod.html" title="data structure for ksp (linear solver) context" alt="" coords="447,218,597,245"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1PetscData.html" title=" " alt="" coords="251,269,395,295"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1SnesMethod.html" title="data structure for snes (nonlinear solver) context" alt="" coords="443,269,601,295"/>
+<area shape="rect" id="node6" href="$structMoFEM_1_1TSMethod.html" title="data structure for TS (time stepping) context" alt="" coords="451,319,593,346"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="5,269,203,295"/>
+<area shape="rect" id="node8" href="$structBasicFiniteElements_1_1SaveVertexDofOnTag.html" title="Save field DOFS on vertices/tags." alt="" coords="1109,5,1276,47"/>
+<area shape="rect" id="node9" href="$structFractureMechanics_1_1CrackPropagation_1_1PostProcVertexMethod.html" title="operator to post&#45;process results on crack front nodes" alt="" coords="1092,71,1293,127"/>
+<area shape="rect" id="node10" href="$structMoFEM_1_1Projection10NodeCoordsOnField.html" title="Projection of edge entities with one mid&#45;node on hierarchical basis." alt="" coords="1073,152,1312,193"/>
+<area shape="rect" id="node11" href="$structMoFEM_1_1ProjectionFieldOn10NodeTet.html" title=" " alt="" coords="1374,152,1582,193"/>
+<area shape="rect" id="node13" href="$structBcEntMethodDisp.html" title=" " alt="" coords="1124,218,1261,245"/>
+<area shape="rect" id="node14" href="$structBcEntMethodSpatial.html" title=" " alt="" coords="1116,269,1269,295"/>
+<area shape="rect" id="node15" href="$structTestEntityMethod.html" title=" " alt="" coords="1125,319,1260,346"/>
+<area shape="rect" id="node17" href="$structApplyDirichletBc.html" title=" " alt="" coords="1127,370,1258,397"/>
+<area shape="rect" id="node18" href="$structCohesiveElement_1_1AssembleRhsVectors.html" title=" " alt="" coords="1089,421,1297,463"/>
+<area shape="rect" id="node19" href="$structCountDown.html" title=" " alt="" coords="1144,487,1241,514"/>
+<area shape="rect" id="node20" href="$structCountUp.html" title=" " alt="" coords="1153,538,1232,565"/>
+<area shape="rect" id="node21" href="$structDirichletDisplacementBc.html" title="Set Dirichlet boundary conditions on displacements." alt="" coords="1101,589,1284,615"/>
+<area shape="rect" id="node29" href="$structGelModule_1_1Gel_1_1MonitorPostProc.html" title=" " alt="" coords="1075,639,1311,666"/>
+<area shape="rect" id="node30" href="$structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html" title=" " alt="" coords="1082,691,1303,732"/>
+<area shape="rect" id="node31" href="$structMoFEM_1_1ForcesAndSourcesCore.html" title="structure to get information form mofem into EntitiesFieldData" alt="" coords="1079,757,1306,783"/>
+<area shape="rect" id="node99" href="$structMonitor.html" title="[Push operators to pipeline]" alt="" coords="1157,807,1229,834"/>
+<area shape="rect" id="node100" href="$structMonitorIncompressible.html" title=" " alt="" coords="1107,858,1278,885"/>
+<area shape="rect" id="node101" href="$structMonitorPostProc.html" title=" " alt="" coords="1129,909,1257,935"/>
+<area shape="rect" id="node102" href="$structMonitorRestart.html" title=" " alt="" coords="1133,959,1252,986"/>
+<area shape="rect" id="node103" href="$structPhotonDiffusion_1_1Monitor.html" title=" " alt="" coords="1101,1010,1284,1037"/>
+<area shape="rect" id="node104" href="$structReactionDiffusionEquation_1_1Monitor.html" title="Monitor solution." alt="" coords="1095,1061,1290,1103"/>
+<area shape="rect" id="node22" href="$structAnalyticalDirichletBC_1_1DirichletBC.html" title="Structure used to enforce analytical boundary conditions." alt="" coords="1398,337,1558,379"/>
+<area shape="rect" id="node23" href="$structDirichletDisplacementRemoveDofsBc.html" title="Set Dirichlet boundary conditions on displacements by removing dofs." alt="" coords="1367,403,1589,444"/>
+<area shape="rect" id="node25" href="$structDirichletFixFieldAtEntitiesBc.html" title="Fix dofs on entities." alt="" coords="1375,469,1581,495"/>
+<area shape="rect" id="node26" href="$structDirichletSetFieldFromBlockWithFlags.html" title="Add boundary conditions form block set having 6 attributes." alt="" coords="1379,520,1577,561"/>
+<area shape="rect" id="node27" href="$structDirichletSpatialPositionsBc.html" title="Set Dirichlet boundary conditions on spatial displacements." alt="" coords="1379,586,1577,613"/>
+<area shape="rect" id="node28" href="$structDirichletTemperatureBc.html" title=" " alt="" coords="1391,637,1565,663"/>
+<area shape="rect" id="node24" href="$structDirichletSpatialRemoveDofsBc.html" title="Set Dirichlet boundary conditions on spatial positions by removing dofs." alt="" coords="1669,410,1892,437"/>
+<area shape="rect" id="node32" href="$structMoFEM_1_1ContactPrismElementForcesAndSourcesCore.html" title="ContactPrism finite element." alt="" coords="1369,688,1587,729"/>
+<area shape="rect" id="node33" href="$structMoFEM_1_1EdgeElementForcesAndSourcesCore.html" title="Edge finite element." alt="" coords="1375,753,1581,795"/>
+<area shape="rect" id="node42" href="$structMoFEM_1_1FaceElementForcesAndSourcesCore.html" title="Face finite element." alt="" coords="1377,1299,1579,1340"/>
+<area shape="rect" id="node66" href="$structMoFEM_1_1FlatPrismElementForcesAndSourcesCore.html" title="FlatPrism finite element." alt="" coords="1360,1608,1596,1649"/>
+<area shape="rect" id="node68" href="$structMoFEM_1_1VertexElementForcesAndSourcesCore.html" title="Vertex finite element." alt="" coords="1370,1812,1586,1853"/>
+<area shape="rect" id="node70" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCore.html" title="Volume finite element base." alt="" coords="1367,2443,1589,2484"/>
+<area shape="rect" id="node34" href="$structEdgeFE.html" title=" " alt="" coords="1745,486,1816,513"/>
+<area shape="rect" id="node35" href="$structEdgeForce_1_1MyFE.html" title=" " alt="" coords="1714,537,1847,563"/>
+<area shape="rect" id="node36" href="$structEdgeSlidingConstrains_1_1MyEdgeFE.html" title=" " alt="" coords="1697,588,1864,629"/>
+<area shape="rect" id="node37" href="$structMoFEM_1_1EdgeElementForcesAndSourcesCoreOnChildParent.html" title="Base face element used to integrate on skeleton." alt="" coords="1671,653,1891,695"/>
+<area shape="rect" id="node38" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="1645,719,1916,775"/>
+<area shape="rect" id="node40" href="$structPostProcTemplateOnRefineMesh.html" title=" " alt="" coords="1667,800,1894,841"/>
+<area shape="rect" id="node39" href="$structMoFEM_1_1PostProcBrokenMeshInMoab_3_01EdgeElementForcesAndSourcesCore_01_4.html" title=" " alt="" coords="1965,719,2255,775"/>
+<area shape="rect" id="node41" href="$structPostProcEdgeOnRefinedMesh.html" title="Postprocess on edge." alt="" coords="2004,807,2216,834"/>
+<area shape="rect" id="node43" href="$structAnalyticalDirichletBC_1_1ApproxField_1_1MyTriFE.html" title=" " alt="" coords="1697,865,1864,907"/>
+<area shape="rect" id="node44" href="$structCellEngineering_1_1DispMapFe.html" title=" " alt="" coords="1679,931,1883,958"/>
+<area shape="rect" id="node45" href="$structCellEngineering_1_1FaceElement.html" title=" " alt="" coords="1673,982,1888,1009"/>
+<area shape="rect" id="node46" href="$structFluidPressure_1_1MyTriangleFE.html" title=" " alt="" coords="1678,1033,1883,1059"/>
+<area shape="rect" id="node47" href="$structMagneticElement_1_1TriFE.html" title="define surface element" alt="" coords="1693,1083,1868,1110"/>
+<area shape="rect" id="node48" href="$structMixTransport_1_1MixTransportElement_1_1MyTriFE.html" title="definition of surface element" alt="" coords="1681,1135,1880,1176"/>
+<area shape="rect" id="node49" href="$structMoFEM_1_1FaceElementForcesAndSourcesCoreOnChildParent.html" title="Base face element used to integrate on skeleton." alt="" coords="1671,1200,1891,1241"/>
+<area shape="rect" id="node51" href="$structMoFEM_1_1FaceElementForcesAndSourcesCoreOnSide.html" title="Base face element used to integrate on skeleton." alt="" coords="1679,1265,1882,1307"/>
+<area shape="rect" id="node53" href="$structNeumannForcesSurface_1_1MyTriangleFE.html" title=" " alt="" coords="1693,1331,1869,1372"/>
+<area shape="rect" id="node54" href="$structNeumannForcesSurfaceComplexForLazy_1_1MyTriangleSpatialFE.html" title=" " alt="" coords="1663,1396,1898,1437"/>
+<area shape="rect" id="node55" href="$structNitscheMethod_1_1MyFace.html" title=" " alt="" coords="1692,1462,1869,1489"/>
+<area shape="rect" id="node56" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="1647,1513,1914,1569"/>
+<area shape="rect" id="node59" href="$structPostProcTemplateOnRefineMesh.html" title=" " alt="" coords="1654,1593,1907,1649"/>
+<area shape="rect" id="node62" href="$structQuadFE.html" title=" " alt="" coords="1745,1673,1817,1699"/>
+<area shape="rect" id="node63" href="$structSurfaceSlidingConstrains_1_1MyTriangleFE.html" title=" " alt="" coords="1689,1724,1873,1765"/>
+<area shape="rect" id="node64" href="$structThermalElement_1_1MyTriFE.html" title="define surface element" alt="" coords="1686,1790,1875,1817"/>
+<area shape="rect" id="node65" href="$structTriFE.html" title=" " alt="" coords="1754,1841,1807,1867"/>
+<area shape="rect" id="node50" href="$structMoFEM_1_1FaceElementForcesAndSourcesCoreOnChildParentSwitch.html" title=" " alt="" coords="1979,1186,2241,1242"/>
+<area shape="rect" id="node52" href="$structMoFEM_1_1FaceElementForcesAndSourcesCoreOnSideSwitch.html" title=" " alt="" coords="2001,1266,2219,1322"/>
+<area shape="rect" id="node57" href="$structEshelbianPlasticity_1_1ContactTree.html" title=" " alt="" coords="2037,1455,2183,1496"/>
+<area shape="rect" id="node58" href="$structMoFEM_1_1PostProcBrokenMeshInMoab_3_01FaceElementForcesAndSourcesCore_01_4.html" title=" " alt="" coords="1967,1521,2253,1577"/>
+<area shape="rect" id="node60" href="$structPostProcFaceOnRefinedMesh.html" title="Postprocess on face." alt="" coords="2005,1607,2215,1634"/>
+<area shape="rect" id="node61" href="$structPostProcFaceOnRefinedMeshFor2D.html" title="Postprocess 2d face elements." alt="" coords="2316,1600,2525,1641"/>
+<area shape="rect" id="node67" href="$structCohesiveElement_1_1CohesiveInterfaceElement_1_1MyPrism.html" title=" " alt="" coords="1679,1892,1883,1933"/>
+<area shape="rect" id="node69" href="$structNodalForce_1_1MyFE.html" title=" " alt="" coords="1711,1958,1850,1985"/>
+<area shape="rect" id="node71" href="$structBodyForceConstantField_1_1MyVolumeFE.html" title=" " alt="" coords="1691,2009,1870,2051"/>
+<area shape="rect" id="node72" href="$structBoneRemodeling_1_1DensityMapFe.html" title=" " alt="" coords="1663,2075,1898,2102"/>
+<area shape="rect" id="node73" href="$structBoneRemodeling_1_1Remodeling_1_1Fe.html" title="Volume finite element." alt="" coords="1659,2126,1902,2153"/>
+<area shape="rect" id="node74" href="$structGelModule_1_1Gel_1_1GelFE.html" title="definition of volume element" alt="" coords="1697,2177,1865,2203"/>
+<area shape="rect" id="node75" href="$structKelvinVoigtDamper_1_1DamperFE.html" title="definition of volume element" alt="" coords="1703,2228,1858,2269"/>
+<area shape="rect" id="node76" href="$structMagneticElement_1_1VolumeFE.html" title="definition of volume element" alt="" coords="1676,2294,1885,2321"/>
+<area shape="rect" id="node77" href="$structMixTransport_1_1MixTransportElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="1681,2345,1880,2387"/>
+<area shape="rect" id="node78" href="$structMoFEM_1_1FatPrismElementForcesAndSourcesCore.html" title="FatPrism finite element." alt="" coords="1665,2411,1896,2452"/>
+<area shape="rect" id="node83" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSide.html" title="Base volume element used to integrate on contact surface (could be extended to other volume elements)" alt="" coords="1650,2476,1911,2517"/>
+<area shape="rect" id="node85" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnSide.html" title="Base volume element used to integrate on skeleton." alt="" coords="1669,2541,1892,2583"/>
+<area shape="rect" id="node87" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreSwitch.html" title=" " alt="" coords="1655,2607,1907,2648"/>
+<area shape="rect" id="node88" href="$structNitscheMethod_1_1MyVolumeFE.html" title="Definition of volume element." alt="" coords="1674,2673,1887,2699"/>
+<area shape="rect" id="node90" href="$structNonlinearElasticElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="1689,2724,1872,2765"/>
+<area shape="rect" id="node92" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="1649,2790,1912,2846"/>
+<area shape="rect" id="node94" href="$structPostProcTemplateOnRefineMesh.html" title=" " alt="" coords="1644,2870,1917,2926"/>
+<area shape="rect" id="node97" href="$structThermalElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="1669,2950,1892,2977"/>
+<area shape="rect" id="node98" href="$structThermalStressElement_1_1MyVolumeFE.html" title=" " alt="" coords="1695,3001,1866,3043"/>
+<area shape="rect" id="node79" href="$structCellEngineering_1_1FatPrism.html" title=" " alt="" coords="2016,2287,2204,2314"/>
+<area shape="rect" id="node80" href="$structPostProcTemplateOnRefineMesh.html" title=" " alt="" coords="1991,2338,2229,2394"/>
+<area shape="rect" id="node82" href="$structPrismFE.html" title=" " alt="" coords="2073,2418,2147,2445"/>
+<area shape="rect" id="node81" href="$structPostProcFatPrismOnRefinedMesh.html" title="Postprocess on prism." alt="" coords="2303,2353,2539,2379"/>
+<area shape="rect" id="node84" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSideSwitch.html" title=" " alt="" coords="1979,2469,2241,2525"/>
+<area shape="rect" id="node86" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnSideSwitch.html" title=" " alt="" coords="1999,2549,2221,2605"/>
+<area shape="rect" id="node89" href="$structPeriodicNitscheConstrains_1_1MyNitscheVolume.html" title=" " alt="" coords="2014,2665,2206,2707"/>
+<area shape="rect" id="node91" href="$structSmoother_1_1MyVolumeFE.html" title=" " alt="" coords="2021,2731,2199,2758"/>
+<area shape="rect" id="node93" href="$structMoFEM_1_1PostProcBrokenMeshInMoab_3_01VolumeElementForcesAndSourcesCore_01_4.html" title=" " alt="" coords="1983,2790,2237,2846"/>
+<area shape="rect" id="node95" href="$structPostProcTemplateVolumeOnRefinedMesh.html" title=" " alt="" coords="1970,2870,2250,2926"/>
+<area shape="rect" id="node96" href="$structPostProcVolumeOnRefinedMesh.html" title="Post processing." alt="" coords="2306,2885,2535,2911"/>
+</map>

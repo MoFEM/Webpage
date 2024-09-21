@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['jacobipolynomial_2ecpp_0',['JacobiPolynomial.cpp',['../_jacobi_polynomial_8cpp.html',1,'']]],
-  ['jacobipolynomial_2ehpp_1',['JacobiPolynomial.hpp',['../_jacobi_polynomial_8hpp.html',1,'']]],
-  ['jup_5feigen_5felastic_2edox_2',['jup_eigen_elastic.dox',['../jup__eigen__elastic_8dox.html',1,'']]],
-  ['jup_5fplastic_2edox_3',['jup_plastic.dox',['../jup__plastic_8dox.html',1,'']]],
-  ['jup_5fradiation_2edox_4',['jup_radiation.dox',['../jup__radiation_8dox.html',1,'']]],
-  ['jupyterhub_5fconfig_2epy_5',['jupyterhub_config.py',['../jupyterhub__config_8py.html',1,'']]]
+  ['kelvinvoigtdamper_2ehpp_15290',['KelvinVoigtDamper.hpp',['../KelvinVoigtDamper_8hpp.html',1,'']]],
+  ['kronecker_5fdelta_2ehpp_15291',['Kronecker_Delta.hpp',['../Kronecker__Delta_8hpp.html',1,'']]],
+  ['kspctx_2ecpp_15292',['KspCtx.cpp',['../KspCtx_8cpp.html',1,'']]],
+  ['kspctx_2ehpp_15293',['KspCtx.hpp',['../KspCtx_8hpp.html',1,'']]]
 ];

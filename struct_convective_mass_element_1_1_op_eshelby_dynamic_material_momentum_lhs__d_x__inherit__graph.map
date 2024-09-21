@@ -1,7 +1,0 @@
-<map id="ConvectiveMassElement::OpEshelbyDynamicMaterialMomentumLhs_dX" name="ConvectiveMassElement::OpEshelbyDynamicMaterialMomentumLhs_dX">
-<area shape="rect" id="node1" title=" " alt="" coords="797,31,1054,87"/>
-<area shape="rect" id="node2" href="$struct_convective_mass_element_1_1_op_eshelby_dynamic_material_momentum_lhs__dv.html" title=" " alt="" coords="493,31,749,87"/>
-<area shape="rect" id="node3" href="$struct_convective_mass_element_1_1_op_mass_lhs__d_m__dv.html" title=" " alt="" coords="278,39,445,79"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,5,230,46"/>
-<area shape="rect" id="node5" href="$struct_convective_mass_element_1_1_common_functions.html" title=" " alt="" coords="34,71,201,111"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="MoFEM::CreateRowComressedADJMatrix" name="MoFEM::CreateRowComressedADJMatrix">
-<area shape="rect" id="node1" title="Create compressed matrix." alt="" coords="5,300,214,341"/>
-<area shape="rect" id="node2" href="$struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html" title="Core (interface) class." alt="" coords="85,226,134,252"/>
-<area shape="rect" id="node3" href="$struct_mo_f_e_m_1_1_deprecated_core_interface.html" title="Deprecated interface functions." alt="" coords="73,153,146,178"/>
-<area shape="rect" id="node4" href="$struct_mo_f_e_m_1_1_core_interface.html" title="Interface." alt="" coords="32,79,187,105"/>
-<area shape="rect" id="node5" href="$struct_mo_f_e_m_1_1_unknown_interface.html" title="base class for all interface classes" alt="" coords="19,5,200,31"/>
-</map>
