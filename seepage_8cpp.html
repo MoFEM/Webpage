@@ -194,22 +194,22 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:abdc7a0aa83fed295842da936c87b2b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Lhs base of flux (1/k) base of flux (FLUX x FLUX)  <a href="seepage_8cpp.html#abdc7a0aa83fed295842da936c87b2b64">More...</a><br /></td></tr>
 <tr class="separator:abdc7a0aa83fed295842da936c87b2b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad82f894e8c05599e198f4d66a92630a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seepage_8cpp.html#aad82f894e8c05599e198f4d66a92630a">OpHdivQ</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::<a class="el" href="classBiLinearForm.html">BiLinearForm</a>&lt; GAUSS &gt;::OpMixDivTimesScalar&lt; <a class="el" href="mofem__manager_8cpp.html#a49160938699493179db956a30f49c447">SPACE_DIM</a> &gt;</td></tr>
-<tr class="memdesc:aad82f894e8c05599e198f4d66a92630a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Lhs div of base of flux time base of temperature (FLUX x <a class="el" href="classT.html">T</a>) and transpose of it, i.e. (<a class="el" href="classT.html">T</a> x FLAX)  <a href="seepage_8cpp.html#aad82f894e8c05599e198f4d66a92630a">More...</a><br /></td></tr>
+<tr class="memdesc:aad82f894e8c05599e198f4d66a92630a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Lhs div of base of flux time base of temperature (FLUX x T) and transpose of it, i.e. (T x FLAX)  <a href="seepage_8cpp.html#aad82f894e8c05599e198f4d66a92630a">More...</a><br /></td></tr>
 <tr class="separator:aad82f894e8c05599e198f4d66a92630a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab422105b0f4ac556f5b13c2394026774"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seepage_8cpp.html#ab422105b0f4ac556f5b13c2394026774">OpCapacity</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::<a class="el" href="classBiLinearForm.html">BiLinearForm</a>&lt; GAUSS &gt;::<a class="el" href="seepage_8cpp.html#a2993c54e90f2427566f6d9dc8e5399a9">OpMass</a>&lt; 1, 1 &gt;</td></tr>
-<tr class="memdesc:ab422105b0f4ac556f5b13c2394026774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Lhs base of temperature times (heat capacity) times base of temperature (<a class="el" href="classT.html">T</a> x <a class="el" href="classT.html">T</a>)  <a href="seepage_8cpp.html#ab422105b0f4ac556f5b13c2394026774">More...</a><br /></td></tr>
+<tr class="memdesc:ab422105b0f4ac556f5b13c2394026774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Lhs base of temperature times (heat capacity) times base of temperature (T x T)  <a href="seepage_8cpp.html#ab422105b0f4ac556f5b13c2394026774">More...</a><br /></td></tr>
 <tr class="separator:ab422105b0f4ac556f5b13c2394026774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a697c0278f0f207ae6f6780a1c2f3c474"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seepage_8cpp.html#a697c0278f0f207ae6f6780a1c2f3c474">OpHdivFlux</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::LinearForm&lt; GAUSS &gt;::OpBaseTimesVector&lt; 3, 3, 1 &gt;</td></tr>
 <tr class="memdesc:a697c0278f0f207ae6f6780a1c2f3c474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrating Rhs flux base (1/k) flux (FLUX)  <a href="seepage_8cpp.html#a697c0278f0f207ae6f6780a1c2f3c474">More...</a><br /></td></tr>
 <tr class="separator:a697c0278f0f207ae6f6780a1c2f3c474"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1447aff8f47c8cfb4fd5cf1b7c09f41"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seepage_8cpp.html#ac1447aff8f47c8cfb4fd5cf1b7c09f41">OpHDivH</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::LinearForm&lt; GAUSS &gt;::OpMixDivTimesU&lt; 3, 1, 2 &gt;</td></tr>
-<tr class="memdesc:ac1447aff8f47c8cfb4fd5cf1b7c09f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs div flux base times temperature (<a class="el" href="classT.html">T</a>)  <a href="seepage_8cpp.html#ac1447aff8f47c8cfb4fd5cf1b7c09f41">More...</a><br /></td></tr>
+<tr class="memdesc:ac1447aff8f47c8cfb4fd5cf1b7c09f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs div flux base times temperature (T)  <a href="seepage_8cpp.html#ac1447aff8f47c8cfb4fd5cf1b7c09f41">More...</a><br /></td></tr>
 <tr class="separator:ac1447aff8f47c8cfb4fd5cf1b7c09f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae51431142226971f6d89413956036f57"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seepage_8cpp.html#ae51431142226971f6d89413956036f57">OpBaseDotH</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::LinearForm&lt; GAUSS &gt;::OpBaseTimesScalarField&lt; 1 &gt;</td></tr>
-<tr class="memdesc:ae51431142226971f6d89413956036f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs base of temperature time heat capacity times heat rate (<a class="el" href="classT.html">T</a>)  <a href="seepage_8cpp.html#ae51431142226971f6d89413956036f57">More...</a><br /></td></tr>
+<tr class="memdesc:ae51431142226971f6d89413956036f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs base of temperature time heat capacity times heat rate (T)  <a href="seepage_8cpp.html#ae51431142226971f6d89413956036f57">More...</a><br /></td></tr>
 <tr class="separator:ae51431142226971f6d89413956036f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c72acfa999fb7d1abeac2da74057478"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seepage_8cpp.html#a1c72acfa999fb7d1abeac2da74057478">OpBaseDivFlux</a> = <a class="el" href="seepage_8cpp.html#ae51431142226971f6d89413956036f57">OpBaseDotH</a></td></tr>
-<tr class="memdesc:a1c72acfa999fb7d1abeac2da74057478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs base of temperature times divergent of flux (<a class="el" href="classT.html">T</a>)  <a href="seepage_8cpp.html#a1c72acfa999fb7d1abeac2da74057478">More...</a><br /></td></tr>
+<tr class="memdesc:a1c72acfa999fb7d1abeac2da74057478"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs base of temperature times divergent of flux (T)  <a href="seepage_8cpp.html#a1c72acfa999fb7d1abeac2da74057478">More...</a><br /></td></tr>
 <tr class="separator:a1c72acfa999fb7d1abeac2da74057478"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a554a617f55a45dd0586880a47df79a89"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seepage_8cpp.html#a554a617f55a45dd0586880a47df79a89">DomainNaturalBCRhs</a> = <a class="el" href="structMoFEM_1_1NaturalBC.html">NaturalBC</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::LinearForm&lt; GAUSS &gt;</td></tr>
 <tr class="memdesc:a554a617f55a45dd0586880a47df79a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Body and heat source]  <a href="seepage_8cpp.html#a554a617f55a45dd0586880a47df79a89">More...</a><br /></td></tr>
@@ -442,7 +442,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Rhs base of temperature times divergent of flux (<a class="el" href="classT.html">T</a>) </p>
+<p>Integrate Rhs base of temperature times divergent of flux (T) </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="seepage_8cpp-example.html#a129">seepage.cpp</a>.</dd>
 </dl>
 
@@ -482,7 +482,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Rhs base of temperature time heat capacity times heat rate (<a class="el" href="classT.html">T</a>) </p>
+<p>Integrate Rhs base of temperature time heat capacity times heat rate (T) </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="seepage_8cpp-example.html#a16">seepage.cpp</a>.</dd>
 </dl>
 
@@ -569,7 +569,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Lhs base of temperature times (heat capacity) times base of temperature (<a class="el" href="classT.html">T</a> x <a class="el" href="classT.html">T</a>) </p>
+<p>Integrate Lhs base of temperature times (heat capacity) times base of temperature (T x T) </p>
 
 <p class="definition">Definition at line <a class="el" href="seepage_8cpp_source.html#l00103">103</a> of file <a class="el" href="seepage_8cpp_source.html">seepage.cpp</a>.</p>
 
@@ -658,8 +658,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Rhs div flux base times temperature (<a class="el" href="classT.html">T</a>) </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="seepage_8cpp-example.html#a128">seepage.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a78">test_broken_space.cpp</a>.</dd>
+<p>Integrate Rhs div flux base times temperature (T) </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="seepage_8cpp-example.html#a128">seepage.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a79">test_broken_space.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="seepage_8cpp_source.html#l00116">116</a> of file <a class="el" href="seepage_8cpp_source.html">seepage.cpp</a>.</p>
@@ -698,7 +698,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Lhs div of base of flux time base of temperature (FLUX x <a class="el" href="classT.html">T</a>) and transpose of it, i.e. (<a class="el" href="classT.html">T</a> x FLAX) </p>
+<p>Integrate Lhs div of base of flux time base of temperature (FLUX x T) and transpose of it, i.e. (T x FLAX) </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="seepage_8cpp-example.html#a125">seepage.cpp</a>.</dd>
 </dl>
 

@@ -137,6 +137,9 @@ $(function() {
 <li>d_f_log()
 : <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a81fb4990413038e17a8f6ef99fd85f3d">EshelbianPlasticity::EshelbianCore</a>
 </li>
+<li>d_f_log_e()
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a68a9aa377549588728583769158e9c2b">EshelbianPlasticity::EshelbianCore</a>
+</li>
 <li>d_one_sided_Tensor1()
 : <a class="el" href="classFTensor_1_1d__one__sided__Tensor1.html#ab32cac04aaacdc0139c9cac652ddb573">FTensor::d_one_sided_Tensor1&lt; T, Dim, i, axis &gt;</a>
 </li>
@@ -180,6 +183,9 @@ $(function() {
 </li>
 <li>dd_f_log()
 : <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a534ce5ae6a9957b17ba3f3e73fb8f176">EshelbianPlasticity::EshelbianCore</a>
+</li>
+<li>dd_f_log_e()
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#ab52e3754dac2b60f6b1b3399ef3a1fcd">EshelbianPlasticity::EshelbianCore</a>
 </li>
 <li>Ddg()
 : <a class="el" href="classFTensor_1_1Ddg_3_01PackPtr_3_01T_01_5_00_01I_01_4_00_01Tensor__Dim01_00_01Tensor__Dim23_01_4.html#a9226c754464d03e5cd2db689cf76052a">FTensor::Ddg&lt; PackPtr&lt; T *, I &gt;, Tensor_Dim01, Tensor_Dim23 &gt;</a>
@@ -868,15 +874,15 @@ $(function() {
 , <a class="el" href="structEdgeForce_1_1OpEdgeForce.html#a67abc54d5b2666128797e434047fd32e">EdgeForce::OpEdgeForce</a>
 , <a class="el" href="structEdgeSlidingConstrains_1_1OpJacobian.html#ab39536a699d0099b536b5168e171c8d8">EdgeSlidingConstrains::OpJacobian</a>
 , <a class="el" href="structElasticExample_1_1OpCalculateTraction.html#a2fd2a1ef224f97b00178e1fd3ab74d02">ElasticExample::OpCalculateTraction</a>
+, <a class="el" href="structEshelbianPlasticity_1_1HMHHencky_1_1OpCalculateEnergy.html#ab9b2814952caec2abc5f8dcba9dd6ae4">EshelbianPlasticity::HMHHencky::OpCalculateEnergy</a>
+, <a class="el" href="structEshelbianPlasticity_1_1HMHHencky_1_1OpCalculateStretchFromStress.html#a6e2d0f6c8abbfb326ef874837102f56d">EshelbianPlasticity::HMHHencky::OpCalculateStretchFromStress</a>
 , <a class="el" href="structEshelbianPlasticity_1_1HMHHencky_1_1OpHenckyJacobian.html#aa4b18f0737f8d6c1544afa453de39e21">EshelbianPlasticity::HMHHencky::OpHenckyJacobian</a>
 , <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ad44c5019acab0f97851f58521ee83e17">EshelbianPlasticity::OpAssembleBasic&lt; T &gt;</a>
+, <a class="el" href="structEshelbianPlasticity_1_1OpCalculateEshelbyStress.html#a545e0ced9123a5d44222b5c93ca22549">EshelbianPlasticity::OpCalculateEshelbyStress</a>
 , <a class="el" href="structEshelbianPlasticity_1_1OpCalculateRotationAndSpatialGradient.html#ae43e1ec858969cff2e1badc84e107743">EshelbianPlasticity::OpCalculateRotationAndSpatialGradient</a>
-, <a class="el" href="structEshelbianPlasticity_1_1OpCalculateStrainEnergy.html#a00b673f7f99133394b50965399b8a427">EshelbianPlasticity::OpCalculateStrainEnergy</a>
-, <a class="el" href="structEshelbianPlasticity_1_1OpCalculateStretchFromStress.html#a3f8b5e10f36851f5814b2f336bf01973">EshelbianPlasticity::OpCalculateStretchFromStress</a>
 , <a class="el" href="structEshelbianPlasticity_1_1OpJacobian.html#aa2bb3cc213bc5389f516fa2fba649164">EshelbianPlasticity::OpJacobian</a>
 , <a class="el" href="structEshelbianPlasticity_1_1OpMoveNode.html#a734ae0eaa98686692d7dd2f6662cfd53">EshelbianPlasticity::OpMoveNode</a>
 , <a class="el" href="structEshelbianPlasticity_1_1OpPostProcDataStructure.html#ac2cb07d553a728d2b35c0bb0a1fb10d6">EshelbianPlasticity::OpPostProcDataStructure</a>
-, <a class="el" href="structEshelbianPlasticity_1_1OpTractionBc.html#ab40e4efa76e797bdb40ebdf89ff65ac0">EshelbianPlasticity::OpTractionBc</a>
 , <a class="el" href="structEshelbianPlasticity_1_1OpTreeSearch.html#a877d534e5bf8a347ce740b46c1d4d56a">EshelbianPlasticity::OpTreeSearch</a>
 , <a class="el" href="structExample_1_1BoundaryOp.html#a60f0cce7752582a4a2650e1450604123">Example::BoundaryOp</a>
 , <a class="el" href="structExample_1_1OpCalcSurfaceAverageTemperature.html#acf06f9f254ecaa0fd9e84df2eaa126ef">Example::OpCalcSurfaceAverageTemperature</a>
@@ -886,7 +892,7 @@ $(function() {
 , <a class="el" href="structExample_1_1OpSecond.html#a1a5b73c0275e60a3c9dd562841d737e2">Example::OpSecond</a>
 , <a class="el" href="structExample_1_1OpZero.html#a2141d0caccf8bdee9697d21c9f147b71">Example::OpZero</a>
 , <a class="el" href="structFieldApproximationH1_1_1OpApproxFace.html#ac6f785b5389b3bac93b45fb4c8b1aa3b">FieldApproximationH1::OpApproxFace&lt; FUNEVAL &gt;</a>
-, <a class="el" href="structFieldApproximationH1_1_1OpApproxVolume.html#a9f51afee6d317ab1b2d964d24902dc08">FieldApproximationH1::OpApproxVolume&lt; FUNEVAL &gt;</a>
+, <a class="el" href="structFieldApproximationH1_1_1OpApproxVolume.html#a1579882825049ca4042965faa9d398ff">FieldApproximationH1::OpApproxVolume&lt; FUNEVAL &gt;</a>
 , <a class="el" href="structFluidPressure_1_1OpCalculatePressure.html#a7744c35a3c68988c320f62d8d9afad6d">FluidPressure::OpCalculatePressure</a>
 , <a class="el" href="structFractureMechanics_1_1ConstantArea_1_1OpAreaC.html#a26a48558bd52be0f2143b6f5b063c305">FractureMechanics::ConstantArea::OpAreaC</a>
 , <a class="el" href="structFractureMechanics_1_1ConstantArea_1_1OpAreaJacobian.html#a31090ac3558842dc871cce5689eee669">FractureMechanics::ConstantArea::OpAreaJacobian</a>
@@ -995,7 +1001,7 @@ $(function() {
 , <a class="el" href="structMixTransport_1_1MixTransportElement_1_1OpRhsBcOnValues.html#ade5d96c3098b9a5d64c6ddafca2c9b5d">MixTransport::MixTransportElement::OpRhsBcOnValues</a>
 , <a class="el" href="structMixTransport_1_1MixTransportElement_1_1OpSkeleton.html#aebfa55a1d63e69d37ed9a8c4eb93d4ac">MixTransport::MixTransportElement::OpSkeleton</a>
 , <a class="el" href="structMixTransport_1_1MixTransportElement_1_1OpSkeleton_1_1OpVolSide.html#a998e6f8d52bd3cc3686a6f1b335a24aa">MixTransport::MixTransportElement::OpSkeleton::OpVolSide</a>
-, <a class="el" href="structMixTransport_1_1MixTransportElement_1_1OpTauDotSigma__HdivHdiv.html#afd80955ee3f6ae78a02c64b0d40ac164">MixTransport::MixTransportElement::OpTauDotSigma_HdivHdiv</a>
+, <a class="el" href="structMixTransport_1_1MixTransportElement_1_1OpTauDotSigma__HdivHdiv.html#a33f120e7d599de75601aa2c512917468">MixTransport::MixTransportElement::OpTauDotSigma_HdivHdiv</a>
 , <a class="el" href="structMixTransport_1_1MixTransportElement_1_1OpValuesAtGaussPts.html#a1016134959f1c5a5d8adbda4cf8037a8">MixTransport::MixTransportElement::OpValuesAtGaussPts</a>
 , <a class="el" href="structMixTransport_1_1MixTransportElement_1_1OpValuesGradientAtGaussPts.html#a4c0e9ce0c2fa14e3b74596e66a51b062">MixTransport::MixTransportElement::OpValuesGradientAtGaussPts</a>
 , <a class="el" href="structMixTransport_1_1MixTransportElement_1_1OpVDivSigma__L2Hdiv.html#a8553613978e25f39d15086b292011ea5">MixTransport::MixTransportElement::OpVDivSigma_L2Hdiv</a>
@@ -1116,7 +1122,7 @@ $(function() {
 , <a class="el" href="structMoFEM_1_1OpSymmetrizeTensor.html#a50abebf3bbac9ee01d42b5d34691435e">MoFEM::OpSymmetrizeTensor&lt; DIM &gt;</a>
 , <a class="el" href="structMoFEM_1_1OpTensorTimesSymmetricTensor.html#a722d754eed8ab83aa6b0fc4d72ad5834">MoFEM::OpTensorTimesSymmetricTensor&lt; DIM_01, DIM_23, S &gt;</a>
 , <a class="el" href="structMoFEM_1_1OpUnSetBc.html#a405fc426ee0d5b98d336842be042c890">MoFEM::OpUnSetBc</a>
-, <a class="el" href="structMyOp2.html#aeb168641e9dfe2a9e2561e02871b3811">MyOp2</a>
+, <a class="el" href="structMyOp2.html#a72c6cfa305836fe2c0f5409382ecfda0">MyOp2</a>
 , <a class="el" href="structMyOp.html#a99055d573b639aacca34d703e21412ac">MyOp&lt; OP &gt;</a>
 , <a class="el" href="structNavierStokesElement_1_1OpAssembleLhs.html#a584eadaf902f5a12e77ee7ccfa0cbce2">NavierStokesElement::OpAssembleLhs</a>
 , <a class="el" href="structNavierStokesElement_1_1OpAssembleRhs.html#ab26d46ad69c26771795dcb2be88bf9d1">NavierStokesElement::OpAssembleRhs</a>
@@ -1161,6 +1167,8 @@ $(function() {
 , <a class="el" href="structOpAssembleG.html#a8f2301c13086177477bc4632764cef57">OpAssembleG</a>
 , <a class="el" href="structOpAssembleK.html#ac4815b19cc60050fcd0bee1d43a09a95">OpAssembleK</a>
 , <a class="el" href="structOpAssembleP.html#a82b788ea55fb5babe16825225ae0faee">OpAssembleP</a>
+, <a class="el" href="structOpBlockChargeDensity.html#af9b665fe2a4cbb433439de6a77086f7a">OpBlockChargeDensity</a>
+, <a class="el" href="structOpBlockPermittivity.html#a978cd36cbfc1dca19ccf7687caba0191">OpBlockPermittivity</a>
 , <a class="el" href="structOpCalculateDeformationGradient.html#a0c68581b9e6f47f823cc09f0e484c521">OpCalculateDeformationGradient&lt; DIM_0, DIM_1 &gt;</a>
 , <a class="el" href="structOpCalculateDisplacement.html#a761f48a89f1e47ea17c12a4d9b81df31">OpCalculateDisplacement&lt; DIM &gt;</a>
 , <a class="el" href="structOpCalculateEnergy.html#aacf4b4873b0416bdd9264ee1dbe64976">OpCalculateEnergy</a>
@@ -1180,6 +1188,10 @@ $(function() {
 , <a class="el" href="structOpCheckGaussCoords.html#a248e509d4c6a9f996938f7b4e8bffbb8">OpCheckGaussCoords&lt; ELE_OP, PARENT_ELE &gt;</a>
 , <a class="el" href="structOpCheckValsDiffVals.html#a9cd7d1f1d62d3621dee928334305760c">OpCheckValsDiffVals</a>
 , <a class="el" href="structOpDivergence.html#a69667cc1f9127bf1200563b0c4ee21a6">OpDivergence</a>
+, <a class="el" href="structOpElectricDispJump.html#a32d6bc31c0fc79cd2fbb5a03d21be2cd">OpElectricDispJump&lt; SPACE_DIM &gt;</a>
+, <a class="el" href="structOpElectricField.html#aa8f40ad0d872dc95d1ce142510c7c1d3">OpElectricField</a>
+, <a class="el" href="structOpElectrodeCharge.html#aea4dd3107c1587d38e93abd1f837ad50">OpElectrodeCharge&lt; SPACE_DIM &gt;</a>
+, <a class="el" href="structOpEnergyDensity.html#a157c1081d9b8d0e4b237acb058915958">OpEnergyDensity</a>
 , <a class="el" href="structOpError.html#acd0bd32a953caacdd6c3d4b5031d8d2b">OpError</a>
 , <a class="el" href="structOpFace.html#a613fca5f97726638d8ce32f30ea0b18c">OpFace</a>
 , <a class="el" href="structOpFacesFluxes.html#a1931cbd79a020355e8b6a3ccfb9d1ca8">OpFacesFluxes</a>
@@ -1187,6 +1199,7 @@ $(function() {
 , <a class="el" href="structOpFacesRot.html#a30417eb6df9259d80b079772bcdc4b89">OpFacesRot</a>
 , <a class="el" href="structOpFlux.html#acee54587ff66a9c8d8c47653fb154d2d">OpFlux</a>
 , <a class="el" href="structOpGetDensityField.html#a1832731579d6857fd1d407fc2af3b5c2">OpGetDensityField&lt; ALE &gt;</a>
+, <a class="el" href="structOpGradTimesPerm.html#abb06735d6bba1d0b5d9c4dea6d0ce216">OpGradTimesPerm</a>
 , <a class="el" href="structOpH1LhsSkeleton.html#aaf9fd346f6413aac40046ab96eef1deb">OpH1LhsSkeleton</a>
 , <a class="el" href="structOpK.html#ade86d0908a39a05133b670975ac0896e">OpK</a>
 , <a class="el" href="structOpPostProcHookeElement.html#ab5cc40adaf02bf8c7d80a192baf88930">OpPostProcHookeElement&lt; ELEMENT &gt;</a>
@@ -1198,6 +1211,7 @@ $(function() {
 , <a class="el" href="structOpS.html#a80922f33899ea48946cef5f0b2bbef15">OpS</a>
 , <a class="el" href="structOpSimpleRodK.html#aedce2264d1db852238dcc9ab78f65f50">OpSimpleRodK</a>
 , <a class="el" href="structOpSimpleRodPreStress.html#ad6ca34602b367e11f8a0d565be407adf">OpSimpleRodPreStress</a>
+, <a class="el" href="structOpTotalEnergy.html#ad48c281d9a3d0db688e6a4bec5f75ca0">OpTotalEnergy</a>
 , <a class="el" href="structOpValsDiffVals.html#a8e6837f1de6a6728f5d31d557333ca78">OpValsDiffVals</a>
 , <a class="el" href="structOpVolCurl.html#a749549e318275f35e6c052577c230f9c">OpVolCurl</a>
 , <a class="el" href="structOpVolDivergence.html#ab2d9bd5063f937219506fbf54dde0743">OpVolDivergence</a>

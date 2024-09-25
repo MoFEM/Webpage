@@ -1,9 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structNonlinearElasticElement_1_1FunctionsToCalculatePiolaKirchhoffI.html" title="Implementation of elastic (non&#45;linear) St. Kirchhoff equation." alt="" coords="5,92,263,148"/>
-<area shape="rect" id="node2" href="$structHooke.html" title="Hook equation." alt="" coords="358,5,483,32"/>
-<area shape="rect" id="node3" href="$structMyMat__double.html" title=" " alt="" coords="331,56,511,83"/>
-<area shape="rect" id="node5" href="$structNeoHookean.html" title="NeoHookan equation." alt="" coords="337,107,504,133"/>
-<area shape="rect" id="node6" href="$structSmallStrainTranverslyIsotropic.html" title="Hook equation." alt="" coords="311,158,531,199"/>
-<area shape="rect" id="node7" href="$structVolumeLengthQuality.html" title="Volume Length Quality." alt="" coords="339,223,502,265"/>
-<area shape="rect" id="node4" href="$structMyMat.html" title=" " alt="" coords="579,56,708,83"/>
+<area shape="rect" id="node1" href="$structNeumannForcesSurface.html" title="Finite element and operators to apply force/pressures applied to surfaces." alt="" coords="5,5,181,32"/>
 </map>

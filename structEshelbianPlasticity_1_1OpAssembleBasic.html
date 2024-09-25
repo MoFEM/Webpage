@@ -151,8 +151,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2d19ce2cd34417a0f5cdc31c988b4ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ae2d19ce2cd34417a0f5cdc31c988b4ef">OpAssembleBasic</a> (const std::string &amp;<a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; data_ptr, const char type)</td></tr>
 <tr class="separator:ae2d19ce2cd34417a0f5cdc31c988b4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c89d3b74789d3d40097a427a35c4c2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a2c89d3b74789d3d40097a427a35c4c2d">OpAssembleBasic</a> (const std::string &amp;row_field, const std::string &amp;col_field, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; data_ptr, const char type, const <a class="el" href="classbool.html">bool</a> assemble_symmetry, <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#aff32ef450f6f48e59b2292ef27372cab">ScaleOff</a> scale_off=[]() { return 1;})</td></tr>
-<tr class="separator:a2c89d3b74789d3d40097a427a35c4c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05b8b17a298146b7f13265877b52949"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ad05b8b17a298146b7f13265877b52949">OpAssembleBasic</a> (std::string row_field, std::string col_field, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; data_ptr, const char type, const <a class="el" href="classbool.html">bool</a> assemble_symmetry, <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#aff32ef450f6f48e59b2292ef27372cab">ScaleOff</a> scale_off=[]() { return 1;})</td></tr>
+<tr class="separator:ad05b8b17a298146b7f13265877b52949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a200ebd1e46d42e5bd3de1d72b037188e"><td class="memItemLeft" align="right" valign="top">virtual MoFEMErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a200ebd1e46d42e5bd3de1d72b037188e">integrate</a> (<a class="el" href="namespaceEshelbianPlasticity.html#a88a76b502f88edcd38927174ac3e3e47">EntData</a> &amp;data)</td></tr>
 <tr class="separator:a200ebd1e46d42e5bd3de1d72b037188e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16ddffc0a8cf8d2977ac61e050916af8"><td class="memItemLeft" align="right" valign="top">virtual MoFEMErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a16ddffc0a8cf8d2977ac61e050916af8">integrate</a> (int row_side, EntityType row_type, <a class="el" href="namespaceEshelbianPlasticity.html#a88a76b502f88edcd38927174ac3e3e47">EntData</a> &amp;data)</td></tr>
@@ -193,7 +193,7 @@ Public Attributes</h2></td></tr>
 struct EshelbianPlasticity::OpAssembleBasic&lt; T &gt;</h3>
 
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00355">355</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00406">406</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="aff32ef450f6f48e59b2292ef27372cab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff32ef450f6f48e59b2292ef27372cab">&#9670;&nbsp;</a></span>ScaleOff</h2>
@@ -204,12 +204,12 @@ struct EshelbianPlasticity::OpAssembleBasic&lt; T &gt;</h3>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::<a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#aff32ef450f6f48e59b2292ef27372cab">ScaleOff</a> =  boost::function&lt;<a class="el" href="classdouble.html">double</a>()&gt;</td>
+          <td class="memname">using <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::<a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#aff32ef450f6f48e59b2292ef27372cab">ScaleOff</a> =  boost::function&lt;<a class="el" href="classdouble.html">double</a>()&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00357">357</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00408">408</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -226,7 +226,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::<a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">OpAssembleBasic</a> </td>
+          <td class="memname"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::<a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">OpAssembleBasic</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>field_name</em>, </td>
@@ -256,13 +256,13 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00363">363</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      : T(<a class="code" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, <a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>), <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a636f317bdbd6de3d782cb83c80bcb883">dataAtPts</a>(data_ptr), <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">assembleSymmetry</a>(<span class="keyword">false</span>) {}</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00414">414</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;      : T(<a class="code" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, <a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>), <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a636f317bdbd6de3d782cb83c80bcb883">dataAtPts</a>(data_ptr), <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">assembleSymmetry</a>(<span class="keyword">false</span>) {}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a2c89d3b74789d3d40097a427a35c4c2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c89d3b74789d3d40097a427a35c4c2d">&#9670;&nbsp;</a></span>OpAssembleBasic() <span class="overload">[2/2]</span></h2>
+<a id="ad05b8b17a298146b7f13265877b52949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05b8b17a298146b7f13265877b52949">&#9670;&nbsp;</a></span>OpAssembleBasic() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,15 +273,15 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::<a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">OpAssembleBasic</a> </td>
+          <td class="memname"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::<a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">OpAssembleBasic</a> </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>row_field</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>col_field</em>, </td>
         </tr>
         <tr>
@@ -321,10 +321,10 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00368">368</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                                                              { <span class="keywordflow">return</span> 1; })</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      : T(row_field, col_field, <a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>, <span class="keyword">false</span>), <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a636f317bdbd6de3d782cb83c80bcb883">dataAtPts</a>(data_ptr),</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">assembleSymmetry</a>(assemble_symmetry), <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a73b4f7338ba0d6c3685e28bd61868037">scaleOff</a>(scale_off) {}</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00419">419</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                                                              { <span class="keywordflow">return</span> 1; })</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;      : T(row_field, col_field, <a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>, <span class="keyword">false</span>), <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a636f317bdbd6de3d782cb83c80bcb883">dataAtPts</a>(data_ptr),</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">assembleSymmetry</a>(assemble_symmetry), <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a73b4f7338ba0d6c3685e28bd61868037">scaleOff</a>(scale_off) {}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -341,7 +341,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::assemble </td>
+          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::assemble </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceEshelbianPlasticity.html#a88a76b502f88edcd38927174ac3e3e47">EntData</a> &amp;&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
@@ -355,15 +355,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00394">394</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                                                 {</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordtype">double</span> *vec_ptr = &amp;*<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a5004ec71cf000e386d2f873b3047f4e7">nF</a>.begin();</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">int</span> nb_dofs = data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size();</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    <span class="keywordtype">int</span> *ind_ptr = &amp;*data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().begin();</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="namespaceMoFEM.html#aef01d33cbe1d8ed916ce789bd25c4495">VecSetValues</a>(this-&gt;getTSf(), nb_dofs, ind_ptr, vec_ptr, ADD_VALUES);</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00445">445</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                                                 {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="keywordtype">double</span> *vec_ptr = &amp;*<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a5004ec71cf000e386d2f873b3047f4e7">nF</a>.begin();</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordtype">int</span> nb_dofs = data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size();</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="keywordtype">int</span> *ind_ptr = &amp;*data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().begin();</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="namespaceMoFEM.html#aef01d33cbe1d8ed916ce789bd25c4495">VecSetValues</a>(this-&gt;getTSf(), nb_dofs, ind_ptr, vec_ptr, ADD_VALUES);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -379,7 +379,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::assemble </td>
+          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::assemble </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>row_side</em>, </td>
@@ -409,12 +409,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00403">403</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                                                 {</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a05699fc27cde00d96f8db38c1a97f84f">assemble</a>(data);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00454">454</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                                                 {</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a05699fc27cde00d96f8db38c1a97f84f">assemble</a>(data);</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -430,7 +430,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::assemble </td>
+          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::assemble </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>row_side</em>, </td>
@@ -478,27 +478,27 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00416">416</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                                                                        {</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">assembleSymmetry</a>) {</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> row_nb_dofs = row_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size();</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> col_nb_dofs = col_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size();</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;      <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">transposeK</a>.resize(col_nb_dofs, row_nb_dofs, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;      noalias(<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">transposeK</a>) = trans(<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">K</a>);</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;      <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">transposeK</a> *= <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a73b4f7338ba0d6c3685e28bd61868037">scaleOff</a>();</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    }</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetValues&lt;AssemblyTypeSelector&lt;A&gt;&gt;(this-&gt;getTSB(), row_data,</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                                                 col_data, <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">K</a>, ADD_VALUES);</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">assembleSymmetry</a>) {</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetValues&lt;AssemblyTypeSelector&lt;A&gt;&gt;(</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;          this-&gt;getTSB(), col_data, row_data, <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">transposeK</a>, ADD_VALUES);</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    }</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00467">467</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                                                                        {</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160; </div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">assembleSymmetry</a>) {</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> row_nb_dofs = row_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size();</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> col_nb_dofs = col_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size();</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;      <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">transposeK</a>.resize(col_nb_dofs, row_nb_dofs, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      noalias(<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">transposeK</a>) = trans(<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">K</a>);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;      <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">transposeK</a> *= <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a73b4f7338ba0d6c3685e28bd61868037">scaleOff</a>();</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    }</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160; </div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetValues&lt;AssemblyTypeSelector&lt;A&gt;&gt;(this-&gt;getTSB(), row_data,</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                                                 col_data, <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">K</a>, ADD_VALUES);</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">assembleSymmetry</a>) {</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetValues&lt;AssemblyTypeSelector&lt;A&gt;&gt;(</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;          this-&gt;getTSB(), col_data, row_data, <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">transposeK</a>, ADD_VALUES);</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    }</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160; </div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -514,7 +514,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::doWork </td>
+          <td class="memname">MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::doWork </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>row_side</em>, </td>
@@ -562,19 +562,19 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00450">450</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                                           {</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">if</span> (row_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().empty())</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;      <a class="code" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    <span class="keywordflow">if</span> (col_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().empty())</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;      <a class="code" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">K</a>.resize(row_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size(), col_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size(), <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">K</a>.clear();</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a200ebd1e46d42e5bd3de1d72b037188e">integrate</a>(row_data, col_data);</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a05699fc27cde00d96f8db38c1a97f84f">assemble</a>(row_side, col_side, row_type, col_type, row_data, col_data);</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00501">501</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;                                           {</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keywordflow">if</span> (row_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().empty())</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;      <a class="code" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordflow">if</span> (col_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().empty())</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;      <a class="code" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">K</a>.resize(row_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size(), col_data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size(), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">K</a>.clear();</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a200ebd1e46d42e5bd3de1d72b037188e">integrate</a>(row_data, col_data);</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a05699fc27cde00d96f8db38c1a97f84f">assemble</a>(row_side, col_side, row_type, col_type, row_data, col_data);</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -590,7 +590,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::doWork </td>
+          <td class="memname">MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::doWork </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>side</em>, </td>
@@ -620,17 +620,17 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00439">439</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                                                                  {</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <span class="keywordflow">if</span> (data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().empty())</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;      <a class="code" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a5004ec71cf000e386d2f873b3047f4e7">nF</a>.resize(data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size(), <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a5004ec71cf000e386d2f873b3047f4e7">nF</a>.clear();</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a200ebd1e46d42e5bd3de1d72b037188e">integrate</a>(side, <a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>, data);</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a05699fc27cde00d96f8db38c1a97f84f">assemble</a>(side, <a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>, data);</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00490">490</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keywordflow">if</span> (data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().empty())</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;      <a class="code" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a5004ec71cf000e386d2f873b3047f4e7">nF</a>.resize(data.<a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">getIndices</a>().size(), <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a5004ec71cf000e386d2f873b3047f4e7">nF</a>.clear();</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a200ebd1e46d42e5bd3de1d72b037188e">integrate</a>(side, <a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>, data);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a05699fc27cde00d96f8db38c1a97f84f">assemble</a>(side, <a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>, data);</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -646,7 +646,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::integrate </td>
+          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::integrate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceEshelbianPlasticity.html#a88a76b502f88edcd38927174ac3e3e47">EntData</a> &amp;&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
@@ -660,14 +660,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPrj.html#a00b9f7170a5787296952d5da45342380">EshelbianPlasticity::OpSpatialPrj</a>, <a class="el" href="structEshelbianPlasticity_1_1OpRotationBc.html#a6035b08c5d2d05f1fc4ee1dd2b476eb2">EshelbianPlasticity::OpRotationBc</a>, <a class="el" href="structEshelbianPlasticity_1_1OpDispBc.html#afa3a4e9f85ac96f22d113d436332545d">EshelbianPlasticity::OpDispBc</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistencyDivTerm.html#acfd6fdaa2d6c704d8816d0b9362ef69a">EshelbianPlasticity::OpSpatialConsistencyDivTerm</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistencyBubble.html#a2df472f70a11398d1104950752b6281b">EshelbianPlasticity::OpSpatialConsistencyBubble</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistencyP.html#ab21212242a83c8151149e675ce1a692a">EshelbianPlasticity::OpSpatialConsistencyP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical.html#a5230b6bb8c6a166066d6857201350997">EshelbianPlasticity::OpSpatialPhysical</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialRotation.html#a1e357f4e95de869349c015aa8df20fe3">EshelbianPlasticity::OpSpatialRotation</a>, and <a class="el" href="structEshelbianPlasticity_1_1OpSpatialEquilibrium.html#a3715b8a7c810c30a5d814c2dfe0fb7e4">EshelbianPlasticity::OpSpatialEquilibrium</a>.</p>
+<p>Reimplemented in <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPrj.html#a00b9f7170a5787296952d5da45342380">EshelbianPlasticity::OpSpatialPrj</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistencyDivTerm.html#acfd6fdaa2d6c704d8816d0b9362ef69a">EshelbianPlasticity::OpSpatialConsistencyDivTerm</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistencyBubble.html#a2df472f70a11398d1104950752b6281b">EshelbianPlasticity::OpSpatialConsistencyBubble</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistencyP.html#ab21212242a83c8151149e675ce1a692a">EshelbianPlasticity::OpSpatialConsistencyP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialRotation.html#a1e357f4e95de869349c015aa8df20fe3">EshelbianPlasticity::OpSpatialRotation</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialEquilibrium.html#a3715b8a7c810c30a5d814c2dfe0fb7e4">EshelbianPlasticity::OpSpatialEquilibrium</a>, <a class="el" href="structEshelbianPlasticity_1_1HMHHencky_1_1OpSpatialPhysical.html#af2fad870287a7f7d1d04c1b98404efd5">EshelbianPlasticity::HMHHencky::OpSpatialPhysical</a>, <a class="el" href="structEshelbianPlasticity_1_1HMHNeohookean_1_1OpSpatialPhysical.html#a206903fdc3a46a1aaf62cf4fa2726c21">EshelbianPlasticity::HMHNeohookean::OpSpatialPhysical</a>, and <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical.html#a5230b6bb8c6a166066d6857201350997">EshelbianPlasticity::OpSpatialPhysical</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00381">381</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                                                  {</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    SETERRQ(PETSC_COMM_SELF, <a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>, <span class="stringliteral">&quot;Not yet implemented&quot;</span>);</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00432">432</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                                                  {</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    SETERRQ(PETSC_COMM_SELF, <a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>, <span class="stringliteral">&quot;Not yet implemented&quot;</span>);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -683,7 +683,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::integrate </td>
+          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::integrate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceEshelbianPlasticity.html#a88a76b502f88edcd38927174ac3e3e47">EntData</a> &amp;&#160;</td>
           <td class="paramname"><em>row_data</em>, </td>
@@ -707,14 +707,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPrj__dx__dw.html#a4ee556e985ea39b9c0c154bdd24f9911">EshelbianPlasticity::OpSpatialPrj_dx_dw</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPrj__dx__dx.html#aec3c435f874aa0ec0359ea6a47b67a68">EshelbianPlasticity::OpSpatialPrj_dx_dx</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dBubble__domega.html#a8b76a0dd698dec78cf1f771c26e9124d">EshelbianPlasticity::OpSpatialConsistency_dBubble_domega</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dP__domega.html#a015ea40332f477c5e8e6371d9e578398">EshelbianPlasticity::OpSpatialConsistency_dP_domega</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dBubble__dP.html#ab629027676dc0c01cd23db5ce1bb3ac2">EshelbianPlasticity::OpSpatialConsistency_dBubble_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dBubble__dBubble.html#a7bde467d570b0083fddc1a5d8f467ea0">EshelbianPlasticity::OpSpatialConsistency_dBubble_dBubble</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dP__dP.html#a968a5017442c9a2ec5c01034ee072f98">EshelbianPlasticity::OpSpatialConsistency_dP_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialRotation__domega__domega.html#afee7fa2f37877ac880e7f5e1bbae5873">EshelbianPlasticity::OpSpatialRotation_domega_domega</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialRotation__domega__dBubble.html#ad033d0f7f0bf999d25e4b0dc92cbfb29">EshelbianPlasticity::OpSpatialRotation_domega_dBubble</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialRotation__domega__dP.html#ad1b408c0f18d7f68e97243b535c67881">EshelbianPlasticity::OpSpatialRotation_domega_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__domega.html#a05810bfb757ca203685a4d78df6a09f7">EshelbianPlasticity::OpSpatialPhysical_du_domega</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__dBubble.html#a98008a8b2b6d2d2aa1d5a598b56e3b13">EshelbianPlasticity::OpSpatialPhysical_du_dBubble</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__dP.html#ac2a70fc12dd4673c8670183d280ab952">EshelbianPlasticity::OpSpatialPhysical_du_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__du.html#a7e0989503d75325d3278bfb51005aa1e">EshelbianPlasticity::OpSpatialPhysical_du_du</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialEquilibrium__dw__dw.html#a4d0a6c92bc5ae117830691785a0df8bb">EshelbianPlasticity::OpSpatialEquilibrium_dw_dw</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialEquilibrium__dw__dP.html#a45ee1176f39ab6c4a20967daaedef4fa">EshelbianPlasticity::OpSpatialEquilibrium_dw_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpRotationBc__dx.html#a31e47607c406b14aa1a7ad901d9c745f">EshelbianPlasticity::OpRotationBc_dx</a>, and <a class="el" href="structEshelbianPlasticity_1_1OpDispBc__dx.html#a3014c8871199c7394b9c475b85ed3edd">EshelbianPlasticity::OpDispBc_dx</a>.</p>
+<p>Reimplemented in <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPrj__dx__dw.html#a4ee556e985ea39b9c0c154bdd24f9911">EshelbianPlasticity::OpSpatialPrj_dx_dw</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPrj__dx__dx.html#aec3c435f874aa0ec0359ea6a47b67a68">EshelbianPlasticity::OpSpatialPrj_dx_dx</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dBubble__domega.html#a8b76a0dd698dec78cf1f771c26e9124d">EshelbianPlasticity::OpSpatialConsistency_dBubble_domega</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dP__domega.html#a015ea40332f477c5e8e6371d9e578398">EshelbianPlasticity::OpSpatialConsistency_dP_domega</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dBubble__dP.html#ab629027676dc0c01cd23db5ce1bb3ac2">EshelbianPlasticity::OpSpatialConsistency_dBubble_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dBubble__dBubble.html#a7bde467d570b0083fddc1a5d8f467ea0">EshelbianPlasticity::OpSpatialConsistency_dBubble_dBubble</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialConsistency__dP__dP.html#a968a5017442c9a2ec5c01034ee072f98">EshelbianPlasticity::OpSpatialConsistency_dP_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialRotation__domega__domega.html#afee7fa2f37877ac880e7f5e1bbae5873">EshelbianPlasticity::OpSpatialRotation_domega_domega</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialRotation__domega__dBubble.html#ad033d0f7f0bf999d25e4b0dc92cbfb29">EshelbianPlasticity::OpSpatialRotation_domega_dBubble</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialRotation__domega__dP.html#ad1b408c0f18d7f68e97243b535c67881">EshelbianPlasticity::OpSpatialRotation_domega_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__domega.html#a05810bfb757ca203685a4d78df6a09f7">EshelbianPlasticity::OpSpatialPhysical_du_domega</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__dBubble.html#a98008a8b2b6d2d2aa1d5a598b56e3b13">EshelbianPlasticity::OpSpatialPhysical_du_dBubble</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__dP.html#ac2a70fc12dd4673c8670183d280ab952">EshelbianPlasticity::OpSpatialPhysical_du_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialEquilibrium__dw__dw.html#a4d0a6c92bc5ae117830691785a0df8bb">EshelbianPlasticity::OpSpatialEquilibrium_dw_dw</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialEquilibrium__dw__dP.html#a45ee1176f39ab6c4a20967daaedef4fa">EshelbianPlasticity::OpSpatialEquilibrium_dw_dP</a>, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__du.html#a7e0989503d75325d3278bfb51005aa1e">EshelbianPlasticity::OpSpatialPhysical_du_du</a>, <a class="el" href="structEshelbianPlasticity_1_1HMHHencky_1_1OpSpatialPhysical__du__du.html#ab72125d5b4ee16d22efeb1e7e5bbfa07">EshelbianPlasticity::HMHHencky::OpSpatialPhysical_du_du</a>, and <a class="el" href="structEshelbianPlasticity_1_1HMHNeohookean_1_1OpSpatialPhysical__du__du.html#a9a26581492282152692c49f6eeab5c78">EshelbianPlasticity::HMHNeohookean::OpSpatialPhysical_du_du</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00410">410</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                                                                         {</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    SETERRQ(PETSC_COMM_SELF, <a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>, <span class="stringliteral">&quot;Not yet implemented&quot;</span>);</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00461">461</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    SETERRQ(PETSC_COMM_SELF, <a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>, <span class="stringliteral">&quot;Not yet implemented&quot;</span>);</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -730,7 +730,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::integrate </td>
+          <td class="memname">virtual MoFEMErrorCode <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::integrate </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>row_side</em>, </td>
@@ -760,12 +760,12 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00387">387</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                                                  {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a200ebd1e46d42e5bd3de1d72b037188e">integrate</a>(data);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00438">438</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                                                  {</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a200ebd1e46d42e5bd3de1d72b037188e">integrate</a>(data);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -779,12 +779,12 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classbool.html">bool</a> <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::assembleSymmetry</td>
+          <td class="memname">const <a class="el" href="classbool.html">bool</a> <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::assembleSymmetry</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00358">358</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00409">409</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -797,14 +797,14 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">boost::shared_ptr&lt;<a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a>&gt; <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::dataAtPts</td>
+          <td class="memname">boost::shared_ptr&lt;<a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a>&gt; <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::dataAtPts</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>data at integration pts </p>
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00361">361</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00412">412</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -817,14 +817,14 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">MatrixDouble <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::K</td>
+          <td class="memname">MatrixDouble <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::K</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>local tangent matrix </p>
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00376">376</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00427">427</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -837,14 +837,14 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">VectorDouble <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::nF</td>
+          <td class="memname">VectorDouble <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::nF</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>local right hand side vector </p>
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00375">375</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00426">426</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -857,12 +857,12 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#aff32ef450f6f48e59b2292ef27372cab">ScaleOff</a> <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::scaleOff</td>
+          <td class="memname"><a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html#aff32ef450f6f48e59b2292ef27372cab">ScaleOff</a> <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::scaleOff</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00379">379</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00430">430</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -875,12 +875,12 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">MatrixDouble <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; <a class="el" href="classT.html">T</a> &gt;::transposeK</td>
+          <td class="memname">MatrixDouble <a class="el" href="structEshelbianPlasticity_1_1OpAssembleBasic.html">EshelbianPlasticity::OpAssembleBasic</a>&lt; T &gt;::transposeK</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00377">377</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00428">428</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -889,21 +889,21 @@ template&lt;typename T &gt; </div>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="adefinitions_8h_html_a59cd650c2f6d3e0dc1ad1c29821e8692"><div class="ttname"><a href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a></div><div class="ttdeci">#define MoFEMFunctionReturnHot(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00460">definitions.h:460</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a73b4f7338ba0d6c3685e28bd61868037"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a73b4f7338ba0d6c3685e28bd61868037">EshelbianPlasticity::OpAssembleBasic::scaleOff</a></div><div class="ttdeci">ScaleOff scaleOff</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00379">EshelbianPlasticity.hpp:379</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a5004ec71cf000e386d2f873b3047f4e7"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a5004ec71cf000e386d2f873b3047f4e7">EshelbianPlasticity::OpAssembleBasic::nF</a></div><div class="ttdeci">VectorDouble nF</div><div class="ttdoc">local right hand side vector</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00375">EshelbianPlasticity.hpp:375</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a73b4f7338ba0d6c3685e28bd61868037"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a73b4f7338ba0d6c3685e28bd61868037">EshelbianPlasticity::OpAssembleBasic::scaleOff</a></div><div class="ttdeci">ScaleOff scaleOff</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00430">EshelbianPlasticity.hpp:430</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a5004ec71cf000e386d2f873b3047f4e7"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a5004ec71cf000e386d2f873b3047f4e7">EshelbianPlasticity::OpAssembleBasic::nF</a></div><div class="ttdeci">VectorDouble nF</div><div class="ttdoc">local right hand side vector</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00426">EshelbianPlasticity.hpp:426</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_html_aef01d33cbe1d8ed916ce789bd25c4495"><div class="ttname"><a href="namespaceMoFEM.html#aef01d33cbe1d8ed916ce789bd25c4495">MoFEM::VecSetValues</a></div><div class="ttdeci">MoFEMErrorCode VecSetValues(Vec V, const EntitiesFieldData::EntData &amp;data, const double *ptr, InsertMode iora)</div><div class="ttdoc">Assemble PETSc vector.</div><div class="ttdef"><b>Definition:</b> <a href="EntitiesFieldData_8hpp_source.html#l01589">EntitiesFieldData.hpp:1589</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a05699fc27cde00d96f8db38c1a97f84f"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a05699fc27cde00d96f8db38c1a97f84f">EshelbianPlasticity::OpAssembleBasic::assemble</a></div><div class="ttdeci">virtual MoFEMErrorCode assemble(EntData &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00394">EshelbianPlasticity.hpp:394</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a05699fc27cde00d96f8db38c1a97f84f"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a05699fc27cde00d96f8db38c1a97f84f">EshelbianPlasticity::OpAssembleBasic::assemble</a></div><div class="ttdeci">virtual MoFEMErrorCode assemble(EntData &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00445">EshelbianPlasticity.hpp:445</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_add80e5ef5f847b2d4b637029f0f671c3"><div class="ttname"><a href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a></div><div class="ttdeci">#define CHKERR</div><div class="ttdoc">Inline error check.</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00548">definitions.h:548</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a200ebd1e46d42e5bd3de1d72b037188e"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a200ebd1e46d42e5bd3de1d72b037188e">EshelbianPlasticity::OpAssembleBasic::integrate</a></div><div class="ttdeci">virtual MoFEMErrorCode integrate(EntData &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00381">EshelbianPlasticity.hpp:381</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a200ebd1e46d42e5bd3de1d72b037188e"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a200ebd1e46d42e5bd3de1d72b037188e">EshelbianPlasticity::OpAssembleBasic::integrate</a></div><div class="ttdeci">virtual MoFEMErrorCode integrate(EntData &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00432">EshelbianPlasticity.hpp:432</a></div></div>
 <div class="ttc" id="anamespaceconvert_html_a80e685c1c2056739a335dd39b1981ef7"><div class="ttname"><a href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">convert.type</a></div><div class="ttdeci">type</div><div class="ttdef"><b>Definition:</b> <a href="convert_8py_source.html#l00064">convert.py:64</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1EntitiesFieldData_1_1EntData_html_a632d60524d4b1682a472437b9277e480"><div class="ttname"><a href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a632d60524d4b1682a472437b9277e480">MoFEM::EntitiesFieldData::EntData::getIndices</a></div><div class="ttdeci">const VectorInt &amp; getIndices() const</div><div class="ttdoc">Get global indices of dofs on entity.</div><div class="ttdef"><b>Definition:</b> <a href="EntitiesFieldData_8hpp_source.html#l01214">EntitiesFieldData.hpp:1214</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_ab38ab37c9a9791095c9146c3dff9fc3c"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">EshelbianPlasticity::OpAssembleBasic::transposeK</a></div><div class="ttdeci">MatrixDouble transposeK</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00377">EshelbianPlasticity.hpp:377</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a636f317bdbd6de3d782cb83c80bcb883"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a636f317bdbd6de3d782cb83c80bcb883">EshelbianPlasticity::OpAssembleBasic::dataAtPts</a></div><div class="ttdeci">boost::shared_ptr&lt; DataAtIntegrationPts &gt; dataAtPts</div><div class="ttdoc">data at integration pts</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00361">EshelbianPlasticity.hpp:361</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_ab38ab37c9a9791095c9146c3dff9fc3c"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#ab38ab37c9a9791095c9146c3dff9fc3c">EshelbianPlasticity::OpAssembleBasic::transposeK</a></div><div class="ttdeci">MatrixDouble transposeK</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00428">EshelbianPlasticity.hpp:428</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a636f317bdbd6de3d782cb83c80bcb883"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a636f317bdbd6de3d782cb83c80bcb883">EshelbianPlasticity::OpAssembleBasic::dataAtPts</a></div><div class="ttdeci">boost::shared_ptr&lt; DataAtIntegrationPts &gt; dataAtPts</div><div class="ttdoc">data at integration pts</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00412">EshelbianPlasticity.hpp:412</a></div></div>
 <div class="ttc" id="apoisson__2d__homogeneous_8cpp_html_a3917f3987bad1f4e24b85c9d0ab84a5e"><div class="ttname"><a href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a></div><div class="ttdeci">constexpr auto field_name</div><div class="ttdef"><b>Definition:</b> <a href="poisson__2d__homogeneous_8cpp_source.html#l00013">poisson_2d_homogeneous.cpp:13</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a4ab40e57a16f12c4be5cbae37808f383"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">EshelbianPlasticity::OpAssembleBasic::K</a></div><div class="ttdeci">MatrixDouble K</div><div class="ttdoc">local tangent matrix</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00376">EshelbianPlasticity.hpp:376</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a4ab40e57a16f12c4be5cbae37808f383"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a4ab40e57a16f12c4be5cbae37808f383">EshelbianPlasticity::OpAssembleBasic::K</a></div><div class="ttdeci">MatrixDouble K</div><div class="ttdoc">local tangent matrix</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00427">EshelbianPlasticity.hpp:427</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_acb0a46d159695a01bf667313b7788b45"><div class="ttname"><a href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a></div><div class="ttdeci">#define MoFEMFunctionReturn(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00429">definitions.h:429</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf"><div class="ttname"><a href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a></div><div class="ttdeci">@ MOFEM_NOT_IMPLEMENTED</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00032">definitions.h:32</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a0f7a199ba30463950cba6b131483b3e1"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">EshelbianPlasticity::OpAssembleBasic::assembleSymmetry</a></div><div class="ttdeci">const bool assembleSymmetry</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00358">EshelbianPlasticity.hpp:358</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1OpAssembleBasic_html_a0f7a199ba30463950cba6b131483b3e1"><div class="ttname"><a href="structEshelbianPlasticity_1_1OpAssembleBasic.html#a0f7a199ba30463950cba6b131483b3e1">EshelbianPlasticity::OpAssembleBasic::assembleSymmetry</a></div><div class="ttdeci">const bool assembleSymmetry</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00409">EshelbianPlasticity.hpp:409</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a6c0b52978f1abc88bf8a1ba70b7308e3"><div class="ttname"><a href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a></div><div class="ttdeci">#define MoFEMFunctionBegin</div><div class="ttdoc">First executable line of each MoFEM function, used for error handling. Final line of MoFEM functions ...</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00359">definitions.h:359</a></div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->

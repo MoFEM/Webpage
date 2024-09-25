@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structMoFEM_1_1AddFluxToRhsPipelineImpl_3_01OpFluxRhsImpl_3_01NaturalForceMeshsets_00_01BASE__DI04b0f73a7b7aa0ab92a32b1dde99d0c6.html" title=" " alt="" coords="5,5,268,76"/>
+<area shape="rect" id="node1" href="$structMixTransport_1_1MixTransportElement.html" title="Mix transport problem." alt="" coords="5,35,204,76"/>
+<area shape="rect" id="node2" href="$structMixTransport_1_1UnsaturatedFlowElement.html" title="Implementation of operators, problem and finite elements for unsaturated flow." alt="" coords="252,5,447,47"/>
+<area shape="rect" id="node3" href="$structMyTransport.html" title="Application of mix transport data structure." alt="" coords="298,71,401,98"/>
 </map>

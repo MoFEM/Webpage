@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structMoFEM_1_1Modify__change__nothing.html" title="Do nothing, used to rebuild database." alt="" coords="5,5,181,47"/>
+<area shape="rect" id="node1" href="$structMoFEM_1_1interface__RefEntity.html" title=" " alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1interface__FieldImpl.html" title=" " alt="" coords="256,5,459,47"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1interface__Field.html" title=" " alt="" coords="507,5,689,47"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1interface__FieldEntity.html" title=" " alt="" coords="737,5,949,47"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1interface__DofEntity.html" title=" " alt="" coords="997,5,1201,47"/>
+<area shape="rect" id="node6" href="$structMoFEM_1_1NumeredDofEntity.html" title="keeps information about indexed dofs for the problem" alt="" coords="1249,13,1448,39"/>
+<area shape="rect" id="node7" href="$structMoFEM_1_1FENumeredDofEntity.html" title="keeps information about indexed dofs for the finite element" alt="" coords="1496,13,1711,39"/>
 </map>

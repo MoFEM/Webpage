@@ -14,8 +14,8 @@
 <title>Node0</title>
 <g id="a_node1"><a xlink:href="classFTensor_1_1Index.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-30.5 110,-30.5 110,-0.5 0,-0.5"/>
-<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Index&lt; &#39;l&#39;,</text>
-<text text-anchor="middle" x="55" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DIM_23 &gt;</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Index&lt; &#39;i&#39;,</text>
+<text text-anchor="middle" x="55" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00"> DIM &gt;</text>
 </a>
 </g>
 </g>

@@ -1,96 +1,89 @@
 <map id="MoFEM::PostProcBrokenMeshInMoab&lt; VolumeElementForcesAndSourcesCore &gt;" name="MoFEM::PostProcBrokenMeshInMoab&lt; VolumeElementForcesAndSourcesCore &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="6967,275,7221,331"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="6655,275,6917,331"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCore.html" title="Volume finite element base." alt="" coords="6195,1518,6417,1559"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1ForcesAndSourcesCore.html" title="structure to get information form mofem into EntitiesFieldData" alt="" coords="5713,1313,5940,1340"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1FEMethod.html" title="structure for User Loop Methods on finite elements" alt="" coords="5243,931,5386,957"/>
-<area shape="rect" id="node6" href="$structMoFEM_1_1BasicMethod.html" title="Data structure to exchange data between mofem and User Loop Methods." alt="" coords="4721,964,4884,991"/>
-<area shape="rect" id="node7" href="$structMoFEM_1_1KspMethod.html" title="data structure for ksp (linear solver) context" alt="" coords="4189,2035,4340,2061"/>
-<area shape="rect" id="node8" href="$structMoFEM_1_1PetscData.html" title=" " alt="" coords="3547,1860,3691,1887"/>
-<area shape="rect" id="node18" href="$structMoFEM_1_1SnesMethod.html" title="data structure for snes (nonlinear solver) context" alt="" coords="4185,1837,4344,1864"/>
-<area shape="rect" id="node21" href="$structMoFEM_1_1TSMethod.html" title="data structure for TS (time stepping) context" alt="" coords="4193,1495,4336,1521"/>
-<area shape="rect" id="node9" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="2857,1652,3055,1679"/>
-<area shape="rect" id="node57" href="$structMoFEM_1_1CoreInterface.html" title="Interface." alt="" coords="3536,516,3703,543"/>
-<area shape="rect" id="node10" title=" " alt="" coords="1343,1667,1665,1752"/>
-<area shape="rect" id="node11" title=" " alt="" coords="5,2277,172,2304"/>
-<area shape="rect" id="node26" title=" " alt="" coords="1765,1963,2833,2224"/>
-<area shape="rect" id="node29" title=" " alt="" coords="3079,2261,3460,2478"/>
-<area shape="rect" id="node31" title=" " alt="" coords="3779,2393,4129,2610"/>
-<area shape="rect" id="node32" title=" " alt="" coords="2136,2532,2463,2705"/>
-<area shape="rect" id="node33" title=" " alt="" coords="3158,2655,3381,2785"/>
-<area shape="rect" id="node35" title=" " alt="" coords="3801,2761,4107,2919"/>
-<area shape="rect" id="node49" title=" " alt="" coords="1267,785,1741,1076"/>
-<area shape="rect" id="node12" title=" " alt="" coords="2862,2008,3050,2035"/>
-<area shape="rect" id="node13" title=" " alt="" coords="2933,2129,2979,2156"/>
-<area shape="rect" id="node14" title=" " alt="" coords="2907,1860,3005,1887"/>
-<area shape="rect" id="node15" title=" " alt="" coords="2933,1703,2979,1729"/>
-<area shape="rect" id="node16" title=" " alt="" coords="3596,2116,3643,2143"/>
-<area shape="rect" id="node17" title=" " alt="" coords="3570,2244,3669,2271"/>
-<area shape="rect" id="node19" title=" " alt="" coords="3591,1988,3647,2015"/>
-<area shape="rect" id="node20" title=" " alt="" coords="3566,1747,3673,1773"/>
-<area shape="rect" id="node22" title=" " alt="" coords="3576,1568,3663,1595"/>
-<area shape="rect" id="node23" title=" " alt="" coords="3575,1619,3664,1645"/>
-<area shape="rect" id="node24" title=" " alt="" coords="3582,1360,3657,1387"/>
-<area shape="rect" id="node25" title=" " alt="" coords="3600,1411,3639,1437"/>
-<area shape="rect" id="node27" title=" " alt="" coords="4205,728,4324,755"/>
-<area shape="rect" id="node28" title=" " alt="" coords="4171,779,4358,805"/>
-<area shape="rect" id="node30" title=" " alt="" coords="4190,829,4339,856"/>
-<area shape="rect" id="node34" title=" " alt="" coords="3600,699,3639,725"/>
-<area shape="rect" id="node37" href="$structMoFEM_1_1Problem.html" title="keeps basic data about problem" alt="" coords="4199,1004,4331,1031"/>
-<area shape="rect" id="node36" title=" " alt="" coords="4153,1545,4376,1572"/>
-<area shape="rect" id="node38" title=" " alt="" coords="3508,1243,3731,1285"/>
-<area shape="rect" id="node39" title=" " alt="" coords="3580,1309,3659,1336"/>
-<area shape="rect" id="node40" href="$classEntityHandle.html" title=" " alt="" coords="3566,579,3673,605"/>
-<area shape="rect" id="node41" title=" " alt="" coords="3520,841,3719,882"/>
-<area shape="rect" id="node42" title=" " alt="" coords="3565,907,3673,933"/>
-<area shape="rect" id="node43" title=" " alt="" coords="3506,958,3733,999"/>
-<area shape="rect" id="node44" title=" " alt="" coords="3594,1024,3645,1051"/>
-<area shape="rect" id="node45" title=" " alt="" coords="3527,1075,3711,1101"/>
-<area shape="rect" id="node46" title=" " alt="" coords="3515,1126,3723,1167"/>
-<area shape="rect" id="node47" title=" " alt="" coords="3484,1192,3755,1219"/>
-<area shape="rect" id="node48" title=" " alt="" coords="3561,789,3678,816"/>
-<area shape="rect" id="node50" title=" " alt="" coords="4695,898,4911,939"/>
-<area shape="rect" id="node51" title=" " alt="" coords="4773,364,4832,391"/>
-<area shape="rect" id="node93" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="6199,250,6413,291"/>
-<area shape="rect" id="node52" title=" " alt="" coords="4694,833,4911,874"/>
-<area shape="rect" id="node53" href="$classdouble.html" title=" " alt="" coords="4769,1575,4836,1601"/>
-<area shape="rect" id="node71" href="$structMoFEM_1_1OpSetContravariantPiolaTransform.html" title="apply contravariant (Piola) transfer to Hdiv space" alt="" coords="5723,1806,5930,1847"/>
-<area shape="rect" id="node81" href="$classFTensor_1_1Tensor2.html" title=" " alt="" coords="5221,1703,5409,1745"/>
-<area shape="rect" id="node54" title=" " alt="" coords="5200,1401,5429,1457"/>
-<area shape="rect" id="node55" title=" " alt="" coords="5269,1481,5360,1508"/>
-<area shape="rect" id="node56" href="$structMoFEM_1_1DeprecatedCoreInterface.html" title="Deprecated interface functions." alt="" coords="4400,577,4641,604"/>
-<area shape="rect" id="node58" title=" " alt="" coords="5203,835,5426,906"/>
-<area shape="rect" id="node59" title=" " alt="" coords="5180,1189,5449,1230"/>
-<area shape="rect" id="node60" href="$structMoFEM_1_1EntitiesFieldData.html" title="data structure for finite element entity" alt="" coords="5220,1087,5409,1113"/>
-<area shape="rect" id="node61" title=" " alt="" coords="4695,1249,4911,1290"/>
-<area shape="rect" id="node62" title=" " alt="" coords="4701,1315,4905,1371"/>
-<area shape="rect" id="node63" title=" " alt="" coords="4687,1015,4919,1057"/>
-<area shape="rect" id="node64" title=" " alt="" coords="4690,1081,4915,1122"/>
-<area shape="rect" id="node65" title=" " alt="" coords="4728,1147,4877,1173"/>
-<area shape="rect" id="node66" title=" " alt="" coords="4725,1197,4881,1224"/>
-<area shape="rect" id="node67" title=" " alt="" coords="5231,1255,5398,1311"/>
-<area shape="rect" id="node68" title=" " alt="" coords="5233,1335,5396,1377"/>
-<area shape="rect" id="node69" href="$classUBlasMatrix_3_01double_01_4.html" title=" " alt="" coords="5227,1771,5403,1797"/>
-<area shape="rect" id="node84" href="$structMoFEM_1_1OpSetInvJacHdivAndHcurl.html" title="brief Transform local reference derivatives of shape function to global derivatives" alt="" coords="5721,2134,5932,2175"/>
-<area shape="rect" id="node85" href="$structMoFEM_1_1OpSetCovariantPiolaTransform.html" title="apply covariant transfer to Hcurl space" alt="" coords="5721,2318,5933,2359"/>
-<area shape="rect" id="node87" href="$structMoFEM_1_1OpSetInvJacH1.html" title="Transform local reference derivatives of shape function to global derivatives." alt="" coords="5739,1709,5914,1736"/>
-<area shape="rect" id="node70" href="$classUBlasVector_3_01double_01_4.html" title=" " alt="" coords="5739,1872,5914,1899"/>
-<area shape="rect" id="node72" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5231,2092,5398,2119"/>
-<area shape="rect" id="node73" title=" " alt="" coords="4675,2022,4931,2093"/>
-<area shape="rect" id="node74" href="$classbool.html" title=" " alt="" coords="4777,2177,4828,2204"/>
-<area shape="rect" id="node75" title=" " alt="" coords="4665,2228,4940,2343"/>
-<area shape="rect" id="node76" title=" " alt="" coords="4700,1971,4905,1997"/>
-<area shape="rect" id="node77" href="$classFTensor_1_1Index.html" title=" " alt="" coords="5228,2541,5401,2568"/>
-<area shape="rect" id="node78" href="$classFTensor_1_1Index.html" title=" " alt="" coords="4733,2401,4872,2442"/>
-<area shape="rect" id="node79" href="$classFTensor_1_1Index.html" title=" " alt="" coords="5228,2357,5401,2384"/>
-<area shape="rect" id="node80" href="$classFTensor_1_1Index.html" title=" " alt="" coords="5226,2408,5403,2435"/>
-<area shape="rect" id="node82" href="$classFTensor_1_1Tensor2.html" title=" " alt="" coords="4723,1795,4883,1851"/>
-<area shape="rect" id="node83" title=" " alt="" coords="4245,2792,4284,2819"/>
-<area shape="rect" id="node86" href="$classMatrixBoundedArray_3_01double_00_019_01_4.html" title=" " alt="" coords="5749,1923,5905,1965"/>
-<area shape="rect" id="node88" title=" " alt="" coords="5727,73,5926,114"/>
-<area shape="rect" id="node89" title=" " alt="" coords="5738,141,5915,168"/>
-<area shape="rect" id="node90" href="$classRange.html" title=" " alt="" coords="5795,305,5858,332"/>
-<area shape="rect" id="node91" title=" " alt="" coords="5769,376,5884,403"/>
-<area shape="rect" id="node92" title=" " alt="" coords="5729,449,5925,476"/>
-<area shape="rect" id="node94" href="$classE.html" title=" " alt="" coords="5807,199,5846,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4705,2031,4960,2087"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="4393,2031,4656,2087"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCore.html" title="Volume finite element base." alt="" coords="3933,1497,4156,1538"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1ForcesAndSourcesCore.html" title="structure to get information form mofem into EntitiesFieldData" alt="" coords="3452,875,3679,901"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1FEMethod.html" title="structure for User Loop Methods on finite elements" alt="" coords="2982,955,3125,981"/>
+<area shape="rect" id="node6" href="$structMoFEM_1_1BasicMethod.html" title="Data structure to exchange data between mofem and User Loop Methods." alt="" coords="2460,1153,2623,1180"/>
+<area shape="rect" id="node7" href="$structMoFEM_1_1KspMethod.html" title="data structure for ksp (linear solver) context" alt="" coords="1928,1153,2079,1180"/>
+<area shape="rect" id="node8" href="$structMoFEM_1_1PetscData.html" title=" " alt="" coords="1455,1344,1599,1371"/>
+<area shape="rect" id="node18" href="$structMoFEM_1_1SnesMethod.html" title="data structure for snes (nonlinear solver) context" alt="" coords="1924,1440,2083,1467"/>
+<area shape="rect" id="node21" href="$structMoFEM_1_1TSMethod.html" title="data structure for TS (time stepping) context" alt="" coords="1932,1641,2075,1668"/>
+<area shape="rect" id="node9" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="985,945,1183,972"/>
+<area shape="rect" id="node50" href="$structMoFEM_1_1CoreInterface.html" title="Interface." alt="" coords="1444,945,1611,972"/>
+<area shape="rect" id="node10" title=" " alt="" coords="520,348,841,433"/>
+<area shape="rect" id="node11" title=" " alt="" coords="5,244,172,271"/>
+<area shape="rect" id="node12" title=" " alt="" coords="990,1365,1178,1392"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1061,1137,1107,1164"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1035,1416,1133,1443"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1061,1563,1107,1589"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1504,1088,1551,1115"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1478,1139,1577,1165"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1499,1457,1555,1484"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1474,1508,1581,1535"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1484,1917,1571,1944"/>
+<area shape="rect" id="node23" title=" " alt="" coords="1483,1641,1572,1668"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1490,1692,1565,1719"/>
+<area shape="rect" id="node25" title=" " alt="" coords="1508,1743,1547,1769"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1944,1204,2063,1231"/>
+<area shape="rect" id="node27" title=" " alt="" coords="1910,1255,2097,1281"/>
+<area shape="rect" id="node28" title=" " alt="" coords="1929,1312,2078,1339"/>
+<area shape="rect" id="node29" title=" " alt="" coords="1508,844,1547,871"/>
+<area shape="rect" id="node31" href="$structMoFEM_1_1Problem.html" title="keeps basic data about problem" alt="" coords="1937,488,2069,515"/>
+<area shape="rect" id="node30" title=" " alt="" coords="1892,996,2115,1023"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1416,665,1639,706"/>
+<area shape="rect" id="node33" title=" " alt="" coords="1488,160,1567,187"/>
+<area shape="rect" id="node34" href="$classEntityHandle.html" title=" " alt="" coords="1474,895,1581,921"/>
+<area shape="rect" id="node35" title=" " alt="" coords="1428,211,1627,253"/>
+<area shape="rect" id="node36" title=" " alt="" coords="1473,277,1581,304"/>
+<area shape="rect" id="node37" title=" " alt="" coords="1414,329,1641,370"/>
+<area shape="rect" id="node38" title=" " alt="" coords="1502,395,1553,421"/>
+<area shape="rect" id="node39" title=" " alt="" coords="1435,445,1619,472"/>
+<area shape="rect" id="node40" title=" " alt="" coords="1423,497,1631,538"/>
+<area shape="rect" id="node41" title=" " alt="" coords="1392,563,1663,589"/>
+<area shape="rect" id="node42" title=" " alt="" coords="1469,613,1586,640"/>
+<area shape="rect" id="node43" title=" " alt="" coords="2433,901,2649,942"/>
+<area shape="rect" id="node44" title=" " alt="" coords="2512,1227,2571,1253"/>
+<area shape="rect" id="node86" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="3937,2151,4152,2193"/>
+<area shape="rect" id="node45" title=" " alt="" coords="2433,966,2650,1007"/>
+<area shape="rect" id="node46" href="$classdouble.html" title=" " alt="" coords="2508,1352,2575,1379"/>
+<area shape="rect" id="node64" href="$structMoFEM_1_1OpSetContravariantPiolaTransform.html" title="apply contravariant (Piola) transfer to Hdiv space" alt="" coords="3462,1617,3669,1658"/>
+<area shape="rect" id="node74" href="$classFTensor_1_1Tensor2.html" title=" " alt="" coords="2959,1621,3147,1662"/>
+<area shape="rect" id="node47" title=" " alt="" coords="2939,1005,3168,1061"/>
+<area shape="rect" id="node48" title=" " alt="" coords="3008,545,3099,572"/>
+<area shape="rect" id="node49" href="$structMoFEM_1_1DeprecatedCoreInterface.html" title="Deprecated interface functions." alt="" coords="2139,895,2380,921"/>
+<area shape="rect" id="node51" title=" " alt="" coords="2942,597,3165,667"/>
+<area shape="rect" id="node52" title=" " alt="" coords="2919,691,3188,733"/>
+<area shape="rect" id="node53" href="$structMoFEM_1_1EntitiesFieldData.html" title="data structure for finite element entity" alt="" coords="2959,291,3148,317"/>
+<area shape="rect" id="node54" title=" " alt="" coords="2433,282,2649,323"/>
+<area shape="rect" id="node55" title=" " alt="" coords="2439,348,2643,404"/>
+<area shape="rect" id="node56" title=" " alt="" coords="2425,429,2657,470"/>
+<area shape="rect" id="node57" title=" " alt="" coords="2429,114,2654,155"/>
+<area shape="rect" id="node58" title=" " alt="" coords="2467,180,2616,207"/>
+<area shape="rect" id="node59" title=" " alt="" coords="2463,231,2619,257"/>
+<area shape="rect" id="node60" title=" " alt="" coords="2970,757,3137,813"/>
+<area shape="rect" id="node61" title=" " alt="" coords="2972,838,3135,879"/>
+<area shape="rect" id="node62" href="$classUBlasMatrix_3_01double_01_4.html" title=" " alt="" coords="2965,1504,3141,1531"/>
+<area shape="rect" id="node77" href="$structMoFEM_1_1OpSetInvJacHdivAndHcurl.html" title="brief Transform local reference derivatives of shape function to global derivatives" alt="" coords="3460,1923,3671,1965"/>
+<area shape="rect" id="node78" href="$structMoFEM_1_1OpSetCovariantPiolaTransform.html" title="apply covariant transfer to Hcurl space" alt="" coords="3459,1789,3671,1830"/>
+<area shape="rect" id="node80" href="$structMoFEM_1_1OpSetInvJacH1.html" title="Transform local reference derivatives of shape function to global derivatives." alt="" coords="3478,1989,3653,2016"/>
+<area shape="rect" id="node63" href="$classUBlasVector_3_01double_01_4.html" title=" " alt="" coords="3478,1255,3653,1281"/>
+<area shape="rect" id="node65" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="2970,1983,3137,2009"/>
+<area shape="rect" id="node66" title=" " alt="" coords="2413,1990,2669,2061"/>
+<area shape="rect" id="node67" href="$classbool.html" title=" " alt="" coords="2516,2132,2567,2159"/>
+<area shape="rect" id="node68" title=" " alt="" coords="2404,1800,2679,1915"/>
+<area shape="rect" id="node69" title=" " alt="" coords="2439,1939,2644,1965"/>
+<area shape="rect" id="node70" href="$classFTensor_1_1Index.html" title=" " alt="" coords="2967,2245,3140,2272"/>
+<area shape="rect" id="node71" href="$classFTensor_1_1Index.html" title=" " alt="" coords="2472,2238,2611,2279"/>
+<area shape="rect" id="node72" href="$classFTensor_1_1Index.html" title=" " alt="" coords="2967,2305,3140,2332"/>
+<area shape="rect" id="node73" href="$classFTensor_1_1Index.html" title=" " alt="" coords="2965,2093,3142,2120"/>
+<area shape="rect" id="node75" href="$classFTensor_1_1Tensor2.html" title=" " alt="" coords="2461,1676,2621,1732"/>
+<area shape="rect" id="node76" title=" " alt="" coords="1984,1692,2023,1719"/>
+<area shape="rect" id="node79" href="$classMatrixBoundedArray_3_01double_00_019_01_4.html" title=" " alt="" coords="3487,1682,3643,1723"/>
+<area shape="rect" id="node81" title=" " alt="" coords="3466,2091,3665,2133"/>
+<area shape="rect" id="node82" title=" " alt="" coords="3477,2157,3654,2184"/>
+<area shape="rect" id="node83" href="$classRange.html" title=" " alt="" coords="3534,2040,3597,2067"/>
+<area shape="rect" id="node84" title=" " alt="" coords="3508,2280,3623,2307"/>
+<area shape="rect" id="node85" title=" " alt="" coords="3467,2373,3663,2400"/>
+<area shape="rect" id="node87" href="$classE.html" title=" " alt="" coords="3546,2208,3585,2235"/>
 </map>

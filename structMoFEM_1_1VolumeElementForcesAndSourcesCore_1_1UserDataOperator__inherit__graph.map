@@ -24,16 +24,16 @@
 <area shape="rect" id="node25" href="$structExample_1_1OpSecond.html" title="[Operator]" alt="" coords="866,1323,1018,1350"/>
 <area shape="rect" id="node26" href="$structExample_1_1OpZero.html" title="[Common data]" alt="" coords="875,1374,1009,1401"/>
 <area shape="rect" id="node27" href="$structFieldApproximationH1_1_1OpApproxVolume.html" title="Gauss point operators to calculate matrices and vectors." alt="" coords="825,1425,1059,1467"/>
-<area shape="rect" id="node28" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressLhs__Dx.html" title=" " alt="" coords="827,1491,1057,1547"/>
-<area shape="rect" id="node29" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressLhs__DX.html" title=" " alt="" coords="827,1571,1057,1627"/>
+<area shape="rect" id="node28" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressLhs__DX.html" title=" " alt="" coords="827,1491,1057,1547"/>
+<area shape="rect" id="node29" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressLhs__Dx.html" title=" " alt="" coords="827,1571,1057,1627"/>
 <area shape="rect" id="node30" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressRhs.html" title="Integrate force vector." alt="" coords="827,1651,1057,1707"/>
 <area shape="rect" id="node31" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSRhoPostProcess.html" title=" " alt="" coords="803,1732,1081,1773"/>
 <area shape="rect" id="node32" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSSpatialStressLhs__DX.html" title=" " alt="" coords="812,1798,1072,1854"/>
 <area shape="rect" id="node33" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSSpatialStressRhs.html" title="Integrate force vector." alt="" coords="800,1879,1084,1920"/>
 <area shape="rect" id="node34" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSStressAndErrorsAtGaussPts.html" title="Evaluate stress at integration points." alt="" coords="822,1945,1062,2001"/>
 <area shape="rect" id="node35" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSStressPostProcess.html" title=" " alt="" coords="821,2025,1063,2081"/>
-<area shape="rect" id="node36" href="$structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dX.html" title="Calculate explicit derivative of energy." alt="" coords="837,2105,1047,2161"/>
-<area shape="rect" id="node37" href="$structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dx.html" title=" " alt="" coords="837,2185,1047,2241"/>
+<area shape="rect" id="node36" href="$structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dx.html" title=" " alt="" coords="837,2105,1047,2161"/>
+<area shape="rect" id="node37" href="$structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dX.html" title="Calculate explicit derivative of energy." alt="" coords="837,2185,1047,2241"/>
 <area shape="rect" id="node38" href="$structFractureMechanics_1_1OpPostProcDisplacements.html" title=" " alt="" coords="845,2265,1039,2307"/>
 <area shape="rect" id="node39" href="$structFractureMechanics_1_1OpPrint.html" title=" " alt="" coords="866,2331,1018,2372"/>
 <area shape="rect" id="node40" href="$structFractureMechanics_1_1OpRhsBoneExplicitDerivariveWithHooke.html" title="Calculate explicit derivative of energy." alt="" coords="835,2397,1049,2453"/>
@@ -146,12 +146,12 @@
 <area shape="rect" id="node105" href="$structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs.html" title="Base class for LHS&#45;operators (material) on side volumes." alt="" coords="1150,4545,1371,4601"/>
 <area shape="rect" id="node108" href="$structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialVolOnSideLhs.html" title="Base class for LHS&#45;operators (material) on side volumes." alt="" coords="1136,4625,1385,4681"/>
 <area shape="rect" id="node111" href="$structOpVolumeSide.html" title=" " alt="" coords="1202,4705,1319,4731"/>
-<area shape="rect" id="node101" href="$structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html" title="LHS&#45;operator (material configuration) on the side volume for spring element." alt="" coords="1439,4308,1680,4349"/>
-<area shape="rect" id="node102" href="$structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dX.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1439,4373,1680,4415"/>
-<area shape="rect" id="node106" href="$structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dx.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1449,4465,1670,4521"/>
-<area shape="rect" id="node107" href="$structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dX.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1449,4545,1670,4601"/>
-<area shape="rect" id="node109" href="$structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialVolOnSideLhs__dX__dx.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1435,4625,1684,4681"/>
-<area shape="rect" id="node110" href="$structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialVolOnSideLhs__dX__dX.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1435,4705,1684,4761"/>
+<area shape="rect" id="node101" href="$structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dX.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1439,4308,1680,4349"/>
+<area shape="rect" id="node102" href="$structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html" title="LHS&#45;operator (material configuration) on the side volume for spring element." alt="" coords="1439,4373,1680,4415"/>
+<area shape="rect" id="node106" href="$structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dX.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1449,4465,1670,4521"/>
+<area shape="rect" id="node107" href="$structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dx.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1449,4545,1670,4601"/>
+<area shape="rect" id="node109" href="$structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialVolOnSideLhs__dX__dX.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1435,4625,1684,4681"/>
+<area shape="rect" id="node110" href="$structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialVolOnSideLhs__dX__dx.html" title="LHS&#45;operator (material configuration) on the side volume." alt="" coords="1435,4705,1684,4761"/>
 <area shape="rect" id="node113" href="$structNavierStokesElement_1_1OpAssembleLhsDiagLin.html" title="Assemble linear (symmetric) part of the diagonal block of the LHS Operator for assembling linear (sym..." alt="" coords="1169,4756,1352,4797"/>
 <area shape="rect" id="node114" href="$structNavierStokesElement_1_1OpAssembleLhsDiagNonLin.html" title="Assemble non&#45;linear (non&#45;symmetric) part of the diagonal block of the LHS Operator for assembling non..." alt="" coords="1156,4821,1365,4863"/>
 <area shape="rect" id="node115" href="$structNavierStokesElement_1_1OpAssembleLhsOffDiag.html" title="Assemble off&#45;diagonal block of the LHS Operator for assembling off&#45;diagonal block of the LHS." alt="" coords="1169,4887,1352,4928"/>
@@ -177,16 +177,16 @@
 <area shape="rect" id="node145" href="$structPeriodicNitscheConstrains_1_1OpCalculateHomogenisedStressVolumeIntegral.html" title=" " alt="" coords="1141,5697,1380,5753"/>
 <area shape="rect" id="node146" href="$structSmoother_1_1OpRhsSmoother.html" title=" " alt="" coords="1161,5777,1360,5803"/>
 <area shape="rect" id="node149" href="$structHookeInternalStressElement_1_1OpInternalStrain__dx.html" title=" " alt="" coords="1157,5828,1364,5869"/>
-<area shape="rect" id="node150" href="$structOpAleLhs__dx__dx.html" title=" " alt="" coords="1177,5894,1344,5921"/>
-<area shape="rect" id="node151" href="$structOpAleLhs__dx__dX.html" title=" " alt="" coords="1177,5945,1345,5971"/>
-<area shape="rect" id="node152" href="$structOpAleLhs__dX__dX.html" title=" " alt="" coords="1176,5995,1345,6022"/>
-<area shape="rect" id="node153" href="$structOpAleLhs__dX__dx.html" title=" " alt="" coords="1195,6046,1326,6073"/>
+<area shape="rect" id="node150" href="$structOpAleLhs__dX__dX.html" title=" " alt="" coords="1176,5894,1345,5921"/>
+<area shape="rect" id="node151" href="$structOpAleLhs__dX__dx.html" title=" " alt="" coords="1195,5945,1326,5971"/>
+<area shape="rect" id="node152" href="$structOpAleLhs__dx__dX.html" title=" " alt="" coords="1177,5995,1345,6022"/>
+<area shape="rect" id="node153" href="$structOpAleLhs__dx__dx.html" title=" " alt="" coords="1177,6046,1344,6073"/>
 <area shape="rect" id="node154" href="$structOpAleLhsWithDensity__dX__dX.html" title=" " alt="" coords="1179,6097,1342,6139"/>
 <area shape="rect" id="node155" href="$structOpAleLhsWithDensity__dx__dX.html" title=" " alt="" coords="1179,6163,1342,6204"/>
-<area shape="rect" id="node156" href="$structOpAleRhs__dx.html" title=" " alt="" coords="1207,6229,1315,6255"/>
-<area shape="rect" id="node157" href="$structOpAleRhs__dX.html" title=" " alt="" coords="1206,6279,1315,6306"/>
-<area shape="rect" id="node158" href="$structOpAnalyticalInternalAleStrain__dX.html" title=" " alt="" coords="1153,6331,1368,6372"/>
-<area shape="rect" id="node159" href="$structOpAnalyticalInternalAleStrain__dx.html" title=" " alt="" coords="1153,6396,1368,6437"/>
+<area shape="rect" id="node156" href="$structOpAleRhs__dX.html" title=" " alt="" coords="1206,6229,1315,6255"/>
+<area shape="rect" id="node157" href="$structOpAleRhs__dx.html" title=" " alt="" coords="1207,6279,1315,6306"/>
+<area shape="rect" id="node158" href="$structOpAnalyticalInternalAleStrain__dx.html" title=" " alt="" coords="1153,6331,1368,6372"/>
+<area shape="rect" id="node159" href="$structOpAnalyticalInternalAleStrain__dX.html" title=" " alt="" coords="1153,6396,1368,6437"/>
 <area shape="rect" id="node160" href="$structOpAnalyticalInternalStrain__dx.html" title=" " alt="" coords="1164,6461,1357,6503"/>
 <area shape="rect" id="node161" href="$structOpLhs__dx__dx.html" title=" " alt="" coords="1187,6527,1334,6554"/>
 <area shape="rect" id="node162" href="$structOpRhs__dx.html" title=" " alt="" coords="1217,6578,1304,6605"/>

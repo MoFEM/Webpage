@@ -123,8 +123,8 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">EshelbianPlasticity.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -138,6 +138,7 @@ $(function() {
 <code>#include &lt;boost/math/constants/constants.hpp&gt;</code><br />
 <code>#include &lt;<a class="el" href="cholesky_8hpp_source.html">cholesky.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="EshelbianContact_8hpp_source.html">EshelbianContact.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="quad_8h_source.html">phg-quadrule/quad.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="EshelbianMonitor_8cpp_source.html">impl/EshelbianMonitor.cpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SetUpSchurImpl_8cpp_source.html">impl/SetUpSchurImpl.cpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TSElasticPostStep_8cpp_source.html">impl/TSElasticPostStep.cpp</a>&quot;</code><br />
@@ -151,12 +152,14 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1FaceUserDataOperatorStabAssembly.html">EshelbianPlasticity::FaceUserDataOperatorStabAssembly</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1SetIntegrationAtFrontVolume.html">EshelbianPlasticity::SetIntegrationAtFrontVolume</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1SetIntegrationAtFrontVolume_1_1VolFe.html">EshelbianPlasticity::SetIntegrationAtFrontVolume::VolFe</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1VolRule.html">EshelbianPlasticity::VolRule</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set integration rule on element.  <a href="structEshelbianPlasticity_1_1VolRule.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1FaceRule.html">EshelbianPlasticity::FaceRule</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1CGGUserPolynomialBase.html">EshelbianPlasticity::CGGUserPolynomialBase</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -164,23 +167,42 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceEshelbianPlasticity"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html">EshelbianPlasticity</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a16e89936f0f97331ccf75107ed5c8eaf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EshelbianPlasticity_8cpp.html#a16e89936f0f97331ccf75107ed5c8eaf">SINGULARITY</a></td></tr>
+<tr class="separator:a16e89936f0f97331ccf75107ed5c8eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aaa7a0690eb1c57e71db62244fbec6f32"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EshelbianPlasticity_8cpp.html#aaa7a0690eb1c57e71db62244fbec6f32">get_range_from_block</a> (<a class="el" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">MoFEM::Interface</a> &amp;m_field, const std::string block_name)</td></tr>
-<tr class="separator:aaa7a0690eb1c57e71db62244fbec6f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:acad08fec35a620328bd3364418a7d1e6"><td class="memItemLeft" align="right" valign="top">enum RotSelector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#acad08fec35a620328bd3364418a7d1e6">EshelbianPlasticity::EshelbianCore</a></td></tr>
-<tr class="separator:acad08fec35a620328bd3364418a7d1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682702e0fce3d077405cdabd7af01877"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EshelbianPlasticity_8cpp.html#a682702e0fce3d077405cdabd7af01877">get_range_from_block</a> (<a class="el" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">MoFEM::Interface</a> &amp;m_field, const std::string block_name, int dim)</td></tr>
+<tr class="separator:a682702e0fce3d077405cdabd7af01877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb0c39cc24166b24cfdd194b6b48e794"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EshelbianPlasticity_8cpp.html#abb0c39cc24166b24cfdd194b6b48e794">save_range</a> (moab::Interface &amp;moab, const std::string name, const <a class="el" href="classRange.html">Range</a> r)</td></tr>
+<tr class="separator:abb0c39cc24166b24cfdd194b6b48e794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of automatic differentiation. </p>
 
 <p class="definition">Definition in file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="aaa7a0690eb1c57e71db62244fbec6f32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa7a0690eb1c57e71db62244fbec6f32">&#9670;&nbsp;</a></span>get_range_from_block()</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a16e89936f0f97331ccf75107ed5c8eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e89936f0f97331ccf75107ed5c8eaf">&#9670;&nbsp;</a></span>SINGULARITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SINGULARITY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l00008">8</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a682702e0fce3d077405cdabd7af01877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682702e0fce3d077405cdabd7af01877">&#9670;&nbsp;</a></span>get_range_from_block()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +220,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>block_name</em>&#160;</td>
+          <td class="paramname"><em>block_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dim</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -215,27 +243,84 @@ Variables</h2></td></tr>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="EshelbianPlasticity_8cpp-example.html#a3">EshelbianPlasticity.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l00046">46</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                             {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classRange.html">Range</a> <a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">auto</span> mesh_mng = m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1MeshsetsManager.html">MeshsetsManager</a>&gt;();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">auto</span> bcs = mesh_mng-&gt;<a class="code" href="group__mofem__meshset__mng.html#gaa54e3cb5e57c57a8d03d9c4c7a21a80a">getCubitMeshsetPtr</a>(</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      std::regex((boost::format(<span class="stringliteral">&quot;%s(.*)&quot;</span>) % block_name).str())</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> bc : bcs) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classRange.html">Range</a> faces;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="definitions_8h.html#a793899f524a281eb88e3ff2b01ce6acb">CHK_MOAB_THROW</a>(</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        bc-&gt;getMeshsetIdEntitiesByDimension(m_field.<a class="code" href="structMoFEM_1_1CoreInterface.html#adb4b1c061d2348966a28e7425072f464">get_moab</a>(), 2, faces, <span class="keyword">true</span>),</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="stringliteral">&quot;get meshset ents&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a>.merge(faces);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l00052">52</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classRange.html">Range</a> <a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">auto</span> mesh_mng = m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1MeshsetsManager.html">MeshsetsManager</a>&gt;();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">auto</span> bcs = mesh_mng-&gt;<a class="code" href="group__mofem__meshset__mng.html#gaa54e3cb5e57c57a8d03d9c4c7a21a80a">getCubitMeshsetPtr</a>(</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      std::regex((boost::format(<span class="stringliteral">&quot;%s(.*)&quot;</span>) % block_name).str())</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> bc : bcs) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classRange.html">Range</a> faces;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="definitions_8h.html#a793899f524a281eb88e3ff2b01ce6acb">CHK_MOAB_THROW</a>(bc-&gt;getMeshsetIdEntitiesByDimension(m_field.<a class="code" href="structMoFEM_1_1CoreInterface.html#adb4b1c061d2348966a28e7425072f464">get_moab</a>(), dim,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                                       faces, <span class="keyword">true</span>),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                   <span class="stringliteral">&quot;get meshset ents&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a>.merge(faces);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abb0c39cc24166b24cfdd194b6b48e794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb0c39cc24166b24cfdd194b6b48e794">&#9670;&nbsp;</a></span>save_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto save_range </td>
+          <td>(</td>
+          <td class="paramtype">moab::Interface &amp;&#160;</td>
+          <td class="paramname"><em>moab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classRange.html">Range</a>&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="EshelbianPlasticity_8cpp-example.html#a12">EshelbianPlasticity.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l00074">74</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                      {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">auto</span> out_meshset = <a class="code" href="namespaceMoFEM.html#ad17eefd5d88d2b51c71ec46cae8569ac">get_temp_meshset_ptr</a>(moab);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.add_entities(*out_meshset, <a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a>.size()) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(name.c_str(), <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, out_meshset-&gt;get_ptr(), 1);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::warning) &lt;&lt; <span class="stringliteral">&quot;Empty range for &quot;</span> &lt;&lt; name;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -243,10 +328,15 @@ Variables</h2></td></tr>
 <div class="ttc" id="astructMoFEM_1_1UnknownInterface_html_a7ab248ec45fca778800dcd92e5171beb"><div class="ttname"><a href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">MoFEM::UnknownInterface::getInterface</a></div><div class="ttdeci">MoFEMErrorCode getInterface(IFACE *&amp;iface) const</div><div class="ttdoc">Get interface reference to pointer of interface.</div><div class="ttdef"><b>Definition:</b> <a href="UnknownInterface_8hpp_source.html#l00093">UnknownInterface.hpp:93</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a793899f524a281eb88e3ff2b01ce6acb"><div class="ttname"><a href="definitions_8h.html#a793899f524a281eb88e3ff2b01ce6acb">CHK_MOAB_THROW</a></div><div class="ttdeci">#define CHK_MOAB_THROW(err, msg)</div><div class="ttdoc">Check error code of MoAB function and throw MoFEM exception.</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00589">definitions.h:589</a></div></div>
 <div class="ttc" id="anamespacesdf_html_a2f1f399a483aed931a5a8ac3b98f49ba"><div class="ttname"><a href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">sdf.r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> <a href="jupyter_2skel_2ukacm__autumn__school_2multifield__plasticity_2sdf_8py_source.html#l00008">sdf.py:8</a></div></div>
+<div class="ttc" id="adefinitions_8h_html_add80e5ef5f847b2d4b637029f0f671c3"><div class="ttname"><a href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a></div><div class="ttdeci">#define CHKERR</div><div class="ttdoc">Inline error check.</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00548">definitions.h:548</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1CoreInterface_html_adb4b1c061d2348966a28e7425072f464"><div class="ttname"><a href="structMoFEM_1_1CoreInterface.html#adb4b1c061d2348966a28e7425072f464">MoFEM::CoreInterface::get_moab</a></div><div class="ttdeci">virtual moab::Interface &amp; get_moab()=0</div></div>
+<div class="ttc" id="anamespaceMoFEM_html_ad17eefd5d88d2b51c71ec46cae8569ac"><div class="ttname"><a href="namespaceMoFEM.html#ad17eefd5d88d2b51c71ec46cae8569ac">MoFEM::get_temp_meshset_ptr</a></div><div class="ttdeci">auto get_temp_meshset_ptr(moab::Interface &amp;moab)</div><div class="ttdoc">Create smart pointer to temporary meshset.</div><div class="ttdef"><b>Definition:</b> <a href="Templates_8hpp_source.html#l01886">Templates.hpp:1886</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
+<div class="ttc" id="agroup__mofem__log__manager_html_ga19fe81dc9081ceb92ced847e619ca654"><div class="ttname"><a href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a></div><div class="ttdeci">#define MOFEM_LOG(channel, severity)</div><div class="ttdoc">Log.</div><div class="ttdef"><b>Definition:</b> <a href="LogManager_8hpp_source.html#l00308">LogManager.hpp:308</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1MeshsetsManager_html"><div class="ttname"><a href="structMoFEM_1_1MeshsetsManager.html">MoFEM::MeshsetsManager</a></div><div class="ttdoc">Interface for managing meshsets containing materials and boundary conditions.</div><div class="ttdef"><b>Definition:</b> <a href="MeshsetsManager_8hpp_source.html#l00104">MeshsetsManager.hpp:104</a></div></div>
 <div class="ttc" id="agroup__mofem__meshset__mng_html_gaa54e3cb5e57c57a8d03d9c4c7a21a80a"><div class="ttname"><a href="group__mofem__meshset__mng.html#gaa54e3cb5e57c57a8d03d9c4c7a21a80a">MoFEM::MeshsetsManager::getCubitMeshsetPtr</a></div><div class="ttdeci">MoFEMErrorCode getCubitMeshsetPtr(const int ms_id, const CubitBCType cubit_bc_type, const CubitMeshSets **cubit_meshset_ptr) const</div><div class="ttdoc">get cubit meshset</div><div class="ttdef"><b>Definition:</b> <a href="MeshsetsManager_8cpp_source.html#l00578">MeshsetsManager.cpp:578</a></div></div>
+<div class="ttc" id="adefinitions_8h_html_acb0a46d159695a01bf667313b7788b45"><div class="ttname"><a href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a></div><div class="ttdeci">#define MoFEMFunctionReturn(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00429">definitions.h:429</a></div></div>
+<div class="ttc" id="adefinitions_8h_html_a6c0b52978f1abc88bf8a1ba70b7308e3"><div class="ttname"><a href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a></div><div class="ttdeci">#define MoFEMFunctionBegin</div><div class="ttdoc">First executable line of each MoFEM function, used for error handling. Final line of MoFEM functions ...</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00359">definitions.h:359</a></div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr cla ss="footer" />

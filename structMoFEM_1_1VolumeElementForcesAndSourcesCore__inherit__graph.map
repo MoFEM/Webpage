@@ -1,39 +1,40 @@
 <map id="MoFEM::VolumeElementForcesAndSourcesCore" name="MoFEM::VolumeElementForcesAndSourcesCore">
-<area shape="rect" id="node1" title="Volume finite element base." alt="" coords="1325,472,1548,513"/>
+<area shape="rect" id="node1" title="Volume finite element base." alt="" coords="1325,520,1548,561"/>
 <area shape="rect" id="node10" href="$structBodyForceConstantField_1_1MyVolumeFE.html" title=" " alt="" coords="1643,5,1822,47"/>
 <area shape="rect" id="node11" href="$structBoneRemodeling_1_1DensityMapFe.html" title=" " alt="" coords="1615,71,1850,98"/>
 <area shape="rect" id="node12" href="$structBoneRemodeling_1_1Remodeling_1_1Fe.html" title="Volume finite element." alt="" coords="1611,122,1854,149"/>
-<area shape="rect" id="node13" href="$structGelModule_1_1Gel_1_1GelFE.html" title="definition of volume element" alt="" coords="1649,173,1817,199"/>
-<area shape="rect" id="node14" href="$structKelvinVoigtDamper_1_1DamperFE.html" title="definition of volume element" alt="" coords="1655,224,1810,265"/>
-<area shape="rect" id="node15" href="$structMagneticElement_1_1VolumeFE.html" title="definition of volume element" alt="" coords="1628,290,1837,317"/>
-<area shape="rect" id="node16" href="$structMixTransport_1_1MixTransportElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="1633,341,1832,383"/>
-<area shape="rect" id="node17" href="$structMoFEM_1_1FatPrismElementForcesAndSourcesCore.html" title="FatPrism finite element." alt="" coords="1617,407,1848,448"/>
-<area shape="rect" id="node22" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSide.html" title="Base volume element used to integrate on contact surface (could be extended to other volume elements)" alt="" coords="1602,472,1863,513"/>
-<area shape="rect" id="node24" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnSide.html" title="Base volume element used to integrate on skeleton." alt="" coords="1621,537,1844,579"/>
-<area shape="rect" id="node26" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreSwitch.html" title=" " alt="" coords="1607,603,1859,644"/>
-<area shape="rect" id="node27" href="$structNitscheMethod_1_1MyVolumeFE.html" title="Definition of volume element." alt="" coords="1626,669,1839,695"/>
-<area shape="rect" id="node29" href="$structNonlinearElasticElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="1641,720,1824,761"/>
-<area shape="rect" id="node31" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="1601,786,1864,842"/>
-<area shape="rect" id="node33" href="$structPostProcTemplateOnRefineMesh.html" title=" " alt="" coords="1596,866,1869,922"/>
-<area shape="rect" id="node36" href="$structThermalElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="1621,946,1844,973"/>
-<area shape="rect" id="node37" href="$structThermalStressElement_1_1MyVolumeFE.html" title=" " alt="" coords="1647,997,1818,1039"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1ForcesAndSourcesCore.html" title="structure to get information form mofem into EntitiesFieldData" alt="" coords="1051,479,1277,506"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1FEMethod.html" title="structure for User Loop Methods on finite elements" alt="" coords="860,479,1003,506"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1BasicMethod.html" title="Data structure to exchange data between mofem and User Loop Methods." alt="" coords="649,479,812,506"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1KspMethod.html" title="data structure for ksp (linear solver) context" alt="" coords="447,429,597,455"/>
-<area shape="rect" id="node6" href="$structMoFEM_1_1PetscData.html" title=" " alt="" coords="251,479,395,506"/>
-<area shape="rect" id="node8" href="$structMoFEM_1_1SnesMethod.html" title="data structure for snes (nonlinear solver) context" alt="" coords="443,479,601,506"/>
-<area shape="rect" id="node9" href="$structMoFEM_1_1TSMethod.html" title="data structure for TS (time stepping) context" alt="" coords="451,530,593,557"/>
-<area shape="rect" id="node7" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="5,479,203,506"/>
-<area shape="rect" id="node18" href="$structCellEngineering_1_1FatPrism.html" title=" " alt="" coords="1963,283,2151,310"/>
-<area shape="rect" id="node19" href="$structPostProcTemplateOnRefineMesh.html" title=" " alt="" coords="1938,334,2177,390"/>
-<area shape="rect" id="node21" href="$structPrismFE.html" title=" " alt="" coords="2020,414,2095,441"/>
-<area shape="rect" id="node20" href="$structPostProcFatPrismOnRefinedMesh.html" title="Postprocess on prism." alt="" coords="2245,349,2481,375"/>
-<area shape="rect" id="node23" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSideSwitch.html" title=" " alt="" coords="1927,465,2188,521"/>
-<area shape="rect" id="node25" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnSideSwitch.html" title=" " alt="" coords="1946,545,2169,601"/>
-<area shape="rect" id="node28" href="$structPeriodicNitscheConstrains_1_1MyNitscheVolume.html" title=" " alt="" coords="1961,661,2153,703"/>
-<area shape="rect" id="node30" href="$structSmoother_1_1MyVolumeFE.html" title=" " alt="" coords="1968,727,2147,754"/>
-<area shape="rect" id="node32" href="$structMoFEM_1_1PostProcBrokenMeshInMoab_3_01VolumeElementForcesAndSourcesCore_01_4.html" title=" " alt="" coords="1930,786,2185,842"/>
-<area shape="rect" id="node34" href="$structPostProcTemplateVolumeOnRefinedMesh.html" title=" " alt="" coords="1917,866,2197,922"/>
-<area shape="rect" id="node35" href="$structPostProcVolumeOnRefinedMesh.html" title="Post processing." alt="" coords="2249,881,2478,907"/>
+<area shape="rect" id="node13" href="$structEshelbianPlasticity_1_1SetIntegrationAtFrontVolume_1_1VolFe.html" title=" " alt="" coords="1623,173,1842,229"/>
+<area shape="rect" id="node14" href="$structGelModule_1_1Gel_1_1GelFE.html" title="definition of volume element" alt="" coords="1649,253,1817,279"/>
+<area shape="rect" id="node15" href="$structKelvinVoigtDamper_1_1DamperFE.html" title="definition of volume element" alt="" coords="1655,304,1810,345"/>
+<area shape="rect" id="node16" href="$structMagneticElement_1_1VolumeFE.html" title="definition of volume element" alt="" coords="1628,370,1837,397"/>
+<area shape="rect" id="node17" href="$structMixTransport_1_1MixTransportElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="1633,421,1832,463"/>
+<area shape="rect" id="node18" href="$structMoFEM_1_1FatPrismElementForcesAndSourcesCore.html" title="FatPrism finite element." alt="" coords="1617,487,1848,528"/>
+<area shape="rect" id="node23" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSide.html" title="Base volume element used to integrate on contact surface (could be extended to other volume elements)" alt="" coords="1602,552,1863,593"/>
+<area shape="rect" id="node25" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnSide.html" title="Base volume element used to integrate on skeleton." alt="" coords="1621,617,1844,659"/>
+<area shape="rect" id="node27" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreSwitch.html" title=" " alt="" coords="1607,683,1859,724"/>
+<area shape="rect" id="node28" href="$structNitscheMethod_1_1MyVolumeFE.html" title="Definition of volume element." alt="" coords="1626,749,1839,775"/>
+<area shape="rect" id="node30" href="$structNonlinearElasticElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="1641,800,1824,841"/>
+<area shape="rect" id="node32" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="1601,866,1864,922"/>
+<area shape="rect" id="node34" href="$structPostProcTemplateOnRefineMesh.html" title=" " alt="" coords="1596,946,1869,1002"/>
+<area shape="rect" id="node37" href="$structThermalElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="1621,1026,1844,1053"/>
+<area shape="rect" id="node38" href="$structThermalStressElement_1_1MyVolumeFE.html" title=" " alt="" coords="1647,1077,1818,1119"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1ForcesAndSourcesCore.html" title="structure to get information form mofem into EntitiesFieldData" alt="" coords="1051,527,1277,554"/>
+<area shape="rect" id="node3" href="$structMoFEM_1_1FEMethod.html" title="structure for User Loop Methods on finite elements" alt="" coords="860,527,1003,554"/>
+<area shape="rect" id="node4" href="$structMoFEM_1_1BasicMethod.html" title="Data structure to exchange data between mofem and User Loop Methods." alt="" coords="649,527,812,554"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1KspMethod.html" title="data structure for ksp (linear solver) context" alt="" coords="447,477,597,503"/>
+<area shape="rect" id="node6" href="$structMoFEM_1_1PetscData.html" title=" " alt="" coords="251,527,395,554"/>
+<area shape="rect" id="node8" href="$structMoFEM_1_1SnesMethod.html" title="data structure for snes (nonlinear solver) context" alt="" coords="443,527,601,554"/>
+<area shape="rect" id="node9" href="$structMoFEM_1_1TSMethod.html" title="data structure for TS (time stepping) context" alt="" coords="451,578,593,605"/>
+<area shape="rect" id="node7" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="5,527,203,554"/>
+<area shape="rect" id="node19" href="$structCellEngineering_1_1FatPrism.html" title=" " alt="" coords="1963,363,2151,390"/>
+<area shape="rect" id="node20" href="$structPostProcTemplateOnRefineMesh.html" title=" " alt="" coords="1938,414,2177,470"/>
+<area shape="rect" id="node22" href="$structPrismFE.html" title=" " alt="" coords="2020,494,2095,521"/>
+<area shape="rect" id="node21" href="$structPostProcFatPrismOnRefinedMesh.html" title="Postprocess on prism." alt="" coords="2245,429,2481,455"/>
+<area shape="rect" id="node24" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSideSwitch.html" title=" " alt="" coords="1927,545,2188,601"/>
+<area shape="rect" id="node26" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnSideSwitch.html" title=" " alt="" coords="1946,625,2169,681"/>
+<area shape="rect" id="node29" href="$structPeriodicNitscheConstrains_1_1MyNitscheVolume.html" title=" " alt="" coords="1961,741,2153,783"/>
+<area shape="rect" id="node31" href="$structSmoother_1_1MyVolumeFE.html" title=" " alt="" coords="1968,807,2147,834"/>
+<area shape="rect" id="node33" href="$structMoFEM_1_1PostProcBrokenMeshInMoab_3_01VolumeElementForcesAndSourcesCore_01_4.html" title=" " alt="" coords="1930,866,2185,922"/>
+<area shape="rect" id="node35" href="$structPostProcTemplateVolumeOnRefinedMesh.html" title=" " alt="" coords="1917,946,2197,1002"/>
+<area shape="rect" id="node36" href="$structPostProcVolumeOnRefinedMesh.html" title="Post processing." alt="" coords="2249,961,2478,987"/>
 </map>

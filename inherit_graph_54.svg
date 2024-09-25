@@ -9,9 +9,9 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 427)">
 <title>Graphical Class Hierarchy</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-427 593,-427 593,4 -4,4"/>
-<!-- Node114 -->
+<!-- Node83 -->
 <g id="node1" class="node">
-<title>Node114</title>
+<title>Node83</title>
 <g id="a_node1"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="0,-177 0,-196 105,-196 105,-177 0,-177"/>
 <text text-anchor="middle" x="52.5" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00">UserDataOperator</text>
@@ -28,15 +28,15 @@
 </a>
 </g>
 </g>
-<!-- Node114&#45;&gt;Node0 -->
+<!-- Node83&#45;&gt;Node0 -->
 <g id="edge1" class="edge">
-<title>Node114&#45;&gt;Node0</title>
+<title>Node83&#45;&gt;Node0</title>
 <path fill="none" stroke="midnightblue" d="M59.31,-205.89C69.98,-237.97 95.82,-301.78 141,-334.5 151.44,-342.06 163.81,-347.31 176.4,-350.94"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="62.64,-204.79 56.27,-196.32 55.96,-206.91 62.64,-204.79"/>
 </g>
-<!-- Node119 -->
+<!-- Node88 -->
 <g id="node6" class="node">
-<title>Node119</title>
+<title>Node88</title>
 <g id="a_node6"><a xlink:href="structBCs__RVELagrange__Periodic_1_1OpRVEBCsPeriodicCalAssemCmat.html" target="_top" xlink:title="\biref operator to calculate and assemble Cmat">
 <polygon fill="white" stroke="black" points="157,-294.5 157,-324.5 345,-324.5 345,-294.5 157,-294.5"/>
 <text text-anchor="start" x="165" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCs_RVELagrange_Periodic</text>
@@ -44,15 +44,15 @@
 </a>
 </g>
 </g>
-<!-- Node114&#45;&gt;Node119 -->
+<!-- Node83&#45;&gt;Node88 -->
 <g id="edge5" class="edge">
-<title>Node114&#45;&gt;Node119</title>
+<title>Node83&#45;&gt;Node88</title>
 <path fill="none" stroke="midnightblue" d="M64.5,-204.87C79.06,-227.51 106.92,-265.45 141,-285.5 146.85,-288.94 153.13,-291.89 159.62,-294.41"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="67.36,-202.83 59.09,-196.2 61.42,-206.54 67.36,-202.83"/>
 </g>
-<!-- Node120 -->
+<!-- Node89 -->
 <g id="node7" class="node">
-<title>Node120</title>
+<title>Node89</title>
 <g id="a_node7"><a xlink:href="structBCs__RVELagrange__Periodic_1_1OpRVEBCsPeriodicCalCTLam.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="169.5,-245.5 169.5,-275.5 332.5,-275.5 332.5,-245.5 169.5,-245.5"/>
 <text text-anchor="start" x="177.5" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCs_RVELagrange_Periodic</text>
@@ -60,15 +60,15 @@
 </a>
 </g>
 </g>
-<!-- Node114&#45;&gt;Node120 -->
+<!-- Node83&#45;&gt;Node89 -->
 <g id="edge6" class="edge">
-<title>Node114&#45;&gt;Node120</title>
+<title>Node83&#45;&gt;Node89</title>
 <path fill="none" stroke="midnightblue" d="M75.79,-201.76C92.94,-212.86 117.58,-227.47 141,-236.5 150.04,-239.98 159.71,-243.02 169.41,-245.66"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="77.37,-198.61 67.09,-196.01 73.51,-204.45 77.37,-198.61"/>
 </g>
-<!-- Node121 -->
+<!-- Node90 -->
 <g id="node8" class="node">
-<title>Node121</title>
+<title>Node90</title>
 <g id="a_node8"><a xlink:href="structBCs__RVELagrange__Periodic_1_1OpRVEBCsPeriodicCalCU.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="176.5,-196.5 176.5,-226.5 325.5,-226.5 325.5,-196.5 176.5,-196.5"/>
 <text text-anchor="start" x="184.5" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCs_RVELagrange_Periodic</text>
@@ -76,15 +76,15 @@
 </a>
 </g>
 </g>
-<!-- Node114&#45;&gt;Node121 -->
+<!-- Node83&#45;&gt;Node90 -->
 <g id="edge7" class="edge">
-<title>Node114&#45;&gt;Node121</title>
+<title>Node83&#45;&gt;Node90</title>
 <path fill="none" stroke="midnightblue" d="M115.31,-194.36C134.62,-196.82 156.13,-199.56 176.18,-202.11"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="115.49,-190.86 105.13,-193.07 114.61,-197.8 115.49,-190.86"/>
 </g>
-<!-- Node122 -->
+<!-- Node91 -->
 <g id="node9" class="node">
-<title>Node122</title>
+<title>Node91</title>
 <g id="a_node9"><a xlink:href="structBCs__RVELagrange__Periodic_1_1OpRVEBCsPeriodicCalDispAtGaussPts.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="148,-147.5 148,-177.5 354,-177.5 354,-147.5 148,-147.5"/>
 <text text-anchor="start" x="156" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCs_RVELagrange_Periodic</text>
@@ -92,15 +92,15 @@
 </a>
 </g>
 </g>
-<!-- Node114&#45;&gt;Node122 -->
+<!-- Node83&#45;&gt;Node91 -->
 <g id="edge8" class="edge">
-<title>Node114&#45;&gt;Node122</title>
+<title>Node83&#45;&gt;Node91</title>
 <path fill="none" stroke="midnightblue" d="M115.27,-178.96C125.65,-177.69 136.66,-176.34 147.74,-174.99"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="114.63,-175.51 105.13,-180.19 115.48,-182.46 114.63,-175.51"/>
 </g>
-<!-- Node123 -->
+<!-- Node92 -->
 <g id="node10" class="node">
-<title>Node123</title>
+<title>Node92</title>
 <g id="a_node10"><a xlink:href="structBCs__RVELagrange__Periodic_1_1OpRVEBCsPeriodicCalLagMulAtGaussPts.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="141,-98.5 141,-128.5 361,-128.5 361,-98.5 141,-98.5"/>
 <text text-anchor="start" x="149" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCs_RVELagrange_Periodic</text>
@@ -108,15 +108,15 @@
 </a>
 </g>
 </g>
-<!-- Node114&#45;&gt;Node123 -->
+<!-- Node83&#45;&gt;Node92 -->
 <g id="edge9" class="edge">
-<title>Node114&#45;&gt;Node123</title>
+<title>Node83&#45;&gt;Node92</title>
 <path fill="none" stroke="midnightblue" d="M76.82,-171.38C93.97,-160.85 118.18,-147.18 141,-138.5 150.98,-134.7 161.7,-131.38 172.39,-128.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="74.69,-168.59 68.07,-176.86 78.4,-174.52 74.69,-168.59"/>
 </g>
-<!-- Node124 -->
+<!-- Node93 -->
 <g id="node11" class="node">
-<title>Node124</title>
+<title>Node93</title>
 <g id="a_node11"><a xlink:href="structBCs__RVELagrange__Periodic_1_1OpRVEBCsPeriodicColInd.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="176.5,-49.5 176.5,-79.5 325.5,-79.5 325.5,-49.5 176.5,-49.5"/>
 <text text-anchor="start" x="184.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCs_RVELagrange_Periodic</text>
@@ -124,15 +124,15 @@
 </a>
 </g>
 </g>
-<!-- Node114&#45;&gt;Node124 -->
+<!-- Node83&#45;&gt;Node93 -->
 <g id="edge10" class="edge">
-<title>Node114&#45;&gt;Node124</title>
+<title>Node83&#45;&gt;Node93</title>
 <path fill="none" stroke="midnightblue" d="M64.84,-168.21C79.59,-146.04 107.46,-109.2 141,-89.5 151.8,-83.16 164.07,-78.42 176.4,-74.89"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="61.83,-166.42 59.35,-176.72 67.71,-170.22 61.83,-166.42"/>
 </g>
-<!-- Node125 -->
+<!-- Node94 -->
 <g id="node12" class="node">
-<title>Node125</title>
+<title>Node94</title>
 <g id="a_node12"><a xlink:href="structBCs__RVELagrange__Periodic_1_1OpRVEBCsPeriodicRowInd.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="176.5,-0.5 176.5,-30.5 325.5,-30.5 325.5,-0.5 176.5,-0.5"/>
 <text text-anchor="start" x="184.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">BCs_RVELagrange_Periodic</text>
@@ -140,9 +140,9 @@
 </a>
 </g>
 </g>
-<!-- Node114&#45;&gt;Node125 -->
+<!-- Node83&#45;&gt;Node94 -->
 <g id="edge11" class="edge">
-<title>Node114&#45;&gt;Node125</title>
+<title>Node83&#45;&gt;Node94</title>
 <path fill="none" stroke="midnightblue" d="M59.49,-166.82C70.3,-134.83 96.2,-71.85 141,-39.5 151.45,-31.96 163.82,-26.71 176.42,-23.08"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="56.03,-166.16 56.29,-176.75 62.69,-168.3 56.03,-166.16"/>
 </g>

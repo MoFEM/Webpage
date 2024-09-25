@@ -14,9 +14,9 @@
 <title>Node0</title>
 <g id="a_node1"><a xlink:href="classFTensor_1_1Dg__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-41.5 121,-41.5 121,-0.5 0,-0.5"/>
-<text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Dg_Expr&lt; B,</text>
-<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00"> U, Dim2, Dim01, k,</text>
-<text text-anchor="middle" x="60.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00"> l, j &gt;</text>
+<text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Dg_Expr&lt; A,</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00"> T, Dim01, Dim2, j,</text>
+<text text-anchor="middle" x="60.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00"> k, i &gt;</text>
 </a>
 </g>
 </g>

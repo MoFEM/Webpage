@@ -1,15 +1,15 @@
 <map id="GelModule::Gel::CommonData" name="GelModule::Gel::CommonData">
-<area shape="rect" id="node1" title="Common data for gel model." alt="" coords="433,396,653,423"/>
-<area shape="rect" id="node2" title=" " alt="" coords="83,93,141,120"/>
-<area shape="rect" id="node3" title=" " alt="" coords="51,152,173,179"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,203,219,229"/>
-<area shape="rect" id="node5" title=" " alt="" coords="21,256,203,283"/>
-<area shape="rect" id="node6" title=" " alt="" coords="18,307,206,333"/>
-<area shape="rect" id="node7" title=" " alt="" coords="22,358,202,399"/>
-<area shape="rect" id="node8" href="$classbool.html" title=" " alt="" coords="87,424,137,451"/>
-<area shape="rect" id="node9" title=" " alt="" coords="22,475,202,501"/>
-<area shape="rect" id="node10" title=" " alt="" coords="22,526,202,567"/>
-<area shape="rect" id="node11" title=" " alt="" coords="18,592,206,619"/>
-<area shape="rect" id="node12" title=" " alt="" coords="38,643,186,669"/>
-<area shape="rect" id="node13" title=" " alt="" coords="43,693,181,720"/>
+<area shape="rect" id="node1" title="Common data for gel model." alt="" coords="433,388,653,415"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,21,219,48"/>
+<area shape="rect" id="node3" title=" " alt="" coords="51,81,173,108"/>
+<area shape="rect" id="node4" title=" " alt="" coords="21,151,203,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="18,201,206,228"/>
+<area shape="rect" id="node6" href="$classbool.html" title=" " alt="" coords="87,252,137,279"/>
+<area shape="rect" id="node7" title=" " alt="" coords="83,347,141,373"/>
+<area shape="rect" id="node8" title=" " alt="" coords="18,397,206,424"/>
+<area shape="rect" id="node9" title=" " alt="" coords="35,449,189,490"/>
+<area shape="rect" id="node10" title=" " alt="" coords="38,515,186,541"/>
+<area shape="rect" id="node11" title=" " alt="" coords="22,565,202,592"/>
+<area shape="rect" id="node12" title=" " alt="" coords="43,616,181,643"/>
+<area shape="rect" id="node13" title=" " alt="" coords="35,667,189,709"/>
 </map>

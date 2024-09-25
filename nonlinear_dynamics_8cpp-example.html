@@ -241,18 +241,18 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> mField.<a class="code" href="group__mofem__loops.html#gab3dc3302de79f29b26605579d77797c9">loop_finite_elements</a>(<span class="stringliteral">&quot;DYNAMICS&quot;</span>, <span class="stringliteral">&quot;MASS_ELEMENT&quot;</span>,</div>
 <div class="line">                                       feKineticEnergy);</div>
 <div class="line">    <span class="keywordtype">double</span> <a name="_a32"></a><a class="code" href="classE.html">E</a> = feElasticEnergy.<a name="a33"></a><a class="code" href="structNonlinearElasticElement_1_1MyVolumeFE.html#a41ee4daa88dbd60276defbe4843b9f77">eNergy</a>;</div>
-<div class="line">    <span class="keywordtype">double</span> <a name="_a34"></a><a class="code" href="classT.html">T</a> = feKineticEnergy.<a name="a35"></a><a class="code" href="structConvectiveMassElement_1_1MyVolumeFE.html#ae97a8968a6b5709018f25f6c3c42255e">eNergy</a>;</div>
-<div class="line">    <a name="a36"></a><a class="code" href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a>(</div>
+<div class="line">    <span class="keywordtype">double</span> T = feKineticEnergy.<a name="a34"></a><a class="code" href="structConvectiveMassElement_1_1MyVolumeFE.html#ae97a8968a6b5709018f25f6c3c42255e">eNergy</a>;</div>
+<div class="line">    <a name="a35"></a><a class="code" href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a>(</div>
 <div class="line">        <span class="stringliteral">&quot;DYNAMIC&quot;</span>, Sev::inform,</div>
 <div class="line">        <span class="stringliteral">&quot;%d Time %3.2e Elastic energy %3.2e Kinetic Energy %3.2e Total %3.2e\n&quot;</span>,</div>
-<div class="line">        ts_step, ts_t, <a class="code" href="classE.html">E</a>, <a class="code" href="classT.html">T</a>, <a class="code" href="classE.html">E</a> + <a class="code" href="classT.html">T</a>);</div>
+<div class="line">        ts_step, ts_t, <a class="code" href="classE.html">E</a>, T, <a class="code" href="classE.html">E</a> + T);</div>
 <div class="line"> </div>
-<div class="line">    <a name="a37"></a><a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">    <a name="a36"></a><a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> operator()() {</div>
-<div class="line">    <a name="a38"></a><a class="code" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
-<div class="line">    <a name="a39"></a><a class="code" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
+<div class="line">    <a name="a37"></a><a class="code" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
+<div class="line">    <a name="a38"></a><a class="code" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> postProcess() {</div>
@@ -261,7 +261,7 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">  }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">struct </span><a name="_a40"></a><a class="code" href="structMonitorRestart.html">MonitorRestart</a> : <span class="keyword">public</span> <a class="code" href="structMoFEM_1_1FEMethod.html">FEMethod</a> {</div>
+<div class="line"><span class="keyword">struct </span><a name="_a39"></a><a class="code" href="structMonitorRestart.html">MonitorRestart</a> : <span class="keyword">public</span> <a class="code" href="structMoFEM_1_1FEMethod.html">FEMethod</a> {</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">double</span> *time;</div>
 <div class="line">  <span class="keywordtype">int</span> *step;</div>
@@ -281,7 +281,7 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">      <a class="code" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a> = m_field.<a class="code" href="structMoFEM_1_1CoreInterface.html#adb4b1c061d2348966a28e7425072f464">get_moab</a>().tag_get_by_ptr(th_time, &amp;root_meshset, 1,</div>
 <div class="line">                                               (<span class="keyword">const</span> <span class="keywordtype">void</span> **)&amp;time);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#a493fcd6f5f4b7e36007a9020980bb819">MOAB_THROW</a>(<a class="code" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a>);</div>
-<div class="line">      <a name="a41"></a><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a4e27e82eaf63e387dd653941d6245b49">ierr</a> = TSSetTime(ts, *time);</div>
+<div class="line">      <a name="a40"></a><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a4e27e82eaf63e387dd653941d6245b49">ierr</a> = TSSetTime(ts, *time);</div>
 <div class="line">      CHKERRABORT(PETSC_COMM_WORLD, <a class="code" href="namespaceMoFEM_1_1Exceptions.html#a4e27e82eaf63e387dd653941d6245b49">ierr</a>);</div>
 <div class="line">    } <span class="keywordflow">else</span> {</div>
 <div class="line">      <a class="code" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a> = m_field.<a class="code" href="structMoFEM_1_1CoreInterface.html#adb4b1c061d2348966a28e7425072f464">get_moab</a>().tag_set_data(th_time, &amp;root_meshset, 1,</div>
@@ -348,7 +348,7 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line"><span class="comment">// See file users_modules/elasticity/TimeForceScale.hpp</span></div>
 <div class="line"><span class="preprocessor">#include &lt;TimeForceScale.hpp&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a name="a42"></a><a class="code" href="nonlinear__dynamics_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a name="a41"></a><a class="code" href="nonlinear__dynamics_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">string</span> default_options = <span class="stringliteral">&quot;-ksp_type fgmres \n&quot;</span></div>
 <div class="line">                                 <span class="stringliteral">&quot;-pc_type lu \n&quot;</span></div>
@@ -374,28 +374,28 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    }</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <a name="a43"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file.c_str(), <a class="code" href="nonlinear__dynamics_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line">  <a name="a42"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file.c_str(), <a class="code" href="nonlinear__dynamics_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Add logging channel for example</span></div>
 <div class="line">  <span class="keyword">auto</span> core_log = logging::core::get();</div>
 <div class="line">  core_log-&gt;add_sink(</div>
-<div class="line">      <a name="a44"></a><a class="code" href="structMoFEM_1_1LogManager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a name="a45"></a><a class="code" href="structMoFEM_1_1LogManager.html#a745c3e2cfb9fdea08ecd2e85316e8639">LogManager::getStrmWorld</a>(), <span class="stringliteral">&quot;DYNAMIC&quot;</span>));</div>
-<div class="line">  <a name="a46"></a><a class="code" href="group__mofem__log__manager.html#ga037d7b63954d2ec6d367a5c959f16068">LogManager::setLog</a>(<span class="stringliteral">&quot;DYNAMIC&quot;</span>);</div>
-<div class="line">  <a name="a47"></a><a class="code" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;DYNAMIC&quot;</span>, <span class="stringliteral">&quot;dynamic&quot;</span>);</div>
+<div class="line">      <a name="a43"></a><a class="code" href="structMoFEM_1_1LogManager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a name="a44"></a><a class="code" href="structMoFEM_1_1LogManager.html#a745c3e2cfb9fdea08ecd2e85316e8639">LogManager::getStrmWorld</a>(), <span class="stringliteral">&quot;DYNAMIC&quot;</span>));</div>
+<div class="line">  <a name="a45"></a><a class="code" href="group__mofem__log__manager.html#ga037d7b63954d2ec6d367a5c959f16068">LogManager::setLog</a>(<span class="stringliteral">&quot;DYNAMIC&quot;</span>);</div>
+<div class="line">  <a name="a46"></a><a class="code" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;DYNAMIC&quot;</span>, <span class="stringliteral">&quot;dynamic&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">try</span> {</div>
 <div class="line"> </div>
-<div class="line">    <a name="a48"></a><a class="code" href="namespaceMoFEM.html#a8bdfc7559ccb2b6d0021580b5c8a340b">moab::Core</a> mb_instance;</div>
-<div class="line">    <a name="a49"></a><a class="code" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">moab::Interface</a> &amp;moab = mb_instance;</div>
+<div class="line">    <a name="a47"></a><a class="code" href="namespaceMoFEM.html#a8bdfc7559ccb2b6d0021580b5c8a340b">moab::Core</a> mb_instance;</div>
+<div class="line">    <a name="a48"></a><a class="code" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">moab::Interface</a> &amp;moab = mb_instance;</div>
 <div class="line"> </div>
-<div class="line">    ParallelComm *pcomm = ParallelComm::get_pcomm(&amp;moab, <a name="a50"></a><a class="code" href="definitions_8h.html#a5fe7ca274d3c5ac11ac61888ce74bc13">MYPCOMM_INDEX</a>);</div>
+<div class="line">    ParallelComm *pcomm = ParallelComm::get_pcomm(&amp;moab, <a name="a49"></a><a class="code" href="definitions_8h.html#a5fe7ca274d3c5ac11ac61888ce74bc13">MYPCOMM_INDEX</a>);</div>
 <div class="line">    <span class="keyword">auto</span> moab_comm_wrap =</div>
 <div class="line">        boost::make_shared&lt;WrapMPIComm&gt;(PETSC_COMM_WORLD, <span class="keyword">false</span>);</div>
 <div class="line">    <span class="keywordflow">if</span> (pcomm == NULL)</div>
 <div class="line">      pcomm = <span class="keyword">new</span> ParallelComm(&amp;moab, moab_comm_wrap-&gt;get_comm());</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5">FieldApproximationBase</a> base = <a name="a51"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a8cce63994b9a5ff42c90de590f0bb5c5">NOBASE</a>;</div>
-<div class="line">    <span class="keywordtype">char</span> <a name="a52"></a><a class="code" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>[255];</div>
+<div class="line">    <a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5">FieldApproximationBase</a> base = <a name="a50"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a8cce63994b9a5ff42c90de590f0bb5c5">NOBASE</a>;</div>
+<div class="line">    <span class="keywordtype">char</span> <a name="a51"></a><a class="code" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>[255];</div>
 <div class="line">    PetscBool is_partitioned = PETSC_FALSE;</div>
 <div class="line">    PetscBool linear = PETSC_TRUE;</div>
 <div class="line">    PetscInt disp_order = 1;</div>
@@ -405,14 +405,14 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    <span class="keyword">auto</span> read_command_line_parameters = [&amp;]() {</div>
 <div class="line">      <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      PetscBool flg = PETSC_TRUE;</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a53"></a><a class="code" href="namespaceMoFEM.html#acd15202cb7502a684f8276aae2b4ed70">PetscOptionsGetString</a>(PETSC_NULL, PETSC_NULL, <span class="stringliteral">&quot;-my_file&quot;</span>,</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a52"></a><a class="code" href="namespaceMoFEM.html#acd15202cb7502a684f8276aae2b4ed70">PetscOptionsGetString</a>(PETSC_NULL, PETSC_NULL, <span class="stringliteral">&quot;-my_file&quot;</span>,</div>
 <div class="line">                                   <a class="code" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>, 255, &amp;flg);</div>
 <div class="line">      <span class="keywordflow">if</span> (flg != PETSC_TRUE)</div>
 <div class="line">        SETERRQ(PETSC_COMM_SELF, 1, <span class="stringliteral">&quot;Error -my_file (mesh file needed)&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// use this if your mesh is partitioned and you run code on parts,</span></div>
 <div class="line">      <span class="comment">// you can solve very big problems</span></div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a54"></a><a class="code" href="namespaceMoFEM.html#a55db6ee7b037f883685d61baabd7ace4">PetscOptionsGetBool</a>(PETSC_NULL, PETSC_NULL, <span class="stringliteral">&quot;-my_is_partitioned&quot;</span>,</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a53"></a><a class="code" href="namespaceMoFEM.html#a55db6ee7b037f883685d61baabd7ace4">PetscOptionsGetBool</a>(PETSC_NULL, PETSC_NULL, <span class="stringliteral">&quot;-my_is_partitioned&quot;</span>,</div>
 <div class="line">                                 &amp;is_partitioned, &amp;flg);</div>
 <div class="line"> </div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="namespaceMoFEM.html#a55db6ee7b037f883685d61baabd7ace4">PetscOptionsGetBool</a>(PETSC_NULL, PETSC_NULL, <span class="stringliteral">&quot;-is_linear&quot;</span>, &amp;linear,</div>
@@ -421,14 +421,14 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">      <span class="keyword">enum</span> bases { LEGENDRE, LOBATTO, BERNSTEIN_BEZIER, LASBASETOP };</div>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">char</span> *list_bases[] = {<span class="stringliteral">&quot;legendre&quot;</span>, <span class="stringliteral">&quot;lobatto&quot;</span>, <span class="stringliteral">&quot;bernstein_bezier&quot;</span>};</div>
 <div class="line">      PetscInt choice_base_value = BERNSTEIN_BEZIER;</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a55"></a><a class="code" href="namespaceMoFEM.html#abee82d436d03244c6886fc99f71116f0">PetscOptionsGetEList</a>(PETSC_NULL, NULL, <span class="stringliteral">&quot;-base&quot;</span>, list_bases,</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a54"></a><a class="code" href="namespaceMoFEM.html#abee82d436d03244c6886fc99f71116f0">PetscOptionsGetEList</a>(PETSC_NULL, NULL, <span class="stringliteral">&quot;-base&quot;</span>, list_bases,</div>
 <div class="line">                                  LASBASETOP, &amp;choice_base_value, PETSC_NULL);</div>
 <div class="line">      <span class="keywordflow">if</span> (choice_base_value == LEGENDRE)</div>
-<div class="line">        base = <a name="a56"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>;</div>
+<div class="line">        base = <a name="a55"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>;</div>
 <div class="line">      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (choice_base_value == LOBATTO)</div>
-<div class="line">        base = <a name="a57"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a6949a4bcc0920ad35e91d7a2d3312988">AINSWORTH_LOBATTO_BASE</a>;</div>
+<div class="line">        base = <a name="a56"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a6949a4bcc0920ad35e91d7a2d3312988">AINSWORTH_LOBATTO_BASE</a>;</div>
 <div class="line">      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (choice_base_value == BERNSTEIN_BEZIER)</div>
-<div class="line">        base = <a name="a58"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5afd8fcce3bafc9c764ded9e392f2996c5">AINSWORTH_BERNSTEIN_BEZIER_BASE</a>;</div>
+<div class="line">        base = <a name="a57"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5afd8fcce3bafc9c764ded9e392f2996c5">AINSWORTH_BERNSTEIN_BEZIER_BASE</a>;</div>
 <div class="line"> </div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="namespaceMoFEM.html#a2d7af8e1af9a42f3180d8cc96f8f8c06">PetscOptionsGetInt</a>(PETSC_NULL, PETSC_NULL, <span class="stringliteral">&quot;-my_disp_order&quot;</span>,</div>
 <div class="line">                                &amp;disp_order, &amp;flg);</div>
@@ -467,24 +467,24 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> read_command_line_parameters();</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> read_mesh();</div>
 <div class="line"> </div>
-<div class="line">    <a name="_a59"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);</div>
+<div class="line">    <a name="_a58"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);</div>
 <div class="line">    <a class="code" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = core;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// ref meshset ref level 0</span></div>
-<div class="line">    <a name="a60"></a><a class="code" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a> bit_level0;</div>
+<div class="line">    <a name="a59"></a><a class="code" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a> bit_level0;</div>
 <div class="line">    bit_level0.set(0);</div>
 <div class="line">    <a class="code" href="classEntityHandle.html">EntityHandle</a> meshset_level0;</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset_level0);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a61"></a><a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a62"></a><a class="code" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;setBitRefLevelByDim(</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a60"></a><a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a61"></a><a class="code" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;setBitRefLevelByDim(</div>
 <div class="line">        0, 3, bit_level0);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;getEntitiesByRefLevel(</div>
 <div class="line">        bit_level0, <a class="code" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), meshset_level0);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Fields</span></div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a63"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, <a name="a64"></a><a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>,</div>
-<div class="line">                             3, MB_TAG_SPARSE, <a name="a65"></a><a class="code" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a>);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a66"></a><a class="code" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(0, MBTET, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a67"></a><a class="code" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBTET, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, 2);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a62"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, <a name="a63"></a><a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>,</div>
+<div class="line">                             3, MB_TAG_SPARSE, <a name="a64"></a><a class="code" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a65"></a><a class="code" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(0, MBTET, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a66"></a><a class="code" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBTET, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, 2);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBTRI, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, 2);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBEDGE, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, 2);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBVERTEX, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, 1);</div>
@@ -505,13 +505,13 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBVERTEX, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>, 1);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Add nodal force element</span></div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a68"></a><a class="code" href="structMetaNeumannForces.html#ace9c5266987cd42a1d2350e4962e6f1b">MetaNeumannForces::addNeumannBCElements</a>(m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a69"></a><a class="code" href="structMetaEdgeForces.html#ad4ba172a5f79e0c41430c6dcecdd95f8">MetaEdgeForces::addElement</a>(m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a70"></a><a class="code" href="structMetaNodalForces.html#a8e0b96853208e8320b7268f96f4fd8ee">MetaNodalForces::addElement</a>(m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a67"></a><a class="code" href="structMetaNeumannForces.html#ace9c5266987cd42a1d2350e4962e6f1b">MetaNeumannForces::addNeumannBCElements</a>(m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a68"></a><a class="code" href="structMetaEdgeForces.html#ad4ba172a5f79e0c41430c6dcecdd95f8">MetaEdgeForces::addElement</a>(m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a69"></a><a class="code" href="structMetaNodalForces.html#a8e0b96853208e8320b7268f96f4fd8ee">MetaNodalForces::addElement</a>(m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
 <div class="line">    <span class="comment">// Add fluid pressure finite elements</span></div>
-<div class="line">    <a name="_a71"></a><a class="code" href="structFluidPressure.html">FluidPressure</a> fluid_pressure_fe(m_field);</div>
+<div class="line">    <a name="_a70"></a><a class="code" href="structFluidPressure.html">FluidPressure</a> fluid_pressure_fe(m_field);</div>
 <div class="line">    fluid_pressure_fe.addNeumannFluidPressureBCElements(<span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a72"></a><a class="code" href="namespaceMoFEM.html#a62169d7a96ad4c3a3c421d5e6681c257">addHOOpsFace3D</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, fluid_pressure_fe.getLoopFe(),</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a71"></a><a class="code" href="namespaceMoFEM.html#a62169d7a96ad4c3a3c421d5e6681c257">addHOOpsFace3D</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, fluid_pressure_fe.getLoopFe(),</div>
 <div class="line">                          <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
 <div class="line">    fluid_pressure_fe.setNeumannFluidPressureFiniteElementOperators(</div>
 <div class="line">        <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>, PETSC_NULL, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
@@ -552,8 +552,8 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBVERTEX, <span class="stringliteral">&quot;DOT_VELOCITY&quot;</span>, 1);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Set material model and mass element</span></div>
-<div class="line">    <a name="_a73"></a><a class="code" href="structNonlinearElasticElement.html">NonlinearElasticElement</a> elastic(m_field, 2);</div>
-<div class="line">    <a name="_a74"></a><a class="code" href="structElasticMaterials.html">ElasticMaterials</a> elastic_materials(m_field);</div>
+<div class="line">    <a name="_a72"></a><a class="code" href="structNonlinearElasticElement.html">NonlinearElasticElement</a> elastic(m_field, 2);</div>
+<div class="line">    <a name="_a73"></a><a class="code" href="structElasticMaterials.html">ElasticMaterials</a> elastic_materials(m_field);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> elastic_materials.setBlocks(elastic.setOfBlocks);</div>
 <div class="line">    <span class="comment">// NonlinearElasticElement::FunctionsToCalculatePiolaKirchhoffI&lt;adouble&gt;</span></div>
 <div class="line">    <span class="comment">// st_venant_kirchhoff_material_adouble;</span></div>
@@ -571,7 +571,7 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">                                <span class="keyword">true</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// set mass element</span></div>
-<div class="line">    <a name="_a75"></a><a class="code" href="structConvectiveMassElement.html">ConvectiveMassElement</a> inertia(m_field, 1);</div>
+<div class="line">    <a name="_a74"></a><a class="code" href="structConvectiveMassElement.html">ConvectiveMassElement</a> inertia(m_field, 1);</div>
 <div class="line">    <span class="comment">// CHKERR inertia.setBlocks();</span></div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> elastic_materials.setBlocks(inertia.setOfBlocks);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> inertia.addConvectiveMassElement(<span class="stringliteral">&quot;MASS_ELEMENT&quot;</span>, <span class="stringliteral">&quot;VELOCITY&quot;</span>,</div>
@@ -587,39 +587,39 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="namespaceMoFEM.html#acd15202cb7502a684f8276aae2b4ed70">PetscOptionsGetString</a>(PETSC_NULL, PETSC_NULL, name.c_str(),</div>
 <div class="line">                                   time_file_name, 255, &amp;flg);</div>
 <div class="line">      <span class="keywordflow">if</span> (flg == PETSC_TRUE) {</div>
-<div class="line">        inertia.methodsOp.push_back(<span class="keyword">new</span> <a name="_a76"></a><a class="code" href="structTimeAccelerogram.html">TimeAccelerogram</a>(name));</div>
+<div class="line">        inertia.methodsOp.push_back(<span class="keyword">new</span> <a name="_a75"></a><a class="code" href="structTimeAccelerogram.html">TimeAccelerogram</a>(name));</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// damper element</span></div>
-<div class="line">    <a name="_a77"></a><a class="code" href="structKelvinVoigtDamper.html">KelvinVoigtDamper</a> damper(m_field);</div>
+<div class="line">    <a name="_a76"></a><a class="code" href="structKelvinVoigtDamper.html">KelvinVoigtDamper</a> damper(m_field);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> elastic_materials.setBlocks(damper.blockMaterialDataMap);</div>
 <div class="line">    {</div>
-<div class="line">      <a name="_a78"></a><a class="code" href="structKelvinVoigtDamper_1_1CommonData.html">KelvinVoigtDamper::CommonData</a> &amp;common_data = damper.commonData;</div>
-<div class="line">      common_data.<a name="a79"></a><a class="code" href="structKelvinVoigtDamper_1_1CommonData.html#aa243fcd6f0be6637140b9bc7eea92366">spatialPositionName</a> = <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>;</div>
-<div class="line">      common_data.<a name="a80"></a><a class="code" href="structKelvinVoigtDamper_1_1CommonData.html#a6c62c8053fc3bd956a677d1a7f1d47b9">spatialPositionNameDot</a> = <span class="stringliteral">&quot;DOT_DISPLACEMENT&quot;</span>;</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a81"></a><a class="code" href="group__mofem__fe.html#ga4a5b822f605f1a4faa668595a3f2a5ae">add_finite_element</a>(<span class="stringliteral">&quot;DAMPER&quot;</span>, <a class="code" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a>);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a82"></a><a class="code" href="group__mofem__fe.html#gad29d66fc5706d3b20e4acd02eac81c9d">modify_finite_element_add_field_row</a>(<span class="stringliteral">&quot;DAMPER&quot;</span>,</div>
+<div class="line">      <a name="_a77"></a><a class="code" href="structKelvinVoigtDamper_1_1CommonData.html">KelvinVoigtDamper::CommonData</a> &amp;common_data = damper.commonData;</div>
+<div class="line">      common_data.<a name="a78"></a><a class="code" href="structKelvinVoigtDamper_1_1CommonData.html#aa243fcd6f0be6637140b9bc7eea92366">spatialPositionName</a> = <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>;</div>
+<div class="line">      common_data.<a name="a79"></a><a class="code" href="structKelvinVoigtDamper_1_1CommonData.html#a6c62c8053fc3bd956a677d1a7f1d47b9">spatialPositionNameDot</a> = <span class="stringliteral">&quot;DOT_DISPLACEMENT&quot;</span>;</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a80"></a><a class="code" href="group__mofem__fe.html#ga4a5b822f605f1a4faa668595a3f2a5ae">add_finite_element</a>(<span class="stringliteral">&quot;DAMPER&quot;</span>, <a class="code" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a>);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a81"></a><a class="code" href="group__mofem__fe.html#gad29d66fc5706d3b20e4acd02eac81c9d">modify_finite_element_add_field_row</a>(<span class="stringliteral">&quot;DAMPER&quot;</span>,</div>
 <div class="line">                                                         <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a83"></a><a class="code" href="group__mofem__fe.html#ga8a9935d6f31d07ed365e6cc76bd041d2">modify_finite_element_add_field_col</a>(<span class="stringliteral">&quot;DAMPER&quot;</span>,</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a82"></a><a class="code" href="group__mofem__fe.html#ga8a9935d6f31d07ed365e6cc76bd041d2">modify_finite_element_add_field_col</a>(<span class="stringliteral">&quot;DAMPER&quot;</span>,</div>
 <div class="line">                                                         <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a84"></a><a class="code" href="group__mofem__fe.html#gaef2eb2d85b90b55bd7c4f355e10fa498">modify_finite_element_add_field_data</a>(<span class="stringliteral">&quot;DAMPER&quot;</span>,</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a83"></a><a class="code" href="group__mofem__fe.html#gaef2eb2d85b90b55bd7c4f355e10fa498">modify_finite_element_add_field_data</a>(<span class="stringliteral">&quot;DAMPER&quot;</span>,</div>
 <div class="line">                                                          <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">if</span> (m_field.<a class="code" href="group__mofem__field.html#gad43a6631f7d465ad31403cbb1d1896ba">check_field</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>)) {</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__fe.html#gaef2eb2d85b90b55bd7c4f355e10fa498">modify_finite_element_add_field_data</a>(</div>
 <div class="line">            <span class="stringliteral">&quot;DAMPER&quot;</span>, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
 <div class="line">      }</div>
-<div class="line">      std::map&lt;int, KelvinVoigtDamper::BlockMaterialData&gt;::iterator <a name="a85"></a><a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a> =</div>
+<div class="line">      std::map&lt;int, KelvinVoigtDamper::BlockMaterialData&gt;::iterator <a name="a84"></a><a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a> =</div>
 <div class="line">          damper.blockMaterialDataMap.begin();</div>
 <div class="line">      <span class="keywordflow">for</span> (; <a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a> != damper.blockMaterialDataMap.end(); <a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>++) {</div>
 <div class="line">        <a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;second.lInear = linear;</div>
 <div class="line">        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;first;</div>
-<div class="line">        <a name="_a86"></a><a class="code" href="structKelvinVoigtDamper_1_1BlockMaterialData.html">KelvinVoigtDamper::BlockMaterialData</a> &amp;material_data = <a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;second;</div>
+<div class="line">        <a name="_a85"></a><a class="code" href="structKelvinVoigtDamper_1_1BlockMaterialData.html">KelvinVoigtDamper::BlockMaterialData</a> &amp;material_data = <a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;second;</div>
 <div class="line">        damper.constitutiveEquationMap.insert(</div>
-<div class="line">            <span class="keywordtype">id</span>, <span class="keyword">new</span> <a name="_a87"></a><a class="code" href="structKelvinVoigtDamper_1_1ConstitutiveEquation.html">KelvinVoigtDamper::ConstitutiveEquation&lt;adouble&gt;</a>(</div>
+<div class="line">            <span class="keywordtype">id</span>, <span class="keyword">new</span> <a name="_a86"></a><a class="code" href="structKelvinVoigtDamper_1_1ConstitutiveEquation.html">KelvinVoigtDamper::ConstitutiveEquation&lt;adouble&gt;</a>(</div>
 <div class="line">                    material_data));</div>
-<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a88"></a><a class="code" href="group__mofem__fe.html#ga8b068eced1fd720631edcaea59289a15">add_ents_to_finite_element_by_type</a>(<a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;second.tEts,</div>
+<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a87"></a><a class="code" href="group__mofem__fe.html#ga8b068eced1fd720631edcaea59289a15">add_ents_to_finite_element_by_type</a>(<a class="code" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;second.tEts,</div>
 <div class="line">                                                          MBTET, <span class="stringliteral">&quot;DAMPER&quot;</span>);</div>
 <div class="line">      }</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> damper.setOperators(3);</div>
@@ -638,43 +638,43 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">                                                        <span class="stringliteral">&quot;DOT_VELOCITY&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// build field</span></div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a89"></a><a class="code" href="group__mofem__field.html#ga126ea0bb04802f9d1946435279c3da56">build_fields</a>();</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a88"></a><a class="code" href="group__mofem__field.html#ga126ea0bb04802f9d1946435279c3da56">build_fields</a>();</div>
 <div class="line">    <span class="comment">// CHKERR m_field.list_dofs_by_field_name(&quot;DISPLACEMENT&quot;);</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// 10 node tets</span></div>
 <div class="line">    <span class="keywordflow">if</span> (!check_if_spatial_field_exist) {</div>
-<div class="line">      <a name="_a90"></a><a class="code" href="structMoFEM_1_1Projection10NodeCoordsOnField.html">Projection10NodeCoordsOnField</a> ent_method_material(m_field,</div>
+<div class="line">      <a name="_a89"></a><a class="code" href="structMoFEM_1_1Projection10NodeCoordsOnField.html">Projection10NodeCoordsOnField</a> ent_method_material(m_field,</div>
 <div class="line">                                                        <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a91"></a><a class="code" href="group__mofem__loops.html#ga06843828fb475925d003a31b991c425e">loop_dofs</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, ent_method_material);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a90"></a><a class="code" href="group__mofem__loops.html#ga06843828fb475925d003a31b991c425e">loop_dofs</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, ent_method_material);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// build finite elements</span></div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a92"></a><a class="code" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">build_finite_elements</a>();</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a91"></a><a class="code" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">build_finite_elements</a>();</div>
 <div class="line">    <span class="comment">// build adjacencies</span></div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a93"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#a727653d1367e758daf2a74cb65d4dfa5">build_adjacencies</a>(bit_level0);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a92"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#a727653d1367e758daf2a74cb65d4dfa5">build_adjacencies</a>(bit_level0);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// define problems</span></div>
 <div class="line">    {</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a94"></a><a class="code" href="group__mofem__problems.html#ga6afc6820fa64d4ceb733bd778adb925a">add_problem</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <a class="code" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a>);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a95"></a><a class="code" href="group__mofem__problems.html#gaf165948ec92b5fcfbe5ec19ea1918ba1">modify_problem_add_finite_element</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="stringliteral">&quot;ELASTIC&quot;</span>);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a93"></a><a class="code" href="group__mofem__problems.html#ga6afc6820fa64d4ceb733bd778adb925a">add_problem</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <a class="code" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a>);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a94"></a><a class="code" href="group__mofem__problems.html#gaf165948ec92b5fcfbe5ec19ea1918ba1">modify_problem_add_finite_element</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="stringliteral">&quot;ELASTIC&quot;</span>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__problems.html#gaf165948ec92b5fcfbe5ec19ea1918ba1">modify_problem_add_finite_element</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="stringliteral">&quot;PRESSURE_FE&quot;</span>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__problems.html#gaf165948ec92b5fcfbe5ec19ea1918ba1">modify_problem_add_finite_element</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="stringliteral">&quot;FORCE_FE&quot;</span>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__problems.html#gaf165948ec92b5fcfbe5ec19ea1918ba1">modify_problem_add_finite_element</a>(<span class="stringliteral">&quot;Kuu&quot;</span>,</div>
 <div class="line">                                                       <span class="stringliteral">&quot;FLUID_PRESSURE_FE&quot;</span>);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a96"></a><a class="code" href="group__mofem__problems.html#gab02fceb7ce0b4be564ff8b2c7144ba12">modify_problem_ref_level_add_bit</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, bit_level0);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a95"></a><a class="code" href="group__mofem__problems.html#gab02fceb7ce0b4be564ff8b2c7144ba12">modify_problem_ref_level_add_bit</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, bit_level0);</div>
 <div class="line"> </div>
-<div class="line">      <a name="_a97"></a><a class="code" href="structMoFEM_1_1ProblemsManager.html">ProblemsManager</a> *prb_mng_ptr;</div>
+<div class="line">      <a name="_a96"></a><a class="code" href="structMoFEM_1_1ProblemsManager.html">ProblemsManager</a> *prb_mng_ptr;</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>(prb_mng_ptr);</div>
 <div class="line">      <span class="keywordflow">if</span> (is_partitioned) {</div>
-<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a98"></a><a class="code" href="group__mofem__problems__manager.html#ga0eed1a1aa1677044038c562cdd1aeb0f">buildProblemOnDistributedMesh</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a99"></a><a class="code" href="group__mofem__problems__manager.html#gabfd48a196686d30eeacb978b81d1a656">partitionFiniteElements</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="keyword">true</span>, 0,</div>
+<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a97"></a><a class="code" href="group__mofem__problems__manager.html#ga0eed1a1aa1677044038c562cdd1aeb0f">buildProblemOnDistributedMesh</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a98"></a><a class="code" href="group__mofem__problems__manager.html#gabfd48a196686d30eeacb978b81d1a656">partitionFiniteElements</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="keyword">true</span>, 0,</div>
 <div class="line">                                                    pcomm-&gt;size());</div>
 <div class="line">      } <span class="keywordflow">else</span> {</div>
-<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a100"></a><a class="code" href="group__mofem__problems__manager.html#ga98070af58a9cd97f9202c6488698ba96">buildProblem</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="keyword">true</span>);</div>
-<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a101"></a><a class="code" href="group__mofem__problems__manager.html#gaa0e280c88443b6240bf3255c0dce0ef2">partitionProblem</a>(<span class="stringliteral">&quot;Kuu&quot;</span>);</div>
+<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a99"></a><a class="code" href="group__mofem__problems__manager.html#ga98070af58a9cd97f9202c6488698ba96">buildProblem</a>(<span class="stringliteral">&quot;Kuu&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a100"></a><a class="code" href="group__mofem__problems__manager.html#gaa0e280c88443b6240bf3255c0dce0ef2">partitionProblem</a>(<span class="stringliteral">&quot;Kuu&quot;</span>);</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a class="code" href="group__mofem__problems__manager.html#gabfd48a196686d30eeacb978b81d1a656">partitionFiniteElements</a>(<span class="stringliteral">&quot;Kuu&quot;</span>);</div>
 <div class="line">      }</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a102"></a><a class="code" href="group__mofem__problems__manager.html#ga20ecb1883ad47d08f22a66d871a48114">partitionGhostDofs</a>(<span class="stringliteral">&quot;Kuu&quot;</span>);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a name="a101"></a><a class="code" href="group__mofem__problems__manager.html#ga20ecb1883ad47d08f22a66d871a48114">partitionGhostDofs</a>(<span class="stringliteral">&quot;Kuu&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="group__mofem__problems.html#ga6afc6820fa64d4ceb733bd778adb925a">add_problem</a>(<span class="stringliteral">&quot;DYNAMICS&quot;</span>, <a class="code" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a>);</div>
@@ -705,10 +705,10 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    }</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a class="code" href="group__mofem__problems__manager.html#ga20ecb1883ad47d08f22a66d871a48114">partitionGhostDofs</a>(<span class="stringliteral">&quot;DYNAMICS&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    <a name="a103"></a><a class="code" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> <a name="a104"></a><a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>;</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a105"></a><a class="code" href="structMoFEM_1_1VecManager.html">VecManager</a>&gt;()-&gt;vecCreateGhost(<span class="stringliteral">&quot;DYNAMICS&quot;</span>, <a name="a106"></a><a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>,</div>
+<div class="line">    <a name="a102"></a><a class="code" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> <a name="a103"></a><a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>;</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a104"></a><a class="code" href="structMoFEM_1_1VecManager.html">VecManager</a>&gt;()-&gt;vecCreateGhost(<span class="stringliteral">&quot;DYNAMICS&quot;</span>, <a name="a105"></a><a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>,</div>
 <div class="line">                                                              &amp;<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
-<div class="line">    <a class="code" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> <a name="a107"></a><a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>;</div>
+<div class="line">    <a class="code" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> <a name="a106"></a><a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>;</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, &amp;<a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// create tS</span></div>
@@ -717,36 +717,36 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetType(ts, TSBEULER);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// shell matrix</span></div>
-<div class="line">    <a name="_a108"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html">ConvectiveMassElement::MatShellCtx</a> *shellAij_ctx =</div>
+<div class="line">    <a name="_a107"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html">ConvectiveMassElement::MatShellCtx</a> *shellAij_ctx =</div>
 <div class="line">        <span class="keyword">new</span> <a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html">ConvectiveMassElement::MatShellCtx</a>();</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a109"></a><a class="code" href="structMoFEM_1_1MatrixManager.html">MatrixManager</a>&gt;()</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a108"></a><a class="code" href="structMoFEM_1_1MatrixManager.html">MatrixManager</a>&gt;()</div>
 <div class="line">        -&gt;createMPIAIJWithArrays&lt;PetscGlobalIdx_mi_tag&gt;(<span class="stringliteral">&quot;Kuu&quot;</span>,</div>
-<div class="line">                                                        &amp;shellAij_ctx-&gt;<a name="a110"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a5e6a1ed717a76551ba1c4af75ef483f1">K</a>);</div>
+<div class="line">                                                        &amp;shellAij_ctx-&gt;<a name="a109"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a5e6a1ed717a76551ba1c4af75ef483f1">K</a>);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatDuplicate(shellAij_ctx-&gt;<a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a5e6a1ed717a76551ba1c4af75ef483f1">K</a>, MAT_DO_NOT_COPY_VALUES,</div>
-<div class="line">                        &amp;shellAij_ctx-&gt;<a name="a111"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#aa00dbfa4fd7901bce7909d8bbaa706e4">M</a>);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> shellAij_ctx-&gt;<a name="a112"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a7839553ba4c17aea2b155c2bfde5185b">iNit</a>();</div>
+<div class="line">                        &amp;shellAij_ctx-&gt;<a name="a110"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#aa00dbfa4fd7901bce7909d8bbaa706e4">M</a>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> shellAij_ctx-&gt;<a name="a111"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a7839553ba4c17aea2b155c2bfde5185b">iNit</a>();</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1VecManager.html">VecManager</a>&gt;()-&gt;vecScatterCreate(</div>
-<div class="line">        <a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, <span class="stringliteral">&quot;DYNAMICS&quot;</span>, <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>, shellAij_ctx-&gt;<a name="a113"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a51af5eaec4d239d0312608d067e47e93">u</a>, <span class="stringliteral">&quot;Kuu&quot;</span>, <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>,</div>
-<div class="line">        &amp;shellAij_ctx-&gt;<a name="a114"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a893cd2415fae91d745a194be0e381671">scatterU</a>);</div>
+<div class="line">        <a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, <span class="stringliteral">&quot;DYNAMICS&quot;</span>, <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>, shellAij_ctx-&gt;<a name="a112"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a51af5eaec4d239d0312608d067e47e93">u</a>, <span class="stringliteral">&quot;Kuu&quot;</span>, <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>,</div>
+<div class="line">        &amp;shellAij_ctx-&gt;<a name="a113"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a893cd2415fae91d745a194be0e381671">scatterU</a>);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1VecManager.html">VecManager</a>&gt;()-&gt;vecScatterCreate(</div>
-<div class="line">        <a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, <span class="stringliteral">&quot;DYNAMICS&quot;</span>, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>, shellAij_ctx-&gt;<a name="a115"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a3f2e0faf3ff6159d97f666ba54f24c82">v</a>, <span class="stringliteral">&quot;Kuu&quot;</span>, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>,</div>
-<div class="line">        <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>, &amp;shellAij_ctx-&gt;<a name="a116"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a2f574060431d44b1d1fc43efb0bbf1c4">scatterV</a>);</div>
+<div class="line">        <a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, <span class="stringliteral">&quot;DYNAMICS&quot;</span>, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>, shellAij_ctx-&gt;<a name="a114"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a3f2e0faf3ff6159d97f666ba54f24c82">v</a>, <span class="stringliteral">&quot;Kuu&quot;</span>, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>,</div>
+<div class="line">        <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>, &amp;shellAij_ctx-&gt;<a name="a115"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#a2f574060431d44b1d1fc43efb0bbf1c4">scatterV</a>);</div>
 <div class="line">    Mat shell_Aij;</div>
-<div class="line">    <span class="keyword">const</span> <a name="_a117"></a><a class="code" href="structMoFEM_1_1Problem.html">Problem</a> *problem_ptr;</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a118"></a><a class="code" href="group__mofem__access.html#gae2f23388a21a25d68e4f62a5e5259e06">get_problem</a>(<span class="stringliteral">&quot;DYNAMICS&quot;</span>, &amp;problem_ptr);</div>
+<div class="line">    <span class="keyword">const</span> <a name="_a116"></a><a class="code" href="structMoFEM_1_1Problem.html">Problem</a> *problem_ptr;</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a name="a117"></a><a class="code" href="group__mofem__access.html#gae2f23388a21a25d68e4f62a5e5259e06">get_problem</a>(<span class="stringliteral">&quot;DYNAMICS&quot;</span>, &amp;problem_ptr);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatCreateShell(</div>
-<div class="line">        PETSC_COMM_WORLD, problem_ptr-&gt;<a name="a119"></a><a class="code" href="structMoFEM_1_1Problem.html#a1c7d8024651ef955a03d2e2e4753c1c9">getNbLocalDofsRow</a>(),</div>
-<div class="line">        problem_ptr-&gt;<a name="a120"></a><a class="code" href="structMoFEM_1_1Problem.html#ab0d05db502892988fb713aa6dcb3e7d9">getNbLocalDofsCol</a>(), problem_ptr-&gt;<a name="a121"></a><a class="code" href="structMoFEM_1_1Problem.html#a271a2096c19f1b94383edc0b4e2e2060">getNbDofsRow</a>(),</div>
+<div class="line">        PETSC_COMM_WORLD, problem_ptr-&gt;<a name="a118"></a><a class="code" href="structMoFEM_1_1Problem.html#a1c7d8024651ef955a03d2e2e4753c1c9">getNbLocalDofsRow</a>(),</div>
+<div class="line">        problem_ptr-&gt;<a name="a119"></a><a class="code" href="structMoFEM_1_1Problem.html#ab0d05db502892988fb713aa6dcb3e7d9">getNbLocalDofsCol</a>(), problem_ptr-&gt;<a name="a120"></a><a class="code" href="structMoFEM_1_1Problem.html#a271a2096c19f1b94383edc0b4e2e2060">getNbDofsRow</a>(),</div>
 <div class="line">        problem_ptr-&gt;<a class="code" href="structMoFEM_1_1Problem.html#a271a2096c19f1b94383edc0b4e2e2060">getNbDofsRow</a>(), (<span class="keywordtype">void</span> *)shellAij_ctx, &amp;shell_Aij);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatShellSetOperation(shell_Aij, MATOP_MULT,</div>
-<div class="line">                                (<span class="keywordtype">void</span> (*)(<span class="keywordtype">void</span>))<a name="a122"></a><a class="code" href="structConvectiveMassElement.html#a02a281fd26fffbe425b3fbb7824c5c6d">ConvectiveMassElement::MultOpA</a>);</div>
+<div class="line">                                (<span class="keywordtype">void</span> (*)(<span class="keywordtype">void</span>))<a name="a121"></a><a class="code" href="structConvectiveMassElement.html#a02a281fd26fffbe425b3fbb7824c5c6d">ConvectiveMassElement::MultOpA</a>);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatShellSetOperation(</div>
 <div class="line">        shell_Aij, MATOP_ZERO_ENTRIES,</div>
-<div class="line">        (<span class="keywordtype">void</span> (*)(<span class="keywordtype">void</span>))<a name="a123"></a><a class="code" href="structConvectiveMassElement.html#a0f04337aa08c66032a696c5961504726">ConvectiveMassElement::ZeroEntriesOp</a>);</div>
+<div class="line">        (<span class="keywordtype">void</span> (*)(<span class="keywordtype">void</span>))<a name="a122"></a><a class="code" href="structConvectiveMassElement.html#a0f04337aa08c66032a696c5961504726">ConvectiveMassElement::ZeroEntriesOp</a>);</div>
 <div class="line">    <span class="comment">// blocked problem</span></div>
 <div class="line">    ConvectiveMassElement::ShellMatrixElement shell_matrix_element(m_field);</div>
-<div class="line">    <a name="_a124"></a><a class="code" href="structDirichletDisplacementBc.html">DirichletDisplacementBc</a> shell_dirichlet_bc(</div>
-<div class="line">        m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>, shellAij_ctx-&gt;<a name="a125"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#ae66e41f5f48f2972cb66ac835356c8c5">barK</a>, PETSC_NULL, PETSC_NULL);</div>
+<div class="line">    <a name="_a123"></a><a class="code" href="structDirichletDisplacementBc.html">DirichletDisplacementBc</a> shell_dirichlet_bc(</div>
+<div class="line">        m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>, shellAij_ctx-&gt;<a name="a124"></a><a class="code" href="structConvectiveMassElement_1_1MatShellCtx.html#ae66e41f5f48f2972cb66ac835356c8c5">barK</a>, PETSC_NULL, PETSC_NULL);</div>
 <div class="line">    <a class="code" href="structDirichletDisplacementBc.html">DirichletDisplacementBc</a> my_dirichlet_bc(m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>, PETSC_NULL,</div>
 <div class="line">                                            <a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line">    shell_matrix_element.problemName = <span class="stringliteral">&quot;Kuu&quot;</span>;</div>
@@ -776,23 +776,23 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">            <span class="stringliteral">&quot;ELASTIC&quot;</span>, &amp;inertia.getLoopFeMassAuxLhs()));</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Element to calculate shell matrix residual</span></div>
-<div class="line">    <a name="_a126"></a><a class="code" href="structConvectiveMassElement_1_1ShellResidualElement.html">ConvectiveMassElement::ShellResidualElement</a> shell_matrix_residual(m_field);</div>
+<div class="line">    <a name="_a125"></a><a class="code" href="structConvectiveMassElement_1_1ShellResidualElement.html">ConvectiveMassElement::ShellResidualElement</a> shell_matrix_residual(m_field);</div>
 <div class="line">    shell_matrix_residual.shellMatCtx = shellAij_ctx;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// surface pressure</span></div>
 <div class="line">    boost::ptr_map&lt;std::string, NeumannForcesSurface&gt; surface_forces;</div>
 <div class="line">    {</div>
 <div class="line">      <span class="keywordtype">string</span> fe_name_str = <span class="stringliteral">&quot;FORCE_FE&quot;</span>;</div>
-<div class="line">      surface_forces.insert(fe_name_str, <span class="keyword">new</span> <a name="_a127"></a><a class="code" href="structNeumannForcesSurface.html">NeumannForcesSurface</a>(m_field));</div>
+<div class="line">      surface_forces.insert(fe_name_str, <span class="keyword">new</span> <a name="_a126"></a><a class="code" href="structNeumannForcesSurface.html">NeumannForcesSurface</a>(m_field));</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="namespaceMoFEM.html#a62169d7a96ad4c3a3c421d5e6681c257">addHOOpsFace3D</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>,</div>
 <div class="line">                            surface_forces.at(fe_name_str).getLoopFe(), <span class="keyword">false</span>,</div>
 <div class="line">                            <span class="keyword">false</span>);</div>
-<div class="line">      <span class="keywordflow">for</span> (<a name="a128"></a><a class="code" href="group__mofem__meshset__mng.html#ga6bd6335f024a22cde370ee807d9185ce">_IT_CUBITMESHSETS_BY_BCDATA_TYPE_FOR_LOOP_</a>(m_field,</div>
-<div class="line">                                                      <a name="a129"></a><a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca7b4c0e5ae1385e1224a6e59abf47ecc0">NODESET</a> | <a name="a130"></a><a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca4ab4a7e6c2c0f87be80aa8ccc963c6f6">FORCESET</a>, it)) {</div>
+<div class="line">      <span class="keywordflow">for</span> (<a name="a127"></a><a class="code" href="group__mofem__meshset__mng.html#ga6bd6335f024a22cde370ee807d9185ce">_IT_CUBITMESHSETS_BY_BCDATA_TYPE_FOR_LOOP_</a>(m_field,</div>
+<div class="line">                                                      <a name="a128"></a><a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca7b4c0e5ae1385e1224a6e59abf47ecc0">NODESET</a> | <a name="a129"></a><a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca4ab4a7e6c2c0f87be80aa8ccc963c6f6">FORCESET</a>, it)) {</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> surface_forces.at(fe_name_str)</div>
 <div class="line">            .addForce(<span class="stringliteral">&quot;DISPLACEMENT&quot;</span>, PETSC_NULL, it-&gt;getMeshsetId(), <span class="keyword">true</span>);</div>
 <div class="line">        surface_forces.at(fe_name_str)</div>
-<div class="line">            .methodsOp.push_back(<span class="keyword">new</span> <a name="_a131"></a><a class="code" href="structTimeForceScale.html">TimeForceScale</a>());</div>
+<div class="line">            .methodsOp.push_back(<span class="keyword">new</span> <a name="_a130"></a><a class="code" href="structTimeForceScale.html">TimeForceScale</a>());</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -804,7 +804,7 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">                            surface_pressure.at(fe_name_str).getLoopFe(), <span class="keyword">false</span>,</div>
 <div class="line">                            <span class="keyword">false</span>);</div>
 <div class="line">      <span class="keywordflow">for</span> (<a class="code" href="group__mofem__meshset__mng.html#ga6bd6335f024a22cde370ee807d9185ce">_IT_CUBITMESHSETS_BY_BCDATA_TYPE_FOR_LOOP_</a>(</div>
-<div class="line">               m_field, <a name="a132"></a><a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca86c05035d6a2fbc5762f39215d6a8a22">SIDESET</a> | <a name="a133"></a><a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca1aacb952ebfd7b0ad16085a9bf1fcf0a">PRESSURESET</a>, it)) {</div>
+<div class="line">               m_field, <a name="a131"></a><a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca86c05035d6a2fbc5762f39215d6a8a22">SIDESET</a> | <a name="a132"></a><a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca1aacb952ebfd7b0ad16085a9bf1fcf0a">PRESSURESET</a>, it)) {</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> surface_pressure.at(fe_name_str)</div>
 <div class="line">            .addPressure(<span class="stringliteral">&quot;DISPLACEMENT&quot;</span>, PETSC_NULL, it-&gt;getMeshsetId(), <span class="keyword">true</span>);</div>
 <div class="line">        surface_pressure.at(fe_name_str)</div>
@@ -816,7 +816,7 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    boost::ptr_map&lt;std::string, EdgeForce&gt; edge_forces;</div>
 <div class="line">    {</div>
 <div class="line">      <span class="keywordtype">string</span> fe_name_str = <span class="stringliteral">&quot;FORCE_FE&quot;</span>;</div>
-<div class="line">      edge_forces.insert(fe_name_str, <span class="keyword">new</span> <a name="_a134"></a><a class="code" href="structEdgeForce.html">EdgeForce</a>(m_field));</div>
+<div class="line">      edge_forces.insert(fe_name_str, <span class="keyword">new</span> <a name="_a133"></a><a class="code" href="structEdgeForce.html">EdgeForce</a>(m_field));</div>
 <div class="line">      <span class="keywordflow">for</span> (<a class="code" href="group__mofem__meshset__mng.html#ga6bd6335f024a22cde370ee807d9185ce">_IT_CUBITMESHSETS_BY_BCDATA_TYPE_FOR_LOOP_</a>(m_field,</div>
 <div class="line">                                                      <a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca7b4c0e5ae1385e1224a6e59abf47ecc0">NODESET</a> | <a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca4ab4a7e6c2c0f87be80aa8ccc963c6f6">FORCESET</a>, it)) {</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> edge_forces.at(fe_name_str)</div>
@@ -829,7 +829,7 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    boost::ptr_map&lt;std::string, NodalForce&gt; nodal_forces;</div>
 <div class="line">    {</div>
 <div class="line">      <span class="keywordtype">string</span> fe_name_str = <span class="stringliteral">&quot;FORCE_FE&quot;</span>;</div>
-<div class="line">      nodal_forces.insert(fe_name_str, <span class="keyword">new</span> <a name="_a135"></a><a class="code" href="structNodalForce.html">NodalForce</a>(m_field));</div>
+<div class="line">      nodal_forces.insert(fe_name_str, <span class="keyword">new</span> <a name="_a134"></a><a class="code" href="structNodalForce.html">NodalForce</a>(m_field));</div>
 <div class="line">      <span class="keywordflow">for</span> (<a class="code" href="group__mofem__meshset__mng.html#ga6bd6335f024a22cde370ee807d9185ce">_IT_CUBITMESHSETS_BY_BCDATA_TYPE_FOR_LOOP_</a>(m_field,</div>
 <div class="line">                                                      <a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca7b4c0e5ae1385e1224a6e59abf47ecc0">NODESET</a> | <a class="code" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca4ab4a7e6c2c0f87be80aa8ccc963c6f6">FORCESET</a>, it)) {</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> nodal_forces.at(fe_name_str)</div>
@@ -839,24 +839,24 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="structMonitorRestart.html">MonitorRestart</a> monitor_restart(m_field, ts);</div>
-<div class="line">    <a name="_a136"></a><a class="code" href="structConvectiveMassElement_1_1UpdateAndControl.html">ConvectiveMassElement::UpdateAndControl</a> update_and_control(</div>
+<div class="line">    <a name="_a135"></a><a class="code" href="structConvectiveMassElement_1_1UpdateAndControl.html">ConvectiveMassElement::UpdateAndControl</a> update_and_control(</div>
 <div class="line">        m_field, ts, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// TS</span></div>
-<div class="line">    <a name="_a137"></a><a class="code" href="structMoFEM_1_1TsCtx.html">TsCtx</a> <a name="a138"></a><a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>(m_field, <span class="stringliteral">&quot;DYNAMICS&quot;</span>);</div>
+<div class="line">    <a name="_a136"></a><a class="code" href="structMoFEM_1_1TsCtx.html">TsCtx</a> <a name="a137"></a><a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>(m_field, <span class="stringliteral">&quot;DYNAMICS&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// right hand side</span></div>
 <div class="line">    <span class="comment">// preprocess</span></div>
-<div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a139"></a><a class="code" href="structMoFEM_1_1TsCtx.html#a881d04eb27d8ab3ced76bc98b6fd26b3">getPreProcessIFunction</a>().push_back(&amp;update_and_control);</div>
+<div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a138"></a><a class="code" href="structMoFEM_1_1TsCtx.html#a881d04eb27d8ab3ced76bc98b6fd26b3">getPreProcessIFunction</a>().push_back(&amp;update_and_control);</div>
 <div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a class="code" href="structMoFEM_1_1TsCtx.html#a881d04eb27d8ab3ced76bc98b6fd26b3">getPreProcessIFunction</a>().push_back(&amp;my_dirichlet_bc);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// fe looops</span></div>
-<div class="line">    <span class="keyword">auto</span> &amp;loops_to_do_Rhs = <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a140"></a><a class="code" href="structMoFEM_1_1TsCtx.html#a22909ce009e78fa1db0615ed913dc5e4">getLoopsIFunction</a>();</div>
+<div class="line">    <span class="keyword">auto</span> &amp;loops_to_do_Rhs = <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a139"></a><a class="code" href="structMoFEM_1_1TsCtx.html#a22909ce009e78fa1db0615ed913dc5e4">getLoopsIFunction</a>();</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">auto</span> add_static_rhs = [&amp;](<span class="keyword">auto</span> &amp;loops_to_do_Rhs) {</div>
 <div class="line">      <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      loops_to_do_Rhs.push_back(</div>
-<div class="line">          <a name="_a141"></a><a class="code" href="structMoFEM_1_1PairNameFEMethodPtr.html">PairNameFEMethodPtr</a>(<span class="stringliteral">&quot;ELASTIC&quot;</span>, &amp;elastic.getLoopFeRhs()));</div>
+<div class="line">          <a name="_a140"></a><a class="code" href="structMoFEM_1_1PairNameFEMethodPtr.html">PairNameFEMethodPtr</a>(<span class="stringliteral">&quot;ELASTIC&quot;</span>, &amp;elastic.getLoopFeRhs()));</div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keyword">auto</span> fit = surface_forces.begin(); fit != surface_forces.end();</div>
 <div class="line">           fit++) {</div>
 <div class="line">        loops_to_do_Rhs.push_back(</div>
@@ -890,25 +890,25 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    <span class="comment">// calculate residual for velocities</span></div>
 <div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a class="code" href="structMoFEM_1_1TsCtx.html#a881d04eb27d8ab3ced76bc98b6fd26b3">getPreProcessIFunction</a>().push_back(&amp;shell_matrix_residual); </div>
 <div class="line">    <span class="comment">// postprocess</span></div>
-<div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a142"></a><a class="code" href="structMoFEM_1_1TsCtx.html#a602e2873e82737d021991fb9eca1fbb3">getPostProcessIFunction</a>().push_back(&amp;my_dirichlet_bc);</div>
+<div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a141"></a><a class="code" href="structMoFEM_1_1TsCtx.html#a602e2873e82737d021991fb9eca1fbb3">getPostProcessIFunction</a>().push_back(&amp;my_dirichlet_bc);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// left hand side</span></div>
 <div class="line">    <span class="comment">// preprocess</span></div>
-<div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a143"></a><a class="code" href="structMoFEM_1_1TsCtx.html#aef7269f120efd788539812c2f9934984">getPreProcessIJacobian</a>().push_back(&amp;update_and_control);</div>
+<div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a142"></a><a class="code" href="structMoFEM_1_1TsCtx.html#aef7269f120efd788539812c2f9934984">getPreProcessIJacobian</a>().push_back(&amp;update_and_control);</div>
 <div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a class="code" href="structMoFEM_1_1TsCtx.html#aef7269f120efd788539812c2f9934984">getPreProcessIJacobian</a>().push_back(&amp;shell_matrix_element);</div>
-<div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a144"></a><a class="code" href="structMoFEM_1_1TsCtx.html#aadaf54ad0202b4d7f31376bf7f3fdc91">getPostProcessIJacobian</a>().push_back(&amp;update_and_control);</div>
+<div class="line">    <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a143"></a><a class="code" href="structMoFEM_1_1TsCtx.html#aadaf54ad0202b4d7f31376bf7f3fdc91">getPostProcessIJacobian</a>().push_back(&amp;update_and_control);</div>
 <div class="line">    <span class="comment">// monitor</span></div>
 <div class="line">    <a class="code" href="structMoFEM_1_1TsCtx.html#a24e74c25004733c09e0dbcc0d90eb3af">TsCtx::FEMethodsSequence</a> &amp;loopsMonitor =</div>
-<div class="line">        <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a145"></a><a class="code" href="structMoFEM_1_1TsCtx.html#a4128e8771499a7dcaf4b224a2d3d2a14">getLoopsMonitor</a>();</div>
+<div class="line">        <a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>.<a name="a144"></a><a class="code" href="structMoFEM_1_1TsCtx.html#a4128e8771499a7dcaf4b224a2d3d2a14">getLoopsMonitor</a>();</div>
 <div class="line">    loopsMonitor.push_back(</div>
 <div class="line">        <a class="code" href="structMoFEM_1_1PairNameFEMethodPtr.html">TsCtx::PairNameFEMethodPtr</a>(<span class="stringliteral">&quot;MASS_ELEMENT&quot;</span>, &amp;post_proc));</div>
 <div class="line">    loopsMonitor.push_back(</div>
 <div class="line">        <a class="code" href="structMoFEM_1_1PairNameFEMethodPtr.html">TsCtx::PairNameFEMethodPtr</a>(<span class="stringliteral">&quot;MASS_ELEMENT&quot;</span>, &amp;monitor_restart));</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetIFunction(ts, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a name="a146"></a><a class="code" href="namespaceMoFEM.html#a65f22030e64fd429012bf8f0f025d9a1">TsSetIFunction</a>, &amp;<a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetIJacobian(ts, shell_Aij, shell_Aij, <a name="a147"></a><a class="code" href="namespaceMoFEM.html#a12477157e716aece7dd7b3e316fef7a3">TsSetIJacobian</a>, &amp;<a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetIFunction(ts, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a name="a145"></a><a class="code" href="namespaceMoFEM.html#a65f22030e64fd429012bf8f0f025d9a1">TsSetIFunction</a>, &amp;<a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetIJacobian(ts, shell_Aij, shell_Aij, <a name="a146"></a><a class="code" href="namespaceMoFEM.html#a12477157e716aece7dd7b3e316fef7a3">TsSetIJacobian</a>, &amp;<a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>);</div>
 <div class="line"> </div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSMonitorSet(ts, <a name="a148"></a><a class="code" href="namespaceMoFEM.html#a1654dd29ff9af437332ec55af104ff48">TsMonitorSet</a>, &amp;<a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>, PETSC_NULL);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSMonitorSet(ts, <a name="a147"></a><a class="code" href="namespaceMoFEM.html#a1654dd29ff9af437332ec55af104ff48">TsMonitorSet</a>, &amp;<a class="code" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>, PETSC_NULL);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">double</span> ftime = 1;</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetDuration(ts, PETSC_DEFAULT, ftime);</div>
@@ -924,11 +924,11 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    PC pc;</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPGetPC(ksp, &amp;pc);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCSetType(pc, PCSHELL);</div>
-<div class="line">    <a name="_a149"></a><a class="code" href="structConvectiveMassElement_1_1PCShellCtx.html">ConvectiveMassElement::PCShellCtx</a> pc_shell_ctx(shell_Aij);</div>
+<div class="line">    <a name="_a148"></a><a class="code" href="structConvectiveMassElement_1_1PCShellCtx.html">ConvectiveMassElement::PCShellCtx</a> pc_shell_ctx(shell_Aij);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCShellSetContext(pc, (<span class="keywordtype">void</span> *)&amp;pc_shell_ctx);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCShellSetApply(pc, <a name="a150"></a><a class="code" href="structConvectiveMassElement.html#a449bff5aa621647935c184cef1e29c61">ConvectiveMassElement::PCShellApplyOp</a>);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCShellSetSetUp(pc, <a name="a151"></a><a class="code" href="structConvectiveMassElement.html#ab0ea7a73d99beba1d4b4097baebe1484">ConvectiveMassElement::PCShellSetUpOp</a>);</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCShellSetDestroy(pc, <a name="a152"></a><a class="code" href="structConvectiveMassElement.html#a2abdfa353006f481e79a932b3af1a602">ConvectiveMassElement::PCShellDestroy</a>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCShellSetApply(pc, <a name="a149"></a><a class="code" href="structConvectiveMassElement.html#a449bff5aa621647935c184cef1e29c61">ConvectiveMassElement::PCShellApplyOp</a>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCShellSetSetUp(pc, <a name="a150"></a><a class="code" href="structConvectiveMassElement.html#ab0ea7a73d99beba1d4b4097baebe1484">ConvectiveMassElement::PCShellSetUpOp</a>);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCShellSetDestroy(pc, <a name="a151"></a><a class="code" href="structConvectiveMassElement.html#a2abdfa353006f481e79a932b3af1a602">ConvectiveMassElement::PCShellDestroy</a>);</div>
 <div class="line"> </div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecZeroEntries(<a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
@@ -951,13 +951,13 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
 <div class="line"> </div>
-<div class="line">      <a name="_a153"></a><a class="code" href="structMoFEM_1_1SnesCtx.html">SnesCtx</a> snes_ctx(m_field, <span class="stringliteral">&quot;Kuu&quot;</span>);</div>
+<div class="line">      <a name="_a152"></a><a class="code" href="structMoFEM_1_1SnesCtx.html">SnesCtx</a> snes_ctx(m_field, <span class="stringliteral">&quot;Kuu&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">      SNES snes;</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESCreate(PETSC_COMM_WORLD, &amp;snes);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetApplicationContext(snes, &amp;snes_ctx);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetFunction(snes, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a name="a154"></a><a class="code" href="namespaceMoFEM.html#a50531f1fc6bfb68b4756a88126df316e">SnesRhs</a>, &amp;snes_ctx);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetJacobian(snes, Aij, Aij, <a name="a155"></a><a class="code" href="namespaceMoFEM.html#a2427b40a8745afeb2073f72d9d51584e">SnesMat</a>, &amp;snes_ctx);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetFunction(snes, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a name="a153"></a><a class="code" href="namespaceMoFEM.html#a50531f1fc6bfb68b4756a88126df316e">SnesRhs</a>, &amp;snes_ctx);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetJacobian(snes, Aij, Aij, <a name="a154"></a><a class="code" href="namespaceMoFEM.html#a2427b40a8745afeb2073f72d9d51584e">SnesMat</a>, &amp;snes_ctx);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetFromOptions(snes);</div>
 <div class="line"> </div>
 <div class="line">      <a class="code" href="structDirichletDisplacementBc.html">DirichletDisplacementBc</a> my_dirichlet_bc(m_field, <span class="stringliteral">&quot;DISPLACEMENT&quot;</span>,</div>
@@ -977,7 +977,7 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">          <a class="code" href="structMoFEM_1_1PairNameFEMethodPtr.html">SnesCtx::PairNameFEMethodPtr</a>(<span class="stringliteral">&quot;ELASTIC&quot;</span>, &amp;elastic.getLoopFeLhs()));</div>
 <div class="line">      snes_ctx.getPostProcSetOperators().push_back(&amp;my_dirichlet_bc);</div>
 <div class="line"> </div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a156"></a><a class="code" href="structMoFEM_1_1FieldBlas.html">FieldBlas</a>&gt;()-&gt;fieldScale(0, <span class="stringliteral">&quot;VELOCITY&quot;</span>);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a155"></a><a class="code" href="structMoFEM_1_1FieldBlas.html">FieldBlas</a>&gt;()-&gt;fieldScale(0, <span class="stringliteral">&quot;VELOCITY&quot;</span>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1FieldBlas.html">FieldBlas</a>&gt;()-&gt;fieldScale(0,</div>
 <div class="line">                                                           <span class="stringliteral">&quot;DOT_DISPLACEMENT&quot;</span>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1FieldBlas.html">FieldBlas</a>&gt;()-&gt;fieldScale(0, <span class="stringliteral">&quot;DOT_VELOCITY&quot;</span>);</div>
@@ -1035,9 +1035,9 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatDestroy(&amp;shell_Aij);</div>
 <div class="line">    <span class="keyword">delete</span> shellAij_ctx;</div>
 <div class="line">  }</div>
-<div class="line">  <a name="a157"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a name="a156"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a name="a158"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a name="a157"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
@@ -1055,7 +1055,6 @@ This is implementation where first order ODE is solved, and displacements and ve
 <div class="ttc" id="astructMoFEM_1_1CoreTmp_3_010_01_4_html"><div class="ttname"><a href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::CoreTmp&lt; 0 &gt;</a></div><div class="ttdoc">Core (interface) class.</div><div class="ttdef"><b>Definition:</b> <a href="Core_8hpp_source.html#l00082">Core.hpp:82</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a></div><div class="ttdeci">@ H1</div><div class="ttdoc">continuous field</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00085">definitions.h:85</a></div></div>
 <div class="ttc" id="astructEdgeForce_html"><div class="ttname"><a href="structEdgeForce.html">EdgeForce</a></div><div class="ttdoc">Force on edges and lines.</div><div class="ttdef"><b>Definition:</b> <a href="EdgeForce_8hpp_source.html#l00013">EdgeForce.hpp:13</a></div></div>
-<div class="ttc" id="aclassT_html"><div class="ttname"><a href="classT.html">T</a></div></div>
 <div class="ttc" id="astructConvectiveMassElement_1_1MatShellCtx_html_a7839553ba4c17aea2b155c2bfde5185b"><div class="ttname"><a href="structConvectiveMassElement_1_1MatShellCtx.html#a7839553ba4c17aea2b155c2bfde5185b">ConvectiveMassElement::MatShellCtx::iNit</a></div><div class="ttdeci">MoFEMErrorCode iNit()</div><div class="ttdef"><b>Definition:</b> <a href="ConvectiveMassElement_8cpp_source.html#l02352">ConvectiveMassElement.cpp:2352</a></div></div>
 <div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1ProblemsManager_html"><div class="ttname"><a href="structMoFEM_1_1ProblemsManager.html">MoFEM::ProblemsManager</a></div><div class="ttdoc">Problem manager is used to build and partition problems.</div><div class="ttdef"><b>Definition:</b> <a href="ProblemsManager_8hpp_source.html#l00021">ProblemsManager.hpp:21</a></div></div>

@@ -184,7 +184,7 @@ Public Types</h2></td></tr>
 <tr class="separator:a2fe2fabdbc7f458e79afd09121ac6ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61fdfb2570a6417d41b498283f483cf3"><td class="memItemLeft" align="right" valign="top">typedef ublas::matrix&lt; <a class="el" href="classdouble.html">double</a>, ublas::row_major, ublas::bounded_array&lt; <a class="el" href="classdouble.html">double</a>, 81 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#a61fdfb2570a6417d41b498283f483cf3">MatDiffDiffVals</a></td></tr>
 <tr class="separator:a61fdfb2570a6417d41b498283f483cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d382fedaeffcfda59e1fdbe42ce4df4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl.html">OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl</a>&lt; <a class="el" href="classVolumeElementForcesAndSourcesCore.html">VolumeElementForcesAndSourcesCore</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#a2d382fedaeffcfda59e1fdbe42ce4df4">OpMWLSCalculateBaseCoeffcientsAtGaussPts</a></td></tr>
+<tr class="memitem:a2d382fedaeffcfda59e1fdbe42ce4df4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl.html">OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl</a>&lt; VolumeElementForcesAndSourcesCore &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#a2d382fedaeffcfda59e1fdbe42ce4df4">OpMWLSCalculateBaseCoeffcientsAtGaussPts</a></td></tr>
 <tr class="separator:a2d382fedaeffcfda59e1fdbe42ce4df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b411cb878cbef25806f984603b41255"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl.html">OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl</a>&lt; <a class="el" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#a4b411cb878cbef25806f984603b41255">OpMWLSCalculateBaseCoeffcientsForFaceAtGaussPts</a></td></tr>
 <tr class="separator:a4b411cb878cbef25806f984603b41255"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -293,13 +293,13 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:af5058d8f3c3912174632ef43a9c2af34"><td class="memTemplParams" colspan="2">template&lt;class T  = FTensor::Tensor1&lt;double, 3&gt;&gt; </td></tr>
-<tr class="memitem:af5058d8f3c3912174632ef43a9c2af34"><td class="memTemplItemLeft" align="right" valign="top">MoFEMErrorCode&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#af5058d8f3c3912174632ef43a9c2af34">calculateBase</a> (const <a class="el" href="classT.html">T</a> &amp;t_coords)</td></tr>
+<tr class="memitem:af5058d8f3c3912174632ef43a9c2af34"><td class="memTemplItemLeft" align="right" valign="top">MoFEMErrorCode&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#af5058d8f3c3912174632ef43a9c2af34">calculateBase</a> (const T &amp;t_coords)</td></tr>
 <tr class="separator:af5058d8f3c3912174632ef43a9c2af34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab806312cf55402041ce073ddb2091e91"><td class="memTemplParams" colspan="2">template&lt;class T  = FTensor::Tensor1&lt;double, 3&gt;&gt; </td></tr>
-<tr class="memitem:ab806312cf55402041ce073ddb2091e91"><td class="memTemplItemLeft" align="right" valign="top">MoFEMErrorCode&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#ab806312cf55402041ce073ddb2091e91">calculateDiffBase</a> (const <a class="el" href="classT.html">T</a> &amp;t_coords, const <a class="el" href="classdouble.html">double</a> dm)</td></tr>
+<tr class="memitem:ab806312cf55402041ce073ddb2091e91"><td class="memTemplItemLeft" align="right" valign="top">MoFEMErrorCode&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#ab806312cf55402041ce073ddb2091e91">calculateDiffBase</a> (const T &amp;t_coords, const <a class="el" href="classdouble.html">double</a> dm)</td></tr>
 <tr class="separator:ab806312cf55402041ce073ddb2091e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af360e2bdeb743a96530019b319842ec8"><td class="memTemplParams" colspan="2">template&lt;class T  = FTensor::Tensor1&lt;double, 3&gt;&gt; </td></tr>
-<tr class="memitem:af360e2bdeb743a96530019b319842ec8"><td class="memTemplItemLeft" align="right" valign="top">MoFEMErrorCode&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#af360e2bdeb743a96530019b319842ec8">calculateDiffDiffBase</a> (const <a class="el" href="classT.html">T</a> &amp;t_coords, const <a class="el" href="classdouble.html">double</a> dm)</td></tr>
+<tr class="memitem:af360e2bdeb743a96530019b319842ec8"><td class="memTemplItemLeft" align="right" valign="top">MoFEMErrorCode&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#af360e2bdeb743a96530019b319842ec8">calculateDiffDiffBase</a> (const T &amp;t_coords, const <a class="el" href="classdouble.html">double</a> dm)</td></tr>
 <tr class="separator:af360e2bdeb743a96530019b319842ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a896da2ada14807f7084bfb4fd7b6905d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFractureMechanics_1_1MWLSApprox.html#a896da2ada14807f7084bfb4fd7b6905d">evalWeight</a> (const <a class="el" href="classdouble.html">double</a> r)</td></tr>
 <tr class="separator:a896da2ada14807f7084bfb4fd7b6905d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -455,7 +455,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl.html">OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl</a>&lt; <a class="el" href="classVolumeElementForcesAndSourcesCore.html">VolumeElementForcesAndSourcesCore</a>&gt; <a class="el" href="structFractureMechanics_1_1MWLSApprox.html#a2d382fedaeffcfda59e1fdbe42ce4df4">FractureMechanics::MWLSApprox::OpMWLSCalculateBaseCoeffcientsAtGaussPts</a></td>
+          <td class="memname">typedef <a class="el" href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl.html">OpMWLSCalculateBaseCoeffcientsAtGaussPtsTmpl</a>&lt; VolumeElementForcesAndSourcesCore&gt; <a class="el" href="structFractureMechanics_1_1MWLSApprox.html#a2d382fedaeffcfda59e1fdbe42ce4df4">FractureMechanics::MWLSApprox::OpMWLSCalculateBaseCoeffcientsAtGaussPts</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -868,7 +868,7 @@ template&lt;class T  = FTensor::Tensor1&lt;double, 3&gt;&gt; </div>
         <tr>
           <td class="memname">MoFEMErrorCode FractureMechanics::MWLSApprox::calculateBase </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classT.html">T</a> &amp;&#160;</td>
+          <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>t_coords</em></td><td>)</td>
           <td></td>
         </tr>
@@ -922,7 +922,7 @@ template&lt;class T  = FTensor::Tensor1&lt;double, 3&gt;&gt; </div>
         <tr>
           <td class="memname">MoFEMErrorCode FractureMechanics::MWLSApprox::calculateDiffBase </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classT.html">T</a> &amp;&#160;</td>
+          <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>t_coords</em>, </td>
         </tr>
         <tr>
@@ -1009,7 +1009,7 @@ template&lt;class T  = FTensor::Tensor1&lt;double, 3&gt;&gt; </div>
         <tr>
           <td class="memname">MoFEMErrorCode FractureMechanics::MWLSApprox::calculateDiffDiffBase </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classT.html">T</a> &amp;&#160;</td>
+          <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>t_coords</em>, </td>
         </tr>
         <tr>

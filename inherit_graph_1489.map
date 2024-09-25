@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structThermalElement_1_1BlockData.html" title="data for calculation heat conductivity and heat capacity elements" alt="" coords="5,5,211,32"/>
+<area shape="rect" id="node1" href="$structSimpleContactProblem.html" title="Set of functions declaring elements and setting operators to apply contact conditions between surface..." alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node2" href="$structMortarContactProblem.html" title=" " alt="" coords="224,5,393,32"/>
 </map>

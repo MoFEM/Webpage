@@ -224,6 +224,9 @@ $(function() {
 <li>f_log()
 : <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#acb94089be12845159eb86960c7b7a09e">EshelbianPlasticity::EshelbianCore</a>
 </li>
+<li>f_log_e()
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a374c8a768747b54ac4baddcdf32deeeb">EshelbianPlasticity::EshelbianCore</a>
+</li>
 <li>face
 : <a class="el" href="structObosleteUsersModules_1_1ConstrainConstantAarea.html#a708ad8a4c8d88f48e6935fd81a0b6689">ObosleteUsersModules::ConstrainConstantAarea</a>
 </li>
@@ -740,9 +743,6 @@ $(function() {
 <li>feTLhs
 : <a class="el" href="structConvectiveMassElement.html#a93ecb3ef878b8c307cfca94e76fd3665">ConvectiveMassElement</a>
 </li>
-<li>FeTractionBc()
-: <a class="el" href="structEshelbianPlasticity_1_1FeTractionBc.html#ac90ae0052ef1aeb1f4511626e77f5c59">EshelbianPlasticity::FeTractionBc</a>
-</li>
 <li>feTRhs
 : <a class="el" href="structConvectiveMassElement.html#a83b0b9a1ad87e86d19a5690831c1f3ea">ConvectiveMassElement</a>
 </li>
@@ -908,7 +908,6 @@ $(function() {
 </li>
 <li>fieldName
 : <a class="el" href="structDirichletDisplacementBc.html#a3c45c8cdc63901fd399f3a3b1d4093f7">DirichletDisplacementBc</a>
-, <a class="el" href="structEshelbianPlasticity_1_1FeTractionBc.html#a68858082fd9891a6c2b58c7976c9732b">EshelbianPlasticity::FeTractionBc</a>
 , <a class="el" href="structFractureMechanics_1_1ConstantArea_1_1MyTriangleFE.html#afb8928630b32a1a36fb3d43c003a1217">FractureMechanics::ConstantArea::MyTriangleFE</a>
 , <a class="el" href="structMagneticElement_1_1BlockData.html#a14a8024c72a346c81a53821ae1e11225">MagneticElement::BlockData</a>
 , <a class="el" href="structMoFEM_1_1EntPolynomialBaseCtx.html#a66537f1f72fcc2c466fd8ebe8695a186">MoFEM::EntPolynomialBaseCtx</a>
@@ -1059,7 +1058,7 @@ $(function() {
 : <a class="el" href="structMoFEM_1_1PrismInterface.html#a4c557fb87a82b1244a150a3c60e1be0b">MoFEM::PrismInterface</a>
 </li>
 <li>findLevelSetVolumes()
-: <a class="el" href="structMoFEM_1_1CutMeshInterface.html#a0dec0dd3ed43e1b5eacc618d4fa72a63">MoFEM::CutMeshInterface</a>
+: <a class="el" href="structMoFEM_1_1CutMeshInterface.html#a862518bf849fb6ef5b0a954598b61daa">MoFEM::CutMeshInterface</a>
 </li>
 <li>findMinDistanceFromTheEdges()
 : <a class="el" href="structMoFEM_1_1Tools.html#a20c9c69c30c763659897fb8618325934">MoFEM::Tools</a>
@@ -1293,8 +1292,8 @@ $(function() {
 , <a class="el" href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressLhs__DX.html#a5ae317f2affcbd533d9c501cd81880cd">FractureMechanics::MWLSApprox::OpMWLSMaterialStressLhs_DX</a>
 , <a class="el" href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressRhs.html#a5b21a65d3dbfac58b3df3f1860b62683">FractureMechanics::MWLSApprox::OpMWLSMaterialStressRhs</a>
 , <a class="el" href="structFractureMechanics_1_1OpAnalyticalMaterialTraction.html#a3deac1acbb6b058db05760bf1ed111e7">FractureMechanics::OpAnalyticalMaterialTraction</a>
-, <a class="el" href="structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dX.html#a221b2f3d313eed459e51e00529d6715f">FractureMechanics::OpLhsBoneExplicitDerivariveWithHooke_dX</a>
 , <a class="el" href="structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dx.html#ac64b3325273fb1e9f4999c856bee51a8">FractureMechanics::OpLhsBoneExplicitDerivariveWithHooke_dx</a>
+, <a class="el" href="structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dX.html#a221b2f3d313eed459e51e00529d6715f">FractureMechanics::OpLhsBoneExplicitDerivariveWithHooke_dX</a>
 , <a class="el" href="structFractureMechanics_1_1OpRhsBoneExplicitDerivariveWithHooke.html#aed9a832284eab7bdd112b30e196816b7">FractureMechanics::OpRhsBoneExplicitDerivariveWithHooke</a>
 , <a class="el" href="structMetaSpringBC_1_1DataAtIntegrationPtsSprings.html#ab5cff69ede81ce1979c5804b36018405">MetaSpringBC::DataAtIntegrationPtsSprings</a>
 , <a class="el" href="structNeumannForcesSurface_1_1DataAtIntegrationPts.html#a70dc4a7128551cfad77e93fdb5660eb0">NeumannForcesSurface::DataAtIntegrationPts</a>
@@ -1348,8 +1347,15 @@ $(function() {
 : <a class="el" href="structFractureMechanics_1_1CPMeshCut.html#a702b24eb98806e8da55b7094d1fca832">FractureMechanics::CPMeshCut</a>
 , <a class="el" href="structMoFEM_1_1CutMeshInterface.html#ad31de547dbb35fc59c2d858e698179d6">MoFEM::CutMeshInterface</a>
 </li>
+<li>frontAdjEdges
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a75beafe51a712e92adb09e89d858ae70">EshelbianPlasticity::EshelbianCore</a>
+</li>
 <li>FrontArcLengthControl()
 : <a class="el" href="structFractureMechanics_1_1GriffithForceElement_1_1FrontArcLengthControl.html#ab5cc5e033c8ea005c616d97bff6bcb41">FractureMechanics::GriffithForceElement::FrontArcLengthControl</a>
+</li>
+<li>frontEdges
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#aa8a7e11857f4455ee3bf22ee56b6b1c1">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structEshelbianPlasticity_1_1SetIntegrationAtFrontVolume.html#ab7b229f126666030c6df2f79152acd6c">EshelbianPlasticity::SetIntegrationAtFrontVolume</a>
 </li>
 <li>frontF
 : <a class="el" href="structObosleteUsersModules_1_1TangentWithMeshSmoothingFrontConstrain.html#a7451619ddf1469ce1509ad4f61be3532">ObosleteUsersModules::TangentWithMeshSmoothingFrontConstrain</a>
@@ -1358,14 +1364,21 @@ $(function() {
 <li>frontIndices
 : <a class="el" href="structSmoother_1_1OpRhsSmoother.html#a06ab0e27aea12ed2bd7bd6ee8f15f928">Smoother::OpRhsSmoother</a>
 </li>
-<li>frontNodes
-: <a class="el" href="structFractureMechanics_1_1GriffithForceElement_1_1BlockData.html#aea8faea9e4e340479df9546666985590">FractureMechanics::GriffithForceElement::BlockData</a>
+<li>frontLayers
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#af14208c3f6347623137a2c8411549507">EshelbianPlasticity::EshelbianCore</a>
 </li>
-<li>FSource
-: <a class="el" href="structPoissonExample_1_1OpF.html#a9995d25be251f57ba72526331fc98f55">PoissonExample::OpF</a>
+<li>frontNodes
+: <a class="el" href="structEshelbianPlasticity_1_1SetIntegrationAtFrontVolume.html#a1e20c2dfc8d0572a6a3ba832fc309894">EshelbianPlasticity::SetIntegrationAtFrontVolume</a>
+, <a class="el" href="structFractureMechanics_1_1GriffithForceElement_1_1BlockData.html#aea8faea9e4e340479df9546666985590">FractureMechanics::GriffithForceElement::BlockData</a>
+</li>
+<li>frontVertices
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#adfc84bf2a41866defda41859893479ce">EshelbianPlasticity::EshelbianCore</a>
 </li>
 <li>fSource
 : <a class="el" href="structPoissonExample_1_1OpF.html#a9f90a4a852c7cb1c66b67da66c292ada">PoissonExample::OpF</a>
+</li>
+<li>FSource
+: <a class="el" href="structPoissonExample_1_1OpF.html#a9995d25be251f57ba72526331fc98f55">PoissonExample::OpF</a>
 </li>
 <li>fsRawPtr
 : <a class="el" href="structTSPrePostProc.html#a844be29cfe9d0957940d2c3a19e6e164">TSPrePostProc</a>
@@ -1374,7 +1387,7 @@ $(function() {
 : <a class="el" href="structCohesiveElement_1_1CohesiveInterfaceElement_1_1PhysicalEquation.html#a757dcd88c6010e94f941d90bb2057008">CohesiveElement::CohesiveInterfaceElement::PhysicalEquation</a>
 </li>
 <li>FTENSOR_INDEX()
-: <a class="el" href="structOpCheckValsDiffVals.html#ac0b6c678d935a609da2158bda2abdfe6">OpCheckValsDiffVals</a>
+: <a class="el" href="structOpCheckValsDiffVals.html#aabfe049b254225d4d565238d741f043f">OpCheckValsDiffVals</a>
 </li>
 <li>fun()
 : <a class="el" href="structApproxFunction.html#a5fe9bf0c612b310e530015c00ff90d8a">ApproxFunction</a>

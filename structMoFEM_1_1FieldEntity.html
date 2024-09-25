@@ -199,16 +199,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af2642046f8c6e9544ea604807cd2a9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate global UId.  <a href="structMoFEM_1_1FieldEntity.html#af2642046f8c6e9544ea604807cd2a9c7">More...</a><br /></td></tr>
 <tr class="separator:af2642046f8c6e9544ea604807cd2a9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab28eec3f100523fdd255716090272a03"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab28eec3f100523fdd255716090272a03"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1FieldEntity.html#ab28eec3f100523fdd255716090272a03">getLoFieldEntityUId</a> (<a class="el" href="classT.html">T</a> &amp;uid)=delete</td></tr>
+<tr class="memitem:ab28eec3f100523fdd255716090272a03"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1FieldEntity.html#ab28eec3f100523fdd255716090272a03">getLoFieldEntityUId</a> (T &amp;uid)=delete</td></tr>
 <tr class="separator:ab28eec3f100523fdd255716090272a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b0fcf2450de70f9868325c5683ff390"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a9b0fcf2450de70f9868325c5683ff390"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1FieldEntity.html#a9b0fcf2450de70f9868325c5683ff390">getHiFieldEntityUId</a> (<a class="el" href="classT.html">T</a> &amp;uid)=delete</td></tr>
+<tr class="memitem:a9b0fcf2450de70f9868325c5683ff390"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1FieldEntity.html#a9b0fcf2450de70f9868325c5683ff390">getHiFieldEntityUId</a> (T &amp;uid)=delete</td></tr>
 <tr class="separator:a9b0fcf2450de70f9868325c5683ff390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f4cf5a9a849a268321f1b98598b113b"><td class="memItemLeft" align="right" valign="top">const std::array&lt; int, <a class="el" href="definitions_8h.html#a2d9985594995d39619ace246858c70b5">MAX_DOFS_ON_ENTITY</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1FieldEntity.html#a5f4cf5a9a849a268321f1b98598b113b">getDofOrderMap</a> () const</td></tr>
 <tr class="memdesc:a5f4cf5a9a849a268321f1b98598b113b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get hash-map relating dof index on entity with its order  <a href="structMoFEM_1_1FieldEntity.html#a5f4cf5a9a849a268321f1b98598b113b">More...</a><br /></td></tr>
 <tr class="separator:a5f4cf5a9a849a268321f1b98598b113b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad99e0df41923086d95ca8b0f2a918cb4"><td class="memTemplParams" colspan="2">template&lt;typename T  = EntityStorage&gt; </td></tr>
-<tr class="memitem:ad99e0df41923086d95ca8b0f2a918cb4"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; <a class="el" href="classT.html">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1FieldEntity.html#ad99e0df41923086d95ca8b0f2a918cb4">getSharedStoragePtr</a> () const</td></tr>
+<tr class="memitem:ad99e0df41923086d95ca8b0f2a918cb4"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1FieldEntity.html#ad99e0df41923086d95ca8b0f2a918cb4">getSharedStoragePtr</a> () const</td></tr>
 <tr class="memdesc:ad99e0df41923086d95ca8b0f2a918cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Weak Storage pointer.  <a href="structMoFEM_1_1FieldEntity.html#ad99e0df41923086d95ca8b0f2a918cb4">More...</a><br /></td></tr>
 <tr class="separator:ad99e0df41923086d95ca8b0f2a918cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd0f76d688a0f4dc06287e5af54e1ea7"><td class="memItemLeft" align="right" valign="top">boost::weak_ptr&lt; <a class="el" href="structMoFEM_1_1EntityStorage.html">EntityStorage</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1FieldEntity.html#abd0f76d688a0f4dc06287e5af54e1ea7">getWeakStoragePtr</a> () const</td></tr>
@@ -912,7 +912,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void MoFEM::FieldEntity::getHiFieldEntityUId </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classT.html">T</a> &amp;&#160;</td>
+          <td class="paramtype">T &amp;&#160;</td>
           <td class="paramname"><em>uid</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1171,7 +1171,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void MoFEM::FieldEntity::getLoFieldEntityUId </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classT.html">T</a> &amp;&#160;</td>
+          <td class="paramtype">T &amp;&#160;</td>
           <td class="paramname"><em>uid</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1495,7 +1495,7 @@ template&lt;typename T  = EntityStorage&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::shared_ptr&lt;<a class="el" href="classT.html">T</a>&gt; MoFEM::FieldEntity::getSharedStoragePtr </td>
+          <td class="memname">boost::shared_ptr&lt;T&gt; MoFEM::FieldEntity::getSharedStoragePtr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

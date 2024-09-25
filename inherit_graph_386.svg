@@ -12,10 +12,10 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="classFTensor_1_1Dg__times__Tensor2__1__0.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="classFTensor_1_1Dg__times__Dg__01__01.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-41.5 149,-41.5 149,-0.5 0,-0.5"/>
-<text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Dg_times_Tensor2</text>
-<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">_1_0&lt; A, B, T, U, Dim01,</text>
+<text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Dg_times_Dg</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">_01_01&lt; A, B, T, U, Dim01,</text>
 <text text-anchor="middle" x="74.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00"> Dim2, Dim3, i, j, k, l &gt;</text>
 </a>
 </g>

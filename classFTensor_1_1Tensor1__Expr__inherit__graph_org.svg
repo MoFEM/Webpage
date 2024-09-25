@@ -25,7 +25,7 @@
 <g id="a_node2"><a xlink:href="classFTensor_1_1Tensor1__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="257,-637.5 257,-667.5 381,-667.5 381,-637.5 257,-637.5"/>
 <text text-anchor="start" x="265" y="-655.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Tensor1_Expr</text>
-<text text-anchor="middle" x="319" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim1, j &gt;</text>
+<text text-anchor="middle" x="319" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; A, T, Dim0, i &gt;</text>
 </a>
 </g>
 </g>
@@ -34,7 +34,7 @@
 <title>Node1&#45;&gt;Node2</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M66.64,-358.74C76.18,-421.28 103.8,-580.9 142,-616.5 172.46,-644.89 219.01,-653.46 256.59,-655.16"/>
 <polygon fill="orange" stroke="orange" points="70.06,-357.95 65.12,-348.58 63.14,-358.98 70.06,-357.95"/>
-<text text-anchor="middle" x="190.5" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim1, j &gt;</text>
+<text text-anchor="middle" x="190.5" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; A, T, Dim0, i &gt;</text>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
@@ -42,7 +42,7 @@
 <g id="a_node3"><a xlink:href="classFTensor_1_1Tensor1__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="257,-588.5 257,-618.5 381,-618.5 381,-588.5 257,-588.5"/>
 <text text-anchor="start" x="265" y="-606.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Tensor1_Expr</text>
-<text text-anchor="middle" x="319" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; A, T, Dim0, i &gt;</text>
+<text text-anchor="middle" x="319" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim1, j &gt;</text>
 </a>
 </g>
 </g>
@@ -51,7 +51,7 @@
 <title>Node1&#45;&gt;Node3</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M64.07,-358.77C67.5,-406.12 81.87,-508.28 142,-562.5 172.99,-590.44 219.28,-600.42 256.62,-603.55"/>
 <polygon fill="orange" stroke="orange" points="67.56,-358.52 63.45,-348.75 60.58,-358.95 67.56,-358.52"/>
-<text text-anchor="middle" x="190.5" y="-604.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; A, T, Dim0, i &gt;</text>
+<text text-anchor="middle" x="190.5" y="-604.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim1, j &gt;</text>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
@@ -93,7 +93,7 @@
 <g id="a_node6"><a xlink:href="classFTensor_1_1Tensor1__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="257,-441.5 257,-471.5 381,-471.5 381,-441.5 257,-441.5"/>
 <text text-anchor="start" x="265" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Tensor1_Expr</text>
-<text text-anchor="middle" x="319" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim0, i &gt;</text>
+<text text-anchor="middle" x="319" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim3, l &gt;</text>
 </a>
 </g>
 </g>
@@ -102,7 +102,7 @@
 <title>Node1&#45;&gt;Node6</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M83.19,-356.38C98.06,-371.95 119.52,-391.93 142,-404.5 177.6,-424.4 221.6,-437.4 256.7,-445.42"/>
 <polygon fill="orange" stroke="orange" points="85.42,-353.64 76.05,-348.7 80.3,-358.41 85.42,-353.64"/>
-<text text-anchor="middle" x="190.5" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim0, i &gt;</text>
+<text text-anchor="middle" x="190.5" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim3, l &gt;</text>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
@@ -127,7 +127,7 @@
 <g id="a_node8"><a xlink:href="classFTensor_1_1Tensor1__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="257,-343.5 257,-373.5 381,-373.5 381,-343.5 257,-343.5"/>
 <text text-anchor="start" x="265" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Tensor1_Expr</text>
-<text text-anchor="middle" x="319" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim3, l &gt;</text>
+<text text-anchor="middle" x="319" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim, j &gt;</text>
 </a>
 </g>
 </g>
@@ -136,7 +136,7 @@
 <title>Node1&#45;&gt;Node8</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M134.21,-340.48C172.83,-344.27 220.06,-348.9 256.98,-352.52"/>
 <polygon fill="orange" stroke="orange" points="134.37,-336.98 124.08,-339.49 133.69,-343.95 134.37,-336.98"/>
-<text text-anchor="middle" x="190.5" y="-352.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim3, l &gt;</text>
+<text text-anchor="middle" x="190.5" y="-352.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim, j &gt;</text>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
@@ -144,7 +144,7 @@
 <g id="a_node9"><a xlink:href="classFTensor_1_1Tensor1__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="257,-294.5 257,-324.5 381,-324.5 381,-294.5 257,-294.5"/>
 <text text-anchor="start" x="265" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Tensor1_Expr</text>
-<text text-anchor="middle" x="319" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim, j &gt;</text>
+<text text-anchor="middle" x="319" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim0, i &gt;</text>
 </a>
 </g>
 </g>
@@ -153,7 +153,7 @@
 <title>Node1&#45;&gt;Node9</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M134.32,-326.24C136.91,-325.99 139.48,-325.74 142,-325.5 180.18,-321.83 223.03,-317.93 256.9,-314.9"/>
 <polygon fill="orange" stroke="orange" points="133.85,-322.77 124.24,-327.24 134.53,-329.74 133.85,-322.77"/>
-<text text-anchor="middle" x="190.5" y="-328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim, j &gt;</text>
+<text text-anchor="middle" x="190.5" y="-328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim0, i &gt;</text>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
@@ -178,7 +178,7 @@
 <g id="a_node11"><a xlink:href="classFTensor_1_1Tensor1__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="257,-196.5 257,-226.5 381,-226.5 381,-196.5 257,-196.5"/>
 <text text-anchor="start" x="265" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Tensor1_Expr</text>
-<text text-anchor="middle" x="319" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim01, i &gt;</text>
+<text text-anchor="middle" x="319" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim, l &gt;</text>
 </a>
 </g>
 </g>
@@ -187,7 +187,7 @@
 <title>Node1&#45;&gt;Node11</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M82.82,-310.5C97.65,-294.63 119.22,-274.18 142,-261.5 177.53,-241.72 221.53,-229.22 256.64,-221.67"/>
 <polygon fill="orange" stroke="orange" points="79.85,-308.57 75.71,-318.32 85.03,-313.28 79.85,-308.57"/>
-<text text-anchor="middle" x="190.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim01, i &gt;</text>
+<text text-anchor="middle" x="190.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim, l &gt;</text>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">
@@ -195,7 +195,7 @@
 <g id="a_node12"><a xlink:href="classFTensor_1_1Tensor1__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="257,-147.5 257,-177.5 381,-177.5 381,-147.5 257,-147.5"/>
 <text text-anchor="start" x="265" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Tensor1_Expr</text>
-<text text-anchor="middle" x="319" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim, l &gt;</text>
+<text text-anchor="middle" x="319" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; B, U, Dim01, i &gt;</text>
 </a>
 </g>
 </g>
@@ -204,7 +204,7 @@
 <title>Node1&#45;&gt;Node12</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M72.6,-308.78C84.65,-281 107.96,-236.52 142,-211.5 175.35,-186.99 220.44,-174.73 256.62,-168.61"/>
 <polygon fill="orange" stroke="orange" points="69.29,-307.62 68.67,-318.2 75.75,-310.32 69.29,-307.62"/>
-<text text-anchor="middle" x="190.5" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim, l &gt;</text>
+<text text-anchor="middle" x="190.5" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim01, i &gt;</text>
 </g>
 <!-- Node13 -->
 <g id="node13" class="node">

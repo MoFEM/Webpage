@@ -154,7 +154,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00320">320</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00371">371</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a73d72b4c05c5007df994227473d7323c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73d72b4c05c5007df994227473d7323c">&#9670;&nbsp;</a></span>TractionBc()</h2>
@@ -188,22 +188,22 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l00654">654</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    : <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#acdca9d4356122af653517be51f735be9">blockName</a>(name), <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#af9c328c8ecd8ad48acbd89d56976aeb0">faces</a>(<a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#af9c328c8ecd8ad48acbd89d56976aeb0">faces</a>) {</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;  <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>.resize(3, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;  <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>.resize(3, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii != 3; ++ii) {</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>[ii] = attr[ii];</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>[ii] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(attr[ii + 3]);</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;  }</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160; </div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EP&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Add BCForce &quot;</span> &lt;&lt; name;</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EP&quot;</span>, Sev::inform)</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;Add BCForce vals &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>[0] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>[1] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>[2];</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EP&quot;</span>, Sev::inform)</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;Add BCForce flags &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>[0] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>[1] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>[2];</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EP&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Add BCForce nb. of faces &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#af9c328c8ecd8ad48acbd89d56976aeb0">faces</a>.size();</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l01263">1263</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;    : <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#acdca9d4356122af653517be51f735be9">blockName</a>(name), <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#af9c328c8ecd8ad48acbd89d56976aeb0">faces</a>(<a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#af9c328c8ecd8ad48acbd89d56976aeb0">faces</a>) {</div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;  <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>.resize(3, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;  <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>.resize(3, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii != 3; ++ii) {</div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>[ii] = attr[ii];</div>
+<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;    <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>[ii] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(attr[ii + 3]);</div>
+<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;  }</div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160; </div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EP&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Add BCForce &quot;</span> &lt;&lt; name;</div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EP&quot;</span>, Sev::inform)</div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;Add BCForce vals &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>[0] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>[1] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">vals</a>[2];</div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EP&quot;</span>, Sev::inform)</div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;      &lt;&lt; <span class="stringliteral">&quot;Add BCForce flags &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>[0] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>[1] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">flags</a>[2];</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EP&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Add BCForce nb. of faces &quot;</span> &lt;&lt; <a class="code" href="structEshelbianPlasticity_1_1TractionBc.html#af9c328c8ecd8ad48acbd89d56976aeb0">faces</a>.size();</div>
+<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -220,7 +220,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00322">322</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00373">373</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +236,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00323">323</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00374">374</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -252,7 +252,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00325">325</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00376">376</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -268,7 +268,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00324">324</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00375">375</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -277,11 +277,11 @@ Public Attributes</h2></td></tr>
 <li>users_modules/eshelbian_plasticit/src/impl/<a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="astructEshelbianPlasticity_1_1TractionBc_html_acdca9d4356122af653517be51f735be9"><div class="ttname"><a href="structEshelbianPlasticity_1_1TractionBc.html#acdca9d4356122af653517be51f735be9">EshelbianPlasticity::TractionBc::blockName</a></div><div class="ttdeci">std::string blockName</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00322">EshelbianPlasticity.hpp:322</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1TractionBc_html_af9c328c8ecd8ad48acbd89d56976aeb0"><div class="ttname"><a href="structEshelbianPlasticity_1_1TractionBc.html#af9c328c8ecd8ad48acbd89d56976aeb0">EshelbianPlasticity::TractionBc::faces</a></div><div class="ttdeci">Range faces</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00323">EshelbianPlasticity.hpp:323</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1TractionBc_html_acdca9d4356122af653517be51f735be9"><div class="ttname"><a href="structEshelbianPlasticity_1_1TractionBc.html#acdca9d4356122af653517be51f735be9">EshelbianPlasticity::TractionBc::blockName</a></div><div class="ttdeci">std::string blockName</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00373">EshelbianPlasticity.hpp:373</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1TractionBc_html_af9c328c8ecd8ad48acbd89d56976aeb0"><div class="ttname"><a href="structEshelbianPlasticity_1_1TractionBc.html#af9c328c8ecd8ad48acbd89d56976aeb0">EshelbianPlasticity::TractionBc::faces</a></div><div class="ttdeci">Range faces</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00374">EshelbianPlasticity.hpp:374</a></div></div>
 <div class="ttc" id="agroup__mofem__log__manager_html_ga19fe81dc9081ceb92ced847e619ca654"><div class="ttname"><a href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a></div><div class="ttdeci">#define MOFEM_LOG(channel, severity)</div><div class="ttdoc">Log.</div><div class="ttdef"><b>Definition:</b> <a href="LogManager_8hpp_source.html#l00308">LogManager.hpp:308</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1TractionBc_html_ad94f53fdc864c2d980f9faeb6c120d42"><div class="ttname"><a href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">EshelbianPlasticity::TractionBc::flags</a></div><div class="ttdeci">VectorInt3 flags</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00325">EshelbianPlasticity.hpp:325</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1TractionBc_html_a044097511460160b752c5cb188008f18"><div class="ttname"><a href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">EshelbianPlasticity::TractionBc::vals</a></div><div class="ttdeci">VectorDouble3 vals</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00324">EshelbianPlasticity.hpp:324</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1TractionBc_html_ad94f53fdc864c2d980f9faeb6c120d42"><div class="ttname"><a href="structEshelbianPlasticity_1_1TractionBc.html#ad94f53fdc864c2d980f9faeb6c120d42">EshelbianPlasticity::TractionBc::flags</a></div><div class="ttdeci">VectorInt3 flags</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00376">EshelbianPlasticity.hpp:376</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1TractionBc_html_a044097511460160b752c5cb188008f18"><div class="ttname"><a href="structEshelbianPlasticity_1_1TractionBc.html#a044097511460160b752c5cb188008f18">EshelbianPlasticity::TractionBc::vals</a></div><div class="ttdeci">VectorDouble3 vals</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00375">EshelbianPlasticity.hpp:375</a></div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr cla ss="footer" />

@@ -72,8 +72,8 @@ var sectionId = 'dynsection-0';
 <g id="a_node2"><a xlink:href="classFTensor_1_1Ddg__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="271.5,-720.5 271.5,-761.5 385.5,-761.5 385.5,-720.5 271.5,-720.5"/>
 <text text-anchor="start" x="279.5" y="-749.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Ddg_Expr&lt;</text>
-<text text-anchor="start" x="279.5" y="-738.5" font-family="Helvetica,sans-Serif" font-size="10.00"> A, T, Dim, Dim, i,</text>
-<text text-anchor="middle" x="328.5" y="-727.5" font-family="Helvetica,sans-Serif" font-size="10.00"> k, l, j &gt;</text>
+<text text-anchor="start" x="279.5" y="-738.5" font-family="Helvetica,sans-Serif" font-size="10.00"> B, U, Dim, Dim, i,</text>
+<text text-anchor="middle" x="328.5" y="-727.5" font-family="Helvetica,sans-Serif" font-size="10.00"> l, k, j &gt;</text>
 </a>
 </g>
 </g>
@@ -82,8 +82,8 @@ var sectionId = 'dynsection-0';
 <title>Node1&#45;&gt;Node2</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M62.76,-411.81C70.02,-485.76 92.23,-670.23 136,-711 171.83,-744.37 228.79,-749.5 271.29,-747.71"/>
 <polygon fill="orange" stroke="orange" points="66.23,-411.35 61.79,-401.73 59.26,-412.02 66.23,-411.35"/>
-<text text-anchor="start" x="144.5" y="-761" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; A, T, Dim, Dim, i,</text>
-<text text-anchor="middle" x="193.5" y="-750" font-family="Helvetica,sans-Serif" font-size="10.00"> k, l, j &gt;</text>
+<text text-anchor="start" x="143.5" y="-761" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim, Dim, i,</text>
+<text text-anchor="middle" x="193.5" y="-750" font-family="Helvetica,sans-Serif" font-size="10.00"> l, k, j &gt;</text>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
@@ -91,8 +91,8 @@ var sectionId = 'dynsection-0';
 <g id="a_node3"><a xlink:href="classFTensor_1_1Ddg__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="271.5,-660.5 271.5,-701.5 385.5,-701.5 385.5,-660.5 271.5,-660.5"/>
 <text text-anchor="start" x="279.5" y="-689.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Ddg_Expr&lt;</text>
-<text text-anchor="start" x="279.5" y="-678.5" font-family="Helvetica,sans-Serif" font-size="10.00"> B, U, Dim, Dim, i,</text>
-<text text-anchor="middle" x="328.5" y="-667.5" font-family="Helvetica,sans-Serif" font-size="10.00"> l, k, j &gt;</text>
+<text text-anchor="start" x="279.5" y="-678.5" font-family="Helvetica,sans-Serif" font-size="10.00"> A, T, Dim, Dim, i,</text>
+<text text-anchor="middle" x="328.5" y="-667.5" font-family="Helvetica,sans-Serif" font-size="10.00"> k, l, j &gt;</text>
 </a>
 </g>
 </g>
@@ -101,8 +101,8 @@ var sectionId = 'dynsection-0';
 <title>Node1&#45;&gt;Node3</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M64.61,-411.86C74.69,-475.12 100.67,-616.25 136,-648 172.38,-680.7 228.99,-686.94 271.23,-686.21"/>
 <polygon fill="orange" stroke="orange" points="68.02,-411.04 63.02,-401.7 61.11,-412.12 68.02,-411.04"/>
-<text text-anchor="start" x="143.5" y="-699" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim, Dim, i,</text>
-<text text-anchor="middle" x="193.5" y="-688" font-family="Helvetica,sans-Serif" font-size="10.00"> l, k, j &gt;</text>
+<text text-anchor="start" x="144.5" y="-699" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; A, T, Dim, Dim, i,</text>
+<text text-anchor="middle" x="193.5" y="-688" font-family="Helvetica,sans-Serif" font-size="10.00"> k, l, j &gt;</text>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
@@ -149,7 +149,7 @@ var sectionId = 'dynsection-0';
 <polygon fill="white" stroke="black" points="269.5,-480.5 269.5,-521.5 387.5,-521.5 387.5,-480.5 269.5,-480.5"/>
 <text text-anchor="start" x="277.5" y="-509.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Ddg_Expr&lt;</text>
 <text text-anchor="start" x="277.5" y="-498.5" font-family="Helvetica,sans-Serif" font-size="10.00"> A, T, Dim45, Dim01,</text>
-<text text-anchor="middle" x="328.5" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00"> i, j, m, n &gt;</text>
+<text text-anchor="middle" x="328.5" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00"> m, n, i, j &gt;</text>
 </a>
 </g>
 </g>
@@ -159,7 +159,7 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M82.6,-409.56C96.44,-425.19 115.4,-443.64 136,-455 177.32,-477.78 229.74,-489.37 269.29,-495.21"/>
 <polygon fill="orange" stroke="orange" points="85.02,-407.01 75.86,-401.69 79.71,-411.56 85.02,-407.01"/>
 <text text-anchor="start" x="137" y="-505" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; A, T, Dim45, Dim01,</text>
-<text text-anchor="middle" x="193.5" y="-494" font-family="Helvetica,sans-Serif" font-size="10.00"> i, j, m, n &gt;</text>
+<text text-anchor="middle" x="193.5" y="-494" font-family="Helvetica,sans-Serif" font-size="10.00"> m, n, i, j &gt;</text>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
@@ -168,7 +168,7 @@ var sectionId = 'dynsection-0';
 <polygon fill="white" stroke="black" points="269.5,-420.5 269.5,-461.5 387.5,-461.5 387.5,-420.5 269.5,-420.5"/>
 <text text-anchor="start" x="277.5" y="-449.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Ddg_Expr&lt;</text>
 <text text-anchor="start" x="277.5" y="-438.5" font-family="Helvetica,sans-Serif" font-size="10.00"> A, T, Dim45, Dim01,</text>
-<text text-anchor="middle" x="328.5" y="-427.5" font-family="Helvetica,sans-Serif" font-size="10.00"> m, n, i, j &gt;</text>
+<text text-anchor="middle" x="328.5" y="-427.5" font-family="Helvetica,sans-Serif" font-size="10.00"> i, j, m, n &gt;</text>
 </a>
 </g>
 </g>
@@ -178,7 +178,7 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M126.85,-404.5C129.93,-405.38 132.99,-406.22 136,-407 180.14,-418.4 230.98,-427.23 269.18,-433.03"/>
 <polygon fill="orange" stroke="orange" points="127.57,-401.06 116.98,-401.55 125.56,-407.77 127.57,-401.06"/>
 <text text-anchor="start" x="137" y="-443" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; A, T, Dim45, Dim01,</text>
-<text text-anchor="middle" x="193.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00"> m, n, i, j &gt;</text>
+<text text-anchor="middle" x="193.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00"> i, j, m, n &gt;</text>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
@@ -224,8 +224,8 @@ var sectionId = 'dynsection-0';
 <g id="a_node10"><a xlink:href="classFTensor_1_1Ddg__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="269,-240.5 269,-281.5 388,-281.5 388,-240.5 269,-240.5"/>
 <text text-anchor="start" x="277" y="-269.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Ddg_Expr&lt;</text>
-<text text-anchor="start" x="277" y="-258.5" font-family="Helvetica,sans-Serif" font-size="10.00"> B, U, Dim01, Dim23,</text>
-<text text-anchor="middle" x="328.5" y="-247.5" font-family="Helvetica,sans-Serif" font-size="10.00"> i, j, k, l &gt;</text>
+<text text-anchor="start" x="277" y="-258.5" font-family="Helvetica,sans-Serif" font-size="10.00"> B, U, Dim23, Dim01,</text>
+<text text-anchor="middle" x="328.5" y="-247.5" font-family="Helvetica,sans-Serif" font-size="10.00"> k, l, i, j &gt;</text>
 </a>
 </g>
 </g>
@@ -234,8 +234,8 @@ var sectionId = 'dynsection-0';
 <title>Node1&#45;&gt;Node10</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M82.23,-352.32C96.06,-336.4 115.14,-317.53 136,-306 177.1,-283.29 229.3,-271.99 268.81,-266.4"/>
 <polygon fill="orange" stroke="orange" points="79.26,-350.42 75.5,-360.33 84.62,-354.93 79.26,-350.42"/>
-<text text-anchor="start" x="136" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim01, Dim23,</text>
-<text text-anchor="middle" x="193.5" y="-309" font-family="Helvetica,sans-Serif" font-size="10.00"> i, j, k, l &gt;</text>
+<text text-anchor="start" x="136" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim23, Dim01,</text>
+<text text-anchor="middle" x="193.5" y="-309" font-family="Helvetica,sans-Serif" font-size="10.00"> k, l, i, j &gt;</text>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node">
@@ -243,8 +243,8 @@ var sectionId = 'dynsection-0';
 <g id="a_node11"><a xlink:href="classFTensor_1_1Ddg__Expr.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="269,-180.5 269,-221.5 388,-221.5 388,-180.5 269,-180.5"/>
 <text text-anchor="start" x="277" y="-209.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Ddg_Expr&lt;</text>
-<text text-anchor="start" x="277" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00"> B, U, Dim23, Dim01,</text>
-<text text-anchor="middle" x="328.5" y="-187.5" font-family="Helvetica,sans-Serif" font-size="10.00"> k, l, i, j &gt;</text>
+<text text-anchor="start" x="277" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00"> B, U, Dim01, Dim23,</text>
+<text text-anchor="middle" x="328.5" y="-187.5" font-family="Helvetica,sans-Serif" font-size="10.00"> i, j, k, l &gt;</text>
 </a>
 </g>
 </g>
@@ -253,8 +253,8 @@ var sectionId = 'dynsection-0';
 <title>Node1&#45;&gt;Node11</title>
 <path fill="none" stroke="orange" stroke-dasharray="5,2" d="M68.6,-350.86C79.2,-319.31 100.34,-270.7 136,-244 174.19,-215.41 227.88,-205.23 268.7,-201.88"/>
 <polygon fill="orange" stroke="orange" points="65.24,-349.87 65.52,-360.46 71.91,-352.01 65.24,-349.87"/>
-<text text-anchor="start" x="136" y="-258" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim23, Dim01,</text>
-<text text-anchor="middle" x="193.5" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00"> k, l, i, j &gt;</text>
+<text text-anchor="start" x="136" y="-258" font-family="Helvetica,sans-Serif" font-size="10.00"> &lt; B, U, Dim01, Dim23,</text>
+<text text-anchor="middle" x="193.5" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00"> i, j, k, l &gt;</text>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">

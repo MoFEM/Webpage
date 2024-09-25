@@ -498,22 +498,22 @@ $(function() {
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetMaxSteps(ts, 1);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetExactFinalTime(ts, TS_EXACTFINALTIME_MATCHSTEP);</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> <a name="_a73"></a><a class="code" href="classT.html">T</a> = <a name="a74"></a><a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a75"></a><a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), <a class="code" href="classT.html">T</a>, INSERT_VALUES,</div>
+<div class="line">  <span class="keyword">auto</span> T = <a name="a73"></a><a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a74"></a><a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), T, INSERT_VALUES,</div>
 <div class="line">                                 SCATTER_FORWARD);</div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetSolution(ts, <a class="code" href="classT.html">T</a>);</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetSolution(ts, T);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetFromOptions(ts);</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSolve(ts, NULL);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSGetTime(ts, &amp;ftime);</div>
 <div class="line"> </div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> mField.getInterface&lt;<a name="_a76"></a><a class="code" href="structMoFEM_1_1FieldBlas.html">FieldBlas</a>&gt;()-&gt;fieldScale(<a class="code" href="approx__sphere_8cpp.html#a53f9ea5caec5c6525b917820b6db55e5">A</a>, <span class="stringliteral">&quot;HO_POSITIONS&quot;</span>);</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> mField.getInterface&lt;<a name="_a75"></a><a class="code" href="structMoFEM_1_1FieldBlas.html">FieldBlas</a>&gt;()-&gt;fieldScale(<a class="code" href="approx__sphere_8cpp.html#a53f9ea5caec5c6525b917820b6db55e5">A</a>, <span class="stringliteral">&quot;HO_POSITIONS&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Solve]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a77"></a><a class="code" href="structApproxSphere.html#af97e1a96bd4de2045b03356c0a2727e4">ApproxSphere::outputResults</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a76"></a><a class="code" href="structApproxSphere.html#af97e1a96bd4de2045b03356c0a2727e4">ApproxSphere::outputResults</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> x_ptr = boost::make_shared&lt;MatrixDouble&gt;();</div>
@@ -530,11 +530,11 @@ $(function() {
 <div class="line">  post_proc_fe-&gt;getOpPtrVector().push_back(</div>
 <div class="line">      <span class="keyword">new</span> <a class="code" href="structMoFEM_1_1OpCalculateVectorFieldValues.html">OpCalculateVectorFieldValues&lt;3&gt;</a>(<span class="stringliteral">&quot;HO_POSITIONS&quot;</span>, x_ptr));</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">using</span> <a name="_a78"></a><a class="code" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPPMap</a> = <a class="code" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPostProcMapInMoab&lt;3, 3&gt;</a>;</div>
+<div class="line">  <span class="keyword">using</span> <a name="_a77"></a><a class="code" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPPMap</a> = <a class="code" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPostProcMapInMoab&lt;3, 3&gt;</a>;</div>
 <div class="line"> </div>
 <div class="line">  post_proc_fe-&gt;getOpPtrVector().push_back(</div>
 <div class="line"> </div>
-<div class="line">      <span class="keyword">new</span> <a name="a79"></a><a class="code" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(post_proc_fe-&gt;getPostProcMesh(),</div>
+<div class="line">      <span class="keyword">new</span> <a name="a78"></a><a class="code" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(post_proc_fe-&gt;getPostProcMesh(),</div>
 <div class="line">                  post_proc_fe-&gt;getMapGaussPts(),</div>
 <div class="line"> </div>
 <div class="line">                  {},</div>
@@ -547,21 +547,21 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  );</div>
 <div class="line"> </div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a80"></a><a class="code" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(dm, <span class="stringliteral">&quot;dFE&quot;</span>, post_proc_fe);</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a79"></a><a class="code" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(dm, <span class="stringliteral">&quot;dFE&quot;</span>, post_proc_fe);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> post_proc_fe-&gt;writeFile(<span class="stringliteral">&quot;out_approx.h5m&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> error_fe = boost::make_shared&lt;DomainEle&gt;(mField);</div>
 <div class="line"> </div>
 <div class="line">  error_fe-&gt;getOpPtrVector().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a name="_a81"></a><a class="code" href="structMoFEM_1_1OpGetHONormalsOnFace.html">OpGetHONormalsOnFace</a>(<span class="stringliteral">&quot;HO_POSITIONS&quot;</span>));</div>
+<div class="line">      <span class="keyword">new</span> <a name="_a80"></a><a class="code" href="structMoFEM_1_1OpGetHONormalsOnFace.html">OpGetHONormalsOnFace</a>(<span class="stringliteral">&quot;HO_POSITIONS&quot;</span>));</div>
 <div class="line">  error_fe-&gt;getOpPtrVector().push_back(</div>
 <div class="line">      <span class="keyword">new</span> <a class="code" href="structMoFEM_1_1OpCalculateVectorFieldValues.html">OpCalculateVectorFieldValues&lt;3&gt;</a>(<span class="stringliteral">&quot;HO_POSITIONS&quot;</span>, x_ptr));</div>
 <div class="line">  error_fe-&gt;getOpPtrVector().push_back(<span class="keyword">new</span> <a class="code" href="structOpError.html">OpError</a>(<span class="stringliteral">&quot;HO_POSITIONS&quot;</span>, x_ptr));</div>
 <div class="line"> </div>
 <div class="line">  error_fe-&gt;preProcessHook = [&amp;]() {</div>
 <div class="line">    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line">    <a name="a82"></a><a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EXAMPLE&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Create vec &quot;</span>;</div>
-<div class="line">    <a class="code" href="structOpError.html#a1b33698cf411e453fe123a0ea6665f06">OpError::errorVec</a> = <a name="a83"></a><a class="code" href="namespaceMoFEM.html#a77d94d2111c0c988bc3100b3910cc25c">createVectorMPI</a>(</div>
+<div class="line">    <a name="a81"></a><a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;EXAMPLE&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Create vec &quot;</span>;</div>
+<div class="line">    <a class="code" href="structOpError.html#a1b33698cf411e453fe123a0ea6665f06">OpError::errorVec</a> = <a name="a82"></a><a class="code" href="namespaceMoFEM.html#a77d94d2111c0c988bc3100b3910cc25c">createVectorMPI</a>(</div>
 <div class="line">        mField.get_comm(), (!mField.get_comm_rank()) ? 1 : 0, 1);</div>
 <div class="line">    VecZeroEntries(<a class="code" href="structOpError.html#a1b33698cf411e453fe123a0ea6665f06">OpError::errorVec</a>);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
@@ -592,32 +592,32 @@ $(function() {
 <div class="line">}<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [Postprocess results]</span></div>
 <div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="keywordtype">int</span> <a name="a84"></a><a class="code" href="approx__sphere_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a name="a83"></a><a class="code" href="approx__sphere_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Initialisation of MoFEM/PETSc and MOAB data structures</span></div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> param_file[] = <span class="stringliteral">&quot;param_file.petsc&quot;</span>;</div>
-<div class="line">  <a name="a85"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code" href="approx__sphere_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line">  <a name="a84"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code" href="approx__sphere_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> core_log = logging::core::get();</div>
 <div class="line">  core_log-&gt;add_sink(</div>
-<div class="line">      <a name="a86"></a><a class="code" href="structMoFEM_1_1LogManager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a name="a87"></a><a class="code" href="structMoFEM_1_1LogManager.html#a745c3e2cfb9fdea08ecd2e85316e8639">LogManager::getStrmWorld</a>(), <span class="stringliteral">&quot;EXAMPLE&quot;</span>));</div>
-<div class="line">  <a name="a88"></a><a class="code" href="group__mofem__log__manager.html#ga037d7b63954d2ec6d367a5c959f16068">LogManager::setLog</a>(<span class="stringliteral">&quot;EXAMPLE&quot;</span>);</div>
-<div class="line">  <a name="a89"></a><a class="code" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;EXAMPLE&quot;</span>, <span class="stringliteral">&quot;example&quot;</span>);</div>
+<div class="line">      <a name="a85"></a><a class="code" href="structMoFEM_1_1LogManager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a name="a86"></a><a class="code" href="structMoFEM_1_1LogManager.html#a745c3e2cfb9fdea08ecd2e85316e8639">LogManager::getStrmWorld</a>(), <span class="stringliteral">&quot;EXAMPLE&quot;</span>));</div>
+<div class="line">  <a name="a87"></a><a class="code" href="group__mofem__log__manager.html#ga037d7b63954d2ec6d367a5c959f16068">LogManager::setLog</a>(<span class="stringliteral">&quot;EXAMPLE&quot;</span>);</div>
+<div class="line">  <a name="a88"></a><a class="code" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;EXAMPLE&quot;</span>, <span class="stringliteral">&quot;example&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">try</span> {</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    //! [Register MoFEM discrete manager in PETSc]</span></div>
 <div class="line"><span class="comment"></span>    DMType dm_name = <span class="stringliteral">&quot;DMMOFEM&quot;</span>;</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a90"></a><a class="code" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);<span class="comment"></span></div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a89"></a><a class="code" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);<span class="comment"></span></div>
 <div class="line"><span class="comment">    //! [Register MoFEM discrete manager in PETSc</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">    //! [Create MoAB]</span></div>
-<div class="line"><span class="comment"></span>    <a name="a91"></a><a class="code" href="namespaceMoFEM.html#a8bdfc7559ccb2b6d0021580b5c8a340b">moab::Core</a> mb_instance;              <span class="comment">///&lt; mesh database</span></div>
-<div class="line"><span class="comment"></span>    <a name="a92"></a><a class="code" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">moab::Interface</a> &amp;moab = mb_instance; <span class="comment">///&lt; mesh database interface</span></div>
+<div class="line"><span class="comment"></span>    <a name="a90"></a><a class="code" href="namespaceMoFEM.html#a8bdfc7559ccb2b6d0021580b5c8a340b">moab::Core</a> mb_instance;              <span class="comment">///&lt; mesh database</span></div>
+<div class="line"><span class="comment"></span>    <a name="a91"></a><a class="code" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">moab::Interface</a> &amp;moab = mb_instance; <span class="comment">///&lt; mesh database interface</span></div>
 <div class="line"><span class="comment"></span><span class="comment">    //! [Create MoAB]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">    //! [Create MoFEM]</span></div>
-<div class="line"><span class="comment"></span>    <a name="_a93"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
+<div class="line"><span class="comment"></span>    <a name="_a92"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
 <div class="line"><span class="comment"></span>    <a class="code" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = core; <span class="comment">///&lt; finite element database insterface</span></div>
 <div class="line"><span class="comment"></span><span class="comment">    //! [Create MoFEM]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
@@ -626,9 +626,9 @@ $(function() {
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ex.runProblem();<span class="comment"></span></div>
 <div class="line"><span class="comment">    //! [ApproxSphere]</span></div>
 <div class="line"><span class="comment"></span>  }</div>
-<div class="line">  <a name="a94"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a name="a93"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a name="a95"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a name="a94"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="aapprox__sphere_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="approx__sphere_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition:</b> <a href="approx__sphere_8cpp_source.html#l00011">approx_sphere.cpp:11</a></div></div>
@@ -638,7 +638,6 @@ $(function() {
 <div class="ttc" id="astructMoFEM_1_1CoreTmp_3_010_01_4_html"><div class="ttname"><a href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::CoreTmp&lt; 0 &gt;</a></div><div class="ttdoc">Core (interface) class.</div><div class="ttdef"><b>Definition:</b> <a href="Core_8hpp_source.html#l00082">Core.hpp:82</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a></div><div class="ttdeci">@ H1</div><div class="ttdoc">continuous field</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00085">definitions.h:85</a></div></div>
 <div class="ttc" id="astructOpError_html"><div class="ttname"><a href="structOpError.html">OpError</a></div><div class="ttdef"><b>Definition:</b> <a href="initial__diffusion_8cpp_source.html#l00061">initial_diffusion.cpp:61</a></div></div>
-<div class="ttc" id="aclassT_html"><div class="ttname"><a href="classT.html">T</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt; double, 3 &gt;</a></div></div>
 <div class="ttc" id="astructApproxSphere_html_aea5d3fcbb2708e35706df81198287d70"><div class="ttname"><a href="structApproxSphere.html#aea5d3fcbb2708e35706df81198287d70">ApproxSphere::getOptions</a></div><div class="ttdeci">MoFEMErrorCode getOptions()</div><div class="ttdoc">[Run programme]</div><div class="ttdef"><b>Definition:</b> <a href="approx__sphere_8cpp_source.html#l00292">approx_sphere.cpp:292</a></div></div>
 <div class="ttc" id="astructApproxSphere_html_a51cf7f5a819fdb4204506b6df7b03fbe"><div class="ttname"><a href="structApproxSphere.html#a51cf7f5a819fdb4204506b6df7b03fbe">ApproxSphere::setupProblem</a></div><div class="ttdeci">MoFEMErrorCode setupProblem()</div><div class="ttdoc">[Read mesh]</div><div class="ttdef"><b>Definition:</b> <a href="approx__sphere_8cpp_source.html#l00308">approx_sphere.cpp:308</a></div></div>

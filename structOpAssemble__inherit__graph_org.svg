@@ -37,61 +37,61 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="structOpAleLhs__dx__dx.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="655,-513.5 655,-532.5 780,-532.5 780,-513.5 655,-513.5"/>
-<text text-anchor="middle" x="717.5" y="-520.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dx_dx&lt; S &gt;</text>
+<g id="a_node6"><a xlink:href="structOpAleLhs__dX__dX.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="654,-513.5 654,-532.5 781,-532.5 781,-513.5 654,-513.5"/>
+<text text-anchor="middle" x="717.5" y="-520.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dX_dX&lt; S &gt;</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M563.94,-313.92C567.04,-355.72 580.3,-452.92 637,-504 642.17,-508.65 648.27,-512.22 654.76,-514.95"/>
+<path fill="none" stroke="midnightblue" d="M563.94,-313.92C567.04,-355.72 580.3,-452.92 637,-504 641.96,-508.46 647.77,-511.93 653.96,-514.61"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="567.42,-313.45 563.31,-303.69 560.43,-313.88 567.42,-313.45"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="structOpAleLhs__dx__dX.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="654.5,-475.5 654.5,-494.5 780.5,-494.5 780.5,-475.5 654.5,-475.5"/>
-<text text-anchor="middle" x="717.5" y="-482.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dx_dX&lt; S &gt;</text>
+<g id="a_node7"><a xlink:href="structOpAleLhs__dX__dx.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="668.5,-475.5 668.5,-494.5 766.5,-494.5 766.5,-475.5 668.5,-475.5"/>
+<text text-anchor="middle" x="717.5" y="-482.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dX_dx</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M565.67,-313.74C571.63,-349.72 589.42,-425.96 637,-466 642.1,-470.29 648.01,-473.65 654.26,-476.27"/>
+<path fill="none" stroke="midnightblue" d="M565.67,-313.74C571.63,-349.72 589.42,-425.96 637,-466 645.79,-473.4 656.98,-478.02 668.17,-480.88"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="569.09,-312.93 564.13,-303.56 562.17,-313.98 569.09,-312.93"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="structOpAleLhs__dX__dX.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="654,-437.5 654,-456.5 781,-456.5 781,-437.5 654,-437.5"/>
-<text text-anchor="middle" x="717.5" y="-444.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dX_dX&lt; S &gt;</text>
+<g id="a_node8"><a xlink:href="structOpAleLhs__dx__dX.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="654.5,-437.5 654.5,-456.5 780.5,-456.5 780.5,-437.5 654.5,-437.5"/>
+<text text-anchor="middle" x="717.5" y="-444.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dx_dX&lt; S &gt;</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M568.23,-313.45C577.19,-342.94 598.37,-398.61 637,-428 642.08,-431.87 647.83,-434.96 653.86,-437.44"/>
+<path fill="none" stroke="midnightblue" d="M568.23,-313.45C577.19,-342.94 598.37,-398.61 637,-428 642.2,-431.95 648.09,-435.1 654.27,-437.6"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="571.51,-312.19 565.38,-303.54 564.78,-314.12 571.51,-312.19"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="structOpAleLhs__dX__dx.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="668.5,-399.5 668.5,-418.5 766.5,-418.5 766.5,-399.5 668.5,-399.5"/>
-<text text-anchor="middle" x="717.5" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dX_dx</text>
+<g id="a_node9"><a xlink:href="structOpAleLhs__dx__dx.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="655,-399.5 655,-418.5 780,-418.5 780,-399.5 655,-399.5"/>
+<text text-anchor="middle" x="717.5" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dx_dx&lt; S &gt;</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node9 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M572.28,-312.65C584.2,-334.62 606.97,-370.57 637,-390 646.29,-396.01 657.3,-400.13 668.12,-402.94"/>
+<path fill="none" stroke="midnightblue" d="M572.28,-312.65C584.2,-334.62 606.97,-370.57 637,-390 642.96,-393.85 649.62,-396.93 656.49,-399.38"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="575.31,-310.9 567.58,-303.66 569.11,-314.14 575.31,-310.9"/>
 </g>
 <!-- Node10 -->
@@ -129,40 +129,40 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="structOpAleRhs__dx.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="677,-262.5 677,-281.5 758,-281.5 758,-262.5 677,-262.5"/>
-<text text-anchor="middle" x="717.5" y="-269.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleRhs_dx</text>
+<g id="a_node12"><a xlink:href="structOpAleRhs__dX.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="676.5,-262.5 676.5,-281.5 758.5,-281.5 758.5,-262.5 676.5,-262.5"/>
+<text text-anchor="middle" x="717.5" y="-269.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleRhs_dX</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node12 -->
 <g id="edge11" class="edge">
 <title>Node1&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M611.38,-287.07C632.43,-284.05 656.81,-280.56 676.78,-277.69"/>
+<path fill="none" stroke="midnightblue" d="M611.3,-287.08C632.18,-284.08 656.34,-280.62 676.24,-277.77"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="610.74,-283.62 601.34,-288.51 611.73,-290.55 610.74,-283.62"/>
 </g>
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:href="structOpAleRhs__dX.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="676.5,-224.5 676.5,-243.5 758.5,-243.5 758.5,-224.5 676.5,-224.5"/>
-<text text-anchor="middle" x="717.5" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleRhs_dX</text>
+<g id="a_node13"><a xlink:href="structOpAleRhs__dx.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="677,-224.5 677,-243.5 758,-243.5 758,-224.5 677,-224.5"/>
+<text text-anchor="middle" x="717.5" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleRhs_dx</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node13 -->
 <g id="edge12" class="edge">
 <title>Node1&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M586.06,-279.09C600.27,-270.44 619.14,-259.93 637,-253 649.44,-248.17 663.46,-244.33 676.22,-241.4"/>
+<path fill="none" stroke="midnightblue" d="M586.06,-279.09C600.27,-270.44 619.14,-259.93 637,-253 649.57,-248.12 663.76,-244.25 676.63,-241.3"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="584.09,-276.19 577.44,-284.44 587.79,-282.13 584.09,-276.19"/>
 </g>
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:href="structOpAnalyticalInternalAleStrain__dX.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="structOpAnalyticalInternalAleStrain__dx.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="637,-175 637,-205 798,-205 798,-175 637,-175"/>
 <text text-anchor="start" x="645" y="-193" font-family="Helvetica,sans-Serif" font-size="10.00">OpAnalyticalInternalAleStrain</text>
-<text text-anchor="middle" x="717.5" y="-182" font-family="Helvetica,sans-Serif" font-size="10.00">_dX&lt; S &gt;</text>
+<text text-anchor="middle" x="717.5" y="-182" font-family="Helvetica,sans-Serif" font-size="10.00">_dx&lt; S &gt;</text>
 </a>
 </g>
 </g>
@@ -175,10 +175,10 @@
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:href="structOpAnalyticalInternalAleStrain__dx.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="structOpAnalyticalInternalAleStrain__dX.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="637,-126 637,-156 798,-156 798,-126 637,-126"/>
 <text text-anchor="start" x="645" y="-144" font-family="Helvetica,sans-Serif" font-size="10.00">OpAnalyticalInternalAleStrain</text>
-<text text-anchor="middle" x="717.5" y="-133" font-family="Helvetica,sans-Serif" font-size="10.00">_dx&lt; S &gt;</text>
+<text text-anchor="middle" x="717.5" y="-133" font-family="Helvetica,sans-Serif" font-size="10.00">_dX&lt; S &gt;</text>
 </a>
 </g>
 </g>

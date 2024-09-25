@@ -12,11 +12,11 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="classFTensor_1_1Tensor2__symmetric__times__Tensor1.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="classFTensor_1_1Tensor2__symmetric__minus__Tensor2_3_01A_00_01B_00_01T_00_01U_00_01Dim_00_01Dim_44491ec8cf9460a6b6a5f8e37e89773f.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-41.5 155,-41.5 155,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Tensor2_symmetric</text>
-<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">_times_Tensor1&lt; A, B, T,</text>
-<text text-anchor="middle" x="77.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00"> U, Dim, Dim2, i, j, k &gt;</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">_minus_Tensor2&lt; A, B, T,</text>
+<text text-anchor="middle" x="77.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00"> U, Dim, Dim, Dim, i, j, j, i &gt;</text>
 </a>
 </g>
 </g>

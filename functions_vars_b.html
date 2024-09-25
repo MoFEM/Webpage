@@ -242,21 +242,17 @@ $(function() {
 : <a class="el" href="structMoFEM_1_1BcManager_1_1BCs.html#a767a65ac3dd327f4d511b549cf7b91e7">MoFEM::BcManager::BCs</a>
 </li>
 <li>bcData
-: <a class="el" href="structEshelbianPlasticity_1_1FeTractionBc.html#a93a0b1417c0da03b31c7ae691c3961e5">EshelbianPlasticity::FeTractionBc</a>
+: <a class="el" href="structEshelbianPlasticity_1_1OpBrokenTractionBc.html#ab1d047aecabd6baf2ea1ffcc73a7bb12">EshelbianPlasticity::OpBrokenTractionBc</a>
 , <a class="el" href="structMoFEM_1_1CubitMeshSets__change__bc__data__structure.html#a764caf878dae72ddac901fffb2868ea9">MoFEM::CubitMeshSets_change_bc_data_structure</a>
 </li>
 <li>bcDataPtr
 : <a class="el" href="structDirichletDisplacementRemoveDofsBc.html#a54f09fe54fea265d2f6622177d3d9ccf">DirichletDisplacementRemoveDofsBc</a>
 </li>
 <li>bcDispPtr
-: <a class="el" href="structEshelbianPlasticity_1_1OpDispBc.html#a892ee58577196a7766f7acee28d9efb0">EshelbianPlasticity::OpDispBc</a>
-, <a class="el" href="structEshelbianPlasticity_1_1OpDispBc__dx.html#aabca9a9d431bc0d74bb9a7b7247ec54b">EshelbianPlasticity::OpDispBc_dx</a>
+: <a class="el" href="structEshelbianPlasticity_1_1OpDispBcImpl_3_01A_00_01GAUSS_01_4.html#ad345dbfb2462887433a0a4fdf4b52c34">EshelbianPlasticity::OpDispBcImpl&lt; A, GAUSS &gt;</a>
 </li>
 <li>bcEnts
 : <a class="el" href="structMoFEM_1_1BcManager_1_1BCs.html#a78dd99b437986475aac290bab093b44c">MoFEM::BcManager::BCs</a>
-</li>
-<li>bcFe
-: <a class="el" href="structEshelbianPlasticity_1_1OpTractionBc.html#a26af6d0312e5e00de1b71e006c8ab999">EshelbianPlasticity::OpTractionBc</a>
 </li>
 <li>bcFluxMap
 : <a class="el" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67e1bf9f7f6f774eca4d30584dfe3840">MixTransport::UnsaturatedFlowElement</a>
@@ -278,8 +274,7 @@ $(function() {
 : <a class="el" href="structNeumannForcesSurface.html#a2e852257b860d24982047c4cf73c1bc5">NeumannForcesSurface</a>
 </li>
 <li>bcRotPtr
-: <a class="el" href="structEshelbianPlasticity_1_1OpRotationBc.html#ad82856654843b90efcf20422bfdf31d2">EshelbianPlasticity::OpRotationBc</a>
-, <a class="el" href="structEshelbianPlasticity_1_1OpRotationBc__dx.html#abccfb25d17bd6a287f6dbb87a426d555">EshelbianPlasticity::OpRotationBc_dx</a>
+: <a class="el" href="structEshelbianPlasticity_1_1OpRotationBcImpl_3_01A_00_01GAUSS_01_4.html#a8c8397cce9898b80ac2baee5c6e06cfb">EshelbianPlasticity::OpRotationBcImpl&lt; A, GAUSS &gt;</a>
 </li>
 <li>bcSlaveMarkers
 : <a class="el" href="structMoFEM_1_1MPCsType.html#a3c683bda95a9e4ce602d81a6a98c423c">MoFEM::MPCsType</a>
@@ -314,7 +309,12 @@ $(function() {
 <li>beta
 : <a class="el" href="structArcLengthCtx.html#adc2b274415e11221cf017bbdbf161a23">ArcLengthCtx</a>
 , <a class="el" href="structCohesiveElement_1_1CohesiveInterfaceElement_1_1PhysicalEquation.html#aae05ff568eaa1feec9d2592293bbf9da">CohesiveElement::CohesiveInterfaceElement::PhysicalEquation</a>
-, <a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html#afb7065862911874c5e3b7747123673c3">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a>
+</li>
+<li>bEta
+: <a class="el" href="structElectrostatics.html#a0ae7c19bb238472a9e2a0856d2c98b0e">Electrostatics</a>
+</li>
+<li>beta
+: <a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html#afb7065862911874c5e3b7747123673c3">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a>
 </li>
 <li>Beta
 : <a class="el" href="structFractureMechanics_1_1ConstantArea_1_1OpAreaJacobian_1_1AuxFunctions.html#af4aecc6c367e6cd7ac303588c005bd4e">FractureMechanics::ConstantArea::OpAreaJacobian::AuxFunctions&lt; TYPE &gt;</a>
@@ -385,16 +385,20 @@ $(function() {
 , <a class="el" href="structNonlinearElasticElementInterface.html#a7ff6e99dae1c801fcd23e33c24a4da01">NonlinearElasticElementInterface</a>
 </li>
 <li>bitAdjEnt
-: <a class="el" href="structMoFEM_1_1Simple.html#a266d487e4be97cba46a215c6fcd62f39">MoFEM::Simple</a>
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#aad4b625d4776f899d5aea17f8a354a3f">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structMoFEM_1_1Simple.html#a266d487e4be97cba46a215c6fcd62f39">MoFEM::Simple</a>
 </li>
 <li>bitAdjEntMask
-: <a class="el" href="structMoFEM_1_1Simple.html#a9718f5a002070eca7d0d75a66268c503">MoFEM::Simple</a>
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a4504a0d8d7bc7c10ba0f3da550cf3cea">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structMoFEM_1_1Simple.html#a9718f5a002070eca7d0d75a66268c503">MoFEM::Simple</a>
 </li>
 <li>bitAdjParent
-: <a class="el" href="structMoFEM_1_1Simple.html#a6e9335db060ba6fcdb0a49ab9072d39a">MoFEM::Simple</a>
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a965a245b85e31d5146c0bd1308427602">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structMoFEM_1_1Simple.html#a6e9335db060ba6fcdb0a49ab9072d39a">MoFEM::Simple</a>
 </li>
 <li>bitAdjParentMask
-: <a class="el" href="structMoFEM_1_1Simple.html#af1f30fc363dbde3207c53276fc884c93">MoFEM::Simple</a>
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#aff2905bb85336516d2bcd77f73fb6514">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structMoFEM_1_1Simple.html#af1f30fc363dbde3207c53276fc884c93">MoFEM::Simple</a>
 </li>
 <li>bitChild
 : <a class="el" href="structMoFEM_1_1OpAddParentEntData.html#ae5f0114369ba2ca44ef9ea84961edd4f">MoFEM::OpAddParentEntData</a>
@@ -454,6 +458,9 @@ $(function() {
 <li>Bksi
 : <a class="el" href="structFractureMechanics_1_1ConstantArea_1_1OpAreaJacobian_1_1AuxFunctions.html#a6dec0585716d8fda3ef4adc1455227ac">FractureMechanics::ConstantArea::OpAreaJacobian::AuxFunctions&lt; TYPE &gt;</a>
 </li>
+<li>blockChrgDens
+: <a class="el" href="structDataAtIntegrationPts.html#a6987d338c3f9843142f40b448e0482ff">DataAtIntegrationPts</a>
+</li>
 <li>blockData
 : <a class="el" href="structElasticMaterials.html#a8b12369cc1370d8ba6e15148a74e65f8">ElasticMaterials</a>
 , <a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html#a504748e92f729b819cf579b0cff4ce7e">EshelbianPlasticity::HMHHencky</a>
@@ -503,6 +510,9 @@ $(function() {
 </li>
 <li>blockParams
 : <a class="el" href="structPlasticOps_1_1CommonData.html#a6c03e6ec4f0cee22cb2e4d7c20fe27be">PlasticOps::CommonData</a>
+</li>
+<li>blockPermittivity
+: <a class="el" href="structDataAtIntegrationPts.html#a833bb2795ca45f045b69b0fd9bbdb42e">DataAtIntegrationPts</a>
 </li>
 <li>blocksetName
 : <a class="el" href="structDirichletDisplacementBc.html#a0a58975317c94b812ec65495f7014061">DirichletDisplacementBc</a>

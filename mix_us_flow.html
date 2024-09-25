@@ -228,7 +228,7 @@ alpha=1.6
 n=1.37
 Ks=0.006
 hS=0
-</pre><p> The material parameters are taken from <a class="el" href="citelist.html#CITEREF_vogel2000effect">[72]</a>, the initial parameters for clay (mat_block_1) and silt (mat_block_2) are set with the \(A_h\) and \(A_h^z\), such that initial capillary pressure head is given by \( h = A_h+A_h^z z \) where </p><p class="formulaDsp">
+</pre><p> The material parameters are taken from <a class="el" href="citelist.html#CITEREF_vogel2000effect">[73]</a>, the initial parameters for clay (mat_block_1) and silt (mat_block_2) are set with the \(A_h\) and \(A_h^z\), such that initial capillary pressure head is given by \( h = A_h+A_h^z z \) where </p><p class="formulaDsp">
 \[ \left\{ \begin{array}{ll} h(z,t=0) = -9+z&amp;\textrm{for clay}\\ h(z,t=0) = -0.09+z&amp;\textrm{for silt} \end{array} \right. \]
 </p>
 <h3><a class="anchor" id="mix_us_flow_example_1_model_runing"></a>
@@ -478,7 +478,7 @@ Adding new material</h2>
 <p> and method <em>recordKr</em> represents equation </p><p class="formulaDsp">
 \[ K_r(S_e) = S_e\left[1-(1-S_e^{1/m})^m\right]^2 \]
 </p>
-<p> Note that \(h\) is an independent variable, whereas \(\theta\) and \(K_r\) are dependent variables. \(\alpha\), \(n\) and \(m\) are model parameters, for details see <a class="el" href="citelist.html#CITEREF_vogel2000effect">[72]</a>. Dissecting method <em>recordTheta</em>, we have </p><div class="fragment"><div class="line">trace_on(2*blockId+0,<span class="keyword">true</span>);<span class="comment"></span></div>
+<p> Note that \(h\) is an independent variable, whereas \(\theta\) and \(K_r\) are dependent variables. \(\alpha\), \(n\) and \(m\) are model parameters, for details see <a class="el" href="citelist.html#CITEREF_vogel2000effect">[73]</a>. Dissecting method <em>recordTheta</em>, we have </p><div class="fragment"><div class="line">trace_on(2*blockId+0,<span class="keyword">true</span>);<span class="comment"></span></div>
 <div class="line"><span class="comment">/// Code here</span></div>
 <div class="line"><span class="comment"></span>trace_off();</div>
 </div><!-- fragment --><p> where we start and stop tape recording/tracing. Each tape has unique <em>Id</em>, in our case we have a convention that even <em>Id's</em> are used to record operations to calculate \(\theta\) and odd <em>Id's</em> are used to record \(K_r\). Each material block has own set of tapes since it uses unique material parameters and physical model has <em>Id</em> calculated from block number set on the mesh. In following code </p><div class="fragment"><div class="line"><a class="code" href="photon__diffusion_8cpp.html#a8ee9be1b5aa75abae556de3088cba6d9">h</a> = -1-hS;</div>
@@ -530,7 +530,7 @@ Physical equation</h2>
 <li>We do not calculate derivatives over \(h\) and \(v\), and those functions can belong to \(L^2(\Omega)\) space.</li>
 <li>The regularity of solution is controlled by \(K(\theta)\), that for most real materials will imply continuity of the capillary head, in particular at the interface between them. However, in some cases, the changes of the head are so sharp that it is beneficial to use mix-formulation.</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>This equation is irregular, hydraulic conductivity can change sharply, as a function of the capillary head. The problem can be regularized by applying Kirchhoff transform, see details here <a class="el" href="citelist.html#CITEREF_radu2004order">[59]</a>. However such approach is limited, and can be applied for special cases, in particular when no hysteresis is considered. Applying Kirchhoff transform, for steady case problem, transforms a nonlinear problem to a linear problem, and not steady case problem still has a nonlinear capacity term. Such approach enables to calculate large scale problems for unsaturated soils and is highly recommended to be implemented here as an alternative approach.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This equation is irregular, hydraulic conductivity can change sharply, as a function of the capillary head. The problem can be regularized by applying Kirchhoff transform, see details here <a class="el" href="citelist.html#CITEREF_radu2004order">[60]</a>. However such approach is limited, and can be applied for special cases, in particular when no hysteresis is considered. Applying Kirchhoff transform, for steady case problem, transforms a nonlinear problem to a linear problem, and not steady case problem still has a nonlinear capacity term. Such approach enables to calculate large scale problems for unsaturated soils and is highly recommended to be implemented here as an alternative approach.</dd></dl>
 <h2><a class="anchor" id="mix_us_flow_numerical_discretisation"></a>
 Semi-discrete linearized system of equations</h2>
 <p>In <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> we do not implement our own Newton method, but use one implemented in PETSc. PETSc Newton solver is implemented in a package of nonlinear solvers SNES. In the nonlinear time dependent problem, SNES is called by TS (time solver). Here we focus on the calculation of residual vector and tangent matrix.</p>

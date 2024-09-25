@@ -246,6 +246,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a4dd363dc545ed09e60c073161e3b7272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a64b8f9ab1279020e2df4b3a200c7ee"><td class="memItemLeft" align="right" valign="top">EshelbianCore *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSetUpSchurImpl.html#a0a64b8f9ab1279020e2df4b3a200c7ee">epCorePtr</a></td></tr>
 <tr class="separator:a0a64b8f9ab1279020e2df4b3a200c7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eac4a006df96f21ed3ebfc4324b1217"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; std::vector&lt; boost::weak_ptr&lt; NumeredDofEntity &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSetUpSchurImpl.html#a2eac4a006df96f21ed3ebfc4324b1217">piolaZeroDofsVec</a></td></tr>
+<tr class="separator:a2eac4a006df96f21ed3ebfc4324b1217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1989e9a60d6da79b4dc00e579529af22"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; std::vector&lt; unsigned char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSetUpSchurImpl.html#a1989e9a60d6da79b4dc00e579529af22">piolaZeroDofsMarker</a></td></tr>
+<tr class="separator:a1989e9a60d6da79b4dc00e579529af22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -281,7 +285,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a0a92b8c06f626bcae7cb9bf3628c713e inherit pro_methods_structSetUpSchur"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#_a179">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#_a98">test_broken_space.cpp</a>.</dd>
+<div class="textblock"><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#_a179">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#_a99">test_broken_space.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="test__broken__space_8cpp_source.html#l00515">515</a> of file <a class="el" href="test__broken__space_8cpp_source.html">test_broken_space.cpp</a>.</p>
@@ -309,7 +313,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a180">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a99">test_broken_space.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a180">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a100">test_broken_space.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="test__broken__space_8cpp_source.html#l00517">517</a> of file <a class="el" href="test__broken__space_8cpp_source.html">test_broken_space.cpp</a>.</p>
@@ -339,7 +343,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a186">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a101">test_broken_space.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a186">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a102">test_broken_space.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -1429,7 +1433,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="structSetUpSchur.html#a32931e13a7549570ef251f782c744a8e">SetUpSchur</a>.</p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a187">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a102">test_broken_space.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a187">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a103">test_broken_space.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="test__broken__space_8cpp_source.html#l00528">528</a> of file <a class="el" href="test__broken__space_8cpp_source.html">test_broken_space.cpp</a>.</p>
@@ -2218,10 +2222,58 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a181">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a100">test_broken_space.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a181">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a101">test_broken_space.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="test__broken__space_8cpp_source.html#l00524">524</a> of file <a class="el" href="test__broken__space_8cpp_source.html">test_broken_space.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1989e9a60d6da79b4dc00e579529af22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1989e9a60d6da79b4dc00e579529af22">&#9670;&nbsp;</a></span>piolaZeroDofsMarker</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;std::vector&lt;unsigned char&gt; &gt; SetUpSchurImpl::piolaZeroDofsMarker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SetUpSchurImpl_8cpp_source.html#l00028">28</a> of file <a class="el" href="SetUpSchurImpl_8cpp_source.html">SetUpSchurImpl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2eac4a006df96f21ed3ebfc4324b1217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eac4a006df96f21ed3ebfc4324b1217">&#9670;&nbsp;</a></span>piolaZeroDofsVec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::shared_ptr&lt;std::vector&lt;boost::weak_ptr&lt;NumeredDofEntity&gt; &gt; &gt; SetUpSchurImpl::piolaZeroDofsVec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SetUpSchurImpl_8cpp_source.html#l00026">26</a> of file <a class="el" href="SetUpSchurImpl_8cpp_source.html">SetUpSchurImpl.cpp</a>.</p>
 
 </div>
 </div>
@@ -2244,7 +2296,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a185">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a104">test_broken_space.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="plastic_8cpp-example.html#a185">plastic.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a105">test_broken_space.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="test__broken__space_8cpp_source.html#l00525">525</a> of file <a class="el" href="test__broken__space_8cpp_source.html">test_broken_space.cpp</a>.</p>

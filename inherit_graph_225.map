@@ -1,3 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classFTensor_1_1Christof__numeral__0.html" title=" " alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,126,145,153"/>
+<area shape="rect" id="node2" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSBase.html" title=" " alt="" coords="193,104,452,175"/>
+<area shape="rect" id="node3" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSRhoAtGaussPts.html" title="Evaluate density at integration points." alt="" coords="500,5,775,47"/>
+<area shape="rect" id="node4" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSRhoAtGaussUsingPrecalulatedCoeffs.html" title=" " alt="" coords="510,71,765,127"/>
+<area shape="rect" id="node5" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSStressAtGaussPts.html" title="Evaluate stress at integration points." alt="" coords="523,151,752,207"/>
+<area shape="rect" id="node6" href="$structFractureMechanics_1_1MWLSApprox_1_1OpMWLSStressAtGaussUsingPrecalulatedCoeffs.html" title=" " alt="" coords="523,231,752,287"/>
 </map>

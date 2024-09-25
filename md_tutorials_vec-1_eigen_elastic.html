@@ -148,7 +148,7 @@ $(function() {
 <div class="line">working_dir=um_view_dir + &#39;/tutorials/vec-1&#39;</div>
 <div class="line"> </div>
 <div class="line">plt.rcParams[&#39;figure.figsize&#39;] = [15, 10]</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md177"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md181"></a>
 Data</h1>
 <ul>
 <li>Young's modulus, <a class="el" href="classE.html">E</a> [$GPa$]</li>
@@ -158,14 +158,14 @@ Data</h1>
 <div class="fragment"><div class="line">YoungModulus=207</div>
 <div class="line">nu=0.3</div>
 <div class="line">rho=7829</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md178"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md182"></a>
 Preparing mesh</h1>
 <p>If you have mesh in native hd5 MOAB format, VTK, Cubit, gMesh, you can use such mesh directly. If you using mesh in MED format used by code-aster, you need to convert mesh into native MOAB hdf5 format.</p>
 <div class="fragment"><div class="line">#!cd {working_dir} &amp;&amp; {bin_dir}/read_med \</div>
 <div class="line">#-med_file TET-2-0.med \</div>
 <div class="line">#-output_file fork-2-0.h5m; </div>
 <div class="line">!ls</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md179"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md183"></a>
 Partition mesh</h1>
 <p>If you would like run analysis on multiple-processors you need to partition mesh. You can do that using mofem tool to do that.</p>
 <div class="fragment"><div class="line"># Set number of processors</div>
@@ -194,7 +194,7 @@ Partition mesh</h1>
 <div class="line">    scalars=&quot;PARALLEL_PARTITION&quot;, </div>
 <div class="line">    smooth_shading=False, </div>
 <div class="line">    cmap=my_cmap)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md180"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md184"></a>
 Calculating eigen values</h1>
 <div class="fragment"><div class="line"># Approximation order</div>
 <div class="line">order=1</div>
@@ -217,7 +217,7 @@ Calculating eigen values</h1>
 <div class="line">-file_name {part_mesh} -eps_monitor -order {order} \</div>
 <div class="line">-eps_pos_gen_non_hermitian -eps_ncv 400 \</div>
 <div class="line">-eps_tol {Tol} -eps_nev {numberOfValuesToCalulate} -log_no_color 2&gt;&amp;1 | tee {log_file}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md181"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md185"></a>
 Post process</h1>
 <div class="fragment"><div class="line"># Get frequencies </div>
 <div class="line">frequency_log=&#39;frequency_log&#39;</div>
@@ -268,7 +268,7 @@ Post process</h1>
 <div class="line">#     img = mpimg.imread(screeen_shot)</div>
 <div class="line">#     imgplot = plt.imshow(img)</div>
 <div class="line">#     plt.show()</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md182"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md186"></a>
 Note</h1>
 <p><a class="el" href="structExample.html" title="[Example]">Example</a> mesh and data were taken form <a href="https://cofea.readthedocs.io/en/latest/benchmarks/000-tuning-fork/index.html">CoFEA</a> </p>
 </div></div><!-- contents -->

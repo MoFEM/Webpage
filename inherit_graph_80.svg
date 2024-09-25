@@ -9,9 +9,9 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 73.5)">
 <title>Graphical Class Hierarchy</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-73.5 592,-73.5 592,4 -4,4"/>
-<!-- Node1551 -->
+<!-- Node1620 -->
 <g id="node1" class="node">
-<title>Node1551</title>
+<title>Node1620</title>
 <g id="a_node1"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="0,-28 0,-47 65,-47 65,-28 0,-28"/>
 <text text-anchor="middle" x="32.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">exception</text>
@@ -27,15 +27,15 @@
 </a>
 </g>
 </g>
-<!-- Node1551&#45;&gt;Node0 -->
+<!-- Node1620&#45;&gt;Node0 -->
 <g id="edge1" class="edge">
-<title>Node1551&#45;&gt;Node0</title>
+<title>Node1620&#45;&gt;Node0</title>
 <path fill="none" stroke="midnightblue" d="M75.07,-43.92C87.36,-45.82 101.08,-47.93 114.36,-49.98"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="75.54,-40.45 65.13,-42.38 74.47,-47.37 75.54,-40.45"/>
 </g>
-<!-- Node1553 -->
+<!-- Node1622 -->
 <g id="node3" class="node">
-<title>Node1553</title>
+<title>Node1622</title>
 <g id="a_node3"><a xlink:href="structMoFEM_1_1Exceptions_1_1MoFEMException.html" target="_top" xlink:title="Exception to catch.">
 <polygon fill="white" stroke="black" points="118,-0.5 118,-30.5 236,-30.5 236,-0.5 118,-0.5"/>
 <text text-anchor="start" x="126" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">MoFEM::Exceptions::</text>
@@ -43,15 +43,15 @@
 </a>
 </g>
 </g>
-<!-- Node1551&#45;&gt;Node1553 -->
+<!-- Node1620&#45;&gt;Node1622 -->
 <g id="edge2" class="edge">
-<title>Node1551&#45;&gt;Node1553</title>
+<title>Node1620&#45;&gt;Node1622</title>
 <path fill="none" stroke="midnightblue" d="M75.38,-31.03C88.66,-28.98 103.59,-26.68 117.8,-24.49"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="74.47,-27.63 65.13,-32.62 75.54,-34.55 74.47,-27.63"/>
 </g>
-<!-- Node1554 -->
+<!-- Node1623 -->
 <g id="node4" class="node">
-<title>Node1554</title>
+<title>Node1623</title>
 <g id="a_node4"><a xlink:href="structMoFEM_1_1Exceptions_1_1MoFEMExceptionRepeat.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="289,-0.5 289,-30.5 424,-30.5 424,-0.5 289,-0.5"/>
 <text text-anchor="start" x="297" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">MoFEM::Exceptions::</text>
@@ -59,15 +59,15 @@
 </a>
 </g>
 </g>
-<!-- Node1553&#45;&gt;Node1554 -->
+<!-- Node1622&#45;&gt;Node1623 -->
 <g id="edge3" class="edge">
-<title>Node1553&#45;&gt;Node1554</title>
+<title>Node1622&#45;&gt;Node1623</title>
 <path fill="none" stroke="midnightblue" d="M246.18,-15.5C260.21,-15.5 274.97,-15.5 288.94,-15.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="246.12,-12 236.12,-15.5 246.12,-19 246.12,-12"/>
 </g>
-<!-- Node1555 -->
+<!-- Node1624 -->
 <g id="node5" class="node">
-<title>Node1555</title>
+<title>Node1624</title>
 <g id="a_node5"><a xlink:href="structMoFEM_1_1Exceptions_1_1MoFEMExceptionInitial.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="460,-0.5 460,-30.5 588,-30.5 588,-0.5 460,-0.5"/>
 <text text-anchor="start" x="468" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">MoFEM::Exceptions::</text>
@@ -75,9 +75,9 @@
 </a>
 </g>
 </g>
-<!-- Node1554&#45;&gt;Node1555 -->
+<!-- Node1623&#45;&gt;Node1624 -->
 <g id="edge4" class="edge">
-<title>Node1554&#45;&gt;Node1555</title>
+<title>Node1623&#45;&gt;Node1624</title>
 <path fill="none" stroke="midnightblue" d="M434.62,-15.5C443.1,-15.5 451.65,-15.5 459.93,-15.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="434.34,-12 424.34,-15.5 434.34,-19 434.34,-12"/>
 </g>

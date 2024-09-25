@@ -203,7 +203,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a801caff944573f4913408173da51bb0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plastic_8cpp.html#a801caff944573f4913408173da51bb0e">iso_hardening_dtau</a> (<a class="el" href="classdouble.html">double</a> tau, <a class="el" href="classdouble.html">double</a> <a class="el" href="plasticity__old__schur_8cpp.html#a982cf43f120ff8978010e078bd49d9a3">H</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="plasticity__old__schur_8cpp.html#a22d068b36b84677d934de4cd61974a18">Qinf</a>, <a class="el" href="classdouble.html">double</a> <a class="el" href="plasticity__old__schur_8cpp.html#acc3867353fffb009c75bb8db034e5e0f">b_iso</a>)</td></tr>
 <tr class="separator:a801caff944573f4913408173da51bb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f5e09f6054e5a892384b7fc21465d7f"><td class="memTemplParams" colspan="2">template&lt;typename T , int DIM&gt; </td></tr>
-<tr class="memitem:a6f5e09f6054e5a892384b7fc21465d7f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="plastic_8cpp.html#a6f5e09f6054e5a892384b7fc21465d7f">kinematic_hardening</a> (<a class="el" href="classFTensor_1_1Tensor2__symmetric.html">FTensor::Tensor2_symmetric</a>&lt; <a class="el" href="classT.html">T</a>, DIM &gt; &amp;t_plastic_strain, <a class="el" href="classdouble.html">double</a> <a class="el" href="plasticity__old__schur_8cpp.html#a1875a57f273cb63a16df4c31196dad5a">C1_k</a>)</td></tr>
+<tr class="memitem:a6f5e09f6054e5a892384b7fc21465d7f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="plastic_8cpp.html#a6f5e09f6054e5a892384b7fc21465d7f">kinematic_hardening</a> (<a class="el" href="classFTensor_1_1Tensor2__symmetric.html">FTensor::Tensor2_symmetric</a>&lt; T, DIM &gt; &amp;t_plastic_strain, <a class="el" href="classdouble.html">double</a> <a class="el" href="plasticity__old__schur_8cpp.html#a1875a57f273cb63a16df4c31196dad5a">C1_k</a>)</td></tr>
 <tr class="separator:a6f5e09f6054e5a892384b7fc21465d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb69c562dd5cc1cde702ac79e607bbd3"><td class="memTemplParams" colspan="2">template&lt;int DIM&gt; </td></tr>
 <tr class="memitem:adb69c562dd5cc1cde702ac79e607bbd3"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="plastic_8cpp.html#adb69c562dd5cc1cde702ac79e607bbd3">kinematic_hardening_dplastic_strain</a> (<a class="el" href="classdouble.html">double</a> <a class="el" href="plasticity__old__schur_8cpp.html#a1875a57f273cb63a16df4c31196dad5a">C1_k</a>)</td></tr>
@@ -711,7 +711,7 @@ template&lt;typename T , int DIM&gt; </div>
         <tr>
           <td class="memname">auto kinematic_hardening </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classFTensor_1_1Tensor2__symmetric.html">FTensor::Tensor2_symmetric</a>&lt; <a class="el" href="classT.html">T</a>, DIM &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classFTensor_1_1Tensor2__symmetric.html">FTensor::Tensor2_symmetric</a>&lt; T, DIM &gt; &amp;&#160;</td>
           <td class="paramname"><em>t_plastic_strain</em>, </td>
         </tr>
         <tr>
@@ -1303,7 +1303,7 @@ template&lt;int DIM&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="cell_forces_8cpp-example.html#a1">cell_forces.cpp</a>, <a class="el" href="EshelbianOperators_8cpp-example.html#a80">EshelbianOperators.cpp</a>, <a class="el" href="phase_8cpp-example.html#a59">phase.cpp</a>, <a class="el" href="plastic_8cpp-example.html#a48">plastic.cpp</a>, <a class="el" href="PlasticOps_8hpp-example.html#a108">PlasticOps.hpp</a>, <a class="el" href="test_jacobian_of_simple_contact_element_8cpp-example.html#a32">test_jacobian_of_simple_contact_element.cpp</a>, and <a class="el" href="UnsaturatedFlow_8hpp-example.html#a105">UnsaturatedFlow.hpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="cell_forces_8cpp-example.html#a1">cell_forces.cpp</a>, <a class="el" href="EshelbianOperators_8cpp-example.html#a65">EshelbianOperators.cpp</a>, <a class="el" href="phase_8cpp-example.html#a59">phase.cpp</a>, <a class="el" href="plastic_8cpp-example.html#a48">plastic.cpp</a>, <a class="el" href="PlasticOps_8hpp-example.html#a108">PlasticOps.hpp</a>, <a class="el" href="test_jacobian_of_simple_contact_element_8cpp-example.html#a32">test_jacobian_of_simple_contact_element.cpp</a>, and <a class="el" href="UnsaturatedFlow_8hpp-example.html#a105">UnsaturatedFlow.hpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="plastic_8cpp_source.html#l00119">119</a> of file <a class="el" href="plastic_8cpp_source.html">plastic.cpp</a>.</p>
@@ -1369,7 +1369,7 @@ template&lt;int DIM&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="eigen_elastic_8cpp-example.html#a43">eigen_elastic.cpp</a>, <a class="el" href="plastic_8cpp-example.html#a10">plastic.cpp</a>, <a class="el" href="PlasticOps_8hpp-example.html#a105">PlasticOps.hpp</a>, <a class="el" href="PlasticOpsGeneric_8hpp-example.html#a13">PlasticOpsGeneric.hpp</a>, <a class="el" href="PlasticOpsLargeStrains_8hpp-example.html#a16">PlasticOpsLargeStrains.hpp</a>, <a class="el" href="PlasticOpsSmallStrains_8hpp-example.html#a18">PlasticOpsSmallStrains.hpp</a>, <a class="el" href="seepage_8cpp-example.html#a69">seepage.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a71">thermo_elastic.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="eigen_elastic_8cpp-example.html#a43">eigen_elastic.cpp</a>, <a class="el" href="EshelbianOperators_8cpp-example.html#a45">EshelbianOperators.cpp</a>, <a class="el" href="plastic_8cpp-example.html#a10">plastic.cpp</a>, <a class="el" href="PlasticOps_8hpp-example.html#a105">PlasticOps.hpp</a>, <a class="el" href="PlasticOpsGeneric_8hpp-example.html#a13">PlasticOpsGeneric.hpp</a>, <a class="el" href="PlasticOpsLargeStrains_8hpp-example.html#a16">PlasticOpsLargeStrains.hpp</a>, <a class="el" href="PlasticOpsSmallStrains_8hpp-example.html#a18">PlasticOpsSmallStrains.hpp</a>, <a class="el" href="seepage_8cpp-example.html#a69">seepage.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a71">thermo_elastic.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="plastic_8cpp_source.html#l00042">42</a> of file <a class="el" href="plastic_8cpp_source.html">plastic.cpp</a>.</p>

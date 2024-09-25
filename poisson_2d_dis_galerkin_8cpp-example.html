@@ -217,54 +217,54 @@ $(function() {
 <div class="line">  <a name="_a27"></a><a class="code" href="structMoFEM_1_1Simple.html">Simple</a> *simpleInterface;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Field name and approximation order</span></div>
-<div class="line">  std::string domainField;</div>
+<div class="line">  std::string <a name="a28"></a><a class="code" href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a>;</div>
 <div class="line">  <span class="keywordtype">int</span> oRder;</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><a name="a28"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a995cd289f23c56187e87a24a3fdb9d75">Poisson2DiscontGalerkin::Poisson2DiscontGalerkin</a>(<a class="code" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field)</div>
-<div class="line">    : domainField(<span class="stringliteral">&quot;U&quot;</span>), mField(m_field), oRder(4) {}</div>
+<div class="line"><a name="a29"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a995cd289f23c56187e87a24a3fdb9d75">Poisson2DiscontGalerkin::Poisson2DiscontGalerkin</a>(<a class="code" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field)</div>
+<div class="line">    : <a class="code" href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a>(<span class="stringliteral">&quot;U&quot;</span>), mField(m_field), oRder(4) {}</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Read mesh]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a29"></a><a class="code" href="structPoisson2DiscontGalerkin.html#add92b67075f7222544961d482caff546">Poisson2DiscontGalerkin::readMesh</a>() {</div>
-<div class="line">  <a name="a30"></a><a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a30"></a><a class="code" href="structPoisson2DiscontGalerkin.html#add92b67075f7222544961d482caff546">Poisson2DiscontGalerkin::readMesh</a>() {</div>
+<div class="line">  <a name="a31"></a><a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a name="a31"></a><a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a32"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a name="a33"></a><a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>(<a name="a34"></a><a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>);</div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a35"></a><a class="code" href="structMoFEM_1_1Simple.html#a8325447a1773550852f04c1b600af703">getOptions</a>();</div>
+<div class="line">  <a name="a32"></a><a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a33"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a name="a34"></a><a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>(<a name="a35"></a><a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>);</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a36"></a><a class="code" href="structMoFEM_1_1Simple.html#a8325447a1773550852f04c1b600af703">getOptions</a>();</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Only L2 field is set in this example. Two lines bellow forces simple</span></div>
 <div class="line">  <span class="comment">// interface to creat lower dimension (edge) elements, despite that fact that</span></div>
 <div class="line">  <span class="comment">// there is no field spanning on such elements. We need them for DG method.</span></div>
-<div class="line">  <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a36"></a><a class="code" href="structMoFEM_1_1Simple.html#aff3af1295789a31143f19b801bedc3d4">getAddSkeletonFE</a>() = <span class="keyword">true</span>;</div>
-<div class="line">  <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a37"></a><a class="code" href="structMoFEM_1_1Simple.html#a34f55a239f309fb701d7d529a8f237a8">getAddBoundaryFE</a>() = <span class="keyword">true</span>;</div>
+<div class="line">  <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a37"></a><a class="code" href="structMoFEM_1_1Simple.html#aff3af1295789a31143f19b801bedc3d4">getAddSkeletonFE</a>() = <span class="keyword">true</span>;</div>
+<div class="line">  <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a38"></a><a class="code" href="structMoFEM_1_1Simple.html#a34f55a239f309fb701d7d529a8f237a8">getAddBoundaryFE</a>() = <span class="keyword">true</span>;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a38"></a><a class="code" href="structMoFEM_1_1Simple.html#a3d65745e902af842b5c490eedbcd30d1">loadFile</a>();</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a39"></a><a class="code" href="structMoFEM_1_1Simple.html#a3d65745e902af842b5c490eedbcd30d1">loadFile</a>();</div>
 <div class="line"> </div>
-<div class="line">  <a name="a39"></a><a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">  <a name="a40"></a><a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [Read mesh]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Setup problem]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a40"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a784bc9ab25a2d64f3d9ef4a50e732f70">Poisson2DiscontGalerkin::setupProblem</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a41"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a784bc9ab25a2d64f3d9ef4a50e732f70">Poisson2DiscontGalerkin::setupProblem</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a41"></a><a class="code" href="namespaceMoFEM.html#a2d7af8e1af9a42f3180d8cc96f8f8c06">PetscOptionsGetInt</a>(PETSC_NULL, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;-order&quot;</span>, &amp;<a name="a42"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a3614ee6b8ba06a919ce9ecfa53401d6b">oRder</a>, PETSC_NULL);</div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a43"></a><a class="code" href="namespaceMoFEM.html#a5a7a36eeb1e285b8460d36033d514cfd">PetscOptionsGetScalar</a>(PETSC_NULL, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;-penalty&quot;</span>, &amp;<a class="code" href="shallow__wave_8cpp.html#a3ae0faf91902a4408cf9b42ec292a1e8">penalty</a>,</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a42"></a><a class="code" href="namespaceMoFEM.html#a2d7af8e1af9a42f3180d8cc96f8f8c06">PetscOptionsGetInt</a>(PETSC_NULL, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;-order&quot;</span>, &amp;<a name="a43"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a3614ee6b8ba06a919ce9ecfa53401d6b">oRder</a>, PETSC_NULL);</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a44"></a><a class="code" href="namespaceMoFEM.html#a5a7a36eeb1e285b8460d36033d514cfd">PetscOptionsGetScalar</a>(PETSC_NULL, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;-penalty&quot;</span>, &amp;<a class="code" href="shallow__wave_8cpp.html#a3ae0faf91902a4408cf9b42ec292a1e8">penalty</a>,</div>
 <div class="line">                               PETSC_NULL);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="namespaceMoFEM.html#a5a7a36eeb1e285b8460d36033d514cfd">PetscOptionsGetScalar</a>(PETSC_NULL, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;-phi&quot;</span>, &amp;<a class="code" href="poisson__2d__dis__galerkin_8cpp.html#adae8d8a6ff28515e505bb1c07f2b33c8">phi</a>, PETSC_NULL);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="namespaceMoFEM.html#a5a7a36eeb1e285b8460d36033d514cfd">PetscOptionsGetScalar</a>(PETSC_NULL, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;-nitsche&quot;</span>, &amp;<a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a5f92cca998048a01110fd78775e9c4a7">nitsche</a>,</div>
 <div class="line">                               PETSC_NULL);</div>
-<div class="line">  <a name="a44"></a><a class="code" href="namespaceMoFEM.html#a55db6ee7b037f883685d61baabd7ace4">PetscOptionsGetBool</a>(PETSC_NULL, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;-is_test&quot;</span>, &amp;<a class="code" href="poisson__2d__dis__galerkin_8cpp.html#aff793330bef246946d4744b0d17f3261">is_test</a>, PETSC_NULL);</div>
+<div class="line">  <a name="a45"></a><a class="code" href="namespaceMoFEM.html#a55db6ee7b037f883685d61baabd7ace4">PetscOptionsGetBool</a>(PETSC_NULL, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;-is_test&quot;</span>, &amp;<a class="code" href="poisson__2d__dis__galerkin_8cpp.html#aff793330bef246946d4744b0d17f3261">is_test</a>, PETSC_NULL);</div>
 <div class="line"> </div>
-<div class="line">  <a name="a45"></a><a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Set order: &quot;</span> &lt;&lt; <a class="code" href="structPoisson2DiscontGalerkin.html#a3614ee6b8ba06a919ce9ecfa53401d6b">oRder</a>;</div>
+<div class="line">  <a name="a46"></a><a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Set order: &quot;</span> &lt;&lt; <a class="code" href="structPoisson2DiscontGalerkin.html#a3614ee6b8ba06a919ce9ecfa53401d6b">oRder</a>;</div>
 <div class="line">  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Set penalty: &quot;</span> &lt;&lt; <a class="code" href="shallow__wave_8cpp.html#a3ae0faf91902a4408cf9b42ec292a1e8">penalty</a>;</div>
 <div class="line">  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Set phi: &quot;</span> &lt;&lt; <a class="code" href="poisson__2d__dis__galerkin_8cpp.html#adae8d8a6ff28515e505bb1c07f2b33c8">phi</a>;</div>
 <div class="line">  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Set nitche: &quot;</span> &lt;&lt; <a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a5f92cca998048a01110fd78775e9c4a7">nitsche</a>;</div>
 <div class="line">  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Set test: &quot;</span> &lt;&lt; (<a class="code" href="poisson__2d__dis__galerkin_8cpp.html#aff793330bef246946d4744b0d17f3261">is_test</a> == PETSC_TRUE);</div>
 <div class="line"> </div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a46"></a><a class="code" href="structMoFEM_1_1Simple.html#a5b3d613d37bec6e737f2db6dfdce0f7d">addDomainField</a>(<a name="a47"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, <a name="a48"></a><a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>,</div>
-<div class="line">                                         <a name="a49"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a6949a4bcc0920ad35e91d7a2d3312988">AINSWORTH_LOBATTO_BASE</a>, 1);</div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a50"></a><a class="code" href="structMoFEM_1_1Simple.html#ab233701869a6020eb4a2cb348bd7978d">setFieldOrder</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, <a class="code" href="structPoisson2DiscontGalerkin.html#a3614ee6b8ba06a919ce9ecfa53401d6b">oRder</a>);</div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a51"></a><a class="code" href="structMoFEM_1_1Simple.html#acf413f83e47d1e092a8d5fdb27996cbf">setUp</a>();</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a47"></a><a class="code" href="structMoFEM_1_1Simple.html#a5b3d613d37bec6e737f2db6dfdce0f7d">addDomainField</a>(<a name="a48"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, <a name="a49"></a><a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>,</div>
+<div class="line">                                         <a name="a50"></a><a class="code" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a6949a4bcc0920ad35e91d7a2d3312988">AINSWORTH_LOBATTO_BASE</a>, 1);</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a51"></a><a class="code" href="structMoFEM_1_1Simple.html#ab233701869a6020eb4a2cb348bd7978d">setFieldOrder</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, <a class="code" href="structPoisson2DiscontGalerkin.html#a3614ee6b8ba06a919ce9ecfa53401d6b">oRder</a>);</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a52"></a><a class="code" href="structMoFEM_1_1Simple.html#acf413f83e47d1e092a8d5fdb27996cbf">setUp</a>();</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// This is only for debigging and experimentation, to see boundary and edge</span></div>
 <div class="line">  <span class="comment">// elements.</span></div>
@@ -272,8 +272,8 @@ $(function() {
 <div class="line">    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">    <span class="keyword">auto</span> file_name =</div>
 <div class="line">        prefix + <span class="stringliteral">&quot;_&quot;</span> +</div>
-<div class="line">        boost::lexical_cast&lt;std::string&gt;(<a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a name="a52"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>()) + <span class="stringliteral">&quot;.vtk&quot;</span>;</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a name="a53"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#adb4b1c061d2348966a28e7425072f464">get_moab</a>().write_file(file_name.c_str(), <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, &amp;meshset,</div>
+<div class="line">        boost::lexical_cast&lt;std::string&gt;(<a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a name="a53"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>()) + <span class="stringliteral">&quot;.vtk&quot;</span>;</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a name="a54"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#adb4b1c061d2348966a28e7425072f464">get_moab</a>().write_file(file_name.c_str(), <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, &amp;meshset,</div>
 <div class="line">                                        1);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">  };</div>
@@ -286,7 +286,7 @@ $(function() {
 <div class="line"><span class="comment">//! [Setup problem]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Boundary condition]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a54"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a48d0ab376da475be62c48f4ab57c2fc4">Poisson2DiscontGalerkin::boundaryCondition</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a55"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a48d0ab376da475be62c48f4ab57c2fc4">Poisson2DiscontGalerkin::boundaryCondition</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">  <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
@@ -294,52 +294,52 @@ $(function() {
 <div class="line"><span class="comment">//! [Boundary condition]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Assemble system]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a55"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a8acfe76147c9384a4003ff5f78fcf75b">Poisson2DiscontGalerkin::assembleSystem</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a56"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a8acfe76147c9384a4003ff5f78fcf75b">Poisson2DiscontGalerkin::assembleSystem</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> pipeline_mng = <a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a56"></a><a class="code" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a>&gt;();</div>
+<div class="line">  <span class="keyword">auto</span> pipeline_mng = <a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a name="_a57"></a><a class="code" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a>&gt;();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> add_base_ops = [&amp;](<span class="keyword">auto</span> &amp;pipeline) {</div>
 <div class="line">    <span class="keyword">auto</span> det_ptr = boost::make_shared&lt;VectorDouble&gt;();</div>
 <div class="line">    <span class="keyword">auto</span> jac_ptr = boost::make_shared&lt;MatrixDouble&gt;();</div>
 <div class="line">    <span class="keyword">auto</span> inv_jac_ptr = boost::make_shared&lt;MatrixDouble&gt;();</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a name="a57"></a><a class="code" href="namespaceMoFEM.html#a55f63d6bf940eefe7cf78df38ab5c797">OpCalculateHOJacForFace</a>(jac_ptr));</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a name="_a58"></a><a class="code" href="structMoFEM_1_1OpInvertMatrix.html">OpInvertMatrix&lt;2&gt;</a>(jac_ptr, det_ptr, inv_jac_ptr));</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a name="_a59"></a><a class="code" href="structMoFEM_1_1OpSetInvJacL2ForFace.html">OpSetInvJacL2ForFace</a>(inv_jac_ptr));</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a name="a58"></a><a class="code" href="namespaceMoFEM.html#a55f63d6bf940eefe7cf78df38ab5c797">OpCalculateHOJacForFace</a>(jac_ptr));</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a name="_a59"></a><a class="code" href="structMoFEM_1_1OpInvertMatrix.html">OpInvertMatrix&lt;2&gt;</a>(jac_ptr, det_ptr, inv_jac_ptr));</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a name="_a60"></a><a class="code" href="structMoFEM_1_1OpSetInvJacL2ForFace.html">OpSetInvJacL2ForFace</a>(inv_jac_ptr));</div>
 <div class="line">  };</div>
 <div class="line"> </div>
 <div class="line">  add_base_ops(pipeline_mng-&gt;getOpDomainLhsPipeline());</div>
-<div class="line">  pipeline_mng-&gt;getOpDomainLhsPipeline().push_back(<span class="keyword">new</span> <a name="a60"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#ac511ebabe465c4b86807d3019e3d1185">OpDomainGradGrad</a>(</div>
+<div class="line">  pipeline_mng-&gt;getOpDomainLhsPipeline().push_back(<span class="keyword">new</span> <a name="a61"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#ac511ebabe465c4b86807d3019e3d1185">OpDomainGradGrad</a>(</div>
 <div class="line">      <a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, <a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>,</div>
 <div class="line">      [](<span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>) { <span class="keywordflow">return</span> 1; }));</div>
 <div class="line">  pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a name="a61"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#adadbaa083c43fb2c68bb16526a6e4c9b">OpDomainSource</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, <a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a5c4ed60873dc8033ed4e8267dd4b4a1e">source</a>));</div>
+<div class="line">      <span class="keyword">new</span> <a name="a62"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#adadbaa083c43fb2c68bb16526a6e4c9b">OpDomainSource</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, <a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a5c4ed60873dc8033ed4e8267dd4b4a1e">source</a>));</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Push operators to the Pipeline for Skeleton</span></div>
 <div class="line">  <span class="keyword">auto</span> side_fe_ptr = boost::make_shared&lt;FaceSideEle&gt;(<a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>);</div>
 <div class="line">  add_base_ops(side_fe_ptr-&gt;getOpPtrVector());</div>
 <div class="line">  side_fe_ptr-&gt;getOpPtrVector().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a name="_a62"></a><a class="code" href="structPoisson2DiscontGalerkinOperators_1_1OpCalculateSideData.html">OpCalculateSideData</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, <a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>));</div>
+<div class="line">      <span class="keyword">new</span> <a name="_a63"></a><a class="code" href="structPoisson2DiscontGalerkinOperators_1_1OpCalculateSideData.html">OpCalculateSideData</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, <a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>));</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Push operators to the Pipeline for Skeleton</span></div>
 <div class="line">  pipeline_mng-&gt;getOpSkeletonLhsPipeline().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a name="_a63"></a><a class="code" href="structPoisson2DiscontGalerkinOperators_1_1OpL2LhsPenalty.html">OpL2LhsPenalty</a>(side_fe_ptr));</div>
+<div class="line">      <span class="keyword">new</span> <a name="_a64"></a><a class="code" href="structPoisson2DiscontGalerkinOperators_1_1OpL2LhsPenalty.html">OpL2LhsPenalty</a>(side_fe_ptr));</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Push operators to the Pipeline for Boundary</span></div>
 <div class="line">  pipeline_mng-&gt;getOpBoundaryLhsPipeline().push_back(</div>
 <div class="line">      <span class="keyword">new</span> <a class="code" href="structPoisson2DiscontGalerkinOperators_1_1OpL2LhsPenalty.html">OpL2LhsPenalty</a>(side_fe_ptr));</div>
 <div class="line">  pipeline_mng-&gt;getOpBoundaryRhsPipeline().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a name="_a64"></a><a class="code" href="structPoisson2DiscontGalerkinOperators_1_1OpL2BoundaryRhs.html">OpL2BoundaryRhs</a>(side_fe_ptr, <a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a772ef2b03bee36dd9819b9be70934eb7">u_exact</a>));</div>
+<div class="line">      <span class="keyword">new</span> <a name="_a65"></a><a class="code" href="structPoisson2DiscontGalerkinOperators_1_1OpL2BoundaryRhs.html">OpL2BoundaryRhs</a>(side_fe_ptr, <a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a772ef2b03bee36dd9819b9be70934eb7">u_exact</a>));</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [Assemble system]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Set integration rules]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a65"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a85cd3c8812c447f1833cd75fba72bf4e">Poisson2DiscontGalerkin::setIntegrationRules</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a66"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a85cd3c8812c447f1833cd75fba72bf4e">Poisson2DiscontGalerkin::setIntegrationRules</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> rule_lhs = [](<a name="a66"></a><a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <span class="keywordtype">int</span> p) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> 2 * p; };</div>
+<div class="line">  <span class="keyword">auto</span> rule_lhs = [](<a name="a67"></a><a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <span class="keywordtype">int</span> p) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> 2 * p; };</div>
 <div class="line">  <span class="keyword">auto</span> rule_rhs = [](<a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <span class="keywordtype">int</span> p) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> 2 * p; };</div>
 <div class="line">  <span class="keyword">auto</span> rule_2 = [<span class="keyword">this</span>](<a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>) { <span class="keywordflow">return</span> 2 * <a class="code" href="structPoisson2DiscontGalerkin.html#a3614ee6b8ba06a919ce9ecfa53401d6b">oRder</a>; };</div>
 <div class="line"> </div>
@@ -357,36 +357,36 @@ $(function() {
 <div class="line"><span class="comment">//! [Set integration rules]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Solve system]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a67"></a><a class="code" href="structPoisson2DiscontGalerkin.html#aa21668ec9557918c5dd49bd46cd68282">Poisson2DiscontGalerkin::solveSystem</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a68"></a><a class="code" href="structPoisson2DiscontGalerkin.html#aa21668ec9557918c5dd49bd46cd68282">Poisson2DiscontGalerkin::solveSystem</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> pipeline_mng = <a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a>&gt;();</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> ksp_solver = pipeline_mng-&gt;<a name="a68"></a><a class="code" href="group__mofem__basic__interface.html#gaa983d7ca3e82c5a0711991a730bfbcbb">createKSP</a>();</div>
+<div class="line">  <span class="keyword">auto</span> ksp_solver = pipeline_mng-&gt;<a name="a69"></a><a class="code" href="group__mofem__basic__interface.html#gaa983d7ca3e82c5a0711991a730bfbcbb">createKSP</a>();</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSetFromOptions(ksp_solver);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSetUp(ksp_solver);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Create RHS and solution vectors</span></div>
-<div class="line">  <span class="keyword">auto</span> dm = <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a69"></a><a class="code" href="structMoFEM_1_1Simple.html#a9261d3ef9b39a00cb7d0acc612702275">getDM</a>();</div>
-<div class="line">  <span class="keyword">auto</span> <a name="a70"></a><a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a> = <a name="a71"></a><a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(dm);</div>
-<div class="line">  <span class="keyword">auto</span> <a name="a72"></a><a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a> = <a name="a73"></a><a class="code" href="namespaceMoFEM.html#a7e9381e94ea4dfb7080fcf2c5835ae19">vectorDuplicate</a>(<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
+<div class="line">  <span class="keyword">auto</span> dm = <a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a name="a70"></a><a class="code" href="structMoFEM_1_1Simple.html#a9261d3ef9b39a00cb7d0acc612702275">getDM</a>();</div>
+<div class="line">  <span class="keyword">auto</span> <a name="a71"></a><a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a> = <a name="a72"></a><a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(dm);</div>
+<div class="line">  <span class="keyword">auto</span> <a name="a73"></a><a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a> = <a name="a74"></a><a class="code" href="namespaceMoFEM.html#a7e9381e94ea4dfb7080fcf2c5835ae19">vectorDuplicate</a>(<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSolve(ksp_solver, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Scatter result data on the mesh</span></div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a74"></a><a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(dm, <a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, INSERT_VALUES, SCATTER_REVERSE);</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a75"></a><a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(dm, <a class="code" href="namespaceReactionDiffusionEquation.html#a6078a7f940fe823a1c1ccb4cc277e03e">D</a>, INSERT_VALUES, SCATTER_REVERSE);</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [Solve system]</span></div>
 <div class="line"><span class="comment"></span> </div>
-<div class="line"><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a75"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a5c4d700a85e653aecec281e09cd7d4be">Poisson2DiscontGalerkin::checkResults</a>() {</div>
+<div class="line"><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a76"></a><a class="code" href="structPoisson2DiscontGalerkin.html#a5c4d700a85e653aecec281e09cd7d4be">Poisson2DiscontGalerkin::checkResults</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> pipeline_mng = <a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a>&gt;();</div>
-<div class="line">  pipeline_mng-&gt;<a name="a76"></a><a class="code" href="structMoFEM_1_1PipelineManager.html#a0d2c10375809102ca76959b5cc21ef9e">getDomainRhsFE</a>().reset();</div>
+<div class="line">  pipeline_mng-&gt;<a name="a77"></a><a class="code" href="structMoFEM_1_1PipelineManager.html#a0d2c10375809102ca76959b5cc21ef9e">getDomainRhsFE</a>().reset();</div>
 <div class="line">  pipeline_mng-&gt;getDomainLhsFE().reset();</div>
 <div class="line">  pipeline_mng-&gt;getSkeletonRhsFE().reset();</div>
 <div class="line">  pipeline_mng-&gt;getSkeletonLhsFE().reset();</div>
@@ -412,30 +412,30 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  add_base_ops(pipeline_mng-&gt;getOpDomainRhsPipeline());</div>
 <div class="line">  pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a name="_a77"></a><a class="code" href="structMoFEM_1_1OpCalculateScalarFieldValues.html">OpCalculateScalarFieldValues</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, u_vals_ptr));</div>
+<div class="line">      <span class="keyword">new</span> <a name="_a78"></a><a class="code" href="structMoFEM_1_1OpCalculateScalarFieldValues.html">OpCalculateScalarFieldValues</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, u_vals_ptr));</div>
 <div class="line">  pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a name="_a78"></a><a class="code" href="structMoFEM_1_1OpCalculateScalarFieldGradient.html">OpCalculateScalarFieldGradient&lt;2&gt;</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, u_grad_ptr));</div>
+<div class="line">      <span class="keyword">new</span> <a name="_a79"></a><a class="code" href="structMoFEM_1_1OpCalculateScalarFieldGradient.html">OpCalculateScalarFieldGradient&lt;2&gt;</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, u_grad_ptr));</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">enum</span> NORMS { <a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a> = 0, SEMI_NORM, <a name="a79"></a><a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, LAST_NORM };</div>
+<div class="line">  <span class="keyword">enum</span> NORMS { <a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a> = 0, SEMI_NORM, <a name="a80"></a><a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, LAST_NORM };</div>
 <div class="line">  std::array&lt;int, LAST_NORM&gt; error_indices;</div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a name="a80"></a><a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> = 0; <a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> != LAST_NORM; ++<a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>)</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a name="a81"></a><a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> = 0; <a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> != LAST_NORM; ++<a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>)</div>
 <div class="line">    error_indices[<a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>] = <a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
-<div class="line">  <span class="keyword">auto</span> l2_vec = <a name="a81"></a><a class="code" href="namespaceMoFEM.html#a77d94d2111c0c988bc3100b3910cc25c">createVectorMPI</a>(</div>
-<div class="line">      <a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a name="a82"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#adecbcd03d7be8763b60a827f434fe726">get_comm</a>(), (!<a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a class="code" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>()) ? LAST_NORM : 0, LAST_NORM);</div>
+<div class="line">  <span class="keyword">auto</span> l2_vec = <a name="a82"></a><a class="code" href="namespaceMoFEM.html#a77d94d2111c0c988bc3100b3910cc25c">createVectorMPI</a>(</div>
+<div class="line">      <a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a name="a83"></a><a class="code" href="structMoFEM_1_1CoreInterface.html#adecbcd03d7be8763b60a827f434fe726">get_comm</a>(), (!<a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a class="code" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>()) ? LAST_NORM : 0, LAST_NORM);</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> error_op = <span class="keyword">new</span> <a name="a83"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a9d22d16d53b24e827d6002ef0a6fd613">DomainEleOp</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, DomainEleOp::OPROW);</div>
-<div class="line">  error_op-&gt;doWorkRhsHook = [&amp;](<a name="_a84"></a><a class="code" href="structMoFEM_1_1DataOperator.html">DataOperator</a> *op_ptr, <span class="keywordtype">int</span> side, EntityType <a name="a85"></a><a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>,</div>
+<div class="line">  <span class="keyword">auto</span> error_op = <span class="keyword">new</span> <a name="a84"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a9d22d16d53b24e827d6002ef0a6fd613">DomainEleOp</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, DomainEleOp::OPROW);</div>
+<div class="line">  error_op-&gt;doWorkRhsHook = [&amp;](<a name="_a85"></a><a class="code" href="structMoFEM_1_1DataOperator.html">DataOperator</a> *op_ptr, <span class="keywordtype">int</span> side, EntityType <a name="a86"></a><a class="code" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a>,</div>
 <div class="line">                                <a class="code" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;data) {</div>
 <div class="line">    <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">    <span class="keyword">auto</span> o = <span class="keyword">static_cast&lt;</span><a class="code" href="classDomainEleOp.html">DomainEleOp</a> *<span class="keyword">&gt;</span>(op_ptr);</div>
 <div class="line"> </div>
-<div class="line">    <a name="_a86"></a><a class="code" href="classFTensor_1_1Index.html">FTensor::Index&lt;'i', 2&gt;</a> <a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
+<div class="line">    <a name="_a87"></a><a class="code" href="classFTensor_1_1Index.html">FTensor::Index&lt;'i', 2&gt;</a> <a class="code" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keywordtype">size_t</span> nb_dofs = data.getIndices().size()) {</div>
 <div class="line"> </div>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">int</span> nb_integration_pts = o-&gt;getGaussPts().size2();</div>
 <div class="line">      <span class="keyword">auto</span> t_w = o-&gt;getFTensor0IntegrationWeight();</div>
-<div class="line">      <span class="keyword">auto</span> t_val = <a name="a87"></a><a class="code" href="namespaceMoFEM.html#aa464ad90a188180427136b22e078ec7d">getFTensor0FromVec</a>(*u_vals_ptr);</div>
+<div class="line">      <span class="keyword">auto</span> t_val = <a name="a88"></a><a class="code" href="namespaceMoFEM.html#aa464ad90a188180427136b22e078ec7d">getFTensor0FromVec</a>(*u_vals_ptr);</div>
 <div class="line">      <span class="keyword">auto</span> t_grad = getFTensor1FromMat&lt;2&gt;(*u_grad_ptr);</div>
 <div class="line">      <span class="keyword">auto</span> t_coords = o-&gt;getFTensor1CoordsAtGaussPts();</div>
 <div class="line"> </div>
@@ -464,7 +464,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">      error[<a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>] = error[<a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>] + error[SEMI_NORM];</div>
 <div class="line"> </div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a88"></a><a class="code" href="namespaceMoFEM.html#aef01d33cbe1d8ed916ce789bd25c4495">VecSetValues</a>(l2_vec, LAST_NORM, error_indices.data(), error.data(),</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a89"></a><a class="code" href="namespaceMoFEM.html#aef01d33cbe1d8ed916ce789bd25c4495">VecSetValues</a>(l2_vec, LAST_NORM, error_indices.data(), error.data(),</div>
 <div class="line">                          ADD_VALUES);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -555,7 +555,7 @@ $(function() {
 <div class="line">    <a class="code" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">  };</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> skeleton_error_op = <span class="keyword">new</span> <a name="a89"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#ae10756998f42b8da25b7a1d2f5c51ee5">BoundaryEleOp</a>(<a name="a90"></a><a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a870cba1f12f133e280384cbaffdeec0f">NOSPACE</a>, BoundaryEleOp::OPSPACE);</div>
+<div class="line">  <span class="keyword">auto</span> skeleton_error_op = <span class="keyword">new</span> <a name="a90"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#ae10756998f42b8da25b7a1d2f5c51ee5">BoundaryEleOp</a>(<a name="a91"></a><a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a870cba1f12f133e280384cbaffdeec0f">NOSPACE</a>, BoundaryEleOp::OPSPACE);</div>
 <div class="line">  skeleton_error_op-&gt;doWorkRhsHook = do_work_rhs_error;</div>
 <div class="line">  <span class="keyword">auto</span> boundary_error_op = <span class="keyword">new</span> <a class="code" href="poisson__2d__dis__galerkin_8cpp.html#ae10756998f42b8da25b7a1d2f5c51ee5">BoundaryEleOp</a>(<a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a870cba1f12f133e280384cbaffdeec0f">NOSPACE</a>, BoundaryEleOp::OPSPACE);</div>
 <div class="line">  boundary_error_op-&gt;doWorkRhsHook = do_work_rhs_error;</div>
@@ -572,7 +572,7 @@ $(function() {
 <div class="line">  <span class="keywordflow">if</span> (<a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a class="code" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>() == 0) {</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> *array;</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGetArrayRead(l2_vec, &amp;array);</div>
-<div class="line">    <a name="a91"></a><a class="code" href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::inform, <span class="stringliteral">&quot;Error Norm L2 %6.4e&quot;</span>,</div>
+<div class="line">    <a name="a92"></a><a class="code" href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::inform, <span class="stringliteral">&quot;Error Norm L2 %6.4e&quot;</span>,</div>
 <div class="line">                std::sqrt(array[<a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>]));</div>
 <div class="line">    <a class="code" href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::inform, <span class="stringliteral">&quot;Error Norm Energetic %6.4e&quot;</span>,</div>
 <div class="line">                std::sqrt(array[SEMI_NORM]));</div>
@@ -580,16 +580,16 @@ $(function() {
 <div class="line">                std::sqrt(array[<a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>]));</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span>(<a class="code" href="poisson__2d__dis__galerkin_8cpp.html#aff793330bef246946d4744b0d17f3261">is_test</a>) {</div>
-<div class="line">      constexpr <span class="keywordtype">double</span> <a name="a92"></a><a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> = 1e-12;</div>
+<div class="line">      constexpr <span class="keywordtype">double</span> <a name="a93"></a><a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> = 1e-12;</div>
 <div class="line">      <span class="keywordflow">if</span> (std::sqrt(array[<a class="code" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>]) &gt; <a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a>)</div>
-<div class="line">        SETERRQ(PETSC_COMM_WORLD, <a name="a93"></a><a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>, <span class="stringliteral">&quot;Error is too big&quot;</span>);</div>
+<div class="line">        SETERRQ(PETSC_COMM_WORLD, <a name="a94"></a><a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>, <span class="stringliteral">&quot;Error is too big&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line">                </div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecRestoreArrayRead(l2_vec, &amp;array);</div>
-<div class="line">    <span class="keyword">const</span> <a name="_a94"></a><a class="code" href="structMoFEM_1_1Problem.html">MoFEM::Problem</a> *problem_ptr;</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a95"></a><a class="code" href="group__dm.html#ga4cafea643e191089b31207ebb16842c9">DMMoFEMGetProblemPtr</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a class="code" href="structMoFEM_1_1Simple.html#a9261d3ef9b39a00cb7d0acc612702275">getDM</a>(), &amp;problem_ptr);</div>
+<div class="line">    <span class="keyword">const</span> <a name="_a95"></a><a class="code" href="structMoFEM_1_1Problem.html">MoFEM::Problem</a> *problem_ptr;</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a96"></a><a class="code" href="group__dm.html#ga4cafea643e191089b31207ebb16842c9">DMMoFEMGetProblemPtr</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#aa7d1ea96e52a781b31fc90e3279f65e2">simpleInterface</a>-&gt;<a class="code" href="structMoFEM_1_1Simple.html#a9261d3ef9b39a00cb7d0acc612702275">getDM</a>(), &amp;problem_ptr);</div>
 <div class="line">    <a class="code" href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::inform, <span class="stringliteral">&quot;Nb. DOFs %d&quot;</span>,</div>
-<div class="line">                problem_ptr-&gt;<a name="a96"></a><a class="code" href="structMoFEM_1_1Problem.html#a271a2096c19f1b94383edc0b4e2e2060">getNbDofsRow</a>());</div>
+<div class="line">                problem_ptr-&gt;<a name="a97"></a><a class="code" href="structMoFEM_1_1Problem.html#a271a2096c19f1b94383edc0b4e2e2060">getNbDofsRow</a>());</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line"> </div>
@@ -598,11 +598,11 @@ $(function() {
 <div class="line">}</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Output results]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a97"></a><a class="code" href="structPoisson2DiscontGalerkin.html#ade11d77b6c5baeff40ce26a0a5bccfbf">Poisson2DiscontGalerkin::outputResults</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a98"></a><a class="code" href="structPoisson2DiscontGalerkin.html#ade11d77b6c5baeff40ce26a0a5bccfbf">Poisson2DiscontGalerkin::outputResults</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> pipeline_mng = <a class="code" href="structPoisson2DiscontGalerkin.html#a1d483494d21bc881380cee102aad40a1">mField</a>.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a>&gt;();</div>
-<div class="line">  pipeline_mng-&gt;<a name="a98"></a><a class="code" href="structMoFEM_1_1PipelineManager.html#a4daac802fcdd9c31639d1c1d4a2a608f">getDomainLhsFE</a>().reset();</div>
+<div class="line">  pipeline_mng-&gt;<a name="a99"></a><a class="code" href="structMoFEM_1_1PipelineManager.html#a4daac802fcdd9c31639d1c1d4a2a608f">getDomainLhsFE</a>().reset();</div>
 <div class="line">  pipeline_mng-&gt;getSkeletonRhsFE().reset();</div>
 <div class="line">  pipeline_mng-&gt;getSkeletonLhsFE().reset();</div>
 <div class="line">  pipeline_mng-&gt;getBoundaryRhsFE().reset();</div>
@@ -614,11 +614,11 @@ $(function() {
 <div class="line">  post_proc_fe-&gt;getOpPtrVector().push_back(</div>
 <div class="line">      <span class="keyword">new</span> <a class="code" href="structMoFEM_1_1OpCalculateScalarFieldValues.html">OpCalculateScalarFieldValues</a>(<a class="code" href="structPoisson2DiscontGalerkin.html#a514746b2a3eb9ad868d3eddb84b8fc02">domainField</a>, u_ptr));</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">using</span> <a name="_a99"></a><a class="code" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPPMap</a> = <a class="code" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPostProcMapInMoab&lt;SPACE_DIM, SPACE_DIM&gt;</a>;</div>
+<div class="line">  <span class="keyword">using</span> <a name="_a100"></a><a class="code" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPPMap</a> = <a class="code" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPostProcMapInMoab&lt;SPACE_DIM, SPACE_DIM&gt;</a>;</div>
 <div class="line"> </div>
 <div class="line">  post_proc_fe-&gt;getOpPtrVector().push_back(</div>
 <div class="line"> </div>
-<div class="line">      <span class="keyword">new</span> <a name="a100"></a><a class="code" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(</div>
+<div class="line">      <span class="keyword">new</span> <a name="a101"></a><a class="code" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(</div>
 <div class="line"> </div>
 <div class="line">          post_proc_fe-&gt;getPostProcMesh(), post_proc_fe-&gt;getMapGaussPts(), </div>
 <div class="line">          </div>
@@ -641,7 +641,7 @@ $(function() {
 <div class="line"><span class="comment">//! [Output results]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Run program]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a101"></a><a class="code" href="structPoisson2DiscontGalerkin.html#afc36f4536841fc88d74965ec98c11bf4">Poisson2DiscontGalerkin::runProgram</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a102"></a><a class="code" href="structPoisson2DiscontGalerkin.html#afc36f4536841fc88d74965ec98c11bf4">Poisson2DiscontGalerkin::runProgram</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structPoisson2DiscontGalerkin.html#add92b67075f7222544961d482caff546">readMesh</a>();</div>
@@ -658,34 +658,34 @@ $(function() {
 <div class="line"><span class="comment">//! [Run program]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Main]</span></div>
-<div class="line"><span class="comment"></span><span class="keywordtype">int</span> <a name="a102"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><span class="comment"></span><span class="keywordtype">int</span> <a name="a103"></a><a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Initialisation of MoFEM/PETSc and MOAB data structures</span></div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> param_file[] = <span class="stringliteral">&quot;param_file.petsc&quot;</span>;</div>
-<div class="line">  <a name="a103"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line">  <a name="a104"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code" href="poisson__2d__dis__galerkin_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Error handling</span></div>
 <div class="line">  <span class="keywordflow">try</span> {</div>
 <div class="line">    <span class="comment">// Register MoFEM discrete manager in PETSc</span></div>
 <div class="line">    DMType dm_name = <span class="stringliteral">&quot;DMMOFEM&quot;</span>;</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a104"></a><a class="code" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a105"></a><a class="code" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create MOAB instance</span></div>
-<div class="line">    <a name="a105"></a><a class="code" href="namespaceMoFEM.html#a8bdfc7559ccb2b6d0021580b5c8a340b">moab::Core</a> mb_instance;              <span class="comment">// mesh database</span></div>
-<div class="line">    <a name="a106"></a><a class="code" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">moab::Interface</a> &amp;moab = mb_instance; <span class="comment">// mesh database interface</span></div>
+<div class="line">    <a name="a106"></a><a class="code" href="namespaceMoFEM.html#a8bdfc7559ccb2b6d0021580b5c8a340b">moab::Core</a> mb_instance;              <span class="comment">// mesh database</span></div>
+<div class="line">    <a name="a107"></a><a class="code" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">moab::Interface</a> &amp;moab = mb_instance; <span class="comment">// mesh database interface</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create MoFEM instance</span></div>
-<div class="line">    <a name="_a107"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">// finite element database</span></div>
+<div class="line">    <a name="_a108"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">// finite element database</span></div>
 <div class="line">    <a class="code" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = core; <span class="comment">// finite element interface</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Run the main analysis</span></div>
 <div class="line">    <a class="code" href="structPoisson2DiscontGalerkin.html">Poisson2DiscontGalerkin</a> poisson_problem(m_field);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> poisson_problem.runProgram();</div>
 <div class="line">  }</div>
-<div class="line">  <a name="a108"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a name="a109"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Finish work: cleaning memory, getting statistics, etc.</span></div>
-<div class="line">  <a name="a109"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a name="a110"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
@@ -712,6 +712,7 @@ $(function() {
 <div class="ttc" id="anamespaceMoFEM_1_1Exceptions_html_a8fb6351034eac301fc47fdf2748c1b45"><div class="ttname"><a href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEM::Exceptions::MoFEMErrorCode</a></div><div class="ttdeci">PetscErrorCode MoFEMErrorCode</div><div class="ttdoc">MoFEM/PETSc error code.</div><div class="ttdef"><b>Definition:</b> <a href="Exceptions_8hpp_source.html#l00056">Exceptions.hpp:56</a></div></div>
 <div class="ttc" id="alevel__set_8cpp_html_a94ac077e84dabc794bd4ad78c71d0cb0"><div class="ttname"><a href="level__set_8cpp.html#a94ac077e84dabc794bd4ad78c71d0cb0">FaceSideEle</a></div><div class="ttdeci">PipelineManager::ElementsAndOpsByDim&lt; FE_DIM &gt;::FaceSideEle FaceSideEle</div><div class="ttdef"><b>Definition:</b> <a href="level__set_8cpp_source.html#l00041">level_set.cpp:41</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1CoreInterface_html_af2224ce77b33637b5cfad66a275a2ffb"><div class="ttname"><a href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">MoFEM::CoreInterface::get_comm_rank</a></div><div class="ttdeci">virtual int get_comm_rank() const =0</div></div>
+<div class="ttc" id="aelectrostatics_8hpp_html_a86892352043338f8c9284d0a66f66be5"><div class="ttname"><a href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a></div><div class="ttdeci">constexpr auto domainField</div><div class="ttdef"><b>Definition:</b> <a href="electrostatics_8hpp_source.html#l00007">electrostatics.hpp:7</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1Simple_html_a3d65745e902af842b5c490eedbcd30d1"><div class="ttname"><a href="structMoFEM_1_1Simple.html#a3d65745e902af842b5c490eedbcd30d1">MoFEM::Simple::loadFile</a></div><div class="ttdeci">MoFEMErrorCode loadFile(const std::string options, const std::string mesh_file_name, LoadFileFunc loadFunc=defaultLoadFileFunc)</div><div class="ttdoc">Load mesh file.</div><div class="ttdef"><b>Definition:</b> <a href="Simple_8cpp_source.html#l00194">Simple.cpp:194</a></div></div>
 <div class="ttc" id="agroup__mofem__forms_html_ggabb82cd10e89a1d4d25fa7756360b181ba2243b0abb08ad80d05c47e734f3134bc"><div class="ttname"><a href="group__mofem__forms.html#ggabb82cd10e89a1d4d25fa7756360b181ba2243b0abb08ad80d05c47e734f3134bc">MoFEM::PETSC</a></div><div class="ttdeci">@ PETSC</div><div class="ttdef"><b>Definition:</b> <a href="FormsIntegrators_8hpp_source.html#l00105">FormsIntegrators.hpp:105</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1PipelineManager_html"><div class="ttname"><a href="structMoFEM_1_1PipelineManager.html">MoFEM::PipelineManager</a></div><div class="ttdoc">PipelineManager interface.</div><div class="ttdef"><b>Definition:</b> <a href="PipelineManager_8hpp_source.html#l00024">PipelineManager.hpp:24</a></div></div>

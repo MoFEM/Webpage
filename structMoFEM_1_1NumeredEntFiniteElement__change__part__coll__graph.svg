@@ -23,8 +23,8 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="63,-78.5 63,-97.5 124,-97.5 124,-78.5 63,-78.5"/>
-<text text-anchor="middle" x="93.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">unsigned</text>
+<polygon fill="white" stroke="#bfbfbf" points="79,-78.5 79,-97.5 108,-97.5 108,-78.5 79,-78.5"/>
+<text text-anchor="middle" x="93.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">int</text>
 </a>
 </g>
 </g>

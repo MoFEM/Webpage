@@ -1,5 +1,4 @@
 <map id="MoFEM::OpMixTensorTimesGradImpl&lt; SPACE_DIM, GAUSS, OpBase &gt;" name="MoFEM::OpMixTensorTimesGradImpl&lt; SPACE_DIM, GAUSS, OpBase &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,239,211"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1OpBaseImpl.html" title=" " alt="" coords="86,80,158,107"/>
-<area shape="rect" id="node3" href="$classEleOp.html" title=" " alt="" coords="92,5,152,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,239,136"/>
+<area shape="rect" id="node2" href="$classOpBase.html" title=" " alt="" coords="86,5,158,32"/>
 </map>

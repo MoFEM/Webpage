@@ -134,7 +134,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abcfe290c229fbb40ff847c01c8d39d12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__T0_8cpp.html#abcfe290c229fbb40ff847c01c8d39d12">test_T0</a> (const int &amp;<a class="el" href="classT.html">T</a>, <a class="el" href="classFTensor_1_1Tensor0.html">Tensor0</a>&lt; <a class="el" href="classdouble.html">double</a> * &gt; &amp;t0_1, const <a class="el" href="classFTensor_1_1Tensor0.html">Tensor0</a>&lt; <a class="el" href="classdouble.html">double</a> * &gt; &amp;t0_2)</td></tr>
+<tr class="memitem:abcfe290c229fbb40ff847c01c8d39d12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__T0_8cpp.html#abcfe290c229fbb40ff847c01c8d39d12">test_T0</a> (const int &amp;T, <a class="el" href="classFTensor_1_1Tensor0.html">Tensor0</a>&lt; <a class="el" href="classdouble.html">double</a> * &gt; &amp;t0_1, const <a class="el" href="classFTensor_1_1Tensor0.html">Tensor0</a>&lt; <a class="el" href="classdouble.html">double</a> * &gt; &amp;t0_2)</td></tr>
 <tr class="separator:abcfe290c229fbb40ff847c01c8d39d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -178,22 +178,21 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">/* Tensor0 test cases. */</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  t0_1 = <a class="code" href="classT.html">T</a> + t0_2;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - <a class="code" href="classT.html">T</a> - t0_2, <span class="stringliteral">&quot;T+T0&quot;</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  t0_1 = T + t0_2;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - T - t0_2, <span class="stringliteral">&quot;T+T0&quot;</span>);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  t0_1 += 10 + t0_2;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - (10 + <a class="code" href="classT.html">T</a> + 2 * t0_2), <span class="stringliteral">&quot;T0+=T&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - (10 + T + 2 * t0_2), <span class="stringliteral">&quot;T0+=T&quot;</span>);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  t0_1 -= 5 + 3 * t0_2;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - (5 + <a class="code" href="classT.html">T</a> - t0_2), <span class="stringliteral">&quot;T0-=T&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - (5 + T - t0_2), <span class="stringliteral">&quot;T0-=T&quot;</span>);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  t0_1 *= 2 + t0_2;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - (5 + <a class="code" href="classT.html">T</a> - t0_2) * (2 + t0_2), <span class="stringliteral">&quot;T0*=T&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - (5 + T - t0_2) * (2 + t0_2), <span class="stringliteral">&quot;T0*=T&quot;</span>);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  t0_1 /= 7.0 + t0_2;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - (5 + <a class="code" href="classT.html">T</a> - t0_2) * (2 + t0_2) / (7.0 + t0_2), <span class="stringliteral">&quot;T0/=T&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a>(t0_1 - (5 + T - t0_2) * (2 + t0_2) / (7.0 + t0_2), <span class="stringliteral">&quot;T0/=T&quot;</span>);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclassT_html"><div class="ttname"><a href="classT.html">T</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Number_html"><div class="ttname"><a href="classFTensor_1_1Number.html">FTensor::Number&lt; 0 &gt;</a></div></div>
 <div class="ttc" id="atest__for__zero_8hpp_html_a36675af88b1a25aee2634856e36d5455"><div class="ttname"><a href="test__for__zero_8hpp.html#a36675af88b1a25aee2634856e36d5455">test_for_zero</a></div><div class="ttdeci">void test_for_zero(const T &amp;t, const std::string &amp;s)</div><div class="ttdef"><b>Definition:</b> <a href="test__for__zero_8hpp_source.html#l00007">test_for_zero.hpp:7</a></div></div>
 <!-- HTML footer for doxygen 1.8.13-->

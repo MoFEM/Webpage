@@ -602,34 +602,34 @@ Source code main code</h1>
 <div class="line">  <a class="code" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacePoisson2DiscontGalerkinOperators.html#a173c19dd8b6c2ed117323f283356c969">get_ntensor</a>(<a class="code" href="classT.html">T</a> &amp;base_mat) {</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacePoisson2DiscontGalerkinOperators.html#a173c19dd8b6c2ed117323f283356c969">get_ntensor</a>(T &amp;base_mat) {</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="classFTensor_1_1Tensor0.html">FTensor::Tensor0&lt;FTensor::PackPtr&lt;double *, 1&gt;</a>&gt;(</div>
 <div class="line">      &amp;*base_mat.data().begin());</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacePoisson2DiscontGalerkinOperators.html#a173c19dd8b6c2ed117323f283356c969">get_ntensor</a>(<a class="code" href="classT.html">T</a> &amp;base_mat, <span class="keywordtype">int</span> gg, <span class="keywordtype">int</span> bb) {</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacePoisson2DiscontGalerkinOperators.html#a173c19dd8b6c2ed117323f283356c969">get_ntensor</a>(T &amp;base_mat, <span class="keywordtype">int</span> gg, <span class="keywordtype">int</span> bb) {</div>
 <div class="line">  <span class="keywordtype">double</span> *ptr = &amp;base_mat(gg, bb);</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="classFTensor_1_1Tensor0.html">FTensor::Tensor0&lt;FTensor::PackPtr&lt;double *, 1&gt;</a>&gt;(ptr);</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacePoisson2DiscontGalerkinOperators.html#ae428b07b01ec04bfcf8d9ead9a519f8e">get_diff_ntensor</a>(<a class="code" href="classT.html">T</a> &amp;base_mat) {</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacePoisson2DiscontGalerkinOperators.html#ae428b07b01ec04bfcf8d9ead9a519f8e">get_diff_ntensor</a>(T &amp;base_mat) {</div>
 <div class="line">  <span class="keywordtype">double</span> *ptr = &amp;*base_mat.data().begin();</div>
 <div class="line">  <span class="keywordflow">return</span> getFTensor1FromPtr&lt;2&gt;(ptr);</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacePoisson2DiscontGalerkinOperators.html#ae428b07b01ec04bfcf8d9ead9a519f8e">get_diff_ntensor</a>(<a class="code" href="classT.html">T</a> &amp;base_mat, <span class="keywordtype">int</span> gg, <span class="keywordtype">int</span> bb) {</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="namespacePoisson2DiscontGalerkinOperators.html#ae428b07b01ec04bfcf8d9ead9a519f8e">get_diff_ntensor</a>(T &amp;base_mat, <span class="keywordtype">int</span> gg, <span class="keywordtype">int</span> bb) {</div>
 <div class="line">  <span class="keywordtype">double</span> *ptr = &amp;base_mat(gg, 2 * bb);</div>
 <div class="line">  <span class="keywordflow">return</span> getFTensor1FromPtr&lt;2&gt;(ptr);</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="plate_8cpp.html#ade84a7d56fd98cc4b8c77a658811a2bf">get_diff2_ntensor</a>(<a class="code" href="classT.html">T</a> &amp;base_mat) {</div>
+<div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="plate_8cpp.html#ade84a7d56fd98cc4b8c77a658811a2bf">get_diff2_ntensor</a>(T &amp;base_mat) {</div>
 <div class="line">  <span class="keywordtype">double</span> *ptr = &amp;*base_mat.data().begin();</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="namespaceMoFEM.html#a753293549f872b65e11b16be88655e1b">getFTensor2SymmetricLowerFromPtr&lt;2&gt;</a>(ptr);</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="plate_8cpp.html#ade84a7d56fd98cc4b8c77a658811a2bf">get_diff2_ntensor</a>(<a class="code" href="classT.html">T</a> &amp;base_mat, <span class="keywordtype">int</span> gg, <span class="keywordtype">int</span> bb) {</div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">auto</span> <a class="code" href="plate_8cpp.html#ade84a7d56fd98cc4b8c77a658811a2bf">get_diff2_ntensor</a>(T &amp;base_mat, <span class="keywordtype">int</span> gg, <span class="keywordtype">int</span> bb) {</div>
 <div class="line">  <span class="keywordtype">double</span> *ptr = &amp;base_mat(gg, 4 * bb);</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="namespaceMoFEM.html#a753293549f872b65e11b16be88655e1b">getFTensor2SymmetricLowerFromPtr&lt;2&gt;</a>(ptr);</div>
 <div class="line">};</div>
@@ -810,7 +810,6 @@ Source code main code</h1>
 <div class="ttc" id="astructOpH1LhsSkeleton_html_a1f56e4a247abd8ed6fe67e8b01b8af18"><div class="ttname"><a href="structOpH1LhsSkeleton.html#a1f56e4a247abd8ed6fe67e8b01b8af18">OpH1LhsSkeleton::sideFEPtr</a></div><div class="ttdeci">boost::shared_ptr&lt; FaceSideEle &gt; sideFEPtr</div><div class="ttdoc">pointer to element to get data on edge/face sides</div><div class="ttdef"><b>Definition:</b> <a href="plate_8cpp_source.html#l00135">plate.cpp:135</a></div></div>
 <div class="ttc" id="aplate_8cpp_html_a6e6aecb9bbdcfeb96eba5540e108e392"><div class="ttname"><a href="plate_8cpp.html#a6e6aecb9bbdcfeb96eba5540e108e392">plate_stiffness</a></div><div class="ttdeci">auto plate_stiffness</div><div class="ttdoc">get fourth-order constitutive tensor</div><div class="ttdef"><b>Definition:</b> <a href="plate_8cpp_source.html#l00079">plate.cpp:79</a></div></div>
 <div class="ttc" id="astructOpH1LhsSkeleton_html_ae973ea04e4d9ee3e4e70cd03e1b304bb"><div class="ttname"><a href="structOpH1LhsSkeleton.html#ae973ea04e4d9ee3e4e70cd03e1b304bb">OpH1LhsSkeleton::OpH1LhsSkeleton</a></div><div class="ttdeci">OpH1LhsSkeleton(boost::shared_ptr&lt; FaceSideEle &gt; side_fe_ptr, boost::shared_ptr&lt; MatrixDouble &gt; d_mat_ptr)</div><div class="ttdoc">Construct a new OpH1LhsSkeleton.</div><div class="ttdef"><b>Definition:</b> <a href="plate_8cpp_source.html#l00505">plate.cpp:505</a></div></div>
-<div class="ttc" id="aclassT_html"><div class="ttname"><a href="classT.html">T</a></div></div>
 <div class="ttc" id="aplate_8cpp_html_ad8356beda63e0236105b57106bf11688"><div class="ttname"><a href="plate_8cpp.html#ad8356beda63e0236105b57106bf11688">OpDomainPlateLoad</a></div><div class="ttdeci">FormsIntegrators&lt; DomainEleOp &gt;::Assembly&lt; PETSC &gt;::LinearForm&lt; GAUSS &gt;::OpSource&lt; BASE_DIM, FIELD_DIM &gt; OpDomainPlateLoad</div><div class="ttdef"><b>Definition:</b> <a href="plate_8cpp_source.html#l00050">plate.cpp:50</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1ProblemsManager_html"><div class="ttname"><a href="structMoFEM_1_1ProblemsManager.html">MoFEM::ProblemsManager</a></div><div class="ttdoc">Problem manager is used to build and partition problems.</div><div class="ttdef"><b>Definition:</b> <a href="ProblemsManager_8hpp_source.html#l00021">ProblemsManager.hpp:21</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a></div><div class="ttdeci">@ L2</div><div class="ttdoc">field with C-1 continuity</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00088">definitions.h:88</a></div></div>

@@ -23,11 +23,11 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
+<g id="a_node6"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
 <polygon fill="white" stroke="black" points="987,-60.5 987,-101.5 1153,-101.5 1153,-60.5 987,-60.5"/>
 <text text-anchor="start" x="995" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="995" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannPressureMaterial</text>
-<text text-anchor="middle" x="1070" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
+<text text-anchor="middle" x="1070" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
 </a>
 </g>
 </g>
@@ -40,11 +40,11 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
+<g id="a_node7"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
 <polygon fill="white" stroke="black" points="987,-0.5 987,-41.5 1153,-41.5 1153,-0.5 987,-0.5"/>
 <text text-anchor="start" x="995" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="995" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannPressureMaterial</text>
-<text text-anchor="middle" x="1070" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
+<text text-anchor="middle" x="1070" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
 </a>
 </g>
 </g>

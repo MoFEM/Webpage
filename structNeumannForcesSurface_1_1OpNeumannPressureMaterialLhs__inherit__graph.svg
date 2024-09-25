@@ -68,11 +68,11 @@ var sectionId = 'dynsection-0';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
+<g id="a_node5"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
 <polygon fill="white" stroke="black" points="726,-60.5 726,-101.5 892,-101.5 892,-60.5 726,-60.5"/>
 <text text-anchor="start" x="734" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="734" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannPressureMaterial</text>
-<text text-anchor="middle" x="809" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dX</text>
+<text text-anchor="middle" x="809" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dx</text>
 </a>
 </g>
 </g>
@@ -85,11 +85,11 @@ var sectionId = 'dynsection-0';
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
+<g id="a_node6"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
 <polygon fill="white" stroke="black" points="726,-0.5 726,-41.5 892,-41.5 892,-0.5 726,-0.5"/>
 <text text-anchor="start" x="734" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="734" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannPressureMaterial</text>
-<text text-anchor="middle" x="809" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dx</text>
+<text text-anchor="middle" x="809" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dX</text>
 </a>
 </g>
 </g>

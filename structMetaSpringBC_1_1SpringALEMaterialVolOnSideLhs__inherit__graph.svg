@@ -68,10 +68,10 @@ var sectionId = 'dynsection-0';
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume for spring element.">
+<g id="a_node6"><a xlink:href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
 <polygon fill="white" stroke="black" points="1002,-49.5 1002,-79.5 1183,-79.5 1183,-49.5 1002,-49.5"/>
 <text text-anchor="start" x="1010" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">MetaSpringBC::SpringALEMaterial</text>
-<text text-anchor="middle" x="1092.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
+<text text-anchor="middle" x="1092.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
 </a>
 </g>
 </g>
@@ -84,10 +84,10 @@ var sectionId = 'dynsection-0';
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
+<g id="a_node7"><a xlink:href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume for spring element.">
 <polygon fill="white" stroke="black" points="1002,-0.5 1002,-30.5 1183,-30.5 1183,-0.5 1002,-0.5"/>
 <text text-anchor="start" x="1010" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">MetaSpringBC::SpringALEMaterial</text>
-<text text-anchor="middle" x="1092.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
+<text text-anchor="middle" x="1092.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
 </a>
 </g>
 </g>

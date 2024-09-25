@@ -1,3 +1,12 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structMoFEM_1_1SourceFunctionSpecialization.html" title=" " alt="" coords="5,5,273,32"/>
+<area shape="rect" id="node1" href="$structMoFEM_1_1ScalingMethod.html" title=" " alt="" coords="5,243,180,269"/>
+<area shape="rect" id="node2" href="$structMoFEM_1_1TimeScale.html" title="Force scale operator for reading two columns." alt="" coords="248,159,395,185"/>
+<area shape="rect" id="node8" href="$structMoFEM_1_1TimeScaleVector.html" title="Force scale operator for reading four columns (time and vector)" alt="" coords="228,290,415,331"/>
+<area shape="rect" id="node3" href="$structContact_1_1ScaledTimeScale.html" title=" " alt="" coords="491,5,681,32"/>
+<area shape="rect" id="node4" href="$structExample_1_1DynamicFirstOrderConsConstantTimeScale.html" title=" " alt="" coords="481,57,691,98"/>
+<area shape="rect" id="node5" href="$structExample_1_1DynamicFirstOrderConsSinusTimeScale.html" title=" " alt="" coords="481,122,691,163"/>
+<area shape="rect" id="node6" href="$structExample_1_1ScaledTimeScale.html" title=" " alt="" coords="487,188,685,215"/>
+<area shape="rect" id="node7" href="$structLinMomTimeScale.html" title=" " alt="" coords="515,239,657,265"/>
+<area shape="rect" id="node9" href="$structBasicBoundaryConditionsInterface_1_1BasicBCVectorConst.html" title=" " alt="" coords="463,290,709,331"/>
+<area shape="rect" id="node10" href="$structBasicBoundaryConditionsInterface_1_1BasicBCVectorScale.html" title=" " alt="" coords="463,355,709,397"/>
 </map>

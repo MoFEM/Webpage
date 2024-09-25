@@ -202,7 +202,7 @@ $(function() {
 , <a class="el" href="structBlockOptionDataSimpleRods.html#aefdbb8b040863a4fcbc660830e5fd0ce">BlockOptionDataSimpleRods</a>
 , <a class="el" href="structGelModule_1_1Gel_1_1ConstitutiveEquation.html#a6afe626e1b0923eee0e95a39cc2cea48">GelModule::Gel::ConstitutiveEquation&lt; TYPE &gt;</a>
 , <a class="el" href="structMetaSpringBC_1_1BlockOptionDataSprings.html#a01a4ac8ca1b6d6ca44a2be73009f9fad">MetaSpringBC::BlockOptionDataSprings</a>
-, <a class="el" href="structMoFEM_1_1BlockData.html#af01a9e5426af8a10121d66074f8ed3d1">MoFEM::BlockData</a>
+, <a class="el" href="structMoFEM_1_1BlockData.html#aeaa54010d910ee20df4093deae760e91">MoFEM::BlockData</a>
 , <a class="el" href="structNavierStokesElement_1_1BlockData.html#a52f892906e2118063318917904b96163">NavierStokesElement::BlockData</a>
 , <a class="el" href="structNonlinearElasticElement_1_1BlockData.html#af5b66ddec9ecb4867174e6472ec3be9d">NonlinearElasticElement::BlockData</a>
 </li>
@@ -215,11 +215,11 @@ $(function() {
 <li>idofs_X
 : <a class="el" href="structNeumannForcesSurfaceComplexForLazy_1_1MyTriangleSpatialFE.html#ad6c0071eb1912871dce99b977b8a2b83">NeumannForcesSurfaceComplexForLazy::MyTriangleSpatialFE</a>
 </li>
-<li>idofs_X_edge
-: <a class="el" href="structNeumannForcesSurfaceComplexForLazy_1_1MyTriangleSpatialFE.html#a7d09c84236c02cb8011912b8c0453b75">NeumannForcesSurfaceComplexForLazy::MyTriangleSpatialFE</a>
-</li>
 <li>idofs_x_edge
 : <a class="el" href="structNeumannForcesSurfaceComplexForLazy_1_1MyTriangleSpatialFE.html#abaa1914444e73b1d0be5dceddfa22b47">NeumannForcesSurfaceComplexForLazy::MyTriangleSpatialFE</a>
+</li>
+<li>idofs_X_edge
+: <a class="el" href="structNeumannForcesSurfaceComplexForLazy_1_1MyTriangleSpatialFE.html#a7d09c84236c02cb8011912b8c0453b75">NeumannForcesSurfaceComplexForLazy::MyTriangleSpatialFE</a>
 </li>
 <li>idofs_x_face
 : <a class="el" href="structNeumannForcesSurfaceComplexForLazy_1_1MyTriangleSpatialFE.html#a93a1e23bbb416aa1f6ddc5541478ca22">NeumannForcesSurfaceComplexForLazy::MyTriangleSpatialFE</a>
@@ -363,6 +363,13 @@ $(function() {
 <li>inputMesh
 : <a class="el" href="structHookeInternalStressElement_1_1OpGetInternalStress.html#a84b6bac2d6483190c45ae50f4866e258">HookeInternalStressElement::OpGetInternalStress</a>
 </li>
+<li>intBlockSetsPtr
+: <a class="el" href="structElectrostatics.html#a23de64a0fbda2ef577f99eeea6fa710c">Electrostatics</a>
+, <a class="el" href="structOpBlockChargeDensity.html#a1abd94d3084035974c7ac41b340da1b6">OpBlockChargeDensity</a>
+</li>
+<li>intDomainBlocksetsPtr
+: <a class="el" href="structOpTotalEnergy.html#a317270ac2d46ed759c60530d3be92422">OpTotalEnergy</a>
+</li>
 <li>integrateArea
 : <a class="el" href="structContactOps_1_1Monitor.html#ad938e692f71d5631fba40ebfbcb0f6f5">ContactOps::Monitor</a>
 </li>
@@ -373,8 +380,17 @@ $(function() {
 <li>integrationRule
 : <a class="el" href="structADOLCPlasticity_1_1ClosestPointProjection.html#a36d253d3f0f065e41f4acbfae2c142e5">ADOLCPlasticity::ClosestPointProjection</a>
 </li>
+<li>interfaceEnts
+: <a class="el" href="structBlockData.html#a279c5ef62ad0a4ea207f7c90527550e9">BlockData</a>
+</li>
+<li>interFaceRhsFe
+: <a class="el" href="structElectrostatics.html#a22c9eda01816dc5af2ac5627a685132b">Electrostatics</a>
+</li>
 <li>internalDataPtr
 : <a class="el" href="structMoFEM_1_1LogManager.html#aeb27c7e92b34588a748a208fd4189d09">MoFEM::LogManager</a>
+</li>
+<li>internalDomainEnts
+: <a class="el" href="structBlockData.html#a97b3b3088820e09ef2567f7ab96f4ed9">BlockData</a>
 </li>
 <li>internalStressMat
 : <a class="el" href="structHookeInternalStressElement_1_1DataAtIntegrationPts.html#a2edf17eefaed1d017daed8b437ac0167">HookeInternalStressElement::DataAtIntegrationPts</a>
@@ -485,6 +501,9 @@ $(function() {
 </li>
 <li>is_atom_testing
 : <a class="el" href="structBoneRemodeling_1_1Remodeling_1_1CommonData.html#a48ff1af7a7a59b4bc796d8a28af4659d">BoneRemodeling::Remodeling::CommonData</a>
+</li>
+<li>is_partitioned
+: <a class="el" href="structElectrostatics.html#adcf18a01223d428dd5b462486c9eab58">Electrostatics</a>
 </li>
 <li>is_rotation
 : <a class="el" href="structDataFromBc.html#ad89248b4c0e77dd2df2d455bc914167c">DataFromBc</a>

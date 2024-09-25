@@ -298,7 +298,7 @@ $(function() {
 : <a class="el" href="structMoFEM_1_1BcManager_1_1BCs.html#a767a65ac3dd327f4d511b549cf7b91e7">MoFEM::BcManager::BCs</a>
 </li>
 <li>bcData
-: <a class="el" href="structEshelbianPlasticity_1_1FeTractionBc.html#a93a0b1417c0da03b31c7ae691c3961e5">EshelbianPlasticity::FeTractionBc</a>
+: <a class="el" href="structEshelbianPlasticity_1_1OpBrokenTractionBc.html#ab1d047aecabd6baf2ea1ffcc73a7bb12">EshelbianPlasticity::OpBrokenTractionBc</a>
 </li>
 <li>BcData()
 : <a class="el" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a5668e681a166d542de9ada9286c8b17e">MixTransport::UnsaturatedFlowElement::BcData</a>
@@ -313,8 +313,7 @@ $(function() {
 : <a class="el" href="structEshelbianPlasticity_1_1BcDisp.html#a92b247c168da86dd6ecbf5301c2bf95b">EshelbianPlasticity::BcDisp</a>
 </li>
 <li>bcDispPtr
-: <a class="el" href="structEshelbianPlasticity_1_1OpDispBc.html#a892ee58577196a7766f7acee28d9efb0">EshelbianPlasticity::OpDispBc</a>
-, <a class="el" href="structEshelbianPlasticity_1_1OpDispBc__dx.html#aabca9a9d431bc0d74bb9a7b7247ec54b">EshelbianPlasticity::OpDispBc_dx</a>
+: <a class="el" href="structEshelbianPlasticity_1_1OpDispBcImpl_3_01A_00_01GAUSS_01_4.html#ad345dbfb2462887433a0a4fdf4b52c34">EshelbianPlasticity::OpDispBcImpl&lt; A, GAUSS &gt;</a>
 </li>
 <li>BcEntMethodDisp()
 : <a class="el" href="structBcEntMethodDisp.html#a7961288fa25aa1eec2e3d32380cf094c">BcEntMethodDisp</a>
@@ -324,9 +323,6 @@ $(function() {
 </li>
 <li>bcEnts
 : <a class="el" href="structMoFEM_1_1BcManager_1_1BCs.html#a78dd99b437986475aac290bab093b44c">MoFEM::BcManager::BCs</a>
-</li>
-<li>bcFe
-: <a class="el" href="structEshelbianPlasticity_1_1OpTractionBc.html#a26af6d0312e5e00de1b71e006c8ab999">EshelbianPlasticity::OpTractionBc</a>
 </li>
 <li>bcFluxMap
 : <a class="el" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67e1bf9f7f6f774eca4d30584dfe3840">MixTransport::UnsaturatedFlowElement</a>
@@ -364,8 +360,7 @@ $(function() {
 : <a class="el" href="structEshelbianPlasticity_1_1BcRot.html#ab2fb44ff0ca2aa2b5ab73cb49a016136">EshelbianPlasticity::BcRot</a>
 </li>
 <li>bcRotPtr
-: <a class="el" href="structEshelbianPlasticity_1_1OpRotationBc.html#ad82856654843b90efcf20422bfdf31d2">EshelbianPlasticity::OpRotationBc</a>
-, <a class="el" href="structEshelbianPlasticity_1_1OpRotationBc__dx.html#abccfb25d17bd6a287f6dbb87a426d555">EshelbianPlasticity::OpRotationBc_dx</a>
+: <a class="el" href="structEshelbianPlasticity_1_1OpRotationBcImpl_3_01A_00_01GAUSS_01_4.html#a8c8397cce9898b80ac2baee5c6e06cfb">EshelbianPlasticity::OpRotationBcImpl&lt; A, GAUSS &gt;</a>
 </li>
 <li>BCs_RVELagrange_Disp()
 : <a class="el" href="structBCs__RVELagrange__Disp.html#a11d6e1f56e236694709c3771ecc9fc02">BCs_RVELagrange_Disp</a>
@@ -421,7 +416,12 @@ $(function() {
 <li>beta
 : <a class="el" href="structArcLengthCtx.html#adc2b274415e11221cf017bbdbf161a23">ArcLengthCtx</a>
 , <a class="el" href="structCohesiveElement_1_1CohesiveInterfaceElement_1_1PhysicalEquation.html#aae05ff568eaa1feec9d2592293bbf9da">CohesiveElement::CohesiveInterfaceElement::PhysicalEquation</a>
-, <a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html#afb7065862911874c5e3b7747123673c3">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a>
+</li>
+<li>bEta
+: <a class="el" href="structElectrostatics.html#a0ae7c19bb238472a9e2a0856d2c98b0e">Electrostatics</a>
+</li>
+<li>beta
+: <a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html#afb7065862911874c5e3b7747123673c3">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a>
 </li>
 <li>Beta
 : <a class="el" href="structFractureMechanics_1_1ConstantArea_1_1OpAreaJacobian_1_1AuxFunctions.html#af4aecc6c367e6cd7ac303588c005bd4e">FractureMechanics::ConstantArea::OpAreaJacobian::AuxFunctions&lt; TYPE &gt;</a>
@@ -495,16 +495,20 @@ $(function() {
 , <a class="el" href="structNonlinearElasticElementInterface.html#a7ff6e99dae1c801fcd23e33c24a4da01">NonlinearElasticElementInterface</a>
 </li>
 <li>bitAdjEnt
-: <a class="el" href="structMoFEM_1_1Simple.html#a266d487e4be97cba46a215c6fcd62f39">MoFEM::Simple</a>
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#aad4b625d4776f899d5aea17f8a354a3f">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structMoFEM_1_1Simple.html#a266d487e4be97cba46a215c6fcd62f39">MoFEM::Simple</a>
 </li>
 <li>bitAdjEntMask
-: <a class="el" href="structMoFEM_1_1Simple.html#a9718f5a002070eca7d0d75a66268c503">MoFEM::Simple</a>
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a4504a0d8d7bc7c10ba0f3da550cf3cea">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structMoFEM_1_1Simple.html#a9718f5a002070eca7d0d75a66268c503">MoFEM::Simple</a>
 </li>
 <li>bitAdjParent
-: <a class="el" href="structMoFEM_1_1Simple.html#a6e9335db060ba6fcdb0a49ab9072d39a">MoFEM::Simple</a>
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a965a245b85e31d5146c0bd1308427602">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structMoFEM_1_1Simple.html#a6e9335db060ba6fcdb0a49ab9072d39a">MoFEM::Simple</a>
 </li>
 <li>bitAdjParentMask
-: <a class="el" href="structMoFEM_1_1Simple.html#af1f30fc363dbde3207c53276fc884c93">MoFEM::Simple</a>
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#aff2905bb85336516d2bcd77f73fb6514">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structMoFEM_1_1Simple.html#af1f30fc363dbde3207c53276fc884c93">MoFEM::Simple</a>
 </li>
 <li>bitChild
 : <a class="el" href="structMoFEM_1_1OpAddParentEntData.html#ae5f0114369ba2ca44ef9ea84961edd4f">MoFEM::OpAddParentEntData</a>
@@ -576,6 +580,9 @@ $(function() {
 <li>Block_BodyForces()
 : <a class="el" href="structMoFEM_1_1Block__BodyForces.html#af88e115d1d58bb072bd4676942b14ef2">MoFEM::Block_BodyForces</a>
 </li>
+<li>blockChrgDens
+: <a class="el" href="structDataAtIntegrationPts.html#a6987d338c3f9843142f40b448e0482ff">DataAtIntegrationPts</a>
+</li>
 <li>BlockData()
 : <a class="el" href="structBlockData.html#a3a4dfddb67525d6766e5b78956395fb9">BlockData</a>
 </li>
@@ -631,11 +638,11 @@ $(function() {
 <li>blockId
 : <a class="el" href="structMixTransport_1_1CommonMaterialData.html#a831ddc2b4bd2f20c479db3a6fba35ab5">MixTransport::CommonMaterialData</a>
 </li>
-<li>BlockIndex
-: <a class="el" href="structMoFEM_1_1DiagBlockIndex.html#ae41321ae6067e6ffca43459acfeb6202">MoFEM::DiagBlockIndex</a>
-</li>
 <li>blockIndex
 : <a class="el" href="structMoFEM_1_1DiagBlockIndex.html#a5c410d4a3f5aee0fbac153ebf5a1d027">MoFEM::DiagBlockIndex</a>
+</li>
+<li>BlockIndex
+: <a class="el" href="structMoFEM_1_1DiagBlockIndex.html#ae41321ae6067e6ffca43459acfeb6202">MoFEM::DiagBlockIndex</a>
 </li>
 <li>blockMat
 : <a class="el" href="structMoFEM_1_1OpSchurAssembleEndImpl.html#a0c69e9e8c47503c7fff6a3bd1f9c768d">MoFEM::OpSchurAssembleEndImpl&lt; OP_SCHUR_ASSEMBLE_BASE &gt;</a>
@@ -665,11 +672,14 @@ $(function() {
 <li>BlockOptionDataSprings()
 : <a class="el" href="structMetaSpringBC_1_1BlockOptionDataSprings.html#ac8f53f0de8a8829a9867cdae1f211abe">MetaSpringBC::BlockOptionDataSprings</a>
 </li>
+<li>BlockParams
+: <a class="el" href="structPlasticOps_1_1CommonData.html#af2be620c414f28713a6deedf6f62cc5a">PlasticOps::CommonData</a>
+</li>
 <li>blockParams
 : <a class="el" href="structPlasticOps_1_1CommonData.html#a6c03e6ec4f0cee22cb2e4d7c20fe27be">PlasticOps::CommonData</a>
 </li>
-<li>BlockParams
-: <a class="el" href="structPlasticOps_1_1CommonData.html#af2be620c414f28713a6deedf6f62cc5a">PlasticOps::CommonData</a>
+<li>blockPermittivity
+: <a class="el" href="structDataAtIntegrationPts.html#a833bb2795ca45f045b69b0fd9bbdb42e">DataAtIntegrationPts</a>
 </li>
 <li>BlockSetAttributes()
 : <a class="el" href="structMoFEM_1_1BlockSetAttributes.html#a651ac58fc42f5c4a3bebf7658642eb0b">MoFEM::BlockSetAttributes</a>
@@ -744,7 +754,8 @@ $(function() {
 , <a class="el" href="classFTensor_1_1dd__boundary__Tensor2__symmetric.html#a9eee74ebe8c46e8956d90f7de7711ecd">FTensor::dd_boundary_Tensor2_symmetric&lt; T, Dim01, Dim23, i, j, k, l &gt;</a>
 </li>
 <li>boundaryCondition()
-: <a class="el" href="structExample.html#a0105b294dd531bfee565bd59951ee5ef">Example</a>
+: <a class="el" href="structElectrostatics.html#afc9839561151ee178f8cd8d95a19b3ef">Electrostatics</a>
+, <a class="el" href="structExample.html#a0105b294dd531bfee565bd59951ee5ef">Example</a>
 , <a class="el" href="structFreeSurface.html#a8f554e1221984163ef18529432cb2255">FreeSurface</a>
 , <a class="el" href="structHeatEquation.html#abf8262d2396d790070069cd715b97279">HeatEquation</a>
 , <a class="el" href="structMinimalSurfaceEqn.html#a0dff4d3308ecf8f4d8bb6301fe29b7a6">MinimalSurfaceEqn</a>
@@ -882,7 +893,7 @@ $(function() {
 : <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa7f57150f004d7ec3fd18afd1e2760e8af7c0a8635a36779913cf264e1cb6b68c">MoFEM::CoreTmp&lt; 0 &gt;</a>
 </li>
 <li>build_adjacencies()
-: <a class="el" href="structMoFEM_1_1CoreInterface.html#a370d23bf37a76dd9f7b577ec10242d71">MoFEM::CoreInterface</a>
+: <a class="el" href="structMoFEM_1_1CoreInterface.html#a727653d1367e758daf2a74cb65d4dfa5">MoFEM::CoreInterface</a>
 , <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a9bd34ae4f8a725ca6658f71bf095759d">MoFEM::CoreTmp&lt; 0 &gt;</a>
 </li>
 <li>BUILD_FE
@@ -890,18 +901,20 @@ $(function() {
 </li>
 <li>build_field()
 : <a class="el" href="structMoFEM_1_1CoreInterface.html#a31dd439c0a0bd340f8eccc3d116ecc4c">MoFEM::CoreInterface</a>
-, <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a7be8808f8d82c90d72758d1338424f1b">MoFEM::CoreTmp&lt; 0 &gt;</a>
 </li>
 <li>BUILD_FIELD
 : <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa7f57150f004d7ec3fd18afd1e2760e8aafe75d31cc3bb7ad0020faf3c29120f2">MoFEM::CoreTmp&lt; 0 &gt;</a>
+</li>
+<li>build_field()
+: <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a7be8808f8d82c90d72758d1338424f1b">MoFEM::CoreTmp&lt; 0 &gt;</a>
 </li>
 <li>build_fields()
 : <a class="el" href="group__mofem__field.html#ga126ea0bb04802f9d1946435279c3da56">MoFEM::CoreInterface</a>
 , <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aca393cd16500ff15a53f7eab1287bbf9">MoFEM::CoreTmp&lt; 0 &gt;</a>
 </li>
 <li>build_finite_elements()
-: <a class="el" href="group__mofem__fe.html#ga6c08912fa1ebad675e01a86f34f34136">MoFEM::CoreInterface</a>
-, <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#abba0e40cd6400fb8dafd4ca5e45d2a5a">MoFEM::CoreTmp&lt; 0 &gt;</a>
+: <a class="el" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">MoFEM::CoreInterface</a>
+, <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a1a9f9fc1159a7b44f103295ee0be17cb">MoFEM::CoreTmp&lt; 0 &gt;</a>
 </li>
 <li>BUILD_PROBLEM
 : <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa7f57150f004d7ec3fd18afd1e2760e8ad89ecba811acde61bda1f4e881baf797">MoFEM::CoreTmp&lt; 0 &gt;</a>

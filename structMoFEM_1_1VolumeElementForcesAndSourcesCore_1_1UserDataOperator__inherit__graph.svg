@@ -446,11 +446,11 @@ var sectionId = 'dynsection-0';
 <!-- Node28 -->
 <g id="node28" class="node">
 <title>Node28</title>
-<g id="a_node28"><a xlink:href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressLhs__Dx.html" target="_top" xlink:title=" ">
+<g id="a_node28"><a xlink:href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressLhs__DX.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="616.5,-4241.5 616.5,-4282.5 788.5,-4282.5 788.5,-4241.5 616.5,-4241.5"/>
 <text text-anchor="start" x="624.5" y="-4270.5" font-family="Helvetica,sans-Serif" font-size="10.00">FractureMechanics::</text>
 <text text-anchor="start" x="624.5" y="-4259.5" font-family="Helvetica,sans-Serif" font-size="10.00">MWLSApprox::OpMWLSMaterial</text>
-<text text-anchor="middle" x="702.5" y="-4248.5" font-family="Helvetica,sans-Serif" font-size="10.00">StressLhs_Dx</text>
+<text text-anchor="middle" x="702.5" y="-4248.5" font-family="Helvetica,sans-Serif" font-size="10.00">StressLhs_DX</text>
 </a>
 </g>
 </g>
@@ -463,11 +463,11 @@ var sectionId = 'dynsection-0';
 <!-- Node29 -->
 <g id="node29" class="node">
 <title>Node29</title>
-<g id="a_node29"><a xlink:href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressLhs__DX.html" target="_top" xlink:title=" ">
+<g id="a_node29"><a xlink:href="structFractureMechanics_1_1MWLSApprox_1_1OpMWLSMaterialStressLhs__Dx.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="616.5,-4181.5 616.5,-4222.5 788.5,-4222.5 788.5,-4181.5 616.5,-4181.5"/>
 <text text-anchor="start" x="624.5" y="-4210.5" font-family="Helvetica,sans-Serif" font-size="10.00">FractureMechanics::</text>
 <text text-anchor="start" x="624.5" y="-4199.5" font-family="Helvetica,sans-Serif" font-size="10.00">MWLSApprox::OpMWLSMaterial</text>
-<text text-anchor="middle" x="702.5" y="-4188.5" font-family="Helvetica,sans-Serif" font-size="10.00">StressLhs_DX</text>
+<text text-anchor="middle" x="702.5" y="-4188.5" font-family="Helvetica,sans-Serif" font-size="10.00">StressLhs_Dx</text>
 </a>
 </g>
 </g>
@@ -580,11 +580,11 @@ var sectionId = 'dynsection-0';
 <!-- Node36 -->
 <g id="node36" class="node">
 <title>Node36</title>
-<g id="a_node36"><a xlink:href="structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dX.html" target="_top" xlink:title="Calculate explicit derivative of energy.">
+<g id="a_node36"><a xlink:href="structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dx.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="623.5,-3781.5 623.5,-3822.5 781.5,-3822.5 781.5,-3781.5 623.5,-3781.5"/>
 <text text-anchor="start" x="631.5" y="-3810.5" font-family="Helvetica,sans-Serif" font-size="10.00">FractureMechanics::</text>
 <text text-anchor="start" x="631.5" y="-3799.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpLhsBoneExplicitDerivarive</text>
-<text text-anchor="middle" x="702.5" y="-3788.5" font-family="Helvetica,sans-Serif" font-size="10.00">WithHooke_dX</text>
+<text text-anchor="middle" x="702.5" y="-3788.5" font-family="Helvetica,sans-Serif" font-size="10.00">WithHooke_dx</text>
 </a>
 </g>
 </g>
@@ -597,11 +597,11 @@ var sectionId = 'dynsection-0';
 <!-- Node37 -->
 <g id="node37" class="node">
 <title>Node37</title>
-<g id="a_node37"><a xlink:href="structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dx.html" target="_top" xlink:title=" ">
+<g id="a_node37"><a xlink:href="structFractureMechanics_1_1OpLhsBoneExplicitDerivariveWithHooke__dX.html" target="_top" xlink:title="Calculate explicit derivative of energy.">
 <polygon fill="white" stroke="black" points="623.5,-3721.5 623.5,-3762.5 781.5,-3762.5 781.5,-3721.5 623.5,-3721.5"/>
 <text text-anchor="start" x="631.5" y="-3750.5" font-family="Helvetica,sans-Serif" font-size="10.00">FractureMechanics::</text>
 <text text-anchor="start" x="631.5" y="-3739.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpLhsBoneExplicitDerivarive</text>
-<text text-anchor="middle" x="702.5" y="-3728.5" font-family="Helvetica,sans-Serif" font-size="10.00">WithHooke_dx</text>
+<text text-anchor="middle" x="702.5" y="-3728.5" font-family="Helvetica,sans-Serif" font-size="10.00">WithHooke_dX</text>
 </a>
 </g>
 </g>
@@ -2367,10 +2367,10 @@ var sectionId = 'dynsection-0';
 <!-- Node101 -->
 <g id="node101" class="node">
 <title>Node101</title>
-<g id="a_node101"><a xlink:href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume for spring element.">
+<g id="a_node101"><a xlink:href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
 <polygon fill="white" stroke="black" points="1075,-2140 1075,-2170 1256,-2170 1256,-2140 1075,-2140"/>
 <text text-anchor="start" x="1083" y="-2158" font-family="Helvetica,sans-Serif" font-size="10.00">MetaSpringBC::SpringALEMaterial</text>
-<text text-anchor="middle" x="1165.5" y="-2147" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
+<text text-anchor="middle" x="1165.5" y="-2147" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
 </a>
 </g>
 </g>
@@ -2383,10 +2383,10 @@ var sectionId = 'dynsection-0';
 <!-- Node102 -->
 <g id="node102" class="node">
 <title>Node102</title>
-<g id="a_node102"><a xlink:href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
+<g id="a_node102"><a xlink:href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume for spring element.">
 <polygon fill="white" stroke="black" points="1075,-2091 1075,-2121 1256,-2121 1256,-2091 1075,-2091"/>
 <text text-anchor="start" x="1083" y="-2109" font-family="Helvetica,sans-Serif" font-size="10.00">MetaSpringBC::SpringALEMaterial</text>
-<text text-anchor="middle" x="1165.5" y="-2098" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
+<text text-anchor="middle" x="1165.5" y="-2098" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
 </a>
 </g>
 </g>
@@ -2399,11 +2399,11 @@ var sectionId = 'dynsection-0';
 <!-- Node106 -->
 <g id="node106" class="node">
 <title>Node106</title>
-<g id="a_node106"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
+<g id="a_node106"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
 <polygon fill="white" stroke="black" points="1082.5,-2011.5 1082.5,-2052.5 1248.5,-2052.5 1248.5,-2011.5 1082.5,-2011.5"/>
 <text text-anchor="start" x="1090.5" y="-2040.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="1090.5" y="-2029.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannPressureMaterial</text>
-<text text-anchor="middle" x="1165.5" y="-2018.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
+<text text-anchor="middle" x="1165.5" y="-2018.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
 </a>
 </g>
 </g>
@@ -2416,11 +2416,11 @@ var sectionId = 'dynsection-0';
 <!-- Node107 -->
 <g id="node107" class="node">
 <title>Node107</title>
-<g id="a_node107"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
+<g id="a_node107"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
 <polygon fill="white" stroke="black" points="1082.5,-1951.5 1082.5,-1992.5 1248.5,-1992.5 1248.5,-1951.5 1082.5,-1951.5"/>
 <text text-anchor="start" x="1090.5" y="-1980.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="1090.5" y="-1969.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannPressureMaterial</text>
-<text text-anchor="middle" x="1165.5" y="-1958.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
+<text text-anchor="middle" x="1165.5" y="-1958.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
 </a>
 </g>
 </g>
@@ -2433,11 +2433,11 @@ var sectionId = 'dynsection-0';
 <!-- Node109 -->
 <g id="node109" class="node">
 <title>Node109</title>
-<g id="a_node109"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
+<g id="a_node109"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
 <polygon fill="white" stroke="black" points="1072,-1891.5 1072,-1932.5 1259,-1932.5 1259,-1891.5 1072,-1891.5"/>
 <text text-anchor="start" x="1080" y="-1920.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="1080" y="-1909.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannSurfaceForceMaterial</text>
-<text text-anchor="middle" x="1165.5" y="-1898.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
+<text text-anchor="middle" x="1165.5" y="-1898.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
 </a>
 </g>
 </g>
@@ -2450,11 +2450,11 @@ var sectionId = 'dynsection-0';
 <!-- Node110 -->
 <g id="node110" class="node">
 <title>Node110</title>
-<g id="a_node110"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialVolOnSideLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
+<g id="a_node110"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialVolOnSideLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator (material configuration) on the side volume.">
 <polygon fill="white" stroke="black" points="1072,-1831.5 1072,-1872.5 1259,-1872.5 1259,-1831.5 1072,-1831.5"/>
 <text text-anchor="start" x="1080" y="-1860.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="1080" y="-1849.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannSurfaceForceMaterial</text>
-<text text-anchor="middle" x="1165.5" y="-1838.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dX</text>
+<text text-anchor="middle" x="1165.5" y="-1838.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolOnSideLhs_dX_dx</text>
 </a>
 </g>
 </g>
@@ -2864,61 +2864,61 @@ var sectionId = 'dynsection-0';
 <!-- Node150 -->
 <g id="node150" class="node">
 <title>Node150</title>
-<g id="a_node150"><a xlink:href="structOpAleLhs__dx__dx.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="879,-961.5 879,-980.5 1004,-980.5 1004,-961.5 879,-961.5"/>
-<text text-anchor="middle" x="941.5" y="-968.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dx_dx&lt; S &gt;</text>
+<g id="a_node150"><a xlink:href="structOpAleLhs__dX__dX.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="878,-961.5 878,-980.5 1005,-980.5 1005,-961.5 878,-961.5"/>
+<text text-anchor="middle" x="941.5" y="-968.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dX_dX&lt; S &gt;</text>
 </a>
 </g>
 </g>
 <!-- Node148&#45;&gt;Node150 -->
 <g id="edge149" class="edge">
 <title>Node148&#45;&gt;Node150</title>
-<path fill="none" stroke="midnightblue" d="M751.87,-1161.59C772.49,-1160.13 795.36,-1154.72 811,-1140 860.93,-1093.01 797.68,-1037.62 847,-990 855.7,-981.6 867.04,-976.45 878.81,-973.37"/>
+<path fill="none" stroke="midnightblue" d="M751.87,-1161.59C772.49,-1160.13 795.36,-1154.72 811,-1140 860.93,-1093.01 797.68,-1037.62 847,-990 855.46,-981.83 866.42,-976.73 877.84,-973.63"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="751.49,-1158.1 741.65,-1162.02 751.79,-1165.1 751.49,-1158.1"/>
 </g>
 <!-- Node151 -->
 <g id="node151" class="node">
 <title>Node151</title>
-<g id="a_node151"><a xlink:href="structOpAleLhs__dx__dX.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="878.5,-923.5 878.5,-942.5 1004.5,-942.5 1004.5,-923.5 878.5,-923.5"/>
-<text text-anchor="middle" x="941.5" y="-930.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dx_dX&lt; S &gt;</text>
+<g id="a_node151"><a xlink:href="structOpAleLhs__dX__dx.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="892.5,-923.5 892.5,-942.5 990.5,-942.5 990.5,-923.5 892.5,-923.5"/>
+<text text-anchor="middle" x="941.5" y="-930.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dX_dx</text>
 </a>
 </g>
 </g>
 <!-- Node148&#45;&gt;Node151 -->
 <g id="edge150" class="edge">
 <title>Node148&#45;&gt;Node151</title>
-<path fill="none" stroke="midnightblue" d="M751.67,-1161.96C772.49,-1160.62 795.57,-1155.21 811,-1140 871.58,-1080.27 787.18,-1012.49 847,-952 855.39,-943.52 866.45,-938.31 878.02,-935.19"/>
+<path fill="none" stroke="midnightblue" d="M751.67,-1161.96C772.49,-1160.62 795.57,-1155.21 811,-1140 871.58,-1080.27 787.18,-1012.49 847,-952 858.76,-940.1 875.8,-934.64 892.11,-932.38"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="751.54,-1158.46 741.67,-1162.31 751.79,-1165.46 751.54,-1158.46"/>
 </g>
 <!-- Node152 -->
 <g id="node152" class="node">
 <title>Node152</title>
-<g id="a_node152"><a xlink:href="structOpAleLhs__dX__dX.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="878,-885.5 878,-904.5 1005,-904.5 1005,-885.5 878,-885.5"/>
-<text text-anchor="middle" x="941.5" y="-892.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dX_dX&lt; S &gt;</text>
+<g id="a_node152"><a xlink:href="structOpAleLhs__dx__dX.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="878.5,-885.5 878.5,-904.5 1004.5,-904.5 1004.5,-885.5 878.5,-885.5"/>
+<text text-anchor="middle" x="941.5" y="-892.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dx_dX&lt; S &gt;</text>
 </a>
 </g>
 </g>
 <!-- Node148&#45;&gt;Node152 -->
 <g id="edge151" class="edge">
 <title>Node148&#45;&gt;Node152</title>
-<path fill="none" stroke="midnightblue" d="M751.65,-1162.19C772.59,-1160.93 795.76,-1155.5 811,-1140 882.31,-1067.47 776.62,-987.43 847,-914 855.25,-905.39 866.26,-900.12 877.82,-896.99"/>
+<path fill="none" stroke="midnightblue" d="M751.65,-1162.19C772.59,-1160.93 795.76,-1155.5 811,-1140 882.31,-1067.47 776.62,-987.43 847,-914 855.37,-905.27 866.56,-899.97 878.3,-896.86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="751.49,-1158.7 741.6,-1162.51 751.71,-1165.69 751.49,-1158.7"/>
 </g>
 <!-- Node153 -->
 <g id="node153" class="node">
 <title>Node153</title>
-<g id="a_node153"><a xlink:href="structOpAleLhs__dX__dx.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="892.5,-847.5 892.5,-866.5 990.5,-866.5 990.5,-847.5 892.5,-847.5"/>
-<text text-anchor="middle" x="941.5" y="-854.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dX_dx</text>
+<g id="a_node153"><a xlink:href="structOpAleLhs__dx__dx.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="879,-847.5 879,-866.5 1004,-866.5 1004,-847.5 879,-847.5"/>
+<text text-anchor="middle" x="941.5" y="-854.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleLhs_dx_dx&lt; S &gt;</text>
 </a>
 </g>
 </g>
 <!-- Node148&#45;&gt;Node153 -->
 <g id="edge152" class="edge">
 <title>Node148&#45;&gt;Node153</title>
-<path fill="none" stroke="midnightblue" d="M751.81,-1162.35C772.78,-1161.12 795.93,-1155.67 811,-1140 893.07,-1054.63 766.03,-962.41 847,-876 858.55,-863.67 875.74,-858.15 892.24,-855.97"/>
+<path fill="none" stroke="midnightblue" d="M751.81,-1162.35C772.78,-1161.12 795.93,-1155.67 811,-1140 893.07,-1054.63 766.03,-962.41 847,-876 855.38,-867.06 866.73,-861.69 878.63,-858.59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="751.64,-1158.85 741.74,-1162.64 751.84,-1165.85 751.64,-1158.85"/>
 </g>
 <!-- Node154 -->
@@ -2956,40 +2956,40 @@ var sectionId = 'dynsection-0';
 <!-- Node156 -->
 <g id="node156" class="node">
 <title>Node156</title>
-<g id="a_node156"><a xlink:href="structOpAleRhs__dx.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="901,-710.5 901,-729.5 982,-729.5 982,-710.5 901,-710.5"/>
-<text text-anchor="middle" x="941.5" y="-717.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleRhs_dx</text>
+<g id="a_node156"><a xlink:href="structOpAleRhs__dX.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="900.5,-710.5 900.5,-729.5 982.5,-729.5 982.5,-710.5 900.5,-710.5"/>
+<text text-anchor="middle" x="941.5" y="-717.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleRhs_dX</text>
 </a>
 </g>
 </g>
 <!-- Node148&#45;&gt;Node156 -->
 <g id="edge155" class="edge">
 <title>Node148&#45;&gt;Node156</title>
-<path fill="none" stroke="midnightblue" d="M751.67,-1162.69C772.83,-1161.58 796.19,-1156.14 811,-1140 871.51,-1074.09 787.34,-805.67 847,-739 860.25,-724.19 881.63,-719.09 900.6,-717.85"/>
+<path fill="none" stroke="midnightblue" d="M751.67,-1162.69C772.83,-1161.58 796.19,-1156.14 811,-1140 871.51,-1074.09 787.34,-805.67 847,-739 860.14,-724.31 881.27,-719.17 900.12,-717.88"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="751.43,-1159.19 741.51,-1162.91 751.59,-1166.19 751.43,-1159.19"/>
 </g>
 <!-- Node157 -->
 <g id="node157" class="node">
 <title>Node157</title>
-<g id="a_node157"><a xlink:href="structOpAleRhs__dX.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="900.5,-672.5 900.5,-691.5 982.5,-691.5 982.5,-672.5 900.5,-672.5"/>
-<text text-anchor="middle" x="941.5" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleRhs_dX</text>
+<g id="a_node157"><a xlink:href="structOpAleRhs__dx.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="901,-672.5 901,-691.5 982,-691.5 982,-672.5 901,-672.5"/>
+<text text-anchor="middle" x="941.5" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpAleRhs_dx</text>
 </a>
 </g>
 </g>
 <!-- Node148&#45;&gt;Node157 -->
 <g id="edge156" class="edge">
 <title>Node148&#45;&gt;Node157</title>
-<path fill="none" stroke="midnightblue" d="M751.73,-1162.74C772.9,-1161.64 796.25,-1156.19 811,-1140 876.92,-1067.64 782.01,-774.2 847,-701 860.09,-686.26 881.21,-681.12 900.07,-679.84"/>
+<path fill="none" stroke="midnightblue" d="M751.73,-1162.74C772.9,-1161.64 796.25,-1156.19 811,-1140 876.92,-1067.64 782.01,-774.2 847,-701 860.2,-686.14 881.57,-681.03 900.55,-679.8"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="751.48,-1159.24 741.56,-1162.96 751.63,-1166.24 751.48,-1159.24"/>
 </g>
 <!-- Node158 -->
 <g id="node158" class="node">
 <title>Node158</title>
-<g id="a_node158"><a xlink:href="structOpAnalyticalInternalAleStrain__dX.html" target="_top" xlink:title=" ">
+<g id="a_node158"><a xlink:href="structOpAnalyticalInternalAleStrain__dx.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="861,-623 861,-653 1022,-653 1022,-623 861,-623"/>
 <text text-anchor="start" x="869" y="-641" font-family="Helvetica,sans-Serif" font-size="10.00">OpAnalyticalInternalAleStrain</text>
-<text text-anchor="middle" x="941.5" y="-630" font-family="Helvetica,sans-Serif" font-size="10.00">_dX&lt; S &gt;</text>
+<text text-anchor="middle" x="941.5" y="-630" font-family="Helvetica,sans-Serif" font-size="10.00">_dx&lt; S &gt;</text>
 </a>
 </g>
 </g>
@@ -3002,10 +3002,10 @@ var sectionId = 'dynsection-0';
 <!-- Node159 -->
 <g id="node159" class="node">
 <title>Node159</title>
-<g id="a_node159"><a xlink:href="structOpAnalyticalInternalAleStrain__dx.html" target="_top" xlink:title=" ">
+<g id="a_node159"><a xlink:href="structOpAnalyticalInternalAleStrain__dX.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="861,-574 861,-604 1022,-604 1022,-574 861,-574"/>
 <text text-anchor="start" x="869" y="-592" font-family="Helvetica,sans-Serif" font-size="10.00">OpAnalyticalInternalAleStrain</text>
-<text text-anchor="middle" x="941.5" y="-581" font-family="Helvetica,sans-Serif" font-size="10.00">_dx&lt; S &gt;</text>
+<text text-anchor="middle" x="941.5" y="-581" font-family="Helvetica,sans-Serif" font-size="10.00">_dX&lt; S &gt;</text>
 </a>
 </g>
 </g>

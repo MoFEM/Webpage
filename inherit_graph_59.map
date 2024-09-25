@@ -1,5 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,279,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,64,279,91"/>
 <area shape="rect" id="node2" href="$structBCs__RVEVolume_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="327,5,549,32"/>
-<area shape="rect" id="node3" href="$structPeriodicNitscheConstrains_1_1PeriodicVolume.html" title=" " alt="" coords="342,57,534,98"/>
+<area shape="rect" id="node3" href="$structConvectiveMassElement_1_1MyVolumeFE.html" title="definition of volume element" alt="" coords="347,57,529,98"/>
+<area shape="rect" id="node4" href="$structPeriodicNitscheConstrains_1_1PeriodicVolume.html" title=" " alt="" coords="342,122,534,163"/>
 </map>

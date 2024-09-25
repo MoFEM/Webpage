@@ -386,11 +386,11 @@ assembleSystem()</h3>
 <div class="line">      pipeline_mng-&gt;getOpDomainLhsPipeline(), {H1});</div>
 <div class="line"> </div>
 <div class="line">    pipeline_mng-&gt;getOpDomainLhsPipeline().push_back(</div>
-<div class="line">        <span class="keyword">new</span> OpSetBc(domainField, <span class="keyword">true</span>, boundaryMarker));</div>
+<div class="line">        <span class="keyword">new</span> OpSetBc(<a class="code" href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a>, <span class="keyword">true</span>, boundaryMarker));</div>
 <div class="line">    pipeline_mng-&gt;getOpDomainLhsPipeline().push_back(</div>
-<div class="line">        <span class="keyword">new</span> OpDomainLhs(domainField, domainField));</div>
+<div class="line">        <span class="keyword">new</span> OpDomainLhs(<a class="code" href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a>, <a class="code" href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a>));</div>
 <div class="line">    pipeline_mng-&gt;getOpDomainLhsPipeline().push_back(</div>
-<div class="line">        <span class="keyword">new</span> OpUnSetBc(domainField));</div>
+<div class="line">        <span class="keyword">new</span> OpUnSetBc(<a class="code" href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a>));</div>
 <div class="line">  }</div>
 </div><!-- fragment --><p>For example, when we assemble for the boundary, first we use <code>OpSetBc()</code>, then add <code>OpBoundaryLhs</code> and <code>OpUnSetBc</code> to the <code>getOpBoundaryLhsPipeline()</code> and <code>getOpBoundaryLhsPipeline</code>. To be noted that it's important to set the flag as <code>false</code> here.</p>
 <blockquote class="doxtable">
@@ -419,7 +419,7 @@ Figure 2: Solving approach</div></div>
 <div class="line">    <span class="keyword">const</span> <a class="code" href="structMoFEM_1_1Problem.html">MoFEM::Problem</a> *problem_ptr;</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga4cafea643e191089b31207ebb16842c9">DMMoFEMGetProblemPtr</a>(dm, &amp;problem_ptr);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> mField.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;ISManager&gt;()-&gt;isCreateProblemFieldAndRank(</div>
-<div class="line">        problem_ptr-&gt;<a class="code" href="structMoFEM_1_1Problem.html#ac27123017bcc40cd4259e674a7318b3c">getName</a>(), <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>, domainField, 0, 1, &amp;is_boundary,</div>
+<div class="line">        problem_ptr-&gt;<a class="code" href="structMoFEM_1_1Problem.html#ac27123017bcc40cd4259e674a7318b3c">getName</a>(), <a class="code" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>, <a class="code" href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a>, 0, 1, &amp;is_boundary,</div>
 <div class="line">        &amp;boundaryEntitiesForFieldsplit);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCFieldSplitSetIS(pc, NULL, is_boundary);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISDestroy(&amp;is_boundary);</div>
@@ -804,7 +804,7 @@ Implementation of the main program (*.cpp)</h2>
 <div class="line">  <a class="code" href="structMoFEM_1_1Simple.html">Simple</a> *simpleInterface;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Field name and approximation order</span></div>
-<div class="line">  std::string domainField;</div>
+<div class="line">  std::string <a class="code" href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a>;</div>
 <div class="line">  <span class="keywordtype">int</span> oRder;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Object to mark boundary entities for the assembling of domain elements</span></div>
@@ -817,7 +817,7 @@ Implementation of the main program (*.cpp)</h2>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><a class="code" href="structPoisson2DNonhomogeneous.html#a2ad05abaeb3d9465b3c0c70bc9c6dbbf">Poisson2DNonhomogeneous::Poisson2DNonhomogeneous</a>(<a class="code" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field)</div>
-<div class="line">    : domainField(<span class="stringliteral">&quot;U&quot;</span>), mField(m_field) {}<span class="comment"></span></div>
+<div class="line">    : <a class="code" href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a>(<span class="stringliteral">&quot;U&quot;</span>), mField(m_field) {}<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [Read mesh]</span></div>
 <div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code" href="structPoisson2DNonhomogeneous.html#ad363b70735aaefeab27e969f3a4ffe4f">Poisson2DNonhomogeneous::readMesh</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
@@ -1194,6 +1194,7 @@ Implementation of the main program (*.cpp)</h2>
 <div class="ttc" id="anamespaceMoFEM_1_1Exceptions_html_a8fb6351034eac301fc47fdf2748c1b45"><div class="ttname"><a href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEM::Exceptions::MoFEMErrorCode</a></div><div class="ttdeci">PetscErrorCode MoFEMErrorCode</div><div class="ttdoc">MoFEM/PETSc error code.</div><div class="ttdef"><b>Definition:</b> <a href="Exceptions_8hpp_source.html#l00056">Exceptions.hpp:56</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_1_1Types_html_a71f706f784fbf6fd240806b70ed7d933"><div class="ttname"><a href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MoFEM::Types::MatrixDouble</a></div><div class="ttdeci">UBlasMatrix&lt; double &gt; MatrixDouble</div><div class="ttdef"><b>Definition:</b> <a href="Types_8hpp_source.html#l00077">Types.hpp:77</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1CoreInterface_html_af2224ce77b33637b5cfad66a275a2ffb"><div class="ttname"><a href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">MoFEM::CoreInterface::get_comm_rank</a></div><div class="ttdeci">virtual int get_comm_rank() const =0</div></div>
+<div class="ttc" id="aelectrostatics_8hpp_html_a86892352043338f8c9284d0a66f66be5"><div class="ttname"><a href="electrostatics_8hpp.html#a86892352043338f8c9284d0a66f66be5">domainField</a></div><div class="ttdeci">constexpr auto domainField</div><div class="ttdef"><b>Definition:</b> <a href="electrostatics_8hpp_source.html#l00007">electrostatics.hpp:7</a></div></div>
 <div class="ttc" id="astructPoisson2DNonhomogeneous_html_a9e3689ec8249b32acf7080dd0209aa4e"><div class="ttname"><a href="structPoisson2DNonhomogeneous.html#a9e3689ec8249b32acf7080dd0209aa4e">Poisson2DNonhomogeneous::mField</a></div><div class="ttdeci">MoFEM::Interface &amp; mField</div><div class="ttdef"><b>Definition:</b> <a href="poisson__2d__nonhomogeneous_8cpp_source.html#l00041">poisson_2d_nonhomogeneous.cpp:41</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1Simple_html_a3d65745e902af842b5c490eedbcd30d1"><div class="ttname"><a href="structMoFEM_1_1Simple.html#a3d65745e902af842b5c490eedbcd30d1">MoFEM::Simple::loadFile</a></div><div class="ttdeci">MoFEMErrorCode loadFile(const std::string options, const std::string mesh_file_name, LoadFileFunc loadFunc=defaultLoadFileFunc)</div><div class="ttdoc">Load mesh file.</div><div class="ttdef"><b>Definition:</b> <a href="Simple_8cpp_source.html#l00194">Simple.cpp:194</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1PipelineManager_html"><div class="ttname"><a href="structMoFEM_1_1PipelineManager.html">MoFEM::PipelineManager</a></div><div class="ttdoc">PipelineManager interface.</div><div class="ttdef"><b>Definition:</b> <a href="PipelineManager_8hpp_source.html#l00024">PipelineManager.hpp:24</a></div></div>

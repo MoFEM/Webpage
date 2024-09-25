@@ -183,7 +183,8 @@ $(function() {
 : <a class="el" href="structMoFEM_1_1Simple.html#a8e68891145a3a2d68d578fa38763729b">MoFEM::Simple</a>
 </li>
 <li>parentAdjSkeletonFunctionDim2
-: <a class="el" href="structMoFEM_1_1Simple.html#a4e2dd466bb60964e98a2a5177e340d6c">MoFEM::Simple</a>
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#abeb708efe3ad0ee829ad795d70f370f3">EshelbianPlasticity::EshelbianCore</a>
+, <a class="el" href="structMoFEM_1_1Simple.html#a4e2dd466bb60964e98a2a5177e340d6c">MoFEM::Simple</a>
 </li>
 <li>parentBlockStructurePtr
 : <a class="el" href="structMoFEM_1_1BlockStructure.html#a5d04985f2a0dafca459b6ac84cae7447">MoFEM::BlockStructure</a>
@@ -191,11 +192,11 @@ $(function() {
 <li>ParentChild()
 : <a class="el" href="structMoFEM_1_1NodeMergerInterface_1_1ParentChild.html#acdfcd142d006ef19085adc8969ebe010">MoFEM::NodeMergerInterface::ParentChild</a>
 </li>
-<li>ParentChildMap
-: <a class="el" href="structMoFEM_1_1NodeMergerInterface.html#a002d0909a77c3a8213d5a53bbba5a0b5">MoFEM::NodeMergerInterface</a>
-</li>
 <li>parentChildMap
 : <a class="el" href="structMoFEM_1_1NodeMergerInterface.html#a00d975d3b2562dd13c4b1eedb5be3b71">MoFEM::NodeMergerInterface</a>
+</li>
+<li>ParentChildMap
+: <a class="el" href="structMoFEM_1_1NodeMergerInterface.html#a002d0909a77c3a8213d5a53bbba5a0b5">MoFEM::NodeMergerInterface</a>
 </li>
 <li>parentElePtr
 : <a class="el" href="structMoFEM_1_1OpAddParentEntData.html#ac0904dd101991a570f526c815ebcc669">MoFEM::OpAddParentEntData</a>
@@ -352,6 +353,14 @@ $(function() {
 <li>PeriodicVolume()
 : <a class="el" href="structPeriodicNitscheConstrains_1_1PeriodicVolume.html#a8c42577cc7368ddff8dbc0098d481e66">PeriodicNitscheConstrains::PeriodicVolume</a>
 </li>
+<li>permBlockSetsPtr
+: <a class="el" href="structElectrostatics.html#ad0b82152ea30300eddfb1682626914a4">Electrostatics</a>
+, <a class="el" href="structOpBlockPermittivity.html#a63bd8ac4004b6f687c9865b29e3eba08">OpBlockPermittivity</a>
+, <a class="el" href="structOpElectricDispJump.html#a05c2938f97dd7ee6d3db5e8412de2a54">OpElectricDispJump&lt; SPACE_DIM &gt;</a>
+, <a class="el" href="structOpEnergyDensity.html#a9d95f9ae416277783de36e8648382fd1">OpEnergyDensity</a>
+, <a class="el" href="structOpGradTimesPerm.html#a028146118235ce8101e565abb941156c">OpGradTimesPerm</a>
+, <a class="el" href="structOpTotalEnergy.html#aa12de4b06114dfc8055c30afe62f2877">OpTotalEnergy</a>
+</li>
 <li>pErmeability
 : <a class="el" href="structGelModule_1_1Gel_1_1BlockMaterialData.html#a784b575176debecb2a2c32c0b4797c1f">GelModule::Gel::BlockMaterialData</a>
 </li>
@@ -392,12 +401,21 @@ $(function() {
 <li>petscStringCache
 : <a class="el" href="structMoFEM_1_1LogManager.html#ac9406b368b26b4d2bc36c2c21352f30f">MoFEM::LogManager</a>
 </li>
+<li>petscTotalEnergy
+: <a class="el" href="structOpTotalEnergy.html#aaa5119591c57e66fb3220df71a3df81b">OpTotalEnergy</a>
+</li>
 <li>petscVec
-: <a class="el" href="structExample_1_1CommonData.html#aad1717441a2871e7eea75d0838652da4">Example::CommonData</a>
+: <a class="el" href="structDataAtIntegrationPts.html#a0700569f3cd4c19374361b00c38781c4">DataAtIntegrationPts</a>
+, <a class="el" href="structElectrostatics.html#a28354d88516fc345ba994e57bd944c2e">Electrostatics</a>
+, <a class="el" href="structExample_1_1CommonData.html#aad1717441a2871e7eea75d0838652da4">Example::CommonData</a>
 , <a class="el" href="structMixedPoisson_1_1CommonData.html#a3f8503c1d8337dee41b28ae715235f5c">MixedPoisson::CommonData</a>
+, <a class="el" href="structOpElectrodeCharge.html#a1b29b602a70ada87d6f0b16598e460ca">OpElectrodeCharge&lt; SPACE_DIM &gt;</a>
 , <a class="el" href="structPhotonDiffusion_1_1CommonData.html#a90df6034fcd54044f02109be43d4ba12">PhotonDiffusion::CommonData</a>
 , <a class="el" href="structPoisson2DHomogeneous.html#ace6ed072c6291417347ee18db6c4ba8a">Poisson2DHomogeneous</a>
 , <a class="el" href="structStandardPoisson_1_1CommonData.html#ad7029646521a8f9ec9932207b40f4804">StandardPoisson::CommonData</a>
+</li>
+<li>petscVecEnergy
+: <a class="el" href="structElectrostatics.html#acfabdc3cec4c8c61a93f4fe4ceeb69f0">Electrostatics</a>
 </li>
 <li>phi
 : <a class="el" href="structADOLCPlasticity_1_1J2Plasticity_3_013_01_4.html#af6e614d31ef10eb311dfc3cf9ff34e95">ADOLCPlasticity::J2Plasticity&lt; 3 &gt;</a>
@@ -409,9 +427,6 @@ $(function() {
 : <a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html#a3a7a0c174c943fdccab6e5c50d4ac1fd">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a>
 , <a class="el" href="structEshelbianPlasticity_1_1HMHStVenantKirchhoff.html#ae1e0cbfbd6c4fb3976a87819600af0ec">EshelbianPlasticity::HMHStVenantKirchhoff</a>
 , <a class="el" href="structNitscheMethod_1_1BlockData.html#a492d8b9d41a7fb1e5563f57881187b01">NitscheMethod::BlockData</a>
-</li>
-<li>phiAtPts
-: <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html#a099105b7bf7f82638c7fb121a37cef61">EshelbianPlasticity::DataAtIntegrationPts</a>
 </li>
 <li>PhotonDiffusion()
 : <a class="el" href="structPhotonDiffusion.html#a8bc09cbefb3ca91a87930ca96393e7d1">PhotonDiffusion</a>
@@ -458,6 +473,12 @@ $(function() {
 </li>
 <li>piolaStress
 : <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a2b9aba6e8dc6dae38c6ec15266ebd5f1">EshelbianPlasticity::EshelbianCore</a>
+</li>
+<li>piolaZeroDofsMarker
+: <a class="el" href="structSetUpSchurImpl.html#a1989e9a60d6da79b4dc00e579529af22">SetUpSchurImpl</a>
+</li>
+<li>piolaZeroDofsVec
+: <a class="el" href="structSetUpSchurImpl.html#a2eac4a006df96f21ed3ebfc4324b1217">SetUpSchurImpl</a>
 </li>
 <li>PipelineManager()
 : <a class="el" href="structMoFEM_1_1PipelineManager.html#af41374d4ea54ff204080bc45761a211f">MoFEM::PipelineManager</a>
@@ -568,8 +589,8 @@ $(function() {
 : <a class="el" href="structThermalStressElement_1_1BlockData.html#ac434475a05d30054bcaff39aac5e82ae">ThermalStressElement::BlockData</a>
 </li>
 <li>polyConvex
-: <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical.html#a0dcbfda6a58446607ec16069b1c892aa">EshelbianPlasticity::OpSpatialPhysical</a>
-, <a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__du.html#a30d12455a4276b5101344c1744fcedfb">EshelbianPlasticity::OpSpatialPhysical_du_du</a>
+: <a class="el" href="structEshelbianPlasticity_1_1HMHHencky_1_1OpSpatialPhysical.html#ac6805eebd9c59e8857b553e432ded583">EshelbianPlasticity::HMHHencky::OpSpatialPhysical</a>
+, <a class="el" href="structEshelbianPlasticity_1_1HMHHencky_1_1OpSpatialPhysical__du__du.html#a901f3e141aa05d0dc0323c7daa1c2132">EshelbianPlasticity::HMHHencky::OpSpatialPhysical_du_du</a>
 </li>
 <li>PolyNd
 : <a class="el" href="structClipperLib_1_1OutRec.html#a334af720a9e0a815ba690e80e32bebd1">ClipperLib::OutRec</a>
@@ -664,7 +685,7 @@ $(function() {
 , <a class="el" href="structContactOps_1_1PostProcEleByDim_3_013_01_4.html#a9458a2ba37bdc5ecc437a840e27f9812">ContactOps::PostProcEleByDim&lt; 3 &gt;</a>
 , <a class="el" href="structElementsAndOps_3_012_01_4.html#ae2a8c4107264d1dd1075fc51f56941b0">ElementsAndOps&lt; 2 &gt;</a>
 , <a class="el" href="structElementsAndOps_3_013_01_4.html#ad2b985ce9298ce760e25abeda47eb4ca">ElementsAndOps&lt; 3 &gt;</a>
-, <a class="el" href="structPostProcEleByDim_3_012_01_4.html#aaf9ddfa314368e43fd2159d1e7d8ff05">PostProcEleByDim&lt; 2 &gt;</a>
+, <a class="el" href="structPostProcEleByDim_3_012_01_4.html#a7b9e68ab0fb875070a7c40b1d5059797">PostProcEleByDim&lt; 2 &gt;</a>
 , <a class="el" href="structPostProcEleByDim_3_013_01_4.html#a8a23d9b801de5b49d8e31fe86990eb58">PostProcEleByDim&lt; 3 &gt;</a>
 </li>
 <li>PostProcEleDomain
@@ -700,7 +721,6 @@ $(function() {
 , <a class="el" href="structDirichletFixFieldAtEntitiesBc.html#a8b02117078a88e077bb6116e4c14e428">DirichletFixFieldAtEntitiesBc</a>
 , <a class="el" href="structEshelbianMonitor.html#ad76861d77fab0c21abf3d337806a0788">EshelbianMonitor</a>
 , <a class="el" href="structEshelbianPlasticity_1_1ContactTree.html#a8a6e3ae0f45d3192fd5889ccc4bfe6e6">EshelbianPlasticity::ContactTree</a>
-, <a class="el" href="structEshelbianPlasticity_1_1FeTractionBc.html#ae0ff0dc337839fd5006e80c66d02b1c3">EshelbianPlasticity::FeTractionBc</a>
 , <a class="el" href="structExample.html#abf1476c965357f99692a8f231723aaab">Example</a>
 , <a class="el" href="structFractureMechanics_1_1ConstantArea_1_1MyTriangleFE.html#a4bf33f8df0c5c12150a801736173ff74">FractureMechanics::ConstantArea::MyTriangleFE</a>
 , <a class="el" href="structFractureMechanics_1_1CrackPropagation_1_1BothSurfaceConstrains.html#a71ee90afe73f7a33893b230ce56d5b82">FractureMechanics::CrackPropagation::BothSurfaceConstrains</a>
@@ -893,18 +913,6 @@ $(function() {
 , <a class="el" href="structFreeSurfaceOps_1_1OpCalculateLift.html#a8a3ac0a6a74015e92dfeb79f999a3e80">FreeSurfaceOps::OpCalculateLift</a>
 , <a class="el" href="structFreeSurfaceOps_1_1OpRhsU.html#a33aeca5f095d267a6fddcc05acdbf43b">FreeSurfaceOps::OpRhsU</a>
 </li>
-<li>precEps
-: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#aae1821b2e5fff6688260842e1ba58918">EshelbianPlasticity::EshelbianCore</a>
-</li>
-<li>precEpsContactDisp
-: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a04bd2aabb3cb94c48385dc2a45fb09aa">EshelbianPlasticity::EshelbianCore</a>
-</li>
-<li>precEpsOmega
-: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#af9a439cd90b118ad71674f3aa85f43a6">EshelbianPlasticity::EshelbianCore</a>
-</li>
-<li>precEpsW
-: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a9d74212e5b7a934afd078066f7ce9a5e">EshelbianPlasticity::EshelbianCore</a>
-</li>
 <li>preconditionerBlocksPtr
 : <a class="el" href="structMoFEM_1_1BlockStructure.html#a523c688a074d00b97873f64b1553b31c">MoFEM::BlockStructure</a>
 </li>
@@ -932,7 +940,6 @@ $(function() {
 , <a class="el" href="structEdgeSlidingConstrains_1_1MyEdgeFE.html#a5f728c86ae99dc0c35345c93f08af3f9">EdgeSlidingConstrains::MyEdgeFE</a>
 , <a class="el" href="structEshelbianMonitor.html#a2a756312b44d32f4798099df606e6140">EshelbianMonitor</a>
 , <a class="el" href="structEshelbianPlasticity_1_1ContactTree.html#a7ed14a44adb47954e00bd7326378e873">EshelbianPlasticity::ContactTree</a>
-, <a class="el" href="structEshelbianPlasticity_1_1FeTractionBc.html#a60c3249f281fe00d4039a959e6cdb899">EshelbianPlasticity::FeTractionBc</a>
 , <a class="el" href="structFluidPressure_1_1MyTriangleFE.html#a0408bb21e9440c28c243e8f7b902cd4d">FluidPressure::MyTriangleFE</a>
 , <a class="el" href="structFractureMechanics_1_1ConstantArea_1_1MyTriangleFE.html#a58b014bd27d2a8a94dd93a67f74b01b1">FractureMechanics::ConstantArea::MyTriangleFE</a>
 , <a class="el" href="structFractureMechanics_1_1CrackPropagation_1_1BothSurfaceConstrains.html#a340e135d0b7a55242fb8142d5daba95f">FractureMechanics::CrackPropagation::BothSurfaceConstrains</a>
@@ -1188,12 +1195,12 @@ $(function() {
 : <a class="el" href="structMoFEM_1_1Problem.html#a74c8bb71a1dc76f0f31c0e523d7b7b77">MoFEM::Problem</a>
 </li>
 <li>problem_basic_method_postProcess()
-: <a class="el" href="group__mofem__loops.html#gaf205d10a120f57f07264210fb845e347">MoFEM::CoreInterface</a>
+: <a class="el" href="group__mofem__loops.html#gaa0c68f5ac68979990310315bc77d9248">MoFEM::CoreInterface</a>
 , <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a2e147896c34603b2285dfeb6d6d8ae2a">MoFEM::CoreTmp&lt; 0 &gt;</a>
 </li>
 <li>problem_basic_method_preProcess()
 : <a class="el" href="structMoFEM_1_1CoreInterface.html#ae67d772bddcb063f2bdc5abfa598b699">MoFEM::CoreInterface</a>
-, <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a78fda33d019afdd09c750712063d2aac">MoFEM::CoreTmp&lt; 0 &gt;</a>
+, <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#abf207b9c9e23a58da7d10bd802da61e4">MoFEM::CoreTmp&lt; 0 &gt;</a>
 </li>
 <li>ProblemChangeRefLevelBitAdd()
 : <a class="el" href="structMoFEM_1_1ProblemChangeRefLevelBitAdd.html#a49fcfed4a5715dc0164dcc910920d89f">MoFEM::ProblemChangeRefLevelBitAdd</a>
@@ -1269,6 +1276,9 @@ $(function() {
 <li>projectEntitiesQualityTrashold
 : <a class="el" href="structMoFEM_1_1CutMeshInterface.html#a6b9776c73fa2731c98ee28deab409ed7">MoFEM::CutMeshInterface</a>
 </li>
+<li>projectGeometry()
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a5a43d933d12be53c290bedda41eaea43">EshelbianPlasticity::EshelbianCore</a>
+</li>
 <li>projectGriffithForce()
 : <a class="el" href="structFractureMechanics_1_1CrackPropagation.html#a85dc9f7efde4b3db9472674e99cde230">FractureMechanics::CrackPropagation</a>
 </li>
@@ -1339,15 +1349,15 @@ $(function() {
 <li>ptrGrad
 : <a class="el" href="structOpCheckValsDiffVals.html#af36ee6bead8b6f35f8e324a69ea9a897">OpCheckValsDiffVals</a>
 </li>
-<li>ptrh
-: <a class="el" href="structNonlinearElasticElement_1_1OpJacobianEnergy.html#aa7cab2955ee91df8717915d27963e5bd">NonlinearElasticElement::OpJacobianEnergy</a>
-</li>
 <li>ptrH
 : <a class="el" href="structNonlinearElasticElement_1_1OpJacobianEnergy.html#aad2926d3880a015c3960c7071edf7a94">NonlinearElasticElement::OpJacobianEnergy</a>
-, <a class="el" href="structNonlinearElasticElement_1_1OpJacobianPiolaKirchhoffStress.html#ae1bb3d322908c19203755ba710fbca60">NonlinearElasticElement::OpJacobianPiolaKirchhoffStress</a>
 </li>
 <li>ptrh
-: <a class="el" href="structNonlinearElasticElement_1_1OpJacobianPiolaKirchhoffStress.html#ab3da729214630d06d6e1499ea23dd24b">NonlinearElasticElement::OpJacobianPiolaKirchhoffStress</a>
+: <a class="el" href="structNonlinearElasticElement_1_1OpJacobianEnergy.html#aa7cab2955ee91df8717915d27963e5bd">NonlinearElasticElement::OpJacobianEnergy</a>
+, <a class="el" href="structNonlinearElasticElement_1_1OpJacobianPiolaKirchhoffStress.html#ab3da729214630d06d6e1499ea23dd24b">NonlinearElasticElement::OpJacobianPiolaKirchhoffStress</a>
+</li>
+<li>ptrH
+: <a class="el" href="structNonlinearElasticElement_1_1OpJacobianPiolaKirchhoffStress.html#ae1bb3d322908c19203755ba710fbca60">NonlinearElasticElement::OpJacobianPiolaKirchhoffStress</a>
 </li>
 <li>ptrHess
 : <a class="el" href="structOpCheckValsDiffVals.html#a1f36f184583702d11b16de9d25e96979">OpCheckValsDiffVals</a>
@@ -1365,7 +1375,7 @@ $(function() {
 : <a class="el" href="structEshelbianMonitor.html#ac17e3c7db37b66010e95c2d7d5a4b018">EshelbianMonitor</a>
 </li>
 <li>push_dofs()
-: <a class="el" href="structMoFEM_1_1FieldSeries.html#adb32dd202bd84bf43f921ee84325647e">MoFEM::FieldSeries</a>
+: <a class="el" href="structMoFEM_1_1FieldSeries.html#a24dcc38e06ef6101a43f7bd8573a4ce1">MoFEM::FieldSeries</a>
 </li>
 <li>pushMarkDOFsOnEntities()
 : <a class="el" href="structMoFEM_1_1BcManager.html#abba371167d20e4619a787789f03908cf">MoFEM::BcManager</a>

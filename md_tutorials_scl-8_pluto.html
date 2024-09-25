@@ -122,17 +122,17 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nh_pluto_10.png" alt="" class="inline"/></p>
 <p><em>Source</em> <a href="https://www.nasa.gov">https://www.nasa.gov</a></p>
-<h1><a class="anchor" id="autotoc_md150"></a>
+<h1><a class="anchor" id="autotoc_md154"></a>
 Introduction</h1>
 <p>In this example, we focus on modelling the <em>partial differential equation</em> with a <em>nonlinear boundary conditions</em>. We choose the problem of thermal equilibrium of the Pluto planet.The planet model is oversimplified. However, it serves the purpose; this example shows how to linearize partial differential equations and apply the Newton method. <br  />
 </p>
 <p><a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> is generic code, and other processes (chemical reactions, radioactive decay, etc.) can be included, to fit better reality. For example, an interesting modelling avenue would be to apply multi-scale analysis, with separate scales for space and time for processes on the surface and subsurface, or model extension to model transport phenomena with reaction-diffusion equation, or near surface convection diffusion problem.</p>
 <p>+++</p>
-<h1><a class="anchor" id="autotoc_md151"></a>
+<h1><a class="anchor" id="autotoc_md155"></a>
 Part I</h1>
-<h2><a class="anchor" id="autotoc_md152"></a>
+<h2><a class="anchor" id="autotoc_md156"></a>
 Energy balance</h2>
-<h3><a class="anchor" id="autotoc_md153"></a>
+<h3><a class="anchor" id="autotoc_md157"></a>
 Conservation law</h3>
 <p>The universal law of nature, that energy has to be conserved, that with the help of <a href="https://en.wikipedia.org/wiki/Divergence_theorem">divergence theorem</a> and <a href="https://en.wikipedia.org/wiki/Principle_of_locality">principle of locality</a>, can be expressed for every point of the body as follows, <br  />
 </p>
@@ -144,19 +144,19 @@ Conservation law</h3>
 <p>Equation ($eq:conservation1}$) expressed with the indices applies to the Cartesian coordinate system only, to express it in the more abstract and general form we can write in absolute notation, as follows</p>
 <p>\begin{equation} \nabla \cdot \mathbf{q} - f(x) = 0,\quad\forall \mathbf{x} \in \Omega \label{eq:conservation2} \tag{2} \end{equation}</p>
 <p>where $\nabla \cdot$ is divergence symbol. Note that we later solve problem in cylindrical coordinate system, were equation expressed $(eq:conservation1})$ is not valid for such system, however absolute notation $(eq:conservation2})$ holds.</p>
-<h3><a class="anchor" id="autotoc_md154"></a>
+<h3><a class="anchor" id="autotoc_md158"></a>
 Thermal conduction</h3>
 <p>The conection between energy flux and temerature gradient is given by [Fourier's law](<a href="https://en.wikipedia.org/wiki/Thermal_conduction#Fourier's_law">https://en.wikipedia.org/wiki/Thermal_conduction#Fourier's_law</a>),</p>
-<p>\begin{equation} q_i(\mathbf{x}) = - k(\mathbf{x}) \frac{\partial <a class="el" href="classT.html">T</a>(\mathbf{x})}{\partial x_i} \label{eq:furier1} \tag{3} \end{equation}</p>
+<p>\begin{equation} q_i(\mathbf{x}) = - k(\mathbf{x}) \frac{\partial T(\mathbf{x})}{\partial x_i} \label{eq:furier1} \tag{3} \end{equation}</p>
 <p>where:</p><ul>
 <li>$T(\mathbf{x})$ is temperature at point $\mathbf{x}$,</li>
-<li>$\frac{\partial <a class="el" href="classT.html">T</a>(\mathbf{x})}{\partial x_i}$ is gradient of temperature, where $i=0,1,2$,</li>
+<li>$\frac{\partial T(\mathbf{x})}{\partial x_i}$ is gradient of temperature, where $i=0,1,2$,</li>
 <li>$k(\mathbf{x})$ heat conductivity $[W\cdot m^{-2}]$ at point $\mathbf{x}$ in the body.</li>
 </ul>
 <p>Furrie's law expresses observation that heat transfer rate is proportional to the negative gradient of temperature, i.e. heat energy flows from hot region to cold region. Furrie's law is a particular expression of the second law of thermodynamics. In the following, we assume that heat conductivity is homogenous through the planet, and its value is the average value for the rock.</p>
 <p>The thermal conduction law expressed in absolute notation takes form as follows</p>
-<p>\begin{equation} \mathbf{q}(\mathbf{x}) = - k \pmb\nabla <a class="el" href="classT.html">T</a> \label{eq:furier2} \tag{4} \end{equation}</p>
-<h2><a class="anchor" id="autotoc_md155"></a>
+<p>\begin{equation} \mathbf{q}(\mathbf{x}) = - k \pmb\nabla T \label{eq:furier2} \tag{4} \end{equation}</p>
+<h2><a class="anchor" id="autotoc_md159"></a>
 Exchange of energy with the external world</h2>
 <p>Pluto exchange energy and mass with the universe through the surface, for simplicity, we restrict ourself to two cases, i.e. sun irradiance, planet and outer space radiation. Total power of energy exchange through the surface is given by</p>
 <p>\begin{equation} P = \int_\Gamma dP = \int_\Gamma dP^S + dP^r \quad [W] \label{eq:boundary} \tag{5} \end{equation}</p>
@@ -165,7 +165,7 @@ Exchange of energy with the external world</h2>
 <li>$dP^S$ is power surface infinitesimal element irradiation received from the sun,</li>
 <li>$dP^r$ is power surface infinitesimal element radiation/</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md156"></a>
+<h3><a class="anchor" id="autotoc_md160"></a>
 Pluto’s insolation</h3>
 <p>Following <a href="https://doi.org/10.1016/j.icarus.2014.12.028">Pluto's insolation history</a> we assume that energy flux from sin is</p>
 <p>\begin{equation} dP^S(\mathbf{x},t) = I * dA \quad [W] \label{eq:solar_raddiation1} \tag{6} \end{equation}</p>
@@ -179,7 +179,7 @@ Pluto’s insolation</h3>
 <p>From <a href="https://doi.org/10.1016/j.icarus.2014.12.028">Pluto's insolation history</a>, Pluto's motion is complex in time due to its elliptical and eccentric orbit. To keep analysis simple, we arbitrary pick data for one full orbit (1767), where north and south pole have averaged isolation values $260$ $[W\cdot m^{-2}]$, and on the equator $260$ $[W\cdot m^{-2}]$. For simplicity, we will use</p>
 <p>\begin{equation} I = -0.23 - 0.3 \sin{(\theta)} \label{eq:solar_raddiation2} \tag{7} \end{equation}</p>
 <p>where $\theta$ is altitude of point $\mathbf{x}$ on Pluto surface, see <a href="https://en.wikipedia.org/wiki/Horizontal_coordinate_system">Horizontal_coordinate_system</a>.</p>
-<h3><a class="anchor" id="autotoc_md157"></a>
+<h3><a class="anchor" id="autotoc_md161"></a>
 Body and space radiation</h3>
 <p>We will assume that surface of Pluto radiates energy in the space; it also receives energy from space, which has some relict temperature. We assume that outer space temperature is 3K degrees, following Wikipedia (<a href="https://en.wikipedia.org/wiki/Outer_space">https://en.wikipedia.org/wiki/Outer_space</a>). Balance of energy received by radiation be quantified by <a href="https://en.wikipedia.org/wiki/Planck%27s_law">Plank's law</a> integrated by all possible wave frequencies, see <a href="https://en.wikipedia.org/wiki/Thermal_radiation">https://en.wikipedia.org/wiki/Thermal_radiation</a>. Finally, you can express our ideas into the equation</p>
 <p>\begin{equation} dP^r(\mathbf{x}) = \epsilon \sigma (T^4(\mathbf{x})-T_S^4) dA \quad [W] \label{eq:solar_raddiation4} \tag{8} \end{equation}</p>
@@ -193,13 +193,13 @@ Body and space radiation</h3>
 <li>$\mathbf{x}$ is position.</li>
 </ul>
 <p>For simplicity, we will set $\epsilon=1$, assuming that radiation if for the black body. That might be true for outer space radiation but is not true for Pluto surface. However, it could be good enough approximation, considering that it is very cold on this planet, and the surface is rough, porous with the potentially large intrinsic surface area.</p>
-<h2><a class="anchor" id="autotoc_md158"></a>
+<h2><a class="anchor" id="autotoc_md162"></a>
 Equations in strong form</h2>
-<p>Putting all equations together, we get boundary value problem in the indicess for Cartesian coordinate system \begin{equation} \left\{ \begin{array}{l} \frac{\partial}{\partial x_i} \left( k \frac{\partial <a class="el" href="classT.html">T</a>}{\partial x_i} \right)\quad \forall \mathbf{x} \in \Omega, \ q_i dA_i = dP^S + dP^r \quad\forall \mathbf{} \in \Gamma \end{array} \right. \label{eq:strong1} \tag{9} \end{equation} Note that we drop $\sum$ symbol in ($eq:conservation1}$), following <a href="https://en.wikipedia.org/wiki/Einstein_notation">Einstein notation</a>. Also, following Einstein notation, $q_i dA_i = \sum_{i=0}^2 q_i dA_i$.</p>
-<p>When problem is expressed in that form, we call it that it is strong form. For clarity, we express above equation in coordinate system independent absolute notation \begin{equation} \left\{ \begin{array}{l} \nabla \cdot \left( k \pmb\nabla <a class="el" href="classT.html">T</a> \right) = 0\quad\forall \mathbf{x} \in \Omega, \ \mathbf{q}\cdot d\mathbf{A} = dP^S + dP^r \quad\forall \mathbf{x} \in \Gamma. <br  />
+<p>Putting all equations together, we get boundary value problem in the indicess for Cartesian coordinate system \begin{equation} \left\{ \begin{array}{l} \frac{\partial}{\partial x_i} \left( k \frac{\partial T}{\partial x_i} \right)\quad \forall \mathbf{x} \in \Omega, \ q_i dA_i = dP^S + dP^r \quad\forall \mathbf{} \in \Gamma \end{array} \right. \label{eq:strong1} \tag{9} \end{equation} Note that we drop $\sum$ symbol in ($eq:conservation1}$), following <a href="https://en.wikipedia.org/wiki/Einstein_notation">Einstein notation</a>. Also, following Einstein notation, $q_i dA_i = \sum_{i=0}^2 q_i dA_i$.</p>
+<p>When problem is expressed in that form, we call it that it is strong form. For clarity, we express above equation in coordinate system independent absolute notation \begin{equation} \left\{ \begin{array}{l} \nabla \cdot \left( k \pmb\nabla T \right) = 0\quad\forall \mathbf{x} \in \Omega, \ \mathbf{q}\cdot d\mathbf{A} = dP^S + dP^r \quad\forall \mathbf{x} \in \Gamma. <br  />
  \label{eq:strong2} \tag{10} \end{array} \right. \end{equation}</p>
 <p>This is a nonlinear partial differential equation since radiation is a nonlinear function of unknown distribution of temperature. You can notice as well that time does not explicitly is involved in the equations. This is a consequence of the assumptions above. We are looking at long periods, like time over several Plutos years (Pluto orbit has ~248 years), where average values are our initial interest.</p>
-<h1><a class="anchor" id="autotoc_md159"></a>
+<h1><a class="anchor" id="autotoc_md163"></a>
 Part II</h1>
 <div class="fragment"><div class="line"># Running code</div>
 <div class="line"> </div>
@@ -285,27 +285,27 @@ Part II</h1>
 <div class="line"># img = mpimg.imread(wd+&#39;/myscreenshot.png&#39;)</div>
 <div class="line"># imgplot = plt.imshow(img)</div>
 <div class="line"># plt.show()</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md160"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md164"></a>
 Part III</h1>
-<h2><a class="anchor" id="autotoc_md161"></a>
+<h2><a class="anchor" id="autotoc_md165"></a>
 Equations in weak form</h2>
 <p>Working with partial differential equations (PDEs) is hard for a computer. Computers are excellent with adding, subtracting and multiplying, but not with solving abstract PDEs. Over many years, many mathematical methods has bee invented which can transform PDEs into the algebraic equations, and then series of linear equations, which can be solved efficiently by computer.</p>
 <p>One of the methods which change PDEs into the algebraic equation is the <a href="https://en.wikipedia.org/wiki/Galerkin_method">Galerkin method</a>. If Galerie is used with a particular method of dividing the computational domain and construction of the piecewise polynomial base, it leads to the Finite Element Method (FEM). Here we skip those details related to FEM and focus on formulation problem in a weak form and linearisation.</p>
 <p>We take first equation from the strong form, multiply it by some sufficiently smooth functions $v$, multiply by it energy conservation equation, and integrate over domain, as result we get</p>
-<p>\begin{equation} \int_\Omega v \frac{\partial}{\partial x_i} \left( k \frac{\partial <a class="el" href="classT.html">T</a>}{\partial x_i} \right) \textrm{d}V = 0. \label{eq:weak1} \tag{11} \end{equation}</p>
+<p>\begin{equation} \int_\Omega v \frac{\partial}{\partial x_i} \left( k \frac{\partial T}{\partial x_i} \right) \textrm{d}V = 0. \label{eq:weak1} \tag{11} \end{equation}</p>
 <p>We call function $v$ testing function, since it test if we satisfy equation $(eq:weak1})$. Of curse testing equation using one function $v$ is not enough, so we can take one by one many different $v$ functions and check if we fulfil equation (eq:weak1}) for each of them. In fact, we can have an infinite number of test functions $v$ against which we can test eq. (eq:weak1}). However, that is impractical, since testing for an infinite number of functions will take forever. The solution is the discretisation of the problem, i.e. test functions and temperature can be approximately expressed by a finite number of base functions (e.g. shape functions in finite elements), multiplied by coefficients (e.g. degrees of freedom in finite elements).</p>
 <p>In the next step, we can <a href="https://en.wikipedia.org/wiki/Integration_by_parts">integrate by parts</a> as follows</p>
 <p>\begin{equation}</p><ul>
-<li>\int_\Omega \frac{\partial v}{\partial x_i} \left( k \frac{\partial <a class="el" href="classT.html">T</a>}{\partial x_i} \right) \textrm{d}V</li>
+<li>\int_\Omega \frac{\partial v}{\partial x_i} \left( k \frac{\partial T}{\partial x_i} \right) \textrm{d}V</li>
 <li>\int_\Gamma v q_i dA_i = 0. \label{eq:waak2} \tag{12} \end{equation}</li>
 </ul>
 <p>and replace the second term using the second equation from the strong form in part I, as result w have</p>
 <p>\begin{equation}</p><ul>
-<li>\int_\Omega \frac{\partial v}{\partial x_i} \left( k \frac{\partial <a class="el" href="classT.html">T</a>}{\partial x_i} \right) \textrm{d}V</li>
+<li>\int_\Omega \frac{\partial v}{\partial x_i} \left( k \frac{\partial T}{\partial x_i} \right) \textrm{d}V</li>
 <li>\int_\Gamma v \left( dP^S + dP^r \right) = 0 \label{eq:weak4} \tag{13} \end{equation}</li>
 </ul>
 <p>and finally</p>
-<p>\begin{equation} r(<a class="el" href="classT.html">T</a>(\mathbf{x})) = - \int_\Omega \frac{\partial v}{\partial x_i} \left( k \frac{\partial <a class="el" href="classT.html">T</a>}{\partial x_i} \right) \textrm{d}V</p><ul>
+<p>\begin{equation} r(T(\mathbf{x})) = - \int_\Omega \frac{\partial v}{\partial x_i} \left( k \frac{\partial T}{\partial x_i} \right) \textrm{d}V</p><ul>
 <li>\int_\Gamma v dP^S</li>
 <li>\int_\Gamma v \left[ \epsilon \sigma (T^4(\mathbf{x})-T^4_S) \right] dA = 0 \label{eq:weak5} \tag{14} \end{equation}</li>
 </ul>
@@ -317,23 +317,23 @@ Equations in weak form</h2>
 <p><em>Source</em> www.universetoday.com</p>
 <p>Suppose the solution to the problem is a function of temperature, which is <a href="https://en.wikipedia.org/wiki/Analytic_function">analytical</a>. Then a solution of strong form equation and weak form equation is the same in the sense of some appropriate norm.</p>
 <p>However weak form solution is more general and is applicable for problems where temperature distribution is non-analytical. For example, if we like to model Pluto that it has several internal layers, rock core, and outer core layers. Then weak form equation would give correct since at boundary between layers we could observe jumps of the temperature gradient, which can not be represented by an analytical function. From the other hand solution of strong form, equations will demand to divide domains into parts for each layer, and supplement equations by joining each part, enforcing continuity of displacement, and fluxes. Note that in the model showed above layers are not modelled, and the whole planet is modelled as a homogenous rock.</p>
-<h2><a class="anchor" id="autotoc_md162"></a>
+<h2><a class="anchor" id="autotoc_md166"></a>
 Linearisation</h2>
-<p>You can notice that equation (eq:weak5}) is nonlinear, residual $r(<a class="el" href="classT.html">T</a>(\mathbf{x}))$, which non-linear function of temperature, i.e. you can find terms like $T^4$ in the equation. Thus we have to linearise $r(<a class="el" href="classT.html">T</a>(\mathbf{x}))$, with the help comes <a href="https://en.wikipedia.org/wiki/Taylor_series">Taylor series</a> expansion, which will lead to Newton method.</p>
+<p>You can notice that equation (eq:weak5}) is nonlinear, residual $r(T(\mathbf{x}))$, which non-linear function of temperature, i.e. you can find terms like $T^4$ in the equation. Thus we have to linearise $r(T(\mathbf{x}))$, with the help comes <a href="https://en.wikipedia.org/wiki/Taylor_series">Taylor series</a> expansion, which will lead to Newton method.</p>
 <p>We express distribution of temperature as previous value at Newton iteration $T_k(\mathbf{x})$ and temperature correction $\delta T_{k+1}(\mathbf{x})$, such that current temperature is</p>
 <p>\begin{equation} T_{k+1}(\mathbf{x}) = T_k(\mathbf{x})+\delta T_{k+1}(\mathbf{x}). \label{eq:taylor1} \tag{15} \end{equation}</p>
 <p>For convenience, we will write just $T_k$, instead of $T_k(\mathbf{x})$. Next, using Taylor series expansion, we get</p>
 <p>\begin{equation} r(T_k+\delta T_{k+1})= r(T_k)</p><ul>
-<li>\left.\frac{\partial r}{\partial <a class="el" href="classT.html">T</a>}\right|_{<a class="el" href="classT.html">T</a>=T_k} \delta T_{k+1}</li>
-<li>\frac{1}{2!}\left.\frac{\partial^2 r}{\partial T^2}\right|_{<a class="el" href="classT.html">T</a>=T_k} (\delta T_{k+1})^2</li>
-<li>\frac{1}{3!}\left.\frac{\partial^3 r}{\partial T^3}\right|_{<a class="el" href="classT.html">T</a>=T_k} (\delta T_{k+1})^3</li>
+<li>\left.\frac{\partial r}{\partial T}\right|_{T=T_k} \delta T_{k+1}</li>
+<li>\frac{1}{2!}\left.\frac{\partial^2 r}{\partial T^2}\right|_{T=T_k} (\delta T_{k+1})^2</li>
+<li>\frac{1}{3!}\left.\frac{\partial^3 r}{\partial T^3}\right|_{T=T_k} (\delta T_{k+1})^3</li>
 <li>\dots = 0 \label{eq:taylor2} \tag{16} \end{equation}</li>
 </ul>
 <p>This infinite Taylor series, however, if $\delta T_{k+1}$ is small, then $(\delta T_{k+1})^2$ is very small, and following powers are even smaller. Using that observation we can drop all terms beyond the linear term and use $\delta T_{k+1}$ to correct residual, as follow</p>
-<p>\begin{equation} r(T_k+\delta T_{k+1}) \approx r(T_k) + \left.\frac{\partial r}{\partial <a class="el" href="classT.html">T</a>}\right|_{<a class="el" href="classT.html">T</a>=T_k} \delta T_{k+1} = 0. \label{eq:taylor3} \tag{17} \end{equation}</p>
+<p>\begin{equation} r(T_k+\delta T_{k+1}) \approx r(T_k) + \left.\frac{\partial r}{\partial T}\right|_{T=T_k} \delta T_{k+1} = 0. \label{eq:taylor3} \tag{17} \end{equation}</p>
 <p>Solving equation ($eq:taylor2}$) is hard, it is much easier to solve ($eq:taylor3}$). Solution of ($eq:taylor2}$) can be obtained by solving ($eq:taylor3}$) iteratively. Starting with $k=0$, then $k=1,2,3,\dots$, until $r(T_k+\delta T_{k+1})$ is small as much we like. If $r(T_k+\delta T_{k+1})$ is zero, or approaching zero, then solution we have solution of ($eq:weak5}).</p>
 <p>This method is called the Newton method. Iteration is repeatedly repeating, the same thing in the loop, and computers are good in such a thing. You can notice that ($eq:taylor3}$) is an equation, where field $\delta T_{k+1}$ is unknown which we will try to find. The computer will do iterations; however, at each iteration, we will have to transform ($eq:taylor3}$) into a suitable form for the computer. Next subsection is about that.</p>
-<p>We know distribution of temperature at iteration $k$, i.e. $T_k$, since it assumed that it was calculated at previous iteration. We know what is form of $r(T_k)$, that is shown in eq. (eq:weak5}), to complete that section we need to derive how second term in ($eq:taylor3}$). That can be done simply by calculating derivative only nonlinear term $T^4$, \begin{equation} \left.\frac{\partial r}{\partial <a class="el" href="classT.html">T</a>}\right|_{<a class="el" href="classT.html">T</a>=T_k} \delta T_{k+1} = - \int_\Omega \frac{\partial v}{\partial x_i} \left( k \frac{\partial \delta T_{k+1}}{\partial x_i} \right) \textrm{d}V</p><ul>
+<p>We know distribution of temperature at iteration $k$, i.e. $T_k$, since it assumed that it was calculated at previous iteration. We know what is form of $r(T_k)$, that is shown in eq. (eq:weak5}), to complete that section we need to derive how second term in ($eq:taylor3}$). That can be done simply by calculating derivative only nonlinear term $T^4$, \begin{equation} \left.\frac{\partial r}{\partial T}\right|_{T=T_k} \delta T_{k+1} = - \int_\Omega \frac{\partial v}{\partial x_i} \left( k \frac{\partial \delta T_{k+1}}{\partial x_i} \right) \textrm{d}V</p><ul>
 <li>\int_\Gamma v \left[ \epsilon \sigma \left\{ 4T^3_k \right </li>
 </ul>
 </div></div><!-- contents -->

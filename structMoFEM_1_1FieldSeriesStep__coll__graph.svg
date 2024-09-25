@@ -257,16 +257,16 @@ var sectionId = 'dynsection-1';
 <g id="node13" class="node">
 <title>Node13</title>
 <g id="a_node13"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="36.5,-0.5 36.5,-19.5 96.5,-19.5 96.5,-0.5 36.5,-0.5"/>
-<text text-anchor="middle" x="66.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">const T *</text>
+<polygon fill="white" stroke="#bfbfbf" points="52,-0.5 52,-19.5 81,-19.5 81,-0.5 52,-0.5"/>
+<text text-anchor="middle" x="66.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">T</text>
 </a>
 </g>
 </g>
 <!-- Node13&#45;&gt;Node12 -->
 <g id="edge12" class="edge">
 <title>Node13&#45;&gt;Node12</title>
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M106.64,-4.14C146.46,0.26 209.34,2.84 260,-15 304.54,-30.69 345.61,-71.41 362.89,-90.22"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="106.06,-0.68 96.55,-5.35 106.89,-7.63 106.06,-0.68"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M91.42,-6.03C128.67,-0.86 202.28,5.33 260,-15 304.54,-30.69 345.61,-71.41 362.89,-90.22"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="90.45,-2.64 81.08,-7.58 91.49,-9.56 90.45,-2.64"/>
 <text text-anchor="middle" x="205.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00"> ptr</text>
 </g>
 <!-- Node14 -->

@@ -1,13 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,380,145,407"/>
-<area shape="rect" id="node2" href="$structSimpleContactProblem_1_1OpCalAugmentedTractionRhsMaster.html" title="RHS&#45;operator for the simple contact element." alt="" coords="207,5,425,61"/>
-<area shape="rect" id="node3" href="$structSimpleContactProblem_1_1OpCalAugmentedTractionRhsSlave.html" title="RHS&#45;operator for the simple contact element." alt="" coords="207,85,425,141"/>
-<area shape="rect" id="node4" href="$structSimpleContactProblem_1_1OpCalContactAugmentedTractionOverLambdaMasterSlave.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="193,165,439,221"/>
-<area shape="rect" id="node5" href="$structSimpleContactProblem_1_1OpCalContactAugmentedTractionOverLambdaSlaveSlave.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="193,245,439,301"/>
-<area shape="rect" id="node6" href="$structSimpleContactProblem_1_1OpCalContactAugmentedTractionOverSpatialMasterMaster.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="193,325,439,381"/>
-<area shape="rect" id="node7" href="$structSimpleContactProblem_1_1OpCalContactAugmentedTractionOverSpatialMasterSlave.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="193,405,439,461"/>
-<area shape="rect" id="node8" href="$structSimpleContactProblem_1_1OpCalContactAugmentedTractionOverSpatialSlaveMaster.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="193,485,439,541"/>
-<area shape="rect" id="node9" href="$structSimpleContactProblem_1_1OpCalContactAugmentedTractionOverSpatialSlaveSlave.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="193,565,439,621"/>
-<area shape="rect" id="node10" href="$structSimpleContactProblem_1_1OpGapConstraintAugmentedRhs.html" title="RHS&#45;operator for the simple contact element for Augmented Lagrangian Method." alt="" coords="196,646,436,687"/>
-<area shape="rect" id="node11" href="$structSimpleContactProblem_1_1OpGetAugmentedLambdaSlave.html" title="Operator for the simple contact element for Augmented Lagrangian Method." alt="" coords="199,711,433,753"/>
+<area shape="rect" id="node1" href="$classsdf__hertz__3d_1_1Sphere.html" title=" " alt="" coords="5,5,160,32"/>
 </map>

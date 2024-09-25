@@ -148,7 +148,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <p>Use maximal oder on data in order to determine integration rule </p>
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l00746">746</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l01353">1353</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a93ceba28e955a7b3fdd0ed9265032939"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93ceba28e955a7b3fdd0ed9265032939">&#9670;&nbsp;</a></span>operator()()</h2>
@@ -190,13 +190,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l00747">747</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;                                                         {</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structEshelbianPlasticity_1_1EshelbianCore.html#a168d4aa1f530a8931bce714dcb433246">EshelbianCore::gradApperoximator</a> &gt; <a class="code" href="namespaceEshelbianPlasticity.html#aad51dbcb3d4d470a0d589df584a43e17ac5de4be4804727d358178fdb2865c6dc">MODERATE_ROT</a>)</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;      <span class="keywordflow">return</span> p_data + p_data + (p_data - 1);</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;      <span class="keywordflow">return</span> 2 * p_data;</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8cpp_source.html#l01354">1354</a> of file <a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;                                                         {</div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;    <span class="comment">// if (EshelbianCore::gradApproximator &gt; MODERATE_ROT)</span></div>
+<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;    <span class="comment">//   return p_data + p_data + (p_data - 1);</span></div>
+<div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;    <span class="comment">// else</span></div>
+<div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;    <span class="keywordflow">return</span> 2 * p_data + 1;</div>
+<div class="line"><a name="l01359"></a><span class="lineno"> 1359</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -204,8 +204,6 @@ Public Member Functions</h2></td></tr>
 <li>users_modules/eshelbian_plasticit/src/impl/<a class="el" href="EshelbianPlasticity_8cpp_source.html">EshelbianPlasticity.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="astructEshelbianPlasticity_1_1EshelbianCore_html_a168d4aa1f530a8931bce714dcb433246"><div class="ttname"><a href="structEshelbianPlasticity_1_1EshelbianCore.html#a168d4aa1f530a8931bce714dcb433246">EshelbianPlasticity::EshelbianCore::gradApperoximator</a></div><div class="ttdeci">static enum RotSelector gradApperoximator</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00910">EshelbianPlasticity.hpp:910</a></div></div>
-<div class="ttc" id="anamespaceEshelbianPlasticity_html_aad51dbcb3d4d470a0d589df584a43e17ac5de4be4804727d358178fdb2865c6dc"><div class="ttname"><a href="namespaceEshelbianPlasticity.html#aad51dbcb3d4d470a0d589df584a43e17ac5de4be4804727d358178fdb2865c6dc">EshelbianPlasticity::MODERATE_ROT</a></div><div class="ttdeci">@ MODERATE_ROT</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00020">EshelbianPlasticity.hpp:20</a></div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr cla ss="footer" />

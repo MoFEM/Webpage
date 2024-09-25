@@ -128,8 +128,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for PlasticProblem:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structPlasticProblem__coll__graph.svg" width="100%" height="457"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="structPlasticProblem__coll__graph.svg" width="100%" height="457"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -436,7 +435,7 @@ Private Attributes</h2></td></tr>
 
 <p>[Postprocessing results] </p>
 <p>[Check] </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="adolc_plasticity_8cpp-example.html#a123">adolc_plasticity.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="adolc_plasticity_8cpp-example.html#a122">adolc_plasticity.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="adolc__plasticity_8cpp_source.html#l01178">1178</a> of file <a class="el" href="adolc__plasticity_8cpp_source.html">adolc_plasticity.cpp</a>.</p>
@@ -485,11 +484,11 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;  <span class="keyword">auto</span> <a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a> = <a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
 <div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;  <span class="keyword">auto</span> dm = <a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM();</div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160; </div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;  <span class="keyword">auto</span> <a class="code" href="classT.html">T</a> = <a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
-<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), <a class="code" href="classT.html">T</a>, INSERT_VALUES,</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;  <span class="keyword">auto</span> T = <a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), T, INSERT_VALUES,</div>
 <div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;                                 SCATTER_FORWARD);</div>
 <div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;  <span class="keywordtype">double</span> nrm2;</div>
-<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecNorm(<a class="code" href="classT.html">T</a>, NORM_2, &amp;nrm2);</div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecNorm(T, NORM_2, &amp;nrm2);</div>
 <div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;PlasticPrb&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Solution norm &quot;</span> &lt;&lt; nrm2;</div>
 <div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160; </div>
 <div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;  <span class="keyword">auto</span> post_proc_norm_fe = boost::make_shared&lt;DomainEle&gt;(<a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>);</div>
@@ -557,7 +556,7 @@ Private Attributes</h2></td></tr>
 
 <p>[Getting norms] </p>
 <p>[Postprocessing results] </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="adolc_plasticity_8cpp-example.html#a121">adolc_plasticity.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="adolc_plasticity_8cpp-example.html#a120">adolc_plasticity.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="adolc__plasticity_8cpp_source.html#l01148">1148</a> of file <a class="el" href="adolc__plasticity_8cpp_source.html">adolc_plasticity.cpp</a>.</p>
@@ -569,11 +568,11 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160; </div>
 <div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;  <span class="keywordflow">if</span> (test_flg) {</div>
 <div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;    <span class="keyword">auto</span> <a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a> = <a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
-<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;    <span class="keyword">auto</span> <a class="code" href="classT.html">T</a> = <a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
-<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), <a class="code" href="classT.html">T</a>, INSERT_VALUES,</div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;    <span class="keyword">auto</span> T = <a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), T, INSERT_VALUES,</div>
 <div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;                                   SCATTER_FORWARD);</div>
 <div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;    <span class="keywordtype">double</span> nrm2;</div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecNorm(<a class="code" href="classT.html">T</a>, NORM_2, &amp;nrm2);</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecNorm(T, NORM_2, &amp;nrm2);</div>
 <div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;    <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;PlasticPrb&quot;</span>, Sev::verbose) &lt;&lt; <span class="stringliteral">&quot;Regression norm &quot;</span> &lt;&lt; nrm2;</div>
 <div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;    <span class="keywordtype">double</span> regression_value = 0;</div>
 <div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;    <span class="keywordflow">switch</span> (test_nb) {</div>
@@ -1380,7 +1379,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Closest point projection </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="adolc_plasticity_8cpp-example.html#a116">adolc_plasticity.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="adolc_plasticity_8cpp-example.html#a115">adolc_plasticity.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="adolc__plasticity_8cpp_source.html#l00148">148</a> of file <a class="el" href="adolc__plasticity_8cpp_source.html">adolc_plasticity.cpp</a>.</p>
@@ -1451,7 +1450,6 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a></div><div class="ttdeci">@ H1</div><div class="ttdoc">continuous field</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00085">definitions.h:85</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a35e0a7e42f81919e776c310c509598da"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a35e0a7e42f81919e776c310c509598da">LASTBASE</a></div><div class="ttdeci">@ LASTBASE</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00069">definitions.h:69</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1OpLoopThis_html"><div class="ttname"><a href="structMoFEM_1_1OpLoopThis.html">MoFEM::OpLoopThis</a></div><div class="ttdoc">Execute &quot;this&quot; element in the operator.</div><div class="ttdef"><b>Definition:</b> <a href="DGProjection_8hpp_source.html#l00068">DGProjection.hpp:68</a></div></div>
-<div class="ttc" id="aclassT_html"><div class="ttname"><a href="classT.html">T</a></div></div>
 <div class="ttc" id="agroup__mofem__log__manager_html_ga47d7053307c012af4b78f8a09e21fa83"><div class="ttname"><a href="group__mofem__log__manager.html#ga47d7053307c012af4b78f8a09e21fa83">MOFEM_LOG_CHANNEL</a></div><div class="ttdeci">#define MOFEM_LOG_CHANNEL(channel)</div><div class="ttdoc">Set and reset channel.</div><div class="ttdef"><b>Definition:</b> <a href="LogManager_8hpp_source.html#l00284">LogManager.hpp:284</a></div></div>
 <div class="ttc" id="anamespaceADOLCPlasticity_html_a9a948d7e017d090c9357e2f0fdd3decc"><div class="ttname"><a href="namespaceADOLCPlasticity.html#a9a948d7e017d090c9357e2f0fdd3decc">ADOLCPlasticity::createTSUpdate</a></div><div class="ttdeci">boost::shared_ptr&lt; TSUpdate &gt; createTSUpdate(std::string fe_name, boost::shared_ptr&lt; FEMethod &gt; fe_ptr)</div></div>
 <div class="ttc" id="astructMoFEM_1_1EssentialPostProcLhs_3_01DisplacementCubitBcData_01_4_html"><div class="ttname"><a href="structMoFEM_1_1EssentialPostProcLhs_3_01DisplacementCubitBcData_01_4.html">MoFEM::EssentialPostProcLhs&lt; DisplacementCubitBcData &gt;</a></div><div class="ttdoc">Specialization for DisplacementCubitBcData.</div><div class="ttdef"><b>Definition:</b> <a href="EssentialDisplacementCubitBcData_8hpp_source.html#l00134">EssentialDisplacementCubitBcData.hpp:134</a></div></div>

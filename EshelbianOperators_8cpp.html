@@ -123,8 +123,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">EshelbianOperators.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -132,6 +131,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;<a class="el" href="MoFEM_8hpp_source.html">MoFEM.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>&gt;</code><br />
 <code>#include &lt;boost/math/constants/constants.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="EshelbianAux_8hpp_source.html">EshelbianAux.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="lapack__wrap_8h_source.html">lapack_wrap.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="MatrixFunction_8hpp_source.html">MatrixFunction.hpp</a>&gt;</code><br />
 </div>
@@ -139,10 +139,6 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1TensorTypeExtractor.html">EshelbianPlasticity::TensorTypeExtractor&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1TensorTypeExtractor_3_01FTensor_1_1PackPtr_3_01T_00_01I_01_4_01_4.html">EshelbianPlasticity::TensorTypeExtractor&lt; FTensor::PackPtr&lt; T, I &gt; &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1isEq.html">EshelbianPlasticity::isEq</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -153,22 +149,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a278e9e4ce09be538473042c119b313a1"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#a278e9e4ce09be538473042c119b313a1">EshelbianPlasticity::diff_deviator</a> (<a class="el" href="classFTensor_1_1Ddg.html">FTensor::Ddg</a>&lt; <a class="el" href="classdouble.html">double</a>, 3, 3 &gt; &amp;&amp;t_diff_stress)</td></tr>
-<tr class="separator:a278e9e4ce09be538473042c119b313a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70994cc570c96e6d9f45c58408e0d8aa"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#a70994cc570c96e6d9f45c58408e0d8aa">EshelbianPlasticity::diff_tensor</a> ()</td></tr>
-<tr class="separator:a70994cc570c96e6d9f45c58408e0d8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a866dcca060df1108bcec178b8f39986b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#a866dcca060df1108bcec178b8f39986b">EshelbianPlasticity::symm_L_tensor</a> ()</td></tr>
-<tr class="separator:a866dcca060df1108bcec178b8f39986b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22fbbb95d3dc78d6383bff9a45242ada"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#a22fbbb95d3dc78d6383bff9a45242ada">EshelbianPlasticity::diff_symmetrize</a> ()</td></tr>
-<tr class="separator:a22fbbb95d3dc78d6383bff9a45242ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd8d1ff613130913d9c9fbf459d2843d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:acd8d1ff613130913d9c9fbf459d2843d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#acd8d1ff613130913d9c9fbf459d2843d">EshelbianPlasticity::get_rotation_form_vector</a> (<a class="el" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a>&lt; <a class="el" href="classT.html">T</a>, 3 &gt; &amp;t_omega, RotSelector rotSelector=LARGE_ROT)</td></tr>
+<tr class="memitem:acd8d1ff613130913d9c9fbf459d2843d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#acd8d1ff613130913d9c9fbf459d2843d">EshelbianPlasticity::get_rotation_form_vector</a> (<a class="el" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a>&lt; T, 3 &gt; &amp;t_omega, RotSelector rotSelector=LARGE_ROT)</td></tr>
 <tr class="separator:acd8d1ff613130913d9c9fbf459d2843d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcbab4ae63891e1c686fb8d7172ae10d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:abcbab4ae63891e1c686fb8d7172ae10d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#abcbab4ae63891e1c686fb8d7172ae10d">EshelbianPlasticity::get_diff_rotation_form_vector</a> (<a class="el" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a>&lt; <a class="el" href="classT.html">T</a>, 3 &gt; &amp;t_omega, RotSelector rotSelector=LARGE_ROT)</td></tr>
+<tr class="memitem:abcbab4ae63891e1c686fb8d7172ae10d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#abcbab4ae63891e1c686fb8d7172ae10d">EshelbianPlasticity::get_diff_rotation_form_vector</a> (<a class="el" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a>&lt; T, 3 &gt; &amp;t_omega, RotSelector rotSelector=LARGE_ROT)</td></tr>
 <tr class="separator:abcbab4ae63891e1c686fb8d7172ae10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae85cff2586e1e592072ddfdbd57a5ac9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae85cff2586e1e592072ddfdbd57a5ac9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#ae85cff2586e1e592072ddfdbd57a5ac9">EshelbianPlasticity::get_diff2_rotation_form_vector</a> (<a class="el" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a>&lt; <a class="el" href="classT.html">T</a>, 3 &gt; &amp;t_omega, RotSelector rotSelector=LARGE_ROT)</td></tr>
+<tr class="memitem:ae85cff2586e1e592072ddfdbd57a5ac9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#ae85cff2586e1e592072ddfdbd57a5ac9">EshelbianPlasticity::get_diff2_rotation_form_vector</a> (<a class="el" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a>&lt; T, 3 &gt; &amp;t_omega, RotSelector rotSelector=LARGE_ROT)</td></tr>
 <tr class="separator:ae85cff2586e1e592072ddfdbd57a5ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc82dda0c7fbee73a3141b1f744bfab5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#adc82dda0c7fbee73a3141b1f744bfab5">EshelbianPlasticity::is_eq</a> (const <a class="el" href="classdouble.html">double</a> &amp;<a class="el" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>, const <a class="el" href="classdouble.html">double</a> &amp;b)</td></tr>
 <tr class="separator:adc82dda0c7fbee73a3141b1f744bfab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,11 +166,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ac7a2acb1d86bf1ba5ee199d391d1bff3"><td class="memTemplParams" colspan="2">template&lt;int DIM&gt; </td></tr>
 <tr class="memitem:ac7a2acb1d86bf1ba5ee199d391d1bff3"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#ac7a2acb1d86bf1ba5ee199d391d1bff3">EshelbianPlasticity::sort_eigen_vals</a> (<a class="el" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a>&lt; <a class="el" href="classdouble.html">double</a>, DIM &gt; &amp;eig, <a class="el" href="classFTensor_1_1Tensor2.html">FTensor::Tensor2</a>&lt; <a class="el" href="classdouble.html">double</a>, DIM, DIM &gt; &amp;eigen_vec)</td></tr>
 <tr class="separator:ac7a2acb1d86bf1ba5ee199d391d1bff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:aa888faf56d13828bf9bbc83874cec779"><td class="memItemLeft" align="right" valign="top">constexpr static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceEshelbianPlasticity.html#aa888faf56d13828bf9bbc83874cec779">EshelbianPlasticity::size_symm</a> = (3 * (3 + 1)) / 2</td></tr>
-<tr class="separator:aa888faf56d13828bf9bbc83874cec779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->

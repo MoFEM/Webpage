@@ -172,22 +172,22 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:ab44f59e82a7229463065199d0a947a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Linear elastic problem]  <a href="thermo__elastic_8cpp.html#ab44f59e82a7229463065199d0a947a00">More...</a><br /></td></tr>
 <tr class="separator:ab44f59e82a7229463065199d0a947a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b720700ba90fafeeb95d0f4da2be483"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a5b720700ba90fafeeb95d0f4da2be483">OpHdivT</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::<a class="el" href="classBiLinearForm.html">BiLinearForm</a>&lt; GAUSS &gt;::OpMixDivTimesScalar&lt; <a class="el" href="mofem__manager_8cpp.html#a49160938699493179db956a30f49c447">SPACE_DIM</a> &gt;</td></tr>
-<tr class="memdesc:a5b720700ba90fafeeb95d0f4da2be483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Lhs div of base of flux time base of temperature (FLUX x <a class="el" href="classT.html">T</a>) and transpose of it, i.e. (<a class="el" href="classT.html">T</a> x FLAX)  <a href="thermo__elastic_8cpp.html#a5b720700ba90fafeeb95d0f4da2be483">More...</a><br /></td></tr>
+<tr class="memdesc:a5b720700ba90fafeeb95d0f4da2be483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Lhs div of base of flux time base of temperature (FLUX x T) and transpose of it, i.e. (T x FLAX)  <a href="thermo__elastic_8cpp.html#a5b720700ba90fafeeb95d0f4da2be483">More...</a><br /></td></tr>
 <tr class="separator:a5b720700ba90fafeeb95d0f4da2be483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab422105b0f4ac556f5b13c2394026774"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#ab422105b0f4ac556f5b13c2394026774">OpCapacity</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::<a class="el" href="classBiLinearForm.html">BiLinearForm</a>&lt; GAUSS &gt;::<a class="el" href="seepage_8cpp.html#a2993c54e90f2427566f6d9dc8e5399a9">OpMass</a>&lt; 1, 1 &gt;</td></tr>
-<tr class="memdesc:ab422105b0f4ac556f5b13c2394026774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Lhs base of temperature times (heat capacity) times base of temperature (<a class="el" href="classT.html">T</a> x <a class="el" href="classT.html">T</a>)  <a href="thermo__elastic_8cpp.html#ab422105b0f4ac556f5b13c2394026774">More...</a><br /></td></tr>
+<tr class="memdesc:ab422105b0f4ac556f5b13c2394026774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Lhs base of temperature times (heat capacity) times base of temperature (T x T)  <a href="thermo__elastic_8cpp.html#ab422105b0f4ac556f5b13c2394026774">More...</a><br /></td></tr>
 <tr class="separator:ab422105b0f4ac556f5b13c2394026774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a716fad57dc08d7d998be36676fc26e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a6a716fad57dc08d7d998be36676fc26e">OpHdivFlux</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::LinearForm&lt; GAUSS &gt;::OpBaseTimesVector&lt; 3, <a class="el" href="mofem__manager_8cpp.html#a49160938699493179db956a30f49c447">SPACE_DIM</a>, 1 &gt;</td></tr>
 <tr class="memdesc:a6a716fad57dc08d7d998be36676fc26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrating Rhs flux base (1/k) flux (FLUX)  <a href="thermo__elastic_8cpp.html#a6a716fad57dc08d7d998be36676fc26e">More...</a><br /></td></tr>
 <tr class="separator:a6a716fad57dc08d7d998be36676fc26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc951c1a6df5f60c7bc2344a8ae4a9c1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#acc951c1a6df5f60c7bc2344a8ae4a9c1">OpHDivTemp</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::LinearForm&lt; GAUSS &gt;::OpMixDivTimesU&lt; 3, 1, <a class="el" href="mofem__manager_8cpp.html#a49160938699493179db956a30f49c447">SPACE_DIM</a> &gt;</td></tr>
-<tr class="memdesc:acc951c1a6df5f60c7bc2344a8ae4a9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs div flux base times temperature (<a class="el" href="classT.html">T</a>)  <a href="thermo__elastic_8cpp.html#acc951c1a6df5f60c7bc2344a8ae4a9c1">More...</a><br /></td></tr>
+<tr class="memdesc:acc951c1a6df5f60c7bc2344a8ae4a9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs div flux base times temperature (T)  <a href="thermo__elastic_8cpp.html#acc951c1a6df5f60c7bc2344a8ae4a9c1">More...</a><br /></td></tr>
 <tr class="separator:acc951c1a6df5f60c7bc2344a8ae4a9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc95bc1edf1b596da9301db06830a6e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a4fc95bc1edf1b596da9301db06830a6e">OpBaseDotT</a> = <a class="el" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::LinearForm&lt; GAUSS &gt;::OpBaseTimesScalar&lt; 1 &gt;</td></tr>
-<tr class="memdesc:a4fc95bc1edf1b596da9301db06830a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs base of temperature time heat capacity times heat rate (<a class="el" href="classT.html">T</a>)  <a href="thermo__elastic_8cpp.html#a4fc95bc1edf1b596da9301db06830a6e">More...</a><br /></td></tr>
+<tr class="memdesc:a4fc95bc1edf1b596da9301db06830a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs base of temperature time heat capacity times heat rate (T)  <a href="thermo__elastic_8cpp.html#a4fc95bc1edf1b596da9301db06830a6e">More...</a><br /></td></tr>
 <tr class="separator:a4fc95bc1edf1b596da9301db06830a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb9097b3deded39026beb2a08b29d8cd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#aeb9097b3deded39026beb2a08b29d8cd">OpBaseDivFlux</a> = <a class="el" href="thermo__elastic_8cpp.html#a4fc95bc1edf1b596da9301db06830a6e">OpBaseDotT</a></td></tr>
-<tr class="memdesc:aeb9097b3deded39026beb2a08b29d8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs base of temperature times divergence of flux (<a class="el" href="classT.html">T</a>)  <a href="thermo__elastic_8cpp.html#aeb9097b3deded39026beb2a08b29d8cd">More...</a><br /></td></tr>
+<tr class="memdesc:aeb9097b3deded39026beb2a08b29d8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate Rhs base of temperature times divergence of flux (T)  <a href="thermo__elastic_8cpp.html#aeb9097b3deded39026beb2a08b29d8cd">More...</a><br /></td></tr>
 <tr class="separator:aeb9097b3deded39026beb2a08b29d8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a554a617f55a45dd0586880a47df79a89"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a554a617f55a45dd0586880a47df79a89">DomainNaturalBCRhs</a> = <a class="el" href="structMoFEM_1_1NaturalBC.html">NaturalBC</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> &gt;::Assembly&lt; PETSC &gt;::LinearForm&lt; GAUSS &gt;</td></tr>
 <tr class="memdesc:a554a617f55a45dd0586880a47df79a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Thermal problem]  <a href="thermo__elastic_8cpp.html#a554a617f55a45dd0586880a47df79a89">More...</a><br /></td></tr>
@@ -431,7 +431,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Rhs base of temperature times divergence of flux (<a class="el" href="classT.html">T</a>) </p>
+<p>Integrate Rhs base of temperature times divergence of flux (T) </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="thermo_elastic_8cpp-example.html#a125">thermo_elastic.cpp</a>.</dd>
 </dl>
 
@@ -451,7 +451,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Rhs base of temperature time heat capacity times heat rate (<a class="el" href="classT.html">T</a>) </p>
+<p>Integrate Rhs base of temperature time heat capacity times heat rate (T) </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="thermo_elastic_8cpp-example.html#a15">thermo_elastic.cpp</a>.</dd>
 </dl>
 
@@ -487,7 +487,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Lhs base of temperature times (heat capacity) times base of temperature (<a class="el" href="classT.html">T</a> x <a class="el" href="classT.html">T</a>) </p>
+<p>Integrate Lhs base of temperature times (heat capacity) times base of temperature (T x T) </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="thermo_elastic_8cpp-example.html#a132">thermo_elastic.cpp</a>.</dd>
 </dl>
 
@@ -559,7 +559,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Integrating Rhs flux base (1/k) flux (FLUX) </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_broken_space_8cpp-example.html#a79">test_broken_space.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a123">thermo_elastic.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_broken_space_8cpp-example.html#a80">test_broken_space.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a123">thermo_elastic.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="thermo__elastic_8cpp_source.html#l00069">69</a> of file <a class="el" href="thermo__elastic_8cpp_source.html">thermo_elastic.cpp</a>.</p>
@@ -581,7 +581,7 @@ Variables</h2></td></tr>
 <p>[Linear elastic problem] </p>
 <p>[Thermal problem]</p>
 <p>Integrate Lhs base of flux (1/k) base of flux (FLUX x FLUX) </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_broken_space_8cpp-example.html#a56">test_broken_space.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a130">thermo_elastic.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_broken_space_8cpp-example.html#a57">test_broken_space.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a130">thermo_elastic.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="thermo__elastic_8cpp_source.html#l00047">47</a> of file <a class="el" href="thermo__elastic_8cpp_source.html">thermo_elastic.cpp</a>.</p>
@@ -600,7 +600,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Lhs div of base of flux time base of temperature (FLUX x <a class="el" href="classT.html">T</a>) and transpose of it, i.e. (<a class="el" href="classT.html">T</a> x FLAX) </p>
+<p>Integrate Lhs div of base of flux time base of temperature (FLUX x T) and transpose of it, i.e. (T x FLAX) </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="thermo_elastic_8cpp-example.html#a131">thermo_elastic.cpp</a>.</dd>
 </dl>
 
@@ -620,7 +620,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Integrate Rhs div flux base times temperature (<a class="el" href="classT.html">T</a>) </p>
+<p>Integrate Rhs div flux base times temperature (T) </p>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="thermo_elastic_8cpp-example.html#a124">thermo_elastic.cpp</a>.</dd>
 </dl>
 

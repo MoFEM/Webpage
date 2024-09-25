@@ -134,7 +134,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for EshelbianPlasticity::PhysicalEquations:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="structEshelbianPlasticity_1_1PhysicalEquations__inherit__graph.svg" width="456" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="structEshelbianPlasticity_1_1PhysicalEquations__inherit__graph.svg" width="456" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for EshelbianPlasticity::PhysicalEquations:</div>
@@ -173,8 +173,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae5b080e5c557b13b4054078ca5cd436e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf12682f877e243383856cca8f774f7c"><td class="memItemLeft" align="right" valign="top">virtual MoFEMErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#adf12682f877e243383856cca8f774f7c">recordTape</a> (const int tag, <a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a59a3d410fab27903b5b114f435b6c331">DTensor2Ptr</a> *t_h)=0</td></tr>
 <tr class="separator:adf12682f877e243383856cca8f774f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10e17ccb35d02b7ac27336d08a890ed9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structEshelbianPlasticity_1_1OpJacobian.html">OpJacobian</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a10e17ccb35d02b7ac27336d08a890ed9">returnOpJacobian</a> (const int tag, const <a class="el" href="classbool.html">bool</a> eval_rhs, const <a class="el" href="classbool.html">bool</a> eval_lhs, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; &amp;data_ptr, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html">PhysicalEquations</a> &gt; &amp;physics_ptr)=0</td></tr>
-<tr class="separator:a10e17ccb35d02b7ac27336d08a890ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a465129a833f91f9f9c1a24eca352f5c7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structEshelbianPlasticity_1_1OpJacobian.html">OpJacobian</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a465129a833f91f9f9c1a24eca352f5c7">returnOpJacobian</a> (const int tag, const <a class="el" href="classbool.html">bool</a> eval_rhs, const <a class="el" href="classbool.html">bool</a> eval_lhs, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; data_ptr, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html">PhysicalEquations</a> &gt; physics_ptr)=0</td></tr>
+<tr class="separator:a465129a833f91f9f9c1a24eca352f5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5264e4e178229ae78362709b7247300e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceEshelbianPlasticity.html#a43156582eafe35d32c55b40b7829ecf8">VolUserDataOperator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a5264e4e178229ae78362709b7247300e">returnOpSpatialPhysical</a> (const std::string &amp;<a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; data_ptr, const <a class="el" href="classdouble.html">double</a> alpha_u)</td></tr>
+<tr class="separator:a5264e4e178229ae78362709b7247300e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae77931d8112a9673ab957ddea12d0a8d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceEshelbianPlasticity.html#a43156582eafe35d32c55b40b7829ecf8">VolUserDataOperator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae77931d8112a9673ab957ddea12d0a8d">returnOpSpatialPhysical_du_du</a> (std::string row_field, std::string col_field, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; data_ptr, const <a class="el" href="classdouble.html">double</a> alpha)</td></tr>
+<tr class="separator:ae77931d8112a9673ab957ddea12d0a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ea71b7503165af1961d8bf7497823c4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceEshelbianPlasticity.html#a43156582eafe35d32c55b40b7829ecf8">VolUserDataOperator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a3ea71b7503165af1961d8bf7497823c4">returnOpCalculateEnergy</a> (boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; data_ptr, boost::shared_ptr&lt; <a class="el" href="classdouble.html">double</a> &gt; total_energy_ptr)</td></tr>
+<tr class="separator:a3ea71b7503165af1961d8bf7497823c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da98449f8e2dc369304a7d97cb962ad"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceEshelbianPlasticity.html#a43156582eafe35d32c55b40b7829ecf8">VolUserDataOperator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a5da98449f8e2dc369304a7d97cb962ad">returnOpCalculateStretchFromStress</a> (boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; data_ptr, boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html">PhysicalEquations</a> &gt; physics_ptr)</td></tr>
+<tr class="separator:a5da98449f8e2dc369304a7d97cb962ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Dependent variables</div></td></tr>
 <tr class="memitem:acf3e0824392e6c90e7e6dd2618619786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a59a3d410fab27903b5b114f435b6c331">DTensor2Ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html#acf3e0824392e6c90e7e6dd2618619786">get_P</a> ()</td></tr>
 <tr class="separator:acf3e0824392e6c90e7e6dd2618619786"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,7 +219,7 @@ Active variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00185">185</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00219">219</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ad24f0627e0031373663cc3617524a910"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad24f0627e0031373663cc3617524a910">&#9670;&nbsp;</a></span>ATensor1</h2>
@@ -225,7 +233,7 @@ Active variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00187">187</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00221">221</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +249,7 @@ Active variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00188">188</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00222">222</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -257,7 +265,7 @@ Active variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00189">189</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00223">223</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -273,7 +281,7 @@ Active variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00194">194</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00228">228</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +297,7 @@ Active variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00190">190</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00224">224</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,7 +313,7 @@ Active variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00191">191</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00225">225</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -321,7 +329,7 @@ Active variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00196">196</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00230">230</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -337,7 +345,7 @@ Active variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00192">192</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00226">226</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -353,7 +361,7 @@ Active variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00197">197</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00231">231</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -417,10 +425,10 @@ Active variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00200">200</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      : <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>(size_active, 0),</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#afd3381654e6a71ed9e010e4a6311e2aa">dependentVariablesPiola</a>(size_dependent, 0),</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">dependentVariablesPiolaDirevatives</a>(size_dependent * size_active, 0) {}</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00234">234</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      : <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>(size_active, 0),</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#afd3381654e6a71ed9e010e4a6311e2aa">dependentVariablesPiola</a>(size_dependent, 0),</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">dependentVariablesPiolaDirevatives</a>(size_dependent * size_active, 0) {}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -473,8 +481,8 @@ Active variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00266">266</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{ <span class="keywordflow">return</span> get_VecTensor2&lt;0&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>); }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00317">317</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{ <span class="keywordflow">return</span> get_VecTensor2&lt;0&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -501,10 +509,10 @@ Active variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00274">274</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                             {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">return</span> get_VecTensor2&lt;0&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#afd3381654e6a71ed9e010e4a6311e2aa">dependentVariablesPiola</a>);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00325">325</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                             {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">return</span> get_VecTensor2&lt;0&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#afd3381654e6a71ed9e010e4a6311e2aa">dependentVariablesPiola</a>);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -531,11 +539,11 @@ Active variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00284">284</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                                 {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">return</span> get_vecTensor3&lt;0&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">dependentVariablesPiolaDirevatives</a>,</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                             <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>.size());</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00335">335</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                                 {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">return</span> get_vecTensor3&lt;0&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">dependentVariablesPiolaDirevatives</a>,</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                             <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>.size());</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -562,11 +570,11 @@ Active variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00288">288</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                                 {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">return</span> get_vecTensor3&lt;3&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">dependentVariablesPiolaDirevatives</a>,</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                             <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>.size());</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00339">339</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                                 {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">return</span> get_vecTensor3&lt;3&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">dependentVariablesPiolaDirevatives</a>,</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                             <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>.size());</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -593,11 +601,11 @@ Active variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00292">292</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                 {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keywordflow">return</span> get_vecTensor3&lt;6&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">dependentVariablesPiolaDirevatives</a>,</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                             <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>.size());</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00343">343</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                                 {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordflow">return</span> get_vecTensor3&lt;6&gt;(<a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">dependentVariablesPiolaDirevatives</a>,</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                             <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">activeVariables</a>.size());</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -627,10 +635,10 @@ template&lt;int S&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00228">228</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                                                 {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae4814197fe2757b9c1042adcec6b201e">DTensor0Ptr</a>(&amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 0]);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00279">279</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                                                                 {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae4814197fe2757b9c1042adcec6b201e">DTensor0Ptr</a>(&amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 0]);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -660,11 +668,11 @@ template&lt;int S&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00222">222</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                                                                 {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a59a3d410fab27903b5b114f435b6c331">DTensor2Ptr</a>(&amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 3], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 4],</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                       &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 5], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 6], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 7], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 8]);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00273">273</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                                                 {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a59a3d410fab27903b5b114f435b6c331">DTensor2Ptr</a>(&amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 3], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 4],</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                       &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 5], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 6], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 7], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[S + 8]);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -704,32 +712,32 @@ template&lt;int S0&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00233">233</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                                                          {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A00 = nba * 0 + S0;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A01 = nba * 1 + S0;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A02 = nba * 2 + S0;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A10 = nba * 3 + S0;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A11 = nba * 4 + S0;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A12 = nba * 5 + S0;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A20 = nba * 6 + S0;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A21 = nba * 7 + S0;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A22 = nba * 8 + S0;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a50003880fdd675f7c608df83e909a697">DTensor3Ptr</a>(</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A00 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A00 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A00 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A01 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A01 + 1],</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A01 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A02 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A02 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A02 + 2],</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A10 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A10 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A10 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A11 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A11 + 1],</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A11 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A12 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A12 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A12 + 2],</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A20 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A20 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A20 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A21 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A21 + 1],</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A21 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A22 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A22 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A22 + 2]</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    );</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00284">284</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                                                          {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A00 = nba * 0 + S0;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A01 = nba * 1 + S0;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A02 = nba * 2 + S0;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A10 = nba * 3 + S0;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A11 = nba * 4 + S0;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A12 = nba * 5 + S0;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A20 = nba * 6 + S0;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A21 = nba * 7 + S0;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> A22 = nba * 8 + S0;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structEshelbianPlasticity_1_1PhysicalEquations.html#a50003880fdd675f7c608df83e909a697">DTensor3Ptr</a>(</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A00 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A00 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A00 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A01 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A01 + 1],</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A01 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A02 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A02 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A02 + 2],</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A10 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A10 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A10 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A11 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A11 + 1],</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A11 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A12 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A12 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A12 + 2],</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A20 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A20 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A20 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A21 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A21 + 1],</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A21 + 2], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A22 + 0], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A22 + 1], &amp;<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>[A22 + 2]</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    );</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -767,12 +775,98 @@ template&lt;int S0&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html#a914e76ebdaadcf6d999ed9e0057cfca2">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a>, <a class="el" href="structEshelbianPlasticity_1_1HMHStVenantKirchhoff.html#aaecce7fc9c79508675a648258e4a8f6f">EshelbianPlasticity::HMHStVenantKirchhoff</a>, and <a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html#ae219248aa5ae1ae309660418bbba8c94">EshelbianPlasticity::HMHHencky</a>.</p>
+<p>Implemented in <a class="el" href="structEshelbianPlasticity_1_1HMHStVenantKirchhoff.html#aaecce7fc9c79508675a648258e4a8f6f">EshelbianPlasticity::HMHStVenantKirchhoff</a>, <a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html#a914e76ebdaadcf6d999ed9e0057cfca2">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a>, <a class="el" href="structEshelbianPlasticity_1_1HMHNeohookean.html#ae4d98d7404f1ac50f129e8c5379a08b3">EshelbianPlasticity::HMHNeohookean</a>, and <a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html#ae219248aa5ae1ae309660418bbba8c94">EshelbianPlasticity::HMHHencky</a>.</p>
 
 </div>
 </div>
-<a id="a10e17ccb35d02b7ac27336d08a890ed9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10e17ccb35d02b7ac27336d08a890ed9">&#9670;&nbsp;</a></span>returnOpJacobian()</h2>
+<a id="a3ea71b7503165af1961d8bf7497823c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ea71b7503165af1961d8bf7497823c4">&#9670;&nbsp;</a></span>returnOpCalculateEnergy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceEshelbianPlasticity.html#a43156582eafe35d32c55b40b7829ecf8">VolUserDataOperator</a> * EshelbianPlasticity::PhysicalEquations::returnOpCalculateEnergy </td>
+          <td>(</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt;&#160;</td>
+          <td class="paramname"><em>data_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="classdouble.html">double</a> &gt;&#160;</td>
+          <td class="paramname"><em>total_energy_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html#a1d81024b1e8fa3ea79268a3e8934551d">EshelbianPlasticity::HMHHencky</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="EshelbianADOL-C_8cpp_source.html#l00265">265</a> of file <a class="el" href="EshelbianADOL-C_8cpp_source.html">EshelbianADOL-C.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                                              {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5da98449f8e2dc369304a7d97cb962ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da98449f8e2dc369304a7d97cb962ad">&#9670;&nbsp;</a></span>returnOpCalculateStretchFromStress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceEshelbianPlasticity.html#a43156582eafe35d32c55b40b7829ecf8">VolUserDataOperator</a> * EshelbianPlasticity::PhysicalEquations::returnOpCalculateStretchFromStress </td>
+          <td>(</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt;&#160;</td>
+          <td class="paramname"><em>data_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html">PhysicalEquations</a> &gt;&#160;</td>
+          <td class="paramname"><em>physics_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html#afeadf1c02d20ea039e28f9fc58d9325e">EshelbianPlasticity::HMHHencky</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="EshelbianADOL-C_8cpp_source.html#l00271">271</a> of file <a class="el" href="EshelbianADOL-C_8cpp_source.html">EshelbianADOL-C.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                                    {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a465129a833f91f9f9c1a24eca352f5c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a465129a833f91f9f9c1a24eca352f5c7">&#9670;&nbsp;</a></span>returnOpJacobian()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -801,13 +895,13 @@ template&lt;int S0&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt;&#160;</td>
           <td class="paramname"><em>data_ptr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html">PhysicalEquations</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1PhysicalEquations.html">PhysicalEquations</a> &gt;&#160;</td>
           <td class="paramname"><em>physics_ptr</em>&#160;</td>
         </tr>
         <tr>
@@ -823,8 +917,112 @@ template&lt;int S0&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html#a2851eb187e5188d911604e0756ff0124">EshelbianPlasticity::HMHHencky</a>, <a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html#a0ad038507955d02a9a29feb72e267874">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a>, and <a class="el" href="structEshelbianPlasticity_1_1HMHStVenantKirchhoff.html#a81b800f0561b9c272ce198b86c01907d">EshelbianPlasticity::HMHStVenantKirchhoff</a>.</p>
+<p>Implemented in <a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html#a527b197c9b8e4b92f868a56ead762745">EshelbianPlasticity::HMHHencky</a>, <a class="el" href="structEshelbianPlasticity_1_1HMHStVenantKirchhoff.html#ae8a87ab216b0f69695eb35bd5db27b08">EshelbianPlasticity::HMHStVenantKirchhoff</a>, <a class="el" href="structEshelbianPlasticity_1_1HMHNeohookean.html#ac868423e7656497ab18c58cb071e48c7">EshelbianPlasticity::HMHNeohookean</a>, and <a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html#a604e7ac65a46ca0228f2be5763541776">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a>.</p>
 
+</div>
+</div>
+<a id="a5264e4e178229ae78362709b7247300e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5264e4e178229ae78362709b7247300e">&#9670;&nbsp;</a></span>returnOpSpatialPhysical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceEshelbianPlasticity.html#a43156582eafe35d32c55b40b7829ecf8">VolUserDataOperator</a> * EshelbianPlasticity::PhysicalEquations::returnOpSpatialPhysical </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>field_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt;&#160;</td>
+          <td class="paramname"><em>data_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>alpha_u</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html#a940434e3d08bc9697e0147a396063531">EshelbianPlasticity::HMHHencky</a>, and <a class="el" href="structEshelbianPlasticity_1_1HMHNeohookean.html#a5a51777411bb62932522afb9f88777f5">EshelbianPlasticity::HMHNeohookean</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="EshelbianADOL-C_8cpp_source.html#l00099">99</a> of file <a class="el" href="EshelbianADOL-C_8cpp_source.html">EshelbianADOL-C.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                                          {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span> OpSpatialPhysical(<a class="code" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, data_ptr, alpha_u);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae77931d8112a9673ab957ddea12d0a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae77931d8112a9673ab957ddea12d0a8d">&#9670;&nbsp;</a></span>returnOpSpatialPhysical_du_du()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceEshelbianPlasticity.html#a43156582eafe35d32c55b40b7829ecf8">VolUserDataOperator</a> * EshelbianPlasticity::PhysicalEquations::returnOpSpatialPhysical_du_du </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>row_field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>col_field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boost::shared_ptr&lt; <a class="el" href="structEshelbianPlasticity_1_1DataAtIntegrationPts.html">DataAtIntegrationPts</a> &gt;&#160;</td>
+          <td class="paramname"><em>data_ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdouble.html">double</a>&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html#a384cf306e84d668645b684dcbf58689a">EshelbianPlasticity::HMHHencky</a>, and <a class="el" href="structEshelbianPlasticity_1_1HMHNeohookean.html#a6a5cb91ff94e49c1d2f2d1d74c28c722">EshelbianPlasticity::HMHNeohookean</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="EshelbianADOL-C_8cpp_source.html#l00259">259</a> of file <a class="el" href="EshelbianADOL-C_8cpp_source.html">EshelbianADOL-C.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                                                                        {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">new</span> OpSpatialPhysical_du_du(row_field, col_field, data_ptr, alpha);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -840,7 +1038,7 @@ template&lt;int S0&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00213">213</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00264">264</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -856,7 +1054,7 @@ template&lt;int S0&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00214">214</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00265">265</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
@@ -872,21 +1070,23 @@ template&lt;int S0&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00215">215</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianPlasticity_8hpp_source.html#l00266">266</a> of file <a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>users_modules/eshelbian_plasticit/src/<a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a></li>
+<li>users_modules/eshelbian_plasticit/src/impl/<a class="el" href="EshelbianADOL-C_8cpp_source.html">EshelbianADOL-C.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_ae7fdb97d0e3eaa7a6f98870556922301"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">EshelbianPlasticity::PhysicalEquations::activeVariables</a></div><div class="ttdeci">std::vector&lt; double &gt; activeVariables</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00213">EshelbianPlasticity.hpp:213</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_ae4814197fe2757b9c1042adcec6b201e"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae4814197fe2757b9c1042adcec6b201e">EshelbianPlasticity::PhysicalEquations::DTensor0Ptr</a></div><div class="ttdeci">FTensor::Tensor0&lt; FTensor::PackPtr&lt; double *, 1 &gt; &gt; DTensor0Ptr</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00194">EshelbianPlasticity.hpp:194</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_a59a3d410fab27903b5b114f435b6c331"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#a59a3d410fab27903b5b114f435b6c331">EshelbianPlasticity::PhysicalEquations::DTensor2Ptr</a></div><div class="ttdeci">FTensor::Tensor2&lt; FTensor::PackPtr&lt; double *, 1 &gt;, 3, 3 &gt; DTensor2Ptr</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00196">EshelbianPlasticity.hpp:196</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_abb4edaf61dac78328c65647594c5bf06"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">EshelbianPlasticity::PhysicalEquations::dependentVariablesPiolaDirevatives</a></div><div class="ttdeci">std::vector&lt; double &gt; dependentVariablesPiolaDirevatives</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00215">EshelbianPlasticity.hpp:215</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_ae7fdb97d0e3eaa7a6f98870556922301"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae7fdb97d0e3eaa7a6f98870556922301">EshelbianPlasticity::PhysicalEquations::activeVariables</a></div><div class="ttdeci">std::vector&lt; double &gt; activeVariables</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00264">EshelbianPlasticity.hpp:264</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_ae4814197fe2757b9c1042adcec6b201e"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#ae4814197fe2757b9c1042adcec6b201e">EshelbianPlasticity::PhysicalEquations::DTensor0Ptr</a></div><div class="ttdeci">FTensor::Tensor0&lt; FTensor::PackPtr&lt; double *, 1 &gt; &gt; DTensor0Ptr</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00228">EshelbianPlasticity.hpp:228</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_a59a3d410fab27903b5b114f435b6c331"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#a59a3d410fab27903b5b114f435b6c331">EshelbianPlasticity::PhysicalEquations::DTensor2Ptr</a></div><div class="ttdeci">FTensor::Tensor2&lt; FTensor::PackPtr&lt; double *, 1 &gt;, 3, 3 &gt; DTensor2Ptr</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00230">EshelbianPlasticity.hpp:230</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_abb4edaf61dac78328c65647594c5bf06"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#abb4edaf61dac78328c65647594c5bf06">EshelbianPlasticity::PhysicalEquations::dependentVariablesPiolaDirevatives</a></div><div class="ttdeci">std::vector&lt; double &gt; dependentVariablesPiolaDirevatives</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00266">EshelbianPlasticity.hpp:266</a></div></div>
+<div class="ttc" id="apoisson__2d__homogeneous_8cpp_html_a3917f3987bad1f4e24b85c9d0ab84a5e"><div class="ttname"><a href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a></div><div class="ttdeci">constexpr auto field_name</div><div class="ttdef"><b>Definition:</b> <a href="poisson__2d__homogeneous_8cpp_source.html#l00013">poisson_2d_homogeneous.cpp:13</a></div></div>
 <div class="ttc" id="ainitial__diffusion_8cpp_html_af16c6805bd7f1a6a9acfe503216a5555"><div class="ttname"><a href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a></div><div class="ttdeci">const double v</div><div class="ttdoc">phase velocity of light in medium (cm/ns)</div><div class="ttdef"><b>Definition:</b> <a href="initial__diffusion_8cpp_source.html#l00040">initial_diffusion.cpp:40</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_afd3381654e6a71ed9e010e4a6311e2aa"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#afd3381654e6a71ed9e010e4a6311e2aa">EshelbianPlasticity::PhysicalEquations::dependentVariablesPiola</a></div><div class="ttdeci">std::vector&lt; double &gt; dependentVariablesPiola</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00214">EshelbianPlasticity.hpp:214</a></div></div>
-<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_a50003880fdd675f7c608df83e909a697"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#a50003880fdd675f7c608df83e909a697">EshelbianPlasticity::PhysicalEquations::DTensor3Ptr</a></div><div class="ttdeci">FTensor::Tensor3&lt; FTensor::PackPtr&lt; double *, 1 &gt;, 3, 3, 3 &gt; DTensor3Ptr</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00197">EshelbianPlasticity.hpp:197</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_afd3381654e6a71ed9e010e4a6311e2aa"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#afd3381654e6a71ed9e010e4a6311e2aa">EshelbianPlasticity::PhysicalEquations::dependentVariablesPiola</a></div><div class="ttdeci">std::vector&lt; double &gt; dependentVariablesPiola</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00265">EshelbianPlasticity.hpp:265</a></div></div>
+<div class="ttc" id="astructEshelbianPlasticity_1_1PhysicalEquations_html_a50003880fdd675f7c608df83e909a697"><div class="ttname"><a href="structEshelbianPlasticity_1_1PhysicalEquations.html#a50003880fdd675f7c608df83e909a697">EshelbianPlasticity::PhysicalEquations::DTensor3Ptr</a></div><div class="ttdeci">FTensor::Tensor3&lt; FTensor::PackPtr&lt; double *, 1 &gt;, 3, 3, 3 &gt; DTensor3Ptr</div><div class="ttdef"><b>Definition:</b> <a href="EshelbianPlasticity_8hpp_source.html#l00231">EshelbianPlasticity.hpp:231</a></div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr cla ss="footer" />

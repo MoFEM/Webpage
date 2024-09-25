@@ -1,3 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structExactFunction.html" title="Function." alt="" coords="5,5,119,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,203,123,230"/>
+<area shape="rect" id="node2" href="$structEshelbianPlasticity_1_1OpConstrainBoundaryHDivLhs__dU_3_01A_00_01IntegrationType_1_1GAUSS_01_4.html" title=" " alt="" coords="171,5,398,76"/>
+<area shape="rect" id="node3" href="$structEshelbianPlasticity_1_1OpConstrainBoundaryHDivRhs_3_01A_00_01IntegrationType_1_1GAUSS_01_4.html" title=" " alt="" coords="171,101,399,157"/>
+<area shape="rect" id="node4" href="$structEshelbianPlasticity_1_1OpConstrainBoundaryL2Lhs__dP_3_01A_00_01IntegrationType_1_1GAUSS_01_4.html" title=" " alt="" coords="180,181,389,252"/>
+<area shape="rect" id="node5" href="$structEshelbianPlasticity_1_1OpDispBcImpl_3_01A_00_01GAUSS_01_4.html" title=" " alt="" coords="177,276,392,317"/>
+<area shape="rect" id="node6" href="$structEshelbianPlasticity_1_1OpRotationBcImpl_3_01A_00_01GAUSS_01_4.html" title=" " alt="" coords="205,342,364,398"/>
 </map>

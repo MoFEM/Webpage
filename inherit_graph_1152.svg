@@ -12,10 +12,10 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="structMoFEM_1_1GetFTensor2FromArrayImpl_3_012_00_012_00_01S_00_01T_00_01L_00_01A_01_4.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="structMoFEM_1_1GetFTensor1FromArray_3_013_00_01S_01_4.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-30.5 170,-30.5 170,-0.5 0,-0.5"/>
-<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">MoFEM::GetFTensor2FromArray</text>
-<text text-anchor="middle" x="85" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Impl&lt; 2, 2, S, T, L, A &gt;</text>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">MoFEM::GetFTensor1FromArray</text>
+<text text-anchor="middle" x="85" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; 3, S &gt;</text>
 </a>
 </g>
 </g>

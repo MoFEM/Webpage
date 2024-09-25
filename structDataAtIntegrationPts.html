@@ -143,6 +143,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0b81382b544fe096f33402acb620005f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab516a795e9a272f17a7ea5ad8cdb0dad"><td class="memItemLeft" align="right" valign="top">MoFEMErrorCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataAtIntegrationPts.html#ab516a795e9a272f17a7ea5ad8cdb0dad">setBlocks</a> ()</td></tr>
 <tr class="separator:ab516a795e9a272f17a7ea5ad8cdb0dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b018f2ce584e559615e02e59941e20e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataAtIntegrationPts.html#a6b018f2ce584e559615e02e59941e20e">DataAtIntegrationPts</a> (<a class="el" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">MoFEM::Interface</a> &amp;m_field)</td></tr>
+<tr class="separator:a6b018f2ce584e559615e02e59941e20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73063bed9383da39edf89e5062c39406"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataAtIntegrationPts.html#a73063bed9383da39edf89e5062c39406">DataAtIntegrationPts</a> ()</td></tr>
 <tr class="separator:a73063bed9383da39edf89e5062c39406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -164,6 +166,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac25ec118afef5e735e3879ea9b68328d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3607cbd43b7ce5091de0a9e14b550f"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, <a class="el" href="structBlockData.html">BlockData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataAtIntegrationPts.html#a5d3607cbd43b7ce5091de0a9e14b550f">setOfBlocksData</a></td></tr>
 <tr class="separator:a5d3607cbd43b7ce5091de0a9e14b550f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0700569f3cd4c19374361b00c38781c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMoFEM_1_1SmartPetscObj.html">SmartPetscObj</a>&lt; Vec &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataAtIntegrationPts.html#a0700569f3cd4c19374361b00c38781c4">petscVec</a></td></tr>
+<tr class="separator:a0700569f3cd4c19374361b00c38781c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a833bb2795ca45f045b69b0fd9bbdb42e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataAtIntegrationPts.html#a833bb2795ca45f045b69b0fd9bbdb42e">blockPermittivity</a></td></tr>
+<tr class="separator:a833bb2795ca45f045b69b0fd9bbdb42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6987d338c3f9843142f40b448e0482ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataAtIntegrationPts.html#a6987d338c3f9843142f40b448e0482ff">blockChrgDens</a></td></tr>
+<tr class="separator:a6987d338c3f9843142f40b448e0482ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33101fe7f97c5fc4fcf9a10e6bd59bc6"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; MatrixDouble &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataAtIntegrationPts.html#a33101fe7f97c5fc4fcf9a10e6bd59bc6">smallStrainMat</a></td></tr>
 <tr class="separator:a33101fe7f97c5fc4fcf9a10e6bd59bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbf54e0ffe287c954f1794450514784b"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; MatrixDouble &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDataAtIntegrationPts.html#acbf54e0ffe287c954f1794450514784b">hMat</a></td></tr>
@@ -203,7 +211,7 @@ Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ElasticityMixedFormulation_8hpp_source.html#l00020">20</a> of file <a class="el" href="ElasticityMixedFormulation_8hpp_source.html">ElasticityMixedFormulation.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6b018f2ce584e559615e02e59941e20e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b018f2ce584e559615e02e59941e20e">&#9670;&nbsp;</a></span>DataAtIntegrationPts() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b018f2ce584e559615e02e59941e20e">&#9670;&nbsp;</a></span>DataAtIntegrationPts() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,8 +247,45 @@ Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a6b018f2ce584e559615e02e59941e20e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b018f2ce584e559615e02e59941e20e">&#9670;&nbsp;</a></span>DataAtIntegrationPts() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DataAtIntegrationPts::DataAtIntegrationPts </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">MoFEM::Interface</a> &amp;&#160;</td>
+          <td class="paramname"><em>m_field</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="electrostatics_8hpp_source.html#l00062">62</a> of file <a class="el" href="electrostatics_8hpp_source.html">electrostatics.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                                {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="structDataAtIntegrationPts.html#a833bb2795ca45f045b69b0fd9bbdb42e">blockPermittivity</a> = 0.0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="structDataAtIntegrationPts.html#a6987d338c3f9843142f40b448e0482ff">blockChrgDens</a> = 0.0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    PetscInt ghosts[2] = {0, 1};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (!m_field.<a class="code" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>())</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="structDataAtIntegrationPts.html#a0700569f3cd4c19374361b00c38781c4">petscVec</a> = <a class="code" href="namespaceMoFEM.html#ac0c433a883f2c766913ecbf5c2b74d69">createGhostVector</a>(m_field.<a class="code" href="structMoFEM_1_1CoreInterface.html#adecbcd03d7be8763b60a827f434fe726">get_comm</a>(), 2, 2, 0, ghosts);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <a class="code" href="structDataAtIntegrationPts.html#a0700569f3cd4c19374361b00c38781c4">petscVec</a> = <a class="code" href="namespaceMoFEM.html#ac0c433a883f2c766913ecbf5c2b74d69">createGhostVector</a>(m_field.<a class="code" href="structMoFEM_1_1CoreInterface.html#adecbcd03d7be8763b60a827f434fe726">get_comm</a>(), 0, 2, 2, ghosts);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a73063bed9383da39edf89e5062c39406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73063bed9383da39edf89e5062c39406">&#9670;&nbsp;</a></span>DataAtIntegrationPts() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a73063bed9383da39edf89e5062c39406">&#9670;&nbsp;</a></span>DataAtIntegrationPts() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -432,6 +477,38 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6987d338c3f9843142f40b448e0482ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6987d338c3f9843142f40b448e0482ff">&#9670;&nbsp;</a></span>blockChrgDens</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> DataAtIntegrationPts::blockChrgDens</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="electrostatics_8hpp_source.html#l00061">61</a> of file <a class="el" href="electrostatics_8hpp_source.html">electrostatics.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a833bb2795ca45f045b69b0fd9bbdb42e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a833bb2795ca45f045b69b0fd9bbdb42e">&#9670;&nbsp;</a></span>blockPermittivity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> DataAtIntegrationPts::blockPermittivity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="electrostatics_8hpp_source.html#l00060">60</a> of file <a class="el" href="electrostatics_8hpp_source.html">electrostatics.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a434d3ca5c235cbdfa338e822b14ab498"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a434d3ca5c235cbdfa338e822b14ab498">&#9670;&nbsp;</a></span>cauchyStressMat</h2>
 
@@ -688,6 +765,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0700569f3cd4c19374361b00c38781c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0700569f3cd4c19374361b00c38781c4">&#9670;&nbsp;</a></span>petscVec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMoFEM_1_1SmartPetscObj.html">SmartPetscObj</a>&lt;Vec&gt; DataAtIntegrationPts::petscVec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="electrostatics_8hpp_source.html#l00059">59</a> of file <a class="el" href="electrostatics_8hpp_source.html">electrostatics.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a6773f0dbb1e70b14534f85dca4802575"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6773f0dbb1e70b14534f85dca4802575">&#9670;&nbsp;</a></span>pOisson</h2>
 
@@ -812,22 +905,28 @@ Private Attributes</h2></td></tr>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>tutorials/cor-7/src/<a class="el" href="ElasticityMixedFormulation_8hpp_source.html">ElasticityMixedFormulation.hpp</a></li>
+<li>tutorials/scl-12/src/<a class="el" href="electrostatics_8hpp_source.html">electrostatics.hpp</a></li>
 <li>users_modules/basic_finite_elements/src/<a class="el" href="HookeElement_8hpp_source.html">HookeElement.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="astructDataAtIntegrationPts_html_ad73a34d5efd03827c053183d33f005d8"><div class="ttname"><a href="structDataAtIntegrationPts.html#ad73a34d5efd03827c053183d33f005d8">DataAtIntegrationPts::energyVec</a></div><div class="ttdeci">boost::shared_ptr&lt; VectorDouble &gt; energyVec</div><div class="ttdef"><b>Definition:</b> <a href="HookeElement_8hpp_source.html#l00091">HookeElement.hpp:91</a></div></div>
+<div class="ttc" id="astructDataAtIntegrationPts_html_a833bb2795ca45f045b69b0fd9bbdb42e"><div class="ttname"><a href="structDataAtIntegrationPts.html#a833bb2795ca45f045b69b0fd9bbdb42e">DataAtIntegrationPts::blockPermittivity</a></div><div class="ttdeci">double blockPermittivity</div><div class="ttdef"><b>Definition:</b> <a href="electrostatics_8hpp_source.html#l00060">electrostatics.hpp:60</a></div></div>
 <div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_a945866771c6e8178294d0a6be732164e"><div class="ttname"><a href="structDataAtIntegrationPts.html#a945866771c6e8178294d0a6be732164e">DataAtIntegrationPts::FMat</a></div><div class="ttdeci">boost::shared_ptr&lt; MatrixDouble &gt; FMat</div><div class="ttdef"><b>Definition:</b> <a href="HookeElement_8hpp_source.html#l00083">HookeElement.hpp:83</a></div></div>
 <div class="ttc" id="astructBlockData_html_a96442b9a29c266fc284c93cf3ad810ab"><div class="ttname"><a href="structBlockData.html#a96442b9a29c266fc284c93cf3ad810ab">BlockData::pOisson</a></div><div class="ttdeci">double pOisson</div><div class="ttdef"><b>Definition:</b> <a href="ElasticityMixedFormulation_8hpp_source.html#l00016">ElasticityMixedFormulation.hpp:16</a></div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_ac25ec118afef5e735e3879ea9b68328d"><div class="ttname"><a href="structDataAtIntegrationPts.html#ac25ec118afef5e735e3879ea9b68328d">DataAtIntegrationPts::mU</a></div><div class="ttdeci">double mU</div><div class="ttdef"><b>Definition:</b> <a href="ElasticityMixedFormulation_8hpp_source.html#l00029">ElasticityMixedFormulation.hpp:29</a></div></div>
+<div class="ttc" id="astructMoFEM_1_1CoreInterface_html_adecbcd03d7be8763b60a827f434fe726"><div class="ttname"><a href="structMoFEM_1_1CoreInterface.html#adecbcd03d7be8763b60a827f434fe726">MoFEM::CoreInterface::get_comm</a></div><div class="ttdeci">virtual MPI_Comm &amp; get_comm() const =0</div></div>
 <div class="ttc" id="agroup__mofem__meshset__mng_html_ga6bd6335f024a22cde370ee807d9185ce"><div class="ttname"><a href="group__mofem__meshset__mng.html#ga6bd6335f024a22cde370ee807d9185ce">_IT_CUBITMESHSETS_BY_BCDATA_TYPE_FOR_LOOP_</a></div><div class="ttdeci">#define _IT_CUBITMESHSETS_BY_BCDATA_TYPE_FOR_LOOP_(MESHSET_MANAGER, CUBITBCTYPE, IT)</div><div class="ttdoc">Iterator that loops over a specific Cubit MeshSet in a moFEM field.</div><div class="ttdef"><b>Definition:</b> <a href="MeshsetsManager_8hpp_source.html#l00049">MeshsetsManager.hpp:49</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_1_1Types_html_a71f706f784fbf6fd240806b70ed7d933"><div class="ttname"><a href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MoFEM::Types::MatrixDouble</a></div><div class="ttdeci">UBlasMatrix&lt; double &gt; MatrixDouble</div><div class="ttdef"><b>Definition:</b> <a href="Types_8hpp_source.html#l00077">Types.hpp:77</a></div></div>
+<div class="ttc" id="astructMoFEM_1_1CoreInterface_html_af2224ce77b33637b5cfad66a275a2ffb"><div class="ttname"><a href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">MoFEM::CoreInterface::get_comm_rank</a></div><div class="ttdeci">virtual int get_comm_rank() const =0</div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_a6773f0dbb1e70b14534f85dca4802575"><div class="ttname"><a href="structDataAtIntegrationPts.html#a6773f0dbb1e70b14534f85dca4802575">DataAtIntegrationPts::pOisson</a></div><div class="ttdeci">double pOisson</div><div class="ttdef"><b>Definition:</b> <a href="ElasticityMixedFormulation_8hpp_source.html#l00026">ElasticityMixedFormulation.hpp:26</a></div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_ab8f7923162208b879b0d457f1ce103fc"><div class="ttname"><a href="structDataAtIntegrationPts.html#ab8f7923162208b879b0d457f1ce103fc">DataAtIntegrationPts::eshelbyStressMat</a></div><div class="ttdeci">boost::shared_ptr&lt; MatrixDouble &gt; eshelbyStressMat</div><div class="ttdef"><b>Definition:</b> <a href="HookeElement_8hpp_source.html#l00092">HookeElement.hpp:92</a></div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_a5d3607cbd43b7ce5091de0a9e14b550f"><div class="ttname"><a href="structDataAtIntegrationPts.html#a5d3607cbd43b7ce5091de0a9e14b550f">DataAtIntegrationPts::setOfBlocksData</a></div><div class="ttdeci">std::map&lt; int, BlockData &gt; setOfBlocksData</div><div class="ttdef"><b>Definition:</b> <a href="ElasticityMixedFormulation_8hpp_source.html#l00031">ElasticityMixedFormulation.hpp:31</a></div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_acbf54e0ffe287c954f1794450514784b"><div class="ttname"><a href="structDataAtIntegrationPts.html#acbf54e0ffe287c954f1794450514784b">DataAtIntegrationPts::hMat</a></div><div class="ttdeci">boost::shared_ptr&lt; MatrixDouble &gt; hMat</div><div class="ttdef"><b>Definition:</b> <a href="HookeElement_8hpp_source.html#l00082">HookeElement.hpp:82</a></div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_a80b8f7d38a5e4887c5eb6279e48c7f03"><div class="ttname"><a href="structDataAtIntegrationPts.html#a80b8f7d38a5e4887c5eb6279e48c7f03">DataAtIntegrationPts::lAmbda</a></div><div class="ttdeci">double lAmbda</div><div class="ttdef"><b>Definition:</b> <a href="ElasticityMixedFormulation_8hpp_source.html#l00028">ElasticityMixedFormulation.hpp:28</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_add80e5ef5f847b2d4b637029f0f671c3"><div class="ttname"><a href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a></div><div class="ttdeci">#define CHKERR</div><div class="ttdoc">Inline error check.</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00548">definitions.h:548</a></div></div>
+<div class="ttc" id="astructDataAtIntegrationPts_html_a0700569f3cd4c19374361b00c38781c4"><div class="ttname"><a href="structDataAtIntegrationPts.html#a0700569f3cd4c19374361b00c38781c4">DataAtIntegrationPts::petscVec</a></div><div class="ttdeci">SmartPetscObj&lt; Vec &gt; petscVec</div><div class="ttdef"><b>Definition:</b> <a href="electrostatics_8hpp_source.html#l00059">electrostatics.hpp:59</a></div></div>
+<div class="ttc" id="anamespaceMoFEM_html_ac0c433a883f2c766913ecbf5c2b74d69"><div class="ttname"><a href="namespaceMoFEM.html#ac0c433a883f2c766913ecbf5c2b74d69">MoFEM::createGhostVector</a></div><div class="ttdeci">auto createGhostVector(MPI_Comm comm, PetscInt n, PetscInt N, PetscInt nghost, const PetscInt ghosts[])</div><div class="ttdoc">Create smart ghost vector.</div><div class="ttdef"><b>Definition:</b> <a href="PetscSmartObj_8hpp_source.html#l00179">PetscSmartObj.hpp:179</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1CoreInterface_html_adb4b1c061d2348966a28e7425072f464"><div class="ttname"><a href="structMoFEM_1_1CoreInterface.html#adb4b1c061d2348966a28e7425072f464">MoFEM::CoreInterface::get_moab</a></div><div class="ttdeci">virtual moab::Interface &amp; get_moab()=0</div></div>
 <div class="ttc" id="adefinitions_8h_html_a82340fd7aca566defb002f93cc299efca416c3e3070d3438afe45ae7359d0559e"><div class="ttname"><a href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca416c3e3070d3438afe45ae7359d0559e">MAT_ELASTICSET</a></div><div class="ttdeci">@ MAT_ELASTICSET</div><div class="ttdoc">block name is &quot;MAT_ELASTIC&quot;</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00172">definitions.h:172</a></div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_a204a2510485d768f48f670d10dc1bc36"><div class="ttname"><a href="structDataAtIntegrationPts.html#a204a2510485d768f48f670d10dc1bc36">DataAtIntegrationPts::mField</a></div><div class="ttdeci">MoFEM::Interface &amp; mField</div><div class="ttdef"><b>Definition:</b> <a href="ElasticityMixedFormulation_8hpp_source.html#l00104">ElasticityMixedFormulation.hpp:104</a></div></div>
@@ -844,6 +943,7 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="anamespaceMoFEM_1_1Exceptions_html_a4e27e82eaf63e387dd653941d6245b49"><div class="ttname"><a href="namespaceMoFEM_1_1Exceptions.html#a4e27e82eaf63e387dd653941d6245b49">MoFEM::Exceptions::ierr</a></div><div class="ttdeci">static MoFEMErrorCodeGeneric&lt; PetscErrorCode &gt; ierr</div><div class="ttdef"><b>Definition:</b> <a href="Exceptions_8hpp_source.html#l00076">Exceptions.hpp:76</a></div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_a1d8a84a2cb3d88a372444aef8ad42a11"><div class="ttname"><a href="structDataAtIntegrationPts.html#a1d8a84a2cb3d88a372444aef8ad42a11">DataAtIntegrationPts::tD</a></div><div class="ttdeci">FTensor::Ddg&lt; double, 3, 3 &gt; tD</div><div class="ttdef"><b>Definition:</b> <a href="ElasticityMixedFormulation_8hpp_source.html#l00024">ElasticityMixedFormulation.hpp:24</a></div></div>
 <div class="ttc" id="astructDataAtIntegrationPts_html_ab516a795e9a272f17a7ea5ad8cdb0dad"><div class="ttname"><a href="structDataAtIntegrationPts.html#ab516a795e9a272f17a7ea5ad8cdb0dad">DataAtIntegrationPts::setBlocks</a></div><div class="ttdeci">MoFEMErrorCode setBlocks()</div><div class="ttdef"><b>Definition:</b> <a href="ElasticityMixedFormulation_8hpp_source.html#l00086">ElasticityMixedFormulation.hpp:86</a></div></div>
+<div class="ttc" id="astructDataAtIntegrationPts_html_a6987d338c3f9843142f40b448e0482ff"><div class="ttname"><a href="structDataAtIntegrationPts.html#a6987d338c3f9843142f40b448e0482ff">DataAtIntegrationPts::blockChrgDens</a></div><div class="ttdeci">double blockChrgDens</div><div class="ttdef"><b>Definition:</b> <a href="electrostatics_8hpp_source.html#l00061">electrostatics.hpp:61</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_1_1Types_html_aab2f28b2af54eb9f62cc60a53e1c6d3b"><div class="ttname"><a href="namespaceMoFEM_1_1Types.html#aab2f28b2af54eb9f62cc60a53e1c6d3b">MoFEM::Types::VectorDouble</a></div><div class="ttdeci">UBlasVector&lt; double &gt; VectorDouble</div><div class="ttdef"><b>Definition:</b> <a href="Types_8hpp_source.html#l00068">Types.hpp:68</a></div></div>
 <div class="ttc" id="astructBlockData_html_a87f82720b0914e77dc6eed317d5084f1"><div class="ttname"><a href="structBlockData.html#a87f82720b0914e77dc6eed317d5084f1">BlockData::yOung</a></div><div class="ttdeci">double yOung</div><div class="ttdef"><b>Definition:</b> <a href="ElasticityMixedFormulation_8hpp_source.html#l00015">ElasticityMixedFormulation.hpp:15</a></div></div>
 <div class="ttc" id="amatrix__function_8cpp_html_ac93d777bbf9336cad5c09007df789c95"><div class="ttname"><a href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a></div><div class="ttdeci">FTensor::Index&lt; 'k', 3 &gt; k</div><div class="ttdef"><b>Definition:</b> <a href="matrix__function_8cpp_source.html#l00020">matrix_function.cpp:20</a></div></div>

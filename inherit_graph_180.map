@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structEshelbianPlasticity_1_1TractionBc.html" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,145,105"/>
+<area shape="rect" id="node2" href="$structEshelbianPlasticity_1_1OpCalculateEshelbyStress.html" title=" " alt="" coords="198,5,398,47"/>
+<area shape="rect" id="node3" href="$structFreeSurfaceOps_1_1OpLoopSideGetDataForSideEle.html" title=" " alt="" coords="193,71,403,112"/>
+<area shape="rect" id="node4" href="$structOpPostProcMap.html" title="Post post&#45;proc data at points from hash maps." alt="" coords="209,136,387,177"/>
 </map>

@@ -1,6 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,86,85,113"/>
-<area shape="rect" id="node2" href="$classMoFEM_1_1LogManager_1_1InternalData_1_1SelfStreamBuf.html" title=" " alt="" coords="139,5,345,47"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1LogManager_1_1InternalData_1_1SynchronizedStreamBuf.html" title=" " alt="" coords="143,71,341,127"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1LogManager_1_1InternalData_1_1WorldStreamBuf.html" title=" " alt="" coords="133,152,351,193"/>
+<area shape="rect" id="node1" href="$structMoFEM_1_1Idx__mi__tag.html" title=" " alt="" coords="5,5,156,32"/>
 </map>

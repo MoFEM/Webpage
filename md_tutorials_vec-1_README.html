@@ -120,17 +120,17 @@ $(function() {
 <div class="title">Readme for eiegn problem </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md184"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md188"></a>
 Resources</h1>
 <p>Test setup, data, and meshes from: <a href="https://cofea.readthedocs.io/en/latest/benchmarks/000-tuning-fork/index.html">https://cofea.readthedocs.io/en/latest/benchmarks/000-tuning-fork/index.html</a> <a href="https://github.com/spolanski/CoFEA/blob/master/docs/benchmarks/000-tuning-fork/index.md">https://github.com/spolanski/CoFEA/blob/master/docs/benchmarks/000-tuning-fork/index.md</a></p>
-<h1><a class="anchor" id="autotoc_md185"></a>
+<h1><a class="anchor" id="autotoc_md189"></a>
 Data</h1>
 <ul>
 <li>Young's modulus, <a class="el" href="classE.html">E</a>=207 [GPa]</li>
 <li>Poissons ratio, nu = 0.33</li>
 <li>Material density, \rho = 7829 [kg/m^{3}]</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md186"></a>
+<h1><a class="anchor" id="autotoc_md190"></a>
 Example command line</h1>
 <p>Convert from med format </p><div class="fragment"><div class="line">read_med \</div>
 <div class="line">-med_file TET-2-0.med \</div>
@@ -139,20 +139,20 @@ Example command line</h1>
 <div class="line">-my_file fork-2-0.h5m \</div>
 <div class="line">-output_file fork-2-0_4parts.h5m \</div>
 <div class="line">-nparts 4 -dim 3 -adj_dim 1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md187"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md191"></a>
 Running code</h1>
 <div class="fragment"><div class="line">mpirun -np 4 ./eigen_elastic_3d \</div>
 <div class="line">-file_name fork-2-0_4parts.h5m -eps_monitor -order 2 \</div>
 <div class="line">-eps_pos_gen_non_hermitian -eps_ncv 200 \</div>
 <div class="line">-eps_tol 1e-3 -eps_nev 1</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md188"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md192"></a>
 Results for tuning fork</h1>
 <ul>
 <li>In analysis linear geometry was used.</li>
 <li>Frequency was calculated form eq. f = sqrt(omgea2)/(2 * pi), where omega2 is eiegn value for genrlaied problem: Ku = omaga2*Mu, where K is stiffens matrix, and M is mass matrix.</li>
 <li>SLEPC type KrylovShur solver is used.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md189"></a>
+<h2><a class="anchor" id="autotoc_md193"></a>
 Mesh TET-2-0.med</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -164,7 +164,7 @@ Mesh TET-2-0.med</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">3 </td><td class="markdownTableBodyNone">38646 </td><td class="markdownTableBodyNone">442.9 Hz </td><td class="markdownTableBodyNone">676.9 Hz </td><td class="markdownTableBodyNone">1691.8 Hz </td><td class="markdownTableBodyNone">1826.4 Hz </td><td class="markdownTableBodyNone">2790.8 Hz  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md190"></a>
+<h2><a class="anchor" id="autotoc_md194"></a>
 Mesh TET-1-0.med</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -176,7 +176,7 @@ Mesh TET-1-0.med</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">3 </td><td class="markdownTableBodyNone">196323 </td><td class="markdownTableBodyNone">441.0 Hz </td><td class="markdownTableBodyNone">674.4 Hz </td><td class="markdownTableBodyNone">1690.3 Hz </td><td class="markdownTableBodyNone">1825.7 Hz </td><td class="markdownTableBodyNone">2781.3 Hz  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md191"></a>
+<h2><a class="anchor" id="autotoc_md195"></a>
 Mesh TET-0-5.med</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">

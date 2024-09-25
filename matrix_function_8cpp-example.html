@@ -120,7 +120,7 @@ $(function() {
 <div class="title">matrix_function.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Test and example for matrix functionFor reference see <a class="el" href="citelist.html#CITEREF_miehe2001algorithms">[52]</a></p>
+<p>Test and example for matrix functionFor reference see <a class="el" href="citelist.html#CITEREF_miehe2001algorithms">[53]</a></p>
 <div class="fragment"><div class="line"><span class="comment">/**</span></div>
 <div class="line"><span class="comment"> * @file matrix_function.cpp</span></div>
 <div class="line"><span class="comment"> * @example matrix_function.cpp</span></div>
@@ -290,8 +290,8 @@ $(function() {
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">int</span> DIM&gt;</div>
-<div class="line"><span class="keyword">auto</span> <a name="a20"></a><a class="code" href="matrix__function_8cpp.html#ab181fad512e5a4d0460ea01bce5e7eac">get_norm_t4</a>(<a name="_a21"></a><a class="code" href="classT.html">T</a> &amp;<a name="a22"></a><a class="code" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>, <span class="keyword">const</span> <a class="code" href="classFTensor_1_1Number.html">FTensor::Number&lt;DIM&gt;</a> &amp;) {</div>
-<div class="line">  <span class="keywordtype">double</span> <a name="a23"></a><a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a> = 0;</div>
+<div class="line"><span class="keyword">auto</span> <a name="a20"></a><a class="code" href="matrix__function_8cpp.html#ab181fad512e5a4d0460ea01bce5e7eac">get_norm_t4</a>(T &amp;<a name="a21"></a><a class="code" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>, <span class="keyword">const</span> <a class="code" href="classFTensor_1_1Number.html">FTensor::Number&lt;DIM&gt;</a> &amp;) {</div>
+<div class="line">  <span class="keywordtype">double</span> <a name="a22"></a><a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a> = 0;</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii != DIM; ++ii)</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> jj = 0; jj != DIM; ++jj)</div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> kk = 0; kk != DIM; ++kk)</div>
@@ -300,18 +300,18 @@ $(function() {
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a>;</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">char</span> <a name="a24"></a><a class="code" href="matrix__function_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>[] = <span class="stringliteral">&quot;...\n\n&quot;</span>;</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">char</span> <a name="a23"></a><a class="code" href="matrix__function_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>[] = <span class="stringliteral">&quot;...\n\n&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a name="a25"></a><a class="code" href="matrix__function_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a name="a24"></a><a class="code" href="matrix__function_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"> </div>
-<div class="line">  <a name="a26"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, (<span class="keywordtype">char</span> *)0, <a class="code" href="matrix__function_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line">  <a name="a25"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, (<span class="keywordtype">char</span> *)0, <a class="code" href="matrix__function_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> core_log = logging::core::get();</div>
 <div class="line">  core_log-&gt;add_sink(</div>
-<div class="line">      <a name="a27"></a><a class="code" href="structMoFEM_1_1LogManager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a name="a28"></a><a class="code" href="structMoFEM_1_1LogManager.html#ac1e5721da24d53aa5e6f5b9901b338b3">LogManager::getStrmSelf</a>(), <span class="stringliteral">&quot;ATOM_TEST&quot;</span>));</div>
-<div class="line">  <a name="a29"></a><a class="code" href="group__mofem__log__manager.html#ga037d7b63954d2ec6d367a5c959f16068">LogManager::setLog</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>);</div>
+<div class="line">      <a name="a26"></a><a class="code" href="structMoFEM_1_1LogManager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a name="a27"></a><a class="code" href="structMoFEM_1_1LogManager.html#ac1e5721da24d53aa5e6f5b9901b338b3">LogManager::getStrmSelf</a>(), <span class="stringliteral">&quot;ATOM_TEST&quot;</span>));</div>
+<div class="line">  <a name="a28"></a><a class="code" href="group__mofem__log__manager.html#ga037d7b63954d2ec6d367a5c959f16068">LogManager::setLog</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>);</div>
 <div class="line">  BOOST_LOG_SCOPED_THREAD_ATTR(<span class="stringliteral">&quot;Timeline&quot;</span>, attrs::timer());</div>
-<div class="line">  <a name="a30"></a><a class="code" href="group__mofem__log__manager.html#ga75e03f7cd52fe05179b865ef0ea09be3">MOFEM_LOG_ATTRIBUTES</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>, <a name="a31"></a><a class="code" href="group__mofem__log__manager.html#gga343ada4fb4e1030236aaeaa2d3cef5ada227644924378c9fc210379c7b1de2a8f">LogManager::BitLineID</a>);</div>
+<div class="line">  <a name="a29"></a><a class="code" href="group__mofem__log__manager.html#ga75e03f7cd52fe05179b865ef0ea09be3">MOFEM_LOG_ATTRIBUTES</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>, <a name="a30"></a><a class="code" href="group__mofem__log__manager.html#gga343ada4fb4e1030236aaeaa2d3cef5ada227644924378c9fc210379c7b1de2a8f">LogManager::BitLineID</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">try</span> {</div>
 <div class="line"> </div>
@@ -321,8 +321,8 @@ $(function() {
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> jj = 0; jj != 3; ++jj)</div>
 <div class="line">          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> kk = 0; kk != 3; ++kk)</div>
 <div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ll = 0; ll != 3; ++ll) {</div>
-<div class="line">              <span class="keywordtype">double</span> <a name="a32"></a><a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> = <a class="code" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>(ii, jj, kk, ll);</div>
-<div class="line">              <span class="keywordtype">double</span> <a name="a33"></a><a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a> = std::abs(<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) &lt; <a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> ? 0 : <a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>;</div>
+<div class="line">              <span class="keywordtype">double</span> <a name="a31"></a><a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> = <a class="code" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>(ii, jj, kk, ll);</div>
+<div class="line">              <span class="keywordtype">double</span> <a name="a32"></a><a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a> = std::abs(<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) &lt; <a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> ? 0 : <a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>;</div>
 <div class="line">              <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>, Sev::noisy)</div>
 <div class="line">                  &lt;&lt; str &lt;&lt; std::fixed &lt;&lt; std::setprecision(3) &lt;&lt; std::showpos</div>
 <div class="line">                  &lt;&lt; ii + 1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; jj + 1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; kk + 1 &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; ll + 1</div>
@@ -338,7 +338,7 @@ $(function() {
 <div class="line">              &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; <a class="code" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>(ii, jj, kk, ll);</div>
 <div class="line">    };</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> <a name="a34"></a><a class="code" href="fem__tools_8h.html#a7a4590d511efbaffa48cf3367f9a2ce8">print_mat</a> = [](<span class="keyword">auto</span> &amp;<a class="code" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>) {</div>
+<div class="line">    <span class="keyword">auto</span> <a name="a33"></a><a class="code" href="fem__tools_8h.html#a7a4590d511efbaffa48cf3367f9a2ce8">print_mat</a> = [](<span class="keyword">auto</span> &amp;<a class="code" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>) {</div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii != 3; ++ii)</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> jj = 0; jj != 3; ++jj)</div>
 <div class="line">          <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>, Sev::noisy)</div>
@@ -346,12 +346,12 @@ $(function() {
 <div class="line">    };</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">enum</span> swap { swap12, swap01 };</div>
-<div class="line">    <span class="keyword">auto</span> run_lapack = [](<span class="keyword">auto</span> &amp;<a name="a35"></a><a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>, swap s = swap12) {</div>
+<div class="line">    <span class="keyword">auto</span> run_lapack = [](<span class="keyword">auto</span> &amp;<a name="a34"></a><a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>, swap s = swap12) {</div>
 <div class="line">      <span class="keywordtype">int</span> info;</div>
 <div class="line">      <span class="keywordtype">double</span> wkopt;</div>
 <div class="line">      <span class="keywordtype">double</span> <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[3];</div>
 <div class="line"> </div>
-<div class="line">      <a name="_a36"></a><a class="code" href="classFTensor_1_1Tensor2.html">FTensor::Tensor2&lt;double, 3, 3&gt;</a> t_a{</div>
+<div class="line">      <a name="_a35"></a><a class="code" href="classFTensor_1_1Tensor2.html">FTensor::Tensor2&lt;double, 3, 3&gt;</a> t_a{</div>
 <div class="line"> </div>
 <div class="line">          <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[0], <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[1], <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[2],</div>
 <div class="line"> </div>
@@ -361,10 +361,10 @@ $(function() {
 <div class="line"> </div>
 <div class="line">      <span class="comment">/* Query and allocate the optimal workspace */</span></div>
 <div class="line">      <span class="keywordtype">int</span> lwork = -1;</div>
-<div class="line">      info = <a name="a37"></a><a class="code" href="lapack__wrap_8h.html#a9d34be2f8a6a32580830207f2b827529">lapack_dsyev</a>(<span class="charliteral">&#39;V&#39;</span>, <span class="charliteral">&#39;U&#39;</span>, 3, <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>.data(), 3, <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>, &amp;wkopt, lwork);</div>
+<div class="line">      info = <a name="a36"></a><a class="code" href="lapack__wrap_8h.html#a9d34be2f8a6a32580830207f2b827529">lapack_dsyev</a>(<span class="charliteral">&#39;V&#39;</span>, <span class="charliteral">&#39;U&#39;</span>, 3, <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>.data(), 3, <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>, &amp;wkopt, lwork);</div>
 <div class="line">      <span class="keywordflow">if</span> (info &gt; 0)</div>
-<div class="line">        <a name="a38"></a><a class="code" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;The algorithm failed to compute eigenvalues.&quot;</span>);</div>
-<div class="line">      lwork = (<a name="a39"></a><a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>)wkopt;</div>
+<div class="line">        <a name="a37"></a><a class="code" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;The algorithm failed to compute eigenvalues.&quot;</span>);</div>
+<div class="line">      lwork = (<a name="a38"></a><a class="code" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>)wkopt;</div>
 <div class="line">      std::vector&lt;double&gt; work(lwork);</div>
 <div class="line">      <span class="comment">/* Solve eigenproblem */</span></div>
 <div class="line">      info = <a class="code" href="lapack__wrap_8h.html#a9d34be2f8a6a32580830207f2b827529">lapack_dsyev</a>(<span class="charliteral">&#39;V&#39;</span>, <span class="charliteral">&#39;U&#39;</span>, 3, <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>.data(), 3, <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>, &amp;*work.begin(), lwork);</div>
@@ -380,7 +380,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">            <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[1 * 3 + 0], <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[1 * 3 + 1], <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[1 * 3 + 2]};</div>
 <div class="line"> </div>
-<div class="line">        <a name="_a40"></a><a class="code" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt;double, 3&gt;</a> t_eig_vals{<a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[0], <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[2], <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[1]};</div>
+<div class="line">        <a name="_a39"></a><a class="code" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt;double, 3&gt;</a> t_eig_vals{<a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[0], <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[2], <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[1]};</div>
 <div class="line">        <span class="keywordflow">return</span> std::make_tuple(t_a, t_eig_vec, t_eig_vals);</div>
 <div class="line">      }</div>
 <div class="line"> </div>
@@ -426,7 +426,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">          0., 0., 1.};</div>
 <div class="line"> </div>
-<div class="line">      <a name="_a41"></a><a class="code" href="classFTensor_1_1Tensor2__symmetric.html">FTensor::Tensor2_symmetric&lt;double, 3&gt;</a> t_S_sym;</div>
+<div class="line">      <a name="_a40"></a><a class="code" href="classFTensor_1_1Tensor2__symmetric.html">FTensor::Tensor2_symmetric&lt;double, 3&gt;</a> t_S_sym;</div>
 <div class="line">      t_S_sym(<a class="code" href="matrix__function_8cpp.html#aa3c03159c72fab888f2581d95640c6e3">i</a>, <a class="code" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a>) = (t_S(<a class="code" href="matrix__function_8cpp.html#aa3c03159c72fab888f2581d95640c6e3">i</a>, <a class="code" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a>) || t_S(<a class="code" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a>, <a class="code" href="matrix__function_8cpp.html#aa3c03159c72fab888f2581d95640c6e3">i</a>)) / 2.;</div>
 <div class="line"> </div>
 <div class="line">      <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>, Sev::verbose) &lt;&lt; <span class="stringliteral">&quot;Diff A&quot;</span>;</div>
@@ -434,21 +434,21 @@ $(function() {
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Testing against values in mathematica for 0,2 directive</span></div>
 <div class="line">      {</div>
-<div class="line">        <span class="keyword">auto</span> <a name="a42"></a><a class="code" href="namespaceHenckyOps.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a> = [](<span class="keywordtype">double</span> <a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) { <span class="keywordflow">return</span> exp(<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>); };</div>
-<div class="line">        <span class="keyword">auto</span> <a name="a43"></a><a class="code" href="namespaceHenckyOps.html#ac901935d74fe21ad8415e34fd9ea2150">d_f</a> = [](<span class="keywordtype">double</span> <a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) { <span class="keywordflow">return</span> exp(<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>); };</div>
-<div class="line">        <span class="keyword">auto</span> <a name="a44"></a><a class="code" href="namespaceHenckyOps.html#aafb2135de373a6659912b2fdcb2a07b5">dd_f</a> = [](<span class="keywordtype">double</span> <a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) { <span class="keywordflow">return</span> exp(<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>); };</div>
+<div class="line">        <span class="keyword">auto</span> <a name="a41"></a><a class="code" href="namespaceHenckyOps.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a> = [](<span class="keywordtype">double</span> <a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) { <span class="keywordflow">return</span> exp(<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>); };</div>
+<div class="line">        <span class="keyword">auto</span> <a name="a42"></a><a class="code" href="namespaceHenckyOps.html#ac901935d74fe21ad8415e34fd9ea2150">d_f</a> = [](<span class="keywordtype">double</span> <a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) { <span class="keywordflow">return</span> exp(<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>); };</div>
+<div class="line">        <span class="keyword">auto</span> <a name="a43"></a><a class="code" href="namespaceHenckyOps.html#aafb2135de373a6659912b2fdcb2a07b5">dd_f</a> = [](<span class="keywordtype">double</span> <a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) { <span class="keywordflow">return</span> exp(<a class="code" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>); };</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">auto</span> t_b = <a name="a45"></a><a class="code" href="namespaceEigenMatrix.html#a49823cc6a9e749fd61bff02ee756e2bd">EigenMatrix::getMat</a>(t_L, t_N, <a class="code" href="namespaceHenckyOps.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a>);</div>
+<div class="line">        <span class="keyword">auto</span> t_b = <a name="a44"></a><a class="code" href="namespaceEigenMatrix.html#a49823cc6a9e749fd61bff02ee756e2bd">EigenMatrix::getMat</a>(t_L, t_N, <a class="code" href="namespaceHenckyOps.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a>);</div>
 <div class="line">        <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>, Sev::verbose) &lt;&lt; <span class="stringliteral">&quot;Reconstruct mat&quot;</span>;</div>
 <div class="line">        <a class="code" href="fem__tools_8h.html#a7a4590d511efbaffa48cf3367f9a2ce8">print_mat</a>(t_b);</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">auto</span> t_d = <a name="a46"></a><a class="code" href="namespaceEigenMatrix.html#a38914684ac556a4971b2a9549e3965e9">EigenMatrix::getDiffMat</a>(t_L, t_N, <a class="code" href="namespaceHenckyOps.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a>, <a class="code" href="namespaceHenckyOps.html#ac901935d74fe21ad8415e34fd9ea2150">d_f</a>, 3);</div>
+<div class="line">        <span class="keyword">auto</span> t_d = <a name="a45"></a><a class="code" href="namespaceEigenMatrix.html#a38914684ac556a4971b2a9549e3965e9">EigenMatrix::getDiffMat</a>(t_L, t_N, <a class="code" href="namespaceHenckyOps.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a>, <a class="code" href="namespaceHenckyOps.html#ac901935d74fe21ad8415e34fd9ea2150">d_f</a>, 3);</div>
 <div class="line"> </div>
 <div class="line">        <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>, Sev::verbose) &lt;&lt; <span class="stringliteral">&quot;Diff&quot;</span>;</div>
 <div class="line">        print_ddg_direction(t_d, 0, 2);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> t_dd =</div>
-<div class="line">            <a name="a47"></a><a class="code" href="namespaceEigenMatrix.html#af24e1d3a6f341b0a7b115eff29dd025f">EigenMatrix::getDiffDiffMat</a>(t_L, t_N, <a class="code" href="namespaceHenckyOps.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a>, <a class="code" href="namespaceHenckyOps.html#ac901935d74fe21ad8415e34fd9ea2150">d_f</a>, <a class="code" href="namespaceHenckyOps.html#aafb2135de373a6659912b2fdcb2a07b5">dd_f</a>, t_S_sym, 3);</div>
+<div class="line">            <a name="a46"></a><a class="code" href="namespaceEigenMatrix.html#af24e1d3a6f341b0a7b115eff29dd025f">EigenMatrix::getDiffDiffMat</a>(t_L, t_N, <a class="code" href="namespaceHenckyOps.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a>, <a class="code" href="namespaceHenckyOps.html#ac901935d74fe21ad8415e34fd9ea2150">d_f</a>, <a class="code" href="namespaceHenckyOps.html#aafb2135de373a6659912b2fdcb2a07b5">dd_f</a>, t_S_sym, 3);</div>
 <div class="line"> </div>
 <div class="line">        <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>, Sev::verbose) &lt;&lt; <span class="stringliteral">&quot;Diff Diff&quot;</span>;</div>
 <div class="line">        print_ddg_direction(t_dd, 0, 2);</div>
@@ -468,7 +468,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        constexpr <span class="keywordtype">double</span> <a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> = 1e-2;</div>
 <div class="line">        <span class="keywordflow">if</span> (std::abs(norm2_t_b - regression_t_b) &gt; <a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a>)</div>
-<div class="line">          SETERRQ(PETSC_COMM_WORLD, <a name="a48"></a><a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>, <span class="stringliteral">&quot;Wrong t_b&quot;</span>);</div>
+<div class="line">          SETERRQ(PETSC_COMM_WORLD, <a name="a47"></a><a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>, <span class="stringliteral">&quot;Wrong t_b&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">if</span> (std::abs(norm2_t_d - regression_t_d) &gt; <a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a>)</div>
 <div class="line">          SETERRQ(PETSC_COMM_WORLD, <a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>, <span class="stringliteral">&quot;Wrong t_d&quot;</span>);</div>
 <div class="line">        <span class="keywordflow">if</span> (std::abs(norm2_t_dd - regression_t_dd) &gt; <a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a>)</div>
@@ -515,8 +515,8 @@ $(function() {
 <div class="line">                  <span class="stringliteral">&quot;Matrix not reeconstructed&quot;</span>);</div>
 <div class="line">      }</div>
 <div class="line"> </div>
-<div class="line">      constexpr <span class="keyword">auto</span> <a class="code" href="free__surface_8cpp.html#a52438586143ef05bfe922220a317c144">t_kd</a> = <a name="_a49"></a><a class="code" href="classFTensor_1_1Kronecker__Delta__symmetric.html">FTensor::Kronecker_Delta_symmetric&lt;int&gt;</a>();</div>
-<div class="line">      <a name="_a50"></a><a class="code" href="classFTensor_1_1Ddg.html">FTensor::Ddg&lt;double, 3, 3&gt;</a> t_one;</div>
+<div class="line">      constexpr <span class="keyword">auto</span> <a class="code" href="free__surface_8cpp.html#a52438586143ef05bfe922220a317c144">t_kd</a> = <a name="_a48"></a><a class="code" href="classFTensor_1_1Kronecker__Delta__symmetric.html">FTensor::Kronecker_Delta_symmetric&lt;int&gt;</a>();</div>
+<div class="line">      <a name="_a49"></a><a class="code" href="classFTensor_1_1Ddg.html">FTensor::Ddg&lt;double, 3, 3&gt;</a> t_one;</div>
 <div class="line">      t_one(<a class="code" href="matrix__function_8cpp.html#aa3c03159c72fab888f2581d95640c6e3">i</a>, <a class="code" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a>, <a class="code" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a>, <a class="code" href="matrix__function_8cpp.html#a510d8658904ea5f9e62ae641c8122e49">l</a>) = (<a class="code" href="free__surface_8cpp.html#a52438586143ef05bfe922220a317c144">t_kd</a>(<a class="code" href="matrix__function_8cpp.html#aa3c03159c72fab888f2581d95640c6e3">i</a>, <a class="code" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a>) ^ <a class="code" href="free__surface_8cpp.html#a52438586143ef05bfe922220a317c144">t_kd</a>(<a class="code" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a>, <a class="code" href="matrix__function_8cpp.html#a510d8658904ea5f9e62ae641c8122e49">l</a>)) / 4.;</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Testsing linear function second second direvarive zero</span></div>
@@ -1177,7 +1177,7 @@ $(function() {
 <div class="line">      <span class="keywordtype">double</span> wkopt;</div>
 <div class="line">      <span class="keywordtype">double</span> <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[2];</div>
 <div class="line"> </div>
-<div class="line">      <a name="_a51"></a><a class="code" href="classFTensor_1_1Tensor2.html">FTensor::Tensor2&lt;double, 2, 2&gt;</a> t_a{</div>
+<div class="line">      <a name="_a50"></a><a class="code" href="classFTensor_1_1Tensor2.html">FTensor::Tensor2&lt;double, 2, 2&gt;</a> t_a{</div>
 <div class="line"> </div>
 <div class="line">          <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[0], <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[1],</div>
 <div class="line"> </div>
@@ -1201,7 +1201,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">          <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[1 * 2 + 0], <a class="code" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>[1 * 2 + 1]};</div>
 <div class="line"> </div>
-<div class="line">      <a name="_a52"></a><a class="code" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt;double, 2&gt;</a> t_eig_vals{<a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[0], <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[1]};</div>
+<div class="line">      <a name="_a51"></a><a class="code" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt;double, 2&gt;</a> t_eig_vals{<a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[0], <a class="code" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a>[1]};</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">return</span> std::make_tuple(t_a, t_eig_vecs, t_eig_vals);</div>
 <div class="line">    };</div>
@@ -1224,9 +1224,9 @@ $(function() {
 <div class="line"> </div>
 <div class="line">      constexpr <span class="keywordtype">double</span> <a class="code" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> = 1e-6;</div>
 <div class="line"> </div>
-<div class="line">      <a name="_a53"></a><a class="code" href="classFTensor_1_1Index.html">FTensor::Index&lt;'i', 2&gt;</a> <a class="code" href="matrix__function_8cpp.html#aa3c03159c72fab888f2581d95640c6e3">i</a>;</div>
-<div class="line">      <a name="_a54"></a><a class="code" href="classFTensor_1_1Index.html">FTensor::Index&lt;'j', 2&gt;</a> <a class="code" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a>;</div>
-<div class="line">      <a name="_a55"></a><a class="code" href="classFTensor_1_1Index.html">FTensor::Index&lt;'k', 2&gt;</a> <a class="code" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a>;</div>
+<div class="line">      <a name="_a52"></a><a class="code" href="classFTensor_1_1Index.html">FTensor::Index&lt;'i', 2&gt;</a> <a class="code" href="matrix__function_8cpp.html#aa3c03159c72fab888f2581d95640c6e3">i</a>;</div>
+<div class="line">      <a name="_a53"></a><a class="code" href="classFTensor_1_1Index.html">FTensor::Index&lt;'j', 2&gt;</a> <a class="code" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a>;</div>
+<div class="line">      <a name="_a54"></a><a class="code" href="classFTensor_1_1Index.html">FTensor::Index&lt;'k', 2&gt;</a> <a class="code" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a>;</div>
 <div class="line">      <a class="code" href="classFTensor_1_1Index.html">FTensor::Index&lt;'l', 2&gt;</a> <a class="code" href="matrix__function_8cpp.html#a510d8658904ea5f9e62ae641c8122e49">l</a>;</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// check if multiplication gives right value</span></div>
@@ -1246,7 +1246,7 @@ $(function() {
 <div class="line">      <span class="comment">// check first directive</span></div>
 <div class="line">      {</div>
 <div class="line">        <span class="keyword">auto</span> t_d = <a class="code" href="namespaceEigenMatrix.html#a38914684ac556a4971b2a9549e3965e9">EigenMatrix::getDiffMat</a>(t_eig_vals, t_eig_vecs, <a class="code" href="namespaceHenckyOps.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a>, <a class="code" href="namespaceHenckyOps.html#ac901935d74fe21ad8415e34fd9ea2150">d_f</a>, 2);</div>
-<div class="line">        <span class="keyword">auto</span> t_d_a = <a class="code" href="matrix__function_8cpp.html#ad45cc37462d3a34f45eef7ad0a75982b">get_diff_matrix2</a>(t_A, t_d, <a name="_a56"></a><a class="code" href="classFTensor_1_1Number.html">FTensor::Number&lt;2&gt;</a>());</div>
+<div class="line">        <span class="keyword">auto</span> t_d_a = <a class="code" href="matrix__function_8cpp.html#ad45cc37462d3a34f45eef7ad0a75982b">get_diff_matrix2</a>(t_A, t_d, <a name="_a55"></a><a class="code" href="classFTensor_1_1Number.html">FTensor::Number&lt;2&gt;</a>());</div>
 <div class="line">        <span class="keywordtype">double</span> nrm2_t_d_a = <a class="code" href="matrix__function_8cpp.html#ab181fad512e5a4d0460ea01bce5e7eac">get_norm_t4</a>(t_d_a, <a class="code" href="classFTensor_1_1Number.html">FTensor::Number&lt;2&gt;</a>());</div>
 <div class="line">        <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;ATOM_TEST&quot;</span>, Sev::inform)</div>
 <div class="line">            &lt;&lt; <span class="stringliteral">&quot;Direvarive hand calculation minus code &quot;</span> &lt;&lt; nrm2_t_d_a;</div>
@@ -1362,13 +1362,12 @@ $(function() {
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line">  }</div>
-<div class="line">  <a name="a57"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a name="a56"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a name="a58"></a><a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a59"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a name="a57"></a><a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a58"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="anamespaceEigenMatrix_html_a49823cc6a9e749fd61bff02ee756e2bd"><div class="ttname"><a href="namespaceEigenMatrix.html#a49823cc6a9e749fd61bff02ee756e2bd">EigenMatrix::getMat</a></div><div class="ttdeci">FTensor::Tensor2_symmetric&lt; double, 3 &gt; getMat(Val&lt; double, 3 &gt; &amp;t_val, Vec&lt; double, 3 &gt; &amp;t_vec, Fun&lt; double &gt; f)</div><div class="ttdoc">Get the Mat object.</div><div class="ttdef"><b>Definition:</b> <a href="MatrixFunction_8cpp_source.html#l00053">MatrixFunction.cpp:53</a></div></div>
-<div class="ttc" id="aclassT_html"><div class="ttname"><a href="classT.html">T</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt; double, 3 &gt;</a></div></div>
 <div class="ttc" id="afem__tools_8h_html_a7a4590d511efbaffa48cf3367f9a2ce8"><div class="ttname"><a href="fem__tools_8h.html#a7a4590d511efbaffa48cf3367f9a2ce8">print_mat</a></div><div class="ttdeci">void print_mat(double *M, int m, int n)</div><div class="ttdoc">print matric M</div></div>
 <div class="ttc" id="amatrix__function_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="matrix__function_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="matrix__function_8cpp_source.html#l00182">matrix_function.cpp:182</a></div></div>

@@ -1,11 +1,7 @@
 <map id="EshelbianPlasticity::OpAssembleFace" name="EshelbianPlasticity::OpAssembleFace">
-<area shape="rect" id="node1" title=" " alt="" coords="779,104,924,145"/>
-<area shape="rect" id="node6" href="$structEshelbianPlasticity_1_1OpDispBc.html" title=" " alt="" coords="973,5,1119,47"/>
-<area shape="rect" id="node7" href="$structEshelbianPlasticity_1_1OpDispBc__dx.html" title=" " alt="" coords="973,71,1119,112"/>
-<area shape="rect" id="node8" href="$structEshelbianPlasticity_1_1OpRotationBc.html" title=" " alt="" coords="973,136,1119,177"/>
-<area shape="rect" id="node9" href="$structEshelbianPlasticity_1_1OpRotationBc__dx.html" title=" " alt="" coords="973,201,1119,243"/>
-<area shape="rect" id="node2" href="$structEshelbianPlasticity_1_1OpAssembleBasic.html" title=" " alt="" coords="508,97,729,153"/>
-<area shape="rect" id="node3" title=" " alt="" coords="101,82,271,109"/>
-<area shape="rect" id="node4" href="$structEshelbianPlasticity_1_1OpAssembleBasic.html" title=" " alt="" coords="93,133,279,175"/>
-<area shape="rect" id="node5" href="$classT.html" title=" " alt="" coords="5,141,44,167"/>
+<area shape="rect" id="node1" title=" " alt="" coords="79,291,224,332"/>
+<area shape="rect" id="node2" href="$structEshelbianPlasticity_1_1OpAssembleBasic.html" title=" " alt="" coords="41,185,262,241"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,89,175,115"/>
+<area shape="rect" id="node4" href="$structEshelbianPlasticity_1_1OpAssembleBasic.html" title=" " alt="" coords="199,81,384,123"/>
+<area shape="rect" id="node5" title=" " alt="" coords="272,5,311,32"/>
 </map>

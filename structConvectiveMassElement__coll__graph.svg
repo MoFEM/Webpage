@@ -367,8 +367,8 @@ var sectionId = 'dynsection-0';
 <!-- Node19 -->
 <g id="node19" class="node">
 <title>Node19</title>
-<g id="a_node19"><a xlink:href="classVolumeElementForcesAndSourcesCore.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="962,-164.5 962,-183.5 1167,-183.5 1167,-164.5 962,-164.5"/>
+<g id="a_node19"><a xlink:title=" ">
+<polygon fill="white" stroke="#bfbfbf" points="962,-164.5 962,-183.5 1167,-183.5 1167,-164.5 962,-164.5"/>
 <text text-anchor="middle" x="1064.5" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00">VolumeElementForcesAndSourcesCore</text>
 </a>
 </g>

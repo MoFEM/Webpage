@@ -129,25 +129,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="MoFEM_8hpp_source.html">MoFEM.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="BasicFiniteElements_8hpp_source.html">BasicFiniteElements.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="MatrixFunction_8hpp_source.html">MatrixFunction.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="EshelbianPlasticity_8hpp_source.html">EshelbianPlasticity.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="EshelbianAux_8hpp_source.html">EshelbianAux.hpp</a>&gt;</code><br />
 <code>#include &lt;boost/math/constants/constants.hpp&gt;</code><br />
+<code>#include &lt;<a class="el" href="HMHHStVenantKirchhoff_8cpp_source.html">impl/HMHHStVenantKirchhoff.cpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="HMHNeohookean_8cpp_source.html">impl/HMHNeohookean.cpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="HMHPMooneyRivlinWriggersEq63_8cpp_source.html">impl/HMHPMooneyRivlinWriggersEq63.cpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Hencky_8cpp_source.html">impl/Hencky.cpp</a>&gt;</code><br />
 </div>
 <p><a href="EshelbianADOL-C_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical.html">EshelbianPlasticity::OpSpatialPhysical</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1OpSpatialPhysical__du__du.html">EshelbianPlasticity::OpSpatialPhysical_du_du</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1OpHMHH.html">EshelbianPlasticity::OpHMHH</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1HMHStVenantKirchhoff.html">EshelbianPlasticity::HMHStVenantKirchhoff</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1HMHPMooneyRivlinWriggersEq63.html">EshelbianPlasticity::HMHPMooneyRivlinWriggersEq63</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1HMHHencky.html">EshelbianPlasticity::HMHHencky</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1HMHHencky_1_1OpHenckyJacobian.html">EshelbianPlasticity::HMHHencky::OpHenckyJacobian</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEshelbianPlasticity_1_1HMHHencky_1_1BlockData.html">EshelbianPlasticity::HMHHencky::BlockData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -180,10 +179,10 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="ADOLCPlasticityMaterialModels_8hpp-example.html#a44">ADOLCPlasticityMaterialModels.hpp</a>, <a class="el" href="dynamic_first_order_con_law_8cpp-example.html#a2">dynamic_first_order_con_law.cpp</a>, <a class="el" href="EshelbianOperators_8cpp-example.html#a10">EshelbianOperators.cpp</a>, and <a class="el" href="PlasticOpsGeneric_8hpp-example.html#a20">PlasticOpsGeneric.hpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="ADOLCPlasticityMaterialModels_8hpp-example.html#a44">ADOLCPlasticityMaterialModels.hpp</a>, <a class="el" href="dynamic_first_order_con_law_8cpp-example.html#a2">dynamic_first_order_con_law.cpp</a>, and <a class="el" href="PlasticOpsGeneric_8hpp-example.html#a20">PlasticOpsGeneric.hpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="EshelbianADOL-C_8cpp_source.html#l00014">14</a> of file <a class="el" href="EshelbianADOL-C_8cpp_source.html">EshelbianADOL-C.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="EshelbianADOL-C_8cpp_source.html#l00017">17</a> of file <a class="el" href="EshelbianADOL-C_8cpp_source.html">EshelbianADOL-C.cpp</a>.</p>
 
 </div>
 </div>

@@ -316,17 +316,17 @@ $(function() {
 <div class="line">      <span class="comment">// Set up problem (number dofs, partition mesh, etc.)</span></div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMSetUp(bc_dm);</div>
 <div class="line">      Mat <a name="a38"></a><a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>;</div>
-<div class="line">      <a name="a39"></a><a class="code" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> <a name="_a40"></a><a class="code" href="classT.html">T</a>, <a name="a41"></a><a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>;</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateGlobalVector(bc_dm, &amp;<a class="code" href="classT.html">T</a>);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(<a class="code" href="classT.html">T</a>, &amp;<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
+<div class="line">      <a name="a39"></a><a class="code" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> T, <a name="a40"></a><a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>;</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateGlobalVector(bc_dm, &amp;T);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(T, &amp;<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateMatrix(bc_dm, &amp;<a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>);</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Boundary problem</span></div>
-<div class="line">      minimal_surface_element.<a name="a42"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5814cb166e8ba107359ea6d05a304df5">feBcEdge</a>.getOpPtrVector().push_back(</div>
-<div class="line">          <span class="keyword">new</span> <a name="_a43"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssmebleBcRhs.html">MinimalSurfaceElement::OpAssmebleBcRhs</a>(<span class="stringliteral">&quot;U&quot;</span>, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>));</div>
+<div class="line">      minimal_surface_element.<a name="a41"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5814cb166e8ba107359ea6d05a304df5">feBcEdge</a>.getOpPtrVector().push_back(</div>
+<div class="line">          <span class="keyword">new</span> <a name="_a42"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssmebleBcRhs.html">MinimalSurfaceElement::OpAssmebleBcRhs</a>(<span class="stringliteral">&quot;U&quot;</span>, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>));</div>
 <div class="line">      minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5814cb166e8ba107359ea6d05a304df5">feBcEdge</a>.getOpPtrVector().push_back(</div>
-<div class="line">          <span class="keyword">new</span> <a name="_a44"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssmebleBcLhs.html">MinimalSurfaceElement::OpAssmebleBcLhs</a>(<span class="stringliteral">&quot;U&quot;</span>, <a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>));</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a45"></a><a class="code" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(bc_dm, <span class="stringliteral">&quot;BC_ELEMENT&quot;</span>,</div>
+<div class="line">          <span class="keyword">new</span> <a name="_a43"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssmebleBcLhs.html">MinimalSurfaceElement::OpAssmebleBcLhs</a>(<span class="stringliteral">&quot;U&quot;</span>, <a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>));</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a44"></a><a class="code" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(bc_dm, <span class="stringliteral">&quot;BC_ELEMENT&quot;</span>,</div>
 <div class="line">                                      &amp;minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5814cb166e8ba107359ea6d05a304df5">feBcEdge</a>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAssemblyBegin(<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAssemblyEnd(<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
@@ -339,16 +339,16 @@ $(function() {
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSetOperators(solver, <a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>, <a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>);</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSetFromOptions(solver);</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSetUp(solver);</div>
-<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSolve(solver, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a class="code" href="classT.html">T</a>);</div>
+<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSolve(solver, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, T);</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPDestroy(&amp;solver);</div>
 <div class="line">      }</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Scatter data on mesh</span></div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code" href="classT.html">T</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code" href="classT.html">T</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a46"></a><a class="code" href="group__dm.html#gad94692d0472b346672a25c63e91fb930">DMoFEMMeshToGlobalVector</a>(bc_dm, <a class="code" href="classT.html">T</a>, INSERT_VALUES, SCATTER_REVERSE);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(T, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(T, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a45"></a><a class="code" href="group__dm.html#gad94692d0472b346672a25c63e91fb930">DMoFEMMeshToGlobalVector</a>(bc_dm, T, INSERT_VALUES, SCATTER_REVERSE);</div>
 <div class="line"> </div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDestroy(&amp;<a class="code" href="classT.html">T</a>);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDestroy(&amp;T);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDestroy(&amp;<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatDestroy(&amp;<a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMDestroy(&amp;bc_dm);</div>
@@ -376,11 +376,11 @@ $(function() {
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create matrices and vectors used for analysis</span></div>
-<div class="line">    <a class="code" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> <a class="code" href="classT.html">T</a>, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>;</div>
+<div class="line">    <a class="code" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> T, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>;</div>
 <div class="line">    Mat <a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>;</div>
 <div class="line">    {</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateGlobalVector(dm, &amp;<a class="code" href="classT.html">T</a>);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(<a class="code" href="classT.html">T</a>, &amp;<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateGlobalVector(dm, &amp;T);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(T, &amp;<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateMatrix(dm, &amp;<a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -392,25 +392,25 @@ $(function() {
 <div class="line">      <span class="keyword">auto</span> det_ptr = boost::make_shared&lt;VectorDouble&gt;();</div>
 <div class="line">      <span class="keyword">auto</span> jac_ptr = boost::make_shared&lt;MatrixDouble&gt;();</div>
 <div class="line">      <span class="keyword">auto</span> inv_jac_ptr = boost::make_shared&lt;MatrixDouble&gt;();</div>
-<div class="line">      minimal_surface_element.<a name="a47"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5e021000f0e918c9f107a8ae05504fe5">feRhs</a>.getOpPtrVector().push_back(</div>
-<div class="line">          <span class="keyword">new</span> <a name="a48"></a><a class="code" href="namespaceMoFEM.html#a55f63d6bf940eefe7cf78df38ab5c797">OpCalculateHOJacForFace</a>(jac_ptr));</div>
+<div class="line">      minimal_surface_element.<a name="a46"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5e021000f0e918c9f107a8ae05504fe5">feRhs</a>.getOpPtrVector().push_back(</div>
+<div class="line">          <span class="keyword">new</span> <a name="a47"></a><a class="code" href="namespaceMoFEM.html#a55f63d6bf940eefe7cf78df38ab5c797">OpCalculateHOJacForFace</a>(jac_ptr));</div>
 <div class="line">      minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5e021000f0e918c9f107a8ae05504fe5">feRhs</a>.getOpPtrVector().push_back(</div>
-<div class="line">          <span class="keyword">new</span> <a name="_a49"></a><a class="code" href="structMoFEM_1_1OpInvertMatrix.html">OpInvertMatrix&lt;2&gt;</a>(jac_ptr, det_ptr, inv_jac_ptr));</div>
+<div class="line">          <span class="keyword">new</span> <a name="_a48"></a><a class="code" href="structMoFEM_1_1OpInvertMatrix.html">OpInvertMatrix&lt;2&gt;</a>(jac_ptr, det_ptr, inv_jac_ptr));</div>
 <div class="line">      <span class="comment">// Apply inv_jac_ptr to shape functions</span></div>
 <div class="line">      minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5e021000f0e918c9f107a8ae05504fe5">feRhs</a>.getOpPtrVector().push_back(</div>
-<div class="line">          <span class="keyword">new</span> <a name="_a50"></a><a class="code" href="structMoFEM_1_1OpSetInvJacH1ForFace.html">OpSetInvJacH1ForFace</a>(inv_jac_ptr));</div>
+<div class="line">          <span class="keyword">new</span> <a name="_a49"></a><a class="code" href="structMoFEM_1_1OpSetInvJacH1ForFace.html">OpSetInvJacH1ForFace</a>(inv_jac_ptr));</div>
 <div class="line">      <span class="comment">// Below operators are specific to minimal area problem</span></div>
 <div class="line">      minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5e021000f0e918c9f107a8ae05504fe5">feRhs</a>.getOpPtrVector().push_back(</div>
-<div class="line">          <span class="keyword">new</span> <a name="_a51"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpGetDataAtGaussPts.html">MinimalSurfaceElement::OpGetDataAtGaussPts</a>(<span class="stringliteral">&quot;U&quot;</span>, mse_common_data));</div>
+<div class="line">          <span class="keyword">new</span> <a name="_a50"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpGetDataAtGaussPts.html">MinimalSurfaceElement::OpGetDataAtGaussPts</a>(<span class="stringliteral">&quot;U&quot;</span>, mse_common_data));</div>
 <div class="line">      minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5e021000f0e918c9f107a8ae05504fe5">feRhs</a>.getOpPtrVector().push_back(</div>
-<div class="line">          <span class="keyword">new</span> <a name="_a52"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpCalculateCoefficientsAtGaussPts.html">MinimalSurfaceElement::OpCalculateCoefficientsAtGaussPts</a>(</div>
+<div class="line">          <span class="keyword">new</span> <a name="_a51"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpCalculateCoefficientsAtGaussPts.html">MinimalSurfaceElement::OpCalculateCoefficientsAtGaussPts</a>(</div>
 <div class="line">              <span class="stringliteral">&quot;U&quot;</span>, mse_common_data, <span class="keyword">true</span>));</div>
 <div class="line">      minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5e021000f0e918c9f107a8ae05504fe5">feRhs</a>.getOpPtrVector().push_back(</div>
-<div class="line">          <span class="keyword">new</span> <a name="_a53"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssembleResidaul.html">MinimalSurfaceElement::OpAssembleResidaul</a>(<span class="stringliteral">&quot;U&quot;</span>, mse_common_data));</div>
+<div class="line">          <span class="keyword">new</span> <a name="_a52"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssembleResidaul.html">MinimalSurfaceElement::OpAssembleResidaul</a>(<span class="stringliteral">&quot;U&quot;</span>, mse_common_data));</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Left hand side operators (run for each entity in element)</span></div>
 <div class="line">      <span class="comment">// Calculate inverse of jacobian</span></div>
-<div class="line">      minimal_surface_element.<a name="a54"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a86f0862a21be7558ec43620af35ab7ce">feLhs</a>.getOpPtrVector().push_back(</div>
+<div class="line">      minimal_surface_element.<a name="a53"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a86f0862a21be7558ec43620af35ab7ce">feLhs</a>.getOpPtrVector().push_back(</div>
 <div class="line">          <span class="keyword">new</span> <a class="code" href="namespaceMoFEM.html#a55f63d6bf940eefe7cf78df38ab5c797">OpCalculateHOJacForFace</a>(jac_ptr));</div>
 <div class="line">      minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a86f0862a21be7558ec43620af35ab7ce">feLhs</a>.getOpPtrVector().push_back(</div>
 <div class="line">          <span class="keyword">new</span> <a class="code" href="structMoFEM_1_1OpInvertMatrix.html">OpInvertMatrix&lt;2&gt;</a>(jac_ptr, det_ptr, inv_jac_ptr));</div>
@@ -424,10 +424,10 @@ $(function() {
 <div class="line">          <span class="keyword">new</span> <a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpCalculateCoefficientsAtGaussPts.html">MinimalSurfaceElement::OpCalculateCoefficientsAtGaussPts</a>(</div>
 <div class="line">              <span class="stringliteral">&quot;U&quot;</span>, mse_common_data, <span class="keyword">false</span>));</div>
 <div class="line">      minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a86f0862a21be7558ec43620af35ab7ce">feLhs</a>.getOpPtrVector().push_back(</div>
-<div class="line">          <span class="keyword">new</span> <a name="_a55"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssembleTangent.html">MinimalSurfaceElement::OpAssembleTangent</a>(<span class="stringliteral">&quot;U&quot;</span>, mse_common_data));</div>
+<div class="line">          <span class="keyword">new</span> <a name="_a54"></a><a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssembleTangent.html">MinimalSurfaceElement::OpAssembleTangent</a>(<span class="stringliteral">&quot;U&quot;</span>, mse_common_data));</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Rhs</span></div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a56"></a><a class="code" href="group__dm.html#ga2289e53ec5efa90a46dc702b9c7bc9f4">DMMoFEMSNESSetFunction</a>(dm, <a name="a57"></a><a class="code" href="DMMoFEM_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a>, NULL, &amp;fix_edges_ents,</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a55"></a><a class="code" href="group__dm.html#ga2289e53ec5efa90a46dc702b9c7bc9f4">DMMoFEMSNESSetFunction</a>(dm, <a name="a56"></a><a class="code" href="DMMoFEM_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a>, NULL, &amp;fix_edges_ents,</div>
 <div class="line">                                    NULL);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga2289e53ec5efa90a46dc702b9c7bc9f4">DMMoFEMSNESSetFunction</a>(dm, <span class="stringliteral">&quot;MINIMAL_SURFACE_ELEMENT&quot;</span>,</div>
 <div class="line">                                    &amp;minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a5e021000f0e918c9f107a8ae05504fe5">feRhs</a>, PETSC_NULL,</div>
@@ -436,7 +436,7 @@ $(function() {
 <div class="line">                                    &amp;fix_edges_ents);</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Lhs</span></div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a58"></a><a class="code" href="group__dm.html#ga7bb674a8c2feaf3c80814b0d980fec1c">DMMoFEMSNESSetJacobian</a>(dm, <a class="code" href="DMMoFEM_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a>, NULL, &amp;fix_edges_ents,</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a57"></a><a class="code" href="group__dm.html#ga7bb674a8c2feaf3c80814b0d980fec1c">DMMoFEMSNESSetJacobian</a>(dm, <a class="code" href="DMMoFEM_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a>, NULL, &amp;fix_edges_ents,</div>
 <div class="line">                                    NULL);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga7bb674a8c2feaf3c80814b0d980fec1c">DMMoFEMSNESSetJacobian</a>(dm, <span class="stringliteral">&quot;MINIMAL_SURFACE_ELEMENT&quot;</span>,</div>
 <div class="line">                                    &amp;minimal_surface_element.<a class="code" href="structMinimalSurfaceEquation_1_1MinimalSurfaceElement.html#a86f0862a21be7558ec43620af35ab7ce">feLhs</a>, PETSC_NULL,</div>
@@ -449,23 +449,23 @@ $(function() {
 <div class="line">    <span class="comment">// Solve problem</span></div>
 <div class="line">    {</div>
 <div class="line">      SNES snes;</div>
-<div class="line">      <a name="_a59"></a><a class="code" href="structMoFEM_1_1SnesCtx.html">SnesCtx</a> *snes_ctx;</div>
+<div class="line">      <a name="_a58"></a><a class="code" href="structMoFEM_1_1SnesCtx.html">SnesCtx</a> *snes_ctx;</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESCreate(PETSC_COMM_WORLD, &amp;snes);</div>
 <div class="line">      <span class="comment">// CHKERR SNESSetDM(snes,dm);</span></div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a60"></a><a class="code" href="group__dm.html#gad3fd04d49e1c12dd37f8052245b8e653">DMMoFEMGetSnesCtx</a>(dm, &amp;snes_ctx);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetFunction(snes, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a name="a61"></a><a class="code" href="namespaceMoFEM.html#a50531f1fc6bfb68b4756a88126df316e">SnesRhs</a>, snes_ctx);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetJacobian(snes, <a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>, <a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>, <a name="a62"></a><a class="code" href="namespaceMoFEM.html#a2427b40a8745afeb2073f72d9d51584e">SnesMat</a>, snes_ctx);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a59"></a><a class="code" href="group__dm.html#gad3fd04d49e1c12dd37f8052245b8e653">DMMoFEMGetSnesCtx</a>(dm, &amp;snes_ctx);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetFunction(snes, <a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a name="a60"></a><a class="code" href="namespaceMoFEM.html#a50531f1fc6bfb68b4756a88126df316e">SnesRhs</a>, snes_ctx);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetJacobian(snes, <a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>, <a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>, <a name="a61"></a><a class="code" href="namespaceMoFEM.html#a2427b40a8745afeb2073f72d9d51584e">SnesMat</a>, snes_ctx);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetFromOptions(snes);</div>
 <div class="line"> </div>
 <div class="line">      <a class="code" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> T0;</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(<a class="code" href="classT.html">T</a>, &amp;T0);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a63"></a><a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(dm, T0, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(T, &amp;T0);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a62"></a><a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(dm, T0, INSERT_VALUES, SCATTER_FORWARD);</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordtype">double</span> step_size = 1. / nb_sub_steps;</div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ss = 1; ss &lt;= nb_sub_steps; ss++) {</div>
-<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAXPY(<a class="code" href="classT.html">T</a>, step_size, T0);</div>
-<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(dm, <a class="code" href="classT.html">T</a>, INSERT_VALUES, SCATTER_REVERSE);</div>
-<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSolve(snes, PETSC_NULL, <a class="code" href="classT.html">T</a>);</div>
+<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAXPY(T, step_size, T0);</div>
+<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(dm, T, INSERT_VALUES, SCATTER_REVERSE);</div>
+<div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSolve(snes, PETSC_NULL, T);</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESGetConvergedReason(snes, &amp;snes_reason);</div>
 <div class="line">        <span class="keywordtype">int</span> its;</div>
 <div class="line">        <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESGetIterationNumber(snes, &amp;its);</div>
@@ -473,16 +473,16 @@ $(function() {
 <div class="line">                           <span class="stringliteral">&quot;number of Newton iterations = %D\n\n&quot;</span>, its);</div>
 <div class="line">        <span class="keywordflow">if</span> (snes_reason &lt; 0) {</div>
 <div class="line">          <span class="keywordflow">if</span> (is_atom_test) {</div>
-<div class="line">            SETERRQ(PETSC_COMM_SELF, <a name="a64"></a><a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>,</div>
+<div class="line">            SETERRQ(PETSC_COMM_SELF, <a name="a63"></a><a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>,</div>
 <div class="line">                    <span class="stringliteral">&quot;atom test diverged&quot;</span>);</div>
 <div class="line">          } <span class="keywordflow">else</span> {</div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">          }</div>
 <div class="line">        }</div>
 <div class="line">      }</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code" href="classT.html">T</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code" href="classT.html">T</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#gad94692d0472b346672a25c63e91fb930">DMoFEMMeshToGlobalVector</a>(dm, <a class="code" href="classT.html">T</a>, INSERT_VALUES, SCATTER_REVERSE);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(T, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(T, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#gad94692d0472b346672a25c63e91fb930">DMoFEMMeshToGlobalVector</a>(dm, T, INSERT_VALUES, SCATTER_REVERSE);</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">//  CHKERR MatView(A,PETSC_VIEWER_DRAW_SELF);</span></div>
 <div class="line">      <span class="comment">//  std::string wait;</span></div>
@@ -493,27 +493,27 @@ $(function() {
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    {</div>
-<div class="line">      <a name="_a65"></a><a class="code" href="structPostProcFaceOnRefinedMesh.html">PostProcFaceOnRefinedMesh</a> post_proc(m_field);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> post_proc.<a name="a66"></a><a class="code" href="structPostProcFaceOnRefinedMesh.html#a357bd50590504ed135902d70e4a89151">generateReferenceElementMesh</a>();</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> post_proc.<a name="a67"></a><a class="code" href="group__mofem__fs__post__proc.html#ga69f5c71346638cb62c87f70ef1062b91">addFieldValuesPostProc</a>(<span class="stringliteral">&quot;U&quot;</span>);</div>
+<div class="line">      <a name="_a64"></a><a class="code" href="structPostProcFaceOnRefinedMesh.html">PostProcFaceOnRefinedMesh</a> post_proc(m_field);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> post_proc.<a name="a65"></a><a class="code" href="structPostProcFaceOnRefinedMesh.html#a357bd50590504ed135902d70e4a89151">generateReferenceElementMesh</a>();</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> post_proc.<a name="a66"></a><a class="code" href="group__mofem__fs__post__proc.html#ga69f5c71346638cb62c87f70ef1062b91">addFieldValuesPostProc</a>(<span class="stringliteral">&quot;U&quot;</span>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(dm, <span class="stringliteral">&quot;MINIMAL_SURFACE_ELEMENT&quot;</span>,</div>
 <div class="line">                                      &amp;post_proc);</div>
 <div class="line">      <span class="comment">// Save data on mesh</span></div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> post_proc.<a name="a68"></a><a class="code" href="structPostProcTemplateOnRefineMesh.html#acd29730f88cf549ab0e5deb0b76476ee">postProcMesh</a>.write_file(<span class="stringliteral">&quot;out.h5m&quot;</span>, <span class="stringliteral">&quot;MOAB&quot;</span>,</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> post_proc.<a name="a67"></a><a class="code" href="structPostProcTemplateOnRefineMesh.html#acd29730f88cf549ab0e5deb0b76476ee">postProcMesh</a>.write_file(<span class="stringliteral">&quot;out.h5m&quot;</span>, <span class="stringliteral">&quot;MOAB&quot;</span>,</div>
 <div class="line">                                               <span class="stringliteral">&quot;PARALLEL=WRITE_PART&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Clean and destroy</span></div>
 <div class="line">    {</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMDestroy(&amp;dm);</div>
-<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDestroy(&amp;<a class="code" href="classT.html">T</a>);</div>
+<div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDestroy(&amp;T);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDestroy(&amp;<a class="code" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line">      <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatDestroy(&amp;<a class="code" href="operators__tests_8cpp.html#aaea25cacd18f8fc7fbbaa4311fe33b72">A</a>);</div>
 <div class="line">    }</div>
 <div class="line">  }</div>
-<div class="line">  <a name="a69"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a name="a68"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a name="a70"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a name="a69"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
@@ -522,7 +522,6 @@ $(function() {
 <div class="ttc" id="adefinitions_8h_html_a5fe7ca274d3c5ac11ac61888ce74bc13"><div class="ttname"><a href="definitions_8h.html#a5fe7ca274d3c5ac11ac61888ce74bc13">MYPCOMM_INDEX</a></div><div class="ttdeci">#define MYPCOMM_INDEX</div><div class="ttdoc">default communicator number PCOMM</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00228">definitions.h:228</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1CoreTmp_3_010_01_4_html"><div class="ttname"><a href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::CoreTmp&lt; 0 &gt;</a></div><div class="ttdoc">Core (interface) class.</div><div class="ttdef"><b>Definition:</b> <a href="Core_8hpp_source.html#l00082">Core.hpp:82</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a></div><div class="ttdeci">@ H1</div><div class="ttdoc">continuous field</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00085">definitions.h:85</a></div></div>
-<div class="ttc" id="aclassT_html"><div class="ttname"><a href="classT.html">T</a></div></div>
 <div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="astructPostProcTemplateOnRefineMesh_html_acd29730f88cf549ab0e5deb0b76476ee"><div class="ttname"><a href="structPostProcTemplateOnRefineMesh.html#acd29730f88cf549ab0e5deb0b76476ee">PostProcTemplateOnRefineMesh::postProcMesh</a></div><div class="ttdeci">moab::Interface &amp; postProcMesh</div><div class="ttdef"><b>Definition:</b> <a href="PostProcOnRefMesh_8hpp_source.html#l00122">PostProcOnRefMesh.hpp:122</a></div></div>
 <div class="ttc" id="aMinimalSurfaceElement_8hpp_html"><div class="ttname"><a href="MinimalSurfaceElement_8hpp.html">MinimalSurfaceElement.hpp</a></div><div class="ttdoc">Implementation of minimal surface element.</div></div>

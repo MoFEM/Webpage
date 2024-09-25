@@ -1221,23 +1221,23 @@ $(function() {
 <div class="line">  <span class="keyword">auto</span> <a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a> = <a name="a113"></a><a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
 <div class="line">  <span class="keyword">auto</span> dm = <a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM();</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> <a name="_a114"></a><a class="code" href="classT.html">T</a> = <a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a115"></a><a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), <a class="code" href="classT.html">T</a>, INSERT_VALUES,</div>
+<div class="line">  <span class="keyword">auto</span> T = <a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a114"></a><a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), T, INSERT_VALUES,</div>
 <div class="line">                                 SCATTER_FORWARD);</div>
 <div class="line">  <span class="keywordtype">double</span> nrm2;</div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecNorm(<a class="code" href="classT.html">T</a>, NORM_2, &amp;nrm2);</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecNorm(T, NORM_2, &amp;nrm2);</div>
 <div class="line">  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;PlasticPrb&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Solution norm &quot;</span> &lt;&lt; nrm2;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> post_proc_norm_fe = boost::make_shared&lt;DomainEle&gt;(<a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>);</div>
 <div class="line"> </div>
-<div class="line">  post_proc_norm_fe-&gt;getRuleHook = <a name="a116"></a><a class="code" href="structPlasticProblem.html#a48eee41fb40c3920544fb006daadc52e">cpPtr</a>-&gt;integrationRule;</div>
+<div class="line">  post_proc_norm_fe-&gt;getRuleHook = <a name="a115"></a><a class="code" href="structPlasticProblem.html#a48eee41fb40c3920544fb006daadc52e">cpPtr</a>-&gt;integrationRule;</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="structMoFEM_1_1AddHOOps.html">AddHOOps&lt;SPACE_DIM, SPACE_DIM, SPACE_DIM&gt;::add</a>(</div>
 <div class="line">      post_proc_norm_fe-&gt;getOpPtrVector(), {H1});</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">enum</span> NORMS { U_NORM_L2 = 0, PIOLA_NORM, LAST_NORM };</div>
 <div class="line">  <span class="keyword">auto</span> norms_vec =</div>
-<div class="line">      <a name="a117"></a><a class="code" href="namespaceMoFEM.html#a77d94d2111c0c988bc3100b3910cc25c">createVectorMPI</a>(<a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>.<a class="code" href="structMoFEM_1_1CoreInterface.html#adecbcd03d7be8763b60a827f434fe726">get_comm</a>(),</div>
+<div class="line">      <a name="a116"></a><a class="code" href="namespaceMoFEM.html#a77d94d2111c0c988bc3100b3910cc25c">createVectorMPI</a>(<a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>.<a class="code" href="structMoFEM_1_1CoreInterface.html#adecbcd03d7be8763b60a827f434fe726">get_comm</a>(),</div>
 <div class="line">                      (<a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>.<a class="code" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>() == 0) ? LAST_NORM : 0, LAST_NORM);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecZeroEntries(norms_vec);</div>
 <div class="line"> </div>
@@ -1246,7 +1246,7 @@ $(function() {
 <div class="line">      <span class="keyword">new</span> <a class="code" href="structMoFEM_1_1OpCalculateVectorFieldValues.html">OpCalculateVectorFieldValues&lt;SPACE_DIM&gt;</a>(<span class="stringliteral">&quot;U&quot;</span>, u_ptr));</div>
 <div class="line"> </div>
 <div class="line">  post_proc_norm_fe-&gt;getOpPtrVector().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a name="_a118"></a><a class="code" href="structMoFEM_1_1OpCalcNormL2Tensor1.html">OpCalcNormL2Tensor1&lt;SPACE_DIM&gt;</a>(u_ptr, norms_vec, U_NORM_L2));</div>
+<div class="line">      <span class="keyword">new</span> <a name="_a117"></a><a class="code" href="structMoFEM_1_1OpCalcNormL2Tensor1.html">OpCalcNormL2Tensor1&lt;SPACE_DIM&gt;</a>(u_ptr, norms_vec, U_NORM_L2));</div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(dm, <a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDomainFEName(),</div>
 <div class="line">                                  post_proc_norm_fe);</div>
@@ -1254,11 +1254,11 @@ $(function() {
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAssemblyBegin(norms_vec);</div>
 <div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAssemblyEnd(norms_vec);</div>
 <div class="line"> </div>
-<div class="line">  <a name="a119"></a><a class="code" href="group__mofem__log__manager.html#ga47d7053307c012af4b78f8a09e21fa83">MOFEM_LOG_CHANNEL</a>(<span class="stringliteral">&quot;SELF&quot;</span>); <span class="comment">// Clear channel from old tags</span></div>
+<div class="line">  <a name="a118"></a><a class="code" href="group__mofem__log__manager.html#ga47d7053307c012af4b78f8a09e21fa83">MOFEM_LOG_CHANNEL</a>(<span class="stringliteral">&quot;SELF&quot;</span>); <span class="comment">// Clear channel from old tags</span></div>
 <div class="line">  <span class="keywordflow">if</span> (<a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>.<a class="code" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>() == 0) {</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> *norms;</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGetArrayRead(norms_vec, &amp;norms);</div>
-<div class="line">    <a name="a120"></a><a class="code" href="LogManager_8hpp.html#afebc04c745581aa8f72c6ace26073f6c">MOFEM_TAG_AND_LOG</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::inform, <span class="stringliteral">&quot;example&quot;</span>)</div>
+<div class="line">    <a name="a119"></a><a class="code" href="LogManager_8hpp.html#afebc04c745581aa8f72c6ace26073f6c">MOFEM_TAG_AND_LOG</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::inform, <span class="stringliteral">&quot;example&quot;</span>)</div>
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;norm_u: &quot;</span> &lt;&lt; std::scientific &lt;&lt; std::sqrt(norms[U_NORM_L2]);</div>
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecRestoreArrayRead(norms_vec, &amp;norms);</div>
 <div class="line">  }</div>
@@ -1268,7 +1268,7 @@ $(function() {
 <div class="line"><span class="comment">//! [Getting norms]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Postprocessing results]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a121"></a><a class="code" href="structPlasticProblem.html#a4248ee2b94d3ab2b979c273a4b131410">PlasticProblem::outputResults</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a120"></a><a class="code" href="structPlasticProblem.html#a4248ee2b94d3ab2b979c273a4b131410">PlasticProblem::outputResults</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">  PetscInt test_nb = 0;</div>
 <div class="line">  PetscBool test_flg = PETSC_FALSE;</div>
@@ -1276,16 +1276,16 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (test_flg) {</div>
 <div class="line">    <span class="keyword">auto</span> <a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a> = <a class="code" href="structPlasticProblem.html#a78978ede1604c474e9e355653b9b0dbc">mField</a>.<a class="code" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
-<div class="line">    <span class="keyword">auto</span> <a class="code" href="classT.html">T</a> = <a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), <a class="code" href="classT.html">T</a>, INSERT_VALUES,</div>
+<div class="line">    <span class="keyword">auto</span> T = <a class="code" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM());</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(<a class="code" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM(), T, INSERT_VALUES,</div>
 <div class="line">                                   SCATTER_FORWARD);</div>
 <div class="line">    <span class="keywordtype">double</span> nrm2;</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecNorm(<a class="code" href="classT.html">T</a>, NORM_2, &amp;nrm2);</div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecNorm(T, NORM_2, &amp;nrm2);</div>
 <div class="line">    <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;PlasticPrb&quot;</span>, Sev::verbose) &lt;&lt; <span class="stringliteral">&quot;Regression norm &quot;</span> &lt;&lt; nrm2;</div>
 <div class="line">    <span class="keywordtype">double</span> regression_value = 0;</div>
 <div class="line">    <span class="keywordflow">switch</span> (test_nb) {</div>
 <div class="line">    <span class="keywordflow">default</span>:</div>
-<div class="line">      SETERRQ(PETSC_COMM_WORLD, <a name="a122"></a><a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>, <span class="stringliteral">&quot;Wrong test number.&quot;</span>);</div>
+<div class="line">      SETERRQ(PETSC_COMM_WORLD, <a name="a121"></a><a class="code" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>, <span class="stringliteral">&quot;Wrong test number.&quot;</span>);</div>
 <div class="line">      <span class="keywordflow">break</span>;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">if</span> (fabs(nrm2 - regression_value) &gt; 1e-2)</div>
@@ -1298,7 +1298,7 @@ $(function() {
 <div class="line"><span class="comment">//! [Postprocessing results]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Check]</span></div>
-<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a123"></a><a class="code" href="structPlasticProblem.html#a4fd802798873644e765120cc1a563370">PlasticProblem::checkResults</a>() {</div>
+<div class="line"><span class="comment"></span><a class="code" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a name="a122"></a><a class="code" href="structPlasticProblem.html#a4fd802798873644e765120cc1a563370">PlasticProblem::checkResults</a>() {</div>
 <div class="line">  <a class="code" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><span class="preprocessor">#ifdef ADD_CONTACT</span></div>
 <div class="line">  <a class="code" href="structContactOps_1_1CommonData.html#aae635e19c3c8a2f55be1cc5a1285557f">ContactOps::CommonData::totalTraction</a>.reset();</div>
@@ -1307,9 +1307,9 @@ $(function() {
 <div class="line">}<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [Check]</span></div>
 <div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">char</span> <a name="a124"></a><a class="code" href="adolc__plasticity_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>[] = <span class="stringliteral">&quot;...\n\n&quot;</span>;</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">char</span> <a name="a123"></a><a class="code" href="adolc__plasticity_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>[] = <span class="stringliteral">&quot;...\n\n&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a name="a125"></a><a class="code" href="adolc__plasticity_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a name="a124"></a><a class="code" href="adolc__plasticity_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#ifdef ADD_CONTACT</span></div>
 <div class="line"><span class="preprocessor">#ifdef PYTHON_SDF</span></div>
@@ -1320,14 +1320,14 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Initialisation of MoFEM/PETSc and MOAB data structures</span></div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> param_file[] = <span class="stringliteral">&quot;param_file.petsc&quot;</span>;</div>
-<div class="line">  <a name="a126"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code" href="adolc__plasticity_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line">  <a name="a125"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code" href="adolc__plasticity_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Add logging channel for example</span></div>
 <div class="line">  <span class="keyword">auto</span> core_log = logging::core::get();</div>
 <div class="line">  core_log-&gt;add_sink(</div>
 <div class="line">      LogManager::createSink(LogManager::getStrmWorld(), <span class="stringliteral">&quot;PlasticPrb&quot;</span>));</div>
 <div class="line">  LogManager::setLog(<span class="stringliteral">&quot;PlasticPrb&quot;</span>);</div>
-<div class="line">  <a name="a127"></a><a class="code" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;PlasticPrb&quot;</span>, <span class="stringliteral">&quot;PlasticPrb&quot;</span>);</div>
+<div class="line">  <a name="a126"></a><a class="code" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;PlasticPrb&quot;</span>, <span class="stringliteral">&quot;PlasticPrb&quot;</span>);</div>
 <div class="line">  <a class="code" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;PlasticPrb&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;SPACE_DIM &quot;</span> &lt;&lt; <a class="code" href="adolc__plasticity_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>;</div>
 <div class="line"><span class="preprocessor">#ifdef ADD_CONTACT</span></div>
 <div class="line">  core_log-&gt;add_sink(</div>
@@ -1340,16 +1340,16 @@ $(function() {
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    //! [Register MoFEM discrete manager in PETSc]</span></div>
 <div class="line"><span class="comment"></span>    DMType dm_name = <span class="stringliteral">&quot;DMMOFEM&quot;</span>;</div>
-<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a128"></a><a class="code" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);<span class="comment"></span></div>
+<div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a127"></a><a class="code" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);<span class="comment"></span></div>
 <div class="line"><span class="comment">    //! [Register MoFEM discrete manager in PETSc</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">    //! [Create MoAB]</span></div>
-<div class="line"><span class="comment"></span>    <a name="a129"></a><a class="code" href="namespaceMoFEM.html#a8bdfc7559ccb2b6d0021580b5c8a340b">moab::Core</a> mb_instance;              <span class="comment">///&lt; mesh database</span></div>
-<div class="line"><span class="comment"></span>    <a name="a130"></a><a class="code" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">moab::Interface</a> &amp;moab = mb_instance; <span class="comment">///&lt; mesh database interface</span></div>
+<div class="line"><span class="comment"></span>    <a name="a128"></a><a class="code" href="namespaceMoFEM.html#a8bdfc7559ccb2b6d0021580b5c8a340b">moab::Core</a> mb_instance;              <span class="comment">///&lt; mesh database</span></div>
+<div class="line"><span class="comment"></span>    <a name="a129"></a><a class="code" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">moab::Interface</a> &amp;moab = mb_instance; <span class="comment">///&lt; mesh database interface</span></div>
 <div class="line"><span class="comment"></span><span class="comment">    //! [Create MoAB]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">    //! [Create MoFEM]</span></div>
-<div class="line"><span class="comment"></span>    <a name="_a131"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
+<div class="line"><span class="comment"></span>    <a name="_a130"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
 <div class="line"><span class="comment"></span>    <a class="code" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = core; <span class="comment">///&lt; finite element database interface</span></div>
 <div class="line"><span class="comment"></span><span class="comment">    //! [Create MoFEM]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
@@ -1358,9 +1358,9 @@ $(function() {
 <div class="line">    <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ex.runProblem();<span class="comment"></span></div>
 <div class="line"><span class="comment">    //! [PlasticProblem]</span></div>
 <div class="line"><span class="comment"></span>  }</div>
-<div class="line">  <a name="a132"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a name="a131"></a><a class="code" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a133"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a class="code" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a name="a132"></a><a class="code" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"><span class="preprocessor">#ifdef ADD_CONTACT</span></div>
 <div class="line"><span class="preprocessor">#ifdef PYTHON_SDF</span></div>
 <div class="line">  <span class="keywordflow">if</span> (Py_FinalizeEx() &lt; 0) {</div>
@@ -1386,7 +1386,6 @@ $(function() {
 <div class="ttc" id="aadolc__plasticity_8cpp_html_a80d402d10e8341004c0caf10133b80ab"><div class="ttname"><a href="adolc__plasticity_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a></div><div class="ttdeci">double scale</div><div class="ttdef"><b>Definition:</b> <a href="adolc__plasticity_8cpp_source.html#l00109">adolc_plasticity.cpp:109</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a35e0a7e42f81919e776c310c509598da"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a35e0a7e42f81919e776c310c509598da">LASTBASE</a></div><div class="ttdeci">@ LASTBASE</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8h_source.html#l00069">definitions.h:69</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1OpLoopThis_html"><div class="ttname"><a href="structMoFEM_1_1OpLoopThis.html">MoFEM::OpLoopThis</a></div><div class="ttdoc">Execute &quot;this&quot; element in the operator.</div><div class="ttdef"><b>Definition:</b> <a href="DGProjection_8hpp_source.html#l00068">DGProjection.hpp:68</a></div></div>
-<div class="ttc" id="aclassT_html"><div class="ttname"><a href="classT.html">T</a></div></div>
 <div class="ttc" id="agroup__mofem__log__manager_html_ga47d7053307c012af4b78f8a09e21fa83"><div class="ttname"><a href="group__mofem__log__manager.html#ga47d7053307c012af4b78f8a09e21fa83">MOFEM_LOG_CHANNEL</a></div><div class="ttdeci">#define MOFEM_LOG_CHANNEL(channel)</div><div class="ttdoc">Set and reset channel.</div><div class="ttdef"><b>Definition:</b> <a href="LogManager_8hpp_source.html#l00284">LogManager.hpp:284</a></div></div>
 <div class="ttc" id="anamespaceADOLCPlasticity_html_a9a948d7e017d090c9357e2f0fdd3decc"><div class="ttname"><a href="namespaceADOLCPlasticity.html#a9a948d7e017d090c9357e2f0fdd3decc">ADOLCPlasticity::createTSUpdate</a></div><div class="ttdeci">boost::shared_ptr&lt; TSUpdate &gt; createTSUpdate(std::string fe_name, boost::shared_ptr&lt; FEMethod &gt; fe_ptr)</div></div>
 <div class="ttc" id="anamespaceContactOps_html"><div class="ttname"><a href="namespaceContactOps.html">ContactOps</a></div><div class="ttdef"><b>Definition:</b> <a href="contact_8cpp_source.html#l00099">contact.cpp:99</a></div></div>

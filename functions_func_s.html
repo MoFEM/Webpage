@@ -187,6 +187,7 @@ $(function() {
 , <a class="el" href="classsdf__hertz__3d_1_1Sphere.html#a93430b40d058e318ace241e44e02cc58">sdf_hertz_3d.Sphere</a>
 , <a class="el" href="classsdf__plane__2d_1_1yPlane.html#a74afbb0c787b3ae2a11a3b9e99a78808">sdf_plane_2d.yPlane</a>
 , <a class="el" href="classsdf__plane__3d_1_1zPlane.html#afbb84aaf06986876b48269f5fbf6b826">sdf_plane_3d.zPlane</a>
+, <a class="el" href="classsdf__sphere_1_1Sphere.html#a16ca36d2a19bf2e66690fb314f09e08f">sdf_sphere.Sphere</a>
 , <a class="el" href="classsdf__wavy__2d_1_1WavySurface.html#a8c892f66ed230d4b91f0a4fcb807145b">sdf_wavy_2d.WavySurface</a>
 , <a class="el" href="classsdf__ydirection_1_1CylinderZ.html#a7d0c8cf40386e320ac8228c1a9bcdbad">sdf_ydirection.CylinderZ</a>
 , <a class="el" href="classsdf__ydirection_1_1Sphere.html#a385e8db2c191e26c2dd0e3f89e7807e4">sdf_ydirection.Sphere</a>
@@ -353,8 +354,8 @@ $(function() {
 <li>setConstrainSurface()
 : <a class="el" href="structMoFEM_1_1CutMeshInterface.html#aad2bf7c3c4320b94832923df44d30e45">MoFEM::CutMeshInterface</a>
 </li>
-<li>setContactElementOps()
-: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a56fcf2ba14c4eaf32e5a9a51c038d269">EshelbianPlasticity::EshelbianCore</a>
+<li>setContactElementRhsOps()
+: <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore.html#a2ddb96c7a39c076a9dea2398c358a592">EshelbianPlasticity::EshelbianCore</a>
 </li>
 <li>setContactOperatorsForPostProc()
 : <a class="el" href="structMortarContactProblem.html#a49dcbca8ab31f6c6c291e5e67cc6d342">MortarContactProblem</a>
@@ -551,13 +552,17 @@ $(function() {
 <li>setIndices()
 : <a class="el" href="structFractureMechanics_1_1GriffithForceElement_1_1AuxOp.html#af53d9717ab17871b5d39a44f0224ae8c">FractureMechanics::GriffithForceElement::AuxOp</a>
 </li>
+<li>SetIntegrationAtFrontVolume()
+: <a class="el" href="structEshelbianPlasticity_1_1SetIntegrationAtFrontVolume.html#a59d52df7f2fbfacca2e31c0ece378037">EshelbianPlasticity::SetIntegrationAtFrontVolume</a>
+</li>
 <li>setIntegrationPts()
 : <a class="el" href="structMoFEM_1_1EdgeElementForcesAndSourcesCore.html#ac92a63ccb3cf3d0b22a6ecd0a76168e8">MoFEM::EdgeElementForcesAndSourcesCore</a>
 , <a class="el" href="structMoFEM_1_1FaceElementForcesAndSourcesCore.html#a48505e438490b824ee76af1d0a24362c">MoFEM::FaceElementForcesAndSourcesCore</a>
-, <a class="el" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore.html#a66962fb252d0804905e5b5fe6e0c5ab5">MoFEM::VolumeElementForcesAndSourcesCore</a>
+, <a class="el" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore.html#a6a1c8edc12a4d7af5bdc2ab63f176369">MoFEM::VolumeElementForcesAndSourcesCore</a>
 </li>
 <li>setIntegrationRules()
-: <a class="el" href="structExample.html#a02e4d6491ff1a5662e26cc6bf690114e">Example</a>
+: <a class="el" href="structElectrostatics.html#aa18fd196ca2e2a04cdbb498faa53b186">Electrostatics</a>
+, <a class="el" href="structExample.html#a02e4d6491ff1a5662e26cc6bf690114e">Example</a>
 , <a class="el" href="structHeatEquation.html#aaac88f8e8391e1de35cf0df6a95b18c3">HeatEquation</a>
 , <a class="el" href="structMinimalSurfaceEqn.html#a2ba6116f415ac6f4df5417ca84fcdf68">MinimalSurfaceEqn</a>
 , <a class="el" href="structMixedPoisson.html#ac2e5224a198d7684e5d483759f3330ff">MixedPoisson</a>
@@ -704,10 +709,10 @@ $(function() {
 , <a class="el" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a6f1420a33f58ae9dc6a054f7a647b788">MoFEM::ForcesAndSourcesCore::UserDataOperator</a>
 , <a class="el" href="structMoFEM_1_1VertexElementForcesAndSourcesCore_1_1UserDataOperator.html#a6c83d665c88722b85456a46a71ed95cb">MoFEM::VertexElementForcesAndSourcesCore::UserDataOperator</a>
 , <a class="el" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html#a6f1420a33f58ae9dc6a054f7a647b788">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a>
-, <a class="el" href="structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnSide_1_1UserDataOperator.html#ae0fe1f9e2926c1f32011471cfa8cf3dd">MoFEM::VolumeElementForcesAndSourcesCoreOnSide::UserDataOperator</a>
+, <a class="el" href="structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnSide_1_1UserDataOperator.html#a6f1420a33f58ae9dc6a054f7a647b788">MoFEM::VolumeElementForcesAndSourcesCoreOnSide::UserDataOperator</a>
 </li>
 <li>SetPts()
-: <a class="el" href="structMoFEM_1_1FieldEvaluatorInterface_1_1SetPts.html#a722915e769786a87f13fdfb1ef774d8b">MoFEM::FieldEvaluatorInterface::SetPts</a>
+: <a class="el" href="structMoFEM_1_1FieldEvaluatorInterface_1_1SetPts.html#abc3256b94cc36af7671ec555e0891579">MoFEM::FieldEvaluatorInterface::SetPts</a>
 </li>
 <li>SetPtsData()
 : <a class="el" href="structMoFEM_1_1FieldEvaluatorInterface_1_1SetPtsData.html#ac9a7439cef0bb77193f8af97851871ea">MoFEM::FieldEvaluatorInterface::SetPtsData</a>
@@ -769,16 +774,16 @@ $(function() {
 : <a class="el" href="structFractureMechanics_1_1CrackPropagation.html#a78b3dbbe925fb47dec94da96144ab411">FractureMechanics::CrackPropagation</a>
 </li>
 <li>setSkeletonAdjacency()
-: <a class="el" href="structMoFEM_1_1Simple.html#ad969c206c915b76e224052f458271a3a">MoFEM::Simple</a>
+: <a class="el" href="structMoFEM_1_1Simple.html#a4f6aab96dfa9e78a88449b7175ef31ee">MoFEM::Simple</a>
 </li>
 <li>setSkeletonExplicitRhsIntegrationRule()
-: <a class="el" href="structMoFEM_1_1PipelineManager.html#a8dd999a79cc5c8fe10e2803f9f6af8f8">MoFEM::PipelineManager</a>
+: <a class="el" href="structMoFEM_1_1PipelineManager.html#af797ac7697b3ca04d7e7dbbe48ca423a">MoFEM::PipelineManager</a>
 </li>
 <li>setSkeletonLhsIntegrationRule()
 : <a class="el" href="structMoFEM_1_1PipelineManager.html#a228b317b228240d31bfe2d9e936daf9a">MoFEM::PipelineManager</a>
 </li>
 <li>setSkeletonRhsIntegrationRule()
-: <a class="el" href="structMoFEM_1_1PipelineManager.html#a29f2394cd63e54c68c61c9fe798d1ec9">MoFEM::PipelineManager</a>
+: <a class="el" href="structMoFEM_1_1PipelineManager.html#adc58300df9542c6a512b0ea22bebfd39">MoFEM::PipelineManager</a>
 </li>
 <li>setSpatialPositionFromCoords()
 : <a class="el" href="structFractureMechanics_1_1CrackPropagation.html#a6d3f329066971a657b700744c4e1515b">FractureMechanics::CrackPropagation</a>
@@ -832,14 +837,14 @@ $(function() {
 : <a class="el" href="structMoFEM_1_1PrismsFromSurfaceInterface.html#abddb6295f1894f3d96399d2a601363d1">MoFEM::PrismsFromSurfaceInterface</a>
 </li>
 <li>setTimeSteppingProblem()
-: <a class="el" href="group__mofem__thermal__elem.html#ga84e513943e9e981135214277ffb5cedb">ThermalElement</a>
+: <a class="el" href="group__mofem__thermal__elem.html#gaf971b59e10ceab07db248f32fca6a2e4">ThermalElement</a>
 </li>
 <li>setUp()
 : <a class="el" href="structEshelbianPlasticity_1_1EshelbianCore_1_1SetUpSchur.html#a73f3e6519a633f1b8ecf5980005f2ae9">EshelbianPlasticity::EshelbianCore::SetUpSchur</a>
 , <a class="el" href="structExample.html#a4f638fb3f3e04b410627f11476f1fb74">Example</a>
 , <a class="el" href="structMoFEM_1_1Simple.html#acf413f83e47d1e092a8d5fdb27996cbf">MoFEM::Simple</a>
 , <a class="el" href="structSetUpSchur.html#a32931e13a7549570ef251f782c744a8e">SetUpSchur</a>
-, <a class="el" href="structSetUpSchurImpl.html#a728b942e4ba819c04223d13a116d5057">SetUpSchurImpl</a>
+, <a class="el" href="structSetUpSchurImpl.html#a908b5a90a7f10969d95cb146e5545114">SetUpSchurImpl</a>
 </li>
 <li>setupAlgebraicStructures()
 : <a class="el" href="structNavierStokesExample.html#a7e6e8aa883f1a157f519c73a987ffba1">NavierStokesExample</a>
@@ -866,6 +871,7 @@ $(function() {
 : <a class="el" href="structApproxSphere.html#a51cf7f5a819fdb4204506b6df7b03fbe">ApproxSphere</a>
 , <a class="el" href="structAtomTest.html#a3a8d9f0cf2d8a481ed5d4b4e57232313">AtomTest</a>
 , <a class="el" href="structContact.html#a41561758ba88f46157a75abefe7b6b14">Contact</a>
+, <a class="el" href="structElectrostatics.html#a8046b8756586f5814144e59f750c840d">Electrostatics</a>
 , <a class="el" href="structExample.html#ad089fd70d7ad8751df5a798e0914d0b1">Example</a>
 , <a class="el" href="structFreeSurface.html#a0dfede003abd0635ad388425507f4b85">FreeSurface</a>
 , <a class="el" href="structHeatEquation.html#a8ccad3c5a7b92c55e01f43095d1182fc">HeatEquation</a>
@@ -922,7 +928,7 @@ $(function() {
 </li>
 <li>setupSolverJacobian()
 : <a class="el" href="structBasicBoundaryConditionsInterface.html#ac538a188f9faa52099555518d3e0460e">BasicBoundaryConditionsInterface</a>
-, <a class="el" href="structMortarContactInterface.html#a9e9a227818a02e9b0831ab40f554315d">MortarContactInterface</a>
+, <a class="el" href="structMortarContactInterface.html#a7dd9d72e8a18767d033086cdccc81a05">MortarContactInterface</a>
 </li>
 <li>setupSolverJacobianSNES()
 : <a class="el" href="structBasicBoundaryConditionsInterface.html#afd5f9425fce68709088d031c89eba1ca">BasicBoundaryConditionsInterface</a>
@@ -939,7 +945,7 @@ $(function() {
 <li>setUserActiveVariables()
 : <a class="el" href="structMyMat.html#ade4a2cbfb5c35aba978becbc3abc1b93">MyMat&lt; TYPE &gt;</a>
 , <a class="el" href="structNonlinearElasticElement_1_1FunctionsToCalculatePiolaKirchhoffI.html#ac8cabcb67504bf1b0b3e161f5c576dd2">NonlinearElasticElement::FunctionsToCalculatePiolaKirchhoffI&lt; TYPE &gt;</a>
-, <a class="el" href="structSmallStrainTranverslyIsotropicADouble.html#ad8e89287995a276679ecf5ad1722b2ab">SmallStrainTranverslyIsotropicADouble</a>
+, <a class="el" href="structSmallStrainTranverslyIsotropicADouble.html#a6b12e0e242b621d14c88baa560c2b761">SmallStrainTranverslyIsotropicADouble</a>
 </li>
 <li>setVariables()
 : <a class="el" href="structFractureMechanics_1_1ConstantArea_1_1AuxOp.html#a90b21dd157c6cfa6cc19c7af6783397b">FractureMechanics::ConstantArea::AuxOp</a>
@@ -1048,7 +1054,7 @@ $(function() {
 : <a class="el" href="structSmallStrainTranverslyIsotropicDouble.html#ab71c77ea62f33424291d688c5d42a6bc">SmallStrainTranverslyIsotropicDouble</a>
 </li>
 <li>SmartPetscObj()
-: <a class="el" href="structMoFEM_1_1SmartPetscObj.html#a0ae89bdbe388b9a572ef864df85eb23e">MoFEM::SmartPetscObj&lt; OBJ &gt;</a>
+: <a class="el" href="structMoFEM_1_1SmartPetscObj.html#a50a4ea73dd92f479853867bd979cb62d">MoFEM::SmartPetscObj&lt; OBJ &gt;</a>
 </li>
 <li>Smoother()
 : <a class="el" href="structSmoother.html#a72e4450eec82a476a7a8ca7939409372">Smoother</a>
@@ -1094,7 +1100,7 @@ $(function() {
 : <a class="el" href="structMixTransport_1_1MixTransportElement.html#a265a8139704dd6783a70bdc913ce0251">MixTransport::MixTransportElement</a>
 </li>
 <li>solveProblem()
-: <a class="el" href="structAnalyticalDirichletBC.html#acd601147fcf6ee6b596755ac2132d844">AnalyticalDirichletBC</a>
+: <a class="el" href="structAnalyticalDirichletBC.html#af76072e6aaa159e5b67f897f866c7f00">AnalyticalDirichletBC</a>
 , <a class="el" href="structMagneticElement.html#acf557028716d9164c75d8f16bdb8fdde">MagneticElement</a>
 , <a class="el" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7c21609cdb160f43e7d758aa6f9cf163">MixTransport::UnsaturatedFlowElement</a>
 , <a class="el" href="structNavierStokesExample.html#adafe18cf9f87b240c7e5d522415651a9">NavierStokesExample</a>
@@ -1111,6 +1117,7 @@ $(function() {
 <li>solveSystem()
 : <a class="el" href="structApproxSphere.html#a14862a51d3c9b66384982c4a49f47ecf">ApproxSphere</a>
 , <a class="el" href="structAtomTest.html#a2d867d417d5eafe4be063cfa4a290dab">AtomTest</a>
+, <a class="el" href="structElectrostatics.html#afe2f51351abec0122b0f944b89d684ec">Electrostatics</a>
 , <a class="el" href="structExample.html#a715f389c012e659483ec314add372458">Example</a>
 , <a class="el" href="structFreeSurface.html#afbae12770d9512be114113fda808366b">FreeSurface</a>
 , <a class="el" href="structHeatEquation.html#a34bb3cc72e57ab80705d6a5b82010947">HeatEquation</a>
@@ -1166,11 +1173,11 @@ $(function() {
 <li>SpringALEMaterialVolOnSideLhs()
 : <a class="el" href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs.html#a544be028191233a504e6d6dbe2de9527">MetaSpringBC::SpringALEMaterialVolOnSideLhs</a>
 </li>
-<li>SpringALEMaterialVolOnSideLhs_dX_dx()
-: <a class="el" href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html#a501ff36224c047abb1b771a006e74bc0">MetaSpringBC::SpringALEMaterialVolOnSideLhs_dX_dx</a>
-</li>
 <li>SpringALEMaterialVolOnSideLhs_dX_dX()
 : <a class="el" href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dX.html#a71b1f2ea92e6a079ed90ac1c240c31c9">MetaSpringBC::SpringALEMaterialVolOnSideLhs_dX_dX</a>
+</li>
+<li>SpringALEMaterialVolOnSideLhs_dX_dx()
+: <a class="el" href="structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html#a501ff36224c047abb1b771a006e74bc0">MetaSpringBC::SpringALEMaterialVolOnSideLhs_dX_dx</a>
 </li>
 <li>squashBits()
 : <a class="el" href="structMyTransport.html#a9b204fa960def4f3365ace5a7f87e079">MyTransport</a>
@@ -1191,7 +1198,7 @@ $(function() {
 : <a class="el" href="structSmallStrainTranverslyIsotropic.html#a2341f83601134db00c3869129d63729b">SmallStrainTranverslyIsotropic&lt; TYPE &gt;</a>
 </li>
 <li>StrictlySimple()
-: <a class="el" href="classClipperLib_1_1Clipper.html#a85aa82d75e0d7d1f380d2e96231d6aa3">ClipperLib::Clipper</a>
+: <a class="el" href="classClipperLib_1_1Clipper.html#a50eb4c514466ed37fd365769e0bcf67b">ClipperLib::Clipper</a>
 </li>
 <li>strVersion()
 : <a class="el" href="structMoFEM_1_1Version.html#a3c829526e240ee84a069f228feb7c99d">MoFEM::Version</a>
@@ -1215,7 +1222,7 @@ $(function() {
 : <a class="el" href="classClipperLib_1_1Clipper.html#ad6417bf319aa06bb06d8c1c3d9bfaee6">ClipperLib::Clipper</a>
 </li>
 <li>switchCacheBaseFace()
-: <a class="el" href="structMoFEM_1_1TetPolynomialBase.html#a7217592a6aa326cbb0f4b5cf6295da77">MoFEM::TetPolynomialBase</a>
+: <a class="el" href="structMoFEM_1_1TetPolynomialBase.html#a2b0dd9fdffbeea8473baaad719ea066d">MoFEM::TetPolynomialBase</a>
 </li>
 <li>switchCacheBaseInterior()
 : <a class="el" href="structMoFEM_1_1TetPolynomialBase.html#a45aa1bf0d7a1cf505ab7e729f3cba702">MoFEM::TetPolynomialBase</a>
@@ -1224,7 +1231,7 @@ $(function() {
 : <a class="el" href="structMoFEM_1_1TetPolynomialBase.html#a2927d4c4c841ca76459e4cde236eec43">MoFEM::TetPolynomialBase</a>
 </li>
 <li>switchCacheBaseOn()
-: <a class="el" href="structMoFEM_1_1TetPolynomialBase.html#a12dbcdf0ab8cda8384b1eae8b9532f6c">MoFEM::TetPolynomialBase</a>
+: <a class="el" href="structMoFEM_1_1TetPolynomialBase.html#a6b7ede25abd9ed34ab44bf97392090d4">MoFEM::TetPolynomialBase</a>
 </li>
 <li>switchCacheBrokenBaseInterior()
 : <a class="el" href="structMoFEM_1_1TetPolynomialBase.html#a0aa3ad5b5430321716de5b6565409886">MoFEM::TetPolynomialBase</a>

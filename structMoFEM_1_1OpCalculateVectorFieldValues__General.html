@@ -146,7 +146,7 @@ Collaboration diagram for MoFEM::OpCalculateVectorFieldValues_General&lt; Tensor
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a88fb597844ae1daeb79dfee0794743bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html#a88fb597844ae1daeb79dfee0794743bf">OpCalculateVectorFieldValues_General</a> (const std::string <a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, boost::shared_ptr&lt; ublas::matrix&lt; <a class="el" href="classT.html">T</a>, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;&gt; data_ptr, const EntityType zero_type=MBVERTEX)</td></tr>
+<tr class="memitem:a88fb597844ae1daeb79dfee0794743bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html#a88fb597844ae1daeb79dfee0794743bf">OpCalculateVectorFieldValues_General</a> (const std::string <a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, boost::shared_ptr&lt; ublas::matrix&lt; T, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;&gt; data_ptr, const EntityType zero_type=MBVERTEX)</td></tr>
 <tr class="separator:a88fb597844ae1daeb79dfee0794743bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Vector field values at integration points</div></td></tr>
 <tr class="memitem:a5e34549ecb2905194510c316cd4bfede"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html#a5e34549ecb2905194510c316cd4bfede">doWork</a> (int side, EntityType type, <a class="el" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;data)</td></tr>
@@ -311,7 +311,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aee8b0d8c73bfbe21757b9fc7bfed5135"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; ublas::matrix&lt; <a class="el" href="classT.html">T</a>, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html#aee8b0d8c73bfbe21757b9fc7bfed5135">dataPtr</a></td></tr>
+<tr class="memitem:aee8b0d8c73bfbe21757b9fc7bfed5135"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; ublas::matrix&lt; T, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html#aee8b0d8c73bfbe21757b9fc7bfed5135">dataPtr</a></td></tr>
 <tr class="separator:aee8b0d8c73bfbe21757b9fc7bfed5135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add7c5f610a2660e66c9297bb4dd8b50a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classEntityHandle.html">EntityHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html#add7c5f610a2660e66c9297bb4dd8b50a">zeroType</a></td></tr>
 <tr class="separator:add7c5f610a2660e66c9297bb4dd8b50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -405,7 +405,7 @@ template&lt;int Tensor_Dim, class T , class L , class A &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">MoFEM::OpCalculateVectorFieldValues_General</a>&lt; Tensor_Dim, <a class="el" href="classT.html">T</a>, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;::<a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">OpCalculateVectorFieldValues_General</a> </td>
+          <td class="memname"><a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">MoFEM::OpCalculateVectorFieldValues_General</a>&lt; Tensor_Dim, T, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;::<a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">OpCalculateVectorFieldValues_General</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string&#160;</td>
           <td class="paramname"><em>field_name</em>, </td>
@@ -413,7 +413,7 @@ template&lt;int Tensor_Dim, class T , class L , class A &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::shared_ptr&lt; ublas::matrix&lt; <a class="el" href="classT.html">T</a>, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;&gt;&#160;</td>
+          <td class="paramtype">boost::shared_ptr&lt; ublas::matrix&lt; T, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;&gt;&#160;</td>
           <td class="paramname"><em>data_ptr</em>, </td>
         </tr>
         <tr>
@@ -458,7 +458,7 @@ template&lt;int Tensor_Dim, class T , class L , class A &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">MoFEM::OpCalculateVectorFieldValues_General</a>&lt; Tensor_Dim, <a class="el" href="classT.html">T</a>, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;::doWork </td>
+          <td class="memname"><a class="el" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">MoFEM::OpCalculateVectorFieldValues_General</a>&lt; Tensor_Dim, T, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;::doWork </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>side</em>, </td>
@@ -526,7 +526,7 @@ template&lt;int Tensor_Dim, class T , class L , class A &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::shared_ptr&lt;ublas::matrix&lt;<a class="el" href="classT.html">T</a>, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a>&gt; &gt; <a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">MoFEM::OpCalculateVectorFieldValues_General</a>&lt; Tensor_Dim, <a class="el" href="classT.html">T</a>, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;::dataPtr</td>
+          <td class="memname">boost::shared_ptr&lt;ublas::matrix&lt;T, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a>&gt; &gt; <a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">MoFEM::OpCalculateVectorFieldValues_General</a>&lt; Tensor_Dim, T, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;::dataPtr</td>
         </tr>
       </table>
   </td>
@@ -552,7 +552,7 @@ template&lt;int Tensor_Dim, class T , class L , class A &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classEntityHandle.html">EntityHandle</a> <a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">MoFEM::OpCalculateVectorFieldValues_General</a>&lt; Tensor_Dim, <a class="el" href="classT.html">T</a>, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;::zeroType</td>
+          <td class="memname">const <a class="el" href="classEntityHandle.html">EntityHandle</a> <a class="el" href="structMoFEM_1_1OpCalculateVectorFieldValues__General.html">MoFEM::OpCalculateVectorFieldValues_General</a>&lt; Tensor_Dim, T, <a class="el" href="namespaceMoFEM.html#a123875fb03925a9640697591e972412c">L</a>, <a class="el" href="EshelbianPlasticity_8hpp.html#a918d961a8b71aa0c4ed87b241ca29b8d">A</a> &gt;::zeroType</td>
         </tr>
       </table>
   </td>

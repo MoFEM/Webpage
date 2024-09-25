@@ -1384,10 +1384,10 @@
 <!-- Node25 -->
 <g id="node25" class="node">
 <title>Node25</title>
-<g id="a_node25"><a xlink:href="structMetaSpringBC_1_1OpSpringALEMaterialLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
+<g id="a_node25"><a xlink:href="structMetaSpringBC_1_1OpSpringALEMaterialLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
 <polygon fill="white" stroke="black" points="841,-2934 841,-2964 1035,-2964 1035,-2934 841,-2934"/>
 <text text-anchor="start" x="849" y="-2952" font-family="Helvetica,sans-Serif" font-size="10.00">MetaSpringBC::OpSpringALEMaterial</text>
-<text text-anchor="middle" x="938" y="-2941" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dx</text>
+<text text-anchor="middle" x="938" y="-2941" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dX</text>
 </a>
 </g>
 </g>
@@ -1400,10 +1400,10 @@
 <!-- Node26 -->
 <g id="node26" class="node">
 <title>Node26</title>
-<g id="a_node26"><a xlink:href="structMetaSpringBC_1_1OpSpringALEMaterialLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
+<g id="a_node26"><a xlink:href="structMetaSpringBC_1_1OpSpringALEMaterialLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
 <polygon fill="white" stroke="black" points="841,-2885 841,-2915 1035,-2915 1035,-2885 841,-2885"/>
 <text text-anchor="start" x="849" y="-2903" font-family="Helvetica,sans-Serif" font-size="10.00">MetaSpringBC::OpSpringALEMaterial</text>
-<text text-anchor="middle" x="938" y="-2892" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dX</text>
+<text text-anchor="middle" x="938" y="-2892" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dx</text>
 </a>
 </g>
 </g>
@@ -1510,11 +1510,11 @@
 <!-- Node64 -->
 <g id="node64" class="node">
 <title>Node64</title>
-<g id="a_node64"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
+<g id="a_node64"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
 <polygon fill="white" stroke="black" points="855,-1470.5 855,-1511.5 1021,-1511.5 1021,-1470.5 855,-1470.5"/>
 <text text-anchor="start" x="863" y="-1499.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="863" y="-1488.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannPressureMaterial</text>
-<text text-anchor="middle" x="938" y="-1477.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dX</text>
+<text text-anchor="middle" x="938" y="-1477.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dx</text>
 </a>
 </g>
 </g>
@@ -1527,11 +1527,11 @@
 <!-- Node65 -->
 <g id="node65" class="node">
 <title>Node65</title>
-<g id="a_node65"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
+<g id="a_node65"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannPressureMaterialLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator for the pressure element (material configuration)">
 <polygon fill="white" stroke="black" points="855,-1410.5 855,-1451.5 1021,-1451.5 1021,-1410.5 855,-1410.5"/>
 <text text-anchor="start" x="863" y="-1439.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="863" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannPressureMaterial</text>
-<text text-anchor="middle" x="938" y="-1417.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dx</text>
+<text text-anchor="middle" x="938" y="-1417.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dX</text>
 </a>
 </g>
 </g>
@@ -1544,11 +1544,11 @@
 <!-- Node69 -->
 <g id="node69" class="node">
 <title>Node69</title>
-<g id="a_node69"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator for the surface force element (material configuration)">
+<g id="a_node69"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator for the surface force element (material configuration)">
 <polygon fill="white" stroke="black" points="844.5,-1300.5 844.5,-1341.5 1031.5,-1341.5 1031.5,-1300.5 844.5,-1300.5"/>
 <text text-anchor="start" x="852.5" y="-1329.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="852.5" y="-1318.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannSurfaceForceMaterial</text>
-<text text-anchor="middle" x="938" y="-1307.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dX</text>
+<text text-anchor="middle" x="938" y="-1307.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dx</text>
 </a>
 </g>
 </g>
@@ -1561,11 +1561,11 @@
 <!-- Node70 -->
 <g id="node70" class="node">
 <title>Node70</title>
-<g id="a_node70"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialLhs__dX__dx.html" target="_top" xlink:title="LHS&#45;operator for the surface force element (material configuration)">
+<g id="a_node70"><a xlink:href="structNeumannForcesSurface_1_1OpNeumannSurfaceForceMaterialLhs__dX__dX.html" target="_top" xlink:title="LHS&#45;operator for the surface force element (material configuration)">
 <polygon fill="white" stroke="black" points="844.5,-1240.5 844.5,-1281.5 1031.5,-1281.5 1031.5,-1240.5 844.5,-1240.5"/>
 <text text-anchor="start" x="852.5" y="-1269.5" font-family="Helvetica,sans-Serif" font-size="10.00">NeumannForcesSurface</text>
 <text text-anchor="start" x="852.5" y="-1258.5" font-family="Helvetica,sans-Serif" font-size="10.00">::OpNeumannSurfaceForceMaterial</text>
-<text text-anchor="middle" x="938" y="-1247.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dx</text>
+<text text-anchor="middle" x="938" y="-1247.5" font-family="Helvetica,sans-Serif" font-size="10.00">Lhs_dX_dX</text>
 </a>
 </g>
 </g>

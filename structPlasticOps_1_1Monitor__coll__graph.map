@@ -1,9 +1,12 @@
 <map id="PlasticOps::Monitor" name="PlasticOps::Monitor">
-<area shape="rect" id="node1" title=" " alt="" coords="377,161,525,188"/>
-<area shape="rect" id="node2" href="$classFEMethod.html" title=" " alt="" coords="73,5,159,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="27,56,205,112"/>
-<area shape="rect" id="node4" title=" " alt="" coords="20,136,212,163"/>
-<area shape="rect" id="node5" title=" " alt="" coords="31,187,201,213"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,238,227,279"/>
-<area shape="rect" id="node7" title=" " alt="" coords="21,303,211,345"/>
+<area shape="rect" id="node1" title=" " alt="" coords="875,159,1023,185"/>
+<area shape="rect" id="node2" href="$classFEMethod.html" title=" " alt="" coords="570,5,657,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="524,56,703,112"/>
+<area shape="rect" id="node4" title=" " alt="" coords="517,136,709,163"/>
+<area shape="rect" id="node5" href="$structMoFEM_1_1SmartPetscObj.html" title=" " alt="" coords="526,187,701,229"/>
+<area shape="rect" id="node6" title=" " alt="" coords="226,153,394,209"/>
+<area shape="rect" id="node7" href="$structMoFEM_1_1SmartPetscObj.html" title="intrusive_ptr for managing petsc objects" alt="" coords="223,234,397,275"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,227,173,283"/>
+<area shape="rect" id="node9" title=" " alt="" coords="503,253,724,294"/>
+<area shape="rect" id="node10" title=" " alt="" coords="518,318,709,359"/>
 </map>
