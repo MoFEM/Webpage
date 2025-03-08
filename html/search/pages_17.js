@@ -11,5 +11,7 @@ var searchData=
   ['nonlinear_20elasticity_8',['COR-11: Mixed formulation of nonlinear elasticity',['../tutorial_ep.html',1,'tutorials']]],
   ['nonlinear_20mix_20formulation_20unsaturated_20flow_9',['COR-1: Time dependent nonlinear mix formulation (unsaturated flow)',['../mix_us_flow.html',1,'tutorials']]],
   ['nonlinear_20poisson_20equation_10',['COR-5: A nonlinear Poisson equation',['../poisson_tut4.html',1,'tutorials']]],
-  ['nonlinear_20poisson_20s_20equation_11',['SCL-4: Nonlinear Poisson&apos;s equation',['../basic_tutorials_poisson_nonlinear.html',1,'']]]
+  ['nonlinear_20poisson_20s_20equation_11',['SCL-4: Nonlinear Poisson&apos;s equation',['../basic_tutorials_poisson_nonlinear.html',1,'']]],
+  ['notebook_20tt_12',['Command: &lt;tt&gt;make notebook&lt;/tt&gt;',['../md_tutorials_2_r_e_a_d_m_e.html',1,'']]],
+  ['notebook_5fscl_208_13',['Command: make notebook_scl-8',['../md_tutorials_2scl-8_2_r_e_a_d_m_e.html',1,'']]]
 ];

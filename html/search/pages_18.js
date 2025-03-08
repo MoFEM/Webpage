@@ -14,6 +14,7 @@ var searchData=
   ['on_20wire_11',['Soap film spanned on wire',['../sope_film.html',1,'tutorials']]],
   ['operators_20for_20the_20poisson_20equation_12',['COR-3: Implementing operators for the Poisson equation',['../poisson_tut2.html',1,'tutorials']]],
   ['operators_20table_13',['User data operators table',['../user_data_operators_table.html',1,'']]],
-  ['or_20level_20set_14',['ADV-3: DG Upwind for advection problem or level set',['../tutorial_level_set.html',1,'']]],
-  ['other_20tutorials_15',['Other tutorials',['../other_tutorials.html',1,'']]]
+  ['opportunities_14',['Research Opportunities',['../research_opportunities.html',1,'']]],
+  ['or_20level_20set_15',['ADV-3: DG Upwind for advection problem or level set',['../tutorial_level_set.html',1,'']]],
+  ['other_20tutorials_16',['Other tutorials',['../other_tutorials.html',1,'']]]
 ];

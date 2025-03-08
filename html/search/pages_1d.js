@@ -19,8 +19,10 @@ var searchData=
   ['to_3a_20squashing_20for_20an_20external_20pr_16',['How to: Squashing for an external PR',['../_squash_f_a_q.html',1,'']]],
   ['todo_20list_17',['Todo List',['../todo.html',1,'']]],
   ['transport_20of_20intensity_20equation_18',['MIX-1: Retrive phase solving transport-of-intensity equation.',['../tutorial_phase.html',1,'']]],
-  ['tuning_20fork_19',['Tuning fork',['../jup_tutorial_eigen_elastic.html',1,'running_code']]],
-  ['tutorial_20from_20core_20',['How to Copy a Tutorial from Core',['../md_users__modules_2_how_to_copy_tutorial.html',1,'']]],
-  ['tutorials_21',['Tutorials',['../tutorials.html',1,'']]],
-  ['tutorials_22',['Other tutorials',['../other_tutorials.html',1,'']]]
+  ['tt_19',['Command: &lt;tt&gt;make notebook&lt;/tt&gt;',['../md_tutorials_2_r_e_a_d_m_e.html',1,'']]],
+  ['tt_20make_20notebook_20tt_20',['Command: &lt;tt&gt;make notebook&lt;/tt&gt;',['../md_tutorials_2_r_e_a_d_m_e.html',1,'']]],
+  ['tuning_20fork_21',['Tuning fork',['../jup_tutorial_eigen_elastic.html',1,'running_code']]],
+  ['tutorial_20from_20core_22',['How to Copy a Tutorial from Core',['../md_users__modules_2_how_to_copy_tutorial.html',1,'']]],
+  ['tutorials_23',['Tutorials',['../tutorials.html',1,'']]],
+  ['tutorials_24',['Other tutorials',['../other_tutorials.html',1,'']]]
 ];

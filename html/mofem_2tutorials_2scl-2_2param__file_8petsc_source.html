@@ -161,16 +161,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>-pc_fieldsplit_type multiplicative</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>-fieldsplit_0_ksp_type preonly </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>-fieldsplit_0_pc_type lu </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>-fieldsplit_0_pc_factor_mat_solver_type mumps</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>-fieldsplit_1_ksp_type preonly </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>-fieldsplit_1_pc_type lu </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>-fieldsplit_1_pc_factor_mat_solver_type mumps </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>-fieldsplit_0_mat_mumps_icntl_20 0</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>-fieldsplit_1_mat_mumps_icntl_20 0</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>-atom_test 0</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span># ---</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>-fieldsplit_0_ksp_reuse_preconditioner 1</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>-fieldsplit_0_pc_factor_mat_solver_type mumps</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>-fieldsplit_1_ksp_type preonly </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>-fieldsplit_1_pc_type lu </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>-fieldsplit_1_pc_factor_mat_solver_type mumps </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>-atom_test 0</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span># ---</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->

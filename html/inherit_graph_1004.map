@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_minimal_surface_eqn.html" title=" " alt="" coords="5,5,142,29"/>
+<area shape="rect" id="Node000000" href="$struct_mix_transport_1_1_mix_transport_element.html" title="Mix transport problem." alt="" coords="5,35,187,75"/>
+<area shape="rect" id="Node000001" href="$struct_mix_transport_1_1_unsaturated_flow_element.html" title="Implementation of operators, problem and finite elements for unsaturated flow." alt="" coords="235,5,411,46"/>
+<area shape="poly" id="edge985_Node000000_Node000001" title=" " alt="" coords="202,39,234,34,234,40,203,44"/>
+<area shape="rect" id="Node000002" href="$struct_my_transport.html" title="Application of mix transport data structure." alt="" coords="276,70,370,96"/>
+<area shape="poly" id="edge986_Node000000_Node000002" title=" " alt="" coords="203,65,276,75,275,80,202,71"/>
 </map>

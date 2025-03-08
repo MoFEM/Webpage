@@ -196,35 +196,35 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="read__vtk_8cpp_source.html#l00252">252</a> of file <a class="el" href="read__vtk_8cpp_source.html">read_vtk.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                                 {</div>
-<div class="line"><span class="lineno">  253</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, (<span class="keywordtype">char</span> *)0, <a class="code hl_variable" href="#a29680e68c64040f4884f60691a193226">help</a>);</div>
-<div class="line"><span class="lineno">  254</span> </div>
-<div class="line"><span class="lineno">  255</span>  <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  256</span> </div>
-<div class="line"><span class="lineno">  257</span>    moab::Core mb_instance;</div>
-<div class="line"><span class="lineno">  258</span>    moab::Interface &amp;moab = mb_instance;</div>
-<div class="line"><span class="lineno">  259</span>    ParallelComm *pcomm = ParallelComm::get_pcomm(&amp;moab, <a class="code hl_define" href="definitions_8h.html#a5fe7ca274d3c5ac11ac61888ce74bc13">MYPCOMM_INDEX</a>);</div>
-<div class="line"><span class="lineno">  260</span>    <span class="keywordflow">if</span> (pcomm == NULL)</div>
-<div class="line"><span class="lineno">  261</span>      pcomm = <span class="keyword">new</span> ParallelComm(&amp;moab, PETSC_COMM_WORLD);</div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>    <span class="comment">// Create MoFEM database</span></div>
-<div class="line"><span class="lineno">  264</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::Core</a> core(moab);</div>
-<div class="line"><span class="lineno">  265</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = core;</div>
-<div class="line"><span class="lineno">  266</span> </div>
-<div class="line"><span class="lineno">  267</span>    <a class="code hl_struct" href="struct_vtk_interface.html">VtkInterface</a> read_vtk(m_field, moab);</div>
-<div class="line"><span class="lineno">  268</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> read_vtk.readVtk();</div>
-<div class="line"><span class="lineno">  269</span>  }</div>
-<div class="line"><span class="lineno">  270</span>  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
-<div class="line"><span class="lineno">  271</span> </div>
-<div class="line"><span class="lineno">  272</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
-<div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  275</span>}</div>
+<p class="definition">Definition at line <a class="el" href="read__vtk_8cpp_source.html#l00300">300</a> of file <a class="el" href="read__vtk_8cpp_source.html">read_vtk.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>                                 {</div>
+<div class="line"><span class="lineno">  301</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, (<span class="keywordtype">char</span> *)0, <a class="code hl_variable" href="#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>    moab::Core mb_instance;</div>
+<div class="line"><span class="lineno">  306</span>    moab::Interface &amp;moab = mb_instance;</div>
+<div class="line"><span class="lineno">  307</span>    ParallelComm *pcomm = ParallelComm::get_pcomm(&amp;moab, <a class="code hl_define" href="definitions_8h.html#a5fe7ca274d3c5ac11ac61888ce74bc13">MYPCOMM_INDEX</a>);</div>
+<div class="line"><span class="lineno">  308</span>    <span class="keywordflow">if</span> (pcomm == NULL)</div>
+<div class="line"><span class="lineno">  309</span>      pcomm = <span class="keyword">new</span> ParallelComm(&amp;moab, PETSC_COMM_WORLD);</div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>    <span class="comment">// Create MoFEM database</span></div>
+<div class="line"><span class="lineno">  312</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::Core</a> core(moab);</div>
+<div class="line"><span class="lineno">  313</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = core;</div>
+<div class="line"><span class="lineno">  314</span> </div>
+<div class="line"><span class="lineno">  315</span>    <a class="code hl_struct" href="struct_vtk_interface.html">VtkInterface</a> read_vtk(m_field, moab);</div>
+<div class="line"><span class="lineno">  316</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> read_vtk.readVtk();</div>
+<div class="line"><span class="lineno">  317</span>  }</div>
+<div class="line"><span class="lineno">  318</span>  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line"><span class="lineno">  319</span> </div>
+<div class="line"><span class="lineno">  320</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line"><span class="lineno">  321</span> </div>
+<div class="line"><span class="lineno">  322</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  323</span>}</div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5fe7ca274d3c5ac11ac61888ce74bc13"><div class="ttname"><a href="definitions_8h.html#a5fe7ca274d3c5ac11ac61888ce74bc13">MYPCOMM_INDEX</a></div><div class="ttdeci">#define MYPCOMM_INDEX</div><div class="ttdoc">default communicator number PCOMM</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00228">definitions.h:228</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_add80e5ef5f847b2d4b637029f0f671c3"><div class="ttname"><a href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a></div><div class="ttdeci">#define CHKERR</div><div class="ttdoc">Inline error check.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00548">definitions.h:548</a></div></div>
-<div class="ttc" id="aread__vtk_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="read__vtk_8cpp_source.html#l00250">read_vtk.cpp:250</a></div></div>
+<div class="ttc" id="aread__vtk_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="read__vtk_8cpp_source.html#l00298">read_vtk.cpp:298</a></div></div>
 <div class="ttc" id="astruct_mo_f_e_m_1_1_core_tmp_3_010_01_4_html"><div class="ttname"><a href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::CoreTmp&lt; 0 &gt;</a></div><div class="ttdoc">Core (interface) class.</div><div class="ttdef"><b>Definition</b> <a href="_core_8hpp_source.html#l00082">Core.hpp:82</a></div></div>
 <div class="ttc" id="astruct_mo_f_e_m_1_1_core_tmp_3_010_01_4_html_a137f1f2092d00ef0c1ec679db94b8cb0"><div class="ttname"><a href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::CoreTmp&lt; 0 &gt;::Initialize</a></div><div class="ttdeci">static MoFEMErrorCode Initialize(int *argc, char ***args, const char file[], const char help[])</div><div class="ttdoc">Initializes the MoFEM database PETSc, MOAB and MPI.</div><div class="ttdef"><b>Definition</b> <a href="_core_8cpp_source.html#l00072">Core.cpp:72</a></div></div>
 <div class="ttc" id="astruct_mo_f_e_m_1_1_core_tmp_3_010_01_4_html_aa5abe3b5d998e2dc50e4ef6916915eb1"><div class="ttname"><a href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::CoreTmp&lt; 0 &gt;::Finalize</a></div><div class="ttdeci">static MoFEMErrorCode Finalize()</div><div class="ttdoc">Checks for options to be called at the conclusion of the program.</div><div class="ttdef"><b>Definition</b> <a href="_core_8cpp_source.html#l00112">Core.cpp:112</a></div></div>
@@ -254,7 +254,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="read__vtk_8cpp_source.html#l00250">250</a> of file <a class="el" href="read__vtk_8cpp_source.html">read_vtk.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="read__vtk_8cpp_source.html#l00298">298</a> of file <a class="el" href="read__vtk_8cpp_source.html">read_vtk.cpp</a>.</p>
 
 </div>
 </div>

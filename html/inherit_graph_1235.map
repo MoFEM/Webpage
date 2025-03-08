@@ -1,23 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_mo_f_e_m_1_1interface___ref_entity.html" title=" " alt="" coords="5,129,193,167"/>
-<area shape="rect" id="Node000001" href="$struct_mo_f_e_m_1_1interface___field_impl.html" title=" " alt="" coords="241,53,429,91"/>
-<area shape="poly" id="edge1037_Node000000_Node000001" title=" " alt="" coords="173,122,274,89,276,94,175,127"/>
-<area shape="rect" id="Node000004" href="$struct_mo_f_e_m_1_1_ref_element.html" title="keeps data about abstract refined finite element" alt="" coords="263,163,408,187"/>
-<area shape="poly" id="edge1040_Node000000_Node000004" title=" " alt="" coords="209,158,263,164,262,169,209,163"/>
-<area shape="rect" id="Node000002" href="$struct_mo_f_e_m_1_1interface___field.html" title=" " alt="" coords="504,5,667,43"/>
-<area shape="poly" id="edge1038_Node000001_Node000002" title=" " alt="" coords="445,48,503,37,504,42,446,54"/>
-<area shape="rect" id="Node000003" href="$struct_mo_f_e_m_1_1_field_entity.html" title="Struct keeps handle to entity in the field." alt="" coords="742,12,880,36"/>
-<area shape="poly" id="edge1039_Node000002_Node000003" title=" " alt="" coords="683,21,742,21,742,27,683,27"/>
-<area shape="rect" id="Node000005" href="$struct_mo_f_e_m_1_1_ref_element_face.html" title="keeps data about abstract TRI finite element" alt="" coords="499,67,673,91"/>
-<area shape="poly" id="edge1041_Node000004_Node000005" title=" " alt="" coords="369,152,419,125,477,100,516,89,517,94,478,105,421,130,371,157"/>
-<area shape="rect" id="Node000006" href="$struct_mo_f_e_m_1_1_ref_element_volume.html" title="keeps data about abstract TET finite element" alt="" coords="491,115,681,139"/>
-<area shape="poly" id="edge1042_Node000004_Node000006" title=" " alt="" coords="416,157,519,137,520,142,417,162"/>
-<area shape="rect" id="Node000007" href="$struct_mo_f_e_m_1_1_ref_element___e_d_g_e.html" title="keeps data about abstract EDGE finite element" alt="" coords="491,163,681,187"/>
-<area shape="poly" id="edge1043_Node000004_Node000007" title=" " alt="" coords="423,172,490,172,490,177,423,177"/>
-<area shape="rect" id="Node000008" href="$struct_mo_f_e_m_1_1_ref_element___m_e_s_h_s_e_t.html" title="keeps data about abstract MESHSET finite element" alt="" coords="477,211,694,235"/>
-<area shape="poly" id="edge1044_Node000004_Node000008" title=" " alt="" coords="417,188,520,207,519,213,416,193"/>
-<area shape="rect" id="Node000009" href="$struct_mo_f_e_m_1_1_ref_element___p_r_i_s_m.html" title="keeps data about abstract PRISM finite element" alt="" coords="489,259,683,283"/>
-<area shape="poly" id="edge1045_Node000004_Node000009" title=" " alt="" coords="371,192,421,219,478,244,517,256,516,261,477,249,419,224,369,197"/>
-<area shape="rect" id="Node000010" href="$struct_mo_f_e_m_1_1_ref_element___v_e_r_t_e_x.html" title="keeps data about abstract VERTEX finite element" alt="" coords="483,307,689,331"/>
-<area shape="poly" id="edge1046_Node000004_Node000010" title=" " alt="" coords="359,196,411,246,443,271,479,292,508,304,506,309,476,297,440,275,407,250,356,200"/>
+<area shape="rect" id="Node000000" href="$struct_mo_f_e_m_1_1_key_from_key.html" title=" " alt="" coords="5,5,217,46"/>
 </map>

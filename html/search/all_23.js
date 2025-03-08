@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['x_0',['X',['../struct_mo_f_e_m_1_1_p_c_m_g_sub_matrix_ctx.html#a13eab363f31e4a8ac316458d667a7273',1,'MoFEM::PCMGSubMatrixCtx::X'],['../struct_clipper_lib_1_1_int_point.html#a608d16d39c8762e6c3c0a688efb310b6',1,'ClipperLib::IntPoint::X'],['../struct_clipper_lib_1_1_double_point.html#a675837cc05f20447313789b82d84ad31',1,'ClipperLib::DoublePoint::X']]],
+  ['x_0',['X',['../struct_mo_f_e_m_1_1_constrain_matrix_ctx.html#a02c007c76442f7ed947246ccbb6624ea',1,'MoFEM::ConstrainMatrixCtx::X'],['../struct_mo_f_e_m_1_1_p_c_m_g_sub_matrix_ctx.html#a13eab363f31e4a8ac316458d667a7273',1,'MoFEM::PCMGSubMatrixCtx::X'],['../struct_clipper_lib_1_1_int_point.html#a608d16d39c8762e6c3c0a688efb310b6',1,'ClipperLib::IntPoint::X'],['../struct_clipper_lib_1_1_double_point.html#a675837cc05f20447313789b82d84ad31',1,'ClipperLib::DoublePoint::X']]],
   ['x_1',['x',['../struct_coords_and_handle.html#a64679e38ffd74d99e4622630c0dbafac',1,'CoordsAndHandle::x'],['../struct_mo_f_e_m_1_1_petsc_data.html#ac2a6f6f72f81d4e62d1d58deb591827b',1,'MoFEM::PetscData::x'],['../struct_mix_transport_1_1_generic_material.html#a6301e029084b9ee94736b7c6b8ae2da5',1,'MixTransport::GenericMaterial::x']]],
   ['x_20montery_20xcode_2013_204_201_2',['Installation on MAC OS X Montery (XCode 13.4.1)',['../install_spack.html#autotoc_md66',1,'']]],
   ['x0_3',['x0',['../struct_arc_length_ctx.html#aa47c4ba25887157b3d100b379b0047bb',1,'ArcLengthCtx']]],
@@ -20,6 +20,7 @@ var searchData=
   ['xif_17',['xiF',['../struct_op_calculate_f_stab.html#afbcffd3e198f1d430b34af807012714b',1,'OpCalculateFStab']]],
   ['xinitatpts_18',['xInitAtPts',['../struct_data_at_integration_pts_simple_rods.html#ad4c84d8715c1fde555829e4491fb02c6',1,'DataAtIntegrationPtsSimpleRods::xInitAtPts'],['../struct_meta_spring_b_c_1_1_data_at_integration_pts_springs.html#a017a4d1a92d25161cb1ca455bb4969c6',1,'MetaSpringBC::DataAtIntegrationPtsSprings::xInitAtPts']]],
   ['xlambda_19',['xLambda',['../struct_arc_length_ctx.html#aec9a2f23580294ea2ddd716ffb0d09b3',1,'ArcLengthCtx']]],
-  ['xptr_20',['XPtr',['../struct_op_calculate_displacement.html#a5ece6a707a4bfe1a7b7be1938d1d8f33',1,'OpCalculateDisplacement']]],
-  ['xptr_21',['xPtr',['../struct_op_calculate_displacement.html#a9f487540b1c464fa526ec48503576d3e',1,'OpCalculateDisplacement::xPtr'],['../struct_op_rhs.html#a0b633a47f7cc85ac61f4017d3658333a',1,'OpRhs::xPtr'],['../struct_op_lhs.html#a4ea79acbffd4f08e006a02cf24532b69',1,'OpLhs::xPtr'],['../struct_op_error.html#abfd8efe196d77591369994a47f64d804',1,'OpError::xPtr']]]
+  ['xproblem_20',['xProblem',['../struct_mo_f_e_m_1_1_constrain_matrix_ctx.html#a7a9df08b01de353d07f51225647c5321',1,'MoFEM::ConstrainMatrixCtx']]],
+  ['xptr_21',['XPtr',['../struct_op_calculate_displacement.html#a5ece6a707a4bfe1a7b7be1938d1d8f33',1,'OpCalculateDisplacement']]],
+  ['xptr_22',['xPtr',['../struct_op_calculate_displacement.html#a9f487540b1c464fa526ec48503576d3e',1,'OpCalculateDisplacement::xPtr'],['../struct_op_rhs.html#a0b633a47f7cc85ac61f4017d3658333a',1,'OpRhs::xPtr'],['../struct_op_lhs.html#a4ea79acbffd4f08e006a02cf24532b69',1,'OpLhs::xPtr'],['../struct_op_error.html#abfd8efe196d77591369994a47f64d804',1,'OpError::xPtr']]]
 ];

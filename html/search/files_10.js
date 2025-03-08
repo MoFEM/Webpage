@@ -25,5 +25,6 @@ var searchData=
   ['operators_5ftests_2ecpp_22',['operators_tests.cpp',['../operators__tests_8cpp.html',1,'']]],
   ['operatorstester_2ecpp_23',['OperatorsTester.cpp',['../_operators_tester_8cpp.html',1,'']]],
   ['operatorstester_2ehpp_24',['OperatorsTester.hpp',['../_operators_tester_8hpp.html',1,'']]],
-  ['other_5ftutorials_2edox_25',['other_tutorials.dox',['../other__tutorials_8dox.html',1,'']]]
+  ['opportunities_2edox_25',['opportunities.dox',['../opportunities_8dox.html',1,'']]],
+  ['other_5ftutorials_2edox_26',['other_tutorials.dox',['../other__tutorials_8dox.html',1,'']]]
 ];

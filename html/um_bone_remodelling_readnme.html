@@ -148,7 +148,7 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_users__modules_2bone__remodelling_2_r_e_a_d_m_e"></a></p>
 <p>This module allows for computational simulation of bone functional adaptation by means of a higher order finite element approach based on open system thermodynamics (mainly <a href="http://biomechanics.stanford.edu/paper/IJSS12.pdf">this paper</a>). Calculations can be enriched with initial bone density aquired from CT scan images. For more instructions, tutorials visit <a href="http://mofem.eng.gla.ac.uk/mofem/html/pages.html">MoFEM page</a>. <img src="https://www.dropbox.com/s/10sho1jupllsjbz/remodelling.png?raw=1" alt="1.png" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md210"></a>
+<h1><a class="anchor" id="autotoc_md216"></a>
 Install bone remodeling module on your MoFEM build</h1>
 <p>Go to your build (users modules)</p>
 <div class="fragment"><div class="line">cd $MOFEM_INSTALL_DIR/um/users_modules/users_modules/</div>
@@ -164,7 +164,7 @@ Install bone remodeling module on your MoFEM build</h1>
 </div><!-- fragment --><p>On Docker cmake command is slightly different:</p>
 <div class="fragment"><div class="line">cmake -DWITH_METAIO=1 -DBUILD_SHARED_LIBS=yes -DCMAKE_BUILD_TYPE=Release users_modules</div>
 </div><!-- fragment --><p>Bone remodelling, unlike the other modules, requires compilation with MetaIO library for handling CT scan images. Entire installation process can be also found on <a href="https://www.youtube.com/watch?v=6opfKER7JHA">Youtube</a> video.</p>
-<h1><a class="anchor" id="autotoc_md211"></a>
+<h1><a class="anchor" id="autotoc_md217"></a>
 Check before run</h1>
 <ul>
 <li>Check where is your mesh file</li>
@@ -172,7 +172,7 @@ Check before run</h1>
 <li>Check where is your loading history data file</li>
 <li>Check where is your config file (if required)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md212"></a>
+<h1><a class="anchor" id="autotoc_md218"></a>
 Density mapping</h1>
 <div class="fragment"><div class="line">mpirun -np 4 ./mass_calculation \</div>
 <div class="line">-meta_image &quot;file.mhd&quot; -my_file &quot;file.h5m&quot; \</div>
@@ -184,7 +184,7 @@ Density mapping</h1>
 <div class="line">-scale 1 \</div>
 <div class="line">-ksp_type cg -pc_type lu -pc_factor_mat_solver_package mumps -ksp_monitor \</div>
 <div class="line">&amp;&amp; mbconvert out.h5m out.vtk</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md213"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md219"></a>
 Bone adaptation, 2D femur example</h1>
 <p>First, we partition the mesh: (we can skip this step if only one processor is used)</p>
 <div class="fragment"><div class="line">../tools/mofem_part -my_file ./examples/femur_2d.h5m -my_nparts 4</div>
@@ -250,17 +250,17 @@ Bone adaptation, 2D femur example</h1>
 <div class="line">-fieldsplit_1_sub_pc_type ilu \</div>
 <div class="line">-fieldsplit_1_sub_pc_factor_levels 2 \</div>
 <div class="line">-pc_fieldsplit_type multiplicative</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md214"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md220"></a>
 Do output VTK script</h1>
 <div class="fragment"><div class="line">./do_vtk.sh</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md215"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md221"></a>
 Produce mass, energy graphs in gluplot</h1>
 <div class="fragment"><div class="line">grep &quot;Elastic&quot; log | awk &#39;{print $2,$4,$7}&#39; | tee log_upd</div>
 <div class="line"> </div>
 <div class="line">gnuplot</div>
 <div class="line">plot &quot;log_upd&quot; using 1:2 title &#39;mass&#39; with linespoints</div>
 <div class="line">plot &quot;log_upd&quot; using 1:3 title &#39;psi&#39; with linespoints</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md216"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md222"></a>
 Acknowledgements</h1>
 <p>This user module has been co-developed by the School of Engineering and the Weipers Centre Equine Hospital, School of Veterinary Medicine at the University of Glasgow. The authors are particularly grateful to the staff of the Small Animal Hospital, where the CT scans all required bones were performed. Kelvin Smith PhD Scholarship is acknowledged for providing financial support for this research. </p>
 </div></div><!-- contents -->

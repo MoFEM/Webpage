@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_nonlinear_poisson.html" title=" " alt="" coords="5,5,131,29"/>
+<area shape="rect" id="Node000000" href="$class_op_broken_base.html" title=" " alt="" coords="5,60,115,86"/>
+<area shape="rect" id="Node000001" href="$struct_mo_f_e_m_1_1_op_broken_space_constrain_d_flux_impl_3_01_f_i_e_l_d___d_i_m_00_01_g_a_u_s_s_00_01_op_broken_base_01_4.html" title=" " alt="" coords="174,5,401,61"/>
+<area shape="poly" id="edge1269_Node000000_Node000001" title=" " alt="" coords="129,58,173,50,174,56,130,64"/>
+<area shape="rect" id="Node000002" href="$struct_mo_f_e_m_1_1_op_broken_space_constrain_impl_3_01_f_i_e_l_d___d_i_m_00_01_g_a_u_s_s_00_01_op_broken_base_01_4.html" title=" " alt="" coords="163,85,412,141"/>
+<area shape="poly" id="edge1270_Node000000_Node000002" title=" " alt="" coords="131,83,163,89,162,94,130,88"/>
 </map>

@@ -63,6 +63,7 @@ var menudata={children:[
 {text:"Contact",url:"about_us.html#contact"},
 {text:"Legal stuff",url:"about_us.html#legal_stuff"},
 {text:"Contributing",url:"contributing_to_mofem.html"},
+{text:"Vacancies",url:"research_opportunities.html"},
 {text:"Third party libraries",url:"about_us.html#thrid_party"},
 {text:"Acknowledgments",url:"about_us.html#acknowledgements_main"},
 {text:"Bibliography",url:"citelist.html"}]}]}

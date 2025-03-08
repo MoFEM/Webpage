@@ -149,11 +149,11 @@ $(function(){ initResizable(false); });
 <div class="textblock"><p><a class="anchor" id="md_users__modules_2cell__engineering_2_r_e_a_d_m_e"></a></p>
 <p>This module allows for numerical calculation of cell forces applied on a surface by means of a higher order finite element approach based on an linear elasticity theory and Betti's theorem. Only experimental data of displacements in X and Y direction is required. (possible further extensions if needed) For more instructions, tutorials visit <a href="http://mofem.eng.gla.ac.uk/mofem/html/pages.html">MoFEM page</a>.</p>
 <p><a href="http://mofem.eng.gla.ac.uk/mofem/html/cell__forces_8cpp.html">Implementation Documentation</a></p>
-<h1><a class="anchor" id="autotoc_md217"></a>
+<h1><a class="anchor" id="autotoc_md223"></a>
 How to cite?</h1>
 <p><a href="https://doi.org/10.5281/zenodo.439392"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.439392.svg" alt="DOI" style="pointer-events: none;" class="inline"/></a></p>
 <p><a href="https://doi.org/10.5281/zenodo.439395"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.439395.svg" alt="DOI" style="pointer-events: none;" class="inline"/></a></p>
-<h1><a class="anchor" id="autotoc_md218"></a>
+<h1><a class="anchor" id="autotoc_md224"></a>
 Install cell enginnering module module on your MoFEM build</h1>
 <p>The simplest way to start using this module is install <a href="https://www.docker.com/">Docker</a> and pull pre-compiled module from the <a href="https://hub.docker.com/r/lorak41/cell_engineering/">Docker Hub</a>, </p><div class="fragment"><div class="line">docker pull likask/mofem_cell_engineering</div>
 <div class="line">docker run --name cell_engineering likask/mofem_cell_engineering</div>
@@ -172,21 +172,21 @@ Install cell enginnering module module on your MoFEM build</h1>
 </div><!-- fragment --><p>On Docker cmake command is slightly different:</p>
 <div class="fragment"><div class="line">cmake -DBUILD_SHARED_LIBS=yes -DCMAKE_BUILD_TYPE=Release users_modules</div>
 </div><!-- fragment --><p>Entire installation process can be also found on the <a href="https://www.youtube.com/watch?v=6opfKER7JHA">Youtube</a> video.</p>
-<h1><a class="anchor" id="autotoc_md219"></a>
+<h1><a class="anchor" id="autotoc_md225"></a>
 How does it work?</h1>
 <p>Lets consider body containing two different layers of materials. If we are in possesion of displacement field (experimental data) occurring between those two layers we can calculate forces and deformation on the top surface.</p>
 <p><img src="doc/figures/cell_layers.png" alt="Problem geometry" class="inline"/></p>
 <p>In the first step, we need to map provided experimentally displacement field on finite element mesh.</p>
 <p><img src="doc/figures/cell_engineering_forces_example.gif" alt="Cell forces" class="inline"/></p>
 <p>Raw data usually contains lots of noise and doesn't coincide with the arrangement of triangles in the mesh. Therefore, least squares approximation is used to produce smooth, continuous displacement field. Strength of smoothing can be manipulated with different parameters. When generating the mesh in Cubit, we need to remember to properly define material properties (MAT_ELASTIC blockset) and indicate bottom (<em>101</em>) and top (<em>202</em>) surface of considered layer as SIDESETS 101 and 202, respectively. Checkout the example .cub or .jou files in /examples directory to see how it is done.</p>
-<h1><a class="anchor" id="autotoc_md220"></a>
+<h1><a class="anchor" id="autotoc_md226"></a>
 Check before run</h1>
 <ul>
 <li>Check where is your mesh file</li>
 <li>Check where are your data XY (csv) files</li>
 <li>Check where is your config file (if required)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md221"></a>
+<h1><a class="anchor" id="autotoc_md227"></a>
 Displacements mapping</h1>
 <p>In order to map experimental data on finite element mesh we execute the following command. </p><div class="fragment"><div class="line">./map_disp \</div>
 <div class="line">-my_data_x ./examples/data_x.csv \</div>
@@ -215,7 +215,7 @@ Displacements mapping</h1>
 <ul>
 <li>my_thinckness is a thickness of created layer on the top surface</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md222"></a>
+<h1><a class="anchor" id="autotoc_md228"></a>
 Cell forces calculation</h1>
 <p>Code above produces output file (out.h5m) and analysis_mesh.h5m which can be subsequently used to calculate the required forces and stresses on the top surface of a given geometry. </p><div class="fragment"><div class="line">mpirun -np 4 ./cell_forces \</div>
 <div class="line">-my_file analysis_mesh.h5m \</div>
@@ -243,11 +243,11 @@ Cell forces calculation</h1>
 <li>my_order sets order of approximation</li>
 <li>block_config.in is a file where approximation order and material parameters could be set and changed</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md223"></a>
+<h1><a class="anchor" id="autotoc_md229"></a>
 Do output VTK files and open them in Paraview</h1>
 <p>Stresses and displacements </p><div class="fragment"><div class="line">mbconvert out.h5m out.vtk &amp;&amp; open out.vtk</div>
 </div><!-- fragment --><p> and to post-process tractions </p><div class="fragment"><div class="line">mbconvert out_tractions.h5m out_tractions.vtk</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md224"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md230"></a>
 Acknowledgements</h1>
 <p>This user module has been co-developed with Biomedical Engineering and Infrastructure and Environment departments in the School of Engineering at the University of Glasgow. </p>
 </div></div><!-- contents -->

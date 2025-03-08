@@ -367,38 +367,38 @@ Variables</h2></td></tr>
 <p>[Run program] </p>
 <p>[Main] </p>
 
-<p class="definition">Definition at line <a class="el" href="poisson__2d__dis__galerkin_8cpp_source.html#l00536">536</a> of file <a class="el" href="poisson__2d__dis__galerkin_8cpp_source.html">poisson_2d_dis_galerkin.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  536</span>                                 {</div>
-<div class="line"><span class="lineno">  537</span> </div>
-<div class="line"><span class="lineno">  538</span>  <span class="comment">// Initialisation of MoFEM/PETSc and MOAB data structures</span></div>
-<div class="line"><span class="lineno">  539</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> param_file[] = <span class="stringliteral">&quot;param_file.petsc&quot;</span>;</div>
-<div class="line"><span class="lineno">  540</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code hl_variable" href="#a29680e68c64040f4884f60691a193226">help</a>);</div>
-<div class="line"><span class="lineno">  541</span> </div>
-<div class="line"><span class="lineno">  542</span>  <span class="comment">// Error handling</span></div>
-<div class="line"><span class="lineno">  543</span>  <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  544</span>    <span class="comment">// Register MoFEM discrete manager in PETSc</span></div>
-<div class="line"><span class="lineno">  545</span>    DMType dm_name = <span class="stringliteral">&quot;DMMOFEM&quot;</span>;</div>
-<div class="line"><span class="lineno">  546</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);</div>
-<div class="line"><span class="lineno">  547</span> </div>
-<div class="line"><span class="lineno">  548</span>    <span class="comment">// Create MOAB instance</span></div>
-<div class="line"><span class="lineno">  549</span>    moab::Core mb_instance;              <span class="comment">// mesh database</span></div>
-<div class="line"><span class="lineno">  550</span>    moab::Interface &amp;moab = mb_instance; <span class="comment">// mesh database interface</span></div>
-<div class="line"><span class="lineno">  551</span> </div>
-<div class="line"><span class="lineno">  552</span>    <span class="comment">// Create MoFEM instance</span></div>
-<div class="line"><span class="lineno">  553</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">// finite element database</span></div>
-<div class="line"><span class="lineno">  554</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = core; <span class="comment">// finite element interface</span></div>
-<div class="line"><span class="lineno">  555</span> </div>
-<div class="line"><span class="lineno">  556</span>    <span class="comment">// Run the main analysis</span></div>
-<div class="line"><span class="lineno">  557</span>    <a class="code hl_struct" href="struct_poisson2_discont_galerkin.html">Poisson2DiscontGalerkin</a> poisson_problem(m_field);</div>
-<div class="line"><span class="lineno">  558</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> poisson_problem.runProgram();</div>
-<div class="line"><span class="lineno">  559</span>  }</div>
-<div class="line"><span class="lineno">  560</span>  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
-<div class="line"><span class="lineno">  561</span> </div>
-<div class="line"><span class="lineno">  562</span>  <span class="comment">// Finish work: cleaning memory, getting statistics, etc.</span></div>
-<div class="line"><span class="lineno">  563</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
-<div class="line"><span class="lineno">  564</span> </div>
-<div class="line"><span class="lineno">  565</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  566</span>}</div>
+<p class="definition">Definition at line <a class="el" href="poisson__2d__dis__galerkin_8cpp_source.html#l00538">538</a> of file <a class="el" href="poisson__2d__dis__galerkin_8cpp_source.html">poisson_2d_dis_galerkin.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  538</span>                                 {</div>
+<div class="line"><span class="lineno">  539</span> </div>
+<div class="line"><span class="lineno">  540</span>  <span class="comment">// Initialisation of MoFEM/PETSc and MOAB data structures</span></div>
+<div class="line"><span class="lineno">  541</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> param_file[] = <span class="stringliteral">&quot;param_file.petsc&quot;</span>;</div>
+<div class="line"><span class="lineno">  542</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code hl_variable" href="#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line"><span class="lineno">  543</span> </div>
+<div class="line"><span class="lineno">  544</span>  <span class="comment">// Error handling</span></div>
+<div class="line"><span class="lineno">  545</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  546</span>    <span class="comment">// Register MoFEM discrete manager in PETSc</span></div>
+<div class="line"><span class="lineno">  547</span>    DMType dm_name = <span class="stringliteral">&quot;DMMOFEM&quot;</span>;</div>
+<div class="line"><span class="lineno">  548</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);</div>
+<div class="line"><span class="lineno">  549</span> </div>
+<div class="line"><span class="lineno">  550</span>    <span class="comment">// Create MOAB instance</span></div>
+<div class="line"><span class="lineno">  551</span>    moab::Core mb_instance;              <span class="comment">// mesh database</span></div>
+<div class="line"><span class="lineno">  552</span>    moab::Interface &amp;moab = mb_instance; <span class="comment">// mesh database interface</span></div>
+<div class="line"><span class="lineno">  553</span> </div>
+<div class="line"><span class="lineno">  554</span>    <span class="comment">// Create MoFEM instance</span></div>
+<div class="line"><span class="lineno">  555</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">// finite element database</span></div>
+<div class="line"><span class="lineno">  556</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = core; <span class="comment">// finite element interface</span></div>
+<div class="line"><span class="lineno">  557</span> </div>
+<div class="line"><span class="lineno">  558</span>    <span class="comment">// Run the main analysis</span></div>
+<div class="line"><span class="lineno">  559</span>    <a class="code hl_struct" href="struct_poisson2_discont_galerkin.html">Poisson2DiscontGalerkin</a> poisson_problem(m_field);</div>
+<div class="line"><span class="lineno">  560</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> poisson_problem.runProgram();</div>
+<div class="line"><span class="lineno">  561</span>  }</div>
+<div class="line"><span class="lineno">  562</span>  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line"><span class="lineno">  563</span> </div>
+<div class="line"><span class="lineno">  564</span>  <span class="comment">// Finish work: cleaning memory, getting statistics, etc.</span></div>
+<div class="line"><span class="lineno">  565</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line"><span class="lineno">  566</span> </div>
+<div class="line"><span class="lineno">  567</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  568</span>}</div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_add80e5ef5f847b2d4b637029f0f671c3"><div class="ttname"><a href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a></div><div class="ttdeci">#define CHKERR</div><div class="ttdoc">Inline error check.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00548">definitions.h:548</a></div></div>
 <div class="ttc" id="agroup__dm_html_ga899ec9d1ad35488bbe4273731f6d5c90"><div class="ttname"><a href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">MoFEM::DMRegister_MoFEM</a></div><div class="ttdeci">PetscErrorCode DMRegister_MoFEM(const char sname[])</div><div class="ttdoc">Register MoFEM problem.</div><div class="ttdef"><b>Definition</b> <a href="_d_m_mo_f_e_m_8cpp_source.html#l00043">DMMoFEM.cpp:43</a></div></div>
@@ -601,7 +601,7 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="apoisson__2d__dis__galerkin_8cpp_html_aff793330bef246946d4744b0d17f3261"><div class="ttname"><a href="#aff793330bef246946d4744b0d17f3261">is_test</a></div><div class="ttdeci">PetscBool is_test</div><div class="ttdef"><b>Definition</b> <a href="poisson__2d__dis__galerkin_8cpp_source.html#l00041">poisson_2d_dis_galerkin.cpp:41</a></div></div>
-</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="mixed_poisson_8cpp-example.html#a86">mixed_poisson.cpp</a>, <a class="el" href="plate_8cpp-example.html#a30">plate.cpp</a>, <a class="el" href="poisson_2d_dis_galerkin_8cpp-example.html#a20">poisson_2d_dis_galerkin.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a57">test_broken_space.cpp</a>.</dd>
+</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="mixed_poisson_8cpp-example.html#a86">mixed_poisson.cpp</a>, <a class="el" href="plate_8cpp-example.html#a30">plate.cpp</a>, <a class="el" href="poisson_2d_dis_galerkin_8cpp-example.html#a20">poisson_2d_dis_galerkin.cpp</a>, and <a class="el" href="test_broken_space_8cpp-example.html#a56">test_broken_space.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="poisson__2d__dis__galerkin_8cpp_source.html#l00062">62</a> of file <a class="el" href="poisson__2d__dis__galerkin_8cpp_source.html">poisson_2d_dis_galerkin.cpp</a>.</p>

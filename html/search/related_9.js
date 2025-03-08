@@ -10,6 +10,5 @@ var searchData=
   ['opmovenode_7',['OpMoveNode',['../struct_eshelbian_plasticity_1_1_contact_tree.html#a95190362ff114cde97e1fe6c8a1e341f',1,'EshelbianPlasticity::ContactTree']]],
   ['opschurassemblebegin_8',['OpSchurAssembleBegin',['../struct_mo_f_e_m_1_1_schur_elem_mats.html#a26750b16224bee5738b13e06f54e3a9f',1,'MoFEM::SchurElemMats']]],
   ['opschurassembleendimpl_9',['OpSchurAssembleEndImpl',['../struct_mo_f_e_m_1_1_schur_elem_mats.html#aa21c3bce0322c29286e88f018be9f23d',1,'MoFEM::SchurElemMats']]],
-  ['opschurzerorowsandcols_10',['OpSchurZeroRowsAndCols',['../struct_mo_f_e_m_1_1_schur_elem_mats.html#a72c7944411c17eab82c71530799e5558',1,'MoFEM::SchurElemMats']]],
-  ['optreesearch_11',['OpTreeSearch',['../struct_eshelbian_plasticity_1_1_contact_tree.html#a140e6a2bdc02b053cd962f410997a4f7',1,'EshelbianPlasticity::ContactTree']]]
+  ['optreesearch_10',['OpTreeSearch',['../struct_eshelbian_plasticity_1_1_contact_tree.html#a140e6a2bdc02b053cd962f410997a4f7',1,'EshelbianPlasticity::ContactTree']]]
 ];

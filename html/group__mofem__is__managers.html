@@ -190,12 +190,6 @@ Functions</h2></td></tr>
 <tr class="memitem:gad89c934cd2274a1cc5a0f58ae214e381" id="r_gad89c934cd2274a1cc5a0f58ae214e381"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad89c934cd2274a1cc5a0f58ae214e381">MoFEM::ISManager::isCreateProblemFieldAndRank</a> (const std::string problem_name, <a class="el" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69db">RowColData</a> rc, const std::string field, int min_coeff_idx, int max_coeff_idx, <a class="el" href="struct_mo_f_e_m_1_1_smart_petsc_obj.html">SmartPetscObj</a>&lt; IS &gt; &amp;smart_is, <a class="el" href="class_range.html">Range</a> *ents=nullptr) const</td></tr>
 <tr class="memdesc:gad89c934cd2274a1cc5a0f58ae214e381"><td class="mdescLeft">&#160;</td><td class="mdescRight">IS for given problem, field and rank range (collective)  <br /></td></tr>
 <tr class="separator:gad89c934cd2274a1cc5a0f58ae214e381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadc3489b87d6a13804fa002c21e8490c8" id="r_gadc3489b87d6a13804fa002c21e8490c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadc3489b87d6a13804fa002c21e8490c8">MoFEM::ISManager::isCreateProblemBrokenFieldAndRank</a> (const std::vector&lt; boost::weak_ptr&lt; <a class="el" href="struct_mo_f_e_m_1_1_numered_dof_entity.html">NumeredDofEntity</a> &gt; &gt; &amp;dofs_vec, <a class="el" href="struct_mo_f_e_m_1_1_smart_petsc_obj.html">SmartPetscObj</a>&lt; IS &gt; &amp;smart_is, MPI_Comm comm=PETSC_COMM_SELF) const</td></tr>
-<tr class="memdesc:gadc3489b87d6a13804fa002c21e8490c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">IS for given problem, field and rank range (collective)  <br /></td></tr>
-<tr class="separator:gadc3489b87d6a13804fa002c21e8490c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaff90d54f68557787af9ce1911290f10a" id="r_gaff90d54f68557787af9ce1911290f10a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaff90d54f68557787af9ce1911290f10a">MoFEM::ISManager::isCreateProblemBrokenFieldAndRankLocal</a> (const std::vector&lt; boost::weak_ptr&lt; <a class="el" href="struct_mo_f_e_m_1_1_numered_dof_entity.html">NumeredDofEntity</a> &gt; &gt; &amp;dofs_vec, <a class="el" href="struct_mo_f_e_m_1_1_smart_petsc_obj.html">SmartPetscObj</a>&lt; IS &gt; &amp;smart_is) const</td></tr>
-<tr class="memdesc:gaff90d54f68557787af9ce1911290f10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">IS for given problem, field and rank range (collective)  <br /></td></tr>
-<tr class="separator:gaff90d54f68557787af9ce1911290f10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad3fcf0a8cdba24660e4c43b23de728a4" id="r_gad3fcf0a8cdba24660e4c43b23de728a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad3fcf0a8cdba24660e4c43b23de728a4">MoFEM::ISManager::isCreateProblemFieldAndRankLocal</a> (const std::string problem_name, <a class="el" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69db">RowColData</a> rc, const std::string field, int min_coeff_idx, int max_coeff_idx, IS *is, <a class="el" href="class_range.html">Range</a> *ents=nullptr) const</td></tr>
 <tr class="memdesc:gad3fcf0a8cdba24660e4c43b23de728a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">create IS for given problem, field and rank range (collective)  <br /></td></tr>
 <tr class="separator:gad3fcf0a8cdba24660e4c43b23de728a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,29 +285,29 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00626">626</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  629</span>                                                                         {</div>
-<div class="line"><span class="lineno">  630</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  631</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
-<div class="line"><span class="lineno">  632</span>  std::vector&lt;int&gt; idx(0), idy(0);</div>
-<div class="line"><span class="lineno">  633</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="#ga545648529d6f03b4b7b38034b51c2c57">isCreateFromProblemFieldToOtherProblemField</a>(</div>
-<div class="line"><span class="lineno">  634</span>      x_problem, x_field_name, x_rc, y_problem, y_field_name, y_rc, idx, idy);</div>
-<div class="line"><span class="lineno">  635</span>  <span class="keywordflow">if</span> (ix != PETSC_NULL) {</div>
-<div class="line"><span class="lineno">  636</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), idx.size(), &amp;idx[0],</div>
-<div class="line"><span class="lineno">  637</span>                           PETSC_COPY_VALUES, ix);</div>
-<div class="line"><span class="lineno">  638</span>  }</div>
-<div class="line"><span class="lineno">  639</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), idy.size(), &amp;idy[0],</div>
-<div class="line"><span class="lineno">  640</span>                         PETSC_COPY_VALUES, iy);</div>
-<div class="line"><span class="lineno">  641</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#ab489d977ae070c2b8baae2f599a3e7ea">dEbug</a>) {</div>
-<div class="line"><span class="lineno">  642</span>    ISView(*ix, PETSC_VIEWER_STDOUT_WORLD);</div>
-<div class="line"><span class="lineno">  643</span>    ISView(*iy, PETSC_VIEWER_STDOUT_WORLD);</div>
-<div class="line"><span class="lineno">  644</span>  }</div>
-<div class="line"><span class="lineno">  645</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><span class="lineno">  646</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00577">577</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  580</span>                                                                         {</div>
+<div class="line"><span class="lineno">  581</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><span class="lineno">  582</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
+<div class="line"><span class="lineno">  583</span>  std::vector&lt;int&gt; idx(0), idy(0);</div>
+<div class="line"><span class="lineno">  584</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="#ga545648529d6f03b4b7b38034b51c2c57">isCreateFromProblemFieldToOtherProblemField</a>(</div>
+<div class="line"><span class="lineno">  585</span>      x_problem, x_field_name, x_rc, y_problem, y_field_name, y_rc, idx, idy);</div>
+<div class="line"><span class="lineno">  586</span>  <span class="keywordflow">if</span> (ix != PETSC_NULL) {</div>
+<div class="line"><span class="lineno">  587</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), idx.size(), &amp;idx[0],</div>
+<div class="line"><span class="lineno">  588</span>                           PETSC_COPY_VALUES, ix);</div>
+<div class="line"><span class="lineno">  589</span>  }</div>
+<div class="line"><span class="lineno">  590</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), idy.size(), &amp;idy[0],</div>
+<div class="line"><span class="lineno">  591</span>                         PETSC_COPY_VALUES, iy);</div>
+<div class="line"><span class="lineno">  592</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#ab489d977ae070c2b8baae2f599a3e7ea">dEbug</a>) {</div>
+<div class="line"><span class="lineno">  593</span>    ISView(*ix, PETSC_VIEWER_STDOUT_WORLD);</div>
+<div class="line"><span class="lineno">  594</span>    ISView(*iy, PETSC_VIEWER_STDOUT_WORLD);</div>
+<div class="line"><span class="lineno">  595</span>  }</div>
+<div class="line"><span class="lineno">  596</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><span class="lineno">  597</span>}</div>
 <div class="ttc" id="adefinitions_8h_html_a6c0b52978f1abc88bf8a1ba70b7308e3"><div class="ttname"><a href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a></div><div class="ttdeci">#define MoFEMFunctionBegin</div><div class="ttdoc">First executable line of each MoFEM function, used for error handling. Final line of MoFEM functions ...</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00359">definitions.h:359</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_acb0a46d159695a01bf667313b7788b45"><div class="ttname"><a href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a></div><div class="ttdeci">#define MoFEMFunctionReturn(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00429">definitions.h:429</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_add80e5ef5f847b2d4b637029f0f671c3"><div class="ttname"><a href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a></div><div class="ttdeci">#define CHKERR</div><div class="ttdoc">Inline error check.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00548">definitions.h:548</a></div></div>
-<div class="ttc" id="agroup__mofem__is__managers_html_ga545648529d6f03b4b7b38034b51c2c57"><div class="ttname"><a href="#ga545648529d6f03b4b7b38034b51c2c57">MoFEM::ISManager::isCreateFromProblemFieldToOtherProblemField</a></div><div class="ttdeci">MoFEMErrorCode isCreateFromProblemFieldToOtherProblemField(const std::string x_problem, const std::string x_field_name, RowColData x_rc, const std::string y_problem, const std::string y_field_name, RowColData y_rc, std::vector&lt; int &gt; &amp;idx, std::vector&lt; int &gt; &amp;idy) const</div><div class="ttdoc">create IS for give two problems and field</div><div class="ttdef"><b>Definition</b> <a href="_i_s_manager_8cpp_source.html#l00523">ISManager.cpp:523</a></div></div>
+<div class="ttc" id="agroup__mofem__is__managers_html_ga545648529d6f03b4b7b38034b51c2c57"><div class="ttname"><a href="#ga545648529d6f03b4b7b38034b51c2c57">MoFEM::ISManager::isCreateFromProblemFieldToOtherProblemField</a></div><div class="ttdeci">MoFEMErrorCode isCreateFromProblemFieldToOtherProblemField(const std::string x_problem, const std::string x_field_name, RowColData x_rc, const std::string y_problem, const std::string y_field_name, RowColData y_rc, std::vector&lt; int &gt; &amp;idx, std::vector&lt; int &gt; &amp;idy) const</div><div class="ttdoc">create IS for give two problems and field</div><div class="ttdef"><b>Definition</b> <a href="_i_s_manager_8cpp_source.html#l00474">ISManager.cpp:474</a></div></div>
 <div class="ttc" id="astruct_mo_f_e_m_1_1_core_interface_html_a9b2bc8c1b980f49d31a0b5f7fbe756f5"><div class="ttname"><a href="struct_mo_f_e_m_1_1_core_interface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">MoFEM::CoreInterface::get_comm</a></div><div class="ttdeci">virtual MPI_Comm &amp; get_comm() const =0</div></div>
 <div class="ttc" id="astruct_mo_f_e_m_1_1_deprecated_core_interface_html"><div class="ttname"><a href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::DeprecatedCoreInterface</a></div><div class="ttdoc">Deprecated interface functions.</div><div class="ttdef"><b>Definition</b> <a href="_deprecated_core_interface_8hpp_source.html#l00016">DeprecatedCoreInterface.hpp:16</a></div></div>
 <div class="ttc" id="astruct_mo_f_e_m_1_1_i_s_manager_html_a772e780446980ad9a4e6af1ab8accbd2"><div class="ttname"><a href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">MoFEM::ISManager::cOre</a></div><div class="ttdeci">const MoFEM::Interface &amp; cOre</div><div class="ttdef"><b>Definition</b> <a href="_i_s_manager_8hpp_source.html#l00028">ISManager.hpp:28</a></div></div>
@@ -391,105 +385,105 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00523">523</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  527</span>                               {</div>
-<div class="line"><span class="lineno">  528</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
-<div class="line"><span class="lineno">  529</span>  <span class="keyword">const</span> Problem *px_ptr;</div>
-<div class="line"><span class="lineno">  530</span>  <span class="keyword">const</span> Problem *py_ptr;</div>
-<div class="line"><span class="lineno">  531</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  532</span> </div>
-<div class="line"><span class="lineno">  533</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(x_problem, &amp;px_ptr);</div>
-<div class="line"><span class="lineno">  534</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(y_problem, &amp;py_ptr);</div>
-<div class="line"><span class="lineno">  535</span> </div>
-<div class="line"><span class="lineno">  536</span>  <span class="keyword">typedef</span> multi_index_container&lt;</div>
-<div class="line"><span class="lineno">  537</span>      boost::shared_ptr&lt;NumeredDofEntity&gt;,</div>
-<div class="line"><span class="lineno">  538</span> </div>
-<div class="line"><span class="lineno">  539</span>      indexed_by&lt;</div>
-<div class="line"><span class="lineno">  540</span> </div>
-<div class="line"><span class="lineno">  541</span>          sequenced&lt;&gt;,</div>
-<div class="line"><span class="lineno">  542</span> </div>
-<div class="line"><span class="lineno">  543</span>          ordered_non_unique&lt;</div>
-<div class="line"><span class="lineno">  544</span>              tag&lt;Composite_Ent_And_EntDofIdx_mi_tag&gt;,</div>
-<div class="line"><span class="lineno">  545</span>              composite_key&lt;</div>
-<div class="line"><span class="lineno">  546</span>                  NumeredDofEntity,</div>
-<div class="line"><span class="lineno">  547</span>                  const_mem_fun&lt;<a class="code hl_typedef" href="struct_mo_f_e_m_1_1_numered_dof_entity.html#aec95b90791b54c2b0313629720daf86c">NumeredDofEntity::interface_type_DofEntity</a>,</div>
-<div class="line"><span class="lineno">  548</span>                                <a class="code hl_class" href="class_entity_handle.html">EntityHandle</a>, &amp;<a class="code hl_function" href="struct_mo_f_e_m_1_1interface___dof_entity.html#acbdb0d7f1c99ff6bcc58173ae1d3fb6c">NumeredDofEntity::getEnt</a>&gt;,</div>
-<div class="line"><span class="lineno">  549</span>                  const_mem_fun&lt;<a class="code hl_typedef" href="struct_mo_f_e_m_1_1_numered_dof_entity.html#aec95b90791b54c2b0313629720daf86c">NumeredDofEntity::interface_type_DofEntity</a>,</div>
-<div class="line"><span class="lineno">  550</span>                                <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_types.html#a2cb126d359d48ddf277e1985549b94a9">DofIdx</a>, &amp;<a class="code hl_function" href="struct_mo_f_e_m_1_1interface___dof_entity.html#a8c035b020ea9937673212d7f88f2f927">NumeredDofEntity::getEntDofIdx</a>&gt;&gt;&gt;</div>
-<div class="line"><span class="lineno">  551</span> </div>
-<div class="line"><span class="lineno">  552</span>          &gt;&gt;</div>
-<div class="line"><span class="lineno">  553</span>      NumeredDofEntity_view_multiIndex;</div>
-<div class="line"><span class="lineno">  554</span> </div>
-<div class="line"><span class="lineno">  555</span>  NumeredDofEntity_view_multiIndex dofs_view;</div>
-<div class="line"><span class="lineno">  556</span> </div>
-<div class="line"><span class="lineno">  557</span>  <span class="keyword">auto</span> x_bit_number = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a151a5aaa12774c726c7a32ba250d2586">get_field_bit_number</a>(x_field_name);</div>
-<div class="line"><span class="lineno">  558</span> </div>
-<div class="line"><span class="lineno">  559</span>  <span class="keywordflow">switch</span> (x_rc) {</div>
-<div class="line"><span class="lineno">  560</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
-<div class="line"><span class="lineno">  561</span>    dofs_view.insert(</div>
-<div class="line"><span class="lineno">  562</span>        dofs_view.end(),</div>
-<div class="line"><span class="lineno">  563</span>        px_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
-<div class="line"><span class="lineno">  564</span>            <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a58d767a919831ecbb8b3b72faad3e9fa">FieldEntity::getLoBitNumberUId</a>(x_bit_number)),</div>
-<div class="line"><span class="lineno">  565</span>        px_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
-<div class="line"><span class="lineno">  566</span>            <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a07b8c0660cbaa149aa8950f05eb618fa">FieldEntity::getHiBitNumberUId</a>(x_bit_number)));</div>
-<div class="line"><span class="lineno">  567</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  568</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
-<div class="line"><span class="lineno">  569</span>    dofs_view.insert(</div>
-<div class="line"><span class="lineno">  570</span>        dofs_view.end(),</div>
-<div class="line"><span class="lineno">  571</span>        px_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
-<div class="line"><span class="lineno">  572</span>            <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a58d767a919831ecbb8b3b72faad3e9fa">FieldEntity::getLoBitNumberUId</a>(x_bit_number)),</div>
-<div class="line"><span class="lineno">  573</span>        px_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
-<div class="line"><span class="lineno">  574</span>            <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a07b8c0660cbaa149aa8950f05eb618fa">FieldEntity::getHiBitNumberUId</a>(x_bit_number)));</div>
-<div class="line"><span class="lineno">  575</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  576</span>  <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  577</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>,</div>
-<div class="line"><span class="lineno">  578</span>            <span class="stringliteral">&quot;only makes sense for ROWS and COLS&quot;</span>);</div>
-<div class="line"><span class="lineno">  579</span>  }</div>
-<div class="line"><span class="lineno">  580</span> </div>
-<div class="line"><span class="lineno">  581</span>  <span class="keyword">decltype</span>(py_ptr-&gt;numeredRowDofsPtr) dofs_ptr;</div>
-<div class="line"><span class="lineno">  582</span>  <span class="keywordflow">switch</span> (y_rc) {</div>
-<div class="line"><span class="lineno">  583</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
-<div class="line"><span class="lineno">  584</span>    dofs_ptr = py_ptr-&gt;numeredRowDofsPtr;</div>
-<div class="line"><span class="lineno">  585</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  586</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
-<div class="line"><span class="lineno">  587</span>    dofs_ptr = py_ptr-&gt;numeredColDofsPtr;</div>
-<div class="line"><span class="lineno">  588</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  589</span>  <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  590</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>,</div>
-<div class="line"><span class="lineno">  591</span>            <span class="stringliteral">&quot;only makes sense for ROWS and COLS&quot;</span>);</div>
-<div class="line"><span class="lineno">  592</span>  }</div>
-<div class="line"><span class="lineno">  593</span> </div>
-<div class="line"><span class="lineno">  594</span>  std::map&lt;int, int&gt; global_dofs_map;</div>
-<div class="line"><span class="lineno">  595</span>  <span class="keyword">const</span> <span class="keyword">auto</span> y_bit_number = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a151a5aaa12774c726c7a32ba250d2586">get_field_bit_number</a>(y_field_name);</div>
-<div class="line"><span class="lineno">  596</span>  <span class="keyword">auto</span> dit = dofs_ptr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
-<div class="line"><span class="lineno">  597</span>      <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a58d767a919831ecbb8b3b72faad3e9fa">FieldEntity::getLoBitNumberUId</a>(y_bit_number));</div>
-<div class="line"><span class="lineno">  598</span>  <span class="keyword">auto</span> hi_dit = dofs_ptr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
-<div class="line"><span class="lineno">  599</span>      <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a07b8c0660cbaa149aa8950f05eb618fa">FieldEntity::getHiBitNumberUId</a>(y_bit_number));</div>
-<div class="line"><span class="lineno">  600</span>  <span class="keyword">const</span> <span class="keyword">auto</span> rank = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>();</div>
-<div class="line"><span class="lineno">  601</span>  <span class="keywordflow">for</span> (; dit != hi_dit; ++dit) {</div>
-<div class="line"><span class="lineno">  602</span>    <span class="keywordflow">if</span> ((*dit)-&gt;getPart() == rank) {</div>
-<div class="line"><span class="lineno">  603</span>      <span class="keyword">auto</span> x_dit = dofs_view.get&lt;Composite_Ent_And_EntDofIdx_mi_tag&gt;().find(</div>
-<div class="line"><span class="lineno">  604</span>          boost::make_tuple((*dit)-&gt;getEnt(), (*dit)-&gt;getEntDofIdx()));</div>
-<div class="line"><span class="lineno">  605</span>      <span class="keywordflow">if</span> (x_dit != dofs_view.get&lt;Composite_Ent_And_EntDofIdx_mi_tag&gt;().end()) {</div>
-<div class="line"><span class="lineno">  606</span>        global_dofs_map[(*x_dit)-&gt;getPetscGlobalDofIdx()] =</div>
-<div class="line"><span class="lineno">  607</span>            (*dit)-&gt;getPetscGlobalDofIdx();</div>
-<div class="line"><span class="lineno">  608</span>      }</div>
-<div class="line"><span class="lineno">  609</span>    }</div>
-<div class="line"><span class="lineno">  610</span>  }</div>
-<div class="line"><span class="lineno">  611</span> </div>
-<div class="line"><span class="lineno">  612</span>  idx.resize(global_dofs_map.size());</div>
-<div class="line"><span class="lineno">  613</span>  idy.resize(global_dofs_map.size());</div>
-<div class="line"><span class="lineno">  614</span>  {</div>
-<div class="line"><span class="lineno">  615</span>    <span class="keyword">auto</span> ix = idx.begin();</div>
-<div class="line"><span class="lineno">  616</span>    <span class="keyword">auto</span> iy = idy.begin();</div>
-<div class="line"><span class="lineno">  617</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> mit = global_dofs_map.begin(); mit != global_dofs_map.end();</div>
-<div class="line"><span class="lineno">  618</span>         mit++, ix++, iy++) {</div>
-<div class="line"><span class="lineno">  619</span>      *ix = mit-&gt;first;</div>
-<div class="line"><span class="lineno">  620</span>      *iy = mit-&gt;second;</div>
-<div class="line"><span class="lineno">  621</span>    }</div>
-<div class="line"><span class="lineno">  622</span>  }</div>
-<div class="line"><span class="lineno">  623</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><span class="lineno">  624</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00474">474</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  478</span>                               {</div>
+<div class="line"><span class="lineno">  479</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
+<div class="line"><span class="lineno">  480</span>  <span class="keyword">const</span> Problem *px_ptr;</div>
+<div class="line"><span class="lineno">  481</span>  <span class="keyword">const</span> Problem *py_ptr;</div>
+<div class="line"><span class="lineno">  482</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><span class="lineno">  483</span> </div>
+<div class="line"><span class="lineno">  484</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(x_problem, &amp;px_ptr);</div>
+<div class="line"><span class="lineno">  485</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(y_problem, &amp;py_ptr);</div>
+<div class="line"><span class="lineno">  486</span> </div>
+<div class="line"><span class="lineno">  487</span>  <span class="keyword">typedef</span> multi_index_container&lt;</div>
+<div class="line"><span class="lineno">  488</span>      boost::shared_ptr&lt;NumeredDofEntity&gt;,</div>
+<div class="line"><span class="lineno">  489</span> </div>
+<div class="line"><span class="lineno">  490</span>      indexed_by&lt;</div>
+<div class="line"><span class="lineno">  491</span> </div>
+<div class="line"><span class="lineno">  492</span>          sequenced&lt;&gt;,</div>
+<div class="line"><span class="lineno">  493</span> </div>
+<div class="line"><span class="lineno">  494</span>          ordered_non_unique&lt;</div>
+<div class="line"><span class="lineno">  495</span>              tag&lt;Composite_Ent_And_EntDofIdx_mi_tag&gt;,</div>
+<div class="line"><span class="lineno">  496</span>              composite_key&lt;</div>
+<div class="line"><span class="lineno">  497</span>                  NumeredDofEntity,</div>
+<div class="line"><span class="lineno">  498</span>                  const_mem_fun&lt;<a class="code hl_typedef" href="struct_mo_f_e_m_1_1_numered_dof_entity.html#aec95b90791b54c2b0313629720daf86c">NumeredDofEntity::interface_type_DofEntity</a>,</div>
+<div class="line"><span class="lineno">  499</span>                                <a class="code hl_class" href="class_entity_handle.html">EntityHandle</a>, &amp;<a class="code hl_function" href="struct_mo_f_e_m_1_1interface___dof_entity.html#acbdb0d7f1c99ff6bcc58173ae1d3fb6c">NumeredDofEntity::getEnt</a>&gt;,</div>
+<div class="line"><span class="lineno">  500</span>                  const_mem_fun&lt;<a class="code hl_typedef" href="struct_mo_f_e_m_1_1_numered_dof_entity.html#aec95b90791b54c2b0313629720daf86c">NumeredDofEntity::interface_type_DofEntity</a>,</div>
+<div class="line"><span class="lineno">  501</span>                                <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_types.html#a2cb126d359d48ddf277e1985549b94a9">DofIdx</a>, &amp;<a class="code hl_function" href="struct_mo_f_e_m_1_1interface___dof_entity.html#a8c035b020ea9937673212d7f88f2f927">NumeredDofEntity::getEntDofIdx</a>&gt;&gt;&gt;</div>
+<div class="line"><span class="lineno">  502</span> </div>
+<div class="line"><span class="lineno">  503</span>          &gt;&gt;</div>
+<div class="line"><span class="lineno">  504</span>      NumeredDofEntity_view_multiIndex;</div>
+<div class="line"><span class="lineno">  505</span> </div>
+<div class="line"><span class="lineno">  506</span>  NumeredDofEntity_view_multiIndex dofs_view;</div>
+<div class="line"><span class="lineno">  507</span> </div>
+<div class="line"><span class="lineno">  508</span>  <span class="keyword">auto</span> x_bit_number = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a151a5aaa12774c726c7a32ba250d2586">get_field_bit_number</a>(x_field_name);</div>
+<div class="line"><span class="lineno">  509</span> </div>
+<div class="line"><span class="lineno">  510</span>  <span class="keywordflow">switch</span> (x_rc) {</div>
+<div class="line"><span class="lineno">  511</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
+<div class="line"><span class="lineno">  512</span>    dofs_view.insert(</div>
+<div class="line"><span class="lineno">  513</span>        dofs_view.end(),</div>
+<div class="line"><span class="lineno">  514</span>        px_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
+<div class="line"><span class="lineno">  515</span>            <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a58d767a919831ecbb8b3b72faad3e9fa">FieldEntity::getLoBitNumberUId</a>(x_bit_number)),</div>
+<div class="line"><span class="lineno">  516</span>        px_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
+<div class="line"><span class="lineno">  517</span>            <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a07b8c0660cbaa149aa8950f05eb618fa">FieldEntity::getHiBitNumberUId</a>(x_bit_number)));</div>
+<div class="line"><span class="lineno">  518</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  519</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
+<div class="line"><span class="lineno">  520</span>    dofs_view.insert(</div>
+<div class="line"><span class="lineno">  521</span>        dofs_view.end(),</div>
+<div class="line"><span class="lineno">  522</span>        px_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
+<div class="line"><span class="lineno">  523</span>            <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a58d767a919831ecbb8b3b72faad3e9fa">FieldEntity::getLoBitNumberUId</a>(x_bit_number)),</div>
+<div class="line"><span class="lineno">  524</span>        px_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
+<div class="line"><span class="lineno">  525</span>            <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a07b8c0660cbaa149aa8950f05eb618fa">FieldEntity::getHiBitNumberUId</a>(x_bit_number)));</div>
+<div class="line"><span class="lineno">  526</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  527</span>  <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  528</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>,</div>
+<div class="line"><span class="lineno">  529</span>            <span class="stringliteral">&quot;only makes sense for ROWS and COLS&quot;</span>);</div>
+<div class="line"><span class="lineno">  530</span>  }</div>
+<div class="line"><span class="lineno">  531</span> </div>
+<div class="line"><span class="lineno">  532</span>  <span class="keyword">decltype</span>(py_ptr-&gt;numeredRowDofsPtr) dofs_ptr;</div>
+<div class="line"><span class="lineno">  533</span>  <span class="keywordflow">switch</span> (y_rc) {</div>
+<div class="line"><span class="lineno">  534</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
+<div class="line"><span class="lineno">  535</span>    dofs_ptr = py_ptr-&gt;numeredRowDofsPtr;</div>
+<div class="line"><span class="lineno">  536</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  537</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
+<div class="line"><span class="lineno">  538</span>    dofs_ptr = py_ptr-&gt;numeredColDofsPtr;</div>
+<div class="line"><span class="lineno">  539</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  540</span>  <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  541</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>,</div>
+<div class="line"><span class="lineno">  542</span>            <span class="stringliteral">&quot;only makes sense for ROWS and COLS&quot;</span>);</div>
+<div class="line"><span class="lineno">  543</span>  }</div>
+<div class="line"><span class="lineno">  544</span> </div>
+<div class="line"><span class="lineno">  545</span>  std::map&lt;int, int&gt; global_dofs_map;</div>
+<div class="line"><span class="lineno">  546</span>  <span class="keyword">const</span> <span class="keyword">auto</span> y_bit_number = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a151a5aaa12774c726c7a32ba250d2586">get_field_bit_number</a>(y_field_name);</div>
+<div class="line"><span class="lineno">  547</span>  <span class="keyword">auto</span> dit = dofs_ptr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
+<div class="line"><span class="lineno">  548</span>      <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a58d767a919831ecbb8b3b72faad3e9fa">FieldEntity::getLoBitNumberUId</a>(y_bit_number));</div>
+<div class="line"><span class="lineno">  549</span>  <span class="keyword">auto</span> hi_dit = dofs_ptr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
+<div class="line"><span class="lineno">  550</span>      <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a07b8c0660cbaa149aa8950f05eb618fa">FieldEntity::getHiBitNumberUId</a>(y_bit_number));</div>
+<div class="line"><span class="lineno">  551</span>  <span class="keyword">const</span> <span class="keyword">auto</span> rank = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>();</div>
+<div class="line"><span class="lineno">  552</span>  <span class="keywordflow">for</span> (; dit != hi_dit; ++dit) {</div>
+<div class="line"><span class="lineno">  553</span>    <span class="keywordflow">if</span> ((*dit)-&gt;getPart() == rank) {</div>
+<div class="line"><span class="lineno">  554</span>      <span class="keyword">auto</span> x_dit = dofs_view.get&lt;Composite_Ent_And_EntDofIdx_mi_tag&gt;().find(</div>
+<div class="line"><span class="lineno">  555</span>          boost::make_tuple((*dit)-&gt;getEnt(), (*dit)-&gt;getEntDofIdx()));</div>
+<div class="line"><span class="lineno">  556</span>      <span class="keywordflow">if</span> (x_dit != dofs_view.get&lt;Composite_Ent_And_EntDofIdx_mi_tag&gt;().end()) {</div>
+<div class="line"><span class="lineno">  557</span>        global_dofs_map[(*x_dit)-&gt;getPetscGlobalDofIdx()] =</div>
+<div class="line"><span class="lineno">  558</span>            (*dit)-&gt;getPetscGlobalDofIdx();</div>
+<div class="line"><span class="lineno">  559</span>      }</div>
+<div class="line"><span class="lineno">  560</span>    }</div>
+<div class="line"><span class="lineno">  561</span>  }</div>
+<div class="line"><span class="lineno">  562</span> </div>
+<div class="line"><span class="lineno">  563</span>  idx.resize(global_dofs_map.size());</div>
+<div class="line"><span class="lineno">  564</span>  idy.resize(global_dofs_map.size());</div>
+<div class="line"><span class="lineno">  565</span>  {</div>
+<div class="line"><span class="lineno">  566</span>    <span class="keyword">auto</span> ix = idx.begin();</div>
+<div class="line"><span class="lineno">  567</span>    <span class="keyword">auto</span> iy = idy.begin();</div>
+<div class="line"><span class="lineno">  568</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> mit = global_dofs_map.begin(); mit != global_dofs_map.end();</div>
+<div class="line"><span class="lineno">  569</span>         mit++, ix++, iy++) {</div>
+<div class="line"><span class="lineno">  570</span>      *ix = mit-&gt;first;</div>
+<div class="line"><span class="lineno">  571</span>      *iy = mit-&gt;second;</div>
+<div class="line"><span class="lineno">  572</span>    }</div>
+<div class="line"><span class="lineno">  573</span>  }</div>
+<div class="line"><span class="lineno">  574</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><span class="lineno">  575</span>}</div>
 <div class="ttc" id="aclass_entity_handle_html"><div class="ttname"><a href="class_entity_handle.html">EntityHandle</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a></div><div class="ttdeci">@ COL</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a></div><div class="ttdeci">@ ROW</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>
@@ -559,24 +553,24 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>MoFEMErrorCode </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00701">701</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  703</span>                                           {</div>
-<div class="line"><span class="lineno">  704</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
-<div class="line"><span class="lineno">  705</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  706</span>  std::vector&lt;int&gt; idx(0), idy(0);</div>
-<div class="line"><span class="lineno">  707</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="#ga9012d2c713790ead86d56b1657db5188">isCreateFromProblemToOtherProblem</a>(x_problem, x_rc, y_problem, y_rc,</div>
-<div class="line"><span class="lineno">  708</span>                                           idx, idy);</div>
-<div class="line"><span class="lineno">  709</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), idx.size(), &amp;idx[0],</div>
-<div class="line"><span class="lineno">  710</span>                         PETSC_COPY_VALUES, ix);</div>
-<div class="line"><span class="lineno">  711</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), idy.size(), &amp;idy[0],</div>
-<div class="line"><span class="lineno">  712</span>                         PETSC_COPY_VALUES, iy);</div>
-<div class="line"><span class="lineno">  713</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#ab489d977ae070c2b8baae2f599a3e7ea">dEbug</a>) {</div>
-<div class="line"><span class="lineno">  714</span>    ISView(*ix, PETSC_VIEWER_STDOUT_WORLD);</div>
-<div class="line"><span class="lineno">  715</span>    ISView(*iy, PETSC_VIEWER_STDOUT_WORLD);</div>
-<div class="line"><span class="lineno">  716</span>  }</div>
-<div class="line"><span class="lineno">  717</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><span class="lineno">  718</span>}</div>
-<div class="ttc" id="agroup__mofem__is__managers_html_ga9012d2c713790ead86d56b1657db5188"><div class="ttname"><a href="#ga9012d2c713790ead86d56b1657db5188">MoFEM::ISManager::isCreateFromProblemToOtherProblem</a></div><div class="ttdeci">MoFEMErrorCode isCreateFromProblemToOtherProblem(const std::string x_problem, RowColData x_rc, const std::string y_problem, RowColData y_rc, std::vector&lt; int &gt; &amp;idx, std::vector&lt; int &gt; &amp;idy) const</div><div class="ttdoc">Create is from one problem to other problem.</div><div class="ttdef"><b>Definition</b> <a href="_i_s_manager_8cpp_source.html#l00648">ISManager.cpp:648</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00652">652</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  654</span>                                           {</div>
+<div class="line"><span class="lineno">  655</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
+<div class="line"><span class="lineno">  656</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><span class="lineno">  657</span>  std::vector&lt;int&gt; idx(0), idy(0);</div>
+<div class="line"><span class="lineno">  658</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="#ga9012d2c713790ead86d56b1657db5188">isCreateFromProblemToOtherProblem</a>(x_problem, x_rc, y_problem, y_rc,</div>
+<div class="line"><span class="lineno">  659</span>                                           idx, idy);</div>
+<div class="line"><span class="lineno">  660</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), idx.size(), &amp;idx[0],</div>
+<div class="line"><span class="lineno">  661</span>                         PETSC_COPY_VALUES, ix);</div>
+<div class="line"><span class="lineno">  662</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), idy.size(), &amp;idy[0],</div>
+<div class="line"><span class="lineno">  663</span>                         PETSC_COPY_VALUES, iy);</div>
+<div class="line"><span class="lineno">  664</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#ab489d977ae070c2b8baae2f599a3e7ea">dEbug</a>) {</div>
+<div class="line"><span class="lineno">  665</span>    ISView(*ix, PETSC_VIEWER_STDOUT_WORLD);</div>
+<div class="line"><span class="lineno">  666</span>    ISView(*iy, PETSC_VIEWER_STDOUT_WORLD);</div>
+<div class="line"><span class="lineno">  667</span>  }</div>
+<div class="line"><span class="lineno">  668</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><span class="lineno">  669</span>}</div>
+<div class="ttc" id="agroup__mofem__is__managers_html_ga9012d2c713790ead86d56b1657db5188"><div class="ttname"><a href="#ga9012d2c713790ead86d56b1657db5188">MoFEM::ISManager::isCreateFromProblemToOtherProblem</a></div><div class="ttdeci">MoFEMErrorCode isCreateFromProblemToOtherProblem(const std::string x_problem, RowColData x_rc, const std::string y_problem, RowColData y_rc, std::vector&lt; int &gt; &amp;idx, std::vector&lt; int &gt; &amp;idy) const</div><div class="ttdoc">Create is from one problem to other problem.</div><div class="ttdef"><b>Definition</b> <a href="_i_s_manager_8cpp_source.html#l00599">ISManager.cpp:599</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -633,186 +627,59 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>MoFEMErrorCode </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00648">648</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  650</span>                                                                     {</div>
-<div class="line"><span class="lineno">  651</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
-<div class="line"><span class="lineno">  652</span>  <span class="keyword">const</span> Problem *px_ptr;</div>
-<div class="line"><span class="lineno">  653</span>  <span class="keyword">const</span> Problem *py_ptr;</div>
-<div class="line"><span class="lineno">  654</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  655</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(x_problem, &amp;px_ptr);</div>
-<div class="line"><span class="lineno">  656</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(y_problem, &amp;py_ptr);</div>
-<div class="line"><span class="lineno">  657</span>  NumeredDofEntityByLocalIdx::iterator y_dit, hi_y_dit;</div>
-<div class="line"><span class="lineno">  658</span>  <span class="keywordflow">switch</span> (y_rc) {</div>
-<div class="line"><span class="lineno">  659</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
-<div class="line"><span class="lineno">  660</span>    y_dit =</div>
-<div class="line"><span class="lineno">  661</span>        py_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;PetscLocalIdx_mi_tag&gt;().lower_bound(0);</div>
-<div class="line"><span class="lineno">  662</span>    hi_y_dit =</div>
-<div class="line"><span class="lineno">  663</span>        py_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;PetscLocalIdx_mi_tag&gt;().lower_bound(</div>
-<div class="line"><span class="lineno">  664</span>            py_ptr-&gt;getNbLocalDofsRow()); <span class="comment">// should be lower</span></div>
-<div class="line"><span class="lineno">  665</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  666</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
-<div class="line"><span class="lineno">  667</span>    y_dit =</div>
-<div class="line"><span class="lineno">  668</span>        py_ptr-&gt;numeredColDofsPtr-&gt;get&lt;PetscLocalIdx_mi_tag&gt;().lower_bound(0);</div>
-<div class="line"><span class="lineno">  669</span>    hi_y_dit =</div>
-<div class="line"><span class="lineno">  670</span>        py_ptr-&gt;numeredColDofsPtr-&gt;get&lt;PetscLocalIdx_mi_tag&gt;().lower_bound(</div>
-<div class="line"><span class="lineno">  671</span>            py_ptr-&gt;getNbLocalDofsCol()); <span class="comment">// should be lower</span></div>
-<div class="line"><span class="lineno">  672</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  673</span>  <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  674</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>, <span class="stringliteral">&quot;not implemented&quot;</span>);</div>
-<div class="line"><span class="lineno">  675</span>  }</div>
-<div class="line"><span class="lineno">  676</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="group__dof__multi__indices.html#gabda6f8cf08f5f04defabb8eec375b65f">NumeredDofEntityByUId</a> *x_numered_dofs_by_uid;</div>
-<div class="line"><span class="lineno">  677</span>  <span class="keywordflow">switch</span> (x_rc) {</div>
-<div class="line"><span class="lineno">  678</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
-<div class="line"><span class="lineno">  679</span>    x_numered_dofs_by_uid = &amp;(px_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;());</div>
-<div class="line"><span class="lineno">  680</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  681</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
-<div class="line"><span class="lineno">  682</span>    x_numered_dofs_by_uid = &amp;(px_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;());</div>
-<div class="line"><span class="lineno">  683</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  684</span>  <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  685</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>, <span class="stringliteral">&quot;not implemented&quot;</span>);</div>
-<div class="line"><span class="lineno">  686</span>  }</div>
-<div class="line"><span class="lineno">  687</span>  <span class="keywordflow">for</span> (; y_dit != hi_y_dit; y_dit++) {</div>
-<div class="line"><span class="lineno">  688</span>    <span class="keywordflow">if</span> ((*y_dit)-&gt;getPart() != (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>()) {</div>
-<div class="line"><span class="lineno">  689</span>      SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a>, <span class="stringliteral">&quot;data inconsistency&quot;</span>);</div>
-<div class="line"><span class="lineno">  690</span>    }</div>
-<div class="line"><span class="lineno">  691</span>    NumeredDofEntityByUId::iterator x_dit;</div>
-<div class="line"><span class="lineno">  692</span>    x_dit = x_numered_dofs_by_uid-&gt;find((*y_dit)-&gt;getLocalUniqueId());</div>
-<div class="line"><span class="lineno">  693</span>    <span class="keywordflow">if</span> (x_dit == x_numered_dofs_by_uid-&gt;end())</div>
-<div class="line"><span class="lineno">  694</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  695</span>    idx.push_back((*x_dit)-&gt;getPetscGlobalDofIdx());</div>
-<div class="line"><span class="lineno">  696</span>    idy.push_back((*y_dit)-&gt;getPetscGlobalDofIdx());</div>
-<div class="line"><span class="lineno">  697</span>  }</div>
-<div class="line"><span class="lineno">  698</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><span class="lineno">  699</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00599">599</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  601</span>                                                                     {</div>
+<div class="line"><span class="lineno">  602</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
+<div class="line"><span class="lineno">  603</span>  <span class="keyword">const</span> Problem *px_ptr;</div>
+<div class="line"><span class="lineno">  604</span>  <span class="keyword">const</span> Problem *py_ptr;</div>
+<div class="line"><span class="lineno">  605</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><span class="lineno">  606</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(x_problem, &amp;px_ptr);</div>
+<div class="line"><span class="lineno">  607</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(y_problem, &amp;py_ptr);</div>
+<div class="line"><span class="lineno">  608</span>  NumeredDofEntityByLocalIdx::iterator y_dit, hi_y_dit;</div>
+<div class="line"><span class="lineno">  609</span>  <span class="keywordflow">switch</span> (y_rc) {</div>
+<div class="line"><span class="lineno">  610</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
+<div class="line"><span class="lineno">  611</span>    y_dit =</div>
+<div class="line"><span class="lineno">  612</span>        py_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;PetscLocalIdx_mi_tag&gt;().lower_bound(0);</div>
+<div class="line"><span class="lineno">  613</span>    hi_y_dit =</div>
+<div class="line"><span class="lineno">  614</span>        py_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;PetscLocalIdx_mi_tag&gt;().lower_bound(</div>
+<div class="line"><span class="lineno">  615</span>            py_ptr-&gt;getNbLocalDofsRow()); <span class="comment">// should be lower</span></div>
+<div class="line"><span class="lineno">  616</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  617</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
+<div class="line"><span class="lineno">  618</span>    y_dit =</div>
+<div class="line"><span class="lineno">  619</span>        py_ptr-&gt;numeredColDofsPtr-&gt;get&lt;PetscLocalIdx_mi_tag&gt;().lower_bound(0);</div>
+<div class="line"><span class="lineno">  620</span>    hi_y_dit =</div>
+<div class="line"><span class="lineno">  621</span>        py_ptr-&gt;numeredColDofsPtr-&gt;get&lt;PetscLocalIdx_mi_tag&gt;().lower_bound(</div>
+<div class="line"><span class="lineno">  622</span>            py_ptr-&gt;getNbLocalDofsCol()); <span class="comment">// should be lower</span></div>
+<div class="line"><span class="lineno">  623</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  624</span>  <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  625</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>, <span class="stringliteral">&quot;not implemented&quot;</span>);</div>
+<div class="line"><span class="lineno">  626</span>  }</div>
+<div class="line"><span class="lineno">  627</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="group__dof__multi__indices.html#gabda6f8cf08f5f04defabb8eec375b65f">NumeredDofEntityByUId</a> *x_numered_dofs_by_uid;</div>
+<div class="line"><span class="lineno">  628</span>  <span class="keywordflow">switch</span> (x_rc) {</div>
+<div class="line"><span class="lineno">  629</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
+<div class="line"><span class="lineno">  630</span>    x_numered_dofs_by_uid = &amp;(px_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;());</div>
+<div class="line"><span class="lineno">  631</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  632</span>  <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
+<div class="line"><span class="lineno">  633</span>    x_numered_dofs_by_uid = &amp;(px_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;());</div>
+<div class="line"><span class="lineno">  634</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  635</span>  <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  636</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>, <span class="stringliteral">&quot;not implemented&quot;</span>);</div>
+<div class="line"><span class="lineno">  637</span>  }</div>
+<div class="line"><span class="lineno">  638</span>  <span class="keywordflow">for</span> (; y_dit != hi_y_dit; y_dit++) {</div>
+<div class="line"><span class="lineno">  639</span>    <span class="keywordflow">if</span> ((*y_dit)-&gt;getPart() != (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>()) {</div>
+<div class="line"><span class="lineno">  640</span>      SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a>, <span class="stringliteral">&quot;data inconsistency&quot;</span>);</div>
+<div class="line"><span class="lineno">  641</span>    }</div>
+<div class="line"><span class="lineno">  642</span>    NumeredDofEntityByUId::iterator x_dit;</div>
+<div class="line"><span class="lineno">  643</span>    x_dit = x_numered_dofs_by_uid-&gt;find((*y_dit)-&gt;getLocalUniqueId());</div>
+<div class="line"><span class="lineno">  644</span>    <span class="keywordflow">if</span> (x_dit == x_numered_dofs_by_uid-&gt;end())</div>
+<div class="line"><span class="lineno">  645</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  646</span>    idx.push_back((*x_dit)-&gt;getPetscGlobalDofIdx());</div>
+<div class="line"><span class="lineno">  647</span>    idy.push_back((*y_dit)-&gt;getPetscGlobalDofIdx());</div>
+<div class="line"><span class="lineno">  648</span>  }</div>
+<div class="line"><span class="lineno">  649</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><span class="lineno">  650</span>}</div>
 <div class="ttc" id="adefinitions_8h_html_a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724"><div class="ttname"><a href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a></div><div class="ttdeci">@ MOFEM_DATA_INCONSISTENCY</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00031">definitions.h:31</a></div></div>
 <div class="ttc" id="agroup__dof__multi__indices_html_gabda6f8cf08f5f04defabb8eec375b65f"><div class="ttname"><a href="group__dof__multi__indices.html#gabda6f8cf08f5f04defabb8eec375b65f">MoFEM::NumeredDofEntityByUId</a></div><div class="ttdeci">NumeredDofEntity_multiIndex::index&lt; Unique_mi_tag &gt;::type NumeredDofEntityByUId</div><div class="ttdoc">Numbered DoF multi-index by UId.</div><div class="ttdef"><b>Definition</b> <a href="_dofs_multi_indices_8hpp_source.html#l00475">DofsMultiIndices.hpp:475</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="gadc3489b87d6a13804fa002c21e8490c8" name="gadc3489b87d6a13804fa002c21e8490c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadc3489b87d6a13804fa002c21e8490c8">&#9670;&#160;</a></span>isCreateProblemBrokenFieldAndRank()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> MoFEM::ISManager::isCreateProblemBrokenFieldAndRank </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; boost::weak_ptr&lt; <a class="el" href="struct_mo_f_e_m_1_1_numered_dof_entity.html">NumeredDofEntity</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dofs_vec</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_mo_f_e_m_1_1_smart_petsc_obj.html">SmartPetscObj</a>&lt; IS &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>smart_is</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">MPI_Comm</td>          <td class="paramname"><span class="paramname"><em>comm</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PETSC_COMM_SELF</span>&#160;) const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>IS for given problem, field and rank range (collective) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dofs_vec</td><td>vector of dofs </td></tr>
-    <tr><td class="paramname">smart_is</td><td>IS </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">is</td><td>out value</td></tr>
-    <tr><td class="paramname">is</td><td>out value </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00357">357</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  359</span>                                                      {</div>
-<div class="line"><span class="lineno">  360</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  361</span> </div>
-<div class="line"><span class="lineno">  362</span>  std::vector&lt;int&gt; idx_vec;</div>
-<div class="line"><span class="lineno">  363</span>  idx_vec.reserve(dofs_vec.size());</div>
-<div class="line"><span class="lineno">  364</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;dof : dofs_vec) {</div>
-<div class="line"><span class="lineno">  365</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> d = dof.lock()) {</div>
-<div class="line"><span class="lineno">  366</span>      idx_vec.emplace_back(<a class="code hl_variable" href="namespacesdf__hertz__2d__axisymm__plane.html#a8204f26163e5d184298bc6fa855b88ea">d</a>-&gt;getPetscGlobalDofIdx());</div>
-<div class="line"><span class="lineno">  367</span>    }</div>
-<div class="line"><span class="lineno">  368</span>  }</div>
-<div class="line"><span class="lineno">  369</span> </div>
-<div class="line"><span class="lineno">  370</span>  IS is_raw;</div>
-<div class="line"><span class="lineno">  371</span>  <span class="keywordtype">int</span> *id;</div>
-<div class="line"><span class="lineno">  372</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscMalloc(idx_vec.size() * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>), &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  373</span>  std::copy(idx_vec.begin(), idx_vec.end(), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  374</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(comm, idx_vec.size(), <span class="keywordtype">id</span>, PETSC_OWN_POINTER, &amp;is_raw);</div>
-<div class="line"><span class="lineno">  375</span> </div>
-<div class="line"><span class="lineno">  376</span>  smart_is = SmartPetscObj&lt;IS&gt;(is_raw);</div>
-<div class="line"><span class="lineno">  377</span> </div>
-<div class="line"><span class="lineno">  378</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><span class="lineno">  379</span>}</div>
-<div class="ttc" id="anamespacesdf__hertz__2d__axisymm__plane_html_a8204f26163e5d184298bc6fa855b88ea"><div class="ttname"><a href="namespacesdf__hertz__2d__axisymm__plane.html#a8204f26163e5d184298bc6fa855b88ea">sdf_hertz_2d_axisymm_plane.d</a></div><div class="ttdeci">float d</div><div class="ttdef"><b>Definition</b> <a href="sdf__hertz__2d__axisymm__plane_8py_source.html#l00004">sdf_hertz_2d_axisymm_plane.py:4</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="gaff90d54f68557787af9ce1911290f10a" name="gaff90d54f68557787af9ce1911290f10a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaff90d54f68557787af9ce1911290f10a">&#9670;&#160;</a></span>isCreateProblemBrokenFieldAndRankLocal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> MoFEM::ISManager::isCreateProblemBrokenFieldAndRankLocal </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; boost::weak_ptr&lt; <a class="el" href="struct_mo_f_e_m_1_1_numered_dof_entity.html">NumeredDofEntity</a> &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dofs_vec</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_mo_f_e_m_1_1_smart_petsc_obj.html">SmartPetscObj</a>&lt; IS &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>smart_is</em></span>&#160;) const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>IS for given problem, field and rank range (collective) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dofs_vec</td><td>vector of dofs </td></tr>
-    <tr><td class="paramname">smart_is</td><td>IS </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">is</td><td>out value</td></tr>
-    <tr><td class="paramname">is</td><td>out value </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00381">381</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  383</span>                                       {</div>
-<div class="line"><span class="lineno">  384</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  385</span> </div>
-<div class="line"><span class="lineno">  386</span>  std::vector&lt;int&gt; idx_vec;</div>
-<div class="line"><span class="lineno">  387</span>  idx_vec.reserve(dofs_vec.size());</div>
-<div class="line"><span class="lineno">  388</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;dof : dofs_vec) {</div>
-<div class="line"><span class="lineno">  389</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> d = dof.lock()) {</div>
-<div class="line"><span class="lineno">  390</span>      idx_vec.emplace_back(<a class="code hl_variable" href="namespacesdf__hertz__2d__axisymm__plane.html#a8204f26163e5d184298bc6fa855b88ea">d</a>-&gt;getPetscLocalDofIdx());</div>
-<div class="line"><span class="lineno">  391</span>    }</div>
-<div class="line"><span class="lineno">  392</span>  }</div>
-<div class="line"><span class="lineno">  393</span> </div>
-<div class="line"><span class="lineno">  394</span>  IS is_raw;</div>
-<div class="line"><span class="lineno">  395</span>  <span class="keywordtype">int</span> *id;</div>
-<div class="line"><span class="lineno">  396</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscMalloc(idx_vec.size() * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>), &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  397</span>  std::copy(idx_vec.begin(), idx_vec.end(), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  398</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(PETSC_COMM_SELF, idx_vec.size(), <span class="keywordtype">id</span>, PETSC_OWN_POINTER,</div>
-<div class="line"><span class="lineno">  399</span>                         &amp;is_raw);</div>
-<div class="line"><span class="lineno">  400</span> </div>
-<div class="line"><span class="lineno">  401</span>  smart_is = SmartPetscObj&lt;IS&gt;(is_raw);</div>
-<div class="line"><span class="lineno">  402</span> </div>
-<div class="line"><span class="lineno">  403</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><span class="lineno">  404</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -887,21 +754,21 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>MoFEMErrorCode </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00505">505</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  508</span>                                                      {</div>
-<div class="line"><span class="lineno">  509</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
-<div class="line"><span class="lineno">  510</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  511</span>  <a class="code hl_class" href="class_entity_handle.html">EntityHandle</a> field_meshset = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a1c6b68dd3f48fc34347938bb5f0227a8">get_field_meshset</a>(field);</div>
-<div class="line"><span class="lineno">  512</span>  <a class="code hl_class" href="class_range.html">Range</a> ents;</div>
-<div class="line"><span class="lineno">  513</span>  <span class="keywordflow">for</span> (; low_type &lt;= hi_type; ++low_type)</div>
-<div class="line"><span class="lineno">  514</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_entities_by_type(field_meshset, low_type,</div>
-<div class="line"><span class="lineno">  515</span>                                                   ents, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  516</span>  <span class="keywordflow">if</span> (ents_ptr)</div>
-<div class="line"><span class="lineno">  517</span>    ents = intersect(ents, *ents_ptr);</div>
-<div class="line"><span class="lineno">  518</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="#gadf02643d183d89a5b050b4fb08eab97c">isCreateProblemFieldAndRank</a>(problem_name, rc, field, min_coeff_idx,</div>
-<div class="line"><span class="lineno">  519</span>                                     max_coeff_idx, is, &amp;ents);</div>
-<div class="line"><span class="lineno">  520</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><span class="lineno">  521</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00456">456</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  459</span>                                                      {</div>
+<div class="line"><span class="lineno">  460</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
+<div class="line"><span class="lineno">  461</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><span class="lineno">  462</span>  <a class="code hl_class" href="class_entity_handle.html">EntityHandle</a> field_meshset = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a1c6b68dd3f48fc34347938bb5f0227a8">get_field_meshset</a>(field);</div>
+<div class="line"><span class="lineno">  463</span>  <a class="code hl_class" href="class_range.html">Range</a> ents;</div>
+<div class="line"><span class="lineno">  464</span>  <span class="keywordflow">for</span> (; low_type &lt;= hi_type; ++low_type)</div>
+<div class="line"><span class="lineno">  465</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_entities_by_type(field_meshset, low_type,</div>
+<div class="line"><span class="lineno">  466</span>                                                   ents, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  467</span>  <span class="keywordflow">if</span> (ents_ptr)</div>
+<div class="line"><span class="lineno">  468</span>    ents = intersect(ents, *ents_ptr);</div>
+<div class="line"><span class="lineno">  469</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="#gadf02643d183d89a5b050b4fb08eab97c">isCreateProblemFieldAndRank</a>(problem_name, rc, field, min_coeff_idx,</div>
+<div class="line"><span class="lineno">  470</span>                                     max_coeff_idx, is, &amp;ents);</div>
+<div class="line"><span class="lineno">  471</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><span class="lineno">  472</span>}</div>
 <div class="ttc" id="aclass_range_html"><div class="ttname"><a href="class_range.html">Range</a></div></div>
 <div class="ttc" id="agroup__mofem__is__managers_html_gadf02643d183d89a5b050b4fb08eab97c"><div class="ttname"><a href="#gadf02643d183d89a5b050b4fb08eab97c">MoFEM::ISManager::isCreateProblemFieldAndRank</a></div><div class="ttdeci">MoFEMErrorCode isCreateProblemFieldAndRank(const std::string problem_name, RowColData rc, const std::string field, int min_coeff_idx, int max_coeff_idx, IS *is, Range *ents=nullptr) const</div><div class="ttdoc">create IS for given problem, field and rank range (collective)</div><div class="ttdef"><b>Definition</b> <a href="_i_s_manager_8cpp_source.html#l00272">ISManager.cpp:272</a></div></div>
 <div class="ttc" id="astruct_mo_f_e_m_1_1_core_interface_html_a174e70b67f4f235d096d3c45d865645b"><div class="ttname"><a href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">MoFEM::CoreInterface::get_moab</a></div><div class="ttdeci">virtual moab::Interface &amp; get_moab()=0</div></div>
@@ -1184,90 +1051,90 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00406">406</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  408</span>                                                                         {</div>
-<div class="line"><span class="lineno">  409</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
-<div class="line"><span class="lineno">  410</span>  <span class="keyword">const</span> Problem *problem_ptr;</div>
-<div class="line"><span class="lineno">  411</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  412</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(problem_name, &amp;problem_ptr);</div>
-<div class="line"><span class="lineno">  413</span>  <span class="keyword">const</span> <span class="keyword">auto</span> bit_number = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a151a5aaa12774c726c7a32ba250d2586">get_field_bit_number</a>(field);</div>
-<div class="line"><span class="lineno">  414</span> </div>
-<div class="line"><span class="lineno">  415</span>  <span class="keyword">auto</span> get_low_hi_uid = [&amp;]() {</div>
-<div class="line"><span class="lineno">  416</span>    <span class="keywordflow">return</span> std::make_pair(<a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a58d767a919831ecbb8b3b72faad3e9fa">FieldEntity::getLoBitNumberUId</a>(bit_number),</div>
-<div class="line"><span class="lineno">  417</span>                          <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a07b8c0660cbaa149aa8950f05eb618fa">FieldEntity::getHiBitNumberUId</a>(bit_number));</div>
-<div class="line"><span class="lineno">  418</span>  };</div>
-<div class="line"><span class="lineno">  419</span> </div>
-<div class="line"><span class="lineno">  420</span>  <span class="keyword">auto</span> get_low_hi_uid_by_entities = [&amp;](<span class="keyword">auto</span> <a class="code hl_variable" href="namespace_hencky_ops.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a>, <span class="keyword">auto</span> s) {</div>
-<div class="line"><span class="lineno">  421</span>    <span class="keywordflow">return</span> std::make_pair(<a class="code hl_function" href="struct_mo_f_e_m_1_1_dof_entity.html#a2c69be4a12745d83234af39160f0cb89">DofEntity::getLoFieldEntityUId</a>(bit_number, f),</div>
-<div class="line"><span class="lineno">  422</span>                          <a class="code hl_function" href="struct_mo_f_e_m_1_1_dof_entity.html#a5b244cf6fac68fd7fe072bbf0bbf705c">DofEntity::getHiFieldEntityUId</a>(bit_number, s));</div>
-<div class="line"><span class="lineno">  423</span>  };</div>
-<div class="line"><span class="lineno">  424</span> </div>
-<div class="line"><span class="lineno">  425</span>  <span class="keyword">auto</span> get_low_hi = [&amp;](<span class="keyword">auto</span> lo_uid, <span class="keyword">auto</span> hi_uid) {</div>
-<div class="line"><span class="lineno">  426</span>    <span class="keyword">using </span>DofsByUId = NumeredDofEntity_multiIndex::index&lt;Unique_mi_tag&gt;::type;</div>
-<div class="line"><span class="lineno">  427</span>    DofsByUId::iterator it, hi_it;</div>
-<div class="line"><span class="lineno">  428</span>    <span class="keywordflow">switch</span> (rc) {</div>
-<div class="line"><span class="lineno">  429</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
-<div class="line"><span class="lineno">  430</span>      it = problem_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
-<div class="line"><span class="lineno">  431</span>          lo_uid);</div>
-<div class="line"><span class="lineno">  432</span>      hi_it = problem_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
-<div class="line"><span class="lineno">  433</span>          hi_uid);</div>
-<div class="line"><span class="lineno">  434</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  435</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
-<div class="line"><span class="lineno">  436</span>      it = problem_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
-<div class="line"><span class="lineno">  437</span>          lo_uid);</div>
-<div class="line"><span class="lineno">  438</span>      hi_it = problem_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
-<div class="line"><span class="lineno">  439</span>          hi_uid);</div>
-<div class="line"><span class="lineno">  440</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  441</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  442</span>      <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;not implemented&quot;</span>);</div>
-<div class="line"><span class="lineno">  443</span>    }</div>
-<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">return</span> std::make_pair(it, hi_it);</div>
-<div class="line"><span class="lineno">  445</span>  };</div>
-<div class="line"><span class="lineno">  446</span> </div>
-<div class="line"><span class="lineno">  447</span>  <span class="keyword">auto</span> check = [&amp;](<span class="keyword">auto</span> it) {</div>
-<div class="line"><span class="lineno">  448</span>    <span class="keyword">const</span> <span class="keyword">auto</span> coeff_idx = (*it)-&gt;getDofCoeffIdx();</div>
-<div class="line"><span class="lineno">  449</span>    <span class="keywordflow">if</span> (</div>
-<div class="line"><span class="lineno">  450</span> </div>
-<div class="line"><span class="lineno">  451</span>        coeff_idx &lt; min_coeff_idx || coeff_idx &gt; max_coeff_idx</div>
-<div class="line"><span class="lineno">  452</span> </div>
-<div class="line"><span class="lineno">  453</span>    )</div>
-<div class="line"><span class="lineno">  454</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  455</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  456</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  457</span>  };</div>
-<div class="line"><span class="lineno">  458</span> </div>
-<div class="line"><span class="lineno">  459</span>  <span class="keyword">auto</span> emplace_indices = [&amp;](<span class="keyword">auto</span> it, <span class="keyword">auto</span> hi_it, <span class="keyword">auto</span> &amp;idx_vec) {</div>
-<div class="line"><span class="lineno">  460</span>    <span class="keywordflow">for</span> (; it != hi_it; ++it) {</div>
-<div class="line"><span class="lineno">  461</span>      <span class="keywordflow">if</span> (check(it))</div>
-<div class="line"><span class="lineno">  462</span>        idx_vec.emplace_back((*it)-&gt;getPetscLocalDofIdx());</div>
-<div class="line"><span class="lineno">  463</span>    }</div>
-<div class="line"><span class="lineno">  464</span>  };</div>
-<div class="line"><span class="lineno">  465</span> </div>
-<div class="line"><span class="lineno">  466</span>  <span class="keyword">auto</span> [lo_uid, hi_uid] = get_low_hi_uid();</div>
-<div class="line"><span class="lineno">  467</span>  <span class="keyword">auto</span> [lo, hi] = get_low_hi(lo_uid, hi_uid);</div>
-<div class="line"><span class="lineno">  468</span>  std::vector&lt;int&gt; idx_vec;</div>
-<div class="line"><span class="lineno">  469</span>  idx_vec.reserve(std::distance(lo, hi));</div>
-<div class="line"><span class="lineno">  470</span> </div>
-<div class="line"><span class="lineno">  471</span>  <span class="keywordflow">if</span> (ents_ptr) {</div>
-<div class="line"><span class="lineno">  472</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> pit = ents_ptr-&gt;const_pair_begin();</div>
-<div class="line"><span class="lineno">  473</span>         pit != ents_ptr-&gt;const_pair_end(); ++pit) {</div>
-<div class="line"><span class="lineno">  474</span>      <span class="keyword">auto</span> [lo_uid, hi_uid] =</div>
-<div class="line"><span class="lineno">  475</span>          get_low_hi_uid_by_entities(pit-&gt;first, pit-&gt;second);</div>
-<div class="line"><span class="lineno">  476</span>      <span class="keyword">auto</span> [lo, hi] = get_low_hi(lo_uid, hi_uid);</div>
-<div class="line"><span class="lineno">  477</span>      emplace_indices(lo, hi, idx_vec);</div>
-<div class="line"><span class="lineno">  478</span>    }</div>
-<div class="line"><span class="lineno">  479</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  480</span>    emplace_indices(lo, hi, idx_vec);</div>
-<div class="line"><span class="lineno">  481</span>  }</div>
-<div class="line"><span class="lineno">  482</span> </div>
-<div class="line"><span class="lineno">  483</span>  <span class="keywordtype">int</span> *id;</div>
-<div class="line"><span class="lineno">  484</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscMalloc(idx_vec.size() * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>), &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  485</span>  std::copy(idx_vec.begin(), idx_vec.end(), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  486</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(PETSC_COMM_SELF, idx_vec.size(), <span class="keywordtype">id</span>, PETSC_OWN_POINTER,</div>
-<div class="line"><span class="lineno">  487</span>                         is);</div>
-<div class="line"><span class="lineno">  488</span> </div>
-<div class="line"><span class="lineno">  489</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><span class="lineno">  490</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00357">357</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  359</span>                                                                         {</div>
+<div class="line"><span class="lineno">  360</span>  <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="struct_mo_f_e_m_1_1_i_s_manager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
+<div class="line"><span class="lineno">  361</span>  <span class="keyword">const</span> Problem *problem_ptr;</div>
+<div class="line"><span class="lineno">  362</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><span class="lineno">  363</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__access.html#ga311e33eaba451897a151813e8ea6fae4">get_problem</a>(problem_name, &amp;problem_ptr);</div>
+<div class="line"><span class="lineno">  364</span>  <span class="keyword">const</span> <span class="keyword">auto</span> bit_number = m_field.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a151a5aaa12774c726c7a32ba250d2586">get_field_bit_number</a>(field);</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>  <span class="keyword">auto</span> get_low_hi_uid = [&amp;]() {</div>
+<div class="line"><span class="lineno">  367</span>    <span class="keywordflow">return</span> std::make_pair(<a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a58d767a919831ecbb8b3b72faad3e9fa">FieldEntity::getLoBitNumberUId</a>(bit_number),</div>
+<div class="line"><span class="lineno">  368</span>                          <a class="code hl_function" href="struct_mo_f_e_m_1_1_field_entity.html#a07b8c0660cbaa149aa8950f05eb618fa">FieldEntity::getHiBitNumberUId</a>(bit_number));</div>
+<div class="line"><span class="lineno">  369</span>  };</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>  <span class="keyword">auto</span> get_low_hi_uid_by_entities = [&amp;](<span class="keyword">auto</span> <a class="code hl_variable" href="namespace_hencky_ops.html#a990086ab6bdc667b830a40f0ffb74aa3">f</a>, <span class="keyword">auto</span> s) {</div>
+<div class="line"><span class="lineno">  372</span>    <span class="keywordflow">return</span> std::make_pair(<a class="code hl_function" href="struct_mo_f_e_m_1_1_dof_entity.html#a2c69be4a12745d83234af39160f0cb89">DofEntity::getLoFieldEntityUId</a>(bit_number, f),</div>
+<div class="line"><span class="lineno">  373</span>                          <a class="code hl_function" href="struct_mo_f_e_m_1_1_dof_entity.html#a5b244cf6fac68fd7fe072bbf0bbf705c">DofEntity::getHiFieldEntityUId</a>(bit_number, s));</div>
+<div class="line"><span class="lineno">  374</span>  };</div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span>  <span class="keyword">auto</span> get_low_hi = [&amp;](<span class="keyword">auto</span> lo_uid, <span class="keyword">auto</span> hi_uid) {</div>
+<div class="line"><span class="lineno">  377</span>    <span class="keyword">using </span>DofsByUId = NumeredDofEntity_multiIndex::index&lt;Unique_mi_tag&gt;::type;</div>
+<div class="line"><span class="lineno">  378</span>    DofsByUId::iterator it, hi_it;</div>
+<div class="line"><span class="lineno">  379</span>    <span class="keywordflow">switch</span> (rc) {</div>
+<div class="line"><span class="lineno">  380</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>:</div>
+<div class="line"><span class="lineno">  381</span>      it = problem_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
+<div class="line"><span class="lineno">  382</span>          lo_uid);</div>
+<div class="line"><span class="lineno">  383</span>      hi_it = problem_ptr-&gt;numeredRowDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
+<div class="line"><span class="lineno">  384</span>          hi_uid);</div>
+<div class="line"><span class="lineno">  385</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  386</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a>:</div>
+<div class="line"><span class="lineno">  387</span>      it = problem_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().lower_bound(</div>
+<div class="line"><span class="lineno">  388</span>          lo_uid);</div>
+<div class="line"><span class="lineno">  389</span>      hi_it = problem_ptr-&gt;numeredColDofsPtr-&gt;get&lt;Unique_mi_tag&gt;().upper_bound(</div>
+<div class="line"><span class="lineno">  390</span>          hi_uid);</div>
+<div class="line"><span class="lineno">  391</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  393</span>      <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;not implemented&quot;</span>);</div>
+<div class="line"><span class="lineno">  394</span>    }</div>
+<div class="line"><span class="lineno">  395</span>    <span class="keywordflow">return</span> std::make_pair(it, hi_it);</div>
+<div class="line"><span class="lineno">  396</span>  };</div>
+<div class="line"><span class="lineno">  397</span> </div>
+<div class="line"><span class="lineno">  398</span>  <span class="keyword">auto</span> check = [&amp;](<span class="keyword">auto</span> it) {</div>
+<div class="line"><span class="lineno">  399</span>    <span class="keyword">const</span> <span class="keyword">auto</span> coeff_idx = (*it)-&gt;getDofCoeffIdx();</div>
+<div class="line"><span class="lineno">  400</span>    <span class="keywordflow">if</span> (</div>
+<div class="line"><span class="lineno">  401</span> </div>
+<div class="line"><span class="lineno">  402</span>        coeff_idx &lt; min_coeff_idx || coeff_idx &gt; max_coeff_idx</div>
+<div class="line"><span class="lineno">  403</span> </div>
+<div class="line"><span class="lineno">  404</span>    )</div>
+<div class="line"><span class="lineno">  405</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  406</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  407</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  408</span>  };</div>
+<div class="line"><span class="lineno">  409</span> </div>
+<div class="line"><span class="lineno">  410</span>  <span class="keyword">auto</span> emplace_indices = [&amp;](<span class="keyword">auto</span> it, <span class="keyword">auto</span> hi_it, <span class="keyword">auto</span> &amp;idx_vec) {</div>
+<div class="line"><span class="lineno">  411</span>    <span class="keywordflow">for</span> (; it != hi_it; ++it) {</div>
+<div class="line"><span class="lineno">  412</span>      <span class="keywordflow">if</span> (check(it))</div>
+<div class="line"><span class="lineno">  413</span>        idx_vec.emplace_back((*it)-&gt;getPetscLocalDofIdx());</div>
+<div class="line"><span class="lineno">  414</span>    }</div>
+<div class="line"><span class="lineno">  415</span>  };</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>  <span class="keyword">auto</span> [lo_uid, hi_uid] = get_low_hi_uid();</div>
+<div class="line"><span class="lineno">  418</span>  <span class="keyword">auto</span> [lo, hi] = get_low_hi(lo_uid, hi_uid);</div>
+<div class="line"><span class="lineno">  419</span>  std::vector&lt;int&gt; idx_vec;</div>
+<div class="line"><span class="lineno">  420</span>  idx_vec.reserve(std::distance(lo, hi));</div>
+<div class="line"><span class="lineno">  421</span> </div>
+<div class="line"><span class="lineno">  422</span>  <span class="keywordflow">if</span> (ents_ptr) {</div>
+<div class="line"><span class="lineno">  423</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> pit = ents_ptr-&gt;const_pair_begin();</div>
+<div class="line"><span class="lineno">  424</span>         pit != ents_ptr-&gt;const_pair_end(); ++pit) {</div>
+<div class="line"><span class="lineno">  425</span>      <span class="keyword">auto</span> [lo_uid, hi_uid] =</div>
+<div class="line"><span class="lineno">  426</span>          get_low_hi_uid_by_entities(pit-&gt;first, pit-&gt;second);</div>
+<div class="line"><span class="lineno">  427</span>      <span class="keyword">auto</span> [lo, hi] = get_low_hi(lo_uid, hi_uid);</div>
+<div class="line"><span class="lineno">  428</span>      emplace_indices(lo, hi, idx_vec);</div>
+<div class="line"><span class="lineno">  429</span>    }</div>
+<div class="line"><span class="lineno">  430</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  431</span>    emplace_indices(lo, hi, idx_vec);</div>
+<div class="line"><span class="lineno">  432</span>  }</div>
+<div class="line"><span class="lineno">  433</span> </div>
+<div class="line"><span class="lineno">  434</span>  <span class="keywordtype">int</span> *id;</div>
+<div class="line"><span class="lineno">  435</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscMalloc(idx_vec.size() * <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>), &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  436</span>  std::copy(idx_vec.begin(), idx_vec.end(), <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  437</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ISCreateGeneral(PETSC_COMM_SELF, idx_vec.size(), <span class="keywordtype">id</span>, PETSC_OWN_POINTER,</div>
+<div class="line"><span class="lineno">  438</span>                         is);</div>
+<div class="line"><span class="lineno">  439</span> </div>
+<div class="line"><span class="lineno">  440</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><span class="lineno">  441</span>}</div>
 <div class="ttc" id="adefinitions_8h_html_af1d7ca96eafbfaebd5f26bf7fcc4c285"><div class="ttname"><a href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a></div><div class="ttdeci">#define THROW_MESSAGE(msg)</div><div class="ttdoc">Throw MoFEM exception.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00574">definitions.h:574</a></div></div>
 <div class="ttc" id="anamespace_hencky_ops_html_a990086ab6bdc667b830a40f0ffb74aa3"><div class="ttname"><a href="namespace_hencky_ops.html#a990086ab6bdc667b830a40f0ffb74aa3">HenckyOps::f</a></div><div class="ttdeci">auto f</div><div class="ttdef"><b>Definition</b> <a href="_hencky_ops_8hpp_source.html#l00015">HenckyOps.hpp:15</a></div></div>
 <div class="ttc" id="astruct_mo_f_e_m_1_1_dof_entity_html_a2c69be4a12745d83234af39160f0cb89"><div class="ttname"><a href="struct_mo_f_e_m_1_1_dof_entity.html#a2c69be4a12745d83234af39160f0cb89">MoFEM::DofEntity::getLoFieldEntityUId</a></div><div class="ttdeci">static UId getLoFieldEntityUId(const FieldBitNumber bit, const EntityHandle ent)</div><div class="ttdef"><b>Definition</b> <a href="_dofs_multi_indices_8hpp_source.html#l00069">DofsMultiIndices.hpp:69</a></div></div>
@@ -1338,17 +1205,17 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00492">492</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  495</span>                           {</div>
-<div class="line"><span class="lineno">  496</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  497</span>  IS is;</div>
-<div class="line"><span class="lineno">  498</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="#gad3fcf0a8cdba24660e4c43b23de728a4">isCreateProblemFieldAndRankLocal</a>(problem_name, rc, field,</div>
-<div class="line"><span class="lineno">  499</span>                                          min_coeff_idx, max_coeff_idx, &amp;is,</div>
-<div class="line"><span class="lineno">  500</span>                                          ents_ptr);</div>
-<div class="line"><span class="lineno">  501</span>  smart_is = SmartPetscObj&lt;IS&gt;(is);</div>
-<div class="line"><span class="lineno">  502</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
-<div class="line"><span class="lineno">  503</span>}</div>
-<div class="ttc" id="agroup__mofem__is__managers_html_gad3fcf0a8cdba24660e4c43b23de728a4"><div class="ttname"><a href="#gad3fcf0a8cdba24660e4c43b23de728a4">MoFEM::ISManager::isCreateProblemFieldAndRankLocal</a></div><div class="ttdeci">MoFEMErrorCode isCreateProblemFieldAndRankLocal(const std::string problem_name, RowColData rc, const std::string field, int min_coeff_idx, int max_coeff_idx, IS *is, Range *ents=nullptr) const</div><div class="ttdoc">create IS for given problem, field and rank range (collective)</div><div class="ttdef"><b>Definition</b> <a href="_i_s_manager_8cpp_source.html#l00406">ISManager.cpp:406</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_i_s_manager_8cpp_source.html#l00443">443</a> of file <a class="el" href="_i_s_manager_8cpp_source.html">ISManager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  446</span>                           {</div>
+<div class="line"><span class="lineno">  447</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"><span class="lineno">  448</span>  IS is;</div>
+<div class="line"><span class="lineno">  449</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="#gad3fcf0a8cdba24660e4c43b23de728a4">isCreateProblemFieldAndRankLocal</a>(problem_name, rc, field,</div>
+<div class="line"><span class="lineno">  450</span>                                          min_coeff_idx, max_coeff_idx, &amp;is,</div>
+<div class="line"><span class="lineno">  451</span>                                          ents_ptr);</div>
+<div class="line"><span class="lineno">  452</span>  smart_is = SmartPetscObj&lt;IS&gt;(is);</div>
+<div class="line"><span class="lineno">  453</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line"><span class="lineno">  454</span>}</div>
+<div class="ttc" id="agroup__mofem__is__managers_html_gad3fcf0a8cdba24660e4c43b23de728a4"><div class="ttname"><a href="#gad3fcf0a8cdba24660e4c43b23de728a4">MoFEM::ISManager::isCreateProblemFieldAndRankLocal</a></div><div class="ttdeci">MoFEMErrorCode isCreateProblemFieldAndRankLocal(const std::string problem_name, RowColData rc, const std::string field, int min_coeff_idx, int max_coeff_idx, IS *is, Range *ents=nullptr) const</div><div class="ttdoc">create IS for given problem, field and rank range (collective)</div><div class="ttdef"><b>Definition</b> <a href="_i_s_manager_8cpp_source.html#l00357">ISManager.cpp:357</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

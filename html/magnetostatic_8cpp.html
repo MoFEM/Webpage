@@ -223,53 +223,54 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   55</span>    PetscBool flg_file;</div>
 <div class="line"><span class="lineno">   56</span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>[255];</div>
 <div class="line"><span class="lineno">   57</span>    PetscInt <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a> = 2;</div>
-<div class="line"><span class="lineno">   58</span>    PetscBool regression_test = PETSC_FALSE;</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBegin(PETSC_COMM_WORLD, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;Magnetostatics options&quot;</span>,</div>
-<div class="line"><span class="lineno">   61</span>                             <span class="stringliteral">&quot;none&quot;</span>);</div>
-<div class="line"><span class="lineno">   62</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsString(<span class="stringliteral">&quot;-my_file&quot;</span>, <span class="stringliteral">&quot;mesh file name&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;mesh.h5m&quot;</span>,</div>
-<div class="line"><span class="lineno">   63</span>                              <a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>, 255, &amp;flg_file);</div>
-<div class="line"><span class="lineno">   64</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsInt(<span class="stringliteral">&quot;-my_order&quot;</span>, <span class="stringliteral">&quot;default approximation order&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><span class="lineno">   65</span>                           <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, &amp;<a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, PETSC_NULL);</div>
-<div class="line"><span class="lineno">   66</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBool(</div>
-<div class="line"><span class="lineno">   67</span>        <span class="stringliteral">&quot;-regression_test&quot;</span>,</div>
-<div class="line"><span class="lineno">   68</span>        <span class="stringliteral">&quot;if set norm of solution vector is check agains expected value &quot;</span>,</div>
-<div class="line"><span class="lineno">   69</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><span class="lineno">   70</span>        PETSC_FALSE, &amp;regression_test, PETSC_NULL);</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    <a class="code hl_variable" href="namespace_mo_f_e_m_1_1_exceptions.html#a4e27e82eaf63e387dd653941d6245b49">ierr</a> = PetscOptionsEnd();</div>
-<div class="line"><span class="lineno">   73</span>    <a class="code hl_define" href="definitions_8h.html#a6eadfb97993ab556555ad084fe088482">CHKERRG</a>(<a class="code hl_variable" href="namespace_mo_f_e_m_1_1_exceptions.html#a4e27e82eaf63e387dd653941d6245b49">ierr</a>);</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>    <span class="comment">// Read mesh to MOAB</span></div>
-<div class="line"><span class="lineno">   76</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *option;</div>
-<div class="line"><span class="lineno">   77</span>    option = <span class="stringliteral">&quot;PARALLEL=READ_PART;&quot;</span></div>
-<div class="line"><span class="lineno">   78</span>             <span class="stringliteral">&quot;PARALLEL_RESOLVE_SHARED_ENTS;&quot;</span></div>
-<div class="line"><span class="lineno">   79</span>             <span class="stringliteral">&quot;PARTITION=PARALLEL_PARTITION;&quot;</span>;</div>
-<div class="line"><span class="lineno">   80</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.load_file(<a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>, 0, option);</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>    <span class="comment">// Create mofem interface</span></div>
-<div class="line"><span class="lineno">   83</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::Core</a> core(moab);</div>
-<div class="line"><span class="lineno">   84</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = core;</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>    <a class="code hl_struct" href="struct_magnetic_element.html">MagneticElement</a> magnetic(m_field);</div>
-<div class="line"><span class="lineno">   87</span>    magnetic.blockData.oRder = <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>;</div>
-<div class="line"><span class="lineno">   88</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.getNaturalBc();</div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.getEssentialBc();</div>
-<div class="line"><span class="lineno">   90</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.createFields();</div>
-<div class="line"><span class="lineno">   91</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.createElements();</div>
-<div class="line"><span class="lineno">   92</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.createProblem();</div>
-<div class="line"><span class="lineno">   93</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.solveProblem(regression_test == PETSC_TRUE);</div>
-<div class="line"><span class="lineno">   94</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.postProcessResults();</div>
-<div class="line"><span class="lineno">   95</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.destroyProblem();</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>    <span class="comment">// write solution to file (can be used by lorentz_force example)</span></div>
-<div class="line"><span class="lineno">   98</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;solution.h5m&quot;</span>, <span class="stringliteral">&quot;MOAB&quot;</span>, <span class="stringliteral">&quot;PARALLEL=WRITE_PART&quot;</span>);</div>
-<div class="line"><span class="lineno">   99</span>  }</div>
-<div class="line"><span class="lineno">  100</span>  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
-<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  104</span>}</div>
+<div class="line"><span class="lineno">   58</span>    PetscBool is_partitioned = PETSC_FALSE;</div>
+<div class="line"><span class="lineno">   59</span>    PetscBool regression_test = PETSC_FALSE;</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBegin(PETSC_COMM_WORLD, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;Magnetostatics options&quot;</span>,</div>
+<div class="line"><span class="lineno">   62</span>                             <span class="stringliteral">&quot;none&quot;</span>);</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsString(<span class="stringliteral">&quot;-my_file&quot;</span>, <span class="stringliteral">&quot;mesh file name&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;mesh.h5m&quot;</span>,</div>
+<div class="line"><span class="lineno">   64</span>                              <a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>, 255, &amp;flg_file);</div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsInt(<span class="stringliteral">&quot;-my_order&quot;</span>, <span class="stringliteral">&quot;default approximation order&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">   66</span>                           <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, &amp;<a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, PETSC_NULL);</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBool(</div>
+<div class="line"><span class="lineno">   68</span>        <span class="stringliteral">&quot;-regression_test&quot;</span>,</div>
+<div class="line"><span class="lineno">   69</span>        <span class="stringliteral">&quot;if set norm of solution vector is check agains expected value &quot;</span>,</div>
+<div class="line"><span class="lineno">   70</span>        <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><span class="lineno">   71</span>        PETSC_FALSE, &amp;regression_test, PETSC_NULL);</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <a class="code hl_variable" href="namespace_mo_f_e_m_1_1_exceptions.html#a4e27e82eaf63e387dd653941d6245b49">ierr</a> = PetscOptionsEnd();</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_define" href="definitions_8h.html#a6eadfb97993ab556555ad084fe088482">CHKERRG</a>(<a class="code hl_variable" href="namespace_mo_f_e_m_1_1_exceptions.html#a4e27e82eaf63e387dd653941d6245b49">ierr</a>);</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="comment">// Read mesh to MOAB</span></div>
+<div class="line"><span class="lineno">   77</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *option;</div>
+<div class="line"><span class="lineno">   78</span>    option = <span class="stringliteral">&quot;PARALLEL=READ_PART;&quot;</span></div>
+<div class="line"><span class="lineno">   79</span>             <span class="stringliteral">&quot;PARALLEL_RESOLVE_SHARED_ENTS;&quot;</span></div>
+<div class="line"><span class="lineno">   80</span>             <span class="stringliteral">&quot;PARTITION=PARALLEL_PARTITION;&quot;</span>;</div>
+<div class="line"><span class="lineno">   81</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.load_file(<a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>, 0, option);</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    <span class="comment">// Create mofem interface</span></div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::Core</a> core(moab);</div>
+<div class="line"><span class="lineno">   85</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = core;</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    <a class="code hl_struct" href="struct_magnetic_element.html">MagneticElement</a> magnetic(m_field);</div>
+<div class="line"><span class="lineno">   88</span>    magnetic.blockData.oRder = <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>;</div>
+<div class="line"><span class="lineno">   89</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.getNaturalBc();</div>
+<div class="line"><span class="lineno">   90</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.getEssentialBc();</div>
+<div class="line"><span class="lineno">   91</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.createFields();</div>
+<div class="line"><span class="lineno">   92</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.createElements();</div>
+<div class="line"><span class="lineno">   93</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.createProblem();</div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.solveProblem(regression_test == PETSC_TRUE);</div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.postProcessResults();</div>
+<div class="line"><span class="lineno">   96</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> magnetic.destroyProblem();</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    <span class="comment">// write solution to file (can be used by lorentz_force example)</span></div>
+<div class="line"><span class="lineno">   99</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;solution.h5m&quot;</span>, <span class="stringliteral">&quot;MOAB&quot;</span>, <span class="stringliteral">&quot;PARALLEL=WRITE_PART&quot;</span>);</div>
+<div class="line"><span class="lineno">  100</span>  }</div>
+<div class="line"><span class="lineno">  101</span>  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line"><span class="lineno">  104</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  105</span>}</div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5fe7ca274d3c5ac11ac61888ce74bc13"><div class="ttname"><a href="definitions_8h.html#a5fe7ca274d3c5ac11ac61888ce74bc13">MYPCOMM_INDEX</a></div><div class="ttdeci">#define MYPCOMM_INDEX</div><div class="ttdoc">default communicator number PCOMM</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00228">definitions.h:228</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a6eadfb97993ab556555ad084fe088482"><div class="ttname"><a href="definitions_8h.html#a6eadfb97993ab556555ad084fe088482">CHKERRG</a></div><div class="ttdeci">#define CHKERRG(n)</div><div class="ttdoc">Check error code of MoFEM/MOAB/PETSc function.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00496">definitions.h:496</a></div></div>

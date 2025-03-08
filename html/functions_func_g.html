@@ -163,7 +163,6 @@ $(function(){ initResizable(false); });
 <li>GenericAttributeData()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_generic_attribute_data.html#a5e736e33d4de142c6567d0903140290d">MoFEM::GenericAttributeData</a></li>
 <li>GenericCubitBcData()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_generic_cubit_bc_data.html#afd762e5fd3f6d4385f14c952a6672bc0">MoFEM::GenericCubitBcData</a></li>
 <li>GenericElementInterface()&#160;:&#160;<a class="el" href="struct_generic_element_interface.html#ad3084b20c1624ef203a59f42efcf8b9c">GenericElementInterface</a></li>
-<li>genericFormImpl()&#160;:&#160;<a class="el" href="struct_lie_groups_1_1_s_o3.html#a792246832d720c2d1b655afa7d15781a">LieGroups::SO3</a></li>
 <li>GenericSliding()&#160;:&#160;<a class="el" href="struct_generic_sliding.html#a91c740f9ab089730fcf5a10aa6b2e15f">GenericSliding</a></li>
 <li>genrateDerivativeIndices()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_bernstein_bezier.html#a9c1189ccb523f446138abfad5b387886">MoFEM::BernsteinBezier</a></li>
 <li>genrateDerivativeIndicesEdges()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_bernstein_bezier.html#aff2cef188c93cf16802db07fded03cff">MoFEM::BernsteinBezier</a></li>
@@ -336,6 +335,7 @@ $(function(){ initResizable(false); });
 <li>getBlockData()&#160;:&#160;<a class="el" href="struct_data_at_integration_pts.html#a0b81382b544fe096f33402acb620005f">DataAtIntegrationPts</a>, <a class="el" href="struct_data_at_integration_pts_simple_rods.html#a0dcd9ae3be323d78bccbddda966a114e">DataAtIntegrationPtsSimpleRods</a>, <a class="el" href="struct_meta_spring_b_c_1_1_data_at_integration_pts_springs.html#ad4ad085494b327ad45f9c8ec58904925">MetaSpringBC::DataAtIntegrationPtsSprings</a></li>
 <li>getBlockHeaderData()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_cubit_mesh_sets.html#a6ace282030be7e800d6e6d9b620c8d56">MoFEM::CubitMeshSets</a></li>
 <li>getBlockIS()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_bc_manager.html#a7c8b5b5531821978a197191184811ef7">MoFEM::BcManager</a></li>
+<li>getBlockSetBCFromMesh()&#160;:&#160;<a class="el" href="struct_vtk_interface.html#a4d7f73b409be18d5cfd696d3b3768054">VtkInterface</a></li>
 <li>getBoundaryConditions()&#160;:&#160;<a class="el" href="struct_vtk_interface.html#ada34fff86576d481782e100897767e0a">VtkInterface</a></li>
 <li>getBoundaryExplicitRhsFE()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_pipeline_manager.html#acf6a86bb2ea45f083c82a2c6f76a65db">MoFEM::PipelineManager</a></li>
 <li>getBoundaryFEName()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_simple.html#a1310d740ca100e0261983b7de38ce8af">MoFEM::Simple</a></li>
@@ -606,8 +606,6 @@ $(function(){ initResizable(false); });
 <li>getGradLogStretchDotTensorAtPts()&#160;:&#160;<a class="el" href="struct_eshelbian_plasticity_1_1_data_at_integration_pts.html#abc3df7ef01c157c19a323e079b2f638a">EshelbianPlasticity::DataAtIntegrationPts</a></li>
 <li>getHandleFromUniqueId()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_field_entity.html#a0b2b7998f7e8f67a43d371978e278e0e">MoFEM::FieldEntity</a></li>
 <li>getHasLocalIndex()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_numered_dof_entity.html#afcb38de6838e6fefdd184942b116f454">MoFEM::NumeredDofEntity</a></li>
-<li>getHat()&#160;:&#160;<a class="el" href="struct_lie_groups_1_1_s_o3.html#a5c249593d984225e342ed229a569cc49">LieGroups::SO3</a></li>
-<li>getHatImpl()&#160;:&#160;<a class="el" href="struct_lie_groups_1_1_s_o3.html#a51d20494997a71bdea82694b60a24e6f">LieGroups::SO3</a></li>
 <li>getHeatCapacityPtr()&#160;:&#160;<a class="el" href="struct_thermo_elastic_problem_1_1_blocked_parameters.html#a8d8a99796c41ac359b5dae1a1cb246cf">ThermoElasticProblem::BlockedParameters</a></li>
 <li>getHeatConductivityPtr()&#160;:&#160;<a class="el" href="struct_thermo_elastic_problem_1_1_blocked_parameters.html#acbaf6903cdd8347bc000204c4e6de01e">ThermoElasticProblem::BlockedParameters</a></li>
 <li>getHiBitNumberUId()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_field_entity.html#a07b8c0660cbaa149aa8950f05eb618fa">MoFEM::FieldEntity</a></li>
@@ -849,7 +847,6 @@ $(function(){ initResizable(false); });
 <li>getParentEntType()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1interface___ref_entity.html#a0bb53847d2b8c207d7fb5d2a79707aa7">MoFEM::interface_RefEntity&lt; T &gt;</a>, <a class="el" href="struct_mo_f_e_m_1_1_ref_entity_tmp_3_010_01_4.html#a3415713fd4974b0245a38d77fca95a8e">MoFEM::RefEntityTmp&lt; 0 &gt;</a></li>
 <li>getParentsAdjacencies()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_parent_finite_element_adjacency_function.html#a7cbe3de5244c16ab6b266580a1cfd9f9">MoFEM::ParentFiniteElementAdjacencyFunction&lt; DIM &gt;</a></li>
 <li>getPart()&#160;:&#160;<a class="el" href="struct_arc_length_ctx.html#adf05f7720b7d2ad4dc4ab16c1db105b9">ArcLengthCtx</a>, <a class="el" href="struct_mo_f_e_m_1_1_numered_dof_entity.html#ae431d9ffafb0f3840fc2bb5059b1e475">MoFEM::NumeredDofEntity</a>, <a class="el" href="struct_mo_f_e_m_1_1_numered_ent_finite_element.html#a5cf09658809b22383a2b308d1bd2277e">MoFEM::NumeredEntFiniteElement</a></li>
-<li>getPartEntities()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_comm_interface.html#a3a44136d336ed8a0d476cb870c5743bb">MoFEM::CommInterface</a></li>
 <li>getPartProc()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1interface___ref_entity.html#a38ddb7389613874f313adc67edf93e0e">MoFEM::interface_RefEntity&lt; T &gt;</a>, <a class="el" href="struct_mo_f_e_m_1_1_ref_entity_tmp_3_010_01_4.html#a19ccc361a4b22ead82296f7e93b53c89">MoFEM::RefEntityTmp&lt; 0 &gt;</a></li>
 <li>getPartProcPtr()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1interface___ref_entity.html#a968b23505c4aa0750ac1132b5f697a65">MoFEM::interface_RefEntity&lt; T &gt;</a>, <a class="el" href="struct_mo_f_e_m_1_1_ref_entity_tmp_3_010_01_4.html#a9653cb2101254e063cbe979e5852e169">MoFEM::RefEntityTmp&lt; 0 &gt;</a></li>
 <li>getPetscGlobalDofIdx()&#160;:&#160;<a class="el" href="struct_arc_length_ctx.html#ae8ffe9ffcddbe353a93e4d74e9730d80">ArcLengthCtx</a>, <a class="el" href="struct_mo_f_e_m_1_1_numered_dof_entity.html#aaa8d60be13d173ae4cb925689d502202">MoFEM::NumeredDofEntity</a></li>
@@ -1087,8 +1084,6 @@ $(function(){ initResizable(false); });
 <li>getVectorDiffN()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#a3dc54b275ee26797ba3421a0638a4267">MoFEM::EntitiesFieldData::EntData</a></li>
 <li>getVectorFromData()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_time_scale_vector.html#ae485c8fb30c25cda309ece92d1db4926">MoFEM::TimeScaleVector&lt; SPACE_DIM &gt;</a></li>
 <li>getVectorN()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#a83cf121da90b1d958bfcb4ef7e0ce588">MoFEM::EntitiesFieldData::EntData</a></li>
-<li>getVee()&#160;:&#160;<a class="el" href="struct_lie_groups_1_1_s_o3.html#af79af1378c7366c109ad89585729a270">LieGroups::SO3</a></li>
-<li>getVeeImpl()&#160;:&#160;<a class="el" href="struct_lie_groups_1_1_s_o3.html#ae3f207a92bc16b068df019048fcbf891">LieGroups::SO3</a></li>
 <li>getVLikeFormatedString()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_log_manager.html#aa2958777fbc8f4c265d6bd255fa91422">MoFEM::LogManager</a></li>
 <li>getVolume()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_cut_mesh_interface.html#a27883f29003acbc5b5f3c6d155887e12">MoFEM::CutMeshInterface</a>, <a class="el" href="struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html#a27ada41314b2540fb0a722aad7257051">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a></li>
 <li>getVolumeFE()&#160;:&#160;<a class="el" href="struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_1_1_user_data_operator.html#a274e1f94cc7f96f2c39d423705e91aa9">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a>, <a class="el" href="struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_on_contact_prism_side_1_1_user_data_operator.html#a9d63f54cc8b7c67b7d4f5584466aef9d">MoFEM::VolumeElementForcesAndSourcesCoreOnContactPrismSide::UserDataOperator</a>, <a class="el" href="struct_mo_f_e_m_1_1_volume_element_forces_and_sources_core_on_side_1_1_user_data_operator.html#afc1b79215d62592f96d5ba2f41d48c64">MoFEM::VolumeElementForcesAndSourcesCoreOnSide::UserDataOperator</a></li>

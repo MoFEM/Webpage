@@ -278,18 +278,360 @@ Note on the choice of spaces for the mixed problem</h2>
 <h1><a class="anchor" id="navier_stokes_implementation"></a>
 Implementation</h1>
 <p>The example class has necessary fields to store input parameters and internal data structures, as well as a set of functions for setting up and solving the problem:</p>
-<div class="fragment"></div><!-- fragment --><p>The set of functions used in this tutorials in the following:</p>
-<div class="fragment"></div><!-- fragment --><p>The function ExampleNavierStokes::runProblem is executed from the <code>main</code> function:</p>
-<div class="fragment"></div><!-- fragment --><h2><a class="anchor" id="navier_stokes_running_input_parameters"></a>
+<div class="fragment"><div class="line"><span class="comment"></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_navier_stokes_example.html">NavierStokesExample</a> {</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_function" href="struct_navier_stokes_example.html#a920a510a704bc50eb9a5309d2e269a4e">NavierStokesExample</a>(<a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field) : <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>(m_field) {</div>
+<div class="line">    <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a> = boost::make_shared&lt;NavierStokesElement::CommonData&gt;(m_field);</div>
+<div class="line">  }</div>
+<div class="line">  <a class="code hl_function" href="struct_navier_stokes_example.html#a1677a328755666e896cabbbb64ee86e7">~NavierStokesExample</a>() {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESDestroy(&amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a027c1da77f604ef046d2767fbff1e3d5">snes</a>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMDestroy(&amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a51c8013c5a3af9ea0e67bab39c0daa16">runProblem</a>();</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">  <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>;</div>
+<div class="line"> </div>
+<div class="line">  PetscBool <a class="code hl_variable" href="struct_navier_stokes_example.html#a4e446687c7d05a813b636b510a7d3b43">isPartitioned</a> = PETSC_FALSE;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#ac85ca333183c5c93feca0e0ac18cc664">orderVelocity</a> = 2; <span class="comment">// default approximation orderVelocity</span></div>
+<div class="line">  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#a3511590e2f638cb93f1dd616db506c5e">orderPressure</a> = 1; <span class="comment">// default approximation orderPressure</span></div>
+<div class="line">  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#a23c276da8b4da10d9234d840262913fe">numHoLevels</a> = 0;</div>
+<div class="line">  PetscBool <a class="code hl_variable" href="struct_navier_stokes_example.html#a634fc6673ceb0002d80e8a7aa4388093">isDiscontPressure</a> = PETSC_FALSE;</div>
+<div class="line">  PetscBool <a class="code hl_variable" href="struct_navier_stokes_example.html#a9aee6544f3c35f68b0419e7d6b44a175">isHoGeometry</a> = PETSC_TRUE;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#a70ea0f7930b870ce5a90df7b9495f853">pressureScale</a> = 1.0;</div>
+<div class="line">  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a> = 1.0;</div>
+<div class="line">  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a> = 1.0;</div>
+<div class="line">  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#ae49034df9fb49b2b24d5f4c1e9dd7039">reNumber</a> = 1.0;</div>
+<div class="line">  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#aa314bfd43bbfee365eabcac44c0f73a7">density</a>;</div>
+<div class="line">  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#a30e9c2e7f9e97884a31a10dfde241f31">viscosity</a>;</div>
+<div class="line">  PetscBool <a class="code hl_variable" href="struct_navier_stokes_example.html#a1d2cf68679f1cc86cb32099e7545396d">isStokesFlow</a> = PETSC_FALSE;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#a7ecaa982eced739534344de5015d1acf">numSteps</a> = 1;</div>
+<div class="line">  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#a752dd04499c920647b688e18e12eca3b">lambdaStep</a> = 1.0;</div>
+<div class="line">  <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#ab1851070923971f66267bd1d21b1d95e">lambda</a> = 0.0;</div>
+<div class="line">  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_navier_stokes_example.html#aeba64ce62699b12d8eb99aca742c8600">step</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_class" href="class_range.html">Range</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#a0947679f1db023e88f299bf9aef0c788">solidFaces</a>;</div>
+<div class="line">  BitRefLevel <a class="code hl_variable" href="struct_navier_stokes_example.html#a8ab4b23c32716e16ad1775381d411163">bitLevel</a>;</div>
+<div class="line"> </div>
+<div class="line">  DM <a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>;</div>
+<div class="line">  SNES <a class="code hl_variable" href="struct_navier_stokes_example.html#a027c1da77f604ef046d2767fbff1e3d5">snes</a>;</div>
+<div class="line"> </div>
+<div class="line">  boost::shared_ptr&lt;NavierStokesElement::CommonData&gt; <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_struct" href="struct_mo_f_e_m_1_1_smart_petsc_obj.html">SmartPetscObj&lt;Vec&gt;</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>;</div>
+<div class="line">  <a class="code hl_struct" href="struct_mo_f_e_m_1_1_smart_petsc_obj.html">SmartPetscObj&lt;Vec&gt;</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#a52c6563adf7ea6b26d76bf93637325e5">F</a>;</div>
+<div class="line">  <a class="code hl_struct" href="struct_mo_f_e_m_1_1_smart_petsc_obj.html">SmartPetscObj&lt;Mat&gt;</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#afffb02721eadd37bc9afd40383195e53">Aij</a>;</div>
+<div class="line"> </div>
+<div class="line">  boost::shared_ptr&lt;VolumeElementForcesAndSourcesCore&gt; <a class="code hl_variable" href="struct_navier_stokes_example.html#a28267d1c5f2db8dbf38a48b9bbe05fd9">feLhsPtr</a>;</div>
+<div class="line">  boost::shared_ptr&lt;VolumeElementForcesAndSourcesCore&gt; <a class="code hl_variable" href="struct_navier_stokes_example.html#aaa4f62b3022fcea58ea314659da2e013">feRhsPtr</a>;</div>
+<div class="line"> </div>
+<div class="line">  boost::shared_ptr&lt;FaceElementForcesAndSourcesCore&gt; <a class="code hl_variable" href="struct_navier_stokes_example.html#a06cf93399978e44184ff99192a2a12bc">feDragPtr</a>;</div>
+<div class="line">  boost::shared_ptr&lt;VolumeElementForcesAndSourcesCoreOnSide&gt; <a class="code hl_variable" href="struct_navier_stokes_example.html#a922b7b49a8ff7c932abf2970dcea6353">feDragSidePtr</a>;</div>
+<div class="line"> </div>
+<div class="line">  boost::shared_ptr&lt;DirichletDisplacementBc&gt; <a class="code hl_variable" href="struct_navier_stokes_example.html#a633de4aa1f49685c441c69c9c0571151">dirichletBcPtr</a>;</div>
+<div class="line">  boost::ptr_map&lt;std::string, NeumannForcesSurface&gt; <a class="code hl_variable" href="struct_navier_stokes_example.html#abadabff990b673227892d6133f24cab2">neumannForces</a>;</div>
+<div class="line"> </div>
+<div class="line">  boost::shared_ptr&lt;PostProcVol&gt; <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>;</div>
+<div class="line">  boost::shared_ptr&lt;PostProcFace&gt; <a class="code hl_variable" href="struct_navier_stokes_example.html#a0e2e033173b9426ebd3922b3e4d79545">fePostProcDragPtr</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#af2a124e38ab337041172a72e3970dd1e">readInput</a>();</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a9dd68c0ae7866e9e040659f49c65f8af">findBlocks</a>();</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a3d202fff44befd80728d53b61c8d7dad">setupFields</a>();</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a0700944c75e2c4c1fbda5a37c34d2b0a">defineFiniteElements</a>();</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a02a47f622ca0f8e9618eb365514be269">setupDiscreteManager</a>();</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a7e6e8aa883f1a157f519c73a987ffba1">setupAlgebraicStructures</a>();</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a01d2467a1d2600fe714c082b2cc838a5">setupElementInstances</a>();</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a46f8457e7b5e5ab929db8475c1a87249">setupSNES</a>();</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#adafe18cf9f87b240c7e5d522415651a9">solveProblem</a>();</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#ae74f1de1197604f9981ec446b4f7b06d">postProcess</a>();</div>
+<div class="line">};<span class="comment"></span></div>
+</div><!-- fragment --><p>The set of functions used in this tutorials in the following:</p>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a51c8013c5a3af9ea0e67bab39c0daa16">NavierStokesExample::runProblem</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#af2a124e38ab337041172a72e3970dd1e">readInput</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a9dd68c0ae7866e9e040659f49c65f8af">findBlocks</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a3d202fff44befd80728d53b61c8d7dad">setupFields</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a0700944c75e2c4c1fbda5a37c34d2b0a">defineFiniteElements</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a02a47f622ca0f8e9618eb365514be269">setupDiscreteManager</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a7e6e8aa883f1a157f519c73a987ffba1">setupAlgebraicStructures</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a01d2467a1d2600fe714c082b2cc838a5">setupElementInstances</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a46f8457e7b5e5ab929db8475c1a87249">setupSNES</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#adafe18cf9f87b240c7e5d522415651a9">solveProblem</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p>The function ExampleNavierStokes::runProblem is executed from the <code>main</code> function:</p>
+<div class="fragment"><div class="line"><span class="comment"></span><span class="keywordtype">int</span> <a class="code hl_function" href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> param_file[] = <span class="stringliteral">&quot;param_file.petsc&quot;</span>;</div>
+<div class="line">  <span class="comment">// Initialise MoFEM</span></div>
+<div class="line">  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">try</span> {</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create mesh database</span></div>
+<div class="line">    moab::Core mb_instance;              <span class="comment">// create database</span></div>
+<div class="line">    moab::Interface &amp;moab = mb_instance; <span class="comment">// create interface to database</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create MoFEM database and link it to MoAB</span></div>
+<div class="line">    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::Core</a> core(moab);</div>
+<div class="line">    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = core;</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_struct" href="struct_navier_stokes_example.html">NavierStokesExample</a> ex(m_field);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ex.runProblem();</div>
+<div class="line">  }</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// finish work cleaning memory, getting statistics, etc</span></div>
+<div class="line">  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><h2><a class="anchor" id="navier_stokes_running_input_parameters"></a>
 Reading mesh and input parameters</h2>
 <p>The workflow of solving a problem using the finite-element method starts from reading the mesh and other input parameters:</p>
-<div class="fragment"></div><!-- fragment --><p>Once the mesh is read, we find the set of tetrahedra corresponding to the computational domain. Furthermore, we identify the fluid-structure interface, i.e. the set of triangles corresponding to the surface of the sphere:</p>
-<div class="fragment"></div><!-- fragment --><h2><a class="anchor" id="navier_stokes_running_setup"></a>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#af2a124e38ab337041172a72e3970dd1e">NavierStokesExample::readInput</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line">  <span class="keywordtype">char</span> <a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>[255];</div>
+<div class="line">  PetscBool flg_mesh_file;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBegin(PETSC_COMM_WORLD, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;NAVIER_STOKES problem&quot;</span>,</div>
+<div class="line">                           <span class="stringliteral">&quot;none&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsString(<span class="stringliteral">&quot;-my_file&quot;</span>, <span class="stringliteral">&quot;mesh file name&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;mesh.h5m&quot;</span>,</div>
+<div class="line">                            <a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>, 255, &amp;flg_mesh_file);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBool(<span class="stringliteral">&quot;-my_is_partitioned&quot;</span>, <span class="stringliteral">&quot;is partitioned?&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">                          <a class="code hl_variable" href="struct_navier_stokes_example.html#a4e446687c7d05a813b636b510a7d3b43">isPartitioned</a>, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a4e446687c7d05a813b636b510a7d3b43">isPartitioned</a>, PETSC_NULL);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsInt(<span class="stringliteral">&quot;-my_order_u&quot;</span>, <span class="stringliteral">&quot;approximation orderVelocity&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">                         <a class="code hl_variable" href="struct_navier_stokes_example.html#ac85ca333183c5c93feca0e0ac18cc664">orderVelocity</a>, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#ac85ca333183c5c93feca0e0ac18cc664">orderVelocity</a>, PETSC_NULL);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsInt(<span class="stringliteral">&quot;-my_order_p&quot;</span>, <span class="stringliteral">&quot;approximation orderPressure&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">                         <a class="code hl_variable" href="struct_navier_stokes_example.html#a3511590e2f638cb93f1dd616db506c5e">orderPressure</a>, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a3511590e2f638cb93f1dd616db506c5e">orderPressure</a>, PETSC_NULL);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsInt(<span class="stringliteral">&quot;-my_num_ho_levels&quot;</span>,</div>
+<div class="line">                         <span class="stringliteral">&quot;number of higher order boundary levels&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">                         <a class="code hl_variable" href="struct_navier_stokes_example.html#a23c276da8b4da10d9234d840262913fe">numHoLevels</a>, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a23c276da8b4da10d9234d840262913fe">numHoLevels</a>, PETSC_NULL);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBool(<span class="stringliteral">&quot;-my_discont_pressure&quot;</span>, <span class="stringliteral">&quot;discontinuous pressure&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">                          <a class="code hl_variable" href="struct_navier_stokes_example.html#a634fc6673ceb0002d80e8a7aa4388093">isDiscontPressure</a>, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a634fc6673ceb0002d80e8a7aa4388093">isDiscontPressure</a>, PETSC_NULL);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBool(<span class="stringliteral">&quot;-my_ho_geometry&quot;</span>, <span class="stringliteral">&quot;use second order geometry&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">                          <a class="code hl_variable" href="struct_navier_stokes_example.html#a9aee6544f3c35f68b0419e7d6b44a175">isHoGeometry</a>, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a9aee6544f3c35f68b0419e7d6b44a175">isHoGeometry</a>, PETSC_NULL);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsScalar(<span class="stringliteral">&quot;-my_length_scale&quot;</span>, <span class="stringliteral">&quot;length scale&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a>,</div>
+<div class="line">                            &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a>, PETSC_NULL);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsScalar(<span class="stringliteral">&quot;-my_velocity_scale&quot;</span>, <span class="stringliteral">&quot;velocity scale&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">                            <a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a>, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a>, PETSC_NULL);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBool(<span class="stringliteral">&quot;-my_stokes_flow&quot;</span>, <span class="stringliteral">&quot;stokes flow&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a1d2cf68679f1cc86cb32099e7545396d">isStokesFlow</a>,</div>
+<div class="line">                          &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a1d2cf68679f1cc86cb32099e7545396d">isStokesFlow</a>, PETSC_NULL);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsInt(<span class="stringliteral">&quot;-my_step_num&quot;</span>, <span class="stringliteral">&quot;number of steps&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a7ecaa982eced739534344de5015d1acf">numSteps</a>,</div>
+<div class="line">                         &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a7ecaa982eced739534344de5015d1acf">numSteps</a>, PETSC_NULL);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="namespace_mo_f_e_m_1_1_exceptions.html#a4e27e82eaf63e387dd653941d6245b49">ierr</a> = PetscOptionsEnd();</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (flg_mesh_file != PETSC_TRUE) {</div>
+<div class="line">    SETERRQ(PETSC_COMM_SELF, 1, <span class="stringliteral">&quot;*** ERROR -my_file (MESH FILE NEEDED)&quot;</span>);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Read whole mesh or part of it if partitioned</span></div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a4e446687c7d05a813b636b510a7d3b43">isPartitioned</a> == PETSC_TRUE) {</div>
+<div class="line">    <span class="comment">// This is a case of distributed mesh and algebra. In that case each</span></div>
+<div class="line">    <span class="comment">// processor keeps only part of the problem.</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *option;</div>
+<div class="line">    option = <span class="stringliteral">&quot;PARALLEL=READ_PART;&quot;</span></div>
+<div class="line">             <span class="stringliteral">&quot;PARALLEL_RESOLVE_SHARED_ENTS;&quot;</span></div>
+<div class="line">             <span class="stringliteral">&quot;PARTITION=PARALLEL_PARTITION;&quot;</span>;</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().load_file(<a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>, 0, option);</div>
+<div class="line">  } <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// In this case, we have distributed algebra, i.e. assembly of vectors and</span></div>
+<div class="line">    <span class="comment">// matrices is in parallel, but whole mesh is stored on all processors.</span></div>
+<div class="line">    <span class="comment">// snes and matrix scales well, however problem set-up of problem is</span></div>
+<div class="line">    <span class="comment">// not fully parallel.</span></div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *option;</div>
+<div class="line">    option = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().load_file(<a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a>, 0, option);</div>
+<div class="line">  }</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#af5bf443e0fec3bbba18aae8042162fcd">rebuild_database</a>();</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a8ab4b23c32716e16ad1775381d411163">bitLevel</a>.set(0);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_bit_ref_manager.html">BitRefManager</a>&gt;()-&gt;setBitRefLevelByDim(0, 3,</div>
+<div class="line">                                                                   <a class="code hl_variable" href="struct_navier_stokes_example.html#a8ab4b23c32716e16ad1775381d411163">bitLevel</a>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p>Once the mesh is read, we find the set of tetrahedra corresponding to the computational domain. Furthermore, we identify the fluid-structure interface, i.e. the set of triangles corresponding to the surface of the sphere:</p>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a9dd68c0ae7866e9e040659f49c65f8af">NavierStokesExample::findBlocks</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efcac77b6cdcfb446c668fd1d7c66cfd15ab">BLOCKSET</a>, <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>)) {</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;getName().compare(0, 9, <span class="stringliteral">&quot;MAT_FLUID&quot;</span>) == 0) {</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;getMeshsetId();</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_entities_by_dimension(</div>
+<div class="line">          <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;getMeshset(), 3, <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfBlocksData[<span class="keywordtype">id</span>].eNts, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">      std::vector&lt;double&gt; attributes;</div>
+<div class="line">      <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;getAttributes(attributes);</div>
+<div class="line">      <span class="keywordflow">if</span> (attributes.size() &lt; 2) {</div>
+<div class="line">        SETERRQ1(PETSC_COMM_WORLD, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a>,</div>
+<div class="line">                 <span class="stringliteral">&quot;should be at least 2 attributes but is %d&quot;</span>,</div>
+<div class="line">                 attributes.size());</div>
+<div class="line">      }</div>
+<div class="line">      <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfBlocksData[id].iD = id;</div>
+<div class="line">      <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfBlocksData[id].fluidViscosity = attributes[0];</div>
+<div class="line">      <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfBlocksData[id].fluidDensity = attributes[1];</div>
+<div class="line"> </div>
+<div class="line">      <a class="code hl_variable" href="struct_navier_stokes_example.html#a30e9c2e7f9e97884a31a10dfde241f31">viscosity</a> = <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfBlocksData[id].fluidViscosity;</div>
+<div class="line">      <a class="code hl_variable" href="struct_navier_stokes_example.html#aa314bfd43bbfee365eabcac44c0f73a7">density</a> = <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfBlocksData[id].fluidDensity;</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efcac77b6cdcfb446c668fd1d7c66cfd15ab">BLOCKSET</a>, <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>)) {</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;getName().compare(0, 9, <span class="stringliteral">&quot;INT_SOLID&quot;</span>) == 0) {</div>
+<div class="line">      <a class="code hl_class" href="class_range.html">Range</a> tets, tet;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;getMeshsetId();</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_entities_by_type(</div>
+<div class="line">          <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>-&gt;getMeshset(), MBTRI, <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfFacesData[<span class="keywordtype">id</span>].eNts, <span class="keyword">true</span>);</div>
+<div class="line">      <a class="code hl_variable" href="struct_navier_stokes_example.html#a0947679f1db023e88f299bf9aef0c788">solidFaces</a>.merge(<a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfFacesData[<span class="keywordtype">id</span>].eNts);</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_adjacencies(</div>
+<div class="line">          <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfFacesData[<span class="keywordtype">id</span>].eNts, 3, <span class="keyword">true</span>, tets,</div>
+<div class="line">          moab::Interface::UNION);</div>
+<div class="line">      tet = <a class="code hl_class" href="class_range.html">Range</a>(tets.front(), tets.front());</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a> : <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfBlocksData) {</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>.second.eNts.contains(tet)) {</div>
+<div class="line">          <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfFacesData[id].fluidViscosity =</div>
+<div class="line">              <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>.second.fluidViscosity;</div>
+<div class="line">          <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfFacesData[id].fluidDensity = <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>.second.fluidDensity;</div>
+<div class="line">          <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfFacesData[id].iD = id;</div>
+<div class="line">          <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">      <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfFacesData[<span class="keywordtype">id</span>].fluidViscosity &lt; 0) {</div>
+<div class="line">        SETERRQ(PETSC_COMM_WORLD, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a>,</div>
+<div class="line">                <span class="stringliteral">&quot;Cannot find a fluid block adjacent to a given solid face&quot;</span>);</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><h2><a class="anchor" id="navier_stokes_running_setup"></a>
 Setting up fields, finite elements and the problem itself</h2>
 <p>Once the domain and the fluid-structure interface are identified, we can setup the problem. First, we define the velocity and pressure fields. Note that for velocity we use space H1, while for pressure the user can choose between using also H1 space (continuous approximation, Taylor-Hood element), or a discontinuous approximation using L2 space. Note that in the former case, the approximation functions for pressure has to be one order lower than that of the velocity (e.g. order 2 for velocity and order 1 for pressure), while the the latter case the difference between the two has to be 2 orders (e.g. order 3 for velocity and order 1 for pressure).</p>
 <p>Furthermore, the properties of hierarchical basis functions can be used to locally increase the approximation order for the elements on the fluid-structure interface, where the gradients of the velocity can be expected to be the highest due to the no-slip boundary condition on the surface of the sphere.</p>
-<div class="fragment"></div><!-- fragment --><p>After that the finite elements operating on the set above fields can be defined. In particular, we define elements for solving Navier-Stokes equations, computation of the drag traction and force on the surface of the surface, and, finally, for computing the contribution of Neumann (natural) boundary conditions.</p>
-<div class="fragment"></div><!-- fragment --><p>Once the finite elements are defined, we will need to create element instances and push necessary operators to their pipelines. First, we setup an element for solving Navier-Stokes (or if one prefers, Stokes) equations. Note that right-hand side and left-hand side elements are considered separately. In case of Navier-Stokes equations, operators are pushed to elements pipelines using function <a class="el" href="struct_navier_stokes_element.html#a9c21126c87d7a7005ef7d36ba830d6d8" title="Setting up operators for solving Navier-Stokes equations.">NavierStokesElement::setNavierStokesOperators</a>. In particular, the following operators are pushed to right-hand side:</p><ul>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a3d202fff44befd80728d53b61c8d7dad">NavierStokesExample::setupFields</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(<span class="stringliteral">&quot;VELOCITY&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 3);</div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a634fc6673ceb0002d80e8a7aa4388093">isDiscontPressure</a>) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(<span class="stringliteral">&quot;PRESSURE&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
+<div class="line">  } <span class="keywordflow">else</span> {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(<span class="stringliteral">&quot;PRESSURE&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
+<div class="line">  }</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>,</div>
+<div class="line">                          3);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga3f2352d1e29c591592c37cc89d0e4eb4">add_ents_to_field_by_dim</a>(0, 3, <span class="stringliteral">&quot;VELOCITY&quot;</span>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga3f2352d1e29c591592c37cc89d0e4eb4">add_ents_to_field_by_dim</a>(0, 3, <span class="stringliteral">&quot;PRESSURE&quot;</span>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga3f2352d1e29c591592c37cc89d0e4eb4">add_ents_to_field_by_dim</a>(0, 3, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBVERTEX, <span class="stringliteral">&quot;VELOCITY&quot;</span>, 1);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBEDGE, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#ac85ca333183c5c93feca0e0ac18cc664">orderVelocity</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBTRI, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#ac85ca333183c5c93feca0e0ac18cc664">orderVelocity</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBTET, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#ac85ca333183c5c93feca0e0ac18cc664">orderVelocity</a>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="struct_navier_stokes_example.html#a634fc6673ceb0002d80e8a7aa4388093">isDiscontPressure</a>) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBVERTEX, <span class="stringliteral">&quot;PRESSURE&quot;</span>, 1);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBEDGE, <span class="stringliteral">&quot;PRESSURE&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a3511590e2f638cb93f1dd616db506c5e">orderPressure</a>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBTRI, <span class="stringliteral">&quot;PRESSURE&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a3511590e2f638cb93f1dd616db506c5e">orderPressure</a>);</div>
+<div class="line">  }</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBTET, <span class="stringliteral">&quot;PRESSURE&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a3511590e2f638cb93f1dd616db506c5e">orderPressure</a>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a23c276da8b4da10d9234d840262913fe">numHoLevels</a> &gt; 0) {</div>
+<div class="line">    std::vector&lt;Range&gt; levels(<a class="code hl_variable" href="struct_navier_stokes_example.html#a23c276da8b4da10d9234d840262913fe">numHoLevels</a>);</div>
+<div class="line">    <a class="code hl_class" href="class_range.html">Range</a> ents;</div>
+<div class="line">    ents.merge(<a class="code hl_variable" href="struct_navier_stokes_example.html#a0947679f1db023e88f299bf9aef0c788">solidFaces</a>);</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ll = 0; ll != <a class="code hl_variable" href="struct_navier_stokes_example.html#a23c276da8b4da10d9234d840262913fe">numHoLevels</a>; ll++) {</div>
+<div class="line">      <a class="code hl_class" href="class_range.html">Range</a> verts;</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_connectivity(ents, verts, <span class="keyword">true</span>);</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keyword">auto</span> d : {1, 2, 3}) {</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_adjacencies(verts, d, <span class="keyword">false</span>, ents,</div>
+<div class="line">                                                 moab::Interface::UNION);</div>
+<div class="line">      }</div>
+<div class="line">      levels[ll] = subtract(ents, ents.subset_by_type(MBVERTEX));</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ll = <a class="code hl_variable" href="struct_navier_stokes_example.html#a23c276da8b4da10d9234d840262913fe">numHoLevels</a> - 1; ll &gt;= 1; ll--) {</div>
+<div class="line">      levels[ll] = subtract(levels[ll], levels[ll - 1]);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> add_order = 1;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ll = <a class="code hl_variable" href="struct_navier_stokes_example.html#a23c276da8b4da10d9234d840262913fe">numHoLevels</a> - 1; ll &gt;= 0; ll--) {</div>
+<div class="line">      <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a4e446687c7d05a813b636b510a7d3b43">isPartitioned</a>)</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_comm_interface.html">CommInterface</a>&gt;()-&gt;synchroniseEntities(</div>
+<div class="line">            levels[ll]);</div>
+<div class="line"> </div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(levels[ll], <span class="stringliteral">&quot;VELOCITY&quot;</span>,</div>
+<div class="line">                                    <a class="code hl_variable" href="struct_navier_stokes_example.html#ac85ca333183c5c93feca0e0ac18cc664">orderVelocity</a> + add_order);</div>
+<div class="line">      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="struct_navier_stokes_example.html#a634fc6673ceb0002d80e8a7aa4388093">isDiscontPressure</a>)</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(levels[ll], <span class="stringliteral">&quot;PRESSURE&quot;</span>,</div>
+<div class="line">                                      <a class="code hl_variable" href="struct_navier_stokes_example.html#a3511590e2f638cb93f1dd616db506c5e">orderPressure</a> + add_order);</div>
+<div class="line">      <span class="keywordflow">else</span></div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(levels[ll].subset_by_type(MBTET),</div>
+<div class="line">                                      <span class="stringliteral">&quot;PRESSURE&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a3511590e2f638cb93f1dd616db506c5e">orderPressure</a> + add_order);</div>
+<div class="line">      ++add_order;</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBVERTEX, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, 1);</div>
+<div class="line">  <span class="comment">// Set 2nd order of approximation of geometry</span></div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a9aee6544f3c35f68b0419e7d6b44a175">isHoGeometry</a>) {</div>
+<div class="line">    <a class="code hl_class" href="class_range.html">Range</a> ents, edges;</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_entities_by_dimension(0, 3, ents);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_adjacencies(ents, 1, <span class="keyword">false</span>, edges,</div>
+<div class="line">                                             moab::Interface::UNION);</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a4e446687c7d05a813b636b510a7d3b43">isPartitioned</a>)</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_comm_interface.html">CommInterface</a>&gt;()-&gt;synchroniseEntities(edges);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(edges, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, 2);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a4e446687c7d05a813b636b510a7d3b43">isPartitioned</a>) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_comm_interface.html">CommInterface</a>&gt;()-&gt;synchroniseFieldEntities(</div>
+<div class="line">        <span class="stringliteral">&quot;VELOCITY&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_comm_interface.html">CommInterface</a>&gt;()-&gt;synchroniseFieldEntities(</div>
+<div class="line">        <span class="stringliteral">&quot;PRESSURE&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_comm_interface.html">CommInterface</a>&gt;()-&gt;synchroniseFieldEntities(</div>
+<div class="line">        <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga126ea0bb04802f9d1946435279c3da56">build_fields</a>();</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_struct" href="struct_mo_f_e_m_1_1_projection10_node_coords_on_field.html">Projection10NodeCoordsOnField</a> ent_method_material(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>,</div>
+<div class="line">                                                    <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__loops.html#ga06843828fb475925d003a31b991c425e">loop_dofs</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, ent_method_material);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p>After that the finite elements operating on the set above fields can be defined. In particular, we define elements for solving Navier-Stokes equations, computation of the drag traction and force on the surface of the surface, and, finally, for computing the contribution of Neumann (natural) boundary conditions.</p>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a0700944c75e2c4c1fbda5a37c34d2b0a">NavierStokesExample::defineFiniteElements</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Add finite element (this defines element, declaration comes later)</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_element.html#a87b96630a0a8d42083e1383aeaa6c90d">NavierStokesElement::addElement</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>, <span class="stringliteral">&quot;NAVIER_STOKES&quot;</span>, <span class="stringliteral">&quot;VELOCITY&quot;</span>,</div>
+<div class="line">                                         <span class="stringliteral">&quot;PRESSURE&quot;</span>, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_element.html#a87b96630a0a8d42083e1383aeaa6c90d">NavierStokesElement::addElement</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>, <span class="stringliteral">&quot;DRAG&quot;</span>, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <span class="stringliteral">&quot;PRESSURE&quot;</span>,</div>
+<div class="line">                                         <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, 2, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a0947679f1db023e88f299bf9aef0c788">solidFaces</a>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// setup elements for loading</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_meta_neumann_forces.html#ace9c5266987cd42a1d2350e4962e6f1b">MetaNeumannForces::addNeumannBCElements</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>, <span class="stringliteral">&quot;VELOCITY&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// build finite elements</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">build_finite_elements</a>();</div>
+<div class="line">  <span class="comment">// build adjacencies between elements and degrees of freedom</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a727653d1367e758daf2a74cb65d4dfa5">build_adjacencies</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#a8ab4b23c32716e16ad1775381d411163">bitLevel</a>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p>Once the finite elements are defined, we will need to create element instances and push necessary operators to their pipelines. First, we setup an element for solving Navier-Stokes (or if one prefers, Stokes) equations. Note that right-hand side and left-hand side elements are considered separately. In case of Navier-Stokes equations, operators are pushed to elements pipelines using function <a class="el" href="struct_navier_stokes_element.html#a9c21126c87d7a7005ef7d36ba830d6d8" title="Setting up operators for solving Navier-Stokes equations.">NavierStokesElement::setNavierStokesOperators</a>. In particular, the following operators are pushed to right-hand side:</p><ul>
 <li><a class="el" href="struct_navier_stokes_element_1_1_op_assemble_rhs_velocity_lin.html" title="Assemble linear part of the velocity component of the RHS vector.">NavierStokesElement::OpAssembleRhsVelocityLin</a>,</li>
 <li><a class="el" href="struct_navier_stokes_element_1_1_op_assemble_rhs_velocity_non_lin.html" title="Assemble non-linear part of the velocity component of the RHS vector.">NavierStokesElement::OpAssembleRhsVelocityNonLin</a>,</li>
 <li><a class="el" href="struct_navier_stokes_element_1_1_op_assemble_rhs_pressure.html" title="Assemble the pressure component of the RHS vector.">NavierStokesElement::OpAssembleRhsPressure</a>,</li>
@@ -300,12 +642,354 @@ Setting up fields, finite elements and the problem itself</h2>
 <li><a class="el" href="struct_navier_stokes_element_1_1_op_assemble_lhs_off_diag.html" title="Assemble off-diagonal block of the LHS Operator for assembling off-diagonal block of the LHS.">NavierStokesElement::OpAssembleLhsOffDiag</a>.</li>
 </ul>
 <p>Upon that, we setup in the same way elements for computing the drag traction and the drag force acting on the sphere using operators <a class="el" href="struct_navier_stokes_element_1_1_op_calc_drag_traction.html" title="Calculate drag traction on the fluid-solid interface.">NavierStokesElement::OpCalcDragTraction</a> and <a class="el" href="struct_navier_stokes_element_1_1_op_calc_drag_force.html" title="Calculate drag force on the fluid-solid interface.">NavierStokesElement::OpCalcDragForce</a>, respectively. Additionally, operators for the Neumann boundary conditions are set using the function <a class="el" href="struct_meta_neumann_forces.html#ad0f272e64b6937cc53769ecaa409d8b1" title="Set operators to finite elements calculating right hand side vector.">MetaNeumannForces::setMomentumFluxOperators</a> and the element for the Dirichlet boundary conditions is created as well. Finally, operators for post-processing output are created: in the volume and on the fluid-solid interface.</p>
-<div class="fragment"></div><!-- fragment --><p>Note that the class for enforcing Dirichlet boundary conditions <a class="el" href="struct_dirichlet_displacement_bc.html" title="Set Dirichlet boundary conditions on displacements.">DirichletDisplacementBc</a> used in the snippet above requires the algebraic data structures for storing components of the right-hand side vector, left-hand side matrix and the solution vector. Therefore, these data structures need to be created beforehand using PETSc:</p>
-<div class="fragment"></div><!-- fragment --><p>However, one may note that creation of PETSCc vectors and matrices requires the instance of the <a class="el" href="namespace_mo_f_e_m.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> Discrete Manager (DM), which needs a certain setup as well:</p>
-<div class="fragment"></div><!-- fragment --><p>Finally, the last preparatory step required is the setup of the SNES functionality:</p>
-<div class="fragment"></div><!-- fragment --><h2><a class="anchor" id="navier_stokes_running_solving_problem"></a>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a01d2467a1d2600fe714c082b2cc838a5">NavierStokesExample::setupElementInstances</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a28267d1c5f2db8dbf38a48b9bbe05fd9">feLhsPtr</a> = boost::shared_ptr&lt;VolumeElementForcesAndSourcesCore&gt;(</div>
+<div class="line">      <span class="keyword">new</span> VolumeElementForcesAndSourcesCore(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>));</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#aaa4f62b3022fcea58ea314659da2e013">feRhsPtr</a> = boost::shared_ptr&lt;VolumeElementForcesAndSourcesCore&gt;(</div>
+<div class="line">      <span class="keyword">new</span> VolumeElementForcesAndSourcesCore(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>));</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a28267d1c5f2db8dbf38a48b9bbe05fd9">feLhsPtr</a>-&gt;getRuleHook = <a class="code hl_struct" href="struct_navier_stokes_element_1_1_vol_rule.html">NavierStokesElement::VolRule</a>();</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#aaa4f62b3022fcea58ea314659da2e013">feRhsPtr</a>-&gt;getRuleHook = <a class="code hl_struct" href="struct_navier_stokes_element_1_1_vol_rule.html">NavierStokesElement::VolRule</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="namespace_mo_f_e_m.html#af01ee5c3bc1505a09c369d8d455bba1e">addHOOpsVol</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, *<a class="code hl_variable" href="struct_navier_stokes_example.html#a28267d1c5f2db8dbf38a48b9bbe05fd9">feLhsPtr</a>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>,</div>
+<div class="line">                     <span class="keyword">true</span>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="namespace_mo_f_e_m.html#af01ee5c3bc1505a09c369d8d455bba1e">addHOOpsVol</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, *<a class="code hl_variable" href="struct_navier_stokes_example.html#aaa4f62b3022fcea58ea314659da2e013">feRhsPtr</a>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>,</div>
+<div class="line">                     <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a06cf93399978e44184ff99192a2a12bc">feDragPtr</a> = boost::shared_ptr&lt;FaceElementForcesAndSourcesCore&gt;(</div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_class" href="class_face_element_forces_and_sources_core.html">FaceElementForcesAndSourcesCore</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>));</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a922b7b49a8ff7c932abf2970dcea6353">feDragSidePtr</a> = boost::shared_ptr&lt;VolumeElementForcesAndSourcesCoreOnSide&gt;(</div>
+<div class="line">      <span class="keyword">new</span> VolumeElementForcesAndSourcesCoreOnSide(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>));</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a06cf93399978e44184ff99192a2a12bc">feDragPtr</a>-&gt;getRuleHook = <a class="code hl_struct" href="struct_navier_stokes_element_1_1_face_rule.html">NavierStokesElement::FaceRule</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="namespace_mo_f_e_m.html#af01ee5c3bc1505a09c369d8d455bba1e">addHOOpsVol</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, *<a class="code hl_variable" href="struct_navier_stokes_example.html#a922b7b49a8ff7c932abf2970dcea6353">feDragSidePtr</a>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>,</div>
+<div class="line">                     <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a1d2cf68679f1cc86cb32099e7545396d">isStokesFlow</a>) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_element.html#aaa3297a47cdc6f40faf7d17a1e95ba47">NavierStokesElement::setStokesOperators</a>(</div>
+<div class="line">        <a class="code hl_variable" href="struct_navier_stokes_example.html#aaa4f62b3022fcea58ea314659da2e013">feRhsPtr</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a28267d1c5f2db8dbf38a48b9bbe05fd9">feLhsPtr</a>, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <span class="stringliteral">&quot;PRESSURE&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>);</div>
+<div class="line">  } <span class="keywordflow">else</span> {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_element.html#a9c21126c87d7a7005ef7d36ba830d6d8">NavierStokesElement::setNavierStokesOperators</a>(</div>
+<div class="line">        <a class="code hl_variable" href="struct_navier_stokes_example.html#aaa4f62b3022fcea58ea314659da2e013">feRhsPtr</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a28267d1c5f2db8dbf38a48b9bbe05fd9">feLhsPtr</a>, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <span class="stringliteral">&quot;PRESSURE&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_function" href="struct_navier_stokes_element.html#a15c9c384e42aa7fdcb8754ccba2f5ad1">NavierStokesElement::setCalcDragOperators</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#a06cf93399978e44184ff99192a2a12bc">feDragPtr</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a922b7b49a8ff7c932abf2970dcea6353">feDragSidePtr</a>,</div>
+<div class="line">                                            <span class="stringliteral">&quot;NAVIER_STOKES&quot;</span>, <span class="stringliteral">&quot;VELOCITY&quot;</span>,</div>
+<div class="line">                                            <span class="stringliteral">&quot;PRESSURE&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a633de4aa1f49685c441c69c9c0571151">dirichletBcPtr</a> = boost::shared_ptr&lt;DirichletDisplacementBc&gt;(</div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_struct" href="struct_dirichlet_displacement_bc.html">DirichletDisplacementBc</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#afffb02721eadd37bc9afd40383195e53">Aij</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a52c6563adf7ea6b26d76bf93637325e5">F</a>));</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a633de4aa1f49685c441c69c9c0571151">dirichletBcPtr</a>-&gt;methodsOp.push_back(<span class="keyword">new</span> <a class="code hl_struct" href="struct_navier_stokes_element_1_1_load_scale.html">NavierStokesElement::LoadScale</a>());</div>
+<div class="line">  <span class="comment">// dirichletBcPtr-&gt;snes_ctx = FEMethod::CTX_SNESNONE;</span></div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a633de4aa1f49685c441c69c9c0571151">dirichletBcPtr</a>-&gt;snes_x = <a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// Assemble pressure and traction forces</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_meta_neumann_forces.html#ad0f272e64b6937cc53769ecaa409d8b1">MetaNeumannForces::setMomentumFluxOperators</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#abadabff990b673227892d6133f24cab2">neumannForces</a>,</div>
+<div class="line">                                                     NULL, <span class="stringliteral">&quot;VELOCITY&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">// for postprocessing:</span></div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a> = boost::make_shared&lt;PostProcVol&gt;(<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="namespace_mo_f_e_m.html#af01ee5c3bc1505a09c369d8d455bba1e">addHOOpsVol</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, *<a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>,</div>
+<div class="line">                     <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> v_ptr = boost::make_shared&lt;MatrixDouble&gt;();</div>
+<div class="line">  <span class="keyword">auto</span> grad_ptr = boost::make_shared&lt;MatrixDouble&gt;();</div>
+<div class="line">  <span class="keyword">auto</span> pos_ptr = boost::make_shared&lt;MatrixDouble&gt;();</div>
+<div class="line">  <span class="keyword">auto</span> p_ptr = boost::make_shared&lt;VectorDouble&gt;();</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>-&gt;getOpPtrVector().push_back(</div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_calculate_vector_field_values.html">OpCalculateVectorFieldValues&lt;3&gt;</a>(<span class="stringliteral">&quot;VELOCITY&quot;</span>, v_ptr));</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>-&gt;getOpPtrVector().push_back(</div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_class" href="class_op_calculate_vector_field_gradient.html">OpCalculateVectorFieldGradient&lt;3, 3&gt;</a>(<span class="stringliteral">&quot;VELOCITY&quot;</span>, grad_ptr));</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>-&gt;getOpPtrVector().push_back(</div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_calculate_scalar_field_values.html">OpCalculateScalarFieldValues</a>(<span class="stringliteral">&quot;PRESSURE&quot;</span>, p_ptr));</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>-&gt;getOpPtrVector().push_back(</div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_calculate_vector_field_values.html">OpCalculateVectorFieldValues&lt;3&gt;</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, pos_ptr));</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">using </span><a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_post_proc_map_in_moab.html">OpPPMap</a> = <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_post_proc_map_in_moab.html">OpPostProcMapInMoab&lt;3, 3&gt;</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>-&gt;getOpPtrVector().push_back(</div>
+<div class="line"> </div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_typedef" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(</div>
+<div class="line"> </div>
+<div class="line">          <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>-&gt;getPostProcMesh(), <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>-&gt;getMapGaussPts(),</div>
+<div class="line"> </div>
+<div class="line">          {{<span class="stringliteral">&quot;PRESSURE&quot;</span>, p_ptr}},</div>
+<div class="line"> </div>
+<div class="line">          {{<span class="stringliteral">&quot;VELOCITY&quot;</span>, v_ptr}, {<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, pos_ptr}},</div>
+<div class="line"> </div>
+<div class="line">          {{<span class="stringliteral">&quot;VELOCITY_GRAD&quot;</span>, grad_ptr}},</div>
+<div class="line"> </div>
+<div class="line">          {}</div>
+<div class="line"> </div>
+<div class="line">          )</div>
+<div class="line"> </div>
+<div class="line">  );</div>
+<div class="line"> </div>
+<div class="line">  fePostProcDragPtr = boost::make_shared&lt;PostProcFace&gt;(mField);</div>
+<div class="line">  fePostProcDragPtr-&gt;getOpPtrVector().push_back(</div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_calculate_vector_field_values.html">OpCalculateVectorFieldValues&lt;3&gt;</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, pos_ptr));</div>
+<div class="line">  fePostProcDragPtr-&gt;getOpPtrVector().push_back(</div>
+<div class="line"> </div>
+<div class="line">      <span class="keyword">new</span> <a class="code hl_typedef" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(</div>
+<div class="line"> </div>
+<div class="line">          fePostProcDragPtr-&gt;getPostProcMesh(),</div>
+<div class="line">          fePostProcDragPtr-&gt;getMapGaussPts(),</div>
+<div class="line"> </div>
+<div class="line">          {},</div>
+<div class="line"> </div>
+<div class="line">          {{<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, pos_ptr}},</div>
+<div class="line"> </div>
+<div class="line">          {},</div>
+<div class="line"> </div>
+<div class="line">          {}</div>
+<div class="line"> </div>
+<div class="line">          )</div>
+<div class="line"> </div>
+<div class="line">  );</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_element.html#a8b82236b78a04fb80cdb84b59d566aa7">NavierStokesElement::setPostProcDragOperators</a>(</div>
+<div class="line">      fePostProcDragPtr, feDragSidePtr, <span class="stringliteral">&quot;NAVIER_STOKES&quot;</span>, <span class="stringliteral">&quot;VELOCITY&quot;</span>, <span class="stringliteral">&quot;PRESSURE&quot;</span>,</div>
+<div class="line">      commonData);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p>Note that the class for enforcing Dirichlet boundary conditions <a class="el" href="struct_dirichlet_displacement_bc.html" title="Set Dirichlet boundary conditions on displacements.">DirichletDisplacementBc</a> used in the snippet above requires the algebraic data structures for storing components of the right-hand side vector, left-hand side matrix and the solution vector. Therefore, these data structures need to be created beforehand using PETSc:</p>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a7e6e8aa883f1a157f519c73a987ffba1">NavierStokesExample::setupAlgebraicStructures</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a> = <a class="code hl_function" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>);</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a52c6563adf7ea6b26d76bf93637325e5">F</a> = <a class="code hl_function" href="namespace_mo_f_e_m.html#a681e912e2d0043503d2da810dc186d73">vectorDuplicate</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>);</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#afffb02721eadd37bc9afd40383195e53">Aij</a> = <a class="code hl_function" href="group__dm.html#gad0c8678dac27b8ef08e604406ba783c7">createDMMatrix</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecZeroEntries(<a class="code hl_variable" href="struct_navier_stokes_example.html#a52c6563adf7ea6b26d76bf93637325e5">F</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code hl_variable" href="struct_navier_stokes_example.html#a52c6563adf7ea6b26d76bf93637325e5">F</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code hl_variable" href="struct_navier_stokes_example.html#a52c6563adf7ea6b26d76bf93637325e5">F</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecZeroEntries(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetOption(<a class="code hl_variable" href="struct_navier_stokes_example.html#afffb02721eadd37bc9afd40383195e53">Aij</a>, MAT_SPD, PETSC_TRUE);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatZeroEntries(<a class="code hl_variable" href="struct_navier_stokes_example.html#afffb02721eadd37bc9afd40383195e53">Aij</a>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p>However, one may note that creation of PETSCc vectors and matrices requires the instance of the <a class="el" href="namespace_mo_f_e_m.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> Discrete Manager (DM), which needs a certain setup as well:</p>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a02a47f622ca0f8e9618eb365514be269">NavierStokesExample::setupDiscreteManager</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line">  DMType dm_name = <span class="stringliteral">&quot;DM_NAVIER_STOKES&quot;</span>;</div>
+<div class="line">  <span class="comment">// Register DM problem</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreate(PETSC_COMM_WORLD, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMSetType(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, dm_name);</div>
+<div class="line">  <span class="comment">// Create DM instance</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga32f14a8ae536697a4a0356900ecb73fd">DMMoFEMCreateMoFEM</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>, dm_name, <a class="code hl_variable" href="struct_navier_stokes_example.html#a8ab4b23c32716e16ad1775381d411163">bitLevel</a>);</div>
+<div class="line">  <span class="comment">// Configure DM form line command options s</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMSetFromOptions(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>);</div>
+<div class="line">  <span class="comment">// Add elements to dM (only one here)</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga20e87100aebf5aa51e07126ae1f5113d">DMMoFEMAddElement</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <span class="stringliteral">&quot;NAVIER_STOKES&quot;</span>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga20e87100aebf5aa51e07126ae1f5113d">DMMoFEMAddElement</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <span class="stringliteral">&quot;DRAG&quot;</span>);</div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#a63fc22416f2a0fbdea7406d3aa21fd17">check_finite_element</a>(<span class="stringliteral">&quot;PRESSURE_FE&quot;</span>))</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga20e87100aebf5aa51e07126ae1f5113d">DMMoFEMAddElement</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <span class="stringliteral">&quot;PRESSURE_FE&quot;</span>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga15496670ac6293eb1ae412714c6649db">DMMoFEMSetIsPartitioned</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a4e446687c7d05a813b636b510a7d3b43">isPartitioned</a>);</div>
+<div class="line">  <span class="comment">// setup the DM</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMSetUp(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p>Finally, the last preparatory step required is the setup of the SNES functionality:</p>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#a46f8457e7b5e5ab929db8475c1a87249">NavierStokesExample::setupSNES</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  boost::ptr_map&lt;std::string, NeumannForcesSurface&gt;::iterator mit =</div>
+<div class="line">      <a class="code hl_variable" href="struct_navier_stokes_example.html#abadabff990b673227892d6133f24cab2">neumannForces</a>.begin();</div>
+<div class="line">  <span class="keywordflow">for</span> (; mit != <a class="code hl_variable" href="struct_navier_stokes_example.html#abadabff990b673227892d6133f24cab2">neumannForces</a>.end(); mit++) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga2289e53ec5efa90a46dc702b9c7bc9f4">DMMoFEMSNESSetFunction</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, mit-&gt;first.c_str(),</div>
+<div class="line">                                  &amp;mit-&gt;second-&gt;getLoopFe(), NULL, NULL);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  boost::shared_ptr&lt;FEMethod&gt; null_fe;</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga2289e53ec5efa90a46dc702b9c7bc9f4">DMMoFEMSNESSetFunction</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <span class="stringliteral">&quot;NAVIER_STOKES&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#aaa4f62b3022fcea58ea314659da2e013">feRhsPtr</a>, null_fe,</div>
+<div class="line">                                null_fe);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga2289e53ec5efa90a46dc702b9c7bc9f4">DMMoFEMSNESSetFunction</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <a class="code hl_define" href="_d_m_mo_f_e_m_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a>, null_fe, null_fe,</div>
+<div class="line">                                <a class="code hl_variable" href="struct_navier_stokes_example.html#a633de4aa1f49685c441c69c9c0571151">dirichletBcPtr</a>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga7bb674a8c2feaf3c80814b0d980fec1c">DMMoFEMSNESSetJacobian</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <a class="code hl_define" href="_d_m_mo_f_e_m_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a>, null_fe, <a class="code hl_variable" href="struct_navier_stokes_example.html#a633de4aa1f49685c441c69c9c0571151">dirichletBcPtr</a>,</div>
+<div class="line">                                null_fe);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga7bb674a8c2feaf3c80814b0d980fec1c">DMMoFEMSNESSetJacobian</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <span class="stringliteral">&quot;NAVIER_STOKES&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a28267d1c5f2db8dbf38a48b9bbe05fd9">feLhsPtr</a>, null_fe,</div>
+<div class="line">                                null_fe);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga7bb674a8c2feaf3c80814b0d980fec1c">DMMoFEMSNESSetJacobian</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <a class="code hl_define" href="_d_m_mo_f_e_m_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a>, null_fe, null_fe,</div>
+<div class="line">                                <a class="code hl_variable" href="struct_navier_stokes_example.html#a633de4aa1f49685c441c69c9c0571151">dirichletBcPtr</a>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_class" href="class_snes_ctx.html">SnesCtx</a> *snes_ctx;</div>
+<div class="line">  <span class="comment">// create snes nonlinear solver</span></div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESCreate(PETSC_COMM_WORLD, &amp;<a class="code hl_variable" href="struct_navier_stokes_example.html#a027c1da77f604ef046d2767fbff1e3d5">snes</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#gad3fd04d49e1c12dd37f8052245b8e653">DMMoFEMGetSnesCtx</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, &amp;snes_ctx);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetFunction(<a class="code hl_variable" href="struct_navier_stokes_example.html#a027c1da77f604ef046d2767fbff1e3d5">snes</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a52c6563adf7ea6b26d76bf93637325e5">F</a>, <a class="code hl_function" href="namespace_mo_f_e_m.html#a50531f1fc6bfb68b4756a88126df316e">SnesRhs</a>, snes_ctx);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetJacobian(<a class="code hl_variable" href="struct_navier_stokes_example.html#a027c1da77f604ef046d2767fbff1e3d5">snes</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#afffb02721eadd37bc9afd40383195e53">Aij</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#afffb02721eadd37bc9afd40383195e53">Aij</a>, <a class="code hl_function" href="namespace_mo_f_e_m.html#a2427b40a8745afeb2073f72d9d51584e">SnesMat</a>, snes_ctx);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSetFromOptions(<a class="code hl_variable" href="struct_navier_stokes_example.html#a027c1da77f604ef046d2767fbff1e3d5">snes</a>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><h2><a class="anchor" id="navier_stokes_running_solving_problem"></a>
 Solving the problem and post-processing the results</h2>
-<div class="fragment"></div><!-- fragment --><div class="fragment"></div><!-- fragment --><h1><a class="anchor" id="navier_stokes_running"></a>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#adafe18cf9f87b240c7e5d522415651a9">NavierStokesExample::solveProblem</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> scale_problem = [&amp;](<span class="keywordtype">double</span> U, <span class="keywordtype">double</span> <a class="code hl_variable" href="namespace_mo_f_e_m.html#a123875fb03925a9640697591e972412c">L</a>, <span class="keywordtype">double</span> <a class="code hl_enumvalue" href="namespace_eshelbian_plasticity.html#afe126bba33dea88b653abccb8b07feedacf00a0516290b19a340cc5455ef03492">P</a>) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_field_blas.html">FieldBlas</a>&gt;()-&gt;fieldScale(<a class="code hl_variable" href="namespace_mo_f_e_m.html#a123875fb03925a9640697591e972412c">L</a>,</div>
+<div class="line">                                                        <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_projection_field_on10_node_tet.html">ProjectionFieldOn10NodeTet</a> ent_method_on_10nodeTet(</div>
+<div class="line">        <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, <span class="keyword">true</span>, <span class="keyword">true</span>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__loops.html#ga06843828fb475925d003a31b991c425e">loop_dofs</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, ent_method_on_10nodeTet);</div>
+<div class="line">    ent_method_on_10nodeTet.setNodes = <span class="keyword">false</span>;</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="group__mofem__loops.html#ga06843828fb475925d003a31b991c425e">loop_dofs</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, ent_method_on_10nodeTet);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_field_blas.html">FieldBlas</a>&gt;()-&gt;fieldScale(U, <span class="stringliteral">&quot;VELOCITY&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_field_blas.html">FieldBlas</a>&gt;()-&gt;fieldScale(P, <span class="stringliteral">&quot;PRESSURE&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">  };</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a70ea0f7930b870ce5a90df7b9495f853">pressureScale</a> = <a class="code hl_variable" href="struct_navier_stokes_example.html#a30e9c2e7f9e97884a31a10dfde241f31">viscosity</a> * <a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a> / <a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a>;</div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_element_1_1_load_scale.html#ac8ed24a49e1ce35f3a68728a15bdc57d">NavierStokesElement::LoadScale::lambda</a> = 1.0 / <a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a>;</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> scale_problem(1.0 / <a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a>, 1.0 / <a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a>,</div>
+<div class="line">                       1.0 / <a class="code hl_variable" href="struct_navier_stokes_example.html#a70ea0f7930b870ce5a90df7b9495f853">pressureScale</a>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#aeba64ce62699b12d8eb99aca742c8600">step</a> = 0;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Viscosity: %6.4e\n&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a30e9c2e7f9e97884a31a10dfde241f31">viscosity</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Density: %6.4e\n&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#aa314bfd43bbfee365eabcac44c0f73a7">density</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Length scale: %6.4e\n&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Velocity scale: %6.4e\n&quot;</span>,</div>
+<div class="line">                     <a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Pressure scale: %6.4e\n&quot;</span>,</div>
+<div class="line">                     <a class="code hl_variable" href="struct_navier_stokes_example.html#a70ea0f7930b870ce5a90df7b9495f853">pressureScale</a>);</div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a1d2cf68679f1cc86cb32099e7545396d">isStokesFlow</a>) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Re number: 0 (Stokes flow)\n&quot;</span>);</div>
+<div class="line">  } <span class="keywordflow">else</span> {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Re number: %6.4e\n&quot;</span>,</div>
+<div class="line">                       <a class="code hl_variable" href="struct_navier_stokes_example.html#aa314bfd43bbfee365eabcac44c0f73a7">density</a> / <a class="code hl_variable" href="struct_navier_stokes_example.html#a30e9c2e7f9e97884a31a10dfde241f31">viscosity</a> * <a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a> * <a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a>);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_variable" href="struct_navier_stokes_example.html#a752dd04499c920647b688e18e12eca3b">lambdaStep</a> = 1.0 / <a class="code hl_variable" href="struct_navier_stokes_example.html#a7ecaa982eced739534344de5015d1acf">numSteps</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">while</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#ab1851070923971f66267bd1d21b1d95e">lambda</a> &lt; 1.0 - 1e-12) {</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_variable" href="struct_navier_stokes_example.html#ab1851070923971f66267bd1d21b1d95e">lambda</a> += <a class="code hl_variable" href="struct_navier_stokes_example.html#a752dd04499c920647b688e18e12eca3b">lambdaStep</a>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#a1d2cf68679f1cc86cb32099e7545396d">isStokesFlow</a>) {</div>
+<div class="line">      <a class="code hl_variable" href="struct_navier_stokes_example.html#ae49034df9fb49b2b24d5f4c1e9dd7039">reNumber</a> = 0.0;</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a> : <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfBlocksData) {</div>
+<div class="line">        <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>.second.inertiaCoef = 0.0;</div>
+<div class="line">        <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>.second.viscousCoef = 1.0;</div>
+<div class="line">      }</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">      <a class="code hl_variable" href="struct_navier_stokes_example.html#ae49034df9fb49b2b24d5f4c1e9dd7039">reNumber</a> = <a class="code hl_variable" href="struct_navier_stokes_example.html#aa314bfd43bbfee365eabcac44c0f73a7">density</a> / <a class="code hl_variable" href="struct_navier_stokes_example.html#a30e9c2e7f9e97884a31a10dfde241f31">viscosity</a> * <a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a> * <a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a> * <a class="code hl_variable" href="struct_navier_stokes_example.html#ab1851070923971f66267bd1d21b1d95e">lambda</a>;</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a> : <a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;setOfBlocksData) {</div>
+<div class="line">        <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>.second.inertiaCoef = <a class="code hl_variable" href="struct_navier_stokes_example.html#ae49034df9fb49b2b24d5f4c1e9dd7039">reNumber</a>;</div>
+<div class="line">        <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>.second.viscousCoef = 1.0;</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(</div>
+<div class="line">        PETSC_COMM_WORLD,</div>
+<div class="line">        <span class="stringliteral">&quot;Step: %d | Lambda: %6.4e | Inc: %6.4e | Re number: %6.4e \n&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#aeba64ce62699b12d8eb99aca742c8600">step</a>,</div>
+<div class="line">        <a class="code hl_variable" href="struct_navier_stokes_example.html#ab1851070923971f66267bd1d21b1d95e">lambda</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a752dd04499c920647b688e18e12eca3b">lambdaStep</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#ae49034df9fb49b2b24d5f4c1e9dd7039">reNumber</a>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#gaf4d3fe19e4d76504628e614fd388c33f">DMoFEMPreProcessFiniteElements</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a633de4aa1f49685c441c69c9c0571151">dirichletBcPtr</a>.get());</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAssemblyBegin(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAssemblyEnd(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESSolve(<a class="code hl_variable" href="struct_navier_stokes_example.html#a027c1da77f604ef046d2767fbff1e3d5">snes</a>, PETSC_NULL, <a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#gad94692d0472b346672a25c63e91fb930">DMoFEMMeshToGlobalVector</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#aff53d71e1b2de272dbe543c185eb4aa9">D</a>, INSERT_VALUES, SCATTER_REVERSE);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> scale_problem(<a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a70ea0f7930b870ce5a90df7b9495f853">pressureScale</a>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_navier_stokes_example.html#ae74f1de1197604f9981ec446b4f7b06d">postProcess</a>();</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> scale_problem(1.0 / <a class="code hl_variable" href="struct_navier_stokes_example.html#a6ca6a8b2facaa6eab5f40deefb58d74b">velocityScale</a>, 1.0 / <a class="code hl_variable" href="struct_navier_stokes_example.html#ad6c7e5a9e752de18c424d0ef8792d190">lengthScale</a>,</div>
+<div class="line">                         1.0 / <a class="code hl_variable" href="struct_navier_stokes_example.html#a70ea0f7930b870ce5a90df7b9495f853">pressureScale</a>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_variable" href="struct_navier_stokes_example.html#aeba64ce62699b12d8eb99aca742c8600">step</a>++;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_navier_stokes_example.html#ae74f1de1197604f9981ec446b4f7b06d">NavierStokesExample::postProcess</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">string</span> <a class="code hl_variable" href="initial__diffusion_8cpp.html#a33ed7b84e277f2f5ed3d14dd0792d980">out_file_name</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <span class="stringliteral">&quot;NAVIER_STOKES&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>);</div>
+<div class="line">  {</div>
+<div class="line">    std::ostringstream stm;</div>
+<div class="line">    stm &lt;&lt; <span class="stringliteral">&quot;out_&quot;</span> &lt;&lt; <a class="code hl_variable" href="struct_navier_stokes_example.html#aeba64ce62699b12d8eb99aca742c8600">step</a> &lt;&lt; <span class="stringliteral">&quot;.h5m&quot;</span>;</div>
+<div class="line">    <a class="code hl_variable" href="initial__diffusion_8cpp.html#a33ed7b84e277f2f5ed3d14dd0792d980">out_file_name</a> = stm.str();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Write file %s\n&quot;</span>,</div>
+<div class="line">                       <a class="code hl_variable" href="initial__diffusion_8cpp.html#a33ed7b84e277f2f5ed3d14dd0792d980">out_file_name</a>.c_str());</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#ad7dc94efdcf07be4b1839854af0bd836">fePostProcPtr</a>-&gt;writeFile(<a class="code hl_variable" href="initial__diffusion_8cpp.html#a33ed7b84e277f2f5ed3d14dd0792d980">out_file_name</a>.c_str());</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecZeroEntries(<a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;pressureDragForceVec);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecZeroEntries(<a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;shearDragForceVec);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecZeroEntries(<a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;totalDragForceVec);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <span class="stringliteral">&quot;DRAG&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a06cf93399978e44184ff99192a2a12bc">feDragPtr</a>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> get_vec_data = [&amp;](<span class="keyword">auto</span> vec, std::array&lt;double, 3&gt; &amp;data) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAssemblyBegin(vec);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecAssemblyEnd(vec);</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> *array;</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGetArrayRead(vec, &amp;array);</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>() == 0) {</div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> : {0, 1, 2})</div>
+<div class="line">        data[<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>] = array[<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>];</div>
+<div class="line">    }</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecRestoreArrayRead(vec, &amp;array);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">  };</div>
+<div class="line"> </div>
+<div class="line">  std::array&lt;double, 3&gt; pressure_drag;</div>
+<div class="line">  std::array&lt;double, 3&gt; shear_drag;</div>
+<div class="line">  std::array&lt;double, 3&gt; total_drag;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_vec_data(<a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;pressureDragForceVec, pressure_drag);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_vec_data(<a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;shearDragForceVec, shear_drag);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_vec_data(<a class="code hl_variable" href="struct_navier_stokes_example.html#a55fca530e7dcfbaaa1e45255e14d4d50">commonData</a>-&gt;totalDragForceVec, total_drag);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_navier_stokes_example.html#abd281524b993c4d7442ad3143e94f864">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_core_interface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>() == 0) {</div>
+<div class="line">    <a class="code hl_define" href="_log_manager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::inform,</div>
+<div class="line">                <span class="stringliteral">&quot;Pressure drag force: [ %6.4e, %6.4e, %6.4e ]&quot;</span>,</div>
+<div class="line">                pressure_drag[0], pressure_drag[1], pressure_drag[2]);</div>
+<div class="line">    <a class="code hl_define" href="_log_manager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::inform,</div>
+<div class="line">                <span class="stringliteral">&quot;Shear drag force: [ %6.4e, %6.4e, %6.4e ]&quot;</span>, shear_drag[0],</div>
+<div class="line">                shear_drag[1], shear_drag[2]);</div>
+<div class="line">    <a class="code hl_define" href="_log_manager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a>(<span class="stringliteral">&quot;SELF&quot;</span>, Sev::inform,</div>
+<div class="line">                <span class="stringliteral">&quot;Total drag force: [ %6.4e, %6.4e, %6.4e ]&quot;</span>, total_drag[0],</div>
+<div class="line">                total_drag[1], total_drag[2]);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(<a class="code hl_variable" href="struct_navier_stokes_example.html#af53bd240bc022396d9b39009e4f8791c">dM</a>, <span class="stringliteral">&quot;DRAG&quot;</span>, <a class="code hl_variable" href="struct_navier_stokes_example.html#a0e2e033173b9426ebd3922b3e4d79545">fePostProcDragPtr</a>);</div>
+<div class="line">  {</div>
+<div class="line">    std::ostringstream stm;</div>
+<div class="line">    stm &lt;&lt; <span class="stringliteral">&quot;out_drag_&quot;</span> &lt;&lt; <a class="code hl_variable" href="struct_navier_stokes_example.html#aeba64ce62699b12d8eb99aca742c8600">step</a> &lt;&lt; <span class="stringliteral">&quot;.h5m&quot;</span>;</div>
+<div class="line">    <a class="code hl_variable" href="initial__diffusion_8cpp.html#a33ed7b84e277f2f5ed3d14dd0792d980">out_file_name</a> = stm.str();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;out file %s\n&quot;</span>,</div>
+<div class="line">                       <a class="code hl_variable" href="initial__diffusion_8cpp.html#a33ed7b84e277f2f5ed3d14dd0792d980">out_file_name</a>.c_str());</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_navier_stokes_example.html#a0e2e033173b9426ebd3922b3e4d79545">fePostProcDragPtr</a>-&gt;writeFile(<a class="code hl_variable" href="initial__diffusion_8cpp.html#a33ed7b84e277f2f5ed3d14dd0792d980">out_file_name</a>);</div>
+<div class="line">  }</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><h1><a class="anchor" id="navier_stokes_running"></a>
 Running the example</h1>
 <p>We will consider two cases: first, flow governed by Stokes equation, i.e. neglecting the nonlinear terms, and then we will solve full set Navier-Stokes equations. For both cases we will use the same mesh. We will start by partitioning this mesh: </p><div class="fragment"><div class="line">mofem_part -my_file sphere_test.cub -my_nparts 4 -output_file sphere_test_4.h5m</div>
 </div><!-- fragment --><p> while <code>mofem_part</code> can be found in <code>$HOME/mofem_install/um/build_release/tools/</code>. Here we partitioned the mesh in 4 parts in order to be executed on 4 cores in a distributed-memory parallel environment. Note that any number of parts less or equal to number of physically available cores can be used.</p>

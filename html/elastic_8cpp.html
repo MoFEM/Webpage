@@ -422,7 +422,7 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>[Define entities] </p>
 <p>[<a class="el" href="struct_op_k.html">OpK</a>] </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_poisson_operators_8hpp-example.html#a3">PoissonOperators.hpp</a>, <a class="el" href="eigen_elastic_8cpp-example.html#a69">eigen_elastic.cpp</a>, and <a class="el" href="simple_elasticity_8cpp-example.html#a7">simple_elasticity.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_poisson_operators_8hpp-example.html#a3">PoissonOperators.hpp</a>, <a class="el" href="eigen_elastic_8cpp-example.html#a71">eigen_elastic.cpp</a>, and <a class="el" href="simple_elasticity_8cpp-example.html#a7">simple_elasticity.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="elastic_8cpp_source.html#l00038">38</a> of file <a class="el" href="elastic_8cpp_source.html">elastic.cpp</a>.</p>
@@ -509,53 +509,53 @@ Variables</h2></td></tr>
 <p>[<a class="el" href="struct_example.html" title="[Example]">Example</a>]</p>
 <p>[<a class="el" href="struct_example.html" title="[Example]">Example</a>]</p>
 
-<p class="definition">Definition at line <a class="el" href="elastic_8cpp_source.html#l00837">837</a> of file <a class="el" href="elastic_8cpp_source.html">elastic.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  837</span>                                 {</div>
-<div class="line"><span class="lineno">  838</span> </div>
-<div class="line"><span class="lineno">  839</span>  <span class="comment">// Initialisation of MoFEM/PETSc and MOAB data structures</span></div>
-<div class="line"><span class="lineno">  840</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> param_file[] = <span class="stringliteral">&quot;param_file.petsc&quot;</span>;</div>
-<div class="line"><span class="lineno">  841</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code hl_variable" href="#a29680e68c64040f4884f60691a193226">help</a>);</div>
-<div class="line"><span class="lineno">  842</span> </div>
-<div class="line"><span class="lineno">  843</span>  <span class="keyword">auto</span> core_log = logging::core::get();</div>
-<div class="line"><span class="lineno">  844</span>  core_log-&gt;add_sink(</div>
-<div class="line"><span class="lineno">  845</span>      <a class="code hl_function" href="struct_mo_f_e_m_1_1_log_manager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a class="code hl_function" href="struct_mo_f_e_m_1_1_log_manager.html#a745c3e2cfb9fdea08ecd2e85316e8639">LogManager::getStrmWorld</a>(), <span class="stringliteral">&quot;TIMER&quot;</span>));</div>
-<div class="line"><span class="lineno">  846</span> </div>
-<div class="line"><span class="lineno">  847</span>  core_log-&gt;add_sink(</div>
-<div class="line"><span class="lineno">  848</span>      <a class="code hl_function" href="struct_mo_f_e_m_1_1_log_manager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a class="code hl_function" href="struct_mo_f_e_m_1_1_log_manager.html#aab2b7c52e9893aaab48afecb6406c12f">LogManager::getStrmSync</a>(), <span class="stringliteral">&quot;FieldEvaluator&quot;</span>));</div>
-<div class="line"><span class="lineno">  849</span>  <a class="code hl_function" href="group__mofem__log__manager.html#ga037d7b63954d2ec6d367a5c959f16068">LogManager::setLog</a>(<span class="stringliteral">&quot;FieldEvaluator&quot;</span>);</div>
-<div class="line"><span class="lineno">  850</span>  <a class="code hl_define" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;FieldEvaluator&quot;</span>, <span class="stringliteral">&quot;field_eval&quot;</span>);</div>
-<div class="line"><span class="lineno">  851</span> </div>
-<div class="line"><span class="lineno">  852</span>  <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  853</span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">  854</span><span class="comment">    //! [Register MoFEM discrete manager in PETSc]</span></div>
-<div class="line"><span class="lineno">  855</span><span class="comment"></span>    DMType dm_name = <span class="stringliteral">&quot;DMMOFEM&quot;</span>;</div>
-<div class="line"><span class="lineno">  856</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);</div>
-<div class="line"><span class="lineno">  857</span>    DMType dm_name_mg = <span class="stringliteral">&quot;DMMOFEM_MG&quot;</span>;</div>
-<div class="line"><span class="lineno">  858</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#gaa4b2898c673e7fb8875154370c7b4497">DMRegister_MGViaApproxOrders</a>(dm_name_mg);<span class="comment"></span></div>
-<div class="line"><span class="lineno">  859</span><span class="comment">    //! [Register MoFEM discrete manager in PETSc</span></div>
-<div class="line"><span class="lineno">  860</span><span class="comment"></span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">  861</span><span class="comment">    //! [Create MoAB]</span></div>
-<div class="line"><span class="lineno">  862</span><span class="comment"></span>    moab::Core mb_instance;              <span class="comment">///&lt; mesh database</span></div>
-<div class="line"><span class="lineno">  863</span>    moab::Interface &amp;moab = mb_instance; <span class="comment">///&lt; mesh database interface</span><span class="comment"></span></div>
-<div class="line"><span class="lineno">  864</span><span class="comment">    //! [Create MoAB]</span></div>
-<div class="line"><span class="lineno">  865</span><span class="comment"></span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">  866</span><span class="comment">    //! [Create MoFEM]</span></div>
-<div class="line"><span class="lineno">  867</span><span class="comment"></span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
-<div class="line"><span class="lineno">  868</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = core; <span class="comment">///&lt; finite element database interface</span><span class="comment"></span></div>
-<div class="line"><span class="lineno">  869</span><span class="comment">    //! [Create MoFEM]</span></div>
-<div class="line"><span class="lineno">  870</span><span class="comment"></span><span class="comment"></span> </div>
-<div class="line"><span class="lineno">  871</span><span class="comment">    //! [Example]</span></div>
-<div class="line"><span class="lineno">  872</span><span class="comment"></span>    <a class="code hl_struct" href="struct_example.html">Example</a> ex(m_field);</div>
-<div class="line"><span class="lineno">  873</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ex.runProblem();<span class="comment"></span></div>
-<div class="line"><span class="lineno">  874</span><span class="comment">    //! [Example]</span></div>
-<div class="line"><span class="lineno">  875</span><span class="comment"></span>  }</div>
-<div class="line"><span class="lineno">  876</span>  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
-<div class="line"><span class="lineno">  877</span> </div>
-<div class="line"><span class="lineno">  878</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
-<div class="line"><span class="lineno">  879</span>}</div>
+<p class="definition">Definition at line <a class="el" href="elastic_8cpp_source.html#l00881">881</a> of file <a class="el" href="elastic_8cpp_source.html">elastic.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  881</span>                                 {</div>
+<div class="line"><span class="lineno">  882</span> </div>
+<div class="line"><span class="lineno">  883</span>  <span class="comment">// Initialisation of MoFEM/PETSc and MOAB data structures</span></div>
+<div class="line"><span class="lineno">  884</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> param_file[] = <span class="stringliteral">&quot;param_file.petsc&quot;</span>;</div>
+<div class="line"><span class="lineno">  885</span>  <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code hl_variable" href="#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line"><span class="lineno">  886</span> </div>
+<div class="line"><span class="lineno">  887</span>  <span class="keyword">auto</span> core_log = logging::core::get();</div>
+<div class="line"><span class="lineno">  888</span>  core_log-&gt;add_sink(</div>
+<div class="line"><span class="lineno">  889</span>      <a class="code hl_function" href="struct_mo_f_e_m_1_1_log_manager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a class="code hl_function" href="struct_mo_f_e_m_1_1_log_manager.html#a745c3e2cfb9fdea08ecd2e85316e8639">LogManager::getStrmWorld</a>(), <span class="stringliteral">&quot;TIMER&quot;</span>));</div>
+<div class="line"><span class="lineno">  890</span> </div>
+<div class="line"><span class="lineno">  891</span>  core_log-&gt;add_sink(</div>
+<div class="line"><span class="lineno">  892</span>      <a class="code hl_function" href="struct_mo_f_e_m_1_1_log_manager.html#a1eb7382ca81a927c24b76ffd20134cfd">LogManager::createSink</a>(<a class="code hl_function" href="struct_mo_f_e_m_1_1_log_manager.html#aab2b7c52e9893aaab48afecb6406c12f">LogManager::getStrmSync</a>(), <span class="stringliteral">&quot;FieldEvaluator&quot;</span>));</div>
+<div class="line"><span class="lineno">  893</span>  <a class="code hl_function" href="group__mofem__log__manager.html#ga037d7b63954d2ec6d367a5c959f16068">LogManager::setLog</a>(<span class="stringliteral">&quot;FieldEvaluator&quot;</span>);</div>
+<div class="line"><span class="lineno">  894</span>  <a class="code hl_define" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;FieldEvaluator&quot;</span>, <span class="stringliteral">&quot;field_eval&quot;</span>);</div>
+<div class="line"><span class="lineno">  895</span> </div>
+<div class="line"><span class="lineno">  896</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  897</span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  898</span><span class="comment">    //! [Register MoFEM discrete manager in PETSc]</span></div>
+<div class="line"><span class="lineno">  899</span><span class="comment"></span>    DMType dm_name = <span class="stringliteral">&quot;DMMOFEM&quot;</span>;</div>
+<div class="line"><span class="lineno">  900</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(dm_name);</div>
+<div class="line"><span class="lineno">  901</span>    DMType dm_name_mg = <span class="stringliteral">&quot;DMMOFEM_MG&quot;</span>;</div>
+<div class="line"><span class="lineno">  902</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#gaa4b2898c673e7fb8875154370c7b4497">DMRegister_MGViaApproxOrders</a>(dm_name_mg);<span class="comment"></span></div>
+<div class="line"><span class="lineno">  903</span><span class="comment">    //! [Register MoFEM discrete manager in PETSc</span></div>
+<div class="line"><span class="lineno">  904</span><span class="comment"></span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  905</span><span class="comment">    //! [Create MoAB]</span></div>
+<div class="line"><span class="lineno">  906</span><span class="comment"></span>    moab::Core mb_instance;              <span class="comment">///&lt; mesh database</span></div>
+<div class="line"><span class="lineno">  907</span>    moab::Interface &amp;moab = mb_instance; <span class="comment">///&lt; mesh database interface</span><span class="comment"></span></div>
+<div class="line"><span class="lineno">  908</span><span class="comment">    //! [Create MoAB]</span></div>
+<div class="line"><span class="lineno">  909</span><span class="comment"></span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  910</span><span class="comment">    //! [Create MoFEM]</span></div>
+<div class="line"><span class="lineno">  911</span><span class="comment"></span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
+<div class="line"><span class="lineno">  912</span>    <a class="code hl_struct" href="struct_mo_f_e_m_1_1_deprecated_core_interface.html">MoFEM::Interface</a> &amp;m_field = core; <span class="comment">///&lt; finite element database interface</span><span class="comment"></span></div>
+<div class="line"><span class="lineno">  913</span><span class="comment">    //! [Create MoFEM]</span></div>
+<div class="line"><span class="lineno">  914</span><span class="comment"></span><span class="comment"></span> </div>
+<div class="line"><span class="lineno">  915</span><span class="comment">    //! [Example]</span></div>
+<div class="line"><span class="lineno">  916</span><span class="comment"></span>    <a class="code hl_struct" href="struct_example.html">Example</a> ex(m_field);</div>
+<div class="line"><span class="lineno">  917</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ex.runProblem();<span class="comment"></span></div>
+<div class="line"><span class="lineno">  918</span><span class="comment">    //! [Example]</span></div>
+<div class="line"><span class="lineno">  919</span><span class="comment"></span>  }</div>
+<div class="line"><span class="lineno">  920</span>  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line"><span class="lineno">  921</span> </div>
+<div class="line"><span class="lineno">  922</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="struct_mo_f_e_m_1_1_core_tmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line"><span class="lineno">  923</span>}</div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_add80e5ef5f847b2d4b637029f0f671c3"><div class="ttname"><a href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a></div><div class="ttdeci">#define CHKERR</div><div class="ttdoc">Inline error check.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00548">definitions.h:548</a></div></div>
-<div class="ttc" id="aelastic_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdoc">[Check]</div><div class="ttdef"><b>Definition</b> <a href="elastic_8cpp_source.html#l00835">elastic.cpp:835</a></div></div>
+<div class="ttc" id="aelastic_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdoc">[Check]</div><div class="ttdef"><b>Definition</b> <a href="elastic_8cpp_source.html#l00879">elastic.cpp:879</a></div></div>
 <div class="ttc" id="agroup__dm_html_ga899ec9d1ad35488bbe4273731f6d5c90"><div class="ttname"><a href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">MoFEM::DMRegister_MoFEM</a></div><div class="ttdeci">PetscErrorCode DMRegister_MoFEM(const char sname[])</div><div class="ttdoc">Register MoFEM problem.</div><div class="ttdef"><b>Definition</b> <a href="_d_m_mo_f_e_m_8cpp_source.html#l00043">DMMoFEM.cpp:43</a></div></div>
 <div class="ttc" id="agroup__dm_html_gaa4b2898c673e7fb8875154370c7b4497"><div class="ttname"><a href="group__dm.html#gaa4b2898c673e7fb8875154370c7b4497">MoFEM::DMRegister_MGViaApproxOrders</a></div><div class="ttdeci">MoFEMErrorCode DMRegister_MGViaApproxOrders(const char sname[])</div><div class="ttdoc">Register DM for Multi-Grid via approximation orders.</div><div class="ttdef"><b>Definition</b> <a href="_p_c_m_g_set_up_via_approx_orders_8cpp_source.html#l00302">PCMGSetUpViaApproxOrders.cpp:302</a></div></div>
 <div class="ttc" id="agroup__mofem__log__manager_html_ga037d7b63954d2ec6d367a5c959f16068"><div class="ttname"><a href="group__mofem__log__manager.html#ga037d7b63954d2ec6d367a5c959f16068">MoFEM::LogManager::setLog</a></div><div class="ttdeci">static LoggerType &amp; setLog(const std::string channel)</div><div class="ttdoc">Set ans resset chanel logger.</div><div class="ttdef"><b>Definition</b> <a href="_log_manager_8cpp_source.html#l00389">LogManager.cpp:389</a></div></div>
@@ -674,7 +674,7 @@ Variables</h2></td></tr>
 
 <p>[Check] </p>
 
-<p class="definition">Definition at line <a class="el" href="elastic_8cpp_source.html#l00835">835</a> of file <a class="el" href="elastic_8cpp_source.html">elastic.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="elastic_8cpp_source.html#l00879">879</a> of file <a class="el" href="elastic_8cpp_source.html">elastic.cpp</a>.</p>
 
 </div>
 </div>

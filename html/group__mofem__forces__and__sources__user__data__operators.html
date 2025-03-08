@@ -246,32 +246,22 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mo_f_e_m_1_1_op_calculate_h_vec_tensor_field.html">MoFEM::OpCalculateHVecTensorField&lt; Tensor_Dim0, Tensor_Dim1 &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate tenor field using vectorial base, i.e. Hdiv/Hcurl.  <a href="struct_mo_f_e_m_1_1_op_calculate_h_vec_tensor_field.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mo_f_e_m_1_1_op_calculate_broken_h_vec_tensor_field.html">MoFEM::OpCalculateBrokenHVecTensorField&lt; Tensor_Dim0, Tensor_Dim1 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get tensor field for H-div approximation.  <a href="struct_mo_f_e_m_1_1_op_calculate_broken_h_vec_tensor_field.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mo_f_e_m_1_1_op_calculate_h_tensor_tensor_field.html">MoFEM::OpCalculateHTensorTensorField&lt; Tensor_Dim0, Tensor_Dim1 &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate tenor field using tensor base, i.e. Hdiv/Hcurl.  <a href="struct_mo_f_e_m_1_1_op_calculate_h_tensor_tensor_field.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mo_f_e_m_1_1_op_calculate_h_vec_tensor_divergence.html">MoFEM::OpCalculateHVecTensorDivergence&lt; Tensor_Dim0, Tensor_Dim1, CoordSys &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate divergence of tonsorial field using vectorial base.  <a href="struct_mo_f_e_m_1_1_op_calculate_h_vec_tensor_divergence.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mo_f_e_m_1_1_op_calculate_broken_h_vec_tensor_divergence.html">MoFEM::OpCalculateBrokenHVecTensorDivergence&lt; Tensor_Dim0, Tensor_Dim1, CoordSys &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate divergence of tonsorial field using vectorial base.  <a href="struct_mo_f_e_m_1_1_op_calculate_broken_h_vec_tensor_divergence.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Vector field values at integration points</h2></td></tr>
 <tr class="memitem:ga82da8b3c75bb749d3e2b1389e00284c4" id="r_ga82da8b3c75bb749d3e2b1389e00284c4"><td class="memTemplParams" colspan="2">template&lt;int Tensor_Dim&gt; </td></tr>
 <tr class="memitem:ga82da8b3c75bb749d3e2b1389e00284c4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga82da8b3c75bb749d3e2b1389e00284c4">MoFEM::OpCalculateVectorFieldValuesDot</a></td></tr>
-<tr class="memdesc:ga82da8b3c75bb749d3e2b1389e00284c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get rate of values at integration pts for tensor filed rank 1, i.e. vector field.  <br /></td></tr>
+<tr class="memdesc:ga82da8b3c75bb749d3e2b1389e00284c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get time derivatives of values at integration pts for tensor filed rank 1, i.e. vector field.  <br /></td></tr>
 <tr class="separator:ga82da8b3c75bb749d3e2b1389e00284c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga12554d408d3f0468d3388fdd745259f2" id="r_ga12554d408d3f0468d3388fdd745259f2"><td class="memTemplParams" colspan="2">template&lt;int Tensor_Dim&gt; </td></tr>
 <tr class="memitem:ga12554d408d3f0468d3388fdd745259f2"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga12554d408d3f0468d3388fdd745259f2">MoFEM::OpCalculateVectorFieldValuesDotDot</a></td></tr>
-<tr class="memdesc:ga12554d408d3f0468d3388fdd745259f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get second rate of values at integration pts for tensor filed rank 1, i.e. vector field.  <br /></td></tr>
+<tr class="memdesc:ga12554d408d3f0468d3388fdd745259f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get second time derivatives of values at integration pts for tensor filed rank 1, i.e. vector field.  <br /></td></tr>
 <tr class="separator:ga12554d408d3f0468d3388fdd745259f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9fb91c6e53e64938b1938a361cc1c533" id="r_ga9fb91c6e53e64938b1938a361cc1c533"><td class="memTemplParams" colspan="2">template&lt;int Tensor_Dim&gt; </td></tr>
-<tr class="memitem:ga9fb91c6e53e64938b1938a361cc1c533"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ga9fb91c6e53e64938b1938a361cc1c533">MoFEM::OpCalculateVectorFieldSNESUpdateValues</a></td></tr>
-<tr class="memdesc:ga9fb91c6e53e64938b1938a361cc1c533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get second time second update vector at integration pts for tensor filed rank 1, i.e. vector field.  <br /></td></tr>
-<tr class="separator:ga9fb91c6e53e64938b1938a361cc1c533"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Users data structures and operator. </p>
@@ -279,29 +269,6 @@ Classes</h2></td></tr>
 <p>data structures</p>
 <p>Data structures passed by argument to <a class="el" href="struct_mo_f_e_m_1_1_data_operator.html#a19219f04bba3938fd893898f128dcfb2" title="Operator for bi-linear form, usually to calculate values on left hand side.">MoFEM::DataOperator::doWork</a> and generic user operators operating on those structures.</p>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="ga9fb91c6e53e64938b1938a361cc1c533" name="ga9fb91c6e53e64938b1938a361cc1c533"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9fb91c6e53e64938b1938a361cc1c533">&#9670;&#160;</a></span>OpCalculateVectorFieldSNESUpdateValues</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;int Tensor_Dim&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="#ga9fb91c6e53e64938b1938a361cc1c533">MoFEM::OpCalculateVectorFieldSNESUpdateValues</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line"> </div>
-<div class="line">    OpCalculateVectorFieldValuesFromPetscVecImpl&lt;Tensor_Dim,</div>
-<div class="line">                                                 PetscData::CTX_SET_DX&gt;</div>
-</div><!-- fragment -->
-<p>Get second time second update vector at integration pts for tensor filed rank 1, i.e. vector field. </p>
-
-<p class="definition">Definition at line <a class="el" href="_user_data_operators_8hpp_source.html#l00759">759</a> of file <a class="el" href="_user_data_operators_8hpp_source.html">UserDataOperators.hpp</a>.</p>
-
-</div>
-</div>
 <a id="ga82da8b3c75bb749d3e2b1389e00284c4" name="ga82da8b3c75bb749d3e2b1389e00284c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga82da8b3c75bb749d3e2b1389e00284c4">&#9670;&#160;</a></span>OpCalculateVectorFieldValuesDot</h2>
 
@@ -319,9 +286,9 @@ template&lt;int Tensor_Dim&gt; </div>
 <div class="line">    OpCalculateVectorFieldValuesFromPetscVecImpl&lt;Tensor_Dim,</div>
 <div class="line">                                                 PetscData::CTX_SET_X_T&gt;</div>
 </div><!-- fragment -->
-<p>Get rate of values at integration pts for tensor filed rank 1, i.e. vector field. </p>
+<p>Get time derivatives of values at integration pts for tensor filed rank 1, i.e. vector field. </p>
 
-<p class="definition">Definition at line <a class="el" href="_user_data_operators_8hpp_source.html#l00739">739</a> of file <a class="el" href="_user_data_operators_8hpp_source.html">UserDataOperators.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_user_data_operators_8hpp_source.html#l00723">723</a> of file <a class="el" href="_user_data_operators_8hpp_source.html">UserDataOperators.hpp</a>.</p>
 
 </div>
 </div>
@@ -342,9 +309,9 @@ template&lt;int Tensor_Dim&gt; </div>
 <div class="line">    OpCalculateVectorFieldValuesFromPetscVecImpl&lt;Tensor_Dim,</div>
 <div class="line">                                                 PetscData::CTX_SET_X_TT&gt;</div>
 </div><!-- fragment -->
-<p>Get second rate of values at integration pts for tensor filed rank 1, i.e. vector field. </p>
+<p>Get second time derivatives of values at integration pts for tensor filed rank 1, i.e. vector field. </p>
 
-<p class="definition">Definition at line <a class="el" href="_user_data_operators_8hpp_source.html#l00749">749</a> of file <a class="el" href="_user_data_operators_8hpp_source.html">UserDataOperators.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_user_data_operators_8hpp_source.html#l00733">733</a> of file <a class="el" href="_user_data_operators_8hpp_source.html">UserDataOperators.hpp</a>.</p>
 
 </div>
 </div>

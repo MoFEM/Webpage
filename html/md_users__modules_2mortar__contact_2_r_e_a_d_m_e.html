@@ -147,48 +147,48 @@ $(function(){ initResizable(false); });
   <li class="level1 empty">
     <ul>
       <li class="level2">
-        <a href="#autotoc_md254">Brief description</a>
+        <a href="#autotoc_md260">Brief description</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md255">1. Definition of the contact surfaces</a>
+        <a href="#autotoc_md261">1. Definition of the contact surfaces</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md256">Geometry</a>
+            <a href="#autotoc_md262">Geometry</a>
           </li>
           <li class="level3">
-            <a href="#autotoc_md257">Mesh</a>
+            <a href="#autotoc_md263">Mesh</a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md258">2. Preparation of the param file</a>
+        <a href="#autotoc_md264">2. Preparation of the param file</a>
         <ul>
           <li class="level3">
-            <a href="#autotoc_md259">Contact parameters</a>
+            <a href="#autotoc_md265">Contact parameters</a>
           </li>
         </ul>
       </li>
       <li class="level2">
-        <a href="#autotoc_md260">2. Running the contact simulation</a>
+        <a href="#autotoc_md266">2. Running the contact simulation</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md261">3. Postprocessing</a>
+        <a href="#autotoc_md267">3. Postprocessing</a>
       </li>
       <li class="level2">
-        <a href="#autotoc_md262">4. Simulation with internal stress</a>
+        <a href="#autotoc_md268">4. Simulation with internal stress</a>
       </li>
     </ul>
   </li>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md254"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md260"></a>
 Brief description</h2>
 <p><a class="el" href="struct_contact.html">Contact</a> interaction between elastic solids having non-matching meshes in the contact interface.</p>
 <p><em><b><em>Assumptions:</em></b></em> small rotations, small strains, small relative tangential displacements (moderate if <code>-convect</code> option is switched on, see Contact parameters for more details).</p>
-<h2><a class="anchor" id="autotoc_md255"></a>
+<h2><a class="anchor" id="autotoc_md261"></a>
 1. Definition of the contact surfaces</h2>
 <p>Pairs of surfaces belonging to two solids that can potentially come into contact have to be marked as <em>BLOCKSET_s, with one surface belonging to the pair with name <code>MORTAR_MASTER</code> and the other surface of the pair named <code>MORTAR_SLAVE</code>. An arbitrary number of pairs of contact surfaces can be defined by adding each side either in <code>MORTAR_MASTER</code> or in <code>MORTAR_SLAVE</code> _BLOCKSET</em>.</p>
-<h3><a class="anchor" id="autotoc_md256"></a>
+<h3><a class="anchor" id="autotoc_md262"></a>
 Geometry</h3>
 <ul>
 <li>Create the contacting solids separately</li>
@@ -202,18 +202,18 @@ Geometry</h3>
 </li>
 </ul>
 <p><em><b><em>NOTE:</em></b></em> Springs can be used to eliminate the rigid body motion in a contact simulation under the pressure control.</p>
-<h3><a class="anchor" id="autotoc_md257"></a>
+<h3><a class="anchor" id="autotoc_md263"></a>
 Mesh</h3>
 <ul>
 <li>Mesh each solid separately</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md258"></a>
+<h2><a class="anchor" id="autotoc_md264"></a>
 2. Preparation of the param file</h2>
 <p>Check the essential contact parameters in the file <code>param_file.petsc</code>: </p><div class="fragment"><div class="line">-order 2         </div>
 <div class="line">-order_lambda 1          </div>
 <div class="line">-cn_value 1.e3               </div>
 </div><!-- fragment --><p><em><b><em>NOTE:</em></b></em> <code>cn</code> is the contact augmentation parameter which affects the convergence and has minimal effect on the solution (in a reasonable range of values). Recommended initial value is the Young's modulus of contacting solids (or harmonic mean in case of different values). The optimal value can be found by repetitively increasing/decreasing the initial value by e.g. a factor of 10.</p>
-<h3><a class="anchor" id="autotoc_md259"></a>
+<h3><a class="anchor" id="autotoc_md265"></a>
 Contact parameters</h3>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -237,10 +237,10 @@ Contact parameters</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>-convect</code>   </td><td class="markdownTableBodyNone">If set to <code>1</code> (True), moderate relative tangential displacements can be taken into account   </td><td class="markdownTableBodyNone"><code>0</code>   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md260"></a>
+<h2><a class="anchor" id="autotoc_md266"></a>
 2. Running the contact simulation</h2>
 <div class="fragment"><div class="line">mpirun -np 2 $HOME/mofem_install/um/build_release/mortar_contact/mortar_contact -file_name $file_name</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md261"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md267"></a>
 3. Postprocessing</h2>
 <p>First, the output <code>h5m</code> files need to be converted to <code>vtk</code> format. Note that these files can be converted one by one using the <code>mbconvert</code> tool: </p><div class="fragment"><div class="line">mbconvert out.h5m out.vtk</div>
 <div class="line">mbconvert out_contact.h5m out_contact.vtk</div>
@@ -252,7 +252,7 @@ Contact parameters</h3>
 <li>File <code>out_contact.vtk</code> contains the nodal interpolation of the Lagrange multipliers equivalent to the contact pressure (tag <code>LAGMULT</code>)</li>
 <li>File <code>out_mortar_contact_integ_pts.vtk</code> contains values of Lagrange multipliers (tag <code>LAGMULT</code>) and the normal gap (tag <code>GAP</code>) at Gauss points of the contact interface. Note that the <em>Point Gaussian</em> representation or alternatively the <em>Glyph</em> filter should be used for their visualisation in <em>Paraview</em>.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md262"></a>
+<h2><a class="anchor" id="autotoc_md268"></a>
 4. Simulation with internal stress</h2>
 <p>Simulation taking into account non-matching-meshes contact and internal stress is possible using executable <code>mortar_contact_thermal</code>. Furthermore, this program provides possibility to save the value of the internal stress and the corresponding actual stress on the input mesh for subsequent use in the fracture module.</p>
 <p>Two options are available for the internal stress:</p>

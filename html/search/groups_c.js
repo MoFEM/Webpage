@@ -11,5 +11,6 @@ var searchData=
   ['problems_8',['Problems',['../group__mofem__problems.html',1,'']]],
   ['problems_20structures_20and_20multi_20indices_9',['Problems structures and multi-indices',['../group__problems__multi__indices.html',1,'']]],
   ['problemsmanager_10',['ProblemsManager',['../group__mofem__problems__manager.html',1,'']]],
-  ['process_11',['Post Process',['../group__mofem__fs__post__proc.html',1,'']]]
+  ['process_11',['Post Process',['../group__mofem__fs__post__proc.html',1,'']]],
+  ['projection_20matrix_12',['Constrain Projection Matrix',['../group__projection__matrix.html',1,'']]]
 ];

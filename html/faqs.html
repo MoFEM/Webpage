@@ -225,6 +225,9 @@ $(function(){ initResizable(false); });
     <a href="#faq_programing">Programming</a>
     <ul>
       <li class="level2">
+        <a href="#compile_with_ccache">How to Compile MoFEM faster?</a>
+      </li>
+      <li class="level2">
         <a href="#stop_at_first_error">How to stop at first error?</a>
       </li>
       <li class="level2">
@@ -458,8 +461,8 @@ How to time and log events with PETSC?</h2>
 <div class="line">buildFiniteElements       1 1.0 7.8488e-03 1.0 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  7  0  0  0  0   7  0  0  0  0     0</div>
 <div class="line">SimpleSetUp            1 1.0 3.4389e-03 1.0 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  3  0  0  0  0   3  0  0  0  0     0</div>
 <div class="line">ProblemsManager        1 1.0 2.9552e-04 1.0 0.00e+00 0.0 0.0e+00 0.0e+00 0.0e+00  0  0  0  0  0   0  0  0  0  0     0</div>
-<div class="ttc" id="afree__surface_8cpp_html_a275fe82762dca6ff32ecbb73db0b3b84a1784b1a3d7cbd43c45ff82c72d05e4ae"><div class="ttname"><a href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a></div><div class="ttdeci">@ R</div><div class="ttdef"><b>Definition</b> <a href="free__surface_8cpp_source.html#l00396">free_surface.cpp:396</a></div></div>
-<div class="ttc" id="afree__surface_8cpp_html_a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d"><div class="ttname"><a href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a></div><div class="ttdeci">@ F</div><div class="ttdef"><b>Definition</b> <a href="free__surface_8cpp_source.html#l00396">free_surface.cpp:396</a></div></div>
+<div class="ttc" id="afree__surface_8cpp_html_a275fe82762dca6ff32ecbb73db0b3b84a1784b1a3d7cbd43c45ff82c72d05e4ae"><div class="ttname"><a href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84a1784b1a3d7cbd43c45ff82c72d05e4ae">R</a></div><div class="ttdeci">@ R</div><div class="ttdef"><b>Definition</b> <a href="free__surface_8cpp_source.html#l00394">free_surface.cpp:394</a></div></div>
+<div class="ttc" id="afree__surface_8cpp_html_a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d"><div class="ttname"><a href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a></div><div class="ttdeci">@ F</div><div class="ttdef"><b>Definition</b> <a href="free__surface_8cpp_source.html#l00394">free_surface.cpp:394</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="profiling_code_with_valgrind"></a>
 How to profile code with Valgrind?</h2>
 <p>You have to install Valgrind <a href="http://valgrind.org">http://valgrind.org</a> and graphic user interface KCachegrind <a href="http://kcachegrind.sourceforge.net/html/Home.html">http://kcachegrind.sourceforge.net/html/Home.html</a>. If you using Linux, for example ubuntu you can do that executing following commands, </p><div class="fragment"><div class="line">sudo apt-get install valgrind kcachegrind</div>
@@ -468,6 +471,13 @@ How to profile code with Valgrind?</h2>
 </div><!-- fragment --><p>If you have packages installed, follow instruction from <a href="http://kcachegrind.sourceforge.net/html/Documentation.html">http://kcachegrind.sourceforge.net/html/Documentation.html</a></p>
 <h1><a class="anchor" id="faq_programing"></a>
 Programming</h1>
+<h2><a class="anchor" id="compile_with_ccache"></a>
+How to Compile MoFEM faster?</h2>
+<p>To speed up <a class="el" href="namespace_mo_f_e_m.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> compilation, consider using ccache. ccache is a caching system for C and C++ compilers that speeds up recompilation by avoiding redundant work. Instead of compiling source code from scratch every time, ccache stores the results of previous compilations and reuses them when the same compilation is requested again. To install ccache on Ubuntu, you can use spack: </p><div class="fragment"><div class="line">spack install ccache</div>
+<div class="line">spack load ccache</div>
+</div><!-- fragment --><p>Consider adding ccache to your PATH or spack view. Next, you need to set the compiler to use ccache. Simply reconfigure your build by running: </p><div class="fragment"><div class="line">make rebuild_cache </div>
+</div><!-- fragment --><p>You should see in the output the following line, confirming the the compiler is now using ccache: </p><div class="fragment"><div class="line">-- CCache found:/home/karol/spack_view/bin/ccache</div>
+</div><!-- fragment --><p>From now on, ccache will be used to compile <a class="el" href="namespace_mo_f_e_m.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>, speeding up the process.</p>
 <h2><a class="anchor" id="stop_at_first_error"></a>
 How to stop at first error?</h2>
 <p>When you compile code and programming, you make errors which produce long error messages that are diffcult to comprehend. If you like to code stop complying at the fatal fist error, you can do that by adding to the CMake file </p><div class="fragment"><div class="line">add_definitions(-Wfatal-errors)</div>

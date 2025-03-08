@@ -1,9 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,80,103,104"/>
-<area shape="rect" id="Node000001" href="$class_mo_f_e_m_1_1_log_manager_1_1_internal_data_1_1_self_stream_buf.html" title=" " alt="" coords="157,5,344,43"/>
-<area shape="poly" id="edge1296_Node000000_Node000001" title=" " alt="" coords="99,71,150,52,184,41,186,46,152,57,101,76"/>
-<area shape="rect" id="Node000002" href="$struct_mo_f_e_m_1_1_log_manager_1_1_internal_data_1_1_synchronized_stream_buf.html" title=" " alt="" coords="159,67,342,117"/>
-<area shape="poly" id="edge1297_Node000000_Node000002" title=" " alt="" coords="119,89,159,89,159,95,119,95"/>
-<area shape="rect" id="Node000003" href="$struct_mo_f_e_m_1_1_log_manager_1_1_internal_data_1_1_world_stream_buf.html" title=" " alt="" coords="151,141,350,179"/>
-<area shape="poly" id="edge1298_Node000000_Node000003" title=" " alt="" coords="101,108,152,127,186,138,184,143,150,132,99,113"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,20,147,46"/>
+<area shape="rect" id="Node000001" href="$struct_fracture_mechanics_1_1_m_w_l_s_approx_1_1_op_m_w_l_s_base.html" title=" " alt="" coords="195,13,424,54"/>
+<area shape="poly" id="edge1299_Node000000_Node000001" title=" " alt="" coords="162,31,194,31,194,36,162,36"/>
+<area shape="rect" id="Node000002" href="$struct_fracture_mechanics_1_1_m_w_l_s_approx_1_1_op_m_w_l_s_calculate_base_coeffcients_at_gauss_pts_tmpl.html" title=" " alt="" coords="472,5,722,61"/>
+<area shape="poly" id="edge1300_Node000001_Node000002" title=" " alt="" coords="440,31,472,31,472,36,440,36"/>
 </map>

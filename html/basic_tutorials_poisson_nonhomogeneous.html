@@ -386,7 +386,85 @@ User Defined Operators(UDO)</h2>
 <p><a class="el" href="namespace_mo_f_e_m.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> has an in-built extensive library consisting of operators and to implement those operators users need to create some new UDOs according to the problems and PDEs. First, let's look at the structure of a UDO so that users can also learn the general structure of any UDOs implemented in <a class="el" href="namespace_mo_f_e_m.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>.</p>
 <h3><a class="anchor" id="OpDomainLhs"></a>
 OpDomainLhs()</h3>
-<p>For example, we can notice that our <code>OpDomainLhs</code> is similar to the <code>OpDomainLhsMatrixK</code> UDO in <a class="el" href="basic_tutorials_poisson_homogeneous.html">SCL-1: Poisson's equation (homogeneous BC)</a>. So, let's identify the differences bellow and then the further will be discussed: </p><div class="fragment"></div><!-- fragment --><p>In the above, the class OpDomainLhs is inherited from OpFaceEle, which stands for the alias for the base class <a class="el" href="struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for TRI element">MoFEM::FaceElementForcesAndSourcesCore::UserDataOperator</a>. Within this class, there are two public functions: OpDomainLhs() and doWork(). Here, the doWork() does the same as iNtegrate as in <a class="el" href="basic_tutorials_poisson_homogeneous.html">SCL-1: Poisson's equation (homogeneous BC)</a>. However, the difference is that we are using a different Lambda function to calculate the body source term. Alongside, we have got two private members named locLhs and transLocLhs. This follows the concept of data encapsulation to hide values and objects inside the class as much as possible.</p>
+<p>For example, we can notice that our <code>OpDomainLhs</code> is similar to the <code>OpDomainLhsMatrixK</code> UDO in <a class="el" href="basic_tutorials_poisson_homogeneous.html">SCL-1: Poisson's equation (homogeneous BC)</a>. So, let's identify the differences bellow and then the further will be discussed: </p><div class="fragment"><div class="line"><span class="comment"></span><span class="keyword">struct </span>OpDomainLhs : <span class="keyword">public</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html">OpFaceEle</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#a248719bbbcefe1a235c3f79429618227">OpDomainLhs</a>(std::string row_field_name, std::string col_field_name)</div>
+<div class="line">      : <a class="code hl_struct" href="struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html">OpFaceEle</a>(row_field_name, col_field_name, <a class="code hl_struct" href="struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html">OpFaceEle</a>::<a class="code hl_enumvalue" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ac99de5ec6fa9bad3ccc5c5d60bc48e40a3884917d2b4b602e2579971b6d56878a">OPROWCOL</a>) {</div>
+<div class="line">    <a class="code hl_variable" href="struct_mo_f_e_m_1_1_data_operator.html#a300b85aefcf2cf7203ada5d6d501f25f">sYmm</a> = <span class="keyword">true</span>;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#a7f84f33633150402ab3daea47579300a">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
+<div class="line">                        EntityType col_type, <a class="code hl_struct" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html">EntData</a> &amp;row_data,</div>
+<div class="line">                        <a class="code hl_struct" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html">EntData</a> &amp;col_data) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> nb_row_dofs = row_data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> nb_col_dofs = col_data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (nb_row_dofs &amp;&amp; nb_col_dofs) {</div>
+<div class="line"> </div>
+<div class="line">      <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#aa1676eb8d50f4fa102e154ea2ad11499">locLhs</a>.resize(nb_row_dofs, nb_col_dofs, <span class="keyword">false</span>);</div>
+<div class="line">      <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#aa1676eb8d50f4fa102e154ea2ad11499">locLhs</a>.clear();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// get element area</span></div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> area = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#aa0f5b68e1ab8bc7e79ea1b3d969eb400">getMeasure</a>();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// get number of integration points</span></div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">int</span> nb_integration_points = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ae90a09d3c36b0a4ed9ab1d99fcce0c1d">getGaussPts</a>().size2();</div>
+<div class="line">      <span class="comment">// get integration weights</span></div>
+<div class="line">      <span class="keyword">auto</span> t_w = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#a8d917e73cbaa9f177cdea72e1e7500dd">getFTensor0IntegrationWeight</a>();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// get derivatives of base functions on row</span></div>
+<div class="line">      <span class="keyword">auto</span> t_row_diff_base = row_data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#a0488e04e389071c795c0233b028de015">getFTensor1DiffN</a>&lt;2&gt;();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// START THE LOOP OVER INTEGRATION POINTS TO CALCULATE LOCAL MATRIX</span></div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gg = 0; gg != nb_integration_points; gg++) {</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a> = t_w * area;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> rr = 0; rr != nb_row_dofs; ++rr) {</div>
+<div class="line">          <span class="comment">// get derivatives of base functions on column</span></div>
+<div class="line">          <span class="keyword">auto</span> t_col_diff_base = col_data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#a0488e04e389071c795c0233b028de015">getFTensor1DiffN</a>&lt;2&gt;(gg, 0);</div>
+<div class="line"> </div>
+<div class="line">          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> cc = 0; cc != nb_col_dofs; cc++) {</div>
+<div class="line"> </div>
+<div class="line">            <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#aa1676eb8d50f4fa102e154ea2ad11499">locLhs</a>(rr, cc) += t_row_diff_base(<a class="code hl_variable" href="namespace_poisson2_d_nonhomogeneous_operators.html#aeef92563540fd05ef13a932c02c13a96">i</a>) * t_col_diff_base(<a class="code hl_variable" href="namespace_poisson2_d_nonhomogeneous_operators.html#aeef92563540fd05ef13a932c02c13a96">i</a>) * <a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>;</div>
+<div class="line"> </div>
+<div class="line">            <span class="comment">// move to the derivatives of the next base functions on column</span></div>
+<div class="line">            ++t_col_diff_base;</div>
+<div class="line">          }</div>
+<div class="line"> </div>
+<div class="line">          <span class="comment">// move to the derivatives of the next base functions on row</span></div>
+<div class="line">          ++t_row_diff_base;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// move to the weight of the next integration point</span></div>
+<div class="line">        ++t_w;</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// FILL VALUES OF LOCAL MATRIX ENTRIES TO THE GLOBAL MATRIX</span></div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// Fill value to local stiffness matrix ignoring boundary DOFs</span></div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetValues&lt;MoFEM::EssentialBcStorage&gt;(</div>
+<div class="line">          <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ae6b967017977d2f79550627e2a6e89bd">getKSPB</a>(), row_data, col_data, &amp;<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#aa1676eb8d50f4fa102e154ea2ad11499">locLhs</a>(0, 0), ADD_VALUES);</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// Fill values of symmetric local stiffness matrix</span></div>
+<div class="line">      <span class="keywordflow">if</span> (row_side != col_side || row_type != col_type) {</div>
+<div class="line">        <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#ac4ae0a0e6e14d3a8eb1df9686025f4b5">transLocLhs</a>.resize(nb_col_dofs, nb_row_dofs, <span class="keyword">false</span>);</div>
+<div class="line">        noalias(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#ac4ae0a0e6e14d3a8eb1df9686025f4b5">transLocLhs</a>) = trans(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#aa1676eb8d50f4fa102e154ea2ad11499">locLhs</a>);</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetValues&lt;MoFEM::EssentialBcStorage&gt;(</div>
+<div class="line">            <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ae6b967017977d2f79550627e2a6e89bd">getKSPB</a>(), col_data, row_data, &amp;<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#ac4ae0a0e6e14d3a8eb1df9686025f4b5">transLocLhs</a>(0, 0), ADD_VALUES);</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">  boost::shared_ptr&lt;std::vector&lt;unsigned char&gt;&gt; <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#a5b01530186e45e9693011c77123f5f53">boundaryMarker</a>;</div>
+<div class="line">  MatrixDouble <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#aa1676eb8d50f4fa102e154ea2ad11499">locLhs</a>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html#ac4ae0a0e6e14d3a8eb1df9686025f4b5">transLocLhs</a>;</div>
+<div class="line">};<span class="comment"></span></div>
+</div><!-- fragment --><p>In the above, the class OpDomainLhs is inherited from OpFaceEle, which stands for the alias for the base class <a class="el" href="struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html" title="default operator for TRI element">MoFEM::FaceElementForcesAndSourcesCore::UserDataOperator</a>. Within this class, there are two public functions: OpDomainLhs() and doWork(). Here, the doWork() does the same as iNtegrate as in <a class="el" href="basic_tutorials_poisson_homogeneous.html">SCL-1: Poisson's equation (homogeneous BC)</a>. However, the difference is that we are using a different Lambda function to calculate the body source term. Alongside, we have got two private members named locLhs and transLocLhs. This follows the concept of data encapsulation to hide values and objects inside the class as much as possible.</p>
 <ul>
 <li><code>locLhs</code> <br  />
  This private member object of type MatrixDouble is used to store the results of the calculation of the components of element stiffness matrix. Besides, this object is made private so that only member of the class has access to use this private object avoiding unpredictable consequences, i.e. errors.</li>
@@ -408,7 +486,69 @@ OpDomainLhs()</h3>
 <h3><a class="anchor" id="OpDomainRhs"></a>
 OpDomainRhs()</h3>
 <p>The characterization of <code>OpDomainRhs</code> is straightforward and also aligns with <code>OpDomainRhsVectorF</code> in the context of SCL-1 for solving Poisson's equation with homogeneous BC. However, there is a slight difference in the body source term. The accompanying code snippet illustrates in the following:</p>
-<div class="fragment"></div><!-- fragment --><p>In the above snippet, we can find a different <code>body_source</code> term which is calculated by calling a Lambda function <code>sourceTermFunc()</code> with coordinate(x, y, z) i.e. t_coords(0), t_coords(1), and t_coords(2) as arguments as follows: </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> body_source =</div>
+<div class="fragment"><div class="line"><span class="comment"></span><span class="keyword">struct </span>OpDomainRhs : <span class="keyword">public</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html">OpFaceEle</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#a585b7b2873ee976a471df8c8e3bd72ab">OpDomainRhs</a>(std::string <a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, <a class="code hl_typedef" href="namespace_poisson2_d_nonhomogeneous_operators.html#ad9994064117952c0a0f59e9853fb568f">ScalarFunc</a> source_term_function)</div>
+<div class="line">      : <a class="code hl_struct" href="struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html">OpFaceEle</a>(<a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, <a class="code hl_struct" href="struct_mo_f_e_m_1_1_face_element_forces_and_sources_core_1_1_user_data_operator.html">OpFaceEle</a>::<a class="code hl_enumvalue" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ac99de5ec6fa9bad3ccc5c5d60bc48e40a2d8d202342fada158e521ef00be491e1">OPROW</a>),</div>
+<div class="line">        <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#a3fa746c4b0bb6e736df0b2407ac01bce">sourceTermFunc</a>(source_term_function) {}</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#afde76f5aaa53e245908cec7789369617">doWork</a>(<span class="keywordtype">int</span> side, EntityType type, <a class="code hl_struct" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html">EntData</a> &amp;data) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> nb_dofs = data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (nb_dofs) {</div>
+<div class="line"> </div>
+<div class="line">      <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#a2bee5328590f59af59006ccf39968986">locRhs</a>.resize(nb_dofs, <span class="keyword">false</span>);</div>
+<div class="line">      <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#a2bee5328590f59af59006ccf39968986">locRhs</a>.clear();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// get element area</span></div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> area = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#aa0f5b68e1ab8bc7e79ea1b3d969eb400">getMeasure</a>();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// get number of integration points</span></div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">int</span> nb_integration_points = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ae90a09d3c36b0a4ed9ab1d99fcce0c1d">getGaussPts</a>().size2();</div>
+<div class="line">      <span class="comment">// get integration weights</span></div>
+<div class="line">      <span class="keyword">auto</span> t_w = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#a8d917e73cbaa9f177cdea72e1e7500dd">getFTensor0IntegrationWeight</a>();</div>
+<div class="line">      <span class="comment">// get coordinates of the integration point</span></div>
+<div class="line">      <span class="keyword">auto</span> t_coords = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#a5022d618bbaf375d0a07588e50a297a5">getFTensor1CoordsAtGaussPts</a>();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// get base functions</span></div>
+<div class="line">      <span class="keyword">auto</span> t_base = data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#a1effe6c5260104eb70a930d993942675">getFTensor0N</a>();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// START THE LOOP OVER INTEGRATION POINTS TO CALCULATE LOCAL VECTOR</span></div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gg = 0; gg != nb_integration_points; gg++) {</div>
+<div class="line"> </div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a> = t_w * area;</div>
+<div class="line">        <span class="keywordtype">double</span> body_source =</div>
+<div class="line">            <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#a3fa746c4b0bb6e736df0b2407ac01bce">sourceTermFunc</a>(t_coords(0), t_coords(1), t_coords(2));</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> rr = 0; rr != nb_dofs; rr++) {</div>
+<div class="line"> </div>
+<div class="line">          <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#a2bee5328590f59af59006ccf39968986">locRhs</a>[rr] += t_base * body_source * <a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>;</div>
+<div class="line"> </div>
+<div class="line">          <span class="comment">// move to the next base function</span></div>
+<div class="line">          ++t_base;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// move to the weight of the next integration point</span></div>
+<div class="line">        ++t_w;</div>
+<div class="line">        <span class="comment">// move to the coordinates of the next integration point</span></div>
+<div class="line">        ++t_coords;</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// FILL VALUES OF THE GLOBAL VECTOR ENTRIES FROM THE LOCAL ONES</span></div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecSetValues&lt;MoFEM::EssentialBcStorage&gt;(</div>
+<div class="line">          <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#a5776797a630374d6b06e3aea772cdc39">getKSPf</a>(), data, &amp;*<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#a2bee5328590f59af59006ccf39968986">locRhs</a>.begin(), ADD_VALUES);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">  <a class="code hl_typedef" href="namespace_poisson2_d_nonhomogeneous_operators.html#ad9994064117952c0a0f59e9853fb568f">ScalarFunc</a> <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#a3fa746c4b0bb6e736df0b2407ac01bce">sourceTermFunc</a>;</div>
+<div class="line">  VectorDouble <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html#a2bee5328590f59af59006ccf39968986">locRhs</a>;</div>
+<div class="line">};<span class="comment"></span></div>
+</div><!-- fragment --><p>In the above snippet, we can find a different <code>body_source</code> term which is calculated by calling a Lambda function <code>sourceTermFunc()</code> with coordinate(x, y, z) i.e. t_coords(0), t_coords(1), and t_coords(2) as arguments as follows: </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> body_source =</div>
 <div class="line">            sourceTermFunc(t_coords(0), t_coords(1), t_coords(2));</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> rr = 0; rr != nb_dofs; rr++) {</div>
@@ -421,7 +561,79 @@ OpDomainRhs()</h3>
 <div class="ttc" id="aapprox__sphere_8cpp_html_a188caae18b60b66f9f44214c7e28ac1f"><div class="ttname"><a href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a></div><div class="ttdeci">constexpr double a</div><div class="ttdef"><b>Definition</b> <a href="approx__sphere_8cpp_source.html#l00030">approx_sphere.cpp:30</a></div></div>
 </div><!-- fragment --><h3><a class="anchor" id="OpBoundaryLhs"></a>
 OpBoundaryLhs()</h3>
-<p><code>OpBoundaryLhs</code> is focusing on the boundary( \( \Gamma\)) instead of the domain. So we're using OpEdgeEle instead of OpFaceEle. You can realize the fact easily that for 2D problems any boundary element type should be edge(1D) and for 3D problems it will be face(2D) type element.This operator is quite similar to our first operator, OpDomainLhs. Therefore we are not describing it again. Further, the code snippet is here: </p><div class="fragment"></div><!-- fragment --><h3><a class="anchor" id="OpBoundaryRhs"></a>
+<p><code>OpBoundaryLhs</code> is focusing on the boundary( \( \Gamma\)) instead of the domain. So we're using OpEdgeEle instead of OpFaceEle. You can realize the fact easily that for 2D problems any boundary element type should be edge(1D) and for 3D problems it will be face(2D) type element.This operator is quite similar to our first operator, OpDomainLhs. Therefore we are not describing it again. Further, the code snippet is here: </p><div class="fragment"><div class="line"><span class="comment"></span><span class="keyword">struct </span><a class="code hl_typedef" href="nonlinear__poisson__2d_8hpp.html#ad67ad613f743b5c02e930419987619bf">OpBoundaryLhs</a> : <span class="keyword">public</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_edge_element_forces_and_sources_core_1_1_user_data_operator.html">OpEdgeEle</a> {</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  <a class="code hl_typedef" href="nonlinear__poisson__2d_8hpp.html#ad67ad613f743b5c02e930419987619bf">OpBoundaryLhs</a>(std::string row_field_name, std::string col_field_name)</div>
+<div class="line">      : <a class="code hl_struct" href="struct_mo_f_e_m_1_1_edge_element_forces_and_sources_core_1_1_user_data_operator.html">OpEdgeEle</a>(row_field_name, col_field_name, <a class="code hl_struct" href="struct_mo_f_e_m_1_1_edge_element_forces_and_sources_core_1_1_user_data_operator.html">OpEdgeEle</a>::<a class="code hl_enumvalue" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ac99de5ec6fa9bad3ccc5c5d60bc48e40a3884917d2b4b602e2579971b6d56878a">OPROWCOL</a>) {</div>
+<div class="line">    <a class="code hl_variable" href="struct_mo_f_e_m_1_1_data_operator.html#a300b85aefcf2cf7203ada5d6d501f25f">sYmm</a> = <span class="keyword">true</span>;</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#a96c6831aa87c6644eea6f88b1afecff2">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
+<div class="line">                        EntityType col_type, <a class="code hl_struct" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html">EntData</a> &amp;row_data,</div>
+<div class="line">                        <a class="code hl_struct" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html">EntData</a> &amp;col_data) {</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> nb_row_dofs = row_data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> nb_col_dofs = col_data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (nb_row_dofs &amp;&amp; nb_col_dofs) {</div>
+<div class="line"> </div>
+<div class="line">      <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#abc3b76ed05854207648b36fca29af288">locBoundaryLhs</a>.resize(nb_row_dofs, nb_col_dofs, <span class="keyword">false</span>);</div>
+<div class="line">      <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#abc3b76ed05854207648b36fca29af288">locBoundaryLhs</a>.clear();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// get (boundary) element length</span></div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> edge = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#aa0f5b68e1ab8bc7e79ea1b3d969eb400">getMeasure</a>();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// get number of integration points</span></div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">int</span> nb_integration_points = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ae90a09d3c36b0a4ed9ab1d99fcce0c1d">getGaussPts</a>().size2();</div>
+<div class="line">      <span class="comment">// get integration weights</span></div>
+<div class="line">      <span class="keyword">auto</span> t_w = <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#a8d917e73cbaa9f177cdea72e1e7500dd">getFTensor0IntegrationWeight</a>();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// get base functions on row</span></div>
+<div class="line">      <span class="keyword">auto</span> t_row_base = row_data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#a1effe6c5260104eb70a930d993942675">getFTensor0N</a>();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// START THE LOOP OVER INTEGRATION POINTS TO CALCULATE LOCAL MATRIX</span></div>
+<div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gg = 0; gg != nb_integration_points; gg++) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a> = t_w * edge;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> rr = 0; rr != nb_row_dofs; ++rr) {</div>
+<div class="line">          <span class="comment">// get base functions on column</span></div>
+<div class="line">          <span class="keyword">auto</span> t_col_base = col_data.<a class="code hl_function" href="struct_mo_f_e_m_1_1_entities_field_data_1_1_ent_data.html#a1effe6c5260104eb70a930d993942675">getFTensor0N</a>(gg, 0);</div>
+<div class="line"> </div>
+<div class="line">          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> cc = 0; cc != nb_col_dofs; cc++) {</div>
+<div class="line"> </div>
+<div class="line">            <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#abc3b76ed05854207648b36fca29af288">locBoundaryLhs</a>(rr, cc) += t_row_base * t_col_base * <a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>;</div>
+<div class="line"> </div>
+<div class="line">            <span class="comment">// move to the next base functions on column</span></div>
+<div class="line">            ++t_col_base;</div>
+<div class="line">          }</div>
+<div class="line">          <span class="comment">// move to the next base functions on row</span></div>
+<div class="line">          ++t_row_base;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// move to the weight of the next integration point</span></div>
+<div class="line">        ++t_w;</div>
+<div class="line">      }</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// FILL VALUES OF LOCAL MATRIX ENTRIES TO THE GLOBAL MATRIX</span></div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetValues&lt;MoFEM::EssentialBcStorage&gt;(</div>
+<div class="line">          <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ae6b967017977d2f79550627e2a6e89bd">getKSPB</a>(), row_data, col_data, &amp;<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#abc3b76ed05854207648b36fca29af288">locBoundaryLhs</a>(0, 0), ADD_VALUES);</div>
+<div class="line">      <span class="keywordflow">if</span> (row_side != col_side || row_type != col_type) {</div>
+<div class="line">        <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#a5c16c73cc53064d42320cb7d157a1c0e">transLocBoundaryLhs</a>.resize(nb_col_dofs, nb_row_dofs, <span class="keyword">false</span>);</div>
+<div class="line">        noalias(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#a5c16c73cc53064d42320cb7d157a1c0e">transLocBoundaryLhs</a>) = trans(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#abc3b76ed05854207648b36fca29af288">locBoundaryLhs</a>);</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetValues&lt;MoFEM::EssentialBcStorage&gt;(</div>
+<div class="line">            <a class="code hl_function" href="struct_mo_f_e_m_1_1_forces_and_sources_core_1_1_user_data_operator.html#ae6b967017977d2f79550627e2a6e89bd">getKSPB</a>(), col_data, row_data, &amp;<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#a5c16c73cc53064d42320cb7d157a1c0e">transLocBoundaryLhs</a>(0, 0),</div>
+<div class="line">            ADD_VALUES);</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">  MatrixDouble <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#abc3b76ed05854207648b36fca29af288">locBoundaryLhs</a>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_boundary_lhs.html#a5c16c73cc53064d42320cb7d157a1c0e">transLocBoundaryLhs</a>;</div>
+<div class="line">};<span class="comment"></span></div>
+</div><!-- fragment --><h3><a class="anchor" id="OpBoundaryRhs"></a>
 OpBoundaryRhs()</h3>
 <p>If we compare the OpBoundaryRhs operator, it also closely resembles the OpDomainRhsVectorF operator in its structure. Additionally, it is also similar to OpBoundaryRhs. However, we are now using boundary_term here instead of body_source as follows: </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> boundary_term =</div>
 <div class="line">     boundaryFunc(t_coords(0), t_coords(1), t_coords(2));</div>
@@ -502,7 +714,16 @@ Main program (*.cpp)</h2>
 <div class="ttc" id="astruct_poisson2_d_nonhomogeneous_html_af6a1da973cfc717028d17e8044ba3d3c"><div class="ttname"><a href="struct_poisson2_d_nonhomogeneous.html#af6a1da973cfc717028d17e8044ba3d3c">Poisson2DNonhomogeneous::simpleInterface</a></div><div class="ttdeci">Simple * simpleInterface</div><div class="ttdef"><b>Definition</b> <a href="poisson__2d__nonhomogeneous_8cpp_source.html#l00042">poisson_2d_nonhomogeneous.cpp:42</a></div></div>
 </div><!-- fragment --> <h3><a class="anchor" id="readMesh"></a>
 readMesh()</h3>
-<p>Next, this code defines function in <a class="el" href="namespace_mo_f_e_m.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> to loads and reads your mesh file. </p><div class="fragment"></div><!-- fragment --><h3><a class="anchor" id="setupProblem"></a>
+<p>Next, this code defines function in <a class="el" href="namespace_mo_f_e_m.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> to loads and reads your mesh file. </p><div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous.html#ad363b70735aaefeab27e969f3a4ffe4f">Poisson2DNonhomogeneous::readMesh</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a9e3689ec8249b32acf7080dd0209aa4e">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#af6a1da973cfc717028d17e8044ba3d3c">simpleInterface</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#af6a1da973cfc717028d17e8044ba3d3c">simpleInterface</a>-&gt;<a class="code hl_function" href="struct_mo_f_e_m_1_1_simple.html#a8325447a1773550852f04c1b600af703">getOptions</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#af6a1da973cfc717028d17e8044ba3d3c">simpleInterface</a>-&gt;<a class="code hl_function" href="struct_mo_f_e_m_1_1_simple.html#a3d65745e902af842b5c490eedbcd30d1">loadFile</a>();</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><h3><a class="anchor" id="setupProblem"></a>
 setupProblem()</h3>
 <p>Since we are considering both domain and boundary, we need to add the domain and boundary field in the simpleInterface to setup the problem. Besides, we have selected the polynomial base function as <code>AINSWORTH_BERNSTEIN_BEZIER_BASE</code> and \( \mathbf{H^1}\) scalar space, where we are considering single(1) degree of freedom for each shape function has </p><div class="fragment"><div class="line">MoFEMErrorCode <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous.html#a4a01a670bbb2072de569c20f53d27e42">Poisson2DNonhomogeneous::setupProblem</a>() {</div>
 <div class="line"><a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
@@ -531,11 +752,75 @@ setupProblem()</h3>
 <div class="ttc" id="astruct_mo_f_e_m_1_1_simple_html_acf413f83e47d1e092a8d5fdb27996cbf"><div class="ttname"><a href="struct_mo_f_e_m_1_1_simple.html#acf413f83e47d1e092a8d5fdb27996cbf">MoFEM::Simple::setUp</a></div><div class="ttdeci">MoFEMErrorCode setUp(const PetscBool is_partitioned=PETSC_TRUE)</div><div class="ttdoc">Setup problem.</div><div class="ttdef"><b>Definition</b> <a href="interfaces_2impl_2simple_8cpp_source.html#l00765">Simple.cpp:765</a></div></div>
 </div><!-- fragment --><h3><a class="anchor" id="boundaryCondition"></a>
 boundaryCondition()</h3>
-<p>Next, we are proceeding to discuss the detail for setting up boundary condition. This code involves marking degrees of freedom on boundary entities, merging markers, and obtaining entities for field splitting in the following: </p><div class="fragment"></div><!-- fragment --><p>The line <code>bc_mng-&gt;pushMarkDOFsOnEntities(...)</code> is used to collect the degrees of freedom (DOFs) of the entities only for marked block set <code>("BOUNDARY_CONDITION")</code>. Then, the block sets are accumulated as in container and assembled in boundaryMarker. In addition, the `<code>boundaryEntitiesForFieldsplit</code> is to get the range/IDs for the blocks including vertex, edges or faces. It has been done to indicate the difference between the domain and boundary entities.</p>
+<p>Next, we are proceeding to discuss the detail for setting up boundary condition. This code involves marking degrees of freedom on boundary entities, merging markers, and obtaining entities for field splitting in the following: </p><div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous.html#a5b1f7d6f2e4dadbacdb2357a9ede0244">Poisson2DNonhomogeneous::boundaryCondition</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> bc_mng = <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a9e3689ec8249b32acf7080dd0209aa4e">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_bc_manager.html">BcManager</a>&gt;();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> bc_mng-&gt;<a class="code hl_function" href="struct_mo_f_e_m_1_1_bc_manager.html#ad0bbc182baa1622340dbf96ce6da5ef2">pushMarkDOFsOnEntities</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#af6a1da973cfc717028d17e8044ba3d3c">simpleInterface</a>-&gt;<a class="code hl_function" href="struct_mo_f_e_m_1_1_simple.html#ad7603558a61c32e29d2bc1d0210ddf88">getProblemName</a>(),</div>
+<div class="line">                                        <span class="stringliteral">&quot;BOUNDARY_CONDITION&quot;</span>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, 0, 1,</div>
+<div class="line">                                        <span class="keyword">true</span>);</div>
+<div class="line">  <span class="comment">// merge markers from all blocksets &quot;BOUNDARY_CONDITION&quot;</span></div>
+<div class="line">  <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a8ba327105b7e5fbe510c73a51fc98147">boundaryMarker</a> = bc_mng-&gt;getMergedBlocksMarker({<span class="stringliteral">&quot;BOUNDARY_CONDITION&quot;</span>});</div>
+<div class="line">  <span class="comment">// get entities on blocksets &quot;BOUNDARY_CONDITION&quot;</span></div>
+<div class="line">  <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a88a21e50e82c2815fbef79717d487566">boundaryEntitiesForFieldsplit</a> =</div>
+<div class="line">      bc_mng-&gt;getMergedBlocksRange({<span class="stringliteral">&quot;BOUNDARY_CONDITION&quot;</span>});</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p>The line <code>bc_mng-&gt;pushMarkDOFsOnEntities(...)</code> is used to collect the degrees of freedom (DOFs) of the entities only for marked block set <code>("BOUNDARY_CONDITION")</code>. Then, the block sets are accumulated as in container and assembled in boundaryMarker. In addition, the `<code>boundaryEntitiesForFieldsplit</code> is to get the range/IDs for the blocks including vertex, edges or faces. It has been done to indicate the difference between the domain and boundary entities.</p>
 <h3><a class="anchor" id="assembleSystem"></a>
 assembleSystem()</h3>
 <p>At this stage, we are all set to focus on assembling all we did before to the pipeline. However, we find some changes that happens here in codes compared with <a class="el" href="basic_tutorials_poisson_nonhomogeneous.html">SCL-2: Poisson's equation (non-homogeneous BC)</a>. Before going to that, first we add operators to the OpDomainLhsPipeline using the <code><a class="el" href="struct_add_h_o_ops.html">AddHOOps</a></code> function considering scalar space H1. Then we need to assemble to the pipeline for the domain using OpSetBc. Then push the main <code>OpDomainLhs</code> operator, and finally unset the assembly using OpUnSetBc. We will discuss it in detail after going through the code snippet in the following:</p>
-<div class="fragment"></div><!-- fragment --><p>Here, the process involves using the <code>OpSetBc</code>, <code>OpUnSetBc</code>, and UDOs to push back to the RHS and LHS pipelines for assembling. Specifically, these operations are being carried out on the pipeline for the Domain and boundary in same way i.e. <code>getOpDomainLhsPipeline()</code>, <code>OpBoundaryLhsPipeline</code>. So we are only describing for only one set of assemble processes in the following:</p>
+<div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous.html#ae28677eb3db87facbca9273b838801dd">Poisson2DNonhomogeneous::assembleSystem</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> pipeline_mng = <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a9e3689ec8249b32acf7080dd0209aa4e">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_pipeline_manager.html">PipelineManager</a>&gt;();</div>
+<div class="line"> </div>
+<div class="line">  { <span class="comment">// Push operators to the Pipeline that is responsible for calculating LHS of</span></div>
+<div class="line">    <span class="comment">// domain elements</span></div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="struct_add_h_o_ops.html">AddHOOps&lt;SPACE_DIM, SPACE_DIM, SPACE_DIM&gt;::add</a>(</div>
+<div class="line">        pipeline_mng-&gt;getOpDomainLhsPipeline(), {H1});</div>
+<div class="line">    pipeline_mng-&gt;getOpDomainLhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_set_bc.html">OpSetBc</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, <span class="keyword">true</span>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a8ba327105b7e5fbe510c73a51fc98147">boundaryMarker</a>));</div>
+<div class="line">    pipeline_mng-&gt;getOpDomainLhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_lhs.html">OpDomainLhs</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>));</div>
+<div class="line">    pipeline_mng-&gt;getOpDomainLhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_un_set_bc.html">OpUnSetBc</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>));</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  { <span class="comment">// Push operators to the Pipeline that is responsible for calculating RHS of</span></div>
+<div class="line">    <span class="comment">// domain elements</span></div>
+<div class="line">    pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_set_bc.html">OpSetBc</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, <span class="keyword">true</span>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a8ba327105b7e5fbe510c73a51fc98147">boundaryMarker</a>));</div>
+<div class="line">    pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_poisson2_d_nonhomogeneous_operators_1_1_op_domain_rhs.html">OpDomainRhs</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous.html#a452b4e71e7a3e6b7529220cb0795a0fb">sourceTermFunction</a>));</div>
+<div class="line">    pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_un_set_bc.html">OpUnSetBc</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>));</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  { <span class="comment">// Push operators to the Pipeline that is responsible for calculating LHS of</span></div>
+<div class="line">    <span class="comment">// boundary elements</span></div>
+<div class="line">    pipeline_mng-&gt;getOpBoundaryLhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_set_bc.html">OpSetBc</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, <span class="keyword">false</span>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a8ba327105b7e5fbe510c73a51fc98147">boundaryMarker</a>));</div>
+<div class="line">    pipeline_mng-&gt;getOpBoundaryLhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_typedef" href="nonlinear__poisson__2d_8hpp.html#ad67ad613f743b5c02e930419987619bf">OpBoundaryLhs</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>));</div>
+<div class="line">    pipeline_mng-&gt;getOpBoundaryLhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_un_set_bc.html">OpUnSetBc</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>));</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  { <span class="comment">// Push operators to the Pipeline that is responsible for calculating RHS of</span></div>
+<div class="line">    <span class="comment">// boundary elements</span></div>
+<div class="line">    pipeline_mng-&gt;getOpBoundaryRhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_set_bc.html">OpSetBc</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, <span class="keyword">false</span>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a8ba327105b7e5fbe510c73a51fc98147">boundaryMarker</a>));</div>
+<div class="line">    pipeline_mng-&gt;getOpBoundaryRhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_typedef" href="nonlinear__poisson__2d_8hpp.html#a95692267c2ae09b3272585ad695656dd">OpBoundaryRhs</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous.html#a0baa354c1d3bfdc7fae8e964cff3d39e">boundaryFunction</a>));</div>
+<div class="line">    pipeline_mng-&gt;getOpBoundaryRhsPipeline().push_back(</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_op_un_set_bc.html">OpUnSetBc</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>));</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p>Here, the process involves using the <code>OpSetBc</code>, <code>OpUnSetBc</code>, and UDOs to push back to the RHS and LHS pipelines for assembling. Specifically, these operations are being carried out on the pipeline for the Domain and boundary in same way i.e. <code>getOpDomainLhsPipeline()</code>, <code>OpBoundaryLhsPipeline</code>. So we are only describing for only one set of assemble processes in the following:</p>
 <p>The <code>OpSetBc()</code> object is responsible for assembling only for the boundary entities or everything except the boundary. In other words, when it is flagged 'true' it focuses exclusively on the domain entities and does not account for boundary entities tagged with the 'boundaryMarker. </p><div class="fragment"><div class="line">{ <span class="comment">// Push operators to the Pipeline that is responsible for calculating LHS of</span></div>
 <div class="line">    <span class="comment">// domain elements</span></div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="struct_add_h_o_ops.html">AddHOOps&lt;SPACE_DIM, SPACE_DIM, SPACE_DIM&gt;::add</a>(</div>
@@ -556,7 +841,24 @@ assembleSystem()</h3>
 </blockquote>
 <h3><a class="anchor" id="setIntegrationRules"></a>
 setIntegrationRules()</h3>
-<p>Afterwards, the computation of LHS and RHS is defined in the setIntegrationRules. The instructions for the functions setIntegrationRules() is same as it was in <a class="el" href="basic_tutorials_poisson_homogeneous.html">SCL-1: Poisson's equation (homogeneous BC)</a>. </p><div class="fragment"></div><!-- fragment --> <h3><a class="anchor" id="solveSystem"></a>
+<p>Afterwards, the computation of LHS and RHS is defined in the setIntegrationRules. The instructions for the functions setIntegrationRules() is same as it was in <a class="el" href="basic_tutorials_poisson_homogeneous.html">SCL-1: Poisson's equation (homogeneous BC)</a>. </p><div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous.html#a3e2d0c8dc97457ffd8b5e8cdf64e822e">Poisson2DNonhomogeneous::setIntegrationRules</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> pipeline_mng = <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a9e3689ec8249b32acf7080dd0209aa4e">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_pipeline_manager.html">PipelineManager</a>&gt;();</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> domain_rule_lhs = [](int, int, <span class="keywordtype">int</span> p) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> 2 * (p - 1); };</div>
+<div class="line">  <span class="keyword">auto</span> domain_rule_rhs = [](int, int, <span class="keywordtype">int</span> p) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> 2 * (p - 1); };</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> pipeline_mng-&gt;<a class="code hl_function" href="struct_mo_f_e_m_1_1_pipeline_manager.html#ac81815a59f303199fc9f63e598040f00">setDomainLhsIntegrationRule</a>(domain_rule_lhs);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> pipeline_mng-&gt;setDomainRhsIntegrationRule(domain_rule_rhs);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">auto</span> boundary_rule_lhs = [](int, int, <span class="keywordtype">int</span> p) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> 2 * p; };</div>
+<div class="line">  <span class="keyword">auto</span> boundary_rule_rhs = [](int, int, <span class="keywordtype">int</span> p) -&gt; <span class="keywordtype">int</span> { <span class="keywordflow">return</span> 2 * p; };</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> pipeline_mng-&gt;setBoundaryLhsIntegrationRule(boundary_rule_lhs);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> pipeline_mng-&gt;setBoundaryLhsIntegrationRule(boundary_rule_rhs);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --> <h3><a class="anchor" id="solveSystem"></a>
 solveSystem()</h3>
 <p>To solve the problem, we remember that we made our assembling systems ready using the set/unseting process in boundaryCondition() for domain and boundaries as shown in Figure: 2 where we can consider the subscripts 'D' is for domain and 'B' for boundary. <a class="anchor" id="figure_poisson_nonhomogeneous_problem"></a></p><div class="image">
 <img src="non-homogenous_poission_Matrix.png" alt="" width="400px"/>
@@ -599,9 +901,18 @@ Figure 2: Solving approach</div></div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
-<div class="ttc" id="afree__surface_8cpp_html_a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d"><div class="ttname"><a href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a></div><div class="ttdeci">@ F</div><div class="ttdef"><b>Definition</b> <a href="free__surface_8cpp_source.html#l00396">free_surface.cpp:396</a></div></div>
+<div class="ttc" id="afree__surface_8cpp_html_a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d"><div class="ttname"><a href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a></div><div class="ttdeci">@ F</div><div class="ttdef"><b>Definition</b> <a href="free__surface_8cpp_source.html#l00394">free_surface.cpp:394</a></div></div>
 <div class="ttc" id="ainitial__diffusion_8cpp_html_ad8657a5ec76e12f3066fb4b4eb75ace9"><div class="ttname"><a href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a></div><div class="ttdeci">double D</div><div class="ttdef"><b>Definition</b> <a href="initial__diffusion_8cpp_source.html#l00044">initial_diffusion.cpp:44</a></div></div>
-</div><!-- fragment --><p>The rest of the code including <code>outputResults()</code> and main function does the same as <a class="el" href="basic_tutorials_poisson_nonhomogeneous.html">SCL-2: Poisson's equation (non-homogeneous BC)</a> </p><div class="fragment"></div><!-- fragment --><p> Then, run the analysis and get the newly created output file, namely <code>out_result.h5m</code>. Convert it to <code>*.vtk</code> format. Then open it in Paraview and use the filter <code>WarpByScalar</code>, you will be able to see the deformation as bellow:</p>
+</div><!-- fragment --><p>The rest of the code including <code>outputResults()</code> and main function does the same as <a class="el" href="basic_tutorials_poisson_nonhomogeneous.html">SCL-2: Poisson's equation (non-homogeneous BC)</a> </p><div class="fragment"><div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespace_mo_f_e_m_1_1_exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="struct_poisson2_d_nonhomogeneous.html#ad363b70735aaefeab27e969f3a4ffe4f">Poisson2DNonhomogeneous::readMesh</a>() {</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a9e3689ec8249b32acf7080dd0209aa4e">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>(<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#af6a1da973cfc717028d17e8044ba3d3c">simpleInterface</a>);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#af6a1da973cfc717028d17e8044ba3d3c">simpleInterface</a>-&gt;<a class="code hl_function" href="struct_mo_f_e_m_1_1_simple.html#a8325447a1773550852f04c1b600af703">getOptions</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#af6a1da973cfc717028d17e8044ba3d3c">simpleInterface</a>-&gt;<a class="code hl_function" href="struct_mo_f_e_m_1_1_simple.html#a3d65745e902af842b5c490eedbcd30d1">loadFile</a>();</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">}<span class="comment"></span></div>
+</div><!-- fragment --><p> Then, run the analysis and get the newly created output file, namely <code>out_result.h5m</code>. Convert it to <code>*.vtk</code> format. Then open it in Paraview and use the filter <code>WarpByScalar</code>, you will be able to see the deformation as bellow:</p>
 <h1><a class="anchor" id="basic_tutorials_poisson_nonhomogeneous_result"></a>
 Results</h1>
 <p><a class="anchor" id="figure_poisson_nonhomogeneous"></a></p><div class="image">
@@ -1193,9 +1504,9 @@ Implementation of the main program (*.cpp)</h2>
 <div class="line">    <span class="comment">// Identify the index for boundary entities, remaining will be for domain</span></div>
 <div class="line">    <span class="comment">// Then split the fields for boundary and domain for solving</span></div>
 <div class="line">    <span class="keywordflow">if</span> (is_pcfs == PETSC_TRUE) {</div>
+<div class="line">      IS is_domain, is_boundary;</div>
 <div class="line">      <span class="keyword">const</span> <a class="code hl_struct" href="struct_mo_f_e_m_1_1_problem.html">MoFEM::Problem</a> *problem_ptr;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga4cafea643e191089b31207ebb16842c9">DMMoFEMGetProblemPtr</a>(dm, &amp;problem_ptr);</div>
-<div class="line">      IS is_boundary;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a9e3689ec8249b32acf7080dd0209aa4e">mField</a>.<a class="code hl_function" href="struct_mo_f_e_m_1_1_unknown_interface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="struct_mo_f_e_m_1_1_i_s_manager.html">ISManager</a>&gt;()-&gt;isCreateProblemFieldAndRank(</div>
 <div class="line">          problem_ptr-&gt;<a class="code hl_function" href="struct_mo_f_e_m_1_1_problem.html#ac27123017bcc40cd4259e674a7318b3c">getName</a>(), <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>, <a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#aea9139d458166ceb57b23e6f96c278ae">domainField</a>, 0, 1, &amp;is_boundary,</div>
 <div class="line">          &amp;<a class="code hl_variable" href="struct_poisson2_d_nonhomogeneous.html#a88a21e50e82c2815fbef79717d487566">boundaryEntitiesForFieldsplit</a>);</div>

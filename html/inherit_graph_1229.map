@@ -1,3 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_mo_f_e_m_1_1interface___field_series.html" title=" " alt="" coords="5,5,237,29"/>
+<area shape="rect" id="Node000000" href="$struct_mo_f_e_m_1_1interface___ref_entity.html" title=" " alt="" coords="5,104,193,145"/>
+<area shape="rect" id="Node000001" href="$struct_mo_f_e_m_1_1interface___ref_element.html" title=" " alt="" coords="241,71,442,111"/>
+<area shape="poly" id="edge1029_Node000000_Node000001" title=" " alt="" coords="208,107,240,102,240,108,208,112"/>
+<area shape="rect" id="Node000004" href="$struct_mo_f_e_m_1_1interface___field_impl.html" title="Pointer interface for MoFEM::Field." alt="" coords="249,136,434,177"/>
+<area shape="poly" id="edge1032_Node000000_Node000004" title=" " alt="" coords="208,136,249,141,248,147,208,141"/>
+<area shape="rect" id="Node000002" href="$struct_mo_f_e_m_1_1interface___finite_element.html" title=" " alt="" coords="490,5,702,46"/>
+<area shape="poly" id="edge1030_Node000001_Node000002" title=" " alt="" coords="437,64,513,44,515,49,439,69"/>
+<area shape="rect" id="Node000003" href="$struct_mo_f_e_m_1_1interface___finite_element_impl.html" title="Inetface for FE." alt="" coords="490,71,702,111"/>
+<area shape="poly" id="edge1031_Node000001_Node000003" title=" " alt="" coords="457,88,490,88,490,94,457,94"/>
+<area shape="rect" id="Node000005" href="$struct_mo_f_e_m_1_1interface___field.html" title=" " alt="" coords="516,136,676,177"/>
+<area shape="poly" id="edge1033_Node000004_Node000005" title=" " alt="" coords="450,154,516,154,516,159,450,159"/>
 </map>

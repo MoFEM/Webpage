@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_mo_f_e_m_1_1_op_mix_scalar_times_div_impl.html" title=" " alt="" coords="5,5,212,56"/>
+<area shape="rect" id="Node000000" href="$struct_mo_f_e_m_1_1_op_normal_mix_vec_times_scalar_impl.html" title=" " alt="" coords="5,5,220,61"/>
+<area shape="rect" id="Node000001" href="$struct_mo_f_e_m_1_1_op_source_impl_3_013_00_01_f_i_e_l_d___d_i_m_00_01_i_00_01_source_boundary_n1ef94f7360edb688941882947d7ff71c.html" title="This is specialisation for sources on boundary which depends on normal." alt="" coords="268,5,512,61"/>
+<area shape="poly" id="edge1054_Node000000_Node000001" title=" " alt="" coords="235,31,267,31,267,36,235,36"/>
 </map>

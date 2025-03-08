@@ -140,9 +140,10 @@ var searchData=
   ['rowsubfields_137',['rowSubFields',['../struct_mo_f_e_m_1_1_d_m_ctx_impl.html#adfe1b7a652cd3007da1cfe728f553b82',1,'MoFEM::DMCtxImpl']]],
   ['rowtype_138',['rowType',['../struct_mo_f_e_m_1_1_op_base_impl.html#af9e7bec9c09a91d6143fff53dfc6b28c',1,'MoFEM::OpBaseImpl']]],
   ['rrvec_139',['rrvec',['../struct_b_cs___r_v_e_lagrange___periodic_1_1_op_r_v_e_b_cs_periodic_cal_assem_cmat.html#a5d4347ca1a548d5bbf68c1cd528975fd',1,'BCs_RVELagrange_Periodic::OpRVEBCsPeriodicCalAssemCmat']]],
-  ['rval_140',['rVAL',['../struct_mo_f_e_m_1_1_exceptions_1_1_mo_f_e_m_error_code_generic_3_01moab_1_1_error_code_01_4.html#abaf41086a632196f64f578dfe4429929',1,'MoFEM::Exceptions::MoFEMErrorCodeGeneric&lt; moab::ErrorCode &gt;']]],
-  ['rval_141',['rval',['../namespace_mo_f_e_m_1_1_exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7',1,'MoFEM::Exceptions']]],
-  ['rvalue_142',['rValue',['../struct_fracture_mechanics_1_1_crack_propagation.html#a9a5afcd233a1e71954a4e313653a2dab',1,'FractureMechanics::CrackPropagation']]],
-  ['rve_5fvolume_5fvec_143',['RVE_volume_Vec',['../struct_b_cs___r_v_e_volume_1_1_op_volume_cal.html#ae50d9a01d03f0952777774e4598adde2',1,'BCs_RVEVolume::OpVolumeCal']]],
-  ['rz_144',['rZ',['../struct_example.html#ae1ef03fa00f9d8d68167e2d556c45e70',1,'Example']]]
+  ['rtol_140',['rTol',['../struct_mo_f_e_m_1_1_constrain_matrix_ctx.html#a16e22081b99ad0a279b575b8474dcd20',1,'MoFEM::ConstrainMatrixCtx']]],
+  ['rval_141',['rVAL',['../struct_mo_f_e_m_1_1_exceptions_1_1_mo_f_e_m_error_code_generic_3_01moab_1_1_error_code_01_4.html#abaf41086a632196f64f578dfe4429929',1,'MoFEM::Exceptions::MoFEMErrorCodeGeneric&lt; moab::ErrorCode &gt;']]],
+  ['rval_142',['rval',['../namespace_mo_f_e_m_1_1_exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7',1,'MoFEM::Exceptions']]],
+  ['rvalue_143',['rValue',['../struct_fracture_mechanics_1_1_crack_propagation.html#a9a5afcd233a1e71954a4e313653a2dab',1,'FractureMechanics::CrackPropagation']]],
+  ['rve_5fvolume_5fvec_144',['RVE_volume_Vec',['../struct_b_cs___r_v_e_volume_1_1_op_volume_cal.html#ae50d9a01d03f0952777774e4598adde2',1,'BCs_RVEVolume::OpVolumeCal']]],
+  ['rz_145',['rZ',['../struct_example.html#ae1ef03fa00f9d8d68167e2d556c45e70',1,'Example']]]
 ];

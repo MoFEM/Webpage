@@ -81,7 +81,7 @@ var searchData=
   ['geom_5forder_78',['geom_order',['../plastic_8cpp.html#ad0d0f13c8ee6366de69b040e99c2c8bb',1,'geom_order:&#160;plastic.cpp'],['../contact_8cpp.html#ad0d0f13c8ee6366de69b040e99c2c8bb',1,'geom_order:&#160;contact.cpp'],['../incompressible__elasticity_8cpp.html#ad0d0f13c8ee6366de69b040e99c2c8bb',1,'geom_order:&#160;incompressible_elasticity.cpp']]],
   ['geometryfieldptr_79',['geometryFieldPtr',['../struct_monitor.html#a84e1e240a626ee87d7d4d61a96d36a77',1,'Monitor']]],
   ['geometryorder_80',['geometryOrder',['../struct_fracture_mechanics_1_1_crack_propagation.html#a965f0cf3b22a56fcaff3e2e5e59e2613',1,'FractureMechanics::CrackPropagation']]],
-  ['geomorder_81',['geomOrder',['../struct_plastic_problem.html#a2f241350321c58d0f4863322d41e3ee1',1,'PlasticProblem']]],
+  ['geomorder_81',['geomOrder',['../struct_electrostatics.html#abef22b3115df2678c8a4c1eb3bdfae5d',1,'Electrostatics::geomOrder'],['../struct_plastic_problem.html#a2f241350321c58d0f4863322d41e3ee1',1,'PlasticProblem::geomOrder']]],
   ['get_5fcurrent_5fbit_82',['get_current_bit',['../free__surface_8cpp.html#ade8c17ad9a7ad98be2e3c9cc859651d3',1,'free_surface.cpp']]],
   ['get_5fd_83',['get_D',['../free__surface_8cpp.html#ab5a0080448e42b2f5548763f9ab619df',1,'free_surface.cpp']]],
   ['get_5fdofs_5fents_5fall_84',['get_dofs_ents_all',['../free__surface_8cpp.html#a98586395e62b3439ebaa3eff115fcc2e',1,'free_surface.cpp']]],
