@@ -1,8 +1,0 @@
-<map id="AssemblyBoundaryEleOp" name="AssemblyBoundaryEleOp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,159,192,185"/>
-<area shape="rect" id="node2" href="$structContactOps_1_1OpConstrainBoundaryLhs__dUImpl_3_01DIM_00_01GAUSS_00_01AssemblyBoundaryEleOp_01_4.html" title=" " alt="" coords="240,5,567,61"/>
-<area shape="rect" id="node3" href="$structFreeSurfaceOps_1_1OpNormalConstrainLhs.html" title=" " alt="" coords="304,86,503,127"/>
-<area shape="rect" id="node4" href="$structFreeSurfaceOps_1_1OpNormalConstrainRhs.html" title=" " alt="" coords="304,151,503,193"/>
-<area shape="rect" id="node5" href="$structFreeSurfaceOps_1_1OpNormalForceRhs.html" title=" " alt="" coords="304,217,503,258"/>
-<area shape="rect" id="node6" href="$structFreeSurfaceOps_1_1OpWettingAngleRhs.html" title=" " alt="" coords="303,282,503,323"/>
-</map>

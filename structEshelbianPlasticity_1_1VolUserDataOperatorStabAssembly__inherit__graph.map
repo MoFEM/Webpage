@@ -1,6 +1,0 @@
-<map id="EshelbianPlasticity::VolUserDataOperatorStabAssembly" name="EshelbianPlasticity::VolUserDataOperatorStabAssembly">
-<area shape="rect" id="node1" title=" " alt="" coords="5,259,267,300"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="9,169,263,211"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="23,80,249,121"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="53,5,219,32"/>
-</map>

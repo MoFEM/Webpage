@@ -1,5 +1,0 @@
-<map id="SimpleContactProblem::OpContactTractionMasterSlave_dX" name="SimpleContactProblem::OpContactTractionMasterSlave_dX">
-<area shape="rect" id="node1" title="LHS&#45;operator for the simple contact element." alt="" coords="5,169,260,211"/>
-<area shape="rect" id="node2" href="$structSimpleContactProblem_1_1OpContactALELhs.html" title="Operator used as base struct for OpContactTractionSlaveSlave_dX, OpContactTractionMasterSlave_dX,..." alt="" coords="47,80,218,121"/>
-<area shape="rect" id="node3" href="$classContactOp.html" title=" " alt="" coords="87,5,178,32"/>
-</map>

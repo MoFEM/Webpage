@@ -1,6 +1,0 @@
-<map id="MoFEM::EssentialBcStorage" name="MoFEM::EssentialBcStorage">
-<area shape="rect" id="node1" title="[Storage and set boundary conditions]" alt="" coords="189,95,391,121"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1EntityStorage.html" title=" " alt="" coords="5,5,172,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="197,5,383,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="408,5,556,32"/>
-</map>

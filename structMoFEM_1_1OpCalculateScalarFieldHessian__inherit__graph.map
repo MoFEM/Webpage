@@ -1,6 +1,0 @@
-<map id="MoFEM::OpCalculateScalarFieldHessian&lt; Tensor_Dim &gt;" name="MoFEM::OpCalculateScalarFieldHessian&lt; Tensor_Dim &gt;">
-<area shape="rect" id="node1" title="Evaluate field gradient values for scalar field, i.e. gradient is tensor rank 1 (vector),..." alt="" coords="775,20,985,61"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1OpCalculateVectorFieldValues__General_3_01Tensor__Dim_00_01double_00_01ublas_1_1r5c5b41eafa59f3b6378bd253ab854484.html" title="Calculate field values (template specialization) for tensor field rank 1, i.e. vector field." alt="" coords="495,5,727,76"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="220,20,447,61"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,27,172,54"/>
-</map>

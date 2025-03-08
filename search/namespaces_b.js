@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['obosleteusersmodules_14836',['ObosleteUsersModules',['../namespaceObosleteUsersModules.html',1,'']]]
+  ['obosleteusersmodules_0',['ObosleteUsersModules',['../namespace_oboslete_users_modules.html',1,'']]]
 ];

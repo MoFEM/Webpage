@@ -1,4 +1,0 @@
-<map id="MoFEM::SchurEvents" name="MoFEM::SchurEvents">
-<area shape="rect" id="node1" title="Structure to register events for Schur block assembly and solver." alt="" coords="5,212,164,239"/>
-<area shape="rect" id="node2" title=" " alt="" coords="26,5,143,32"/>
-</map>

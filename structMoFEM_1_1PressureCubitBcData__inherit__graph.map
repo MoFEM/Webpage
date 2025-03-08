@@ -1,4 +1,0 @@
-<map id="MoFEM::PressureCubitBcData" name="MoFEM::PressureCubitBcData">
-<area shape="rect" id="node1" title="Definition of the pressure bc data structure." alt="" coords="5,80,220,107"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1GenericCubitBcData.html" title="Generic bc data structure." alt="" coords="8,5,217,32"/>
-</map>

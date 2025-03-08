@@ -1,47 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classEleOp.html" title=" " alt="" coords="5,1255,65,1282"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1OpBaseImpl.html" title=" " alt="" coords="113,1248,281,1289"/>
-<area shape="rect" id="node3" href="$structADOLCPlasticity_1_1OpLhsImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="344,5,636,47"/>
-<area shape="rect" id="node4" href="$structADOLCPlasticity_1_1OpRhsImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="344,71,636,112"/>
-<area shape="rect" id="node5" href="$structExample_1_1OpFluxRhs.html" title=" " alt="" coords="411,137,569,163"/>
-<area shape="rect" id="node6" href="$structExample_1_1OpRadiationLhs.html" title=" " alt="" coords="395,187,585,214"/>
-<area shape="rect" id="node7" href="$structExample_1_1OpRadiationRhs.html" title=" " alt="" coords="395,238,585,265"/>
-<area shape="rect" id="node8" href="$structFreeSurfaceOps_1_1OpLhsG__dG.html" title="Lhs for H dH." alt="" coords="387,289,593,315"/>
-<area shape="rect" id="node9" href="$structFreeSurfaceOps_1_1OpLhsG__dH.html" title="Lhs for H dH." alt="" coords="399,340,581,381"/>
-<area shape="rect" id="node10" href="$structFreeSurfaceOps_1_1OpLhsH__dG.html" title="Lhs for H dH." alt="" coords="399,405,581,447"/>
-<area shape="rect" id="node11" href="$structFreeSurfaceOps_1_1OpLhsH__dH.html" title="Lhs for H dH." alt="" coords="399,471,581,512"/>
-<area shape="rect" id="node12" href="$structFreeSurfaceOps_1_1OpLhsH__dU.html" title="Lhs for H dU." alt="" coords="387,537,593,563"/>
-<area shape="rect" id="node13" href="$structFreeSurfaceOps_1_1OpLhsU__dG.html" title="Lhs for G dH." alt="" coords="387,587,593,614"/>
-<area shape="rect" id="node14" href="$structFreeSurfaceOps_1_1OpLhsU__dU.html" title="Lhs for U dU." alt="" coords="387,638,593,665"/>
-<area shape="rect" id="node15" href="$structFreeSurfaceOps_1_1OpRhsG.html" title=" " alt="" coords="381,689,599,715"/>
-<area shape="rect" id="node16" href="$structFreeSurfaceOps_1_1OpRhsH.html" title=" " alt="" coords="381,739,599,766"/>
-<area shape="rect" id="node17" href="$structFreeSurfaceOps_1_1OpRhsU.html" title="Rhs for U." alt="" coords="398,790,582,817"/>
-<area shape="rect" id="node18" href="$structLevelSet_1_1OpLhsDomain.html" title=" " alt="" coords="401,841,579,867"/>
-<area shape="rect" id="node19" href="$structLevelSet_1_1OpRhsDomain.html" title=" " alt="" coords="401,891,579,918"/>
-<area shape="rect" id="node20" href="$structMoFEM_1_1OpGradGradImpl_3_011_00_011_00_01SPACE__DIM_00_01GAUSS_00_01OpBase_01_4.html" title=" " alt="" coords="390,942,590,998"/>
-<area shape="rect" id="node21" href="$structMoFEM_1_1OpGradGradSymTensorGradGradImpl_3_011_00_011_00_01SPACE__DIM_00_01S_00_01GAUSS_00_01OpBase_01_4.html" title=" " alt="" coords="375,1022,605,1078"/>
-<area shape="rect" id="node22" href="$structMoFEM_1_1OpMixDivTimesUImpl_3_011_00_01FIELD__DIM_00_01FIELD__DIM_00_01GAUSS_00_01OpBase_00_01CoordSys_01_4.html" title=" " alt="" coords="379,1102,601,1158"/>
-<area shape="rect" id="node23" href="$structNonlinearPoissonOps_1_1OpDomainLhs.html" title=" " alt="" coords="410,1183,570,1224"/>
-<area shape="rect" id="node24" href="$structNonlinearPoissonOps_1_1OpDomainRhs.html" title=" " alt="" coords="410,1248,570,1289"/>
-<area shape="rect" id="node25" href="$structOpDomainResidualVector.html" title="Integrate the domain residual vector (RHS)" alt="" coords="396,1314,584,1341"/>
-<area shape="rect" id="node26" href="$structOpDomainTangentMatrix.html" title="Integrate the domain tangent matrix (LHS)" alt="" coords="398,1365,582,1391"/>
-<area shape="rect" id="node27" href="$structOpLhs.html" title=" " alt="" coords="459,1415,521,1442"/>
-<area shape="rect" id="node28" href="$structOpRhs.html" title=" " alt="" coords="458,1466,522,1493"/>
-<area shape="rect" id="node29" href="$structOpULhs__dH.html" title=" " alt="" coords="441,1517,539,1543"/>
-<area shape="rect" id="node30" href="$structOpULhs__dU.html" title=" " alt="" coords="441,1567,539,1594"/>
-<area shape="rect" id="node31" href="$structOpURhs.html" title=" " alt="" coords="453,1618,527,1645"/>
-<area shape="rect" id="node32" href="$structPlasticOps_1_1OpCalculateConstraintsLhs__dEPImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="329,1669,651,1725"/>
-<area shape="rect" id="node33" href="$structPlasticOps_1_1OpCalculateConstraintsLhs__dTAUImpl_3_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="341,1749,639,1805"/>
-<area shape="rect" id="node34" href="$structPlasticOps_1_1OpCalculateConstraintsLhs__dUImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="333,1829,647,1885"/>
-<area shape="rect" id="node35" href="$structPlasticOps_1_1OpCalculateConstraintsLhs__LogStrain__dUImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="365,1909,615,1965"/>
-<area shape="rect" id="node36" href="$structPlasticOps_1_1OpCalculatePlasticFlowLhs__dEPImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="373,1989,607,2045"/>
-<area shape="rect" id="node37" href="$structPlasticOps_1_1OpCalculatePlasticFlowLhs__dTAUImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="369,2069,611,2125"/>
-<area shape="rect" id="node38" href="$structPlasticOps_1_1OpCalculatePlasticFlowLhs__dUImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="377,2149,603,2205"/>
-<area shape="rect" id="node39" href="$structPlasticOps_1_1OpCalculatePlasticFlowLhs__LogStrain__dUImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="344,2229,636,2285"/>
-<area shape="rect" id="node40" href="$structPlasticOps_1_1OpCalculatePlasticFlowRhsImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title="[Calculate stress]" alt="" coords="380,2309,600,2365"/>
-<area shape="rect" id="node41" href="$structPlasticOps_1_1OpCalculatePlasticInternalForceLhs__dEPImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="344,2389,636,2445"/>
-<area shape="rect" id="node42" href="$structPoisson2DHomogeneousOperators_1_1OpDomainLhsMatrixK.html" title=" " alt="" coords="366,2469,614,2511"/>
-<area shape="rect" id="node43" href="$structPoisson2DHomogeneousOperators_1_1OpDomainRhsVectorF.html" title=" " alt="" coords="366,2535,614,2576"/>
-<area shape="rect" id="node44" href="$structSeepageOps_1_1OpDomainRhsHydrostaticStress.html" title=" " alt="" coords="351,2600,629,2641"/>
-<area shape="rect" id="node45" href="$structThermoElasticOps_1_1OpKCauchyThermoElasticity.html" title=" " alt="" coords="379,2665,601,2707"/>
+<area shape="rect" id="Node000000" href="$class_e_l_e_m_e_n_t.html" title=" " alt="" coords="5,53,90,77"/>
+<area shape="rect" id="Node000001" href="$struct_fracture_mechanics_1_1_crack_front_singular_base.html" title=" " alt="" coords="138,5,357,56"/>
+<area shape="poly" id="edge201_Node000000_Node000001" title=" " alt="" coords="104,53,137,47,138,52,105,58"/>
+<area shape="rect" id="Node000002" href="$struct_post_proc_template_on_refine_mesh.html" title="Generic post&#45;processing class." alt="" coords="154,80,340,117"/>
+<area shape="poly" id="edge202_Node000000_Node000002" title=" " alt="" coords="105,72,154,80,153,86,104,77"/>
 </map>

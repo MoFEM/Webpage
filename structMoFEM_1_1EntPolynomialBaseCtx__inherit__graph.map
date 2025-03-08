@@ -1,8 +1,0 @@
-<map id="MoFEM::EntPolynomialBaseCtx" name="MoFEM::EntPolynomialBaseCtx">
-<area shape="rect" id="node1" title="Class used to pass element data to calculate base functions on tet,triangle,edge." alt="" coords="113,244,339,271"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1FatPrismPolynomialBaseCtx.html" title="Class used to pass element data to calculate base functions on fat prism." alt="" coords="5,319,212,360"/>
-<area shape="rect" id="node6" href="$structMoFEM_1_1FlatPrismPolynomialBaseCtx.html" title="Class used to pass element data to calculate base functions on flat prism." alt="" coords="237,319,450,360"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1BaseFunctionCtx.html" title="Base class used to exchange data between element data structures and class calculating base functions..." alt="" coords="133,169,319,196"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1BaseFunctionUnknownInterface.html" title=" " alt="" coords="113,80,339,121"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="127,5,325,32"/>
-</map>

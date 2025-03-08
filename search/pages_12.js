@@ -1,11 +1,25 @@
 var searchData=
 [
-  ['vec_2d5_3a_20phase_20field_20model_20and_20navier_2dstokes_26359',['VEC-5: Phase field model and Navier-Stokes',['../phase_field_doc.html',1,'']]],
-  ['vec_2d4_3a_20shallow_20wave_20equation_20on_20sphere_26360',['VEC-4: Shallow wave equation on sphere',['../shallow_wave_doc.html',1,'']]],
-  ['vec_2d7_3a_20automatic_20differentiation_20for_20plasticity_26361',['VEC-7: Automatic Differentiation for Plasticity',['../tutorial_adolc_plasticity.html',1,'']]],
-  ['vec_2d1_3a_20eigen_20elastic_26362',['VEC-1: Eigen elastic',['../tutorial_eigen_elastic.html',1,'']]],
-  ['vec_2d0_3a_20linear_20elasticity_26363',['VEC-0: Linear elasticity',['../tutorial_elastic_problem.html',1,'']]],
-  ['vec_2d3_3a_20nonlinear_20dynamic_20elastic_26364',['VEC-3: Nonlinear dynamic elastic',['../tutorial_nonlinear_dynamic_elastic.html',1,'']]],
-  ['vec_2d2_3a_20nonlinear_20elastic_26365',['VEC-2: Nonlinear elastic',['../tutorial_nonlinear_elastic.html',1,'']]],
-  ['vec_2d6_3a_20discontinuous_20galerkin_20for_20kirchoff_2dlove_20plate_26366',['VEC-6: Discontinuous Galerkin for Kirchoff-Love Plate',['../tutorial_plate.html',1,'']]]
+  ['implementation_20of_20spring_20element_0',['COR-8: Implementation of spring element',['../spring_element.html',1,'tutorials']]],
+  ['implementing_20operators_20for_20the_20poisson_20equation_1',['COR-3: Implementing operators for the Poisson equation',['../poisson_tut2.html',1,'tutorials']]],
+  ['in_20elsatic_20body_20example_2',['ADV-5: Seepage in elsatic body example',['../tutorial_seepage.html',1,'']]],
+  ['in_20many_20flavours_20design_20and_20sustainable_20code_20development_3',['MoFEM UKACM 2021 School: &quot;Weak form&quot; in many flavours. Design and sustainable code development',['../mofem_school_2021.html',1,'']]],
+  ['in_20research_20and_20industry_4',['Applications of MoFEM in research and industry',['../applications.html',1,'']]],
+  ['in_20solid_20mechanics_5',['MoFEM UKACM Autumn School 2023: Mixed Finite Element Formulations in Solid Mechanics',['../mofem_school_2023.html',1,'']]],
+  ['incompressible_20elasticity_6',['incompressible elasticity',['../elasticity_mixed_formulation.html',1,'COR-7: Mixed formulation for incompressible elasticity'],['../incompressible_elasticity.html',1,'MIX-2: Mixed  formulation for incompressible elasticity']]],
+  ['industry_7',['Applications of MoFEM in research and industry',['../applications.html',1,'']]],
+  ['install_8',['install',['../md__2_users_2likask_2mofem__install_2mofem-cephas_2jupyter_2skel_2install.html',1,'']]],
+  ['install_5ffrom_5fsource_5fdebug_9',['install_from_source_debug',['../md__2_users_2likask_2mofem__install_2mofem-cephas_2jupyter_2skel_2install__from__source__debug.html',1,'']]],
+  ['install_5ffrom_5fsource_5frelease_10',['install_from_source_release',['../md__2_users_2likask_2mofem__install_2mofem-cephas_2jupyter_2skel_2install__from__source__release.html',1,'']]],
+  ['installation_20on_20macos_11',['Installation on macOS',['../install_macosx.html',1,'']]],
+  ['installation_20on_20ubuntu_12',['Installation on Ubuntu',['../install_ubuntu.html',1,'']]],
+  ['installation_20with_20docker_20advanced_13',['Installation with Docker - advanced',['../install_docker_advanced.html',1,'']]],
+  ['installation_20with_20docker_20jupyterhub_14',['Installation with Docker - JupyterHub',['../install_docker_jupyterhub.html',1,'']]],
+  ['installation_20with_20spack_20advanced_15',['Installation with Spack (Advanced)',['../install_spack.html',1,'installation']]],
+  ['installation_20with_20spack_20scripts_16',['Installation with Spack (Scripts)',['../installation.html',1,'']]],
+  ['integration_20on_20finite_20element_20mesh_17',['FUN-1: Integration on finite element mesh',['../integration.html',1,'']]],
+  ['integration_20on_20skeleton_20h_20adaptivity_18',['COR-0: Mixed formulation and integration on skeleton (h-adaptivity)',['../mix_transport.html',1,'tutorials']]],
+  ['intensity_20equation_19',['MIX-1: Retrive phase solving transport-of-intensity equation.',['../tutorial_phase.html',1,'']]],
+  ['interfaces_20',['MoFEM Interfaces',['../lessons_introduction.html',1,'']]],
+  ['introduction_21',['Introduction',['../md_tutorials_2scl-1_2_r_e_a_d_m_e.html',1,'Introduction'],['../md_tutorials_2scl-11_2_r_e_a_d_m_e.html',1,'Introduction'],['../md_tutorials_2scl-12_2_r_e_a_d_m_e.html',1,'Introduction']]]
 ];

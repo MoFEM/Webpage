@@ -1,5 +1,0 @@
-<map id="MoFEM::OpPostProcMapInMoab&lt; DIM1, DIM2 &gt;" name="MoFEM::OpPostProcMapInMoab&lt; DIM1, DIM2 &gt;">
-<area shape="rect" id="node1" title="Post post&#45;proc data at points from hash maps." alt="" coords="5,169,233,211"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="6,80,233,121"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="36,5,203,32"/>
-</map>

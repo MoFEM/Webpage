@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['layered_20gel_20problem_20_28response_20to_20an_20environmental_20change_29_26284',['Layered Gel Problem (Response to an Environmental Change)',['../gel_layered.html',1,'runningprograms']]],
-  ['landing_20page_26285',['Landing page',['../index.html',1,'']]],
-  ['license_26286',['LICENSE',['../md__mofem_install_jupyter_lukasz_mofem_install_mofem-cephas_LICENSE.html',1,'']]],
-  ['license_26287',['LICENSE',['../md_users_modules_adolc-plasticity_LICENSE.html',1,'']]],
-  ['license_26288',['LICENSE',['../md_users_modules_eshelbian_plasticit_LICENSE.html',1,'']]],
-  ['license_26289',['LICENSE',['../md_users_modules_LICENSE.html',1,'']]]
+  ['9_3a_20heat_20method_0',['SCL-9: Heat method',['../tutorial_heat_method.html',1,'']]],
+  ['9_3a_20reaction_20diffusion_20equation_1',['COR-9: Reaction-diffusion equation',['../reaction_diffusion_imp.html',1,'tutorials']]]
 ];

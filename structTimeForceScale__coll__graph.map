@@ -1,9 +1,0 @@
-<map id="TimeForceScale" name="TimeForceScale">
-<area shape="rect" id="node1" title="Force scale operator for reading two columns." alt="" coords="396,109,521,136"/>
-<area shape="rect" id="node2" href="$structMethodForForceScaling.html" title="Class used to scale loads, f.e. in arc&#45;length control." alt="" coords="5,5,179,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="203,5,290,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="314,5,491,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="515,5,554,32"/>
-<area shape="rect" id="node6" href="$classbool.html" title=" " alt="" coords="579,5,629,32"/>
-<area shape="rect" id="node7" title=" " alt="" coords="735,5,793,32"/>
-</map>

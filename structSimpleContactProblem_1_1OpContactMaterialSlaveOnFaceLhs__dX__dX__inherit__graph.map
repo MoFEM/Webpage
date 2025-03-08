@@ -1,5 +1,0 @@
-<map id="SimpleContactProblem::OpContactMaterialSlaveOnFaceLhs_dX_dX" name="SimpleContactProblem::OpContactMaterialSlaveOnFaceLhs_dX_dX">
-<area shape="rect" id="node1" title="LHS&#45;operator for the contact element (material configuration)" alt="" coords="5,169,240,225"/>
-<area shape="rect" id="node2" href="$structSimpleContactProblem_1_1OpContactMaterialLhs.html" title=" " alt="" coords="35,80,210,121"/>
-<area shape="rect" id="node3" href="$classContactOp.html" title=" " alt="" coords="77,5,168,32"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="MoFEM::DisplacementCubitBcData" name="MoFEM::DisplacementCubitBcData">
-<area shape="rect" id="node1" title="Definition of the displacement bc data structure." alt="" coords="104,80,307,121"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1DisplacementCubitBcDataWithRotation.html" title="A specialized version of DisplacementCubitBcData that includes an additional rotation offset." alt="" coords="5,169,208,211"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1MPCsType.html" title=" " alt="" coords="232,177,376,203"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1GenericCubitBcData.html" title="Generic bc data structure." alt="" coords="101,5,310,32"/>
-</map>

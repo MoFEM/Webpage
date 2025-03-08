@@ -1,4 +1,0 @@
-<map id="MoFEM::ProblemsManager" name="MoFEM::ProblemsManager">
-<area shape="rect" id="node1" title="Problem manager is used to build and partition problems." alt="" coords="6,80,202,107"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="5,5,203,32"/>
-</map>

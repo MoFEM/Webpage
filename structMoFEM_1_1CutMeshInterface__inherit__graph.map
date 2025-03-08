@@ -1,4 +1,0 @@
-<map id="MoFEM::CutMeshInterface" name="MoFEM::CutMeshInterface">
-<area shape="rect" id="node1" title="Interface to cut meshes." alt="" coords="7,80,201,107"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="5,5,203,32"/>
-</map>

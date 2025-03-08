@@ -1,6 +1,0 @@
-<map id="MoFEM::OpCalculateTensor2FieldValues&lt; Tensor_Dim0, Tensor_Dim1 &gt;" name="MoFEM::OpCalculateTensor2FieldValues&lt; Tensor_Dim0, Tensor_Dim1 &gt;">
-<area shape="rect" id="node1" title="Get values at integration pts for tensor filed rank 2, i.e. matrix field." alt="" coords="808,13,1015,69"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1OpCalculateTensor2FieldValues__General_3_01Tensor__Dim0_00_01Tensor__Dim1_00_01dodf133756203e47f71da552d9da550c17.html" title=" " alt="" coords="495,5,760,76"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="220,20,447,61"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,27,172,54"/>
-</map>

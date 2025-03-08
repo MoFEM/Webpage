@@ -1,7 +1,0 @@
-<map id="MoFEM::OpMixVectorTimesGradImpl&lt; 1, SPACE_DIM, SPACE_DIM, GAUSS, OpBase &gt;" name="MoFEM::OpMixVectorTimesGradImpl&lt; 1, SPACE_DIM, SPACE_DIM, GAUSS, OpBase &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="63,213,295,269"/>
-<area shape="rect" id="node2" href="$classOpBase.html" title=" " alt="" coords="5,117,77,143"/>
-<area shape="rect" id="node3" title=" " alt="" coords="101,117,256,143"/>
-<area shape="rect" id="node4" href="$classFTensor_1_1Index.html" title=" " alt="" coords="280,109,427,151"/>
-<area shape="rect" id="node5" href="$classFTensor_1_1Index.html" title=" " alt="" coords="284,5,423,47"/>
-</map>

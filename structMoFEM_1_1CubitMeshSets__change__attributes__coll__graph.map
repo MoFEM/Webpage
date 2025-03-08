@@ -1,9 +1,0 @@
-<map id="MoFEM::CubitMeshSets_change_attributes" name="MoFEM::CubitMeshSets_change_attributes">
-<area shape="rect" id="node1" title=" " alt="" coords="1781,23,1956,65"/>
-<area shape="rect" id="node2" title=" " alt="" coords="1493,5,1644,32"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1DeprecatedCoreInterface.html" title="Deprecated interface functions." alt="" coords="1448,56,1689,83"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1CoreInterface.html" title="Interface." alt="" coords="1232,56,1399,83"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="985,56,1183,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="520,27,841,112"/>
-<area shape="rect" id="node7" title=" " alt="" coords="5,56,172,83"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="FractureMechanics::CrackPropagation::BothSurfaceConstrains" name="FractureMechanics::CrackPropagation::BothSurfaceConstrains">
-<area shape="rect" id="node1" title="Constrains material displacement on both sides." alt="" coords="5,80,229,136"/>
-<area shape="rect" id="node2" href="$classFEMethod.html" title=" " alt="" coords="74,5,161,32"/>
-</map>

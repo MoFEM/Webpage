@@ -1,4 +1,4 @@
 <map id="PrismInterface" name="PrismInterface">
-<area shape="rect" id="node1" title="Create prism interface between faces." alt="" coords="124,5,241,31"/>
-<area shape="rect" id="node2" href="$group__mofem.html" title=" " alt="" coords="5,5,76,31"/>
+<area shape="rect" id="Node000002" href="$group__mofem.html" title=" " alt="" coords="5,5,73,29"/>
+<area shape="rect" id="Node000001" title="Create prism interface between faces." alt="" coords="121,5,229,29"/>
 </map>

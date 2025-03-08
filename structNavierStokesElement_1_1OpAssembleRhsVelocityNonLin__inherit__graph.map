@@ -1,7 +1,0 @@
-<map id="NavierStokesElement::OpAssembleRhsVelocityNonLin" name="NavierStokesElement::OpAssembleRhsVelocityNonLin">
-<area shape="rect" id="node1" title="Assemble non&#45;linear part of the velocity component of the RHS vector." alt="" coords="5,333,239,375"/>
-<area shape="rect" id="node2" href="$structNavierStokesElement_1_1OpAssembleRhs.html" title="Base class for operators assembling RHS." alt="" coords="41,244,203,285"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="52,169,192,196"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="9,80,235,121"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="39,5,205,32"/>
-</map>

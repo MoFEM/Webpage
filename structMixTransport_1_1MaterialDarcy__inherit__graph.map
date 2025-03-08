@@ -1,5 +1,0 @@
-<map id="MixTransport::MaterialDarcy" name="MixTransport::MaterialDarcy">
-<area shape="rect" id="node1" title=" " alt="" coords="31,155,238,181"/>
-<area shape="rect" id="node2" href="$structMixTransport_1_1CommonMaterialData.html" title=" " alt="" coords="5,80,264,107"/>
-<area shape="rect" id="node3" href="$structMixTransport_1_1GenericMaterial.html" title="Generic material model for unsaturated water transport." alt="" coords="25,5,244,32"/>
-</map>

@@ -1,3 +1,23 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structCalcJacobian.html" title=" " alt="" coords="5,5,111,32"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,288,139,312"/>
+<area shape="rect" id="Node000001" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="187,5,352,43"/>
+<area shape="poly" id="edge51_Node000000_Node000001" title=" " alt="" coords="76,273,89,226,110,167,142,106,162,78,186,53,202,41,205,45,189,57,166,81,146,109,115,169,94,228,82,274"/>
+<area shape="rect" id="Node000002" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="187,67,352,104"/>
+<area shape="poly" id="edge52_Node000000_Node000002" title=" " alt="" coords="81,273,97,237,119,195,149,152,186,114,204,102,206,107,189,118,153,155,124,198,101,240,86,275"/>
+<area shape="rect" id="Node000003" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="187,128,352,165"/>
+<area shape="poly" id="edge53_Node000000_Node000003" title=" " alt="" coords="89,273,130,224,157,198,186,175,207,164,209,168,189,180,160,202,134,228,93,277"/>
+<area shape="rect" id="Node000004" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="187,189,352,227"/>
+<area shape="poly" id="edge54_Node000000_Node000004" title=" " alt="" coords="107,278,186,236,213,225,215,230,188,241,109,282"/>
+<area shape="rect" id="Node000005" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="187,251,352,288"/>
+<area shape="poly" id="edge55_Node000000_Node000005" title=" " alt="" coords="154,285,186,280,187,285,155,290"/>
+<area shape="rect" id="Node000006" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="187,312,352,349"/>
+<area shape="poly" id="edge56_Node000000_Node000006" title=" " alt="" coords="155,310,187,315,186,320,154,315"/>
+<area shape="rect" id="Node000007" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="187,373,352,411"/>
+<area shape="poly" id="edge57_Node000000_Node000007" title=" " alt="" coords="109,318,188,359,215,370,213,375,186,364,107,322"/>
+<area shape="rect" id="Node000008" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="187,435,352,472"/>
+<area shape="poly" id="edge58_Node000000_Node000008" title=" " alt="" coords="93,323,134,372,160,398,189,420,209,432,207,436,186,425,157,402,130,376,89,327"/>
+<area shape="rect" id="Node000009" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title=" " alt="" coords="187,496,352,533"/>
+<area shape="poly" id="edge59_Node000000_Node000009" title=" " alt="" coords="86,325,101,360,124,402,153,445,189,482,206,493,204,498,186,486,149,448,119,405,97,363,81,327"/>
+<area shape="rect" id="Node000010" href="$struct_mo_f_e_m_1_1_smart_petsc_obj.html" title="intrusive_ptr for managing petsc objects" alt="" coords="187,557,352,595"/>
+<area shape="poly" id="edge60_Node000000_Node000010" title=" " alt="" coords="82,326,94,372,115,431,146,491,166,519,189,543,205,555,202,559,186,547,162,522,142,494,110,433,89,374,76,327"/>
 </map>

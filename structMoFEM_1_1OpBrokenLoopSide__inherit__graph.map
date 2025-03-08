@@ -1,6 +1,0 @@
-<map id="MoFEM::OpBrokenLoopSide&lt; E &gt;" name="MoFEM::OpBrokenLoopSide&lt; E &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,244,244,271"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1OpLoopSide.html" title="Element used to execute operators on side of the element." alt="" coords="28,169,221,196"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="11,80,238,121"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="41,5,208,32"/>
-</map>

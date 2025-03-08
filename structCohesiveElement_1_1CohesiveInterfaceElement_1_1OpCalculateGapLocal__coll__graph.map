@@ -1,7 +1,0 @@
-<map id="CohesiveElement::CohesiveInterfaceElement::OpCalculateGapLocal" name="CohesiveElement::CohesiveInterfaceElement::OpCalculateGapLocal">
-<area shape="rect" id="node1" title="Operator calculate gap in local coordinate system." alt="" coords="5,213,287,255"/>
-<area shape="rect" id="node2" title=" " alt="" coords="55,117,195,143"/>
-<area shape="rect" id="node3" href="$structCohesiveElement_1_1CohesiveInterfaceElement_1_1CommonData.html" title=" " alt="" coords="219,109,451,151"/>
-<area shape="rect" id="node4" title=" " alt="" coords="195,5,305,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="330,5,511,32"/>
-</map>

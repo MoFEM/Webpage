@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_e_l_e_m_e_n_t.html" title=" " alt="" coords="5,53,90,77"/>
-<area shape="rect" id="Node000001" href="$struct_fracture_mechanics_1_1_crack_front_singular_base.html" title=" " alt="" coords="138,5,357,56"/>
-<area shape="poly" id="edge201_Node000000_Node000001" title=" " alt="" coords="104,53,137,47,138,52,105,58"/>
-<area shape="rect" id="Node000002" href="$struct_post_proc_template_on_refine_mesh.html" title="Generic post&#45;processing class." alt="" coords="154,80,340,117"/>
-<area shape="poly" id="edge202_Node000000_Node000002" title=" " alt="" coords="105,72,154,80,153,86,104,77"/>
-</map>

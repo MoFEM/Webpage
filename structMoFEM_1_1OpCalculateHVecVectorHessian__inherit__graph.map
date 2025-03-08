@@ -1,5 +1,0 @@
-<map id="MoFEM::OpCalculateHVecVectorHessian&lt; BASE_DIM, SPACE_DIM &gt;" name="MoFEM::OpCalculateHVecVectorHessian&lt; BASE_DIM, SPACE_DIM &gt;">
-<area shape="rect" id="node1" title="Calculate gradient of vector field." alt="" coords="5,169,259,211"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="19,80,245,121"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="49,5,215,32"/>
-</map>

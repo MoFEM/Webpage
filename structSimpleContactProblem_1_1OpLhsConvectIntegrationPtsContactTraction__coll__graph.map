@@ -1,7 +1,0 @@
-<map id="SimpleContactProblem::OpLhsConvectIntegrationPtsContactTraction" name="SimpleContactProblem::OpLhsConvectIntegrationPtsContactTraction">
-<area shape="rect" id="node1" title="Calculate tangent operator for contact force for change of integration point positions,..." alt="" coords="525,67,740,123"/>
-<area shape="rect" id="node2" href="$classContactOp.html" title=" " alt="" coords="102,5,193,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="43,56,252,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="92,107,203,133"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,158,289,199"/>
-</map>

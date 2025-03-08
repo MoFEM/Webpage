@@ -1,7 +1,0 @@
-<map id="MoFEM::OpSetContravariantPiolaTransformOnFace2DImpl&lt; 2 &gt;" name="MoFEM::OpSetContravariantPiolaTransformOnFace2DImpl&lt; 2 &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="7,259,258,300"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1OpSetContravariantPiolaTransformOnFace2DImpl_3_013_01_4.html" title=" " alt="" coords="7,348,258,389"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html" title="default operator for TRI element" alt="" coords="5,169,260,211"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="19,80,246,121"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="49,5,216,32"/>
-</map>

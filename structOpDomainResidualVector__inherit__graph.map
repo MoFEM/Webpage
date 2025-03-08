@@ -1,5 +1,0 @@
-<map id="OpDomainResidualVector" name="OpDomainResidualVector">
-<area shape="rect" id="node1" title="Integrate the domain residual vector (RHS)" alt="" coords="5,155,193,181"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1OpBaseImpl.html" title=" " alt="" coords="12,80,187,107"/>
-<area shape="rect" id="node3" href="$classEleOp.html" title=" " alt="" coords="69,5,129,32"/>
-</map>

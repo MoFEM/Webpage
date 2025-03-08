@@ -1,7 +1,0 @@
-<map id="PoissonExample::OpKt" name="PoissonExample::OpKt">
-<area shape="rect" id="node1" title=" " alt="" coords="48,333,217,360"/>
-<area shape="rect" id="node2" href="$structPoissonExample_1_1OpK.html" title="Calculate the grad&#45;grad operator and assemble matrix." alt="" coords="51,259,215,285"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="5,169,260,211"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="19,80,246,121"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="49,5,216,32"/>
-</map>

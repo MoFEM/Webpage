@@ -1,4 +1,0 @@
-<map id="MetaNodalForces::TagForceScale" name="MetaNodalForces::TagForceScale">
-<area shape="rect" id="node1" title="Scale force based on tag value &quot;_LoadFactor_Scale_&quot;." alt="" coords="5,80,205,121"/>
-<area shape="rect" id="node2" href="$structMethodForForceScaling.html" title="Class used to scale loads, f.e. in arc&#45;length control." alt="" coords="19,5,192,32"/>
-</map>

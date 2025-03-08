@@ -1,7 +1,0 @@
-<map id="MoFEM::OpSchurAssembleEndImpl&lt; OP_SCHUR_ASSEMBLE_BASE &gt;" name="MoFEM::OpSchurAssembleEndImpl&lt; OP_SCHUR_ASSEMBLE_BASE &gt;">
-<area shape="rect" id="node1" title="Assemble Schur complement (Implementation)" alt="" coords="102,81,371,123"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1OpSchurAssembleEndImpl.html" title=" " alt="" coords="107,185,367,227"/>
-<area shape="rect" id="node2" href="$classOP__SCHUR__ASSEMBLE__BASE.html" title=" " alt="" coords="131,5,342,32"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1OpSchurAssembleEnd_3_01SchurDGESV_01_4.html" title=" " alt="" coords="5,276,225,317"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1OpSchurAssembleEnd_3_01SchurDSYSV_01_4.html" title=" " alt="" coords="249,276,469,317"/>
-</map>

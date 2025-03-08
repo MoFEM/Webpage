@@ -1,8 +1,0 @@
-<map id="MoFEM::OpMixDivTimesVecImpl&lt; SPACE_DIM, GAUSS, OpBase, CoordSys &gt;" name="MoFEM::OpMixDivTimesVecImpl&lt; SPACE_DIM, GAUSS, OpBase, CoordSys &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="643,89,877,145"/>
-<area shape="rect" id="node2" href="$classOpBase.html" title=" " alt="" coords="373,5,445,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="321,56,496,112"/>
-<area shape="rect" id="node4" title=" " alt="" coords="331,136,486,163"/>
-<area shape="rect" id="node5" href="$classFTensor_1_1Index.html" title=" " alt="" coords="335,187,482,229"/>
-<area shape="rect" id="node6" href="$classFTensor_1_1Index.html" title=" " alt="" coords="5,187,144,229"/>
-</map>

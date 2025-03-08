@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rotselector_25309',['RotSelector',['../namespaceEshelbianPlasticity.html#aad51dbcb3d4d470a0d589df584a43e17',1,'EshelbianPlasticity']]],
-  ['rowcoldata_25310',['RowColData',['../definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69db',1,'definitions.h']]]
+  ['rotselector_0',['RotSelector',['../namespace_eshelbian_plasticity.html#aad51dbcb3d4d470a0d589df584a43e17',1,'EshelbianPlasticity']]],
+  ['rowcoldata_1',['RowColData',['../definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69db',1,'definitions.h']]]
 ];

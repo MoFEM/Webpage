@@ -1,9 +1,0 @@
-<map id="MoFEM::interface_Field&lt; FIELD, REFENT &gt;" name="MoFEM::interface_Field&lt; FIELD, REFENT &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="136,379,311,420"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1interface__FieldImpl.html" title="Pointer interface for MoFEM::Field." alt="" coords="19,275,222,316"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1interface__RefEntity.html" title=" " alt="" coords="19,184,222,225"/>
-<area shape="rect" id="node4" href="$classboost_1_1shared__ptr_3_01REFENT_01_4.html" title=" " alt="" coords="5,95,177,121"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1interface__RefEntity.html" title="interface to RefEntity" alt="" coords="201,95,443,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="257,5,387,32"/>
-<area shape="rect" id="node7" title=" " alt="" coords="247,282,405,309"/>
-</map>

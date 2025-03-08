@@ -1,6 +1,0 @@
-<map id="ADOLCPlasticity::ClosestPointProjection" name="ADOLCPlasticity::ClosestPointProjection">
-<area shape="rect" id="node1" title="Closest point projection algorithm." alt="" coords="163,5,345,47"/>
-<area shape="rect" id="node2" href="$structADOLCPlasticity_1_1J2Plasticity_3_013_01_4.html" title="J2 (Von Misses) plasticity." alt="" coords="5,102,249,129"/>
-<area shape="rect" id="node4" href="$structADOLCPlasticity_1_1ParaboloidalPlasticity.html" title="[J2 2D]" alt="" coords="273,95,488,136"/>
-<area shape="rect" id="node3" href="$structADOLCPlasticity_1_1J2Plasticity_3_012_01_4.html" title="[J2 2D]" alt="" coords="5,184,249,211"/>
-</map>

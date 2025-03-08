@@ -1,9 +1,0 @@
-<map id="BCs_RVELagrange_Disp::OpRVEBCsLhs" name="BCs_RVELagrange_Disp::OpRVEBCsLhs">
-<area shape="rect" id="node1" title="\biref operator to calculate the LHS for the RVE bounary conditions" alt="" coords="305,213,481,255"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,102,145,129"/>
-<area shape="rect" id="node3" title=" " alt="" coords="169,102,280,129"/>
-<area shape="rect" id="node4" href="$structBCs__RVELagrange__Disp_1_1RVEBC__Data.html" title=" " alt="" coords="305,95,481,136"/>
-<area shape="rect" id="node5" href="$classRange.html" title=" " alt="" coords="361,5,424,32"/>
-<area shape="rect" id="node6" href="$classbool.html" title=" " alt="" coords="505,102,555,129"/>
-<area shape="rect" id="node7" title=" " alt="" coords="601,102,648,129"/>
-</map>

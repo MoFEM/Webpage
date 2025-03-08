@@ -1,4 +1,37 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classFlatPrismElementForcesAndSurcesCore.html" title=" " alt="" coords="5,5,211,47"/>
-<area shape="rect" id="node2" href="$structBCs__RVELagrange__Periodic_1_1MyPrismFE.html" title=" " alt="" coords="259,5,457,47"/>
+<area shape="rect" id="Node000000" href="$class_f_e_method.html" title=" " alt="" coords="5,421,88,445"/>
+<area shape="rect" id="Node000001" href="$struct_bone_remodeling_1_1_monitor_post_proc.html" title=" " alt="" coords="136,5,366,29"/>
+<area shape="poly" id="edge229_Node000000_Node000001" title=" " alt="" coords="48,405,57,321,74,212,99,108,115,67,134,39,150,28,153,32,138,43,120,70,104,109,79,213,62,322,53,406"/>
+<area shape="rect" id="Node000002" href="$struct_bone_remodeling_1_1_remodeling_1_1_fe_pre_post_process_lhs.html" title="Not used at this stage. Could be used to do some calculations, before assembly of local elements." alt="" coords="150,53,352,91"/>
+<area shape="poly" id="edge230_Node000000_Node000002" title=" " alt="" coords="49,405,61,334,79,243,104,157,118,124,134,101,149,89,153,93,138,104,123,127,109,159,84,244,66,335,54,406"/>
+<area shape="rect" id="Node000003" href="$struct_bone_remodeling_1_1_remodeling_1_1_fe_pre_post_process_rhs.html" title="Not used at this stage. Could be used to do some calculations, before assembly of local elements." alt="" coords="150,115,352,152"/>
+<area shape="poly" id="edge231_Node000000_Node000003" title=" " alt="" coords="46,406,51,354,65,289,76,254,91,221,110,190,134,162,150,150,154,155,138,166,115,193,96,223,81,256,70,290,57,355,52,406"/>
+<area shape="rect" id="Node000004" href="$struct_cohesive_element_1_1_arc_length_int_elem_f_e_method.html" title=" " alt="" coords="154,176,348,213"/>
+<area shape="poly" id="edge232_Node000000_Node000004" title=" " alt="" coords="49,406,58,365,74,316,99,266,115,243,134,223,152,211,155,216,138,227,119,247,103,269,79,318,63,366,54,407"/>
+<area shape="rect" id="Node000006" href="$struct_contact_ops_1_1_monitor.html" title=" " alt="" coords="179,237,323,261"/>
+<area shape="poly" id="edge234_Node000000_Node000006" title=" " alt="" coords="53,406,64,374,81,338,104,301,135,271,156,259,178,252,180,257,158,264,138,275,108,305,85,340,69,376,58,407"/>
+<area shape="rect" id="Node000007" href="$struct_eshelbian_monitor.html" title=" " alt="" coords="189,285,313,309"/>
+<area shape="poly" id="edge235_Node000000_Node000007" title=" " alt="" coords="59,406,89,361,110,338,135,319,161,307,188,300,189,305,162,312,138,324,114,342,94,364,63,409"/>
+<area shape="rect" id="Node000008" href="$struct_fracture_mechanics_1_1_crack_propagation_1_1_both_surface_constrains.html" title="Constrains material displacement on both sides." alt="" coords="147,333,355,384"/>
+<area shape="poly" id="edge236_Node000000_Node000008" title=" " alt="" coords="89,412,135,394,167,382,169,387,137,398,91,417"/>
+<area shape="rect" id="Node000009" href="$struct_fracture_mechanics_1_1_griffith_force_element_1_1_front_arc_length_control.html" title="arc&#45;length element" alt="" coords="169,408,333,459"/>
+<area shape="poly" id="edge237_Node000000_Node000009" title=" " alt="" coords="104,431,169,431,169,436,104,436"/>
+<area shape="rect" id="Node000010" href="$struct_oboslete_users_modules_1_1_constrain_constant_aarea.html" title=" " alt="" coords="164,483,338,520"/>
+<area shape="poly" id="edge238_Node000000_Node000010" title=" " alt="" coords="90,450,137,468,174,480,172,485,135,473,88,455"/>
+<area shape="rect" id="Node000012" href="$struct_plastic_ops_1_1_monitor.html" title=" " alt="" coords="183,544,319,568"/>
+<area shape="poly" id="edge240_Node000000_Node000012" title=" " alt="" coords="66,457,96,495,116,514,138,530,159,540,183,546,182,552,158,545,135,534,112,518,92,499,62,460"/>
+<area shape="rect" id="Node000013" href="$struct_simple_arc_length_control.html" title=" " alt="" coords="168,592,334,616"/>
+<area shape="poly" id="edge241_Node000000_Node000013" title=" " alt="" coords="59,459,88,520,110,552,138,578,169,593,166,598,135,582,106,555,83,523,54,461"/>
+<area shape="rect" id="Node000014" href="$struct_spherical_arc_length_control.html" title="Implementation of spherical arc&#45;length method." alt="" coords="161,640,341,664"/>
+<area shape="poly" id="edge242_Node000000_Node000014" title=" " alt="" coords="55,460,64,498,80,543,104,588,120,608,138,626,162,639,159,644,135,630,116,612,100,591,75,545,59,499,50,461"/>
+<area shape="rect" id="Node000015" href="$struct_thermal_element_1_1_time_series_monitor.html" title="TS monitore it records temperature at time steps." alt="" coords="154,688,348,725"/>
+<area shape="poly" id="edge243_Node000000_Node000015" title=" " alt="" coords="53,460,59,507,74,565,99,624,117,651,138,674,155,686,152,691,134,678,112,654,94,626,69,566,54,508,47,461"/>
+<area shape="rect" id="Node000016" href="$struct_thermal_element_1_1_update_and_control.html" title="this calass is to control time stepping" alt="" coords="154,749,348,787"/>
+<area shape="poly" id="edge244_Node000000_Node000016" title=" " alt="" coords="50,461,53,518,66,592,77,631,92,669,112,704,138,735,155,748,152,753,134,739,108,707,87,671,72,633,60,593,48,519,45,461"/>
+<area shape="rect" id="Node000017" href="$struct_zero_f_lmabda.html" title="Zero F_lambda." alt="" coords="198,811,304,835"/>
+<area shape="poly" id="edge245_Node000000_Node000017" title=" " alt="" coords="54,460,64,539,81,640,106,736,121,772,138,797,166,814,199,821,198,826,164,819,134,801,116,775,101,737,76,641,58,540,48,461"/>
+<area shape="rect" id="Node000005" href="$struct_cohesive_element_1_1_arc_length_element.html" title=" " alt="" coords="432,176,626,213"/>
+<area shape="poly" id="edge233_Node000004_Node000005" title=" " alt="" coords="364,192,431,192,431,197,364,197"/>
+<area shape="rect" id="Node000011" href="$struct_oboslete_users_modules_1_1_tangent_with_mesh_smoothing_front_constrain.html" title=" " alt="" coords="414,476,644,527"/>
+<area shape="poly" id="edge239_Node000010_Node000011" title=" " alt="" coords="354,499,413,499,413,504,354,504"/>
 </map>

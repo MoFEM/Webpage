@@ -1,6 +1,0 @@
-<map id="OpBaseImpl" name="OpBaseImpl">
-<area shape="rect" id="node1" title=" " alt="" coords="5,122,107,149"/>
-<area shape="rect" id="node2" href="$structOpFluxLhsImpl_3_01ElasticExample_1_1SpringBcType_3_01BLOCKSET_01_4_00_011_00_01FIELD__DIM_d03b9eb2d06faa105919a575a5b6c597.html" title=" " alt="" coords="155,5,390,76"/>
-<area shape="rect" id="node3" href="$structOpFluxRhsImpl_3_01ElasticExample_1_1FluidLevelType_3_01BLOCKSET_01_4_00_011_00_01FIELD__DI2870910b38b938c82e57d5357a12fdc5.html" title=" " alt="" coords="155,100,391,171"/>
-<area shape="rect" id="node4" href="$structOpFluxRhsImpl_3_01ElasticExample_1_1SpringBcType_3_01BLOCKSET_01_4_00_011_00_01FIELD__DIM_e74dbab2e2ef6b9b168ed58cf5f6eeae.html" title=" " alt="" coords="155,195,391,265"/>
-</map>

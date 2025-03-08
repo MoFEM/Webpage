@@ -1,7 +1,0 @@
-<map id="FractureMechanics::AnalyticalForces" name="FractureMechanics::AnalyticalForces">
-<area shape="rect" id="node1" title=" " alt="" coords="485,39,637,80"/>
-<area shape="rect" id="node2" href="$structNeumannForcesSurface_1_1MethodForAnalyticalForce.html" title="Analytical force method." alt="" coords="237,5,436,47"/>
-<area shape="rect" id="node3" href="$structFractureMechanics_1_1AnalyticalOptions.html" title=" " alt="" coords="261,71,413,112"/>
-<area shape="rect" id="node4" href="$classdouble.html" title=" " alt="" coords="5,53,72,79"/>
-<area shape="rect" id="node5" href="$classbool.html" title=" " alt="" coords="13,103,64,130"/>
-</map>

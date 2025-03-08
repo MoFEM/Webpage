@@ -1,6 +1,0 @@
-<map id="GenericElementInterface" name="GenericElementInterface">
-<area shape="rect" id="node1" title="Set of functions declaring elements and setting operators for generic element interface." alt="" coords="5,56,189,83"/>
-<area shape="rect" id="node2" href="$structBasicBoundaryConditionsInterface.html" title="Set of functions declaring elements and setting operators for basic boundary conditions interface." alt="" coords="237,5,484,32"/>
-<area shape="rect" id="node3" href="$structMortarContactInterface.html" title=" " alt="" coords="274,56,447,83"/>
-<area shape="rect" id="node4" href="$structNonlinearElasticElementInterface.html" title="Set of functions declaring elements and setting operators for generic element interface." alt="" coords="241,107,481,133"/>
-</map>

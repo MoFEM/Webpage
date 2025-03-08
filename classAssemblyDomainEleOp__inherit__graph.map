@@ -1,6 +1,0 @@
-<map id="AssemblyDomainEleOp" name="AssemblyDomainEleOp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,64,180,91"/>
-<area shape="rect" id="node2" href="$structFreeSurfaceOps_1_1OpLhsU__dH.html" title="Lhs for U dH." alt="" coords="280,5,487,32"/>
-<area shape="rect" id="node3" href="$structPlasticOps_1_1OpCalculateConstraintsRhsImpl_3_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="228,57,539,98"/>
-<area shape="rect" id="node4" href="$structPlasticOps_1_1OpCalculatePlasticInternalForceLhs__LogStrain__dEPImpl_3_01DIM_00_01GAUSS_00_01AssemblyDomainEleOp_01_4.html" title=" " alt="" coords="234,122,533,193"/>
-</map>

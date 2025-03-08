@@ -1,35 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,831,165,858"/>
-<area shape="rect" id="node2" href="$structEshelbianPlasticity_1_1HMHHencky_1_1OpCalculateEnergy.html" title="Calculate energy density for Hencky material model." alt="" coords="214,711,455,752"/>
-<area shape="rect" id="node3" href="$structEshelbianPlasticity_1_1HMHHencky_1_1OpCalculateStretchFromStress.html" title=" " alt="" coords="213,777,456,833"/>
-<area shape="rect" id="node4" href="$structEshelbianPlasticity_1_1OpCalculateRotationAndSpatialGradient.html" title=" " alt="" coords="217,857,452,913"/>
-<area shape="rect" id="node5" href="$structEshelbianPlasticity_1_1OpAssembleBasic.html" title=" " alt="" coords="229,937,441,993"/>
-<area shape="rect" id="node6" href="$structEshelbianPlasticity_1_1OpAssembleVolume.html" title=" " alt="" coords="504,944,665,985"/>
-<area shape="rect" id="node7" href="$structEshelbianPlasticity_1_1HMHHencky_1_1OpSpatialPhysical.html" title=" " alt="" coords="736,5,971,47"/>
-<area shape="rect" id="node8" href="$structEshelbianPlasticity_1_1HMHHencky_1_1OpSpatialPhysical__du__du.html" title=" " alt="" coords="713,71,993,112"/>
-<area shape="rect" id="node9" href="$structEshelbianPlasticity_1_1HMHNeohookean_1_1OpSpatialPhysical.html" title=" " alt="" coords="746,137,961,193"/>
-<area shape="rect" id="node10" href="$structEshelbianPlasticity_1_1HMHNeohookean_1_1OpSpatialPhysical__du__du.html" title=" " alt="" coords="746,217,961,273"/>
-<area shape="rect" id="node11" href="$structEshelbianPlasticity_1_1OpSpatialConsistency__dBubble__dBubble.html" title=" " alt="" coords="767,297,939,353"/>
-<area shape="rect" id="node12" href="$structEshelbianPlasticity_1_1OpSpatialConsistency__dBubble__domega.html" title=" " alt="" coords="767,377,939,433"/>
-<area shape="rect" id="node13" href="$structEshelbianPlasticity_1_1OpSpatialConsistency__dBubble__dP.html" title=" " alt="" coords="767,457,939,513"/>
-<area shape="rect" id="node14" href="$structEshelbianPlasticity_1_1OpSpatialConsistency__dP__domega.html" title=" " alt="" coords="767,537,939,593"/>
-<area shape="rect" id="node15" href="$structEshelbianPlasticity_1_1OpSpatialConsistency__dP__dP.html" title=" " alt="" coords="744,617,963,659"/>
-<area shape="rect" id="node16" href="$structEshelbianPlasticity_1_1OpSpatialConsistencyBubble.html" title=" " alt="" coords="745,683,962,724"/>
-<area shape="rect" id="node17" href="$structEshelbianPlasticity_1_1OpSpatialConsistencyDivTerm.html" title=" " alt="" coords="740,748,967,789"/>
-<area shape="rect" id="node18" href="$structEshelbianPlasticity_1_1OpSpatialConsistencyP.html" title=" " alt="" coords="763,813,943,855"/>
-<area shape="rect" id="node19" href="$structEshelbianPlasticity_1_1OpSpatialEquilibrium.html" title=" " alt="" coords="770,879,937,920"/>
-<area shape="rect" id="node20" href="$structEshelbianPlasticity_1_1OpSpatialEquilibrium__dw__dP.html" title=" " alt="" coords="745,944,961,985"/>
-<area shape="rect" id="node21" href="$structEshelbianPlasticity_1_1OpSpatialEquilibrium__dw__dw.html" title=" " alt="" coords="744,1009,963,1051"/>
-<area shape="rect" id="node22" href="$structEshelbianPlasticity_1_1OpSpatialPhysical.html" title=" " alt="" coords="780,1075,927,1116"/>
-<area shape="rect" id="node23" href="$structEshelbianPlasticity_1_1OpSpatialPhysical__du__dBubble.html" title=" " alt="" coords="780,1141,927,1197"/>
-<area shape="rect" id="node24" href="$structEshelbianPlasticity_1_1OpSpatialPhysical__du__domega.html" title=" " alt="" coords="780,1221,927,1277"/>
-<area shape="rect" id="node25" href="$structEshelbianPlasticity_1_1OpSpatialPhysical__du__dP.html" title=" " alt="" coords="757,1301,950,1343"/>
-<area shape="rect" id="node26" href="$structEshelbianPlasticity_1_1OpSpatialPhysical__du__du.html" title=" " alt="" coords="757,1367,950,1408"/>
-<area shape="rect" id="node27" href="$structEshelbianPlasticity_1_1OpSpatialPrj.html" title=" " alt="" coords="781,1432,926,1473"/>
-<area shape="rect" id="node28" href="$structEshelbianPlasticity_1_1OpSpatialPrj__dx__dw.html" title=" " alt="" coords="774,1497,933,1539"/>
-<area shape="rect" id="node29" href="$structEshelbianPlasticity_1_1OpSpatialPrj__dx__dx.html" title=" " alt="" coords="775,1563,931,1604"/>
-<area shape="rect" id="node30" href="$structEshelbianPlasticity_1_1OpSpatialRotation.html" title=" " alt="" coords="779,1628,927,1669"/>
-<area shape="rect" id="node31" href="$structEshelbianPlasticity_1_1OpSpatialRotation__domega__dBubble.html" title=" " alt="" coords="779,1694,927,1750"/>
-<area shape="rect" id="node32" href="$structEshelbianPlasticity_1_1OpSpatialRotation__domega__domega.html" title=" " alt="" coords="779,1774,927,1830"/>
-<area shape="rect" id="node33" href="$structEshelbianPlasticity_1_1OpSpatialRotation__domega__dP.html" title=" " alt="" coords="779,1854,927,1910"/>
+<area shape="rect" id="Node000000" href="$struct_eshelbian_plasticity_1_1_eshelbian_core_1_1_set_up_schur.html" title=" " alt="" coords="5,5,201,43"/>
+<area shape="rect" id="Node000001" href="$struct_eshelbian_plasticity_1_1_set_up_schur_impl.html" title=" " alt="" coords="249,5,381,43"/>
+<area shape="poly" id="edge207_Node000000_Node000001" title=" " alt="" coords="216,21,249,21,249,27,216,27"/>
 </map>

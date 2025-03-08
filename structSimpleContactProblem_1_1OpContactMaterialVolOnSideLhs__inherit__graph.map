@@ -1,6 +1,0 @@
-<map id="SimpleContactProblem::OpContactMaterialVolOnSideLhs" name="SimpleContactProblem::OpContactMaterialVolOnSideLhs">
-<area shape="rect" id="node1" title="Operator used as base struct for OpContactMaterialVolOnSideLhs_dX_dx OpContactMaterialVolOnSideLhs_dX..." alt="" coords="315,53,555,94"/>
-<area shape="rect" id="node3" href="$structSimpleContactProblem_1_1OpContactMaterialVolOnSideLhs__dX__dX.html" title="LHS&#45;operator for the contact element (material configuration)" alt="" coords="603,5,821,61"/>
-<area shape="rect" id="node4" href="$structSimpleContactProblem_1_1OpContactMaterialVolOnSideLhs__dX__dx.html" title="LHS&#45;operator (material configuration) on the side volume of either master or slave side." alt="" coords="603,85,821,141"/>
-<area shape="rect" id="node2" href="$classMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSide_1_1_01UserDataOperator.html" title=" " alt="" coords="5,38,267,109"/>
-</map>

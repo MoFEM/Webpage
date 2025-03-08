@@ -1,7 +1,0 @@
-<map id="MetaSpringBC::OpSpringALEMaterialLhs_dX_dx" name="MetaSpringBC::OpSpringALEMaterialLhs_dX_dx">
-<area shape="rect" id="node1" title="LHS&#45;operator for the pressure element (material configuration)" alt="" coords="17,319,275,360"/>
-<area shape="rect" id="node2" href="$structMetaSpringBC_1_1OpSpringALEMaterialLhs.html" title="Base class for LHS&#45;operators for pressure element (material configuration)" alt="" coords="5,244,287,271"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html" title="default operator for TRI element" alt="" coords="77,169,215,196"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="33,80,259,121"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="63,5,229,32"/>
-</map>

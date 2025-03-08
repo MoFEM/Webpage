@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['henckyops_14819',['HenckyOps',['../namespaceHenckyOps.html',1,'']]]
+  ['henckyops_0',['HenckyOps',['../namespace_hencky_ops.html',1,'']]]
 ];

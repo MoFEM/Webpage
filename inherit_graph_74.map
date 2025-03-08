@@ -1,17 +1,39 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classBoundaryEleOp.html" title=" " alt="" coords="5,436,128,463"/>
-<area shape="rect" id="node2" href="$structAtomTest_1_1OpErrorSkel_3_011_01_4.html" title=" " alt="" coords="197,5,403,32"/>
-<area shape="rect" id="node3" href="$structContactOps_1_1OpAssembleTotalContactAreaImpl_3_01DIM_00_01GAUSS_00_01BoundaryEleOp_01_4.html" title=" " alt="" coords="185,56,415,112"/>
-<area shape="rect" id="node4" href="$structContactOps_1_1OpAssembleTotalContactTractionImpl_3_01DIM_00_01GAUSS_00_01BoundaryEleOp_01_4.html" title=" " alt="" coords="191,136,409,192"/>
-<area shape="rect" id="node5" href="$structContactOps_1_1OpEvaluateSDFImpl_3_01DIM_00_01GAUSS_00_01BoundaryEleOp_01_4.html" title=" " alt="" coords="181,217,419,258"/>
-<area shape="rect" id="node6" href="$structElasticExample_1_1OpCalculateTraction.html" title=" " alt="" coords="195,282,405,323"/>
-<area shape="rect" id="node7" href="$structFreeSurfaceOps_1_1OpCalculateLift.html" title=" " alt="" coords="185,348,415,375"/>
-<area shape="rect" id="node8" href="$structFreeSurfaceOps_1_1OpWettingAngleLhs.html" title=" " alt="" coords="200,399,400,441"/>
-<area shape="rect" id="node9" href="$structLevelSet_1_1OpLhsSkeleton.html" title=" " alt="" coords="209,465,391,492"/>
-<area shape="rect" id="node10" href="$structLevelSet_1_1OpRhsSkeleton.html" title=" " alt="" coords="208,516,392,543"/>
-<area shape="rect" id="node11" href="$structOpH1LhsSkeleton.html" title="Operator the left hand side matrix." alt="" coords="232,567,368,593"/>
-<area shape="rect" id="node12" href="$structPhotonDiffusion_1_1OpCameraInteg.html" title=" " alt="" coords="199,618,401,659"/>
-<area shape="rect" id="node13" href="$structPhotonDiffusion_1_1OpGetScalarFieldGradientValuesOnSkin.html" title=" " alt="" coords="193,683,407,725"/>
-<area shape="rect" id="node14" href="$structPoisson2DiscontGalerkinOperators_1_1OpL2BoundaryRhs.html" title="Operator to evaluate Dirichlet boundary conditions using DG." alt="" coords="176,749,424,790"/>
-<area shape="rect" id="node15" href="$structPoisson2DiscontGalerkinOperators_1_1OpL2LhsPenalty.html" title="Operator the left hand side matrix." alt="" coords="176,814,424,855"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,368,155,405"/>
+<area shape="rect" id="Node000001" href="$struct_a_d_o_l_c_plasticity_1_1_common_data.html" title="common data used by volume elements" alt="" coords="208,5,417,29"/>
+<area shape="poly" id="edge33_Node000000_Node000001" title=" " alt="" coords="80,352,88,286,107,201,123,157,143,114,169,74,201,39,219,28,222,32,205,43,173,77,148,116,128,159,112,203,93,287,86,353"/>
+<area shape="rect" id="Node000002" href="$struct_contact_ops_1_1_common_data.html" title="[Common data]" alt="" coords="222,53,403,77"/>
+<area shape="poly" id="edge34_Node000000_Node000002" title=" " alt="" coords="83,352,93,294,114,222,130,185,149,149,173,116,201,87,220,75,223,80,205,91,177,120,154,152,135,188,119,224,98,295,88,353"/>
+<area shape="rect" id="Node000003" href="$struct_eshelbian_plasticity_1_1_data_at_integration_pts.html" title=" " alt="" coords="237,101,388,139"/>
+<area shape="poly" id="edge35_Node000000_Node000003" title=" " alt="" coords="87,352,102,306,125,251,158,196,178,171,201,149,235,130,237,135,204,153,182,174,162,199,130,254,107,308,92,354"/>
+<area shape="rect" id="Node000004" href="$struct_example_1_1_common_data.html" title="[Example]" alt="" coords="231,163,394,187"/>
+<area shape="poly" id="edge36_Node000000_Node000004" title=" " alt="" coords="91,352,108,315,132,273,163,231,201,196,230,183,232,187,204,201,167,235,136,276,113,318,96,355"/>
+<area shape="rect" id="Node000005" href="$struct_hencky_ops_1_1_common_data.html" title=" " alt="" coords="223,211,402,235"/>
+<area shape="poly" id="edge37_Node000000_Node000005" title=" " alt="" coords="98,353,141,297,169,268,202,244,227,233,229,238,204,249,173,272,145,300,103,356"/>
+<area shape="rect" id="Node000006" href="$struct_meta_spring_b_c_1_1_data_at_integration_pts_springs.html" title=" " alt="" coords="203,259,422,296"/>
+<area shape="poly" id="edge38_Node000000_Node000006" title=" " alt="" coords="117,356,157,330,202,306,232,294,234,299,204,310,159,335,120,361"/>
+<area shape="rect" id="Node000007" href="$struct_mo_f_e_m_1_1_bc_manager_1_1_b_cs.html" title="Data structure storing bc markers and atributes." alt="" coords="224,320,401,344"/>
+<area shape="poly" id="edge39_Node000000_Node000007" title=" " alt="" coords="169,361,202,353,252,342,253,347,204,359,170,367"/>
+<area shape="rect" id="Node000008" href="$struct_mo_f_e_m_1_1_log_manager_1_1_internal_data.html" title=" " alt="" coords="234,368,391,405"/>
+<area shape="poly" id="edge40_Node000000_Node000008" title=" " alt="" coords="170,384,233,384,233,389,170,389"/>
+<area shape="rect" id="Node000009" href="$struct_mo_f_e_m_1_1_schur_elem_mats.html" title="Schur complement data storage." alt="" coords="228,429,397,453"/>
+<area shape="poly" id="edge41_Node000000_Node000009" title=" " alt="" coords="170,407,204,415,253,426,252,431,202,420,169,412"/>
+<area shape="rect" id="Node000012" href="$struct_neumann_forces_surface_1_1_data_at_integration_pts.html" title=" " alt="" coords="230,477,395,515"/>
+<area shape="poly" id="edge44_Node000000_Node000012" title=" " alt="" coords="120,412,159,439,204,463,234,474,232,479,202,468,157,443,117,417"/>
+<area shape="rect" id="Node000013" href="$struct_plastic_ops_1_1_common_data.html" title="[Common data]" alt="" coords="225,539,400,563"/>
+<area shape="poly" id="edge45_Node000000_Node000013" title=" " alt="" coords="103,417,145,473,173,501,204,524,229,536,227,540,202,529,169,505,141,477,98,420"/>
+<area shape="rect" id="Node000014" href="$struct_seepage_1_1_blocked_parameters.html" title=" " alt="" coords="213,587,412,611"/>
+<area shape="poly" id="edge46_Node000000_Node000014" title=" " alt="" coords="96,419,113,455,136,497,167,538,204,572,226,584,223,588,201,577,163,542,132,500,108,458,91,421"/>
+<area shape="rect" id="Node000015" href="$struct_simple_contact_problem_1_1_common_data_simple_contact.html" title=" " alt="" coords="214,635,411,672"/>
+<area shape="poly" id="edge47_Node000000_Node000015" title=" " alt="" coords="92,420,107,465,130,520,162,574,182,599,205,621,222,632,219,636,201,625,178,603,158,577,125,522,102,467,87,421"/>
+<area shape="rect" id="Node000017" href="$struct_simple_contact_problem_1_1_convect_slave_integration_pts.html" title="Class used to convect integration points on slave and master, and to calculate directional direvative..." alt="" coords="216,696,409,733"/>
+<area shape="poly" id="edge49_Node000000_Node000017" title=" " alt="" coords="88,420,99,477,121,548,136,585,155,620,178,653,205,682,221,693,218,698,201,686,173,657,150,623,131,587,116,550,94,479,83,421"/>
+<area shape="rect" id="Node000018" href="$struct_thermo_elastic_problem_1_1_blocked_parameters.html" title=" " alt="" coords="234,757,391,795"/>
+<area shape="poly" id="edge50_Node000000_Node000018" title=" " alt="" coords="86,421,93,489,112,576,128,621,148,666,173,707,205,743,235,762,233,767,201,747,169,710,143,668,123,623,107,577,88,490,80,421"/>
+<area shape="rect" id="Node000010" href="$struct_mo_f_e_m_1_1_schur_elem_mats_block.html" title=" " alt="" coords="498,403,700,427"/>
+<area shape="poly" id="edge42_Node000009_Node000010" title=" " alt="" coords="412,429,498,421,498,427,413,435"/>
+<area shape="rect" id="Node000011" href="$struct_mo_f_e_m_1_1_schur_elem_mats_preconditioned_block.html" title=" " alt="" coords="470,451,729,488"/>
+<area shape="poly" id="edge43_Node000009_Node000011" title=" " alt="" coords="413,448,470,454,469,459,412,454"/>
+<area shape="rect" id="Node000016" href="$struct_mortar_contact_problem_1_1_common_data_mortar_contact.html" title=" " alt="" coords="502,635,697,672"/>
+<area shape="poly" id="edge48_Node000015_Node000016" title=" " alt="" coords="427,651,501,651,501,656,427,656"/>
 </map>

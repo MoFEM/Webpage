@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['demkowiczhexandquad_14811',['DemkowiczHexAndQuad',['../namespaceDemkowiczHexAndQuad.html',1,'']]]
+  ['demkowiczhexandquad_0',['DemkowiczHexAndQuad',['../namespace_demkowicz_hex_and_quad.html',1,'']]]
 ];

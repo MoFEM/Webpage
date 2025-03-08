@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['how_20to_20add_20a_20new_20module_20and_20program_26270',['How to add a new module and program',['../how_to_add_new_module_and_program.html',1,'']]],
-  ['how_20to_20compile_20a_20program_26271',['How to compile a program',['../how_to_compile_program.html',1,'']]],
-  ['how_20to_20run_20this_26272',['How to run this',['../md_tutorials_scl-9_README.html',1,'']]],
-  ['how_20to_20copy_20a_20tutorial_20from_20core_26273',['How to Copy a Tutorial from Core',['../md_users_modules_HowToCopyTutorial.html',1,'']]],
-  ['how_20to_3a_20squashing_20for_20an_20external_20pr_26274',['How to: Squashing for an external PR',['../SquashFAQ.html',1,'']]]
+  ['7_3a_20automatic_20differentiation_20for_20plasticity_0',['VEC-7: Automatic Differentiation for Plasticity',['../tutorial_adolc_plasticity.html',1,'']]],
+  ['7_3a_20mixed_20formulation_20for_20incompressible_20elasticity_1',['COR-7: Mixed formulation for incompressible elasticity',['../elasticity_mixed_formulation.html',1,'tutorials']]],
+  ['7_3a_20wave_20equation_2',['SCL-7: Wave equation',['../basic_tutorials_wave_equation.html',1,'']]]
 ];

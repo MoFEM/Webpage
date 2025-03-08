@@ -1,5 +1,0 @@
-<map id="MoFEM::OpCalculateHdivVectorDivergence&lt; BASE_DIM, SPACE_DIM &gt;" name="MoFEM::OpCalculateHdivVectorDivergence&lt; BASE_DIM, SPACE_DIM &gt;">
-<area shape="rect" id="node1" title="Calculate divergence of vector field." alt="" coords="5,169,280,211"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="29,80,256,121"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="59,5,226,32"/>
-</map>

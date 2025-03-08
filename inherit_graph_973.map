@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structLevelSet_1_1SideData.html" title="data structure carrying information on skeleton on both sides." alt="" coords="5,5,151,32"/>
+<area shape="rect" id="Node000000" href="$class_int_ele_op.html" title=" " alt="" coords="5,35,78,60"/>
+<area shape="rect" id="Node000001" href="$struct_op_block_charge_density.html" title=" " alt="" coords="126,5,284,31"/>
+<area shape="poly" id="edge969_Node000000_Node000001" title=" " alt="" coords="92,36,130,29,131,34,93,41"/>
+<area shape="rect" id="Node000002" href="$struct_op_electrode_charge.html" title=" " alt="" coords="133,55,277,96"/>
+<area shape="poly" id="edge970_Node000000_Node000002" title=" " alt="" coords="93,54,133,61,132,66,92,59"/>
 </map>

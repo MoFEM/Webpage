@@ -1,3 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structFaceRule.html" title="Set integration rule to boundary elements." alt="" coords="5,5,85,32"/>
+<area shape="rect" id="Node000000" href="$class_face_element_forces_and_sources_core.html" title=" " alt="" coords="5,141,248,165"/>
+<area shape="rect" id="Node000001" href="$struct_b_cs___r_v_e_lagrange___disp_1_1_my_tri_f_e.html" title=" " alt="" coords="306,5,478,43"/>
+<area shape="poly" id="edge214_Node000000_Node000001" title=" " alt="" coords="157,130,219,91,294,52,323,41,325,46,297,57,222,96,160,134"/>
+<area shape="rect" id="Node000002" href="$struct_fracture_mechanics_1_1_constant_area_1_1_my_triangle_f_e.html" title=" " alt="" coords="296,67,488,104"/>
+<area shape="poly" id="edge215_Node000000_Node000002" title=" " alt="" coords="190,134,315,102,317,107,192,140"/>
+<area shape="rect" id="Node000003" href="$struct_fracture_mechanics_1_1_griffith_force_element_1_1_my_triangle_f_e.html" title=" " alt="" coords="320,128,464,179"/>
+<area shape="poly" id="edge216_Node000000_Node000003" title=" " alt="" coords="263,151,320,151,320,156,263,156"/>
+<area shape="rect" id="Node000006" href="$struct_minimal_surface_equation_1_1_minimal_surface_element_1_1_surface_element.html" title=" " alt="" coords="307,203,477,253"/>
+<area shape="poly" id="edge219_Node000000_Node000006" title=" " alt="" coords="188,168,308,202,306,207,186,173"/>
+<area shape="rect" id="Node000007" href="$struct_periodic_nitsche_constrains_1_1_periodic_face.html" title=" " alt="" coords="303,277,481,315"/>
+<area shape="poly" id="edge220_Node000000_Node000007" title=" " alt="" coords="156,173,219,218,297,263,324,274,322,279,294,268,216,222,153,177"/>
+<area shape="rect" id="Node000004" href="$struct_fracture_mechanics_1_1_griffith_force_element_1_1_my_triangle_f_e_constrains.html" title=" " alt="" coords="552,91,727,141"/>
+<area shape="poly" id="edge217_Node000003_Node000004" title=" " alt="" coords="479,138,551,127,552,132,479,143"/>
+<area shape="rect" id="Node000005" href="$struct_fracture_mechanics_1_1_griffith_force_element_1_1_my_triangle_f_e_constrains_delta.html" title=" " alt="" coords="536,165,742,216"/>
+<area shape="poly" id="edge218_Node000003_Node000005" title=" " alt="" coords="480,164,536,172,536,178,479,169"/>
 </map>

@@ -1,6 +1,0 @@
-<map id="FractureMechanics::MWLSApprox::OpMWLSRhoPostProcess" name="FractureMechanics::MWLSApprox::OpMWLSRhoPostProcess">
-<area shape="rect" id="node1" title=" " alt="" coords="5,259,284,300"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="17,169,272,211"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="31,80,258,121"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="61,5,228,32"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="MoFEM::OpCalculateTensor2FieldValues_General&lt; Tensor_Dim0, Tensor_Dim1, T, L, A &gt;" name="MoFEM::OpCalculateTensor2FieldValues_General&lt; Tensor_Dim0, Tensor_Dim1, T, L, A &gt;">
-<area shape="rect" id="node1" title="Calculate field values for tenor field rank 2." alt="" coords="495,61,713,117"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1OpCalculateTensor2SymmetricFieldGradient__General.html" title="Evaluate field gradient values for symmetric 2nd order tensor field, i.e. gradient is tensor rank 3." alt="" coords="761,5,991,76"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1OpCalculateVectorFieldGradient__General.html" title="Evaluate field gradient values for vector field, i.e. gradient is tensor rank 2." alt="" coords="767,100,985,171"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="220,68,447,109"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,75,172,102"/>
-</map>

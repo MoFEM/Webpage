@@ -1,9 +1,0 @@
-<map id="MoFEM::TimeScale" name="MoFEM::TimeScale">
-<area shape="rect" id="node1" title="Force scale operator for reading two columns." alt="" coords="228,129,375,156"/>
-<area shape="rect" id="node3" href="$structContact_1_1ScaledTimeScale.html" title=" " alt="" coords="432,5,623,32"/>
-<area shape="rect" id="node4" href="$structExample_1_1DynamicFirstOrderConsConstantTimeScale.html" title=" " alt="" coords="423,57,632,98"/>
-<area shape="rect" id="node5" href="$structExample_1_1DynamicFirstOrderConsSinusTimeScale.html" title=" " alt="" coords="423,122,632,163"/>
-<area shape="rect" id="node6" href="$structExample_1_1ScaledTimeScale.html" title=" " alt="" coords="428,188,627,215"/>
-<area shape="rect" id="node7" href="$structLinMomTimeScale.html" title=" " alt="" coords="456,239,599,265"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1ScalingMethod.html" title=" " alt="" coords="5,129,180,156"/>
-</map>

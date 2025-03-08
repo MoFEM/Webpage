@@ -1,5 +1,0 @@
-<map id="MetaNodalForces::DofForceScale" name="MetaNodalForces::DofForceScale">
-<area shape="rect" id="node1" title="Scale force based on some DOF value." alt="" coords="93,95,294,136"/>
-<area shape="rect" id="node2" href="$structMethodForForceScaling.html" title="Class used to scale loads, f.e. in arc&#45;length control." alt="" coords="5,5,179,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="203,5,386,32"/>
-</map>

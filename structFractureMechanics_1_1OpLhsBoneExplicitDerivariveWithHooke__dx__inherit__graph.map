@@ -1,6 +1,0 @@
-<map id="FractureMechanics::OpLhsBoneExplicitDerivariveWithHooke_dx" name="FractureMechanics::OpLhsBoneExplicitDerivariveWithHooke_dx">
-<area shape="rect" id="node1" title=" " alt="" coords="27,259,238,315"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="5,169,260,211"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="19,80,246,121"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="49,5,216,32"/>
-</map>

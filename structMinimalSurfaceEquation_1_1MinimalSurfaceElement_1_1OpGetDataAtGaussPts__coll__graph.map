@@ -1,7 +1,0 @@
-<map id="MinimalSurfaceEquation::MinimalSurfaceElement::OpGetDataAtGaussPts" name="MinimalSurfaceEquation::MinimalSurfaceElement::OpGetDataAtGaussPts">
-<area shape="rect" id="node1" title="Evaluate function values and gradients at Gauss Pts." alt="" coords="5,243,192,299"/>
-<area shape="rect" id="node2" title=" " alt="" coords="7,139,147,165"/>
-<area shape="rect" id="node3" href="$structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1CommonData.html" title="Keep date between operators." alt="" coords="172,124,359,180"/>
-<area shape="rect" id="node4" title=" " alt="" coords="139,5,250,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="281,5,391,32"/>
-</map>

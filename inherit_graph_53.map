@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structBCs__RVELagrange__Periodic_1_1CommonFunctionsPeriodic.html" title=" " alt="" coords="5,5,208,47"/>
+<area shape="rect" id="Node000000" href="$struct_b_cs___r_v_e_lagrange___disp.html" title=" " alt="" coords="5,81,177,105"/>
+<area shape="rect" id="Node000001" href="$struct_b_cs___r_v_e_lagrange___periodic.html" title=" " alt="" coords="225,5,418,29"/>
+<area shape="poly" id="edge26_Node000000_Node000001" title=" " alt="" coords="135,72,224,39,264,27,266,33,226,44,137,77"/>
+<area shape="rect" id="Node000002" href="$struct_b_cs___r_v_e_lagrange___trac.html" title=" " alt="" coords="236,53,407,77"/>
+<area shape="poly" id="edge27_Node000000_Node000002" title=" " alt="" coords="192,78,235,73,236,78,192,84"/>
+<area shape="rect" id="Node000003" href="$struct_b_cs___r_v_e_lagrange___trac___rigid___rot.html" title=" " alt="" coords="236,101,407,139"/>
+<area shape="poly" id="edge28_Node000000_Node000003" title=" " alt="" coords="192,102,236,107,235,113,192,108"/>
+<area shape="rect" id="Node000004" href="$struct_b_cs___r_v_e_lagrange___trac___rigid___trans.html" title=" " alt="" coords="236,163,407,200"/>
+<area shape="poly" id="edge29_Node000000_Node000004" title=" " alt="" coords="134,110,226,148,258,160,256,165,224,153,132,115"/>
 </map>

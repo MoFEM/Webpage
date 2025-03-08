@@ -1,8 +1,0 @@
-<map id="SimpleContactProblem::OpLhsConvectIntegrationPtsConstrainMasterGap" name="SimpleContactProblem::OpLhsConvectIntegrationPtsConstrainMasterGap">
-<area shape="rect" id="node1" title="Tangent opeerator for contrains equation for change of spatial positions on master and slave." alt="" coords="525,100,740,156"/>
-<area shape="rect" id="node2" href="$classContactOp.html" title=" " alt="" coords="102,5,193,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="43,56,252,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,107,289,149"/>
-<area shape="rect" id="node5" title=" " alt="" coords="92,173,203,200"/>
-<area shape="rect" id="node6" title=" " alt="" coords="65,224,230,251"/>
-</map>

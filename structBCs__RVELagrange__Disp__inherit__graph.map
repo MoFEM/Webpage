@@ -1,7 +1,0 @@
-<map id="BCs_RVELagrange_Disp" name="BCs_RVELagrange_Disp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,85,181,112"/>
-<area shape="rect" id="node2" href="$structBCs__RVELagrange__Periodic.html" title=" " alt="" coords="229,5,428,32"/>
-<area shape="rect" id="node3" href="$structBCs__RVELagrange__Trac.html" title=" " alt="" coords="242,56,415,83"/>
-<area shape="rect" id="node4" href="$structBCs__RVELagrange__Trac__Rigid__Rot.html" title=" " alt="" coords="242,107,415,149"/>
-<area shape="rect" id="node5" href="$structBCs__RVELagrange__Trac__Rigid__Trans.html" title=" " alt="" coords="242,173,415,214"/>
-</map>

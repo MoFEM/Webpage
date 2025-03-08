@@ -1,4 +1,0 @@
-<map id="MoFEM::Simple" name="MoFEM::Simple">
-<area shape="rect" id="node1" title="Simple interface for fast problem set&#45;up." alt="" coords="43,80,165,107"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="5,5,203,32"/>
-</map>

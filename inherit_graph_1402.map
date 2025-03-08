@@ -1,3 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structNonlinearElasticElement.html" title="structure grouping operators and data used for calculation of nonlinear elastic element" alt="" coords="5,5,188,32"/>
+<area shape="rect" id="Node000000" href="$struct_nonlinear_elastic_element_1_1_functions_to_calculate_piola_kirchhoff_i.html" title="Implementation of elastic (non&#45;linear) St. Kirchhoff equation." alt="" coords="5,89,242,145"/>
+<area shape="rect" id="Node000001" href="$struct_hooke.html" title="Hook equation." alt="" coords="330,5,449,31"/>
+<area shape="poly" id="edge1253_Node000000_Node000001" title=" " alt="" coords="193,79,289,40,329,28,331,33,291,45,195,84"/>
+<area shape="rect" id="Node000002" href="$struct_my_mat__double.html" title=" " alt="" coords="307,55,472,80"/>
+<area shape="poly" id="edge1254_Node000000_Node000002" title=" " alt="" coords="257,89,316,78,317,84,257,95"/>
+<area shape="rect" id="Node000004" href="$struct_neo_hookean.html" title="NeoHookan equation." alt="" coords="311,104,468,130"/>
+<area shape="poly" id="edge1256_Node000000_Node000004" title=" " alt="" coords="257,114,311,114,311,120,257,120"/>
+<area shape="rect" id="Node000005" href="$struct_small_strain_tranversly_isotropic.html" title="Hook equation." alt="" coords="290,154,489,195"/>
+<area shape="poly" id="edge1257_Node000000_Node000005" title=" " alt="" coords="258,143,292,151,291,156,256,148"/>
+<area shape="rect" id="Node000006" href="$struct_volume_length_quality.html" title="Volume Length Quality." alt="" coords="317,219,462,260"/>
+<area shape="poly" id="edge1258_Node000000_Node000006" title=" " alt="" coords="186,150,291,204,322,216,320,221,289,209,184,155"/>
+<area shape="rect" id="Node000003" href="$struct_my_mat.html" title=" " alt="" coords="537,55,657,80"/>
+<area shape="poly" id="edge1255_Node000002_Node000003" title=" " alt="" coords="488,65,537,65,537,70,488,70"/>
 </map>

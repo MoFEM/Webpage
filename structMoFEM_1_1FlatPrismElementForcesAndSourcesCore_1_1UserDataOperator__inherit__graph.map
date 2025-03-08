@@ -1,7 +1,0 @@
-<map id="MoFEM::FlatPrismElementForcesAndSourcesCore::UserDataOperator" name="MoFEM::FlatPrismElementForcesAndSourcesCore::UserDataOperator">
-<area shape="rect" id="node1" title="default operator for Flat Prism element" alt="" coords="92,169,347,211"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1OpCalculateInvJacForFlatPrism.html" title="Calculate inverse of jacobian for face element." alt="" coords="5,259,201,300"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1OpSetInvJacH1ForFlatPrism.html" title="Transform local reference derivatives of shape functions to global derivatives." alt="" coords="226,259,445,300"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="106,80,333,121"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="136,5,303,32"/>
-</map>

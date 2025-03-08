@@ -1,7 +1,0 @@
-<map id="SimpleContactProblem::OpLoopForSideOfContactPrism" name="SimpleContactProblem::OpLoopForSideOfContactPrism">
-<area shape="rect" id="node1" title="Trigers operators for side volume element on slave side for evaluation of the RHS contact traction in..." alt="" coords="413,74,643,115"/>
-<area shape="rect" id="node2" href="$classContactOp.html" title=" " alt="" coords="97,5,188,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="102,56,183,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="113,107,172,133"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,157,280,213"/>
-</map>

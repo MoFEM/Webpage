@@ -1,9 +1,0 @@
-<map id="NavierStokesElement::OpAssembleRhs" name="NavierStokesElement::OpAssembleRhs">
-<area shape="rect" id="node1" title="Base class for operators assembling RHS." alt="" coords="683,71,845,112"/>
-<area shape="rect" id="node5" href="$structNavierStokesElement_1_1OpAssembleRhsPressure.html" title="Assemble the pressure component of the RHS vector." alt="" coords="914,5,1106,47"/>
-<area shape="rect" id="node6" href="$structNavierStokesElement_1_1OpAssembleRhsVelocityLin.html" title="Assemble linear part of the velocity component of the RHS vector." alt="" coords="907,71,1113,112"/>
-<area shape="rect" id="node7" href="$structNavierStokesElement_1_1OpAssembleRhsVelocityNonLin.html" title="Assemble non&#45;linear part of the velocity component of the RHS vector." alt="" coords="893,136,1127,177"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="495,78,635,105"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="220,71,447,112"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="5,78,172,105"/>
-</map>

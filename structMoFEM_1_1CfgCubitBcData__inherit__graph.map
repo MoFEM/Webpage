@@ -1,4 +1,0 @@
-<map id="MoFEM::CfgCubitBcData" name="MoFEM::CfgCubitBcData">
-<area shape="rect" id="node1" title="Definition of the cfd_bc data structure." alt="" coords="19,80,201,107"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1GenericCubitBcData.html" title="Generic bc data structure." alt="" coords="5,5,215,32"/>
-</map>

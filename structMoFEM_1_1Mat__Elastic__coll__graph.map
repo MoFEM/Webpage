@@ -1,7 +1,0 @@
-<map id="MoFEM::Mat_Elastic" name="MoFEM::Mat_Elastic">
-<area shape="rect" id="node1" title="Elastic material data structure." alt="" coords="140,184,293,211"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1GenericAttributeData.html" title="Generic attribute data structure." alt="" coords="26,95,242,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,148,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="172,5,211,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="267,95,332,121"/>
-</map>

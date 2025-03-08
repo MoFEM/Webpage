@@ -1,5 +1,0 @@
-<map id="MoFEM::OpCalculateHVecTensorDivergence&lt; Tensor_Dim0, Tensor_Dim1, CoordSys &gt;" name="MoFEM::OpCalculateHVecTensorDivergence&lt; Tensor_Dim0, Tensor_Dim1, CoordSys &gt;">
-<area shape="rect" id="node1" title="Calculate divergence of tonsorial field using vectorial base." alt="" coords="5,169,237,225"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html" title=" " alt="" coords="8,80,235,121"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1DataOperator.html" title="base operator to do operations at Gauss Pt. level" alt="" coords="38,5,205,32"/>
-</map>

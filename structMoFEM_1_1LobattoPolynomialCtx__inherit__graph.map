@@ -1,7 +1,0 @@
-<map id="MoFEM::LobattoPolynomialCtx" name="MoFEM::LobattoPolynomialCtx">
-<area shape="rect" id="node1" title="Class used to give arguments to Lobatto base functions." alt="" coords="11,319,233,345"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1LegendrePolynomialCtx.html" title="Class used to give arguments to Legendre base functions." alt="" coords="5,244,239,271"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1BaseFunctionCtx.html" title="Base class used to exchange data between element data structures and class calculating base functions..." alt="" coords="29,169,215,196"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1BaseFunctionUnknownInterface.html" title=" " alt="" coords="9,80,235,121"/>
-<area shape="rect" id="node5" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="23,5,221,32"/>
-</map>

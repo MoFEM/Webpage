@@ -1,6 +1,0 @@
-<map id="MoFEM::DMMGViaApproxOrdersCtx" name="MoFEM::DMMGViaApproxOrdersCtx">
-<area shape="rect" id="node1" title="Structure for DM for multi&#45;grid via approximation orders." alt="" coords="5,229,260,256"/>
-<area shape="rect" id="node2" href="$structMoFEM_1_1DMCtxImpl.html" title=" " alt="" coords="57,155,208,181"/>
-<area shape="rect" id="node3" href="$structMoFEM_1_1DMCtx.html" title="PETSc Discrete Manager data structure." alt="" coords="71,80,194,107"/>
-<area shape="rect" id="node4" href="$structMoFEM_1_1UnknownInterface.html" title="base class for all interface classes" alt="" coords="34,5,231,32"/>
-</map>
