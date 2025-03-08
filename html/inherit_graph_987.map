@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$struct_level_set_1_1_wrapper_class.html" title="Wrapper executing stages while mesh refinement." alt="" coords="5,43,170,67"/>
+<area shape="rect" id="Node000001" href="$struct_level_set_1_1_wrapper_class_error_projection.html" title="Use peculated errors on all levels while mesh projection." alt="" coords="218,5,413,43"/>
+<area shape="poly" id="edge974_Node000000_Node000001" title=" " alt="" coords="185,39,217,35,218,40,186,44"/>
+<area shape="rect" id="Node000002" href="$struct_level_set_1_1_wrapper_class_inital_solution.html" title="Used to execute inital mesh approximation while mesh refinement." alt="" coords="219,67,412,104"/>
+<area shape="poly" id="edge975_Node000000_Node000002" title=" " alt="" coords="186,65,219,70,218,75,185,70"/>
+</map>

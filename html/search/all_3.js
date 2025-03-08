@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['2_0',['2',['../md__c_h_a_n_g_e_l_o_g.html#autotoc_md28',1,'MoFEM v0.9.2'],['../mix_us_flow.html#mix_us_flow_example_2',1,'Numerical example 2']]],
+  ['2_200_20med_1',['Mesh TET-2-0.med',['../md_tutorials_2vec-1_2_r_e_a_d_m_e.html#autotoc_md193',1,'']]],
+  ['2_20install_20users_20modules_2',['2. Install users modules',['../install_spack.html#spack_users_modules',1,'']]],
+  ['2_20preparation_20of_20the_20param_20file_3',['2. Preparation of the param file',['../md_users__modules_2mortar__contact_2_r_e_a_d_m_e.html#autotoc_md258',1,'']]],
+  ['2_20prepare_20the_20config_20file_4',['2. Prepare the config file',['../md_users__modules_2fracture__mechanics_2examples_2three__point__bending__contact_2_r_e_a_d_m_e.html#autotoc_md240',1,'']]],
+  ['2_20running_20the_20contact_20simulation_5',['2. Running the contact simulation',['../md_users__modules_2mortar__contact_2_r_e_a_d_m_e.html#autotoc_md260',1,'']]],
+  ['2_20when_20to_20squash_6',['2. When to squash?',['../_squash_f_a_q.html#autotoc_md84',1,'']]],
+  ['2021_20school_3a_20weak_20form_20in_20many_20flavours_20design_20and_20sustainable_20code_20development_7',['MoFEM UKACM 2021 School: &quot;Weak form&quot; in many flavours. Design and sustainable code development',['../mofem_school_2021.html',1,'']]],
+  ['2023_3a_20mixed_20finite_20element_20formulations_20in_20solid_20mechanics_8',['MoFEM UKACM Autumn School 2023: Mixed Finite Element Formulations in Solid Mechanics',['../mofem_school_2023.html',1,'']]],
+  ['2_3a_20create_20a_203d_20mesh_20from_20gmsh_9',['MSH-2: Create a 3D mesh from Gmsh',['../basic_tutorials_mesh_generation_3d.html',1,'']]],
+  ['2_3a_20hierarchical_20approximation_10',['FUN-2: Hierarchical approximation',['../hierarchical_approximation_1.html',1,'']]],
+  ['2_3a_20jupyter_20tutorial_20on_20mixed_20formulation_20for_20the_20poisson_20problem_11',['Hands-on 2: Jupyter tutorial on mixed formulation for the Poisson problem',['../mofem_school_2023.html#hands_on_2',1,'']]],
+  ['2_3a_20mixed_20formulation_20for_20incompressible_20elasticity_12',['MIX-2: Mixed  formulation for incompressible elasticity',['../incompressible_elasticity.html',1,'']]],
+  ['2_3a_20mixed_20formulation_20for_20thermo_20elasticity_13',['Lecture 2: Mixed Formulation for Thermo-Elasticity',['../mofem_school_2023.html#lecture_2',1,'']]],
+  ['2_3a_20nonlinear_20elastic_14',['VEC-2: Nonlinear elastic',['../tutorial_nonlinear_elastic.html',1,'']]],
+  ['2_3a_20poisson_20s_20equation_20non_20homogeneous_20bc_15',['SCL-2: Poisson&apos;s equation (non-homogeneous BC)',['../basic_tutorials_poisson_nonhomogeneous.html',1,'']]],
+  ['2_3a_20solving_20the_20poisson_20equation_16',['COR-2: Solving the Poisson equation',['../poisson_tut1.html',1,'tutorials']]],
+  ['2_3a_20thermo_20elastic_20example_17',['ADV-2: Thermo-elastic example',['../tutorial_thermo_elastic.html',1,'']]],
+  ['2crack_5fsurfaces_2ejou_18',['2crack_surfaces.jou',['../2crack__surfaces_8jou.html',1,'']]],
+  ['2d_19',['Unsaturated flow 2d',['../runningprograms.html#unsaturated_flow_2d',1,'']]],
+  ['2d_20code_20',['2D Code',['../md_tutorials_2vec-0_2_r_e_a_d_m_e.html#autotoc_md177',1,'']]],
+  ['2d_20femur_20example_21',['Bone adaptation, 2D femur example',['../um_bone_remodelling_readnme.html#autotoc_md213',1,'']]],
+  ['2d_20mesh_20from_20gmsh_22',['MSH-1: Create a 2D mesh from Gmsh',['../basic_tutorials_mesh_generation_2d.html',1,'']]],
+  ['2nd_20order_20geometry_20in_20cubit_20and_20transfer_20it_20to_20mofem_23',['How to make 2nd order geometry in cubit and transfer it to MoFEM?',['../faqs.html#how_to_make_2nd_order_geometry',1,'']]]
+];

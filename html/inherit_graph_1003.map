@@ -1,0 +1,19 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$struct_method_for_force_scaling.html" title="Class used to scale loads, f.e. in arc&#45;length control." alt="" coords="5,227,169,251"/>
+<area shape="rect" id="Node000001" href="$struct_basic_boundary_conditions_interface_1_1_load_scale.html" title=" " alt="" coords="217,5,443,43"/>
+<area shape="poly" id="edge976_Node000000_Node000001" title=" " alt="" coords="97,211,115,175,141,132,175,89,215,53,236,41,238,46,219,57,179,93,146,135,120,178,102,213"/>
+<area shape="rect" id="Node000002" href="$struct_meta_nodal_forces_1_1_dof_force_scale.html" title="Scale force based on some DOF value." alt="" coords="236,67,424,104"/>
+<area shape="poly" id="edge977_Node000000_Node000002" title=" " alt="" coords="106,213,152,162,182,136,216,114,240,102,243,107,218,118,186,140,156,166,109,216"/>
+<area shape="rect" id="Node000003" href="$struct_meta_nodal_forces_1_1_tag_force_scale.html" title="Scale force based on tag value &quot;_LoadFactor_Scale_&quot;." alt="" coords="235,128,425,165"/>
+<area shape="poly" id="edge978_Node000000_Node000003" title=" " alt="" coords="124,217,216,175,251,163,253,168,218,180,126,222"/>
+<area shape="rect" id="Node000004" href="$struct_mortar_contact_problem_1_1_load_scale.html" title=" " alt="" coords="252,189,408,227"/>
+<area shape="poly" id="edge979_Node000000_Node000004" title=" " alt="" coords="184,224,251,215,252,220,185,229"/>
+<area shape="rect" id="Node000005" href="$struct_navier_stokes_element_1_1_load_scale.html" title=" " alt="" coords="255,251,405,288"/>
+<area shape="poly" id="edge980_Node000000_Node000005" title=" " alt="" coords="185,248,255,257,254,263,184,254"/>
+<area shape="rect" id="Node000006" href="$struct_simple_contact_problem_1_1_load_scale.html" title=" " alt="" coords="251,312,409,349"/>
+<area shape="poly" id="edge981_Node000000_Node000006" title=" " alt="" coords="126,256,218,298,253,309,251,314,216,302,124,261"/>
+<area shape="rect" id="Node000007" href="$struct_time_accelerogram.html" title=" " alt="" coords="264,373,396,397"/>
+<area shape="poly" id="edge982_Node000000_Node000007" title=" " alt="" coords="109,261,155,312,185,337,218,359,264,375,262,380,216,364,182,342,151,315,105,265"/>
+<area shape="rect" id="Node000008" href="$struct_time_force_scale.html" title="Force scale operator for reading two columns." alt="" coords="271,421,389,445"/>
+<area shape="poly" id="edge983_Node000000_Node000008" title=" " alt="" coords="103,263,121,297,147,336,179,375,218,407,244,419,271,426,270,431,242,424,216,412,176,379,143,339,116,300,98,266"/>
+</map>

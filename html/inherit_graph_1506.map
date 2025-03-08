@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,33,109,57"/>
+<area shape="rect" id="Node000001" href="$class_clipper_lib_1_1clipper_exception.html" title=" " alt="" coords="157,5,344,29"/>
+<area shape="poly" id="edge1288_Node000000_Node000001" title=" " alt="" coords="124,33,162,27,163,33,125,38"/>
+<area shape="rect" id="Node000002" href="$struct_mo_f_e_m_1_1_exceptions_1_1_mo_f_e_m_exception.html" title="Exception to catch." alt="" coords="176,53,324,91"/>
+<area shape="poly" id="edge1289_Node000000_Node000002" title=" " alt="" coords="125,52,176,59,176,64,124,57"/>
+<area shape="rect" id="Node000003" href="$struct_mo_f_e_m_1_1_exceptions_1_1_mo_f_e_m_exception_repeat.html" title=" " alt="" coords="392,53,561,91"/>
+<area shape="poly" id="edge1290_Node000002_Node000003" title=" " alt="" coords="340,69,391,69,391,75,340,75"/>
+<area shape="rect" id="Node000004" href="$struct_mo_f_e_m_1_1_exceptions_1_1_mo_f_e_m_exception_initial.html" title=" " alt="" coords="609,53,767,91"/>
+<area shape="poly" id="edge1291_Node000003_Node000004" title=" " alt="" coords="577,69,609,69,609,75,577,75"/>
+</map>
