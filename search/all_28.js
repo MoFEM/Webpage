@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['🏗️_20step_2010_3a_20build_20mofem_20core_20library_0',['🏗️ Step 10: Build MoFEM Core Library',['../install_spack.html#autotoc_md67',1,'']]]
+  ['✅_2010_20run_20mofem_20in_20slurm_20job_0',['✅ 10. Run MoFEM in SLURM Job',['../install_spack.html#autotoc_md88',1,'']]],
+  ['✅_20done_1',['✅ done',['../install_spack.html#autotoc_md68',1,'✅ Done!'],['../install_spack.html#autotoc_md77',1,'✅ Done!']]]
 ];

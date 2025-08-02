@@ -128,7 +128,7 @@ $(function() {
   <div class="headertitle"><div class="title">Running problem</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md207"></a> </p><div class="fragment"><div class="line"><span class="keyword">import</span> os</div>
+<div class="textblock"><p><a class="anchor" id="autotoc_md220"></a> </p><div class="fragment"><div class="line"><span class="keyword">import</span> os</div>
 <div class="line">os.system(<span class="stringliteral">&#39;/usr/bin/Xvfb :99 -screen 0 1024x768x24 &amp;&#39;</span>)</div>
 <div class="line">os.environ[<span class="stringliteral">&#39;DISPLAY&#39;</span>] = <span class="stringliteral">&#39;:99&#39;</span></div>
 <div class="line">os.environ[<span class="stringliteral">&#39;PYVISTA_USE_IPYVTK&#39;</span>] = <span class="stringliteral">&#39;true&#39;</span></div>
@@ -156,7 +156,7 @@ $(function() {
 <div class="line">working_dir=um_view_dir + <span class="stringliteral">&#39;/tutorials/vec-1&#39;</span></div>
 <div class="line"> </div>
 <div class="line">plt.rcParams[<span class="stringliteral">&#39;figure.figsize&#39;</span>] = [15, 10]</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md208"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md221"></a>
 Data</h1>
 <ul>
 <li>Young's modulus, <a class="el" href="classE.html">E</a> [$GPa$]</li>
@@ -166,14 +166,14 @@ Data</h1>
 <div class="fragment"><div class="line">YoungModulus=207</div>
 <div class="line">nu=0.3</div>
 <div class="line">rho=7829</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md209"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md222"></a>
 Preparing mesh</h1>
 <p>If you have mesh in native hd5 MOAB format, VTK, Cubit, gMesh, you can use such mesh directly. If you using mesh in MED format used by code-aster, you need to convert mesh into native MOAB hdf5 format.</p>
 <div class="fragment"><div class="line"><span class="comment">#!cd {working_dir} &amp;&amp; {bin_dir}/read_med \</span></div>
 <div class="line"><span class="comment">#-med_file TET-2-0.med \</span></div>
 <div class="line"><span class="comment">#-output_file fork-2-0.h5m; </span></div>
 <div class="line">!ls</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md210"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md223"></a>
 Partition mesh</h1>
 <p>If you would like run analysis on multiple-processors you need to partition mesh. You can do that using mofem tool to do that.</p>
 <div class="fragment"><div class="line"><span class="comment"># Set number of processors</span></div>
@@ -202,7 +202,7 @@ Partition mesh</h1>
 <div class="line">    scalars=<span class="stringliteral">&quot;PARALLEL_PARTITION&quot;</span>, </div>
 <div class="line">    smooth_shading=<span class="keyword">False</span>, </div>
 <div class="line">    cmap=my_cmap)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md211"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md224"></a>
 Calculating eigen values</h1>
 <div class="fragment"><div class="line"><span class="comment"># Approximation order</span></div>
 <div class="line">order=1</div>
@@ -225,7 +225,7 @@ Calculating eigen values</h1>
 <div class="line">-file_name {part_mesh} -eps_monitor -order {order} \</div>
 <div class="line">-eps_pos_gen_non_hermitian -eps_ncv 400 \</div>
 <div class="line">-eps_tol {Tol} -eps_nev {numberOfValuesToCalulate} -log_no_color 2&gt;&amp;1 | tee {log_file}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md212"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md225"></a>
 Post process</h1>
 <div class="fragment"><div class="line"><span class="comment"># Get frequencies </span></div>
 <div class="line">frequency_log=<span class="stringliteral">&#39;frequency_log&#39;</span></div>
@@ -276,7 +276,7 @@ Post process</h1>
 <div class="line"><span class="comment">#     img = mpimg.imread(screeen_shot)</span></div>
 <div class="line"><span class="comment">#     imgplot = plt.imshow(img)</span></div>
 <div class="line"><span class="comment">#     plt.show()</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md213"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md226"></a>
 Note</h1>
 <p><a class="el" href="structExample.html" title="[Example]">Example</a> mesh and data were taken form <a href="https://cofea.readthedocs.io/en/latest/benchmarks/000-tuning-fork/index.html">CoFEA</a> </p>
 </div></div><!-- contents -->

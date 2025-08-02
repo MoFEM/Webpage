@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['🧩_20step_206_3a_20add_20custom_20mofem_20package_20repository_0',['🧩 Step 6: Add Custom MoFEM Package Repository',['../install_spack.html#autotoc_md63',1,'']]]
+  ['🔧_205_20configure_20spack_20with_20external_20packages_0',['🔧 5. Configure Spack with External Packages',['../install_spack.html#autotoc_md83',1,'']]],
+  ['🔧_20step_205_3a_20configure_20spack_1',['🔧 Step 5: Configure Spack',['../install_spack.html#autotoc_md62',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📁_20step_202_3a_20set_20up_20directories_0',['📁 Step 2: Set Up Directories',['../install_spack.html#autotoc_md59',1,'']]]
+  ['🌱_207_20create_20and_20configure_20spack_20environment_0',['🌱 7. Create and Configure Spack Environment',['../install_spack.html#autotoc_md85',1,'']]]
 ];

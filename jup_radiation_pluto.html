@@ -132,18 +132,18 @@ $(function() {
   <div class="headertitle"><div class="title">SCL-8: Radiation boundary conditions</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md160"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md173"></a>
 Introduction</h1>
 <p>In this example, we focus on modelling the <em>partial differential equation</em> with a <em>nonlinear boundary conditions</em>. We choose the problem of thermal equilibrium of the Pluto planet.The planet model is oversimplified. However, it serves the purpose; this example shows how to linearize partial differential equations and apply the Newton method. <br  />
 </p>
 <p><img src="https://www.nasa.gov/wp-content/uploads/2023/03/crop_p_color2_enhanced_release_small.png" alt="" class="inline"/></p>
 <p><em>Source</em> <a href="https://www.nasa.gov">https://www.nasa.gov</a></p>
 <p><a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> is generic code, and other processes (chemical reactions, radioactive decay, etc.) can be included, to fit better reality. For example, an interesting modelling avenue would be to apply multi-scale analysis, with separate scales for space and time for processes on the surface and subsurface, or model extension to model transport phenomena with reaction-diffusion equation, or near surface convection diffusion problem.</p>
-<h1><a class="anchor" id="autotoc_md161"></a>
+<h1><a class="anchor" id="autotoc_md174"></a>
 Part I</h1>
-<h2><a class="anchor" id="autotoc_md162"></a>
+<h2><a class="anchor" id="autotoc_md175"></a>
 Energy balance</h2>
-<h3><a class="anchor" id="autotoc_md163"></a>
+<h3><a class="anchor" id="autotoc_md176"></a>
 Conservation law</h3>
 <p>The universal law of nature, that energy has to be conserved, that with the help of <a href="https://en.wikipedia.org/wiki/Divergence_theorem">divergence theorem</a> and <a href="https://en.wikipedia.org/wiki/Principle_of_locality">principle of locality</a>, can be expressed for every point of the body as follows, <br  />
 </p>
@@ -161,7 +161,7 @@ Conservation law</h3>
 \]
 </p>
 <p> where \(\nabla \cdot\) is divergence symbol. Note that we later solve problem in cylindrical coordinate system, were equation expressed \((\ref{eq:conservation1})\) is not valid for such system, however absolute notation \((\ref{eq:conservation2})\) holds.</p>
-<h3><a class="anchor" id="autotoc_md164"></a>
+<h3><a class="anchor" id="autotoc_md177"></a>
 Thermal conduction</h3>
 <p>The conection between energy flux and temerature gradient is given by [Fourier's law](<a href="https://en.wikipedia.org/wiki/Thermal_conduction#Fourier's_law">https://en.wikipedia.org/wiki/Thermal_conduction#Fourier's_law</a>),  </p><p class="formulaDsp">
 \[
@@ -185,7 +185,7 @@ q_i(\mathbf{x}) = - k(\mathbf{x}) \frac{\partial T(\mathbf{x})}{\partial x_i}
 \end{equation}
 \]
 </p>
-<h2><a class="anchor" id="autotoc_md165"></a>
+<h2><a class="anchor" id="autotoc_md178"></a>
 Exchange of energy with the external world</h2>
 <p>Pluto exchange energy and mass with the universe through the surface, for simplicity, we restrict ourself to two cases, i.e. sun irradiance, planet and outer space radiation. Total power of energy exchange through the surface is given by  </p><p class="formulaDsp">
 \[
@@ -200,7 +200,7 @@ P = \int_\Gamma dP = \int_\Gamma dP^S + dP^r \quad [W]
 <li>\(dP^S\) is power surface infinitesimal element irradiation received from the sun,</li>
 <li>\(dP^r\) is power surface infinitesimal element radiation/</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md166"></a>
+<h3><a class="anchor" id="autotoc_md179"></a>
 Pluto’s insolation</h3>
 <p>Following <a href="https://doi.org/10.1016/j.icarus.2014.12.028">Pluto's insolation history</a> we assume that energy flux from sin is  </p><p class="formulaDsp">
 \[
@@ -225,7 +225,7 @@ I = -0.23 - 0.3 \sin{(\theta)}
 \]
 </p>
 <p> where \(\theta\) is altitude of point \(\mathbf{x}\) on Pluto surface, see <a href="https://en.wikipedia.org/wiki/Horizontal_coordinate_system">Horizontal_coordinate_system</a>.</p>
-<h3><a class="anchor" id="autotoc_md167"></a>
+<h3><a class="anchor" id="autotoc_md180"></a>
 Body and space radiation</h3>
 <p>We will assume that surface of Pluto radiates energy in the space; it also receives energy from space, which has some relict temperature. We assume that outer space temperature is 3K degrees, following Wikipedia (<a href="https://en.wikipedia.org/wiki/Outer_space">https://en.wikipedia.org/wiki/Outer_space</a>). Balance of energy received by radiation be quantified by <a href="https://en.wikipedia.org/wiki/Planck%27s_law">Plank's law</a> integrated by all possible wave frequencies, see <a href="https://en.wikipedia.org/wiki/Thermal_radiation">https://en.wikipedia.org/wiki/Thermal_radiation</a>. Finally, you can express our ideas into the equation  </p><p class="formulaDsp">
 \[
@@ -245,7 +245,7 @@ dP^r(\mathbf{x}) = \epsilon \sigma (T^4(\mathbf{x})-T_S^4) dA \quad [W]
 <li>\(\mathbf{x}\) is position.</li>
 </ul>
 <p>For simplicity, we will set \(\epsilon=1\), assuming that radiation if for the black body. That might be true for outer space radiation but is not true for Pluto surface. However, it could be good enough approximation, considering that it is very cold on this planet, and the surface is rough, porous with the potentially large intrinsic surface area.</p>
-<h2><a class="anchor" id="autotoc_md168"></a>
+<h2><a class="anchor" id="autotoc_md181"></a>
 Equations in strong form</h2>
 <p>Putting all equations together, we get boundary value problem in the indicess for Cartesian coordinate system  </p><p class="formulaDsp">
 \[
@@ -275,9 +275,9 @@ q_i dA_i = dP^S + dP^r \quad\forall \mathbf{} \in \Gamma
 \]
 </p>
 <p> This is a nonlinear partial differential equation since radiation is a nonlinear function of unknown distribution of temperature. You can notice as well that time does not explicitly is involved in the equations. This is a consequence of the assumptions above. We are looking at long periods, like time over several Plutos years (Pluto orbit has ~248 years), where average values are our initial interest.</p>
-<h1><a class="anchor" id="autotoc_md170"></a>
+<h1><a class="anchor" id="autotoc_md183"></a>
 Part II</h1>
-<h2><a class="anchor" id="autotoc_md171"></a>
+<h2><a class="anchor" id="autotoc_md184"></a>
 Equations in weak form</h2>
 <p>Working with partial differential equations (PDEs) is hard for a computer. Computers are excellent with adding, subtracting and multiplying, but not with solving abstract PDEs. Over many years, many mathematical methods has bee invented which can transform PDEs into the algebraic equations, and then series of linear equations, which can be solved efficiently by computer.</p>
 <p>One of the methods which change PDEs into the algebraic equation is the <a href="https://en.wikipedia.org/wiki/Galerkin_method">Galerkin method</a>. If the Galerkin method is used to divide the computational domain and the construction of the piecewise polynomial base, it leads to the Finite Element Method (FEM). Here we skip those details related to FEM and focus on the formulation of the problem in a weak sense and the required linearisation.</p>
@@ -337,7 +337,7 @@ dA
 <p>Note, that piecewise polynomial enables us to approximate functions which have gradients jumps. Such functions have no integrable second derivatives, i.e. are not smooth enough. Moreover, piecewise polynomial is much easier to construct and implement efficiently, in particular in two or three dimensions.</p>
 <p>Suppose the solution to the problem is a function of temperature, which is <a href="https://en.wikipedia.org/wiki/Analytic_function">analytical</a>. Then a solution of strong form equation and weak form equation is the same in the sense of some appropriate norm.</p>
 <p>However weak form solution is more general and is applicable for problems where temperature distribution is non-analytical. For example, if we like to model Pluto that it has several internal layers, rock core, and outer core layers. Then weak form equation would give correct since at boundary between layers we could observe jumps of the temperature gradient, which can not be represented by an analytical function. From the other hand solution of strong form, equations will demand to divide domains into parts for each layer, and supplement equations by joining each part, enforcing continuity of displacement, and fluxes. Note that in the model showed above layers are not modelled, and the whole planet is modelled as a homogenous rock.</p>
-<h2><a class="anchor" id="autotoc_md172"></a>
+<h2><a class="anchor" id="autotoc_md185"></a>
 Linearisation</h2>
 <p>You can notice that equation \((\ref{eq:weak5})\) is nonlinear, residual \(r(T(\mathbf{x}))\), which non-linear function of temperature, i.e. you can find terms like \(T^4\) in the equation. Thus we have to linearise \(r(T(\mathbf{x}))\), with the help comes <a href="https://en.wikipedia.org/wiki/Taylor_series">Taylor series</a> expansion, which will lead to Newton method.</p>
 <p>We express distribution of temperature as previous value at Newton iteration \(T_k(\mathbf{x})\) and temperature correction \(\delta T_{k+1}(\mathbf{x})\), such that current temperature is  </p><p class="formulaDsp">
@@ -388,7 +388,7 @@ dA
 \end{equation}
 \]
 </p>
- <h2><a class="anchor" id="autotoc_md173"></a>
+ <h2><a class="anchor" id="autotoc_md186"></a>
 Approximation</h2>
 <p>Next step of the procedure of changing nonlinear PDE into a series of linear equations, which computer can solve. First, for some class of problems, the unknown function of temperature in the body can be expressed by sum of some simpler functions as follows  </p><p class="formulaDsp">
 \[
@@ -463,9 +463,9 @@ dA
 </p>
 <p> which we can solve for \(\delta\overline{T}_{k+1}\). Note that \(\mathbf{k}_k^h\) and \(\mathbf{r}^h_k\) for step \(k\), and calculated value of unknown vector \(\delta\overline{T}_{k+1}\) is for step \(k+1\). Equation ( \(\ref{eq:approx4}\)) is series of linear equation, which can solved efficiently. <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md174"></a>
+<h1><a class="anchor" id="autotoc_md187"></a>
 Part III</h1>
-<h2><a class="anchor" id="autotoc_md175"></a>
+<h2><a class="anchor" id="autotoc_md188"></a>
 Algorithm for the Newton method</h2>
 <p>Now we will make loops for the Newton method and time stepping. First, we will start with an internal loop of Newton method:</p>
 <div class="fragment"><div class="line"><span class="comment"># max_it - maximal number of iterations</span></div>
@@ -536,7 +536,7 @@ Algorithm for the Newton method</h2>
 </div><!-- fragment --><p>This is how Newton method looks; it is evaluating residual \(\mathbf{r}\), matrix \(\mathbf{k}\), at every iteration. Next, solve a linear system of equations, and finally, check if residual is small. To check convergence, criteria to stop Newton iterations are set. One criterion checking absolute residual, other relative residual. In some other cases, criterion on the norm of \(dT\) increment can be set, or change of system energy. The matrix \(\mathbf{k}\) is often called the tangent stiffness matrix (that term comes from structural analysis).</p>
 <p>Here we have a relatively simple function. In general, the key difficulty for more complex problems is to calculate correctly tangent matrix \(\mathbf{k}\). That is essential to achieve a quadratic rate of convergence. The Newton method iterations are costly for big problems, and "quadratic" order of convergence allows to obtain solution fast. <br  />
 </p>
-<h2><a class="anchor" id="autotoc_md176"></a>
+<h2><a class="anchor" id="autotoc_md189"></a>
 Substepping</h2>
 <p>Newton method is conditionally stable; it converges if the initial guess is close enough to the solution. The initial solution has to be in so-called "convergence ball" if it is outside of it, Newton methods diverge, i.e. not yield a meaning solution. In that case, substepping can help. Another technique improving convergence is a line-searcher method, which is used in Pluto example. However, we will skip the description of line-searcher for another occasion.</p>
 <p>If Pluto is not subjected to sun irradiation, then it is easy to guess the solution, since it is in thermal equilibrium with outer space. In that case, the temperature is uniform over the whole planet and is equal to ambient temperature. We can exploit that, by slowly increasing flux from Sun irradiation until we reach desired real value. <br  />
