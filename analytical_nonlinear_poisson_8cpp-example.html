@@ -188,36 +188,36 @@ $(function() {
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"><span class="keyword">struct </span><a id="_a6" name="_a6"></a><a class="code hl_struct" href="structExactLaplacianFunction.html">ExactLaplacianFunction</a> {</div>
 <div class="line">  <span class="keywordtype">double</span> <a id="a7" name="a7"></a><a class="code hl_function" href="structExactLaplacianFunction.html#a6b9269124ee9aebddf08ea9249a4b949">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z)<span class="keyword"> const </span>{</div>
-<div class="line">    <span class="keywordflow">return</span> 0.4e1 + (double)(4 * x) + (double)(4 * y) + 0.4e1 * pow(z, 0.3e1) +</div>
+<div class="line">    <span class="keywordflow">return</span> 0.4e1 + (<a id="_a8" name="_a8"></a><a class="code hl_class" href="classdouble.html">double</a>)(4 * x) + (<a class="code hl_class" href="classdouble.html">double</a>)(4 * y) + 0.4e1 * pow(z, 0.3e1) +</div>
 <div class="line">           0.3e1 *</div>
-<div class="line">               (0.6e1 * z * z + 0.6e1 * (double)x * z * z +</div>
+<div class="line">               (0.6e1 * z * z + 0.6e1 * (<a class="code hl_class" href="classdouble.html">double</a>)x * z * z +</div>
 <div class="line">                0.6e1 * (<span class="keywordtype">double</span>)y * z * z + 0.6e1 * pow(z, 0.5e1)) *</div>
 <div class="line">               z * z +</div>
 <div class="line">           0.6e1 *</div>
 <div class="line">               (0.2e1 + (<span class="keywordtype">double</span>)(2 * x) + (<span class="keywordtype">double</span>)(2 * y) +</div>
-<div class="line">                0.2e1 * pow(z, 0.3e1) + (double)(x * x) + (double)(2 * x * y) +</div>
-<div class="line">                0.2e1 * (double)x * pow(z, 0.3e1) + (double)(y * y) +</div>
-<div class="line">                0.2e1 * (double)y * pow(z, 0.3e1) + pow(z, 0.6e1)) *</div>
+<div class="line">                0.2e1 * pow(z, 0.3e1) + (<a class="code hl_class" href="classdouble.html">double</a>)(x * x) + (<a class="code hl_class" href="classdouble.html">double</a>)(2 * x * y) +</div>
+<div class="line">                0.2e1 * (<a class="code hl_class" href="classdouble.html">double</a>)x * pow(z, 0.3e1) + (<a class="code hl_class" href="classdouble.html">double</a>)(y * y) +</div>
+<div class="line">                0.2e1 * (<a class="code hl_class" href="classdouble.html">double</a>)y * pow(z, 0.3e1) + pow(z, 0.6e1)) *</div>
 <div class="line">               z;</div>
 <div class="line">  }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">struct </span><a id="_a8" name="_a8"></a><a class="code hl_struct" href="structFunA.html">FunA</a> {</div>
-<div class="line">  <span class="keywordtype">double</span> <a id="a9" name="a9"></a><a class="code hl_function" href="structFunA.html#a52e25561e6b47d84fae58aa2b6fdac2d">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> u) { <span class="keywordflow">return</span> 1 + u * u; }</div>
+<div class="line"><span class="keyword">struct </span><a id="_a9" name="_a9"></a><a class="code hl_struct" href="structFunA.html">FunA</a> {</div>
+<div class="line">  <span class="keywordtype">double</span> <a id="a10" name="a10"></a><a class="code hl_function" href="structFunA.html#a52e25561e6b47d84fae58aa2b6fdac2d">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> u) { <span class="keywordflow">return</span> 1 + u * u; }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">struct </span><a id="_a10" name="_a10"></a><a class="code hl_struct" href="structDiffFunA.html">DiffFunA</a> {</div>
-<div class="line">  <span class="keywordtype">double</span> <a id="a11" name="a11"></a><a class="code hl_function" href="structDiffFunA.html#a04b126a7710aec552491017fc0da320a">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> u) { <span class="keywordflow">return</span> 2 * u; }</div>
+<div class="line"><span class="keyword">struct </span><a id="_a11" name="_a11"></a><a class="code hl_struct" href="structDiffFunA.html">DiffFunA</a> {</div>
+<div class="line">  <span class="keywordtype">double</span> <a id="a12" name="a12"></a><a class="code hl_function" href="structDiffFunA.html#a04b126a7710aec552491017fc0da320a">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> u) { <span class="keywordflow">return</span> 2 * u; }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">struct </span><a id="_a12" name="_a12"></a><a class="code hl_struct" href="structVolRuleNonlinear.html">VolRuleNonlinear</a> {</div>
-<div class="line">  <span class="keywordtype">int</span> <a id="a13" name="a13"></a><a class="code hl_function" href="structVolRuleNonlinear.html#ad783d1ad977814c6254f1e2e95a637fd">operator()</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span> p)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 2 * (p + 1); }</div>
+<div class="line"><span class="keyword">struct </span><a id="_a13" name="_a13"></a><a class="code hl_struct" href="structVolRuleNonlinear.html">VolRuleNonlinear</a> {</div>
+<div class="line">  <span class="keywordtype">int</span> <a id="a14" name="a14"></a><a class="code hl_function" href="structVolRuleNonlinear.html#ad783d1ad977814c6254f1e2e95a637fd">operator()</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span> p)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 2 * (p + 1); }</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a id="a14" name="a14"></a><a class="code hl_function" href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a id="a15" name="a15"></a><a class="code hl_function" href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Initialize PETSc</span></div>
-<div class="line">  <a id="a15" name="a15"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, (<span class="keywordtype">char</span> *)0, <a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line">  <a id="a16" name="a16"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, (<span class="keywordtype">char</span> *)0, <a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
 <div class="line">  <span class="comment">// Create MoAB database</span></div>
 <div class="line">  moab::Core moab_core;              <span class="comment">// create database</span></div>
 <div class="line">  moab::Interface &amp;moab = moab_core; <span class="comment">// create interface to database</span></div>
@@ -225,12 +225,12 @@ $(function() {
 <div class="line">  <span class="keywordflow">try</span> {</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Get command line options</span></div>
-<div class="line">    <span class="keywordtype">int</span> <a id="a16" name="a16"></a><a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a> = 3;                    <span class="comment">// default approximation order</span></div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a17" name="a17"></a><a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a> = 3;                    <span class="comment">// default approximation order</span></div>
 <div class="line">    PetscBool flg_test = PETSC_FALSE; <span class="comment">// true check if error is numerical error</span></div>
 <div class="line">    PetscOptionsBegin(PETSC_COMM_WORLD, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;Poisson&#39;s problem options&quot;</span>,</div>
 <div class="line">                             <span class="stringliteral">&quot;none&quot;</span>);</div>
 <div class="line">    <span class="comment">// Set approximation order</span></div>
-<div class="line">    <a id="a17" name="a17"></a><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsInt(<span class="stringliteral">&quot;-order&quot;</span>, <span class="stringliteral">&quot;approximation order&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, &amp;<a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>,</div>
+<div class="line">    <a id="a18" name="a18"></a><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsInt(<span class="stringliteral">&quot;-order&quot;</span>, <span class="stringliteral">&quot;approximation order&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, &amp;<a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>,</div>
 <div class="line">                           PETSC_NULLPTR);</div>
 <div class="line">    <span class="comment">// Set testing (used by CTest)</span></div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscOptionsBool(<span class="stringliteral">&quot;-test&quot;</span>, <span class="stringliteral">&quot;if true is ctest&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, flg_test,</div>
@@ -238,14 +238,14 @@ $(function() {
 <div class="line">    PetscOptionsEnd();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create MoFEM database and link it to MoAB</span></div>
-<div class="line">    <a id="_a18" name="_a18"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> mofem_core(moab);           <span class="comment">// create database</span></div>
-<div class="line">    <a id="_a19" name="_a19"></a><a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = mofem_core; <span class="comment">// create interface to database</span></div>
+<div class="line">    <a id="_a19" name="_a19"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> mofem_core(moab);           <span class="comment">// create database</span></div>
+<div class="line">    <a id="_a20" name="_a20"></a><a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = mofem_core; <span class="comment">// create interface to database</span></div>
 <div class="line">    <span class="comment">// Register DM Manager</span></div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga899ec9d1ad35488bbe4273731f6d5c90">DMRegister_MoFEM</a>(<span class="stringliteral">&quot;DMMOFEM&quot;</span>); <span class="comment">// register MoFEM DM in PETSc</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create vector to store approximation global error</span></div>
 <div class="line">    <a class="code hl_typedef" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> global_error;</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a20" name="_a20"></a><a class="code hl_struct" href="structPoissonExample_1_1AuxFunctions.html">PoissonExample::AuxFunctions</a>(m_field).<a id="a21" name="a21"></a><a class="code hl_function" href="structPoissonExample_1_1AuxFunctions.html#a0a81d42260b35b3eaff0836f78c911a9">createGhostVec</a>(&amp;global_error);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a21" name="_a21"></a><a class="code hl_struct" href="structPoissonExample_1_1AuxFunctions.html">PoissonExample::AuxFunctions</a>(m_field).<a id="a22" name="a22"></a><a class="code hl_function" href="structPoissonExample_1_1AuxFunctions.html#a0a81d42260b35b3eaff0836f78c911a9">createGhostVec</a>(&amp;global_error);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// First we crate elements, implementation of elements is problem</span></div>
 <div class="line">    <span class="comment">// independent, we do not know yet what fields are present in the problem,</span></div>
@@ -270,26 +270,26 @@ $(function() {
 <div class="line">    {</div>
 <div class="line">      <span class="comment">// Add problem specific operators the generic finite elements to calculate</span></div>
 <div class="line">      <span class="comment">// matrices and vectors.</span></div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a22" name="_a22"></a><a class="code hl_struct" href="structPoissonExample_1_1CreateFiniteElements.html">PoissonExample::CreateFiniteElements</a>(m_field)</div>
-<div class="line">          .<a id="a23" name="a23"></a><a class="code hl_function" href="structPoissonExample_1_1CreateFiniteElements.html#a95db94d847c891a14857e1dc8c2cbe80">createFEToAssembleMatrixAndVectorForNonlinearProblem</a>(</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a23" name="_a23"></a><a class="code hl_struct" href="structPoissonExample_1_1CreateFiniteElements.html">PoissonExample::CreateFiniteElements</a>(m_field)</div>
+<div class="line">          .<a id="a24" name="a24"></a><a class="code hl_function" href="structPoissonExample_1_1CreateFiniteElements.html#a95db94d847c891a14857e1dc8c2cbe80">createFEToAssembleMatrixAndVectorForNonlinearProblem</a>(</div>
 <div class="line">              <a class="code hl_struct" href="structExactFunction.html">ExactFunction</a>(), <a class="code hl_struct" href="structExactLaplacianFunction.html">ExactLaplacianFunction</a>(), <a class="code hl_struct" href="structFunA.html">FunA</a>(), <a class="code hl_struct" href="structDiffFunA.html">DiffFunA</a>(),</div>
 <div class="line">              domain_lhs_fe, boundary_lhs_fe, domain_rhs_fe, boundary_rhs_fe,</div>
 <div class="line">              <a class="code hl_struct" href="structVolRuleNonlinear.html">VolRuleNonlinear</a>());</div>
 <div class="line">      <span class="comment">// Add problem specific operators the generic finite elements to calculate</span></div>
 <div class="line">      <span class="comment">// error on elements and global error in H1 norm</span></div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structPoissonExample_1_1CreateFiniteElements.html">PoissonExample::CreateFiniteElements</a>(m_field)</div>
-<div class="line">          .<a id="a24" name="a24"></a><a class="code hl_function" href="structPoissonExample_1_1CreateFiniteElements.html#ae250a14f45127e19c97e17df96252329">createFEToEvaluateError</a>(<a class="code hl_struct" href="structExactFunction.html">ExactFunction</a>(), <a class="code hl_struct" href="structExactFunctionGrad.html">ExactFunctionGrad</a>(),</div>
+<div class="line">          .<a id="a25" name="a25"></a><a class="code hl_function" href="structPoissonExample_1_1CreateFiniteElements.html#ae250a14f45127e19c97e17df96252329">createFEToEvaluateError</a>(<a class="code hl_struct" href="structExactFunction.html">ExactFunction</a>(), <a class="code hl_struct" href="structExactFunctionGrad.html">ExactFunctionGrad</a>(),</div>
 <div class="line">                                   global_error, domain_error);</div>
 <div class="line">      <span class="comment">// Post-process results</span></div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structPoissonExample_1_1CreateFiniteElements.html">PoissonExample::CreateFiniteElements</a>(m_field)</div>
-<div class="line">          .<a id="a25" name="a25"></a><a class="code hl_function" href="structPoissonExample_1_1CreateFiniteElements.html#a63d3da59aa561779e9e56bf4284ceeea">creatFEToPostProcessResults</a>(post_proc_volume);</div>
+<div class="line">          .<a id="a26" name="a26"></a><a class="code hl_function" href="structPoissonExample_1_1CreateFiniteElements.html#a63d3da59aa561779e9e56bf4284ceeea">creatFEToPostProcessResults</a>(post_proc_volume);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Get simple interface is simplified version enabling quick and</span></div>
 <div class="line">    <span class="comment">// easy construction of problem.</span></div>
 <div class="line">    Simple *simple_interface;</div>
 <div class="line">    <span class="comment">// Query interface and get pointer to Simple interface</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a26" name="a26"></a><a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>(simple_interface);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a27" name="a27"></a><a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>(simple_interface);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Build problem with simple interface</span></div>
 <div class="line">    {</div>
@@ -313,7 +313,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Add domain field &quot;U&quot; in space H1 and Legendre base, Ainsworth recipe is</span></div>
 <div class="line">      <span class="comment">// used to construct base functions.</span></div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;addDomainField(<span class="stringliteral">&quot;U&quot;</span>, <a id="a27" name="a27"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a id="a28" name="a28"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>,</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;addDomainField(<span class="stringliteral">&quot;U&quot;</span>, <a id="a28" name="a28"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a id="a29" name="a29"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>,</div>
 <div class="line">                                              1);</div>
 <div class="line">      <span class="comment">// Add Lagrange multiplier field on body boundary</span></div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;addBoundaryField(<span class="stringliteral">&quot;L&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>,</div>
@@ -322,7 +322,7 @@ $(function() {
 <div class="line">      <span class="comment">// so this is piecewise discontinuous constant approx., i.e. 1 DOF for</span></div>
 <div class="line">      <span class="comment">// element. You can use more DOFs and collate moments of error to drive</span></div>
 <div class="line">      <span class="comment">// anisotropic h/p-adaptivity, however this is beyond this example.</span></div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;addDataField(<span class="stringliteral">&quot;ERROR&quot;</span>, <a id="a29" name="a29"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>,</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;addDataField(<span class="stringliteral">&quot;ERROR&quot;</span>, <a id="a30" name="a30"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>,</div>
 <div class="line">                                            <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Set fields order domain and boundary fields.</span></div>
@@ -374,7 +374,7 @@ $(function() {
 <div class="line">    {</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Create the right hand side vector and vector of unknowns</span></div>
-<div class="line">      <a class="code hl_typedef" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> <a id="a30" name="a30"></a><a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a id="a31" name="a31"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>;</div>
+<div class="line">      <a class="code hl_typedef" href="namespaceEigenMatrix.html#a34cd82caee17a35f38d6df0cf87ee75b">Vec</a> <a id="a31" name="a31"></a><a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a id="a32" name="a32"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateGlobalVector(dm, &amp;<a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line">      <span class="comment">// Create unknown vector by creating duplicate copy of F vector. only</span></div>
 <div class="line">      <span class="comment">// structure is duplicated no values.</span></div>
@@ -408,11 +408,11 @@ $(function() {
 <div class="line">      <span class="comment">// element.</span></div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">DMoFEMLoopFiniteElements</a>(dm, simple_interface-&gt;getDomainFEName(),</div>
 <div class="line">                                      domain_error);</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structPoissonExample_1_1AuxFunctions.html">PoissonExample::AuxFunctions</a>(m_field).<a id="a32" name="a32"></a><a class="code hl_function" href="structPoissonExample_1_1AuxFunctions.html#aa46eb103d077a4900ab68dec1c553ce0">assembleGhostVector</a>(</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structPoissonExample_1_1AuxFunctions.html">PoissonExample::AuxFunctions</a>(m_field).<a id="a33" name="a33"></a><a class="code hl_function" href="structPoissonExample_1_1AuxFunctions.html#aa46eb103d077a4900ab68dec1c553ce0">assembleGhostVector</a>(</div>
 <div class="line">          global_error);</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structPoissonExample_1_1AuxFunctions.html">PoissonExample::AuxFunctions</a>(m_field).<a id="a33" name="a33"></a><a class="code hl_function" href="structPoissonExample_1_1AuxFunctions.html#ac14c3f26684ae673c003e7f990186073">printError</a>(global_error);</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structPoissonExample_1_1AuxFunctions.html">PoissonExample::AuxFunctions</a>(m_field).<a id="a34" name="a34"></a><a class="code hl_function" href="structPoissonExample_1_1AuxFunctions.html#ac14c3f26684ae673c003e7f990186073">printError</a>(global_error);</div>
 <div class="line">      <span class="keywordflow">if</span> (flg_test == PETSC_TRUE) {</div>
-<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structPoissonExample_1_1AuxFunctions.html">PoissonExample::AuxFunctions</a>(m_field).<a id="a34" name="a34"></a><a class="code hl_function" href="structPoissonExample_1_1AuxFunctions.html#a6bc4cd5c9f9ee29f123a6f67fadf35f5">testError</a>(global_error);</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structPoissonExample_1_1AuxFunctions.html">PoissonExample::AuxFunctions</a>(m_field).<a id="a35" name="a35"></a><a class="code hl_function" href="structPoissonExample_1_1AuxFunctions.html#a6bc4cd5c9f9ee29f123a6f67fadf35f5">testError</a>(global_error);</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -431,10 +431,10 @@ $(function() {
 <div class="line">    <span class="comment">// Destroy ghost vector</span></div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDestroy(&amp;global_error);</div>
 <div class="line">  }</div>
-<div class="line">  <a id="a35" name="a35"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a id="a36" name="a36"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// finish work cleaning memory, getting statistics, etc.</span></div>
-<div class="line">  <a id="a36" name="a36"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a id="a37" name="a37"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
@@ -443,6 +443,7 @@ $(function() {
 <div class="ttc" id="aactivate__deactivate__dofs_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="activate__deactivate__dofs_8cpp_source.html#l00013">activate_deactivate_dofs.cpp:13</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor1__value_8hpp_source.html#l00008">Tensor1_value.hpp:9</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a></div><div class="ttdeci">@ L2</div><div class="ttdoc">field with C-1 continuity</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00088">definitions.h:88</a></div></div>

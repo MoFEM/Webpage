@@ -254,17 +254,17 @@ $(function() {
 <div class="line"><span class="comment">   * @param  block_id reference to returned block id</span></div>
 <div class="line"><span class="comment">   * @return          error code</span></div>
 <div class="line"><span class="comment">   */</span></div>
-<div class="line">  <span class="keyword">virtual</span> MoFEMErrorCode <a id="a41" name="a41"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ae97a123bec06261705b8631383b24419">getMaterial</a>(<span class="keyword">const</span> EntityHandle ent,</div>
+<div class="line">  <span class="keyword">virtual</span> MoFEMErrorCode <a id="a41" name="a41"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ae97a123bec06261705b8631383b24419">getMaterial</a>(<span class="keyword">const</span> <a id="_a42" name="_a42"></a><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent,</div>
 <div class="line">                                     <span class="keywordtype">int</span> &amp;block_id)<span class="keyword"> const </span>{</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">    <span class="keywordflow">for</span> (MaterialsDoubleMap::const_iterator mit = <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a503585c5f98812c99a44005153f5b276">dMatMap</a>.begin();</div>
 <div class="line">         mit != <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a503585c5f98812c99a44005153f5b276">dMatMap</a>.end(); mit++) {</div>
 <div class="line">      <span class="keywordflow">if</span> (mit-&gt;second-&gt;tEts.find(ent) != mit-&gt;second-&gt;tEts.end()) {</div>
 <div class="line">        block_id = mit-&gt;first;</div>
-<div class="line">        <a id="a42" name="a42"></a><a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
+<div class="line">        <a id="a43" name="a43"></a><a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
-<div class="line">    SETERRQ(<a id="a43" name="a43"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a44" name="a44"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), <a id="a45" name="a45"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a>,</div>
+<div class="line">    SETERRQ(<a id="a44" name="a44"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a45" name="a45"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>(), <a id="a46" name="a46"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a>,</div>
 <div class="line">            <span class="stringliteral">&quot;Element not found, no material data&quot;</span>);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">  }</div>
@@ -273,16 +273,16 @@ $(function() {
 <div class="line"><span class="comment">   * \brief Class storing information about boundary condition</span></div>
 <div class="line"><span class="comment">   */</span></div>
 <div class="line">  <span class="keyword">struct </span>BcData {</div>
-<div class="line">    <a class="code hl_class" href="classRange.html">Range</a> <a id="a46" name="a46"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a4c894b0a710ba8f9055977dcb89cecc6">eNts</a>;</div>
-<div class="line">    <span class="keywordtype">double</span> <a id="a47" name="a47"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a57a8e09e59cc3d3b4bca110bbfd23f6a">fixValue</a>;</div>
-<div class="line">    boost::function&lt;double(<span class="keyword">const</span> <span class="keywordtype">double</span> x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z)&gt;</div>
-<div class="line">        <a id="a48" name="a48"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a379f9634a75209bb42022f8a26067e76">hookFun</a>;</div>
-<div class="line">    <a id="a49" name="a49"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a5668e681a166d542de9ada9286c8b17e">BcData</a>() : <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a379f9634a75209bb42022f8a26067e76">hookFun</a>(NULL) {}</div>
+<div class="line">    <a class="code hl_class" href="classRange.html">Range</a> <a id="a47" name="a47"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a4c894b0a710ba8f9055977dcb89cecc6">eNts</a>;</div>
+<div class="line">    <span class="keywordtype">double</span> <a id="a48" name="a48"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a57a8e09e59cc3d3b4bca110bbfd23f6a">fixValue</a>;</div>
+<div class="line">    boost::function&lt;<a id="_a49" name="_a49"></a><a class="code hl_class" href="classdouble.html">double</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z)&gt;</div>
+<div class="line">        <a id="a50" name="a50"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a379f9634a75209bb42022f8a26067e76">hookFun</a>;</div>
+<div class="line">    <a id="a51" name="a51"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a5668e681a166d542de9ada9286c8b17e">BcData</a>() : <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1BcData.html#a379f9634a75209bb42022f8a26067e76">hookFun</a>(NULL) {}</div>
 <div class="line">  };</div>
-<div class="line">  <span class="keyword">typedef</span> map&lt;int, boost::shared_ptr&lt;BcData&gt;&gt; <a id="a50" name="a50"></a><a class="code hl_typedef" href="structMixTransport_1_1UnsaturatedFlowElement.html#a424befcecd696d4754ef80fe459751e3">BcMap</a>;</div>
-<div class="line">  <a class="code hl_typedef" href="structMixTransport_1_1UnsaturatedFlowElement.html#a424befcecd696d4754ef80fe459751e3">BcMap</a> <a id="a51" name="a51"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a795b2d3a82f80360df3be9a601eaf859">bcValueMap</a>; <span class="comment">///&lt; Store boundary condition for head capillary pressure</span></div>
+<div class="line">  <span class="keyword">typedef</span> map&lt;int, boost::shared_ptr&lt;BcData&gt;&gt; <a id="a52" name="a52"></a><a class="code hl_typedef" href="structMixTransport_1_1UnsaturatedFlowElement.html#a424befcecd696d4754ef80fe459751e3">BcMap</a>;</div>
+<div class="line">  <a class="code hl_typedef" href="structMixTransport_1_1UnsaturatedFlowElement.html#a424befcecd696d4754ef80fe459751e3">BcMap</a> <a id="a53" name="a53"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a795b2d3a82f80360df3be9a601eaf859">bcValueMap</a>; <span class="comment">///&lt; Store boundary condition for head capillary pressure</span></div>
 <div class="line"> </div>
-<div class="line">  EntityHandle <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a68d3a05ae52b9ea49900e0303dd17f3d">lastEvalBcValEnt</a>;</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a68d3a05ae52b9ea49900e0303dd17f3d">lastEvalBcValEnt</a>;</div>
 <div class="line">  <span class="keywordtype">int</span> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a0d38ac56681ff3978d6e3a468336c6ef">lastEvalBcBlockValId</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">  /**</span></div>
@@ -295,7 +295,7 @@ $(function() {
 <div class="line"><span class="comment">   * @param  value returned value</span></div>
 <div class="line"><span class="comment">   * @return       error code</span></div>
 <div class="line"><span class="comment">   */</span></div>
-<div class="line">  MoFEMErrorCode <a id="a52" name="a52"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a189bd1fbcb57afd860c0ef56c82f1d26">getBcOnValues</a>(<span class="keyword">const</span> EntityHandle ent, <span class="keyword">const</span> <span class="keywordtype">int</span> gg,</div>
+<div class="line">  MoFEMErrorCode <a id="a54" name="a54"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a189bd1fbcb57afd860c0ef56c82f1d26">getBcOnValues</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent, <span class="keyword">const</span> <span class="keywordtype">int</span> gg,</div>
 <div class="line">                               <span class="keyword">const</span> <span class="keywordtype">double</span> x, <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z,</div>
 <div class="line">                               <span class="keywordtype">double</span> &amp;value) {</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
@@ -324,8 +324,8 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_typedef" href="structMixTransport_1_1UnsaturatedFlowElement.html#a424befcecd696d4754ef80fe459751e3">BcMap</a> <a id="a53" name="a53"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67e1bf9f7f6f774eca4d30584dfe3840">bcFluxMap</a>;</div>
-<div class="line">  EntityHandle <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a70e9d494976be6081549f9bb8051b749">lastEvalBcFluxEnt</a>;</div>
+<div class="line">  <a class="code hl_typedef" href="structMixTransport_1_1UnsaturatedFlowElement.html#a424befcecd696d4754ef80fe459751e3">BcMap</a> <a id="a55" name="a55"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67e1bf9f7f6f774eca4d30584dfe3840">bcFluxMap</a>;</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a70e9d494976be6081549f9bb8051b749">lastEvalBcFluxEnt</a>;</div>
 <div class="line">  <span class="keywordtype">int</span> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a806aca4cb3c796c09ec2355a8d6b4f18">lastEvalBcBlockFluxId</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">  /**</span></div>
@@ -337,7 +337,7 @@ $(function() {
 <div class="line"><span class="comment">   * @param  flux reference to flux which is set by function</span></div>
 <div class="line"><span class="comment">   * @return      [description]</span></div>
 <div class="line"><span class="comment">   */</span></div>
-<div class="line">  MoFEMErrorCode <a id="a54" name="a54"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a2fb937830ca25336a399e276021d00c9">getBcOnFluxes</a>(<span class="keyword">const</span> EntityHandle ent, <span class="keyword">const</span> <span class="keywordtype">double</span> x,</div>
+<div class="line">  MoFEMErrorCode <a id="a56" name="a56"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a2fb937830ca25336a399e276021d00c9">getBcOnFluxes</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent, <span class="keyword">const</span> <span class="keywordtype">double</span> x,</div>
 <div class="line">                               <span class="keyword">const</span> <span class="keywordtype">double</span> y, <span class="keyword">const</span> <span class="keywordtype">double</span> z, <span class="keywordtype">double</span> &amp;flux) {</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">    <span class="keywordtype">int</span> block_id = -1;</div>
@@ -369,10 +369,10 @@ $(function() {
 <div class="line"><span class="comment">   * \brief Evaluate boundary condition at the boundary</span></div>
 <div class="line"><span class="comment">   */</span></div>
 <div class="line">  <span class="keyword">struct </span>OpRhsBcOnValues</div>
-<div class="line">      : <span class="keyword">public</span> <a id="_a55" name="_a55"></a><a class="code hl_struct" href="structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::FaceElementForcesAndSourcesCore::UserDataOperator</a> {</div>
+<div class="line">      : <span class="keyword">public</span> <a id="_a57" name="_a57"></a><a class="code hl_struct" href="structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::FaceElementForcesAndSourcesCore::UserDataOperator</a> {</div>
 <div class="line"> </div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a56" name="a56"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a2e814267bd56cdee4f19a05a66e4e061">cTx</a>;</div>
-<div class="line">    boost::shared_ptr&lt;MethodForForceScaling&gt; <a id="a57" name="a57"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a642652513a3ca582a18d9ca9edab721a">valueScale</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a58" name="a58"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a2e814267bd56cdee4f19a05a66e4e061">cTx</a>;</div>
+<div class="line">    boost::shared_ptr&lt;MethodForForceScaling&gt; <a id="a59" name="a59"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a642652513a3ca582a18d9ca9edab721a">valueScale</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Constructor</span></div>
@@ -383,7 +383,7 @@ $(function() {
 <div class="line">              fluxes_name, UserDataOperator::OPROW),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a2e814267bd56cdee4f19a05a66e4e061">cTx</a>(ctx), <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a642652513a3ca582a18d9ca9edab721a">valueScale</a>(value_scale) {}</div>
 <div class="line"> </div>
-<div class="line">    VectorDouble <a id="a58" name="a58"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#afab122765229e9df701d1ed5c3ef2d92">nF</a>; <span class="comment">///&lt; Vector of residuals</span></div>
+<div class="line">    VectorDouble <a id="a60" name="a60"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#afab122765229e9df701d1ed5c3ef2d92">nF</a>; <span class="comment">///&lt; Vector of residuals</span></div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Integrate boundary condition</span></div>
@@ -392,13 +392,13 @@ $(function() {
 <div class="line"><span class="comment">     * @param  data data on entity</span></div>
 <div class="line"><span class="comment">     * @return      error code</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    MoFEMErrorCode <a id="a59" name="a59"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a90e08d101601653b93ac28ebe25e508f">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line">    MoFEMErrorCode <a id="a61" name="a61"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a90e08d101601653b93ac28ebe25e508f">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;data) {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <span class="keywordflow">if</span> (data.getFieldData().size() == 0)</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line">      <span class="comment">// Get EntityHandle of the finite element</span></div>
-<div class="line">      EntityHandle fe_ent = <a id="a60" name="a60"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a id="a62" name="a62"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
 <div class="line">      <span class="comment">// Resize and clear vector</span></div>
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#afab122765229e9df701d1ed5c3ef2d92">nF</a>.resize(data.getIndices().size());</div>
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#afab122765229e9df701d1ed5c3ef2d92">nF</a>.clear();</div>
@@ -406,18 +406,18 @@ $(function() {
 <div class="line">      <span class="keywordtype">int</span> nb_gauss_pts = data.getN().size1();</div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gg = 0; gg &lt; nb_gauss_pts; gg++) {</div>
 <div class="line">        <span class="keywordtype">double</span> x, y, z;</div>
-<div class="line">        x = <a id="a61" name="a61"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8c24ba4a5a415ae0b9b1a3da21cfe066">getCoordsAtGaussPts</a>()(gg, 0);</div>
+<div class="line">        x = <a id="a63" name="a63"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8c24ba4a5a415ae0b9b1a3da21cfe066">getCoordsAtGaussPts</a>()(gg, 0);</div>
 <div class="line">        y = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8c24ba4a5a415ae0b9b1a3da21cfe066">getCoordsAtGaussPts</a>()(gg, 1);</div>
 <div class="line">        z = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8c24ba4a5a415ae0b9b1a3da21cfe066">getCoordsAtGaussPts</a>()(gg, 2);</div>
 <div class="line">        <span class="keywordtype">double</span> value;</div>
 <div class="line">        <span class="comment">// get value of boundary condition</span></div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a2e814267bd56cdee4f19a05a66e4e061">cTx</a>.<a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a189bd1fbcb57afd860c0ef56c82f1d26">getBcOnValues</a>(fe_ent, gg, x, y, z, value);</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> w = <a id="a62" name="a62"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae90a09d3c36b0a4ed9ab1d99fcce0c1d">getGaussPts</a>()(2, gg) * 0.5;</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> w = <a id="a64" name="a64"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae90a09d3c36b0a4ed9ab1d99fcce0c1d">getGaussPts</a>()(2, gg) * 0.5;</div>
 <div class="line">        <span class="keyword">const</span> <span class="keywordtype">double</span> beta = w * (value - z);</div>
-<div class="line">        noalias(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#afab122765229e9df701d1ed5c3ef2d92">nF</a>) += beta * prod(data.getVectorN&lt;3&gt;(gg), <a id="a63" name="a63"></a><a class="code hl_function" href="structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html#ab0d2c2cbdf4c35183c09a64d6f088e0c">getNormal</a>());</div>
+<div class="line">        noalias(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#afab122765229e9df701d1ed5c3ef2d92">nF</a>) += beta * prod(data.getVectorN&lt;3&gt;(gg), <a id="a65" name="a65"></a><a class="code hl_function" href="structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html#ab0d2c2cbdf4c35183c09a64d6f088e0c">getNormal</a>());</div>
 <div class="line">      }</div>
 <div class="line">      <span class="comment">// Scale vector if history  evaluating method is given</span></div>
-<div class="line">      Vec f = <a id="a64" name="a64"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">getFEMethod</a>()-&gt;<a id="a65" name="a65"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#a776871f5d2d71eedf73adf100ae9fd01">ts_F</a>;</div>
+<div class="line">      Vec f = <a id="a66" name="a66"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">getFEMethod</a>()-&gt;<a id="a67" name="a67"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#a776871f5d2d71eedf73adf100ae9fd01">ts_F</a>;</div>
 <div class="line">      <span class="keywordflow">if</span> (<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a642652513a3ca582a18d9ca9edab721a">valueScale</a>) {</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#a642652513a3ca582a18d9ca9edab721a">valueScale</a>-&gt;scaleNf(<a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">getFEMethod</a>(), <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpRhsBcOnValues.html#afab122765229e9df701d1ed5c3ef2d92">nF</a>);</div>
 <div class="line">      }</div>
@@ -432,19 +432,19 @@ $(function() {
 <div class="line"><span class="comment">   * \brief Assemble flux residual</span></div>
 <div class="line"><span class="comment">   */</span></div>
 <div class="line">  <span class="keyword">struct </span>OpResidualFlux</div>
-<div class="line">      : <span class="keyword">public</span> <a id="_a66" name="_a66"></a><a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a> {</div>
+<div class="line">      : <span class="keyword">public</span> <a id="_a68" name="_a68"></a><a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a> {</div>
 <div class="line"> </div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a67" name="a67"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a716627bba5eacc521ac039eee6801c4f">cTx</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a69" name="a69"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a716627bba5eacc521ac039eee6801c4f">cTx</a>;</div>
 <div class="line"> </div>
 <div class="line">    OpResidualFlux(UnsaturatedFlowElement &amp;ctx, <span class="keyword">const</span> std::string &amp;flux_name)</div>
 <div class="line">        : <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a>(</div>
 <div class="line">              flux_name, UserDataOperator::OPROW),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a716627bba5eacc521ac039eee6801c4f">cTx</a>(ctx) {}</div>
 <div class="line"> </div>
-<div class="line">    VectorDouble <a id="a68" name="a68"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a7a36d7296a076850f452d72f361536db">divVec</a>, <a id="a69" name="a69"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a4b0a12c193dbc9132ec6ce82000305a2">nF</a>;</div>
-<div class="line">    <a id="_a70" name="_a70"></a><a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a71" name="a71"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#abfcbc1e01b8bc80d3c58ac9d358f0d76">i</a>;</div>
+<div class="line">    VectorDouble <a id="a70" name="a70"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a7a36d7296a076850f452d72f361536db">divVec</a>, <a id="a71" name="a71"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a4b0a12c193dbc9132ec6ce82000305a2">nF</a>;</div>
+<div class="line">    <a id="_a72" name="_a72"></a><a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a73" name="a73"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#abfcbc1e01b8bc80d3c58ac9d358f0d76">i</a>;</div>
 <div class="line"> </div>
-<div class="line">    MoFEMErrorCode <a id="a72" name="a72"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a3f30df70b72cf6cdb1176188273b4dbf">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line">    MoFEMErrorCode <a id="a74" name="a74"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a3f30df70b72cf6cdb1176188273b4dbf">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;data) {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">int</span> nb_dofs = data.getIndices().size();</div>
@@ -453,7 +453,7 @@ $(function() {
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a4b0a12c193dbc9132ec6ce82000305a2">nF</a>.resize(nb_dofs, <span class="keyword">false</span>);</div>
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a4b0a12c193dbc9132ec6ce82000305a2">nF</a>.clear();</div>
 <div class="line">      <span class="comment">// Get EntityHandle of the finite element</span></div>
-<div class="line">      EntityHandle fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
 <div class="line">      <span class="comment">// Get material block id</span></div>
 <div class="line">      <span class="keywordtype">int</span> block_id;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a716627bba5eacc521ac039eee6801c4f">cTx</a>.<a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ae97a123bec06261705b8631383b24419">getMaterial</a>(fe_ent, block_id);</div>
@@ -463,15 +463,15 @@ $(function() {
 <div class="line">      <span class="comment">// Get base function</span></div>
 <div class="line">      <span class="keyword">auto</span> t_n_hdiv = data.getFTensor1N&lt;3&gt;();</div>
 <div class="line">      <span class="comment">// Get pressure</span></div>
-<div class="line">      <span class="keyword">auto</span> t_h = getFTensor0FromVec(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a716627bba5eacc521ac039eee6801c4f">cTx</a>.<a id="a73" name="a73"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a8eeddf788f08c1eb23278888eeb5c87b">valuesAtGaussPts</a>);</div>
+<div class="line">      <span class="keyword">auto</span> t_h = getFTensor0FromVec(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a716627bba5eacc521ac039eee6801c4f">cTx</a>.<a id="a75" name="a75"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a8eeddf788f08c1eb23278888eeb5c87b">valuesAtGaussPts</a>);</div>
 <div class="line">      <span class="comment">// Get flux</span></div>
-<div class="line">      <span class="keyword">auto</span> t_flux = getFTensor1FromMat&lt;3&gt;(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a716627bba5eacc521ac039eee6801c4f">cTx</a>.<a id="a74" name="a74"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#aed25d2483c3ac9398c1914f4cd24c5ce">fluxesAtGaussPts</a>);</div>
+<div class="line">      <span class="keyword">auto</span> t_flux = getFTensor1FromMat&lt;3&gt;(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a716627bba5eacc521ac039eee6801c4f">cTx</a>.<a id="a76" name="a76"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#aed25d2483c3ac9398c1914f4cd24c5ce">fluxesAtGaussPts</a>);</div>
 <div class="line">      <span class="comment">// Coords at integration points</span></div>
-<div class="line">      <span class="keyword">auto</span> t_coords = <a id="a75" name="a75"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5022d618bbaf375d0a07588e50a297a5">getFTensor1CoordsAtGaussPts</a>();</div>
+<div class="line">      <span class="keyword">auto</span> t_coords = <a id="a77" name="a77"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5022d618bbaf375d0a07588e50a297a5">getFTensor1CoordsAtGaussPts</a>();</div>
 <div class="line">      <span class="comment">// Get integration weight</span></div>
-<div class="line">      <span class="keyword">auto</span> t_w = <a id="a76" name="a76"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8d917e73cbaa9f177cdea72e1e7500dd">getFTensor0IntegrationWeight</a>();</div>
+<div class="line">      <span class="keyword">auto</span> t_w = <a id="a78" name="a78"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8d917e73cbaa9f177cdea72e1e7500dd">getFTensor0IntegrationWeight</a>();</div>
 <div class="line">      <span class="comment">// Get volume</span></div>
-<div class="line">      <span class="keywordtype">double</span> vol = <a id="a77" name="a77"></a><a class="code hl_function" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html#a27ada41314b2540fb0a722aad7257051">getVolume</a>();</div>
+<div class="line">      <span class="keywordtype">double</span> vol = <a id="a79" name="a79"></a><a class="code hl_function" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html#a27ada41314b2540fb0a722aad7257051">getVolume</a>();</div>
 <div class="line"> </div>
 <div class="line">      <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#abfcbc1e01b8bc80d3c58ac9d358f0d76">i</a>;</div>
 <div class="line">      <span class="keyword">auto</span> t_base_diff_hdiv = data.getFTensor2DiffN&lt;3, 3&gt;();</div>
@@ -481,7 +481,7 @@ $(function() {
 <div class="line">      <span class="keywordtype">int</span> nb_gauss_pts = data.getN().size1();</div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gg = 0; gg != nb_gauss_pts; gg++) {</div>
 <div class="line">        <span class="comment">// Get divergence</span></div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<a id="a78" name="a78"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> : <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a7a36d7296a076850f452d72f361536db">divVec</a>) {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;<a id="a80" name="a80"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> : <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a7a36d7296a076850f452d72f361536db">divVec</a>) {</div>
 <div class="line">          <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> = t_base_diff_hdiv(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#abfcbc1e01b8bc80d3c58ac9d358f0d76">i</a>, <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#abfcbc1e01b8bc80d3c58ac9d358f0d76">i</a>);</div>
 <div class="line">          ++t_base_diff_hdiv;</div>
 <div class="line">        }</div>
@@ -498,7 +498,7 @@ $(function() {
 <div class="line">        <span class="comment">// Calculate pressure gradient</span></div>
 <div class="line">        noalias(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a4b0a12c193dbc9132ec6ce82000305a2">nF</a>) -= alpha * (t_h - z * scaleZ) * <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a7a36d7296a076850f452d72f361536db">divVec</a>;</div>
 <div class="line">        <span class="comment">// Calculate presure gradient from flux</span></div>
-<div class="line">        <a id="_a79" name="_a79"></a><a class="code hl_class" href="classFTensor_1_1Tensor0.html">FTensor::Tensor0&lt;double *&gt;</a> t_nf(&amp;*<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a4b0a12c193dbc9132ec6ce82000305a2">nF</a>.begin());</div>
+<div class="line">        <a id="_a81" name="_a81"></a><a class="code hl_class" href="classFTensor_1_1Tensor0.html">FTensor::Tensor0&lt;double *&gt;</a> t_nf(&amp;*<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#a4b0a12c193dbc9132ec6ce82000305a2">nF</a>.begin());</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> rr = 0; rr != nb_dofs; rr++) {</div>
 <div class="line">          t_nf += alpha * (1 / K) * (t_n_hdiv(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#abfcbc1e01b8bc80d3c58ac9d358f0d76">i</a>) * t_flux(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualFlux.html#abfcbc1e01b8bc80d3c58ac9d358f0d76">i</a>));</div>
 <div class="line">          ++t_n_hdiv; <span class="comment">// move to next base function</span></div>
@@ -523,16 +523,16 @@ $(function() {
 <div class="line">  <span class="keyword">struct </span>OpResidualMass</div>
 <div class="line">      : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a> {</div>
 <div class="line"> </div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a80" name="a80"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#adbbfa186e2ca25588f36b113bb195082">cTx</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a82" name="a82"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#adbbfa186e2ca25588f36b113bb195082">cTx</a>;</div>
 <div class="line"> </div>
 <div class="line">    OpResidualMass(UnsaturatedFlowElement &amp;ctx, <span class="keyword">const</span> std::string &amp;val_name)</div>
 <div class="line">        : <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a>(</div>
 <div class="line">              val_name, UserDataOperator::OPROW),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#adbbfa186e2ca25588f36b113bb195082">cTx</a>(ctx) {}</div>
 <div class="line"> </div>
-<div class="line">    VectorDouble <a id="a81" name="a81"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#ae2f3632e2ec60cea7d20a9a28e4f832d">nF</a>;</div>
+<div class="line">    VectorDouble <a id="a83" name="a83"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#ae2f3632e2ec60cea7d20a9a28e4f832d">nF</a>;</div>
 <div class="line"> </div>
-<div class="line">    MoFEMErrorCode <a id="a82" name="a82"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#a9975d047d9fa25e0a76712d1ae4f6285">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line">    MoFEMErrorCode <a id="a84" name="a84"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#a9975d047d9fa25e0a76712d1ae4f6285">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;data) {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">int</span> nb_dofs = data.getIndices().size();</div>
@@ -542,7 +542,7 @@ $(function() {
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#ae2f3632e2ec60cea7d20a9a28e4f832d">nF</a>.resize(nb_dofs, <span class="keyword">false</span>);</div>
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#ae2f3632e2ec60cea7d20a9a28e4f832d">nF</a>.clear();</div>
 <div class="line">      <span class="comment">// Get EntityHandle of the finite element</span></div>
-<div class="line">      EntityHandle fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
 <div class="line">      <span class="comment">// Get material block id</span></div>
 <div class="line">      <span class="keywordtype">int</span> block_id;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#adbbfa186e2ca25588f36b113bb195082">cTx</a>.<a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ae97a123bec06261705b8631383b24419">getMaterial</a>(fe_ent, block_id);</div>
@@ -551,15 +551,15 @@ $(function() {
 <div class="line">      <span class="comment">// Get pressure</span></div>
 <div class="line">      <span class="keyword">auto</span> t_h = getFTensor0FromVec(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#adbbfa186e2ca25588f36b113bb195082">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a8eeddf788f08c1eb23278888eeb5c87b">valuesAtGaussPts</a>);</div>
 <div class="line">      <span class="comment">// Get pressure rate</span></div>
-<div class="line">      <span class="keyword">auto</span> t_h_t = getFTensor0FromVec(*<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#adbbfa186e2ca25588f36b113bb195082">cTx</a>.<a id="a83" name="a83"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a3216bb3bc067ef86ba6beb317e020228">headRateAtGaussPts</a>);</div>
+<div class="line">      <span class="keyword">auto</span> t_h_t = getFTensor0FromVec(*<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#adbbfa186e2ca25588f36b113bb195082">cTx</a>.<a id="a85" name="a85"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a3216bb3bc067ef86ba6beb317e020228">headRateAtGaussPts</a>);</div>
 <div class="line">      <span class="comment">// Flux divergence</span></div>
-<div class="line">      <span class="keyword">auto</span> t_div_flux = getFTensor0FromVec(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#adbbfa186e2ca25588f36b113bb195082">cTx</a>.<a id="a84" name="a84"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#ade9b21eb65ae4419dda4f8ab51b4fb55">divergenceAtGaussPts</a>);</div>
+<div class="line">      <span class="keyword">auto</span> t_div_flux = getFTensor0FromVec(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpResidualMass.html#adbbfa186e2ca25588f36b113bb195082">cTx</a>.<a id="a86" name="a86"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#ade9b21eb65ae4419dda4f8ab51b4fb55">divergenceAtGaussPts</a>);</div>
 <div class="line">      <span class="comment">// Get integration weight</span></div>
 <div class="line">      <span class="keyword">auto</span> t_w = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8d917e73cbaa9f177cdea72e1e7500dd">getFTensor0IntegrationWeight</a>();</div>
 <div class="line">      <span class="comment">// Coords at integration points</span></div>
 <div class="line">      <span class="keyword">auto</span> t_coords = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5022d618bbaf375d0a07588e50a297a5">getFTensor1CoordsAtGaussPts</a>();</div>
 <div class="line">      <span class="comment">// Scale eq.</span></div>
-<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> <a id="a85" name="a85"></a><a class="code hl_variable" href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a> = block_data-&gt;sCale;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> <a id="a87" name="a87"></a><a class="code hl_variable" href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a> = block_data-&gt;sCale;</div>
 <div class="line">      <span class="comment">// Get volume</span></div>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> vol = <a class="code hl_function" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html#a27ada41314b2540fb0a722aad7257051">getVolume</a>();</div>
 <div class="line">      <span class="comment">// Get number of integration points</span></div>
@@ -591,19 +591,19 @@ $(function() {
 <div class="line">  <span class="keyword">struct </span>OpTauDotSigma_HdivHdiv</div>
 <div class="line">      : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a> {</div>
 <div class="line"> </div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a86" name="a86"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a5e8b0988db748c28c04a51809e9412b6">cTx</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a88" name="a88"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a5e8b0988db748c28c04a51809e9412b6">cTx</a>;</div>
 <div class="line"> </div>
 <div class="line">    OpTauDotSigma_HdivHdiv(UnsaturatedFlowElement &amp;ctx,</div>
 <div class="line">                           <span class="keyword">const</span> std::string flux_name)</div>
 <div class="line">        : <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a>(</div>
 <div class="line">              flux_name, flux_name, UserDataOperator::OPROWCOL),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a5e8b0988db748c28c04a51809e9412b6">cTx</a>(ctx) {</div>
-<div class="line">      <a id="a87" name="a87"></a><a class="code hl_variable" href="structMoFEM_1_1DataOperator.html#a300b85aefcf2cf7203ada5d6d501f25f">sYmm</a> = <span class="keyword">true</span>;</div>
+<div class="line">      <a id="a89" name="a89"></a><a class="code hl_variable" href="structMoFEM_1_1DataOperator.html#a300b85aefcf2cf7203ada5d6d501f25f">sYmm</a> = <span class="keyword">true</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    MatrixDouble <a id="a88" name="a88"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a38cb97a78578291d7f3bae177c7bbd2b">nN</a>, <a id="a89" name="a89"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#adaf4432a42dd04f04a1b1d3e946529ae">transNN</a>;</div>
+<div class="line">    MatrixDouble <a id="a90" name="a90"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a38cb97a78578291d7f3bae177c7bbd2b">nN</a>, <a id="a91" name="a91"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#adaf4432a42dd04f04a1b1d3e946529ae">transNN</a>;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;j&#39;</span>, 3&gt; <a id="a90" name="a90"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a479d6ac2c6109a94a6d272f023b5ae42">j</a>;</div>
+<div class="line">    <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;j&#39;</span>, 3&gt; <a id="a92" name="a92"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a479d6ac2c6109a94a6d272f023b5ae42">j</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Assemble matrix</span></div>
@@ -615,7 +615,7 @@ $(function() {
 <div class="line"><span class="comment">     * @param  col_data data for col</span></div>
 <div class="line"><span class="comment">     * @return          error code</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    MoFEMErrorCode <a id="a91" name="a91"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a4f45f7e28e338cf2bc45ea5bfdaa5c30">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
+<div class="line">    MoFEMErrorCode <a id="a93" name="a93"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a4f45f7e28e338cf2bc45ea5bfdaa5c30">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
 <div class="line">                          EntityType col_type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;row_data,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;col_data) {</div>
@@ -629,7 +629,7 @@ $(function() {
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a38cb97a78578291d7f3bae177c7bbd2b">nN</a>.resize(nb_row, nb_col, <span class="keyword">false</span>);</div>
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a38cb97a78578291d7f3bae177c7bbd2b">nN</a>.clear();</div>
 <div class="line">      <span class="comment">// Get EntityHandle of the finite element</span></div>
-<div class="line">      EntityHandle fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
 <div class="line">      <span class="comment">// Get material block id</span></div>
 <div class="line">      <span class="keywordtype">int</span> block_id;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a5e8b0988db748c28c04a51809e9412b6">cTx</a>.<a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ae97a123bec06261705b8631383b24419">getMaterial</a>(fe_ent, block_id);</div>
@@ -670,7 +670,7 @@ $(function() {
 <div class="line">        ++t_h;</div>
 <div class="line">        ++t_w;</div>
 <div class="line">      }</div>
-<div class="line">      Mat <a id="a92" name="a92"></a><a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a> = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">getFEMethod</a>()-&gt;<a id="a93" name="a93"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#aff339f69e372284157eb6eebcf0ed333">ts_B</a>;</div>
+<div class="line">      Mat <a id="a94" name="a94"></a><a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a> = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">getFEMethod</a>()-&gt;<a id="a95" name="a95"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#aff339f69e372284157eb6eebcf0ed333">ts_B</a>;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatSetValues(<a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>, nb_row, &amp;*row_data.getIndices().begin(), nb_col,</div>
 <div class="line">                          &amp;*col_data.getIndices().begin(), &amp;*<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpTauDotSigma__HdivHdiv.html#a38cb97a78578291d7f3bae177c7bbd2b">nN</a>.data().begin(),</div>
 <div class="line">                          ADD_VALUES);</div>
@@ -689,7 +689,7 @@ $(function() {
 <div class="line">  <span class="keyword">struct </span>OpVU_L2L2</div>
 <div class="line">      : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a> {</div>
 <div class="line"> </div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a94" name="a94"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVU__L2L2.html#abab3646bfec831a2f7dc001cf3601a9a">cTx</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a96" name="a96"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVU__L2L2.html#abab3646bfec831a2f7dc001cf3601a9a">cTx</a>;</div>
 <div class="line"> </div>
 <div class="line">    OpVU_L2L2(UnsaturatedFlowElement &amp;ctx, <span class="keyword">const</span> std::string value_name)</div>
 <div class="line">        : <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a>(</div>
@@ -698,7 +698,7 @@ $(function() {
 <div class="line">      <a class="code hl_variable" href="structMoFEM_1_1DataOperator.html#a300b85aefcf2cf7203ada5d6d501f25f">sYmm</a> = <span class="keyword">true</span>;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    MatrixDouble <a id="a95" name="a95"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVU__L2L2.html#a64cda5dbd4220aa1556d7899439330c0">nN</a>;</div>
+<div class="line">    MatrixDouble <a id="a97" name="a97"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVU__L2L2.html#a64cda5dbd4220aa1556d7899439330c0">nN</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Assemble matrix</span></div>
@@ -710,7 +710,7 @@ $(function() {
 <div class="line"><span class="comment">     * @param  col_data data for col</span></div>
 <div class="line"><span class="comment">     * @return          error code</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    MoFEMErrorCode <a id="a96" name="a96"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVU__L2L2.html#a70da7c66957d9aaeebac3b1cdc11e451">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
+<div class="line">    MoFEMErrorCode <a id="a98" name="a98"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVU__L2L2.html#a70da7c66957d9aaeebac3b1cdc11e451">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
 <div class="line">                          EntityType col_type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;row_data,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;col_data) {</div>
@@ -724,7 +724,7 @@ $(function() {
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVU__L2L2.html#a64cda5dbd4220aa1556d7899439330c0">nN</a>.resize(nb_row, nb_col, <span class="keyword">false</span>);</div>
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVU__L2L2.html#a64cda5dbd4220aa1556d7899439330c0">nN</a>.clear();</div>
 <div class="line">      <span class="comment">// Get EntityHandle of the finite element</span></div>
-<div class="line">      EntityHandle fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
 <div class="line">      <span class="comment">// Get material block id</span></div>
 <div class="line">      <span class="keywordtype">int</span> block_id;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVU__L2L2.html#abab3646bfec831a2f7dc001cf3601a9a">cTx</a>.<a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ae97a123bec06261705b8631383b24419">getMaterial</a>(fe_ent, block_id);</div>
@@ -743,7 +743,7 @@ $(function() {
 <div class="line">      <span class="comment">// Scale eq.</span></div>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a> = block_data-&gt;sCale;</div>
 <div class="line">      <span class="comment">// Time step factor</span></div>
-<div class="line">      <span class="keywordtype">double</span> ts_a = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">getFEMethod</a>()-&gt;<a id="a97" name="a97"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#abf22cbd43457b52fd6382ddf560d4243">ts_a</a>;</div>
+<div class="line">      <span class="keywordtype">double</span> ts_a = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">getFEMethod</a>()-&gt;<a id="a99" name="a99"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#abf22cbd43457b52fd6382ddf560d4243">ts_a</a>;</div>
 <div class="line">      <span class="comment">// get volume</span></div>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> vol = <a class="code hl_function" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html#a27ada41314b2540fb0a722aad7257051">getVolume</a>();</div>
 <div class="line">      <span class="keywordtype">int</span> nb_gauss_pts = row_data.getN().size1();</div>
@@ -796,7 +796,7 @@ $(function() {
 <div class="line">  <span class="keyword">struct </span>OpVDivSigma_L2Hdiv</div>
 <div class="line">      : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a> {</div>
 <div class="line"> </div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a98" name="a98"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#af3c854f99495fe6732e60297bcb7dce4">cTx</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a100" name="a100"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#af3c854f99495fe6732e60297bcb7dce4">cTx</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Constructor</span></div>
@@ -808,8 +808,8 @@ $(function() {
 <div class="line">              val_name_row, flux_name_col, UserDataOperator::OPROWCOL, <span class="keyword">false</span>),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#af3c854f99495fe6732e60297bcb7dce4">cTx</a>(ctx) {}</div>
 <div class="line"> </div>
-<div class="line">    MatrixDouble <a id="a99" name="a99"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#a904a6109f4b8db174b60d659233c0337">nN</a>;</div>
-<div class="line">    VectorDouble <a id="a100" name="a100"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#a011a254131bffc81f0f49021334c39fb">divVec</a>;</div>
+<div class="line">    MatrixDouble <a id="a101" name="a101"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#a904a6109f4b8db174b60d659233c0337">nN</a>;</div>
+<div class="line">    VectorDouble <a id="a102" name="a102"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#a011a254131bffc81f0f49021334c39fb">divVec</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Do calculations</span></div>
@@ -823,7 +823,7 @@ $(function() {
 <div class="line"><span class="comment">     * functions, DOFs indices, etc.</span></div>
 <div class="line"><span class="comment">     * @return          error code</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    MoFEMErrorCode <a id="a101" name="a101"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#ad62bea8d781c01c522f4ca56ec753ef8">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
+<div class="line">    MoFEMErrorCode <a id="a103" name="a103"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#ad62bea8d781c01c522f4ca56ec753ef8">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
 <div class="line">                          EntityType col_type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;row_data,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;col_data) {</div>
@@ -835,7 +835,7 @@ $(function() {
 <div class="line">      <span class="keywordflow">if</span> (nb_col == 0)</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line">      <span class="comment">// Get EntityHandle of the finite element</span></div>
-<div class="line">      EntityHandle fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
 <div class="line">      <span class="comment">// Get material block id</span></div>
 <div class="line">      <span class="keywordtype">int</span> block_id;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#af3c854f99495fe6732e60297bcb7dce4">cTx</a>.<a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ae97a123bec06261705b8631383b24419">getMaterial</a>(fe_ent, block_id);</div>
@@ -845,7 +845,7 @@ $(function() {
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#a011a254131bffc81f0f49021334c39fb">divVec</a>.resize(nb_col, <span class="keyword">false</span>);</div>
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpVDivSigma__L2Hdiv.html#a904a6109f4b8db174b60d659233c0337">nN</a>.clear();</div>
 <div class="line">      <span class="comment">// take derivatives of base functions</span></div>
-<div class="line">      <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a102" name="a102"></a><a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
+<div class="line">      <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a104" name="a104"></a><a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
 <div class="line">      <span class="keyword">auto</span> t_base_diff_hdiv = col_data.getFTensor2DiffN&lt;3, 3&gt;();</div>
 <div class="line">      <span class="comment">// Scale eq.</span></div>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a> = block_data-&gt;sCale;</div>
@@ -868,7 +868,7 @@ $(function() {
 <div class="line">  <span class="keyword">struct </span>OpDivTauU_HdivL2</div>
 <div class="line">      : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a> {</div>
 <div class="line"> </div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a103" name="a103"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#ab7f3bfdcc38f480763bb114923de2f08">cTx</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a105" name="a105"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#ab7f3bfdcc38f480763bb114923de2f08">cTx</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Constructor</span></div>
@@ -880,9 +880,9 @@ $(function() {
 <div class="line">              flux_name_col, val_name_row, UserDataOperator::OPROWCOL, <span class="keyword">false</span>),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#ab7f3bfdcc38f480763bb114923de2f08">cTx</a>(ctx) {}</div>
 <div class="line"> </div>
-<div class="line">    MatrixDouble <a id="a104" name="a104"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a801c4e314e00f33a6779df6e2e36eb34">nN</a>;</div>
-<div class="line">    VectorDouble <a id="a105" name="a105"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a2c2bff79be1cf9f8abd598e72afcf1fb">divVec</a>;</div>
-<div class="line">    <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a106" name="a106"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a386a862733bbb724ffd9173b02b5453a">i</a>;</div>
+<div class="line">    MatrixDouble <a id="a106" name="a106"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a801c4e314e00f33a6779df6e2e36eb34">nN</a>;</div>
+<div class="line">    VectorDouble <a id="a107" name="a107"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a2c2bff79be1cf9f8abd598e72afcf1fb">divVec</a>;</div>
+<div class="line">    <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a108" name="a108"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a386a862733bbb724ffd9173b02b5453a">i</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Do calculations</span></div>
@@ -896,7 +896,7 @@ $(function() {
 <div class="line"><span class="comment">     * functions, DOFs indices, etc.</span></div>
 <div class="line"><span class="comment">     * @return          error code</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    MoFEMErrorCode <a id="a107" name="a107"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a1b8413d09819bb3eeaffc067a8adfabe">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
+<div class="line">    MoFEMErrorCode <a id="a109" name="a109"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a1b8413d09819bb3eeaffc067a8adfabe">doWork</a>(<span class="keywordtype">int</span> row_side, <span class="keywordtype">int</span> col_side, EntityType row_type,</div>
 <div class="line">                          EntityType col_type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;row_data,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;col_data) {</div>
@@ -911,7 +911,7 @@ $(function() {
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a2c2bff79be1cf9f8abd598e72afcf1fb">divVec</a>.resize(nb_row, <span class="keyword">false</span>);</div>
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#a801c4e314e00f33a6779df6e2e36eb34">nN</a>.clear();</div>
 <div class="line">      <span class="comment">// Get EntityHandle of the finite element</span></div>
-<div class="line">      EntityHandle fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
 <div class="line">      <span class="comment">// Get material block id</span></div>
 <div class="line">      <span class="keywordtype">int</span> block_id;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpDivTauU__HdivL2.html#ab7f3bfdcc38f480763bb114923de2f08">cTx</a>.<a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ae97a123bec06261705b8631383b24419">getMaterial</a>(fe_ent, block_id);</div>
@@ -975,17 +975,17 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="keyword">struct </span>OpEvaluateInitiallHead</div>
 <div class="line">      : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a> {</div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a108" name="a108"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#a271b043f2fa75c55853bca41cc5e2ca4">cTx</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a110" name="a110"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#a271b043f2fa75c55853bca41cc5e2ca4">cTx</a>;</div>
 <div class="line">    OpEvaluateInitiallHead(UnsaturatedFlowElement &amp;ctx,</div>
 <div class="line">                           <span class="keyword">const</span> std::string &amp;val_name)</div>
 <div class="line">        : <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a>(</div>
 <div class="line">              val_name, UserDataOperator::OPROW),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#a271b043f2fa75c55853bca41cc5e2ca4">cTx</a>(ctx) {}</div>
 <div class="line"> </div>
-<div class="line">    MatrixDouble <a id="a109" name="a109"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#acf23e690ac8df14a8e1c93973c355238">nN</a>;</div>
-<div class="line">    VectorDouble <a id="a110" name="a110"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#af94fc8a870575cf8acc53b3da660d564">nF</a>;</div>
+<div class="line">    MatrixDouble <a id="a111" name="a111"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#acf23e690ac8df14a8e1c93973c355238">nN</a>;</div>
+<div class="line">    VectorDouble <a id="a112" name="a112"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#af94fc8a870575cf8acc53b3da660d564">nF</a>;</div>
 <div class="line"> </div>
-<div class="line">    MoFEMErrorCode <a id="a111" name="a111"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#a3c9e173bbea4cc5065b283d92eee336b">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line">    MoFEMErrorCode <a id="a113" name="a113"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#a3c9e173bbea4cc5065b283d92eee336b">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;data) {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <span class="keywordflow">if</span> (data.getFieldData().size() == 0)</div>
@@ -1001,7 +1001,7 @@ $(function() {
 <div class="line">      <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#af94fc8a870575cf8acc53b3da660d564">nF</a>.clear();</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Get EntityHandle of the finite element</span></div>
-<div class="line">      EntityHandle fe_ent = <a id="a112" name="a112"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a13bff815dc945f24e23f12156fe901b7">getFEEntityHandle</a>();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a id="a114" name="a114"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a13bff815dc945f24e23f12156fe901b7">getFEEntityHandle</a>();</div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Get material block id</span></div>
@@ -1024,12 +1024,12 @@ $(function() {
 <div class="line">      }</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// factor matrix</span></div>
-<div class="line">      <a id="a113" name="a113"></a><a class="code hl_function" href="cholesky_8hpp.html#ae66ea4c67986682ce4230c63b84b6b4b">cholesky_decompose</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#acf23e690ac8df14a8e1c93973c355238">nN</a>);</div>
+<div class="line">      <a id="a115" name="a115"></a><a class="code hl_function" href="cholesky_8hpp.html#ae66ea4c67986682ce4230c63b84b6b4b">cholesky_decompose</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#acf23e690ac8df14a8e1c93973c355238">nN</a>);</div>
 <div class="line">      <span class="comment">// solve local problem</span></div>
-<div class="line">      <a id="a114" name="a114"></a><a class="code hl_function" href="cholesky_8hpp.html#a3215778be82258d19471e2aef27430b7">cholesky_solve</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#acf23e690ac8df14a8e1c93973c355238">nN</a>, <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#af94fc8a870575cf8acc53b3da660d564">nF</a>, ublas::lower());</div>
+<div class="line">      <a id="a116" name="a116"></a><a class="code hl_function" href="cholesky_8hpp.html#a3215778be82258d19471e2aef27430b7">cholesky_solve</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#acf23e690ac8df14a8e1c93973c355238">nN</a>, <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#af94fc8a870575cf8acc53b3da660d564">nF</a>, ublas::lower());</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// set solution to vector</span></div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecSetValues(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#a271b043f2fa75c55853bca41cc5e2ca4">cTx</a>.<a id="a115" name="a115"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a403517b1f906515a7ee7ec480b5265fb">D1</a>, nb_dofs, &amp;*data.getIndices().begin(),</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecSetValues(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#a271b043f2fa75c55853bca41cc5e2ca4">cTx</a>.<a id="a117" name="a117"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a403517b1f906515a7ee7ec480b5265fb">D1</a>, nb_dofs, &amp;*data.getIndices().begin(),</div>
 <div class="line">                          &amp;*<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpEvaluateInitiallHead.html#af94fc8a870575cf8acc53b3da660d564">nF</a>.begin(), INSERT_VALUES);</div>
 <div class="line"> </div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
@@ -1038,7 +1038,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="keyword">struct </span>OpIntegrateFluxes</div>
 <div class="line">      : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::FaceElementForcesAndSourcesCore::UserDataOperator</a> {</div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a116" name="a116"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpIntegrateFluxes.html#ad212794838303f55d748e137b827f75b">cTx</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a118" name="a118"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpIntegrateFluxes.html#ad212794838303f55d748e137b827f75b">cTx</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Constructor</span></div>
@@ -1049,7 +1049,7 @@ $(function() {
 <div class="line">              fluxes_name, UserDataOperator::OPROW),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpIntegrateFluxes.html#ad212794838303f55d748e137b827f75b">cTx</a>(ctx) {}</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a117" name="a117"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpIntegrateFluxes.html#aa3ba50a09186fa86d7057bd24b3f539e">i</a>;</div>
+<div class="line">    <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a119" name="a119"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpIntegrateFluxes.html#aa3ba50a09186fa86d7057bd24b3f539e">i</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /**</span></div>
 <div class="line"><span class="comment">     * \brief Integrate boundary condition</span></div>
@@ -1058,7 +1058,7 @@ $(function() {
 <div class="line"><span class="comment">     * @param  data data on entity</span></div>
 <div class="line"><span class="comment">     * @return      error code</span></div>
 <div class="line"><span class="comment">     */</span></div>
-<div class="line">    MoFEMErrorCode <a id="a118" name="a118"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpIntegrateFluxes.html#a41d8d1edc3814a433e2bcf10b30a06fc">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line">    MoFEMErrorCode <a id="a120" name="a120"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpIntegrateFluxes.html#a41d8d1edc3814a433e2bcf10b30a06fc">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;data) {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <span class="keywordtype">int</span> nb_dofs = data.getFieldData().size();</div>
@@ -1067,7 +1067,7 @@ $(function() {
 <div class="line">      <span class="comment">// Get base function</span></div>
 <div class="line">      <span class="keyword">auto</span> t_n_hdiv = data.getFTensor1N&lt;3&gt;();</div>
 <div class="line">      <span class="comment">// get normal of face</span></div>
-<div class="line">      <span class="keyword">auto</span> t_normal = <a id="a119" name="a119"></a><a class="code hl_function" href="structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html#ab64719450dbeb9e309b870112d919b21">getFTensor1Normal</a>();</div>
+<div class="line">      <span class="keyword">auto</span> t_normal = <a id="a121" name="a121"></a><a class="code hl_function" href="structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html#ab64719450dbeb9e309b870112d919b21">getFTensor1Normal</a>();</div>
 <div class="line">      <span class="comment">// Integration weight</span></div>
 <div class="line">      <span class="keyword">auto</span> t_w = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8d917e73cbaa9f177cdea72e1e7500dd">getFTensor0IntegrationWeight</a>();</div>
 <div class="line">      <span class="keywordtype">double</span> flux_on_entity = 0;</div>
@@ -1081,7 +1081,7 @@ $(function() {
 <div class="line">        }</div>
 <div class="line">        ++t_w;</div>
 <div class="line">      }</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecSetValue(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpIntegrateFluxes.html#ad212794838303f55d748e137b827f75b">cTx</a>.<a id="a120" name="a120"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a650bc376a5889935b3621c126f6f0947">ghostFlux</a>, 0, flux_on_entity, ADD_VALUES);</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecSetValue(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpIntegrateFluxes.html#ad212794838303f55d748e137b827f75b">cTx</a>.<a id="a122" name="a122"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a650bc376a5889935b3621c126f6f0947">ghostFlux</a>, 0, flux_on_entity, ADD_VALUES);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">    }</div>
 <div class="line">  };</div>
@@ -1094,19 +1094,19 @@ $(function() {
 <div class="line">  <span class="keyword">struct </span>OpPostProcMaterial</div>
 <div class="line">      : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a> {</div>
 <div class="line"> </div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a121" name="a121"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#ac7539e7140e65223f8526466369e69f7">cTx</a>;</div>
-<div class="line">    moab::Interface &amp;<a id="a122" name="a122"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#a2560600b93c2138f0db125dd6bd79623">postProcMesh</a>;</div>
-<div class="line">    std::vector&lt;EntityHandle&gt; &amp;<a id="a123" name="a123"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#a8e6bbce44fd5219eb512d6b09e3e02e2">mapGaussPts</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a123" name="a123"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#ac7539e7140e65223f8526466369e69f7">cTx</a>;</div>
+<div class="line">    moab::Interface &amp;<a id="a124" name="a124"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#a2560600b93c2138f0db125dd6bd79623">postProcMesh</a>;</div>
+<div class="line">    std::vector&lt;EntityHandle&gt; &amp;<a id="a125" name="a125"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#a8e6bbce44fd5219eb512d6b09e3e02e2">mapGaussPts</a>;</div>
 <div class="line"> </div>
 <div class="line">    OpPostProcMaterial(UnsaturatedFlowElement &amp;ctx,</div>
 <div class="line">                       moab::Interface &amp;post_proc_mesh,</div>
 <div class="line">                       std::vector&lt;EntityHandle&gt; &amp;map_gauss_pts,</div>
-<div class="line">                       <span class="keyword">const</span> std::string <a id="a124" name="a124"></a><a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>)</div>
+<div class="line">                       <span class="keyword">const</span> std::string <a id="a126" name="a126"></a><a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>)</div>
 <div class="line">        : <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a>(</div>
 <div class="line">              <a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, ForcesAndSourcesCore::UserDataOperator::OPROW),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#ac7539e7140e65223f8526466369e69f7">cTx</a>(ctx), <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#a2560600b93c2138f0db125dd6bd79623">postProcMesh</a>(post_proc_mesh), <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#a8e6bbce44fd5219eb512d6b09e3e02e2">mapGaussPts</a>(map_gauss_pts) {}</div>
 <div class="line"> </div>
-<div class="line">    MoFEMErrorCode <a id="a125" name="a125"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#aa2697b0276dd10cb73c4c2ab1ec1e73b">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line">    MoFEMErrorCode <a id="a127" name="a127"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#aa2697b0276dd10cb73c4c2ab1ec1e73b">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                          EntitiesFieldData::EntData &amp;data) {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <span class="keywordtype">int</span> nb_dofs = data.getFieldData().size();</div>
@@ -1114,7 +1114,7 @@ $(function() {
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Get EntityHandle of the finite element</span></div>
-<div class="line">      EntityHandle fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">getNumeredEntFiniteElementPtr</a>()-&gt;getEnt();</div>
 <div class="line">      <span class="comment">// Get material block id</span></div>
 <div class="line">      <span class="keywordtype">int</span> block_id;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1OpPostProcMaterial.html#ac7539e7140e65223f8526466369e69f7">cTx</a>.<a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ae97a123bec06261705b8631383b24419">getMaterial</a>(fe_ent, block_id);</div>
@@ -1197,37 +1197,37 @@ $(function() {
 <div class="line"><span class="comment">   * \note Element overloaded only FEMethod::postProcess methods where other</span></div>
 <div class="line"><span class="comment">   * elements are called.</span></div>
 <div class="line"><span class="comment">   */</span></div>
-<div class="line">  <span class="keyword">struct </span>MonitorPostProc : <span class="keyword">public</span> <a id="_a126" name="_a126"></a><a class="code hl_struct" href="structMoFEM_1_1FEMethod.html">MoFEM::FEMethod</a> {</div>
+<div class="line">  <span class="keyword">struct </span><a id="_a128" name="_a128"></a><a class="code hl_struct" href="structMonitorPostProc.html">MonitorPostProc</a> : <span class="keyword">public</span> <a id="_a129" name="_a129"></a><a class="code hl_struct" href="structMoFEM_1_1FEMethod.html">MoFEM::FEMethod</a> {</div>
 <div class="line"> </div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a127" name="a127"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a6a17d15965fa22e98c4388129b0b760b">cTx</a>;</div>
-<div class="line">    boost::shared_ptr&lt;PostProcEle&gt; <a id="a128" name="a128"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a269f0dc3beb496933e830b22d7f33d20">postProc</a>;</div>
-<div class="line">    boost::shared_ptr&lt;ForcesAndSourcesCore&gt; <a id="a129" name="a129"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a42c3c8e3ca639ef7049b20210429bd5a">fluxIntegrate</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a130" name="a130"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a6a17d15965fa22e98c4388129b0b760b">cTx</a>;</div>
+<div class="line">    boost::shared_ptr&lt;PostProcEle&gt; <a id="a131" name="a131"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a269f0dc3beb496933e830b22d7f33d20">postProc</a>;</div>
+<div class="line">    boost::shared_ptr&lt;ForcesAndSourcesCore&gt; <a id="a132" name="a132"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a42c3c8e3ca639ef7049b20210429bd5a">fluxIntegrate</a>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> <a id="a130" name="a130"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#afa656ee82d800e580f8d47ae3a027629">fRequency</a>;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> <a id="a133" name="a133"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#afa656ee82d800e580f8d47ae3a027629">fRequency</a>;</div>
 <div class="line"> </div>
-<div class="line">    MonitorPostProc(UnsaturatedFlowElement &amp;ctx,</div>
+<div class="line">    <a class="code hl_struct" href="structMonitorPostProc.html">MonitorPostProc</a>(UnsaturatedFlowElement &amp;ctx,</div>
 <div class="line">                    boost::shared_ptr&lt;PostProcEle&gt; &amp;post_proc,</div>
 <div class="line">                    boost::shared_ptr&lt;ForcesAndSourcesCore&gt; flux_Integrate,</div>
 <div class="line">                    <span class="keyword">const</span> <span class="keywordtype">int</span> frequency)</div>
 <div class="line">        : <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a6a17d15965fa22e98c4388129b0b760b">cTx</a>(ctx), <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a269f0dc3beb496933e830b22d7f33d20">postProc</a>(post_proc), <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a42c3c8e3ca639ef7049b20210429bd5a">fluxIntegrate</a>(flux_Integrate),</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#afa656ee82d800e580f8d47ae3a027629">fRequency</a>(frequency) {}</div>
 <div class="line"> </div>
-<div class="line">    MoFEMErrorCode <a id="a131" name="a131"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a4debd0758da5bf9f24d32c3d7d837973">preProcess</a>() {</div>
+<div class="line">    MoFEMErrorCode <a id="a134" name="a134"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a4debd0758da5bf9f24d32c3d7d837973">preProcess</a>() {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    MoFEMErrorCode <a id="a132" name="a132"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a07c7a1eebb711670f9abc610b1ed3ba3">operator()</a>() {</div>
+<div class="line">    MoFEMErrorCode <a id="a135" name="a135"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a07c7a1eebb711670f9abc610b1ed3ba3">operator()</a>() {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    MoFEMErrorCode <a id="a133" name="a133"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#aa0c6918cca77c2f72e4fc057eabbff5c">postProcess</a>() {</div>
+<div class="line">    MoFEMErrorCode <a id="a136" name="a136"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#aa0c6918cca77c2f72e4fc057eabbff5c">postProcess</a>() {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">      <span class="comment">// Get time step</span></div>
 <div class="line">      <span class="keywordtype">int</span> step;</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSGetTimeStepNumber(<a id="a134" name="a134"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#a03384a9578841560b71d2705a580c576">ts</a>, &amp;step);</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSGetTimeStepNumber(<a id="a137" name="a137"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#a03384a9578841560b71d2705a580c576">ts</a>, &amp;step);</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">if</span> ((step) % <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#afa656ee82d800e580f8d47ae3a027629">fRequency</a> == 0) {</div>
 <div class="line">        <span class="comment">// Post-process results and save in the file</span></div>
@@ -1254,7 +1254,7 @@ $(function() {
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a6a17d15965fa22e98c4388129b0b760b">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a650bc376a5889935b3621c126f6f0947">ghostFlux</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
 <div class="line">      <span class="keywordtype">double</span> *ghost_flux;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGetArray(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a6a17d15965fa22e98c4388129b0b760b">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a650bc376a5889935b3621c126f6f0947">ghostFlux</a>, &amp;ghost_flux);</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Flux at time %6.4g %6.4g\n&quot;</span>, <a id="a135" name="a135"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#a5eb15bd118b06018110428672a4821c7">ts_t</a>,</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Flux at time %6.4g %6.4g\n&quot;</span>, <a id="a138" name="a138"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#a5eb15bd118b06018110428672a4821c7">ts_t</a>,</div>
 <div class="line">                         ghost_flux[0]);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecRestoreArray(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1MonitorPostProc.html#a6a17d15965fa22e98c4388129b0b760b">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a650bc376a5889935b3621c126f6f0947">ghostFlux</a>, &amp;ghost_flux);</div>
 <div class="line"> </div>
@@ -1263,23 +1263,23 @@ $(function() {
 <div class="line">  };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">  /// \brief add fields</span></div>
-<div class="line"><span class="comment"></span>  MoFEMErrorCode <a id="a136" name="a136"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a6575c02eb2a321533d18b6ae4f381034">addFields</a>(<span class="keyword">const</span> std::string &amp;values, <span class="keyword">const</span> std::string &amp;fluxes,</div>
-<div class="line">                           <span class="keyword">const</span> <span class="keywordtype">int</span> <a id="a137" name="a137"></a><a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>) {</div>
+<div class="line"><span class="comment"></span>  MoFEMErrorCode <a id="a139" name="a139"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a6575c02eb2a321533d18b6ae4f381034">addFields</a>(<span class="keyword">const</span> std::string &amp;values, <span class="keyword">const</span> std::string &amp;fluxes,</div>
+<div class="line">                           <span class="keyword">const</span> <span class="keywordtype">int</span> <a id="a140" name="a140"></a><a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>) {</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">    <span class="comment">// Fields</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a138" name="a138"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(fluxes, <a id="a139" name="a139"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12ab360a65247d7fe5efc6f3a533d47e5c8">HDIV</a>, <a id="a140" name="a140"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a9b4f9fbc1a88eda9b2cde0df10ca23bf">DEMKOWICZ_JACOBI_BASE</a>, 1);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(values, <a id="a141" name="a141"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>, <a id="a142" name="a142"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a141" name="a141"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(fluxes, <a id="a142" name="a142"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12ab360a65247d7fe5efc6f3a533d47e5c8">HDIV</a>, <a id="a143" name="a143"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a9b4f9fbc1a88eda9b2cde0df10ca23bf">DEMKOWICZ_JACOBI_BASE</a>, 1);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(values, <a id="a144" name="a144"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>, <a id="a145" name="a145"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(values + <span class="stringliteral">&quot;_t&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
 <div class="line">    <span class="comment">// CHKERR mField.add_field(fluxes+&quot;_residual&quot;,L2,AINSWORTH_LEGENDRE_BASE,1);</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// meshset consisting all entities in mesh</span></div>
-<div class="line">    EntityHandle root_set = <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a143" name="a143"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_root_set();</div>
+<div class="line">    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> root_set = <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a146" name="a146"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_root_set();</div>
 <div class="line">    <span class="comment">// add entities to field</span></div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span> (<a id="a144" name="a144"></a><a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>, <a id="a145" name="a145"></a><a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efcac77b6cdcfb446c668fd1d7c66cfd15ab">BLOCKSET</a>, it)) {</div>
+<div class="line">    <span class="keywordflow">for</span> (<a id="a147" name="a147"></a><a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>, <a id="a148" name="a148"></a><a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efcac77b6cdcfb446c668fd1d7c66cfd15ab">BLOCKSET</a>, it)) {</div>
 <div class="line">      <span class="keywordflow">if</span> (it-&gt;getName().compare(0, 4, <span class="stringliteral">&quot;SOIL&quot;</span>) != 0)</div>
 <div class="line">        <span class="keywordflow">continue</span>;</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a146" name="a146"></a><a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a503585c5f98812c99a44005153f5b276">dMatMap</a>[it-&gt;getMeshsetId()]-&gt;tEts,</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a149" name="a149"></a><a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a503585c5f98812c99a44005153f5b276">dMatMap</a>[it-&gt;getMeshsetId()]-&gt;tEts,</div>
 <div class="line">                                              MBTET, fluxes);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a503585c5f98812c99a44005153f5b276">dMatMap</a>[it-&gt;getMeshsetId()]-&gt;tEts,</div>
 <div class="line">                                              MBTET, values);</div>
@@ -1290,7 +1290,7 @@ $(function() {
 <div class="line">      <span class="comment">// );</span></div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a147" name="a147"></a><a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(root_set, MBTET, fluxes, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a> + 1);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a150" name="a150"></a><a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(root_set, MBTET, fluxes, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a> + 1);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(root_set, MBTRI, fluxes, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a> + 1);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(root_set, MBTET, values, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(root_set, MBTET, values + <span class="stringliteral">&quot;_t&quot;</span>, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>);</div>
@@ -1299,18 +1299,18 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">  /// \brief add finite elements</span></div>
-<div class="line"><span class="comment"></span>  MoFEMErrorCode <a id="a148" name="a148"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ad8e71d2842b2665c490ef80a279b21b4">addFiniteElements</a>(<span class="keyword">const</span> std::string &amp;fluxes_name,</div>
+<div class="line"><span class="comment"></span>  MoFEMErrorCode <a id="a151" name="a151"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#ad8e71d2842b2665c490ef80a279b21b4">addFiniteElements</a>(<span class="keyword">const</span> std::string &amp;fluxes_name,</div>
 <div class="line">                                   <span class="keyword">const</span> std::string &amp;values_name) {</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Define element &quot;MIX&quot;. Note that this element will work with fluxes_name</span></div>
 <div class="line">    <span class="comment">// and values_name. This reflect bilinear form for the problem</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a149" name="a149"></a><a class="code hl_function" href="group__mofem__fe.html#ga4a5b822f605f1a4faa668595a3f2a5ae">add_finite_element</a>(<span class="stringliteral">&quot;MIX&quot;</span>, <a id="a150" name="a150"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a>);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a151" name="a151"></a><a class="code hl_function" href="group__mofem__fe.html#gad29d66fc5706d3b20e4acd02eac81c9d">modify_finite_element_add_field_row</a>(<span class="stringliteral">&quot;MIX&quot;</span>, fluxes_name);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a152" name="a152"></a><a class="code hl_function" href="group__mofem__fe.html#ga8a9935d6f31d07ed365e6cc76bd041d2">modify_finite_element_add_field_col</a>(<span class="stringliteral">&quot;MIX&quot;</span>, fluxes_name);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a152" name="a152"></a><a class="code hl_function" href="group__mofem__fe.html#ga4a5b822f605f1a4faa668595a3f2a5ae">add_finite_element</a>(<span class="stringliteral">&quot;MIX&quot;</span>, <a id="a153" name="a153"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a154" name="a154"></a><a class="code hl_function" href="group__mofem__fe.html#gad29d66fc5706d3b20e4acd02eac81c9d">modify_finite_element_add_field_row</a>(<span class="stringliteral">&quot;MIX&quot;</span>, fluxes_name);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a155" name="a155"></a><a class="code hl_function" href="group__mofem__fe.html#ga8a9935d6f31d07ed365e6cc76bd041d2">modify_finite_element_add_field_col</a>(<span class="stringliteral">&quot;MIX&quot;</span>, fluxes_name);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__fe.html#gad29d66fc5706d3b20e4acd02eac81c9d">modify_finite_element_add_field_row</a>(<span class="stringliteral">&quot;MIX&quot;</span>, values_name);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__fe.html#ga8a9935d6f31d07ed365e6cc76bd041d2">modify_finite_element_add_field_col</a>(<span class="stringliteral">&quot;MIX&quot;</span>, values_name);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a153" name="a153"></a><a class="code hl_function" href="group__mofem__fe.html#gaef2eb2d85b90b55bd7c4f355e10fa498">modify_finite_element_add_field_data</a>(<span class="stringliteral">&quot;MIX&quot;</span>, fluxes_name);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a156" name="a156"></a><a class="code hl_function" href="group__mofem__fe.html#gaef2eb2d85b90b55bd7c4f355e10fa498">modify_finite_element_add_field_data</a>(<span class="stringliteral">&quot;MIX&quot;</span>, fluxes_name);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__fe.html#gaef2eb2d85b90b55bd7c4f355e10fa498">modify_finite_element_add_field_data</a>(<span class="stringliteral">&quot;MIX&quot;</span>, values_name);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__fe.html#gaef2eb2d85b90b55bd7c4f355e10fa498">modify_finite_element_add_field_data</a>(<span class="stringliteral">&quot;MIX&quot;</span>,</div>
 <div class="line">                                                       values_name + <span class="stringliteral">&quot;_t&quot;</span>);</div>
@@ -1320,7 +1320,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efcac77b6cdcfb446c668fd1d7c66cfd15ab">BLOCKSET</a>, it)) {</div>
 <div class="line">      <span class="keywordflow">if</span> (it-&gt;getName().compare(0, 4, <span class="stringliteral">&quot;SOIL&quot;</span>) != 0)</div>
 <div class="line">        <span class="keywordflow">continue</span>;</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a154" name="a154"></a><a class="code hl_function" href="group__mofem__fe.html#gacbb3bbf1fa80b85848bc3cfcd604182b">add_ents_to_finite_element_by_type</a>(</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a157" name="a157"></a><a class="code hl_function" href="group__mofem__fe.html#gacbb3bbf1fa80b85848bc3cfcd604182b">add_ents_to_finite_element_by_type</a>(</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a503585c5f98812c99a44005153f5b276">dMatMap</a>[it-&gt;getMeshsetId()]-&gt;tEts, MBTET, <span class="stringliteral">&quot;MIX&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -1368,18 +1368,18 @@ $(function() {
 <div class="line"><span class="comment">   * @param  ref_level mesh refinement on which mesh problem you like to built.</span></div>
 <div class="line"><span class="comment">   * @return           error code</span></div>
 <div class="line"><span class="comment">   */</span></div>
-<div class="line">  MoFEMErrorCode <a id="a155" name="a155"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a38264c6e19bcaeb899af4f6fa1a42d99">buildProblem</a>(<a class="code hl_class" href="classRange.html">Range</a> zero_flux_ents,</div>
+<div class="line">  MoFEMErrorCode <a id="a158" name="a158"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a38264c6e19bcaeb899af4f6fa1a42d99">buildProblem</a>(<a class="code hl_class" href="classRange.html">Range</a> zero_flux_ents,</div>
 <div class="line">                              BitRefLevel ref_level = BitRefLevel().set(0)) {</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Build fields</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a156" name="a156"></a><a class="code hl_function" href="group__mofem__field.html#ga126ea0bb04802f9d1946435279c3da56">build_fields</a>();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a159" name="a159"></a><a class="code hl_function" href="group__mofem__field.html#ga126ea0bb04802f9d1946435279c3da56">build_fields</a>();</div>
 <div class="line">    <span class="comment">// Build finite elements</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a157" name="a157"></a><a class="code hl_function" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">build_finite_elements</a>(<span class="stringliteral">&quot;MIX&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a160" name="a160"></a><a class="code hl_function" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">build_finite_elements</a>(<span class="stringliteral">&quot;MIX&quot;</span>);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">build_finite_elements</a>(<span class="stringliteral">&quot;MIX_BCFLUX&quot;</span>);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a class="code hl_function" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">build_finite_elements</a>(<span class="stringliteral">&quot;MIX_BCVALUE&quot;</span>);</div>
 <div class="line">    <span class="comment">// Build adjacencies of degrees of freedom and elements</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a158" name="a158"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a727653d1367e758daf2a74cb65d4dfa5">build_adjacencies</a>(ref_level);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a161" name="a161"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a727653d1367e758daf2a74cb65d4dfa5">build_adjacencies</a>(ref_level);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">//  create DM instance</span></div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreate(PETSC_COMM_WORLD, &amp;<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#aa42674938d352c8ca205f6068413bd8e">dM</a>);</div>
@@ -1401,7 +1401,7 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMSetUp(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#aa42674938d352c8ca205f6068413bd8e">dM</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// remove zero flux dofs</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a159" name="a159"></a><a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;ProblemsManager&gt;()-&gt;removeDofsOnEntities(</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>.<a id="a162" name="a162"></a><a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;ProblemsManager&gt;()-&gt;removeDofsOnEntities(</div>
 <div class="line">        <span class="stringliteral">&quot;MIX&quot;</span>, <span class="stringliteral">&quot;FLUXES&quot;</span>, zero_flux_ents);</div>
 <div class="line"> </div>
 <div class="line">    PetscSection section;</div>
@@ -1414,19 +1414,19 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  boost::shared_ptr&lt;ForcesAndSourcesCore&gt;</div>
-<div class="line">      <a id="a160" name="a160"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#ad0285891146b4536ea7f5ca9af463fed">feFaceBc</a>; <span class="comment">///&lt; Elemnet to calculate essential bc</span></div>
+<div class="line">      <a id="a163" name="a163"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#ad0285891146b4536ea7f5ca9af463fed">feFaceBc</a>; <span class="comment">///&lt; Elemnet to calculate essential bc</span></div>
 <div class="line">  boost::shared_ptr&lt;ForcesAndSourcesCore&gt;</div>
-<div class="line">      <a id="a161" name="a161"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a5839fa62d00204d6e6b9e4369ce4f15b">feFaceRhs</a>; <span class="comment">///&lt; Face element apply natural bc</span></div>
+<div class="line">      <a id="a164" name="a164"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a5839fa62d00204d6e6b9e4369ce4f15b">feFaceRhs</a>; <span class="comment">///&lt; Face element apply natural bc</span></div>
 <div class="line">  boost::shared_ptr&lt;ForcesAndSourcesCore&gt;</div>
-<div class="line">      <a id="a162" name="a162"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a9cc4a6cf7e686802fb935cc49001a7fa">feVolInitialPc</a>; <span class="comment">///&lt; Calculate inital boundary conditions</span></div>
+<div class="line">      <a id="a165" name="a165"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a9cc4a6cf7e686802fb935cc49001a7fa">feVolInitialPc</a>; <span class="comment">///&lt; Calculate inital boundary conditions</span></div>
 <div class="line">  boost::shared_ptr&lt;ForcesAndSourcesCore&gt;</div>
-<div class="line">      <a id="a163" name="a163"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a6fd2f3d90ff6aa63beaea87a9df97697">feVolRhs</a>; <span class="comment">///&lt; Assemble residual vector</span></div>
-<div class="line">  boost::shared_ptr&lt;ForcesAndSourcesCore&gt; <a id="a164" name="a164"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a0f2b6c2bf977369dd3ec5d75e19c82a7">feVolLhs</a>; <span class="comment">///&lt; Assemble tangent matrix</span></div>
+<div class="line">      <a id="a166" name="a166"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a6fd2f3d90ff6aa63beaea87a9df97697">feVolRhs</a>; <span class="comment">///&lt; Assemble residual vector</span></div>
+<div class="line">  boost::shared_ptr&lt;ForcesAndSourcesCore&gt; <a id="a167" name="a167"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a0f2b6c2bf977369dd3ec5d75e19c82a7">feVolLhs</a>; <span class="comment">///&lt; Assemble tangent matrix</span></div>
 <div class="line">  boost::shared_ptr&lt;MethodForForceScaling&gt;</div>
-<div class="line">      <a id="a165" name="a165"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a379cfecc59dffa153f7722a5b5c0f0ae">scaleMethodFlux</a>; <span class="comment">///&lt; Method scaling fluxes</span></div>
+<div class="line">      <a id="a168" name="a168"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a379cfecc59dffa153f7722a5b5c0f0ae">scaleMethodFlux</a>; <span class="comment">///&lt; Method scaling fluxes</span></div>
 <div class="line">  boost::shared_ptr&lt;MethodForForceScaling&gt;</div>
-<div class="line">      <a id="a166" name="a166"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#aecbf282c1785b0a9c17e29bb58da3507">scaleMethodValue</a>;                  <span class="comment">///&lt; Method scaling values</span></div>
-<div class="line">  boost::shared_ptr&lt;FEMethod&gt; <a id="a167" name="a167"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7699540a67c78d64ebac42e6b74fa1a3">tsMonitor</a>; <span class="comment">///&lt; Element used by TS monitor to</span><span class="comment"></span></div>
+<div class="line">      <a id="a169" name="a169"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#aecbf282c1785b0a9c17e29bb58da3507">scaleMethodValue</a>;                  <span class="comment">///&lt; Method scaling values</span></div>
+<div class="line">  boost::shared_ptr&lt;FEMethod&gt; <a id="a170" name="a170"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7699540a67c78d64ebac42e6b74fa1a3">tsMonitor</a>; <span class="comment">///&lt; Element used by TS monitor to</span><span class="comment"></span></div>
 <div class="line"><span class="comment">                                         ///&lt; postprocess results at time step</span></div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line">  boost::shared_ptr&lt;VectorDouble&gt;</div>
@@ -1437,29 +1437,29 @@ $(function() {
 <div class="line"><span class="comment">   * \brief Set integration rule to volume elements</span></div>
 <div class="line"><span class="comment">   *</span></div>
 <div class="line"><span class="comment">   */</span></div>
-<div class="line">  <span class="keyword">struct </span><a id="_a168" name="_a168"></a><a class="code hl_struct" href="structVolRule.html">VolRule</a> {</div>
-<div class="line">    <span class="keywordtype">int</span> <a id="a169" name="a169"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1VolRule.html#a6f849a71de35a9d1a04fc4824ffc9eef">operator()</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span> p_data)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 3 * p_data; }</div>
+<div class="line">  <span class="keyword">struct </span><a id="_a171" name="_a171"></a><a class="code hl_struct" href="structVolRule.html">VolRule</a> {</div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a172" name="a172"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1VolRule.html#a6f849a71de35a9d1a04fc4824ffc9eef">operator()</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span> p_data)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 3 * p_data; }</div>
 <div class="line">  };<span class="comment"></span></div>
 <div class="line"><span class="comment">  /**</span></div>
 <div class="line"><span class="comment">   * \brief Set integration rule to boundary elements</span></div>
 <div class="line"><span class="comment">   *</span></div>
 <div class="line"><span class="comment">   */</span></div>
-<div class="line">  <span class="keyword">struct </span><a id="_a170" name="_a170"></a><a class="code hl_struct" href="structFaceRule.html">FaceRule</a> {</div>
-<div class="line">    <span class="keywordtype">int</span> <a id="a171" name="a171"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1FaceRule.html#a5bb53a68d96d242c4f219fd4789990ef">operator()</a>(<span class="keywordtype">int</span> p_row, <span class="keywordtype">int</span> p_col, <span class="keywordtype">int</span> p_data)<span class="keyword"> const </span>{</div>
+<div class="line">  <span class="keyword">struct </span><a id="_a173" name="_a173"></a><a class="code hl_struct" href="structFaceRule.html">FaceRule</a> {</div>
+<div class="line">    <span class="keywordtype">int</span> <a id="a174" name="a174"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1FaceRule.html#a5bb53a68d96d242c4f219fd4789990ef">operator()</a>(<span class="keywordtype">int</span> p_row, <span class="keywordtype">int</span> p_col, <span class="keywordtype">int</span> p_data)<span class="keyword"> const </span>{</div>
 <div class="line">      <span class="keywordflow">return</span> 2 * p_data;</div>
 <div class="line">    }</div>
 <div class="line">  };</div>
 <div class="line"> </div>
-<div class="line">  std::vector&lt;int&gt; <a id="a172" name="a172"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>;</div>
-<div class="line">  VectorDouble <a id="a173" name="a173"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7370d1f08a84f3912fd634254362fde6">bcVecVals</a>, <a id="a174" name="a174"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a55556da4ffa7aeeb97bff64f336d8186">vecValsOnBc</a>;</div>
+<div class="line">  std::vector&lt;int&gt; <a id="a175" name="a175"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>;</div>
+<div class="line">  VectorDouble <a id="a176" name="a176"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7370d1f08a84f3912fd634254362fde6">bcVecVals</a>, <a id="a177" name="a177"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a55556da4ffa7aeeb97bff64f336d8186">vecValsOnBc</a>;</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">  /**</span></div>
 <div class="line"><span class="comment">   * \brief Pre-peprocessing</span></div>
 <div class="line"><span class="comment">   * Set head pressure rate and get inital essential boundary conditions</span></div>
 <div class="line"><span class="comment">   */</span></div>
 <div class="line">  <span class="keyword">struct </span>preProcessVol {</div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a175" name="a175"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>;</div>
-<div class="line">    boost::shared_ptr&lt;ForcesAndSourcesCore&gt; <a id="a176" name="a176"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a178" name="a178"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>;</div>
+<div class="line">    boost::shared_ptr&lt;ForcesAndSourcesCore&gt; <a id="a179" name="a179"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>;</div>
 <div class="line">    <span class="comment">// std::string mArk;</span></div>
 <div class="line"> </div>
 <div class="line">    preProcessVol(</div>
@@ -1467,17 +1467,17 @@ $(function() {
 <div class="line">        boost::shared_ptr&lt;ForcesAndSourcesCore&gt; &amp;fe_ptr <span class="comment">/*,std::string mark*/</span></div>
 <div class="line">        )</div>
 <div class="line">        : <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>(ctx), <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>(fe_ptr) <span class="comment">/*,mArk(mark)*/</span> {}</div>
-<div class="line">    MoFEMErrorCode <a id="a177" name="a177"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#aac5270580e7672251a85a77cf7516355">operator()</a>() {</div>
+<div class="line">    MoFEMErrorCode <a id="a180" name="a180"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#aac5270580e7672251a85a77cf7516355">operator()</a>() {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <span class="comment">// Update pressure rates</span></div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>-&gt;mField.getInterface&lt;VecManager&gt;()-&gt;setOtherLocalGhostVector(</div>
-<div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>-&gt;problemPtr, <span class="stringliteral">&quot;VALUES&quot;</span>, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;VALUES&quot;</span>) + <span class="stringliteral">&quot;_t&quot;</span>, <a id="a178" name="a178"></a><a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>,</div>
+<div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>-&gt;problemPtr, <span class="stringliteral">&quot;VALUES&quot;</span>, <span class="keywordtype">string</span>(<span class="stringliteral">&quot;VALUES&quot;</span>) + <span class="stringliteral">&quot;_t&quot;</span>, <a id="a181" name="a181"></a><a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>,</div>
 <div class="line">          <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>-&gt;ts_u_t, INSERT_VALUES, SCATTER_REVERSE);</div>
 <div class="line">      <span class="keywordflow">switch</span> (<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>-&gt;ts_ctx) {</div>
 <div class="line">      <span class="keywordflow">case</span> TSMethod::CTX_TSSETIFUNCTION:</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecSetOption(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>-&gt;ts_F, VEC_IGNORE_NEGATIVE_INDICES,</div>
 <div class="line">                            PETSC_TRUE);</div>
-<div class="line">        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a id="a179" name="a179"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a9a447aaf2960c312fc714a557a80ad58">bcIndices</a>.empty()) {</div>
+<div class="line">        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a id="a182" name="a182"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a9a447aaf2960c312fc714a557a80ad58">bcIndices</a>.empty()) {</div>
 <div class="line">          <span class="keywordtype">double</span> <a class="code hl_variable" href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a>;</div>
 <div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a379cfecc59dffa153f7722a5b5c0f0ae">scaleMethodFlux</a>-&gt;getForceScale(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>-&gt;ts_t, <a class="code hl_variable" href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a>);</div>
 <div class="line">          <span class="keywordflow">if</span> (<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>.size() != <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a9a447aaf2960c312fc714a557a80ad58">bcIndices</a>.size()) {</div>
@@ -1486,7 +1486,7 @@ $(function() {
 <div class="line">            <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7370d1f08a84f3912fd634254362fde6">bcVecVals</a>.resize(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>.size(), <span class="keyword">false</span>);</div>
 <div class="line">            <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a55556da4ffa7aeeb97bff64f336d8186">vecValsOnBc</a>.resize(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>.size(), <span class="keyword">false</span>);</div>
 <div class="line">          }</div>
-<div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGetValues(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a id="a180" name="a180"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#aef4b56931e9515f1c9dee1e737484129">D0</a>, <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>.size(),</div>
+<div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGetValues(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a id="a183" name="a183"></a><a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#aef4b56931e9515f1c9dee1e737484129">D0</a>, <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>.size(),</div>
 <div class="line">                              &amp;*<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>.begin(), &amp;*<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7370d1f08a84f3912fd634254362fde6">bcVecVals</a>.begin());</div>
 <div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGetValues(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#a218857c6a317f802a34afa63fd44fcd0">fePtr</a>-&gt;ts_u, <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>.size(),</div>
 <div class="line">                              &amp;*<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1preProcessVol.html#af5b9622f0672fc017d306ccc959c536e">cTx</a>.<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a67c4c0ac0e858f629910a6e5a8bc729a">bcVecIds</a>.begin(),</div>
@@ -1520,15 +1520,15 @@ $(function() {
 <div class="line"><span class="comment">   * Assemble vectors and matrices and apply essential boundary conditions</span></div>
 <div class="line"><span class="comment">   */</span></div>
 <div class="line">  <span class="keyword">struct </span>postProcessVol {</div>
-<div class="line">    UnsaturatedFlowElement &amp;<a id="a181" name="a181"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1postProcessVol.html#ab6cff02ae8d4886e3a2599d58a298d09">cTx</a>;</div>
-<div class="line">    boost::shared_ptr&lt;ForcesAndSourcesCore&gt; <a id="a182" name="a182"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1postProcessVol.html#ae10f2cdaaae0abdcd9fd559d8b337ebb">fePtr</a>;</div>
+<div class="line">    UnsaturatedFlowElement &amp;<a id="a184" name="a184"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1postProcessVol.html#ab6cff02ae8d4886e3a2599d58a298d09">cTx</a>;</div>
+<div class="line">    boost::shared_ptr&lt;ForcesAndSourcesCore&gt; <a id="a185" name="a185"></a><a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1postProcessVol.html#ae10f2cdaaae0abdcd9fd559d8b337ebb">fePtr</a>;</div>
 <div class="line">    <span class="comment">// std::string mArk;</span></div>
 <div class="line">    postProcessVol(</div>
 <div class="line">        UnsaturatedFlowElement &amp;ctx,</div>
 <div class="line">        boost::shared_ptr&lt;ForcesAndSourcesCore&gt; &amp;fe_ptr <span class="comment">//,std::string mark</span></div>
 <div class="line">        )</div>
 <div class="line">        : <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1postProcessVol.html#ab6cff02ae8d4886e3a2599d58a298d09">cTx</a>(ctx), <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1postProcessVol.html#ae10f2cdaaae0abdcd9fd559d8b337ebb">fePtr</a>(fe_ptr) <span class="comment">/*,mArk(mark)*/</span> {}</div>
-<div class="line">    MoFEMErrorCode <a id="a183" name="a183"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1postProcessVol.html#a6def7ed2575973cd4126c8a853e3df09">operator()</a>() {</div>
+<div class="line">    MoFEMErrorCode <a id="a186" name="a186"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement_1_1postProcessVol.html#a6def7ed2575973cd4126c8a853e3df09">operator()</a>() {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <span class="keywordflow">switch</span> (<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement_1_1postProcessVol.html#ae10f2cdaaae0abdcd9fd559d8b337ebb">fePtr</a>-&gt;ts_ctx) {</div>
 <div class="line">      <span class="keywordflow">case</span> TSMethod::CTX_TSSETIJACOBIAN: {</div>
@@ -1573,15 +1573,15 @@ $(function() {
 <div class="line"><span class="comment">   * @return error code</span></div>
 <div class="line"><span class="comment">   */</span></div>
 <div class="line">  MoFEMErrorCode</div>
-<div class="line">  <a id="a184" name="a184"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a2fe2664b246c11462fc96422231627dc">setFiniteElements</a>(ForcesAndSourcesCore::RuleHookFun vol_rule = <a class="code hl_struct" href="structVolRule.html">VolRule</a>(),</div>
+<div class="line">  <a id="a187" name="a187"></a><a class="code hl_function" href="structMixTransport_1_1UnsaturatedFlowElement.html#a2fe2664b246c11462fc96422231627dc">setFiniteElements</a>(ForcesAndSourcesCore::RuleHookFun vol_rule = <a class="code hl_struct" href="structVolRule.html">VolRule</a>(),</div>
 <div class="line">                    ForcesAndSourcesCore::RuleHookFun face_rule = <a class="code hl_struct" href="structFaceRule.html">FaceRule</a>()) {</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// create finite element instances</span></div>
 <div class="line">    <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#ad0285891146b4536ea7f5ca9af463fed">feFaceBc</a> = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(</div>
-<div class="line">        <span class="keyword">new</span> FaceElementForcesAndSourcesCore(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>));</div>
+<div class="line">        <span class="keyword">new</span> <a id="_a188" name="_a188"></a><a class="code hl_class" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>));</div>
 <div class="line">    <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a5839fa62d00204d6e6b9e4369ce4f15b">feFaceRhs</a> = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(</div>
-<div class="line">        <span class="keyword">new</span> FaceElementForcesAndSourcesCore(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>));</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_class" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>));</div>
 <div class="line">    <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a9cc4a6cf7e686802fb935cc49001a7fa">feVolInitialPc</a> = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(</div>
 <div class="line">        <span class="keyword">new</span> VolumeElementForcesAndSourcesCore(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>));</div>
 <div class="line">    <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a0f2b6c2bf977369dd3ec5d75e19c82a7">feVolLhs</a> = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(</div>
@@ -1601,12 +1601,12 @@ $(function() {
 <div class="line">    <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a0f2b6c2bf977369dd3ec5d75e19c82a7">feVolLhs</a>-&gt;postProcessHook = postProcessVol(*<span class="keyword">this</span>, <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a0f2b6c2bf977369dd3ec5d75e19c82a7">feVolLhs</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Set Piola transform</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a185" name="_a185"></a><a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;2, 3, 3&gt;::add</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#ad0285891146b4536ea7f5ca9af463fed">feFaceBc</a>-&gt;getOpPtrVector(), {HDIV});</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a189" name="_a189"></a><a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;2, 3, 3&gt;::add</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#ad0285891146b4536ea7f5ca9af463fed">feFaceBc</a>-&gt;getOpPtrVector(), {HDIV});</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;2, 3, 3&gt;::add</a>(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a5839fa62d00204d6e6b9e4369ce4f15b">feFaceRhs</a>-&gt;getOpPtrVector(), {HDIV});</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// create method for setting history for fluxes on boundary</span></div>
 <div class="line">    <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a379cfecc59dffa153f7722a5b5c0f0ae">scaleMethodFlux</a> = boost::shared_ptr&lt;MethodForForceScaling&gt;(</div>
-<div class="line">        <span class="keyword">new</span> <a id="_a186" name="_a186"></a><a class="code hl_struct" href="structTimeForceScale.html">TimeForceScale</a>(<span class="stringliteral">&quot;-flux_history&quot;</span>, <span class="keyword">false</span>));</div>
+<div class="line">        <span class="keyword">new</span> <a id="_a190" name="_a190"></a><a class="code hl_struct" href="structTimeForceScale.html">TimeForceScale</a>(<span class="stringliteral">&quot;-flux_history&quot;</span>, <span class="keyword">false</span>));</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// create method for setting history for presure heads on boundary</span></div>
 <div class="line">    <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#aecbf282c1785b0a9c17e29bb58da3507">scaleMethodValue</a> = boost::shared_ptr&lt;MethodForForceScaling&gt;(</div>
@@ -1690,7 +1690,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">      post_process-&gt;getOpPtrVector().push_back(</div>
 <div class="line"> </div>
-<div class="line">          <span class="keyword">new</span> <a id="a187" name="a187"></a><a class="code hl_typedef" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(post_process-&gt;getPostProcMesh(),</div>
+<div class="line">          <span class="keyword">new</span> <a id="a191" name="a191"></a><a class="code hl_typedef" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(post_process-&gt;getPostProcMesh(),</div>
 <div class="line">                      post_process-&gt;getMapGaussPts(),</div>
 <div class="line"> </div>
 <div class="line">                      {{<span class="stringliteral">&quot;VALUES&quot;</span>, values_ptr}},</div>
@@ -1715,7 +1715,7 @@ $(function() {
 <div class="line">    <span class="comment">// Integrate fluxes on boundary</span></div>
 <div class="line">    boost::shared_ptr&lt;ForcesAndSourcesCore&gt; flux_integrate;</div>
 <div class="line">    flux_integrate = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(</div>
-<div class="line">        <span class="keyword">new</span> FaceElementForcesAndSourcesCore(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>));</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_class" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>(<a class="code hl_variable" href="structMixTransport_1_1MixTransportElement.html#a68f344cfbf6b208f5930951ca427f8f7">mField</a>));</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;2, 3, 3&gt;::add</a>(flux_integrate-&gt;getOpPtrVector(), {HDIV});</div>
 <div class="line">    flux_integrate-&gt;getOpPtrVector().push_back(</div>
 <div class="line">        <span class="keyword">new</span> OpIntegrateFluxes(*<span class="keyword">this</span>, <span class="stringliteral">&quot;FLUXES&quot;</span>));</div>
@@ -1728,10 +1728,10 @@ $(function() {
 <div class="line">    PetscOptionsEnd();</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7699540a67c78d64ebac42e6b74fa1a3">tsMonitor</a> = boost::shared_ptr&lt;FEMethod&gt;(</div>
-<div class="line">        <span class="keyword">new</span> MonitorPostProc(*<span class="keyword">this</span>, post_process, flux_integrate, frequency));</div>
-<div class="line">    TsCtx *<a id="a188" name="a188"></a><a class="code hl_variable" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>;</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="structMonitorPostProc.html">MonitorPostProc</a>(*<span class="keyword">this</span>, post_process, flux_integrate, frequency));</div>
+<div class="line">    TsCtx *<a id="a192" name="a192"></a><a class="code hl_variable" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>;</div>
 <div class="line">    DMMoFEMGetTsCtx(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#aa42674938d352c8ca205f6068413bd8e">dM</a>, &amp;<a class="code hl_variable" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>);</div>
-<div class="line">    <a class="code hl_variable" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>-&gt;<a id="a189" name="a189"></a><a class="code hl_function" href="structMoFEM_1_1TsCtx.html#ae67dfa33aa6436e66f37d3d40cba565d">getPostProcessMonitor</a>().push_back(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7699540a67c78d64ebac42e6b74fa1a3">tsMonitor</a>);</div>
+<div class="line">    <a class="code hl_variable" href="level__set_8cpp.html#ae194ec50b15d7b114a4e5e5a4cb8e218">ts_ctx</a>-&gt;<a id="a193" name="a193"></a><a class="code hl_function" href="structMoFEM_1_1TsCtx.html#ae67dfa33aa6436e66f37d3d40cba565d">getPostProcessMonitor</a>().push_back(<a class="code hl_variable" href="structMixTransport_1_1UnsaturatedFlowElement.html#a7699540a67c78d64ebac42e6b74fa1a3">tsMonitor</a>);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
@@ -1747,8 +1747,8 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateMatrix(dM, &amp;Aij);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateGlobalVector(dM, &amp;D0);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(D0, &amp;D1);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(D0, &amp;<a id="a190" name="a190"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(D0, &amp;<a id="a191" name="a191"></a><a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(D0, &amp;<a id="a194" name="a194"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecDuplicate(D0, &amp;<a id="a195" name="a195"></a><a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line">    <span class="keywordtype">int</span> ghosts[] = {0};</div>
 <div class="line">    <span class="keywordtype">int</span> nb_locals = mField.get_comm_rank() == 0 ? 1 : 0;</div>
 <div class="line">    <span class="keywordtype">int</span> nb_ghosts = mField.get_comm_rank() &gt; 0 ? 1 : 0;</div>
@@ -1909,9 +1909,12 @@ $(function() {
 <div class="ttc" id="abase__functions_8c_html_a56d2889a19d8d7affaa85cfca4aadd67"><div class="ttname"><a href="base__functions_8c.html#a56d2889a19d8d7affaa85cfca4aadd67">ierr</a></div><div class="ttdeci">static PetscErrorCode ierr</div><div class="ttdef"><b>Definition</b> <a href="base__functions_8c_source.html#l00013">base_functions.c:13</a></div></div>
 <div class="ttc" id="acholesky_8hpp_html_a3215778be82258d19471e2aef27430b7"><div class="ttname"><a href="cholesky_8hpp.html#a3215778be82258d19471e2aef27430b7">cholesky_solve</a></div><div class="ttdeci">void cholesky_solve(const TRIA &amp;L, VEC &amp;x, ublas::lower)</div><div class="ttdoc">solve system L L^T x = b inplace</div><div class="ttdef"><b>Definition</b> <a href="cholesky_8hpp_source.html#l00221">cholesky.hpp:221</a></div></div>
 <div class="ttc" id="acholesky_8hpp_html_ae66ea4c67986682ce4230c63b84b6b4b"><div class="ttname"><a href="cholesky_8hpp.html#ae66ea4c67986682ce4230c63b84b6b4b">cholesky_decompose</a></div><div class="ttdeci">size_t cholesky_decompose(const MATRIX &amp;A, TRIA &amp;L)</div><div class="ttdoc">decompose the symmetric positive definit matrix A into product L L^T.</div><div class="ttdef"><b>Definition</b> <a href="cholesky_8hpp_source.html#l00052">cholesky.hpp:52</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor0_html"><div class="ttname"><a href="classFTensor_1_1Tensor0.html">FTensor::Tensor0</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor0_8hpp_source.html#l00016">Tensor0.hpp:17</a></div></div>
+<div class="ttc" id="aclassFaceElementForcesAndSourcesCore_html"><div class="ttname"><a href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a></div><div class="ttdeci">@ ROW</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264"><div class="ttname"><a href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a></div><div class="ttdeci">@ MF_ZERO</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00111">definitions.h:111</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>
@@ -2096,7 +2099,8 @@ $(function() {
 <div class="ttc" id="astructMoFEM_1_1UnknownInterface_html_a7ab248ec45fca778800dcd92e5171beb"><div class="ttname"><a href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">MoFEM::UnknownInterface::getInterface</a></div><div class="ttdeci">MoFEMErrorCode getInterface(IFACE *&amp;iface) const</div><div class="ttdoc">Get interface reference to pointer of interface.</div><div class="ttdef"><b>Definition</b> <a href="UnknownInterface_8hpp_source.html#l00093">UnknownInterface.hpp:93</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator_html"><div class="ttname"><a href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator</a></div><div class="ttdef"><b>Definition</b> <a href="VolumeElementForcesAndSourcesCore_8hpp_source.html#l00109">VolumeElementForcesAndSourcesCore.hpp:110</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator_html_a27ada41314b2540fb0a722aad7257051"><div class="ttname"><a href="structMoFEM_1_1VolumeElementForcesAndSourcesCore_1_1UserDataOperator.html#a27ada41314b2540fb0a722aad7257051">MoFEM::VolumeElementForcesAndSourcesCore::UserDataOperator::getVolume</a></div><div class="ttdeci">double getVolume() const</div><div class="ttdoc">element volume (linear geometry)</div><div class="ttdef"><b>Definition</b> <a href="VolumeElementForcesAndSourcesCore_8hpp_source.html#l00162">VolumeElementForcesAndSourcesCore.hpp:162</a></div></div>
-<div class="ttc" id="astructTimeForceScale_html"><div class="ttname"><a href="structTimeForceScale.html">TimeForceScale</a></div><div class="ttdoc">Force scale operator for reading two columns.</div><div class="ttdef"><b>Definition</b> <a href="TimeForceScale_8hpp_source.html#l00018">TimeForceScale.hpp:18</a></div></div>
+<div class="ttc" id="astructMonitorPostProc_html"><div class="ttname"><a href="structMonitorPostProc.html">MonitorPostProc</a></div><div class="ttdef"><b>Definition</b> <a href="nonlinear__dynamics_8cpp_source.html#l00030">nonlinear_dynamics.cpp:30</a></div></div>
+<div class="ttc" id="astructTimeForceScale_html"><div class="ttname"><a href="structTimeForceScale.html">TimeForceScale</a></div><div class="ttdoc">Force scale operator for reading two columns.</div><div class="ttdef"><b>Definition</b> <a href="tutorials_2src_2TimeForceScale_8hpp_source.html#l00018">TimeForceScale.hpp:18</a></div></div>
 <div class="ttc" id="astructVolRule_html"><div class="ttname"><a href="structVolRule.html">VolRule</a></div><div class="ttdoc">Set integration rule to volume elements.</div><div class="ttdef"><b>Definition</b> <a href="simple__interface_8cpp_source.html#l00088">simple_interface.cpp:88</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->

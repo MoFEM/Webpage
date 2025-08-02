@@ -222,7 +222,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   56</span>  <span class="keywordflow">for</span> (Range::const_iterator tit = <a class="code hl_namespace" href="namespacesurface.html">surface</a>.begin(); tit != <a class="code hl_namespace" href="namespacesurface.html">surface</a>.end();</div>
 <div class="line"><span class="lineno">   57</span>       tit++) {</div>
 <div class="line"><span class="lineno">   58</span>    <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno">   59</span>    <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno">   60</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(*tit, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   61</span>    <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MatrixDouble</a> coords(num_nodes, 3);</div>
 <div class="line"><span class="lineno">   62</span>    <span class="keywordflow">if</span> (th) {</div>
@@ -230,7 +230,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   64</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">   65</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_coords(conn, num_nodes, &amp;coords(0, 0));</div>
 <div class="line"><span class="lineno">   66</span>    }</div>
-<div class="line"><span class="lineno">   67</span>    EntityHandle new_verts[num_nodes];</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> new_verts[num_nodes];</div>
 <div class="line"><span class="lineno">   68</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn != num_nodes; nn++) {</div>
 <div class="line"><span class="lineno">   69</span>      <span class="keywordflow">if</span> (verts_map.find(conn[nn]) != verts_map.end()) {</div>
 <div class="line"><span class="lineno">   70</span>        new_verts[nn] = verts_map[conn[nn]];</div>
@@ -261,7 +261,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   95</span>        verts_map[conn[nn]] = new_verts[nn];</div>
 <div class="line"><span class="lineno">   96</span>      }</div>
 <div class="line"><span class="lineno">   97</span>    }</div>
-<div class="line"><span class="lineno">   98</span>    EntityHandle ele;</div>
+<div class="line"><span class="lineno">   98</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ele;</div>
 <div class="line"><span class="lineno">   99</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_element(MBTRI, new_verts, num_nodes, ele);</div>
 <div class="line"><span class="lineno">  100</span>    sUrface.insert(ele);</div>
 <div class="line"><span class="lineno">  101</span>  }</div>
@@ -328,7 +328,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  162</span> </div>
 <div class="line"><span class="lineno">  163</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> f : surface_edges) {</div>
 <div class="line"><span class="lineno">  164</span>    <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno">  165</span>    <span class="keyword">const</span> EntityHandle *conn_skin;</div>
+<div class="line"><span class="lineno">  165</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn_skin;</div>
 <div class="line"><span class="lineno">  166</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(f, conn_skin, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  167</span>    <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a5086bdfa8de362615048f470022a9898">VectorDouble6</a> coords_skin(6);</div>
 <div class="line"><span class="lineno">  168</span>    <span class="keywordflow">if</span> (th)</div>
@@ -677,7 +677,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  511</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> index = vol_verts.index(<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>);</div>
 <div class="line"><span class="lineno">  512</span>      <span class="keyword">auto</span> point_in = <a class="code hl_function" href="namespaceMoFEM.html#a00ca24984a29be87bd99504af7f6ebee">getVectorAdaptor</a>(&amp;coords[3 * index], 3);</div>
 <div class="line"><span class="lineno">  513</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> point_out(3);</div>
-<div class="line"><span class="lineno">  514</span>      EntityHandle facets_out;</div>
+<div class="line"><span class="lineno">  514</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> facets_out;</div>
 <div class="line"><span class="lineno">  515</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> treeSurfPtr-&gt;closest_to_location(&amp;point_in[0], rootSetSurf,</div>
 <div class="line"><span class="lineno">  516</span>                                              &amp;point_out[0], facets_out);</div>
 <div class="line"><span class="lineno">  517</span> </div>
@@ -689,7 +689,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  523</span>      <span class="comment">// more than one, use normal of lager triangle to set orientation.</span></div>
 <div class="line"><span class="lineno">  524</span>      <span class="keyword">auto</span> check_triangle_orientation = [&amp;](<span class="keyword">auto</span> <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>) {</div>
 <div class="line"><span class="lineno">  525</span>        <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno">  526</span>        <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno">  526</span>        <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno">  527</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(facets_out, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  528</span>        <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#ac1d820a203fd9a7f34f3a3257b2d38b7">MatrixDouble3by3</a> coords(3, 3);</div>
 <div class="line"><span class="lineno">  529</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_coords(conn, 3, &amp;coords(0, 0));</div>
@@ -911,7 +911,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  745</span> </div>
 <div class="line"><span class="lineno">  746</span>  <span class="keyword">auto</span> get_conn = [&amp;](<span class="keyword">auto</span> e) {</div>
 <div class="line"><span class="lineno">  747</span>    <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno">  748</span>    <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno">  748</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno">  749</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(e, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  750</span>    <span class="keywordflow">return</span> conn;</div>
 <div class="line"><span class="lineno">  751</span>  };</div>
@@ -1079,7 +1079,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  913</span> </div>
 <div class="line"><span class="lineno">  914</span>  <span class="keyword">auto</span> get_conn = [&amp;](<span class="keyword">const</span> <span class="keyword">auto</span> e) {</div>
 <div class="line"><span class="lineno">  915</span>    <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno">  916</span>    <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno">  916</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno">  917</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(e, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  918</span>    <span class="keywordflow">return</span> conn;</div>
 <div class="line"><span class="lineno">  919</span>  };</div>
@@ -1161,7 +1161,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  995</span>  Skinner skin(&amp;moab);</div>
 <div class="line"><span class="lineno">  996</span>  <a class="code hl_define" href="CutMeshInterface_8cpp.html#ac0f53b69ec9c555d10ce1b1ca620f165">CutMeshFunctionBegin</a>;</div>
 <div class="line"><span class="lineno">  997</span> </div>
-<div class="line"><span class="lineno">  998</span>  <span class="keyword">auto</span> get_ent_adj = [&amp;moab](<span class="keyword">const</span> EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> dim) {</div>
+<div class="line"><span class="lineno">  998</span>  <span class="keyword">auto</span> get_ent_adj = [&amp;moab](<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> dim) {</div>
 <div class="line"><span class="lineno">  999</span>    <a class="code hl_class" href="classRange.html">Range</a> <a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>;</div>
 <div class="line"><span class="lineno"> 1000</span>    <span class="keywordflow">if</span> (dim)</div>
 <div class="line"><span class="lineno"> 1001</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_adjacencies(&amp;<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, 1, dim, <span class="keyword">true</span>, <a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a>);</div>
@@ -1199,15 +1199,15 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1033</span>  Tag th_normal_dist;</div>
 <div class="line"><span class="lineno"> 1034</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_get_handle(<span class="stringliteral">&quot;DIST_SURFACE_NORMAL_VECTOR&quot;</span>, th_normal_dist);</div>
 <div class="line"><span class="lineno"> 1035</span> </div>
-<div class="line"><span class="lineno"> 1036</span>  <span class="keyword">auto</span> get_normal_dits = [&amp;](<span class="keyword">const</span> EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) {</div>
+<div class="line"><span class="lineno"> 1036</span>  <span class="keyword">auto</span> get_normal_dits = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) {</div>
 <div class="line"><span class="lineno"> 1037</span>    <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> dist_vec(3);</div>
 <div class="line"><span class="lineno"> 1038</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_get_data(th_normal_dist, &amp;<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, 1, &amp;*dist_vec.begin());</div>
 <div class="line"><span class="lineno"> 1039</span>    <span class="keywordflow">return</span> dist_vec;</div>
 <div class="line"><span class="lineno"> 1040</span>  };</div>
 <div class="line"><span class="lineno"> 1041</span> </div>
-<div class="line"><span class="lineno"> 1042</span>  <span class="keyword">auto</span> get_prj_point = [&amp;](<span class="keyword">const</span> EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> <a class="code hl_class" href="classRange.html">Range</a> edges,</div>
+<div class="line"><span class="lineno"> 1042</span>  <span class="keyword">auto</span> get_prj_point = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> <a class="code hl_class" href="classRange.html">Range</a> edges,</div>
 <div class="line"><span class="lineno"> 1043</span>                           <span class="keyword">const</span> <span class="keywordtype">double</span> geometry_tol) {</div>
-<div class="line"><span class="lineno"> 1044</span>    <span class="keyword">auto</span> get_tuple = [](<span class="keyword">const</span> EntityHandle e, <span class="keyword">const</span> <span class="keywordtype">double</span> dist,</div>
+<div class="line"><span class="lineno"> 1044</span>    <span class="keyword">auto</span> get_tuple = [](<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> e, <span class="keyword">const</span> <span class="keywordtype">double</span> dist,</div>
 <div class="line"><span class="lineno"> 1045</span>                        <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="matrix__function_8cpp.html#a510d8658904ea5f9e62ae641c8122e49">l</a>) { <span class="keywordflow">return</span> std::make_tuple(e, dist, <a class="code hl_variable" href="matrix__function_8cpp.html#a510d8658904ea5f9e62ae641c8122e49">l</a>); };</div>
 <div class="line"><span class="lineno"> 1046</span> </div>
 <div class="line"><span class="lineno"> 1047</span>    std::tuple&lt;EntityHandle, double, double&gt; min_tuple{0, 0, 0};</div>
@@ -1218,7 +1218,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1052</span> </div>
 <div class="line"><span class="lineno"> 1053</span>        <span class="keyword">auto</span> get_dist = [&amp;](<span class="keyword">auto</span> eit) {</div>
 <div class="line"><span class="lineno"> 1054</span>          <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno"> 1055</span>          <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno"> 1055</span>          <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno"> 1056</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(eit-&gt;first, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno"> 1057</span>          <span class="keywordflow">if</span> (conn[0] == <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>)</div>
 <div class="line"><span class="lineno"> 1058</span>            <span class="keywordflow">return</span> eit-&gt;second.dIst;</div>
@@ -1278,7 +1278,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1112</span>    std::vector&lt;std::pair&lt;EntityHandle, TreeData&gt;&gt; vertices_on_cut_edges;</div>
 <div class="line"><span class="lineno"> 1113</span>    vertices_on_cut_edges.reserve(nodes_to_check.size());</div>
 <div class="line"><span class="lineno"> 1114</span> </div>
-<div class="line"><span class="lineno"> 1115</span>    <span class="keyword">auto</span> add_zero_vertex = [&amp;](<span class="keyword">const</span> EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">auto</span> &amp;&amp;new_pos) {</div>
+<div class="line"><span class="lineno"> 1115</span>    <span class="keyword">auto</span> add_zero_vertex = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">auto</span> &amp;&amp;new_pos) {</div>
 <div class="line"><span class="lineno"> 1116</span>      <span class="keyword">auto</span> coords = get_coords(<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>);</div>
 <div class="line"><span class="lineno"> 1117</span>      <span class="keyword">auto</span> ray = new_pos - coords;</div>
 <div class="line"><span class="lineno"> 1118</span>      <span class="keyword">auto</span> <a class="code hl_variable" href="matrix__function_8cpp.html#a510d8658904ea5f9e62ae641c8122e49">l</a> = norm_2(ray);</div>
@@ -1381,7 +1381,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1215</span>        <span class="keywordtype">double</span> min_q = 1;</div>
 <div class="line"><span class="lineno"> 1216</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_variable" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a> : adj_tets) {</div>
 <div class="line"><span class="lineno"> 1217</span>          <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno"> 1218</span>          <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno"> 1218</span>          <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno"> 1219</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.get_moab().get_connectivity(<a class="code hl_variable" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno"> 1220</span>          <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a6d261dceb89bbe340a2c40bb7f08e47d">VectorDouble12</a> coords(12);</div>
 <div class="line"><span class="lineno"> 1221</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_coords(conn, num_nodes, &amp;coords[0]);</div>
@@ -1512,7 +1512,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1346</span>    }</div>
 <div class="line"><span class="lineno"> 1347</span>    <span class="keyword">const</span> boost::shared_ptr&lt;RefEntity&gt; &amp;ref_ent = *vit;</div>
 <div class="line"><span class="lineno"> 1348</span>    <span class="keywordflow">if</span> ((ref_ent-&gt;getBitRefLevel() &amp; <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>).any()) {</div>
-<div class="line"><span class="lineno"> 1349</span>      EntityHandle vert = ref_ent-&gt;getEnt();</div>
+<div class="line"><span class="lineno"> 1349</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> vert = ref_ent-&gt;getEnt();</div>
 <div class="line"><span class="lineno"> 1350</span>      cut_verts.insert(vert);</div>
 <div class="line"><span class="lineno"> 1351</span>      verticesOnCutEdges[vert] = <a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>.second;</div>
 <div class="line"><span class="lineno"> 1352</span>    } <span class="keywordflow">else</span> {</div>
@@ -1689,7 +1689,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1523</span>  <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno"> 1524</span>    surface_skin = fRont;</div>
 <div class="line"><span class="lineno"> 1525</span> </div>
-<div class="line"><span class="lineno"> 1526</span>  <span class="keyword">auto</span> get_point_coords = [&amp;](EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) {</div>
+<div class="line"><span class="lineno"> 1526</span>  <span class="keyword">auto</span> get_point_coords = [&amp;](<a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) {</div>
 <div class="line"><span class="lineno"> 1527</span>    <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> point(3);</div>
 <div class="line"><span class="lineno"> 1528</span>    <span class="keywordflow">if</span> (th)</div>
 <div class="line"><span class="lineno"> 1529</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_get_data(th, &amp;<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, 1, &amp;point[0]);</div>
@@ -1700,9 +1700,9 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1534</span> </div>
 <div class="line"><span class="lineno"> 1535</span>  <span class="keyword">struct </span>VertMap {</div>
 <div class="line"><span class="lineno"> 1536</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacesdf__hertz__2d__axisymm__plane.html#a8204f26163e5d184298bc6fa855b88ea">d</a>;</div>
-<div class="line"><span class="lineno"> 1537</span>    <span class="keyword">const</span> EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>;</div>
-<div class="line"><span class="lineno"> 1538</span>    <span class="keyword">const</span> EntityHandle e;</div>
-<div class="line"><span class="lineno"> 1539</span>    VertMap(<span class="keyword">const</span> <span class="keywordtype">double</span> d, <span class="keyword">const</span> EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> EntityHandle e)</div>
+<div class="line"><span class="lineno"> 1537</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>;</div>
+<div class="line"><span class="lineno"> 1538</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> e;</div>
+<div class="line"><span class="lineno"> 1539</span>    VertMap(<span class="keyword">const</span> <span class="keywordtype">double</span> d, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> e)</div>
 <div class="line"><span class="lineno"> 1540</span>        : <a class="code hl_variable" href="namespacesdf__hertz__2d__axisymm__plane.html#a8204f26163e5d184298bc6fa855b88ea">d</a>(<a class="code hl_variable" href="namespacesdf__hertz__2d__axisymm__plane.html#a8204f26163e5d184298bc6fa855b88ea">d</a>), <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>(<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>), e(e) {}</div>
 <div class="line"><span class="lineno"> 1541</span>  };</div>
 <div class="line"><span class="lineno"> 1542</span> </div>
@@ -1718,7 +1718,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1552</span> </div>
 <div class="line"><span class="lineno"> 1553</span>  VertMapMultiIndex verts_map;</div>
 <div class="line"><span class="lineno"> 1554</span> </div>
-<div class="line"><span class="lineno"> 1555</span>  <span class="keyword">auto</span> add_vert = [&amp;](<span class="keyword">const</span> EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> EntityHandle e,</div>
+<div class="line"><span class="lineno"> 1555</span>  <span class="keyword">auto</span> add_vert = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> e,</div>
 <div class="line"><span class="lineno"> 1556</span>                      <span class="keyword">const</span> <span class="keywordtype">double</span> dist) {</div>
 <div class="line"><span class="lineno"> 1557</span>    verts_map.insert(VertMap(dist, <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, e));</div>
 <div class="line"><span class="lineno"> 1558</span>  };</div>
@@ -1729,7 +1729,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1563</span>  verticesOnTrimEdges.clear();</div>
 <div class="line"><span class="lineno"> 1564</span>  trimNewVertices.clear();</div>
 <div class="line"><span class="lineno"> 1565</span> </div>
-<div class="line"><span class="lineno"> 1566</span>  <span class="keyword">auto</span> cut_this_edge = [&amp;](<span class="keyword">const</span> EntityHandle e, <span class="keyword">const</span> <span class="keywordtype">double</span> length, <span class="keyword">auto</span> &amp;ray,</div>
+<div class="line"><span class="lineno"> 1566</span>  <span class="keyword">auto</span> cut_this_edge = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> e, <span class="keyword">const</span> <span class="keywordtype">double</span> length, <span class="keyword">auto</span> &amp;ray,</div>
 <div class="line"><span class="lineno"> 1567</span>                           <span class="keyword">auto</span> &amp;ray_point) {</div>
 <div class="line"><span class="lineno"> 1568</span>    trimEdges.insert(e);</div>
 <div class="line"><span class="lineno"> 1569</span>    edgesToTrim[e].dIst = 1;</div>
@@ -1768,7 +1768,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1602</span>      <span class="keyword">auto</span> project_on_surface = [&amp;](<span class="keyword">auto</span> &amp;<a class="code hl_variable" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>) {</div>
 <div class="line"><span class="lineno"> 1603</span>        <a class="code hl_class" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt;double, 3&gt;</a> t_p;</div>
 <div class="line"><span class="lineno"> 1604</span> </div>
-<div class="line"><span class="lineno"> 1605</span>        EntityHandle facets_out;</div>
+<div class="line"><span class="lineno"> 1605</span>        <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> facets_out;</div>
 <div class="line"><span class="lineno"> 1606</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> treeSurfPtr-&gt;closest_to_location(&amp;<a class="code hl_variable" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>(0), rootSetSurf, &amp;t_p(0),</div>
 <div class="line"><span class="lineno"> 1607</span>                                                facets_out);</div>
 <div class="line"><span class="lineno"> 1608</span> </div>
@@ -1782,7 +1782,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1616</span>        <span class="keywordflow">return</span> t_p;</div>
 <div class="line"><span class="lineno"> 1617</span>      };</div>
 <div class="line"><span class="lineno"> 1618</span> </div>
-<div class="line"><span class="lineno"> 1619</span>      <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno"> 1619</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno"> 1620</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(s, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno"> 1621</span> </div>
 <div class="line"><span class="lineno"> 1622</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a5086bdfa8de362615048f470022a9898">VectorDouble6</a> coords_front(6);</div>
@@ -1813,7 +1813,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1647</span> </div>
 <div class="line"><span class="lineno"> 1648</span>    <span class="keyword">auto</span> get_conn_edge = [&amp;moab](<span class="keyword">auto</span> e) {</div>
 <div class="line"><span class="lineno"> 1649</span>      <span class="comment">// Get edge connectivity and coords</span></div>
-<div class="line"><span class="lineno"> 1650</span>      <span class="keyword">const</span> EntityHandle *conn_edge;</div>
+<div class="line"><span class="lineno"> 1650</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn_edge;</div>
 <div class="line"><span class="lineno"> 1651</span>      <span class="keywordtype">int</span> num_nodes;</div>
 <div class="line"><span class="lineno"> 1652</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(e, conn_edge, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno"> 1653</span>      <span class="keywordflow">return</span> conn_edge;</div>
@@ -1945,7 +1945,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1779</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="dm__create__subdm_8cpp.html#a6295d47efda04de55c38cb8ea1cdb807">debug</a>)</div>
 <div class="line"><span class="lineno"> 1780</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SaveData(moab)(<span class="stringliteral">&quot;edges_selected_to_trim.vtk&quot;</span>, trimEdges);</div>
 <div class="line"><span class="lineno"> 1781</span> </div>
-<div class="line"><span class="lineno"> 1782</span>  <span class="keyword">auto</span> get_quality_change = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classRange.html">Range</a> &amp;adj_tets, <span class="keyword">const</span> EntityHandle &amp;<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>,</div>
+<div class="line"><span class="lineno"> 1782</span>  <span class="keyword">auto</span> get_quality_change = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classRange.html">Range</a> &amp;adj_tets, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> &amp;<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>,</div>
 <div class="line"><span class="lineno"> 1783</span>                                <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> &amp;new_pos) {</div>
 <div class="line"><span class="lineno"> 1784</span>    <span class="keywordtype">double</span> q0 = 1;</div>
 <div class="line"><span class="lineno"> 1785</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.getInterface&lt;Tools&gt;()-&gt;minTetsQuality(adj_tets, q0, th);</div>
@@ -1953,7 +1953,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1787</span>    <span class="keywordtype">double</span> min_q = 1;</div>
 <div class="line"><span class="lineno"> 1788</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_variable" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a> : adj_tets) {</div>
 <div class="line"><span class="lineno"> 1789</span>      <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno"> 1790</span>      <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno"> 1790</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno"> 1791</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.get_moab().get_connectivity(<a class="code hl_variable" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a>, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno"> 1792</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a6d261dceb89bbe340a2c40bb7f08e47d">VectorDouble12</a> coords(12);</div>
 <div class="line"><span class="lineno"> 1793</span>      <span class="keywordflow">if</span> (th)</div>
@@ -1984,7 +1984,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1818</span>  };</div>
 <div class="line"><span class="lineno"> 1819</span> </div>
 <div class="line"><span class="lineno"> 1820</span>  <a class="code hl_class" href="classRange.html">Range</a> checked_verts;</div>
-<div class="line"><span class="lineno"> 1821</span>  <span class="keyword">auto</span> add_trim_vert = [&amp;](<span class="keyword">const</span> EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> EntityHandle e) {</div>
+<div class="line"><span class="lineno"> 1821</span>  <span class="keyword">auto</span> add_trim_vert = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> e) {</div>
 <div class="line"><span class="lineno"> 1822</span>    <span class="keywordflow">if</span> (!(trimNewVertices.find(<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) != trimNewVertices.end())) {</div>
 <div class="line"><span class="lineno"> 1823</span>      <span class="keyword">auto</span> &amp;<a class="code hl_variable" href="namespacesdf.html#a2f1f399a483aed931a5a8ac3b98f49ba">r</a> = edgesToTrim.at(e);</div>
 <div class="line"><span class="lineno"> 1824</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> ray_point = get_point_coords(<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>);</div>
@@ -2007,7 +2007,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1841</span>    }</div>
 <div class="line"><span class="lineno"> 1842</span>  };</div>
 <div class="line"><span class="lineno"> 1843</span> </div>
-<div class="line"><span class="lineno"> 1844</span>  <span class="keyword">auto</span> add_no_move_trim = [&amp;](<span class="keyword">const</span> EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> EntityHandle e) {</div>
+<div class="line"><span class="lineno"> 1844</span>  <span class="keyword">auto</span> add_no_move_trim = [&amp;](<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> e) {</div>
 <div class="line"><span class="lineno"> 1845</span>    <span class="keywordflow">if</span> (!(trimNewVertices.find(<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>) != trimNewVertices.end())) {</div>
 <div class="line"><span class="lineno"> 1846</span>      <span class="keyword">auto</span> &amp;<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a> = edgesToTrim.at(e);</div>
 <div class="line"><span class="lineno"> 1847</span>      verticesOnTrimEdges[<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>] = <a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>;</div>
@@ -2111,7 +2111,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1945</span>    add_trim_vert(<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>.<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, <a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>.e);</div>
 <div class="line"><span class="lineno"> 1946</span> </div>
 <div class="line"><span class="lineno"> 1947</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a> : verticesOnTrimEdges) {</div>
-<div class="line"><span class="lineno"> 1948</span>    EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> = <a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>.first;</div>
+<div class="line"><span class="lineno"> 1948</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> = <a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>.first;</div>
 <div class="line"><span class="lineno"> 1949</span>    <a class="code hl_class" href="classRange.html">Range</a> adj;</div>
 <div class="line"><span class="lineno"> 1950</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_adjacencies(&amp;<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, 1, 1, <span class="keyword">false</span>, adj);</div>
 <div class="line"><span class="lineno"> 1951</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> e : adj) {</div>
@@ -2158,7 +2158,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1992</span> </div>
 <div class="line"><span class="lineno"> 1993</span>    <span class="keyword">const</span> boost::shared_ptr&lt;RefEntity&gt; &amp;ref_ent = *vit;</div>
 <div class="line"><span class="lineno"> 1994</span>    <span class="keywordflow">if</span> ((ref_ent-&gt;getBitRefLevel() &amp; <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>).any()) {</div>
-<div class="line"><span class="lineno"> 1995</span>      EntityHandle vert = ref_ent-&gt;getEnt();</div>
+<div class="line"><span class="lineno"> 1995</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> vert = ref_ent-&gt;getEnt();</div>
 <div class="line"><span class="lineno"> 1996</span>      trimNewVertices.insert(vert);</div>
 <div class="line"><span class="lineno"> 1997</span>      verticesOnTrimEdges[vert] = mit-&gt;second;</div>
 <div class="line"><span class="lineno"> 1998</span>    }</div>
@@ -2301,7 +2301,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2135</span>        <span class="keywordflow">if</span> ((*min_dist) &gt; std::numeric_limits&lt;double&gt;::epsilon()) {</div>
 <div class="line"><span class="lineno"> 2136</span>          <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> point_out(3);</div>
 <div class="line"><span class="lineno"> 2137</span> </div>
-<div class="line"><span class="lineno"> 2138</span>          EntityHandle facets_out;</div>
+<div class="line"><span class="lineno"> 2138</span>          <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> facets_out;</div>
 <div class="line"><span class="lineno"> 2139</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> treeSurfPtr-&gt;closest_to_location(coords_ptr, rootSetSurf,</div>
 <div class="line"><span class="lineno"> 2140</span>                                                  &amp;point_out[0], facets_out);</div>
 <div class="line"><span class="lineno"> 2141</span> </div>
@@ -2407,7 +2407,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2241</span>  <span class="comment">// Remove tris on surface front</span></div>
 <div class="line"><span class="lineno"> 2242</span>  {</div>
 <div class="line"><span class="lineno"> 2243</span>    <a class="code hl_class" href="classRange.html">Range</a> front_tris;</div>
-<div class="line"><span class="lineno"> 2244</span>    EntityHandle meshset;</div>
+<div class="line"><span class="lineno"> 2244</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset;</div>
 <div class="line"><span class="lineno"> 2245</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset);</div>
 <div class="line"><span class="lineno"> 2246</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.add_entities(meshset, ents);</div>
 <div class="line"><span class="lineno"> 2247</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> interface-&gt;findFacesWithThreeNodesOnInternalSurfaceSkin(</div>
@@ -2436,11 +2436,11 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2270</span>  PrismInterface *interface;</div>
 <div class="line"><span class="lineno"> 2271</span>  <a class="code hl_define" href="CutMeshInterface_8cpp.html#ac0f53b69ec9c555d10ce1b1ca620f165">CutMeshFunctionBegin</a>;</div>
 <div class="line"><span class="lineno"> 2272</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.getInterface(interface);</div>
-<div class="line"><span class="lineno"> 2273</span>  EntityHandle meshset_volume;</div>
+<div class="line"><span class="lineno"> 2273</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset_volume;</div>
 <div class="line"><span class="lineno"> 2274</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset_volume);</div>
 <div class="line"><span class="lineno"> 2275</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.getInterface&lt;BitRefManager&gt;()-&gt;getEntitiesByTypeAndRefLevel(</div>
 <div class="line"><span class="lineno"> 2276</span>      split_bit, <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), MBTET, meshset_volume);</div>
-<div class="line"><span class="lineno"> 2277</span>  EntityHandle meshset_surface;</div>
+<div class="line"><span class="lineno"> 2277</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset_surface;</div>
 <div class="line"><span class="lineno"> 2278</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset_surface);</div>
 <div class="line"><span class="lineno"> 2279</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.add_entities(meshset_surface, ents);</div>
 <div class="line"><span class="lineno"> 2280</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> interface-&gt;getSides(meshset_surface, split_bit, <span class="keyword">true</span>);</div>
@@ -2454,7 +2454,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2288</span>        <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>, <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), MBPRISM, prisms);</div>
 <div class="line"><span class="lineno"> 2289</span>    <span class="keywordflow">for</span> (Range::iterator pit = prisms.begin(); pit != prisms.end(); pit++) {</div>
 <div class="line"><span class="lineno"> 2290</span>      <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno"> 2291</span>      <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno"> 2291</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno"> 2292</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(*pit, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno"> 2293</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MatrixDouble</a> data(3, 3);</div>
 <div class="line"><span class="lineno"> 2294</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_get_data(th, conn, 3, &amp;data(0, 0));</div>
@@ -2489,12 +2489,12 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2323</span>      mField.getInterface(nodeMergerPtr);</div>
 <div class="line"><span class="lineno"> 2324</span>    }</div>
 <div class="line"><span class="lineno"> 2325</span>    NodeMergerInterface *nodeMergerPtr;</div>
-<div class="line"><span class="lineno"> 2326</span>    <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> mergeNodes(<span class="keywordtype">int</span> line_search, EntityHandle father,</div>
-<div class="line"><span class="lineno"> 2327</span>                              EntityHandle mother, <a class="code hl_class" href="classRange.html">Range</a> &amp;proc_tets,</div>
+<div class="line"><span class="lineno"> 2326</span>    <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> mergeNodes(<span class="keywordtype">int</span> line_search, <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> father,</div>
+<div class="line"><span class="lineno"> 2327</span>                              <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> mother, <a class="code hl_class" href="classRange.html">Range</a> &amp;proc_tets,</div>
 <div class="line"><span class="lineno"> 2328</span>                              <span class="keywordtype">bool</span> add_child = <span class="keyword">true</span>) {</div>
 <div class="line"><span class="lineno"> 2329</span>      moab::Interface &amp;moab = mField.get_moab();</div>
 <div class="line"><span class="lineno"> 2330</span>      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno"> 2331</span>      <span class="keyword">const</span> EntityHandle conn[] = {father, mother};</div>
+<div class="line"><span class="lineno"> 2331</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> conn[] = {father, mother};</div>
 <div class="line"><span class="lineno"> 2332</span>      <a class="code hl_class" href="classRange.html">Range</a> vert_tets;</div>
 <div class="line"><span class="lineno"> 2333</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_adjacencies(conn, 2, 3, <span class="keyword">false</span>, vert_tets,</div>
 <div class="line"><span class="lineno"> 2334</span>                                  moab::Interface::UNION);</div>
@@ -2521,8 +2521,8 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2355</span>        <span class="keyword">auto</span> &amp;parent_child_map = nodeMergerPtr-&gt;getParentChildMap();</div>
 <div class="line"><span class="lineno"> 2356</span> </div>
 <div class="line"><span class="lineno"> 2357</span>        <span class="keyword">struct </span>ChangeChild {</div>
-<div class="line"><span class="lineno"> 2358</span>          EntityHandle child;</div>
-<div class="line"><span class="lineno"> 2359</span>          ChangeChild(<span class="keyword">const</span> EntityHandle child) : child(child) {}</div>
+<div class="line"><span class="lineno"> 2358</span>          <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> child;</div>
+<div class="line"><span class="lineno"> 2359</span>          ChangeChild(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> child) : child(child) {}</div>
 <div class="line"><span class="lineno"> 2360</span>          <span class="keywordtype">void</span> operator()(NodeMergerInterface::ParentChild &amp;p) {</div>
 <div class="line"><span class="lineno"> 2361</span>            p.cHild = child;</div>
 <div class="line"><span class="lineno"> 2362</span>          }</div>
@@ -2596,7 +2596,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2430</span>        <span class="keywordflow">if</span> (updateMehsets) {</div>
 <div class="line"><span class="lineno"> 2431</span>          <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaa7fc3e87cd6f5fcd5770d87260ea8c1a">_IT_CUBITMESHSETS_FOR_LOOP_</a>(</div>
 <div class="line"><span class="lineno"> 2432</span>                   (*mField.getInterface&lt;MeshsetsManager&gt;()), cubit_it)) {</div>
-<div class="line"><span class="lineno"> 2433</span>            EntityHandle cubit_meshset = cubit_it-&gt;meshset;</div>
+<div class="line"><span class="lineno"> 2433</span>            <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> cubit_meshset = cubit_it-&gt;meshset;</div>
 <div class="line"><span class="lineno"> 2434</span>            <a class="code hl_class" href="classRange.html">Range</a> meshset_ents;</div>
 <div class="line"><span class="lineno"> 2435</span>            <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_entities_by_handle(cubit_meshset, meshset_ents,</div>
 <div class="line"><span class="lineno"> 2436</span>                                               <span class="keyword">true</span>);</div>
@@ -2661,7 +2661,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2495</span>                              LengthMapData_multi_index &amp;length_map,</div>
 <div class="line"><span class="lineno"> 2496</span>                              <span class="keywordtype">double</span> &amp;ave)<span class="keyword"> const </span>{</div>
 <div class="line"><span class="lineno"> 2497</span>      <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno"> 2498</span>      <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno"> 2498</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno"> 2499</span>      std::array&lt;double, 12&gt; coords;</div>
 <div class="line"><span class="lineno"> 2500</span>      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><span class="lineno"> 2501</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a5dfc306af1addb8e8a14a1428e966654">VectorAdaptor</a> s0(3, ublas::shallow_array_adaptor&lt;double&gt;(3, &amp;coords[0]));</div>
@@ -2669,9 +2669,9 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2503</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> <a class="code hl_variable" href="prism__elements__from__surface_8cpp.html#a9eb248cd425bb908c67fa311945029cc">delta</a>(3);</div>
 <div class="line"><span class="lineno"> 2504</span> </div>
 <div class="line"><span class="lineno"> 2505</span>      <span class="keyword">struct </span>NodeQuality {</div>
-<div class="line"><span class="lineno"> 2506</span>        EntityHandle node;</div>
+<div class="line"><span class="lineno"> 2506</span>        <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> node;</div>
 <div class="line"><span class="lineno"> 2507</span>        <span class="keywordtype">double</span> quality;</div>
-<div class="line"><span class="lineno"> 2508</span>        NodeQuality(<span class="keyword">const</span> EntityHandle node) : node(node), quality(1) {}</div>
+<div class="line"><span class="lineno"> 2508</span>        NodeQuality(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> node) : node(node), quality(1) {}</div>
 <div class="line"><span class="lineno"> 2509</span>      };</div>
 <div class="line"><span class="lineno"> 2510</span> </div>
 <div class="line"><span class="lineno"> 2511</span>      <span class="keyword">typedef</span> multi_index_container&lt;</div>
@@ -2680,7 +2680,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2514</span>                           sequenced&lt;&gt;,</div>
 <div class="line"><span class="lineno"> 2515</span> </div>
 <div class="line"><span class="lineno"> 2516</span>                           hashed_non_unique&lt;tag&lt;Ent_mi_tag&gt;,</div>
-<div class="line"><span class="lineno"> 2517</span>                                             member&lt;NodeQuality, EntityHandle,</div>
+<div class="line"><span class="lineno"> 2517</span>                                             member&lt;NodeQuality, <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a>,</div>
 <div class="line"><span class="lineno"> 2518</span>                                                    &amp;NodeQuality::node&gt;&gt;</div>
 <div class="line"><span class="lineno"> 2519</span> </div>
 <div class="line"><span class="lineno"> 2520</span>                           &gt;&gt;</div>
@@ -3111,10 +3111,10 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2945</span>      <span class="keywordflow">if</span> (!mit-&gt;skip) {</div>
 <div class="line"><span class="lineno"> 2946</span> </div>
 <div class="line"><span class="lineno"> 2947</span>        <span class="keyword">auto</span> get_father_and_mother =</div>
-<div class="line"><span class="lineno"> 2948</span>            [&amp;](EntityHandle &amp;father, EntityHandle &amp;mother, <span class="keywordtype">int</span> &amp;line_search) {</div>
+<div class="line"><span class="lineno"> 2948</span>            [&amp;](<a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> &amp;father, <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> &amp;mother, <span class="keywordtype">int</span> &amp;line_search) {</div>
 <div class="line"><span class="lineno"> 2949</span>              <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><span class="lineno"> 2950</span>              <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno"> 2951</span>              <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno"> 2951</span>              <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno"> 2952</span>              <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(mit-&gt;eDge, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno"> 2953</span>              std::array&lt;int, 2&gt; conn_type = {0, 0};</div>
 <div class="line"><span class="lineno"> 2954</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn != 2; nn++) {</div>
@@ -3144,11 +3144,11 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 2978</span>            };</div>
 <div class="line"><span class="lineno"> 2979</span> </div>
 <div class="line"><span class="lineno"> 2980</span>        <span class="keywordtype">int</span> line_search = 0;</div>
-<div class="line"><span class="lineno"> 2981</span>        EntityHandle father, mother;</div>
+<div class="line"><span class="lineno"> 2981</span>        <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> father, mother;</div>
 <div class="line"><span class="lineno"> 2982</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_father_and_mother(father, mother, line_search);</div>
 <div class="line"><span class="lineno"> 2983</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> merge_nodes.mergeNodes(line_search, father, mother, proc_tets);</div>
 <div class="line"><span class="lineno"> 2984</span>        <span class="keywordflow">if</span> (m_field.getInterface&lt;NodeMergerInterface&gt;()-&gt;getSuccessMerge()) {</div>
-<div class="line"><span class="lineno"> 2985</span>          <span class="keyword">const</span> EntityHandle father_and_mother[] = {father, mother};</div>
+<div class="line"><span class="lineno"> 2985</span>          <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> father_and_mother[] = {father, mother};</div>
 <div class="line"><span class="lineno"> 2986</span>          <a class="code hl_class" href="classRange.html">Range</a> adj_tets;</div>
 <div class="line"><span class="lineno"> 2987</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_adjacencies(father_and_mother, 1, 3, <span class="keyword">false</span>, adj_tets);</div>
 <div class="line"><span class="lineno"> 2988</span>          <a class="code hl_class" href="classRange.html">Range</a> adj_tets_nodes;</div>
@@ -3339,6 +3339,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="aLogManager_8hpp_html_aef9b5316ec6db54581633adf7c670011"><div class="ttname"><a href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a></div><div class="ttdeci">#define MOFEM_LOG_C(channel, severity, format,...)</div><div class="ttdef"><b>Definition</b> <a href="LogManager_8hpp_source.html#l00319">LogManager.hpp:319</a></div></div>
 <div class="ttc" id="aapprox__sphere_8cpp_html_a188caae18b60b66f9f44214c7e28ac1f"><div class="ttname"><a href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a></div><div class="ttdeci">constexpr double a</div><div class="ttdef"><b>Definition</b> <a href="approx__sphere_8cpp_source.html#l00030">approx_sphere.cpp:30</a></div></div>
 <div class="ttc" id="abase__functions_8c_html_a56d2889a19d8d7affaa85cfca4aadd67"><div class="ttname"><a href="base__functions_8c.html#a56d2889a19d8d7affaa85cfca4aadd67">ierr</a></div><div class="ttdeci">static PetscErrorCode ierr</div><div class="ttdef"><b>Definition</b> <a href="base__functions_8c_source.html#l00013">base_functions.c:13</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor1__value_8hpp_source.html#l00008">Tensor1_value.hpp:9</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>

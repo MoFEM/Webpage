@@ -310,7 +310,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  140</span>    std::array&lt;EntityHandle, 4&gt; one_quad_nodes;</div>
 <div class="line"><span class="lineno">  141</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> = 0; <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> != 4; ++<a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>)</div>
 <div class="line"><span class="lineno">  142</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_vertex(&amp;one_quad_coords[3 * <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>], one_quad_nodes[<a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>]);</div>
-<div class="line"><span class="lineno">  143</span>    EntityHandle one_quad;</div>
+<div class="line"><span class="lineno">  143</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> one_quad;</div>
 <div class="line"><span class="lineno">  144</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_element(MBQUAD, one_quad_nodes.data(), 4, one_quad);</div>
 <div class="line"><span class="lineno">  145</span>    <a class="code hl_class" href="classRange.html">Range</a> one_quad_range;</div>
 <div class="line"><span class="lineno">  146</span>    one_quad_range.insert(one_quad);</div>
@@ -457,6 +457,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  287</span>  <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"><span class="lineno">  288</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  289</span>}</div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a></div><div class="ttdeci">@ COL</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a></div><div class="ttdeci">@ ROW</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>

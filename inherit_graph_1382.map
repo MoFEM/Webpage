@@ -1,31 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,275,248,315"/>
-<area shape="rect" id="Node000001" href="$structPoissonExample_1_1OpBaseRhs.html" title=" " alt="" coords="297,15,556,69"/>
-<area shape="poly" id="edge735_Node000000_Node000001" title=" " alt="" coords="143,261,168,220,202,171,245,122,294,80,316,67,319,72,298,84,248,126,206,175,172,223,147,264"/>
-<area shape="rect" id="Node000005" href="$structEshelbianPlasticity_1_1VolUserDataOperatorStabAssembly.html" title=" " alt="" coords="296,94,557,134"/>
-<area shape="poly" id="edge739_Node000000_Node000005" title=" " alt="" coords="152,263,213,202,252,170,295,144,323,132,325,137,297,148,255,175,217,206,156,267"/>
-<area shape="rect" id="Node000006" href="$structOpAssembleG.html" title="Assemble G *." alt="" coords="369,159,484,184"/>
-<area shape="poly" id="edge740_Node000000_Node000006" title=" " alt="" coords="165,265,224,227,295,193,332,182,368,175,369,180,333,187,297,198,227,232,168,269"/>
-<area shape="rect" id="Node000007" href="$structOpAssembleK.html" title="Assemble K *." alt="" coords="370,208,483,233"/>
-<area shape="poly" id="edge741_Node000000_Node000007" title=" " alt="" coords="201,269,295,242,369,227,370,232,297,247,202,274"/>
-<area shape="rect" id="Node000008" href="$structOpAssembleP.html" title="Assemble P *." alt="" coords="371,257,483,283"/>
-<area shape="poly" id="edge742_Node000000_Node000008" title=" " alt="" coords="261,281,370,272,371,277,262,287"/>
-<area shape="rect" id="Node000009" href="$structOpK.html" title=" " alt="" coords="402,307,451,332"/>
-<area shape="poly" id="edge743_Node000000_Node000009" title=" " alt="" coords="262,303,402,315,402,320,261,309"/>
-<area shape="rect" id="Node000010" href="$structOpVolCurl.html" title=" " alt="" coords="383,356,470,381"/>
-<area shape="poly" id="edge744_Node000000_Node000010" title=" " alt="" coords="207,317,297,341,384,359,383,364,295,346,206,322"/>
-<area shape="rect" id="Node000011" href="$structOpVolDivergence.html" title=" " alt="" coords="359,405,494,431"/>
-<area shape="poly" id="edge745_Node000000_Node000011" title=" " alt="" coords="169,321,228,357,297,390,360,407,358,412,295,395,225,362,166,326"/>
-<area shape="rect" id="Node000012" href="$structOpVolume.html" title=" " alt="" coords="382,455,471,480"/>
-<area shape="poly" id="edge746_Node000000_Node000012" title=" " alt="" coords="156,324,216,384,255,414,297,440,340,454,382,462,381,467,338,460,295,444,252,419,213,388,152,328"/>
-<area shape="rect" id="Node000013" href="$structPoissonExample_1_1OpK.html" title="Calculate the grad&#45;grad operator and assemble matrix." alt="" coords="345,504,509,529"/>
-<area shape="poly" id="edge747_Node000000_Node000013" title=" " alt="" coords="148,326,172,365,206,410,249,454,297,490,320,501,345,508,344,513,318,506,295,495,245,458,202,413,168,368,143,329"/>
-<area shape="rect" id="Node000002" href="$structPoissonExample_1_1OpError.html" title="Evaluate error." alt="" coords="605,5,792,31"/>
-<area shape="poly" id="edge736_Node000001_Node000002" title=" " alt="" coords="570,27,605,24,606,29,570,32"/>
-<area shape="rect" id="Node000003" href="$structPoissonExample_1_1OpF.html" title="Operator calculate source term,." alt="" coords="617,55,780,80"/>
-<area shape="poly" id="edge737_Node000001_Node000003" title=" " alt="" coords="570,53,617,57,617,62,570,58"/>
-<area shape="rect" id="Node000004" href="$structPoissonExample_1_1OpResF__Domain.html" title=" " alt="" coords="840,47,1027,87"/>
-<area shape="poly" id="edge738_Node000003_Node000004" title=" " alt="" coords="794,65,840,65,840,70,794,70"/>
-<area shape="rect" id="Node000014" href="$structPoissonExample_1_1OpKt.html" title=" " alt="" coords="614,504,783,529"/>
-<area shape="poly" id="edge748_Node000013_Node000014" title=" " alt="" coords="522,514,614,514,614,519,522,519"/>
+<area shape="rect" id="Node000000" href="$structPoissonExample_1_1AuxFunctions.html" title=" " alt="" coords="5,5,229,31"/>
 </map>

@@ -219,7 +219,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   49</span>    <span class="comment">// set entitities bit level</span></div>
 <div class="line"><span class="lineno">   50</span>    <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a> bit_level0;</div>
 <div class="line"><span class="lineno">   51</span>    bit_level0.set(0);</div>
-<div class="line"><span class="lineno">   52</span>    EntityHandle meshset_level0;</div>
+<div class="line"><span class="lineno">   52</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset_level0;</div>
 <div class="line"><span class="lineno">   53</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset_level0);</div>
 <div class="line"><span class="lineno">   54</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;setBitRefLevelByDim(</div>
 <div class="line"><span class="lineno">   55</span>        0, 3, bit_level0);</div>
@@ -246,7 +246,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   76</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__problems.html#gab02fceb7ce0b4be564ff8b2c7144ba12">modify_problem_ref_level_add_bit</a>(<span class="stringliteral">&quot;TEST_PROBLEM&quot;</span>, bit_level0);</div>
 <div class="line"><span class="lineno">   77</span> </div>
 <div class="line"><span class="lineno">   78</span>    <span class="comment">// meshset consisting all entities in mesh</span></div>
-<div class="line"><span class="lineno">   79</span>    EntityHandle root_set = moab.get_root_set();</div>
+<div class="line"><span class="lineno">   79</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> root_set = moab.get_root_set();</div>
 <div class="line"><span class="lineno">   80</span>    <span class="comment">// add entities to field</span></div>
 <div class="line"><span class="lineno">   81</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(root_set, MBTET, <span class="stringliteral">&quot;FIELD1&quot;</span>);</div>
 <div class="line"><span class="lineno">   82</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(root_set, MBTET, <span class="stringliteral">&quot;FIELD2&quot;</span>);</div>
@@ -386,6 +386,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  216</span> </div>
 <div class="line"><span class="lineno">  217</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  218</span>}</div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassUBlasMatrix_3_01double_01_4_html"><div class="ttname"><a href="classUBlasMatrix_3_01double_01_4.html">UBlasMatrix&lt; double &gt;</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>

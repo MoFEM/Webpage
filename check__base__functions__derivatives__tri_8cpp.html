@@ -148,9 +148,9 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a29680e68c64040f4884f60691a193226" id="r_a29680e68c64040f4884f60691a193226"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__base__functions__derivatives__tri_8cpp.html#a29680e68c64040f4884f60691a193226">help</a> [] = &quot;...\n\n&quot;</td></tr>
 <tr class="separator:a29680e68c64040f4884f60691a193226"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d8c24629d725b9ef8c238cf27c9b158" id="r_a3d8c24629d725b9ef8c238cf27c9b158"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__base__functions__derivatives__tri_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> = 1e-6</td></tr>
+<tr class="memitem:a3d8c24629d725b9ef8c238cf27c9b158" id="r_a3d8c24629d725b9ef8c238cf27c9b158"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__base__functions__derivatives__tri_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> = 1e-6</td></tr>
 <tr class="separator:a3d8c24629d725b9ef8c238cf27c9b158"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4122beb5f62734f95470c917892bad9" id="r_ae4122beb5f62734f95470c917892bad9"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__base__functions__derivatives__tri_8cpp.html#ae4122beb5f62734f95470c917892bad9">eps_diff</a> = 1e-4</td></tr>
+<tr class="memitem:ae4122beb5f62734f95470c917892bad9" id="r_ae4122beb5f62734f95470c917892bad9"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__base__functions__derivatives__tri_8cpp.html#ae4122beb5f62734f95470c917892bad9">eps_diff</a> = 1e-4</td></tr>
 <tr class="separator:ae4122beb5f62734f95470c917892bad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -238,11 +238,11 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   68</span>                           0.5, 0,  0,</div>
 <div class="line"><span class="lineno">   69</span> </div>
 <div class="line"><span class="lineno">   70</span>                           0,   2., 0};</div>
-<div class="line"><span class="lineno">   71</span>    EntityHandle nodes[3];</div>
+<div class="line"><span class="lineno">   71</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> nodes[3];</div>
 <div class="line"><span class="lineno">   72</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn &lt; 3; nn++) {</div>
 <div class="line"><span class="lineno">   73</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_vertex(&amp;tri_coords[3 * nn], nodes[nn]);</div>
 <div class="line"><span class="lineno">   74</span>    }</div>
-<div class="line"><span class="lineno">   75</span>    EntityHandle tri;</div>
+<div class="line"><span class="lineno">   75</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> tri;</div>
 <div class="line"><span class="lineno">   76</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_element(MBTRI, nodes, 3, tri);</div>
 <div class="line"><span class="lineno">   77</span> </div>
 <div class="line"><span class="lineno">   78</span>    <span class="comment">// Create adjacencies entities</span></div>
@@ -280,7 +280,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  110</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__problems.html#gab02fceb7ce0b4be564ff8b2c7144ba12">modify_problem_ref_level_add_bit</a>(<span class="stringliteral">&quot;TEST_PROBLEM&quot;</span>, bit_level0);</div>
 <div class="line"><span class="lineno">  111</span> </div>
 <div class="line"><span class="lineno">  112</span>    <span class="comment">// meshset consisting all entities in mesh</span></div>
-<div class="line"><span class="lineno">  113</span>    EntityHandle root_set = moab.get_root_set();</div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> root_set = moab.get_root_set();</div>
 <div class="line"><span class="lineno">  114</span>    <span class="comment">// add entities to field</span></div>
 <div class="line"><span class="lineno">  115</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(root_set, MBTRI, <span class="stringliteral">&quot;FIELD&quot;</span>);</div>
 <div class="line"><span class="lineno">  116</span> </div>
@@ -334,8 +334,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  164</span> </div>
 <div class="line"><span class="lineno">  165</span>      <a class="code hl_typedef" href="forces__and__sources__testing__contact__prism__element_8cpp.html#ab72fcccadd450ef96e31f22462283232">TeeStream</a> &amp;mySplit;</div>
 <div class="line"><span class="lineno">  166</span>      OpCheckingDerivatives(<a class="code hl_typedef" href="forces__and__sources__testing__contact__prism__element_8cpp.html#ab72fcccadd450ef96e31f22462283232">TeeStream</a> &amp;my_split)</div>
-<div class="line"><span class="lineno">  167</span>          : <a class="code hl_struct" href="structMoFEM_1_1FaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>::<a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a>(</div>
-<div class="line"><span class="lineno">  168</span>                <span class="stringliteral">&quot;FIELD&quot;</span>, <a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a>::OPROW),</div>
+<div class="line"><span class="lineno">  167</span>          : <a class="code hl_struct" href="structMoFEM_1_1FaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>::<a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a>(</div>
+<div class="line"><span class="lineno">  168</span>                <span class="stringliteral">&quot;FIELD&quot;</span>, <a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a>::OPROW),</div>
 <div class="line"><span class="lineno">  169</span>            mySplit(my_split) {}</div>
 <div class="line"><span class="lineno">  170</span> </div>
 <div class="line"><span class="lineno">  171</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> doWork(<span class="keywordtype">int</span> side, EntityType type,</div>
@@ -500,15 +500,16 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  330</span> </div>
 <div class="line"><span class="lineno">  331</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"><span class="lineno">  332</span>}</div>
+<div class="ttc" id="aHookeElement_8hpp_html_aee27a2ebc8f3d34a5c1ce71b2607d1a3"><div class="ttname"><a href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a></div><div class="ttdeci">ForcesAndSourcesCore::UserDataOperator UserDataOperator</div><div class="ttdef"><b>Definition</b> <a href="HookeElement_8hpp_source.html#l00075">HookeElement.hpp:75</a></div></div>
 <div class="ttc" id="acheck__base__functions__derivatives__on__tet_8cpp_html_a3d8c24629d725b9ef8c238cf27c9b158"><div class="ttname"><a href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a></div><div class="ttdeci">static const double eps</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__on__tet_8cpp_source.html#l00011">check_base_functions_derivatives_on_tet.cpp:11</a></div></div>
 <div class="ttc" id="acheck__base__functions__derivatives__on__tet_8cpp_html_ae4122beb5f62734f95470c917892bad9"><div class="ttname"><a href="check__base__functions__derivatives__on__tet_8cpp.html#ae4122beb5f62734f95470c917892bad9">eps_diff</a></div><div class="ttdeci">static const double eps_diff</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__on__tet_8cpp_source.html#l00012">check_base_functions_derivatives_on_tet.cpp:12</a></div></div>
 <div class="ttc" id="acheck__base__functions__derivatives__tri_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="check__base__functions__derivatives__tri_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__tri_8cpp_source.html#l00009">check_base_functions_derivatives_tri.cpp:9</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Number_html"><div class="ttname"><a href="classFTensor_1_1Number.html">FTensor::Number</a></div><div class="ttdef"><b>Definition</b> <a href="Number_8hpp_source.html#l00011">Number.hpp:12</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor1__value_8hpp_source.html#l00008">Tensor1_value.hpp:9</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor2_html"><div class="ttname"><a href="classFTensor_1_1Tensor2.html">FTensor::Tensor2</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor2__value_8hpp_source.html#l00016">Tensor2_value.hpp:17</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
-<div class="ttc" id="aclassUserDataOperator_html"><div class="ttname"><a href="classUserDataOperator.html">UserDataOperator</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5">FieldApproximationBase</a></div><div class="ttdeci">FieldApproximationBase</div><div class="ttdoc">approximation base</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00058">definitions.h:58</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>
@@ -597,7 +598,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double eps = 1e-6</td>
+          <td class="memname">const <a class="el" href="classdouble.html">double</a> eps = 1e-6</td>
         </tr>
       </table>
   </td>
@@ -621,7 +622,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double eps_diff = 1e-4</td>
+          <td class="memname">const <a class="el" href="classdouble.html">double</a> eps_diff = 1e-4</td>
         </tr>
       </table>
   </td>

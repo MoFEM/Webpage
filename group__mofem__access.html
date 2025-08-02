@@ -216,10 +216,10 @@ Collaboration diagram for Pointers to multi-indices:</div>
 <tr class="memitem:ga6221928a6d429e2f70edef9e313213d3" id="r_ga6221928a6d429e2f70edef9e313213d3"><td class="memItemLeft" align="right" valign="top">virtual DofEntityByUId::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__access.html#ga6221928a6d429e2f70edef9e313213d3">MoFEM::CoreInterface::get_dofs_by_name_end</a> (const std::string &amp;<a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>) const =0</td></tr>
 <tr class="memdesc:ga6221928a6d429e2f70edef9e313213d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get begin iterator of field dofs of given name (instead you can use <em>IT_GET_DOFS_FIELD_BY_NAME_FOR_LOOP</em>(MFIELD,NAME,IT)  <br /></td></tr>
 <tr class="separator:ga6221928a6d429e2f70edef9e313213d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9cd923e9f305ef47c4aaf6ad2bfa9d80" id="r_ga9cd923e9f305ef47c4aaf6ad2bfa9d80"><td class="memItemLeft" align="right" valign="top">virtual DofEntityByUId::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__access.html#ga9cd923e9f305ef47c4aaf6ad2bfa9d80">MoFEM::CoreInterface::get_dofs_by_name_and_ent_begin</a> (const std::string &amp;<a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, const EntityHandle ent) const =0</td></tr>
+<tr class="memitem:ga9cd923e9f305ef47c4aaf6ad2bfa9d80" id="r_ga9cd923e9f305ef47c4aaf6ad2bfa9d80"><td class="memItemLeft" align="right" valign="top">virtual DofEntityByUId::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__access.html#ga9cd923e9f305ef47c4aaf6ad2bfa9d80">MoFEM::CoreInterface::get_dofs_by_name_and_ent_begin</a> (const std::string &amp;<a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, const <a class="el" href="classEntityHandle.html">EntityHandle</a> ent) const =0</td></tr>
 <tr class="memdesc:ga9cd923e9f305ef47c4aaf6ad2bfa9d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">get begin iterator of field dofs of given name and ent(instead you can use <em>IT_GET_DOFS_FIELD_BY_NAME_FOR_LOOP</em>(MFIELD,NAME,ENT,IT)  <br /></td></tr>
 <tr class="separator:ga9cd923e9f305ef47c4aaf6ad2bfa9d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabfb0c60d8b5e9f53e86615b6ccc896c2" id="r_gabfb0c60d8b5e9f53e86615b6ccc896c2"><td class="memItemLeft" align="right" valign="top">virtual DofEntityByUId::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__access.html#gabfb0c60d8b5e9f53e86615b6ccc896c2">MoFEM::CoreInterface::get_dofs_by_name_and_ent_end</a> (const std::string &amp;<a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, const EntityHandle ent) const =0</td></tr>
+<tr class="memitem:gabfb0c60d8b5e9f53e86615b6ccc896c2" id="r_gabfb0c60d8b5e9f53e86615b6ccc896c2"><td class="memItemLeft" align="right" valign="top">virtual DofEntityByUId::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__access.html#gabfb0c60d8b5e9f53e86615b6ccc896c2">MoFEM::CoreInterface::get_dofs_by_name_and_ent_end</a> (const std::string &amp;<a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, const <a class="el" href="classEntityHandle.html">EntityHandle</a> ent) const =0</td></tr>
 <tr class="memdesc:gabfb0c60d8b5e9f53e86615b6ccc896c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">get begin iterator of field dofs of given name and ent (instead you can use <em>IT_GET_DOFS_FIELD_BY_NAME_FOR_LOOP</em>(MFIELD,NAME,ENT,IT)  <br /></td></tr>
 <tr class="separator:gabfb0c60d8b5e9f53e86615b6ccc896c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf21af6250a2e3aa2dde7f58d4d6128fd" id="r_gaf21af6250a2e3aa2dde7f58d4d6128fd"><td class="memItemLeft" align="right" valign="top">virtual DofEntityByUId::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__access.html#gaf21af6250a2e3aa2dde7f58d4d6128fd">MoFEM::CoreInterface::get_dofs_by_name_and_type_begin</a> (const std::string &amp;<a class="el" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, const EntityType type) const =0</td></tr>
@@ -290,7 +290,7 @@ Collaboration diagram for Pointers to multi-indices:</div>
 <div class="ttc" id="atest__broken__space_8cpp_html_a27f07ec7ec1b09221f6f421d6d7c9e58"><div class="ttname"><a href="test__broken__space_8cpp.html#a27f07ec7ec1b09221f6f421d6d7c9e58">IT</a></div><div class="ttdeci">constexpr IntegrationType IT</div><div class="ttdef"><b>Definition</b> <a href="test__broken__space_8cpp_source.html#l00028">test_broken_space.cpp:28</a></div></div>
 </div><!-- fragment -->
 <p>loop over all dofs from a moFEM field and particular field </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="EshelbianPlasticity_8cpp-example.html#a167">EshelbianPlasticity.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="EshelbianPlasticity_8cpp-example.html#a168">EshelbianPlasticity.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="Interface_8hpp_source.html#l01917">1917</a> of file <a class="el" href="Interface_8hpp_source.html">Interface.hpp</a>.</p>
@@ -380,6 +380,8 @@ Collaboration diagram for Pointers to multi-indices:</div>
 <div class="line">  <a class="code hl_variable" href="test__broken__space_8cpp.html#a27f07ec7ec1b09221f6f421d6d7c9e58">IT</a> != (MFIELD).get_dofs_by_name_end(NAME);                                   \</div>
 <div class="line">  <a class="code hl_variable" href="test__broken__space_8cpp.html#a27f07ec7ec1b09221f6f421d6d7c9e58">IT</a>++</div>
 </div><!-- fragment --><p>loop over all dofs from a moFEM field and particular field </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="nonlinear_elastic_8cpp-example.html#a26">nonlinear_elastic.cpp</a>.</dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="Interface_8hpp_source.html#l01878">1878</a> of file <a class="el" href="Interface_8hpp_source.html">Interface.hpp</a>.</p>
 
@@ -421,7 +423,7 @@ Collaboration diagram for Pointers to multi-indices:</div>
 <div class="line">  <a class="code hl_variable" href="test__broken__space_8cpp.html#a27f07ec7ec1b09221f6f421d6d7c9e58">IT</a>++</div>
 </div><!-- fragment -->
 <p>loop over all dofs from a moFEM field and particular field </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="mesh_smoothing_8cpp-example.html#a70">mesh_smoothing.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="mesh_smoothing_8cpp-example.html#a72">mesh_smoothing.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="Interface_8hpp_source.html#l01842">1842</a> of file <a class="el" href="Interface_8hpp_source.html">Interface.hpp</a>.</p>
@@ -497,7 +499,7 @@ Collaboration diagram for Pointers to multi-indices:</div>
 <dl class="section return"><dt>Returns</dt><dd>const DofEntity_multiIndex* </dd></dl>
 
 <p>Implemented in <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a5e575cbe8f19a040918513fa6f44c036">MoFEM::CoreTmp&lt; 0 &gt;</a>.</p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="field_blas_8cpp-example.html#a19">field_blas.cpp</a>, and <a class="el" href="free_surface_8cpp-example.html#a275">free_surface.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="field_blas_8cpp-example.html#a19">field_blas.cpp</a>, and <a class="el" href="free_surface_8cpp-example.html#a277">free_surface.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -550,7 +552,7 @@ Collaboration diagram for Pointers to multi-indices:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const EntityHandle&#160;</td>
+          <td class="paramtype">const <a class="el" href="classEntityHandle.html">EntityHandle</a>&#160;</td>
           <td class="paramname"><em>ent</em>&#160;</td>
         </tr>
         <tr>
@@ -597,7 +599,7 @@ Collaboration diagram for Pointers to multi-indices:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const EntityHandle&#160;</td>
+          <td class="paramtype">const <a class="el" href="classEntityHandle.html">EntityHandle</a>&#160;</td>
           <td class="paramname"><em>ent</em>&#160;</td>
         </tr>
         <tr>
@@ -1096,7 +1098,7 @@ Collaboration diagram for Pointers to multi-indices:</div>
 <dl class="section return"><dt>Returns</dt><dd>const FieldEntity_multiIndex* </dd></dl>
 
 <p>Implemented in <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a3f4a59ba003ec5c83d2f128ca58e50bb">MoFEM::CoreTmp&lt; 0 &gt;</a>.</p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="continuity_check_on_skeleton_3d_8cpp-example.html#a69">continuity_check_on_skeleton_3d.cpp</a>, <a class="el" href="dm_build_partitioned_mesh_8cpp-example.html#a43">dm_build_partitioned_mesh.cpp</a>, and <a class="el" href="dm_partitioned_no_field_8cpp-example.html#a24">dm_partitioned_no_field.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="continuity_check_on_skeleton_3d_8cpp-example.html#a69">continuity_check_on_skeleton_3d.cpp</a>, <a class="el" href="dm_build_partitioned_mesh_8cpp-example.html#a44">dm_build_partitioned_mesh.cpp</a>, and <a class="el" href="dm_partitioned_no_field_8cpp-example.html#a25">dm_partitioned_no_field.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -1327,7 +1329,7 @@ Collaboration diagram for Pointers to multi-indices:</div>
 <dl class="section return"><dt>Returns</dt><dd>const Problem* </dd></dl>
 
 <p>Implemented in <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a993371ecef19584b9934b3161978aa69">MoFEM::CoreTmp&lt; 0 &gt;</a>.</p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="eigen_elastic_8cpp-example.html#a60">eigen_elastic.cpp</a>, <a class="el" href="heat_method_8cpp-example.html#a58">heat_method.cpp</a>, <a class="el" href="remove_entities_from_problem_8cpp-example.html#a44">remove_entities_from_problem.cpp</a>, and <a class="el" href="remove_entities_from_problem_not_partitioned_8cpp-example.html#a44">remove_entities_from_problem_not_partitioned.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="eigen_elastic_8cpp-example.html#a60">eigen_elastic.cpp</a>, <a class="el" href="heat_method_8cpp-example.html#a59">heat_method.cpp</a>, <a class="el" href="nonlinear_dynamics_8cpp-example.html#a124">nonlinear_dynamics.cpp</a>, <a class="el" href="remove_entities_from_problem_8cpp-example.html#a45">remove_entities_from_problem.cpp</a>, and <a class="el" href="remove_entities_from_problem_not_partitioned_8cpp-example.html#a45">remove_entities_from_problem_not_partitioned.cpp</a>.</dd>
 </dl>
 
 </div>

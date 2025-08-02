@@ -258,7 +258,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   91</span>  <a class="code hl_typedef" href="namespaceMoFEM.html#ad9258a21a57783a3fe0e29a2cc18c856">Interface</a> &amp;m_field = cOre;</div>
 <div class="line"><span class="lineno">   92</span>  moab::Interface &amp;moab = m_field.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>();</div>
 <div class="line"><span class="lineno">   93</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">   94</span>  EntityHandle meshset;</div>
+<div class="line"><span class="lineno">   94</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset;</div>
 <div class="line"><span class="lineno">   95</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset);</div>
 <div class="line"><span class="lineno">   96</span>  <span class="keywordtype">void</span> <span class="keyword">const</span> *tag_data[] = {series_name.c_str()};</div>
 <div class="line"><span class="lineno">   97</span>  <span class="keywordtype">int</span> tag_sizes[1];</div>
@@ -290,7 +290,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  123</span>             <span class="stringliteral">&quot;series recorder &lt;%s&gt; not exist and can be deleted&quot;</span>,</div>
 <div class="line"><span class="lineno">  124</span>             series_name.c_str());</div>
 <div class="line"><span class="lineno">  125</span>  }</div>
-<div class="line"><span class="lineno">  126</span>  EntityHandle series_meshset = sit-&gt;getMeshset();</div>
+<div class="line"><span class="lineno">  126</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> series_meshset = sit-&gt;getMeshset();</div>
 <div class="line"><span class="lineno">  127</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_delete(sit-&gt;th_SeriesTime);</div>
 <div class="line"><span class="lineno">  128</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_delete(sit-&gt;th_SeriesDataHandles);</div>
 <div class="line"><span class="lineno">  129</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_delete(sit-&gt;th_SeriesDataUIDs);</div>
@@ -372,7 +372,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  205</span>    <span class="keywordflow">if</span> ((dof_bit &amp; mask) != dof_bit)</div>
 <div class="line"><span class="lineno">  206</span>      <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  207</span>    <span class="keywordflow">if</span> ((dof_bit &amp; <a class="code hl_variable" href="hanging__node__approx_8cpp.html#ae63ebbb5e1ef5e0a8b9872228c595f8c">bit</a>).any()) {</div>
-<div class="line"><span class="lineno">  208</span>      EntityHandle ent = (*dit)-&gt;getEnt();</div>
+<div class="line"><span class="lineno">  208</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent = (*dit)-&gt;getEnt();</div>
 <div class="line"><span class="lineno">  209</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#af1a549fb49bdd69b92456788e477a0c2">ShortId</a> uid = (*dit)-&gt;getNonNonuniqueShortId();</div>
 <div class="line"><span class="lineno">  210</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a3a53e1565cccd97a3133cac7b3a427f4">FieldData</a> val = (*dit)-&gt;getFieldData();</div>
 <div class="line"><span class="lineno">  211</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <span class="keyword">const_cast&lt;</span>FieldSeries *<span class="keyword">&gt;</span>(&amp;*sit)-&gt;push_dofs(ent, uid, val);</div>
@@ -503,6 +503,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  336</span> </div>
 <div class="line"><span class="lineno">  337</span>} <span class="comment">// namespace MoFEM</span></div>
 <div class="ttc" id="aSeriesRecorder_8cpp_html_a236d542790cfba951691bacec6f69b6b"><div class="ttname"><a href="SeriesRecorder_8cpp.html#a236d542790cfba951691bacec6f69b6b">SeriesRecorderFunctionBegin</a></div><div class="ttdeci">#define SeriesRecorderFunctionBegin</div><div class="ttdef"><b>Definition</b> <a href="SeriesRecorder_8cpp_source.html#l00006">SeriesRecorder.cpp:6</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28">QUIET</a></div><div class="ttdeci">@ QUIET</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00221">definitions.h:221</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69db"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69db">RowColData</a></div><div class="ttdeci">RowColData</div><div class="ttdoc">RowColData.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>

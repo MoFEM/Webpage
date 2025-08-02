@@ -207,7 +207,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   41</span>  <span class="keywordflow">return</span> (*miit)-&gt;getName();</div>
 <div class="line"><span class="lineno">   42</span>}</div>
 <div class="line"><span class="lineno">   43</span> </div>
-<div class="line"><span class="lineno">   44</span>EntityHandle Core::get_field_meshset(<span class="keyword">const</span> BitFieldId <span class="keywordtype">id</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><span class="lineno">   44</span><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> Core::get_field_meshset(<span class="keyword">const</span> BitFieldId <span class="keywordtype">id</span>)<span class="keyword"> const </span>{</div>
 <div class="line"><span class="lineno">   45</span>  <span class="keyword">auto</span> &amp;<span class="keyword">set</span> = fIelds.get&lt;BitFieldId_mi_tag&gt;();</div>
 <div class="line"><span class="lineno">   46</span>  <span class="keyword">auto</span> miit = <span class="keyword">set</span>.find(<span class="keywordtype">id</span>);</div>
 <div class="line"><span class="lineno">   47</span>  <span class="keywordflow">if</span> (miit == <span class="keyword">set</span>.end())</div>
@@ -215,7 +215,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   49</span>  <span class="keywordflow">return</span> (*miit)-&gt;meshSet;</div>
 <div class="line"><span class="lineno">   50</span>}</div>
 <div class="line"><span class="lineno">   51</span> </div>
-<div class="line"><span class="lineno">   52</span>EntityHandle Core::get_field_meshset(<span class="keyword">const</span> std::string name)<span class="keyword"> const </span>{</div>
+<div class="line"><span class="lineno">   52</span><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> Core::get_field_meshset(<span class="keyword">const</span> std::string name)<span class="keyword"> const </span>{</div>
 <div class="line"><span class="lineno">   53</span>  <span class="keywordflow">return</span> get_field_meshset(get_field_id(name));</div>
 <div class="line"><span class="lineno">   54</span>}</div>
 <div class="line"><span class="lineno">   55</span> </div>
@@ -248,7 +248,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   82</span>                                                     <a class="code hl_class" href="classRange.html">Range</a> &amp;ents)<span class="keyword"> const </span>{</div>
 <div class="line"><span class="lineno">   83</span> </div>
 <div class="line"><span class="lineno">   84</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">   85</span>  EntityHandle meshset = get_field_meshset(name);</div>
+<div class="line"><span class="lineno">   85</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = get_field_meshset(name);</div>
 <div class="line"><span class="lineno">   86</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().get_entities_by_dimension(meshset, dim, ents, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   87</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><span class="lineno">   88</span>}</div>
@@ -257,7 +257,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   91</span>                                                EntityType type,</div>
 <div class="line"><span class="lineno">   92</span>                                                <a class="code hl_class" href="classRange.html">Range</a> &amp;ents)<span class="keyword"> const </span>{</div>
 <div class="line"><span class="lineno">   93</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">   94</span>  EntityHandle meshset = get_field_meshset(name);</div>
+<div class="line"><span class="lineno">   94</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = get_field_meshset(name);</div>
 <div class="line"><span class="lineno">   95</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().get_entities_by_type(meshset, type, ents, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   96</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><span class="lineno">   97</span>}</div>
@@ -265,7 +265,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">   99</span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> Core::get_field_entities_by_handle(<span class="keyword">const</span> std::string name,</div>
 <div class="line"><span class="lineno">  100</span>                                                  <a class="code hl_class" href="classRange.html">Range</a> &amp;ents)<span class="keyword"> const </span>{</div>
 <div class="line"><span class="lineno">  101</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  102</span>  EntityHandle meshset = get_field_meshset(name);</div>
+<div class="line"><span class="lineno">  102</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = get_field_meshset(name);</div>
 <div class="line"><span class="lineno">  103</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().get_entities_by_handle(meshset, ents, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  104</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><span class="lineno">  105</span>}</div>
@@ -407,7 +407,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  241</span> </div>
 <div class="line"><span class="lineno">  242</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>    EntityHandle meshset;</div>
+<div class="line"><span class="lineno">  244</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset;</div>
 <div class="line"><span class="lineno">  245</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().create_meshset(MESHSET_SET, meshset);</div>
 <div class="line"><span class="lineno">  246</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> add_meshset_to_partition(meshset);</div>
 <div class="line"><span class="lineno">  247</span> </div>
@@ -490,7 +490,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  324</span>                                         <span class="keyword">const</span> std::string &amp;name, <span class="keywordtype">int</span> verb) {</div>
 <div class="line"><span class="lineno">  325</span> </div>
 <div class="line"><span class="lineno">  326</span>  *buildMoFEM = 0;</div>
-<div class="line"><span class="lineno">  327</span>  EntityHandle idm = <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>;</div>
+<div class="line"><span class="lineno">  327</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> idm = <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>;</div>
 <div class="line"><span class="lineno">  328</span>  <span class="keywordflow">if</span> (verb == -1)</div>
 <div class="line"><span class="lineno">  329</span>    verb = verbose;</div>
 <div class="line"><span class="lineno">  330</span> </div>
@@ -602,7 +602,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  436</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><span class="lineno">  437</span>}</div>
 <div class="line"><span class="lineno">  438</span> </div>
-<div class="line"><span class="lineno">  439</span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> Core::add_ents_to_field_by_dim(<span class="keyword">const</span> EntityHandle meshset,</div>
+<div class="line"><span class="lineno">  439</span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> Core::add_ents_to_field_by_dim(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset,</div>
 <div class="line"><span class="lineno">  440</span>                                              <span class="keyword">const</span> <span class="keywordtype">int</span> dim,</div>
 <div class="line"><span class="lineno">  441</span>                                              <span class="keyword">const</span> std::string &amp;name,</div>
 <div class="line"><span class="lineno">  442</span>                                              <span class="keyword">const</span> <span class="keywordtype">bool</span> recursive, <span class="keywordtype">int</span> verb) {</div>
@@ -614,7 +614,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  448</span>  <a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line"><span class="lineno">  449</span>}</div>
 <div class="line"><span class="lineno">  450</span> </div>
-<div class="line"><span class="lineno">  451</span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> Core::add_ents_to_field_by_type(<span class="keyword">const</span> EntityHandle meshset,</div>
+<div class="line"><span class="lineno">  451</span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> Core::add_ents_to_field_by_type(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset,</div>
 <div class="line"><span class="lineno">  452</span>                                               <span class="keyword">const</span> EntityType type,</div>
 <div class="line"><span class="lineno">  453</span>                                               <span class="keyword">const</span> std::string &amp;name,</div>
 <div class="line"><span class="lineno">  454</span>                                               <span class="keyword">const</span> <span class="keywordtype">bool</span> recursive, <span class="keywordtype">int</span> verb) {</div>
@@ -643,7 +643,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  477</span>    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><span class="lineno">  478</span> </div>
 <div class="line"><span class="lineno">  479</span>    vector&lt;double *&gt; arrays_coord;</div>
-<div class="line"><span class="lineno">  480</span>    EntityHandle startv = 0;</div>
+<div class="line"><span class="lineno">  480</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> startv = 0;</div>
 <div class="line"><span class="lineno">  481</span>    ReadUtilIface *iface;</div>
 <div class="line"><span class="lineno">  482</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().query_interface(iface);</div>
 <div class="line"><span class="lineno">  483</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> iface-&gt;get_node_coords(3, size, 0, startv, arrays_coord);</div>
@@ -657,7 +657,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  491</span> </div>
 <div class="line"><span class="lineno">  492</span>  <span class="keyword">auto</span> add_verts_to_field = [&amp;]() {</div>
 <div class="line"><span class="lineno">  493</span>    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  494</span>    EntityHandle field_meshset = get_field_meshset(name);</div>
+<div class="line"><span class="lineno">  494</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> field_meshset = get_field_meshset(name);</div>
 <div class="line"><span class="lineno">  495</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().add_entities(field_meshset, verts);</div>
 <div class="line"><span class="lineno">  496</span>    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><span class="lineno">  497</span>  };</div>
@@ -717,8 +717,8 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  551</span> </div>
 <div class="line"><span class="lineno">  552</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> pit = field_ents.const_pair_begin();</div>
 <div class="line"><span class="lineno">  553</span>       pit != field_ents.const_pair_end(); pit++) {</div>
-<div class="line"><span class="lineno">  554</span>    EntityHandle first = pit-&gt;first;</div>
-<div class="line"><span class="lineno">  555</span>    EntityHandle second = pit-&gt;second;</div>
+<div class="line"><span class="lineno">  554</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> first = pit-&gt;first;</div>
+<div class="line"><span class="lineno">  555</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> second = pit-&gt;second;</div>
 <div class="line"><span class="lineno">  556</span> </div>
 <div class="line"><span class="lineno">  557</span>    <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="namespaceconvert.html#a80e685c1c2056739a335dd39b1981ef7">type</a> = <span class="keyword">static_cast&lt;</span>EntityType<span class="keyword">&gt;</span>(first &gt;&gt; <a class="code hl_define" href="definitions_8h.html#a62d4928b677d02a3e41dd2b4df7993ac">MB_ID_WIDTH</a>);</div>
 <div class="line"><span class="lineno">  558</span> </div>
@@ -1117,7 +1117,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  951</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><span class="lineno">  952</span>}</div>
 <div class="line"><span class="lineno">  953</span> </div>
-<div class="line"><span class="lineno">  954</span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> Core::set_field_order(<span class="keyword">const</span> EntityHandle meshset,</div>
+<div class="line"><span class="lineno">  954</span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> Core::set_field_order(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset,</div>
 <div class="line"><span class="lineno">  955</span>                                     <span class="keyword">const</span> EntityType type, <span class="keyword">const</span> BitFieldId <span class="keywordtype">id</span>,</div>
 <div class="line"><span class="lineno">  956</span>                                     <span class="keyword">const</span> ApproximationOrder <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, <span class="keywordtype">int</span> verb) {</div>
 <div class="line"><span class="lineno">  957</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
@@ -1129,7 +1129,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno">  963</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> this-&gt;set_field_order(ents, <span class="keywordtype">id</span>, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, verb);</div>
 <div class="line"><span class="lineno">  964</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><span class="lineno">  965</span>}</div>
-<div class="line"><span class="lineno">  966</span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> Core::set_field_order(<span class="keyword">const</span> EntityHandle meshset,</div>
+<div class="line"><span class="lineno">  966</span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> Core::set_field_order(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset,</div>
 <div class="line"><span class="lineno">  967</span>                                     <span class="keyword">const</span> EntityType type,</div>
 <div class="line"><span class="lineno">  968</span>                                     <span class="keyword">const</span> std::string &amp;name,</div>
 <div class="line"><span class="lineno">  969</span>                                     <span class="keyword">const</span> ApproximationOrder <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, <span class="keywordtype">int</span> verb) {</div>
@@ -1334,8 +1334,8 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1168</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> p_eit = ents_of_id_meshset.pair_begin();</div>
 <div class="line"><span class="lineno"> 1169</span>       p_eit != ents_of_id_meshset.pair_end(); ++p_eit) {</div>
 <div class="line"><span class="lineno"> 1170</span> </div>
-<div class="line"><span class="lineno"> 1171</span>    <span class="keyword">const</span> EntityHandle first = p_eit-&gt;first;</div>
-<div class="line"><span class="lineno"> 1172</span>    <span class="keyword">const</span> EntityHandle second = p_eit-&gt;second;</div>
+<div class="line"><span class="lineno"> 1171</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> first = p_eit-&gt;first;</div>
+<div class="line"><span class="lineno"> 1172</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> second = p_eit-&gt;second;</div>
 <div class="line"><span class="lineno"> 1173</span>    <span class="keyword">const</span> <span class="keyword">auto</span> lo_uid =</div>
 <div class="line"><span class="lineno"> 1174</span>        FieldEntity::getLoLocalEntityBitNumber(bit_number, first);</div>
 <div class="line"><span class="lineno"> 1175</span>    <span class="keyword">const</span> <span class="keyword">auto</span> hi_uid =</div>
@@ -1544,14 +1544,14 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1378</span>}</div>
 <div class="line"><span class="lineno"> 1379</span>DofEntityByUId::iterator</div>
 <div class="line"><span class="lineno"> 1380</span>Core::get_dofs_by_name_and_ent_begin(<span class="keyword">const</span> std::string &amp;<a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>,</div>
-<div class="line"><span class="lineno"> 1381</span>                                     <span class="keyword">const</span> EntityHandle ent)<span class="keyword"> const </span>{</div>
+<div class="line"><span class="lineno"> 1381</span>                                     <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent)<span class="keyword"> const </span>{</div>
 <div class="line"><span class="lineno"> 1382</span>  <span class="keywordflow">return</span> dofsField.get&lt;Unique_mi_tag&gt;().lower_bound(</div>
 <div class="line"><span class="lineno"> 1383</span>      FieldEntity::getLoLocalEntityBitNumber(get_field_bit_number(<a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>),</div>
 <div class="line"><span class="lineno"> 1384</span>                                             ent));</div>
 <div class="line"><span class="lineno"> 1385</span>}</div>
 <div class="line"><span class="lineno"> 1386</span>DofEntityByUId::iterator</div>
 <div class="line"><span class="lineno"> 1387</span>Core::get_dofs_by_name_and_ent_end(<span class="keyword">const</span> std::string &amp;<a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>,</div>
-<div class="line"><span class="lineno"> 1388</span>                                   <span class="keyword">const</span> EntityHandle ent)<span class="keyword"> const </span>{</div>
+<div class="line"><span class="lineno"> 1388</span>                                   <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent)<span class="keyword"> const </span>{</div>
 <div class="line"><span class="lineno"> 1389</span>  <span class="keywordflow">return</span> dofsField.get&lt;Unique_mi_tag&gt;().upper_bound(</div>
 <div class="line"><span class="lineno"> 1390</span>      FieldEntity::getHiLocalEntityBitNumber(get_field_bit_number(<a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>),</div>
 <div class="line"><span class="lineno"> 1391</span>                                             ent));</div>
@@ -1578,7 +1578,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1412</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a>,</div>
 <div class="line"><span class="lineno"> 1413</span>             <span class="stringliteral">&quot;field not found &lt; %s &gt;&quot;</span>, name.c_str());</div>
 <div class="line"><span class="lineno"> 1414</span>  }</div>
-<div class="line"><span class="lineno"> 1415</span>  EntityHandle meshset = (*it)-&gt;getMeshset();</div>
+<div class="line"><span class="lineno"> 1415</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = (*it)-&gt;getMeshset();</div>
 <div class="line"><span class="lineno"> 1416</span>  <span class="keywordtype">int</span> num_entities;</div>
 <div class="line"><span class="lineno"> 1417</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().get_number_entities_by_handle(meshset, num_entities);</div>
 <div class="line"><span class="lineno"> 1418</span> </div>
@@ -1605,7 +1605,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="lineno"> 1439</span>    <span class="keywordflow">if</span> (it-&gt;getSpace() == <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a35a9760c7cc030e773b0a31c303d4e4e">NOFIELD</a>)</div>
 <div class="line"><span class="lineno"> 1440</span>      <span class="keywordflow">continue</span>; <span class="comment">// FIXME: should be treated properly, not test is just</span></div>
 <div class="line"><span class="lineno"> 1441</span>                <span class="comment">// skipped for this NOFIELD space</span></div>
-<div class="line"><span class="lineno"> 1442</span>    EntityHandle meshset = it-&gt;getMeshset();</div>
+<div class="line"><span class="lineno"> 1442</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = it-&gt;getMeshset();</div>
 <div class="line"><span class="lineno"> 1443</span>    <span class="keywordtype">int</span> num_entities;</div>
 <div class="line"><span class="lineno"> 1444</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().get_number_entities_by_handle(meshset, num_entities);</div>
 <div class="line"><span class="lineno"> 1445</span> </div>
@@ -1634,6 +1634,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="aLogManager_8hpp_html_adacc7b9e7c4fa95cc0959ca359f999f5"><div class="ttname"><a href="LogManager_8hpp.html#adacc7b9e7c4fa95cc0959ca359f999f5">MOFEM_LOG_SYNCHRONISE</a></div><div class="ttdeci">#define MOFEM_LOG_SYNCHRONISE(comm)</div><div class="ttdoc">Synchronise &quot;SYNC&quot; channel.</div><div class="ttdef"><b>Definition</b> <a href="LogManager_8hpp_source.html#l00353">LogManager.hpp:353</a></div></div>
 <div class="ttc" id="aLogManager_8hpp_html_aef9b5316ec6db54581633adf7c670011"><div class="ttname"><a href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a></div><div class="ttdeci">#define MOFEM_LOG_C(channel, severity, format,...)</div><div class="ttdef"><b>Definition</b> <a href="LogManager_8hpp_source.html#l00319">LogManager.hpp:319</a></div></div>
 <div class="ttc" id="abase__functions_8c_html_a56d2889a19d8d7affaa85cfca4aadd67"><div class="ttname"><a href="base__functions_8c.html#a56d2889a19d8d7affaa85cfca4aadd67">ierr</a></div><div class="ttdeci">static PetscErrorCode ierr</div><div class="ttdef"><b>Definition</b> <a href="base__functions_8c_source.html#l00013">base_functions.c:13</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28">QUIET</a></div><div class="ttdeci">@ QUIET</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00221">definitions.h:221</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca8d51b8918fe33e9750d285a25977f435"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca8d51b8918fe33e9750d285a25977f435">DEFAULT_VERBOSITY</a></div><div class="ttdeci">@ DEFAULT_VERBOSITY</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00220">definitions.h:220</a></div></div>

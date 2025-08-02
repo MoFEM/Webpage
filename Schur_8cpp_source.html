@@ -3069,11 +3069,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02793" name="l02793"></a><span class="lineno"> 2793</span> </div>
 <div class="line"><a id="l02794" name="l02794"></a><span class="lineno"> 2794</span>  <span class="keyword">auto</span> size = block_mat_data-&gt;blockIndex.size();</div>
 <div class="line"><a id="l02795" name="l02795"></a><span class="lineno"> 2795</span> </div>
-<div class="line"><a id="l02796" name="l02796"></a><span class="lineno"> 2796</span>  EntityHandle starting_vertex;</div>
+<div class="line"><a id="l02796" name="l02796"></a><span class="lineno"> 2796</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> starting_vertex;</div>
 <div class="line"><a id="l02797" name="l02797"></a><span class="lineno"> 2797</span>  vector&lt;double *&gt; arrays_coord;</div>
 <div class="line"><a id="l02798" name="l02798"></a><span class="lineno"> 2798</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> iface-&gt;get_node_coords(3, 4 * size, 0, starting_vertex, arrays_coord);</div>
-<div class="line"><a id="l02799" name="l02799"></a><span class="lineno"> 2799</span>  EntityHandle starting_handle;</div>
-<div class="line"><a id="l02800" name="l02800"></a><span class="lineno"> 2800</span>  EntityHandle *array;</div>
+<div class="line"><a id="l02799" name="l02799"></a><span class="lineno"> 2799</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> starting_handle;</div>
+<div class="line"><a id="l02800" name="l02800"></a><span class="lineno"> 2800</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *array;</div>
 <div class="line"><a id="l02801" name="l02801"></a><span class="lineno"> 2801</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> iface-&gt;get_element_connect(size, 4, MBQUAD, 0, starting_handle, array);</div>
 <div class="line"><a id="l02802" name="l02802"></a><span class="lineno"> 2802</span> </div>
 <div class="line"><a id="l02803" name="l02803"></a><span class="lineno"> 2803</span>  <span class="keywordtype">double</span> def_val_nrm2 = 0;</div>
@@ -3122,7 +3122,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02846" name="l02846"></a><span class="lineno"> 2846</span> </div>
 <div class="line"><a id="l02847" name="l02847"></a><span class="lineno"> 2847</span>    <span class="keyword">auto</span> prt = &amp;(*block_mat_data-&gt;dataBlocksPtr)[d.getMatShift()];</div>
 <div class="line"><a id="l02848" name="l02848"></a><span class="lineno"> 2848</span>    <span class="keyword">auto</span> nrm2 = cblas_dnrm2(nb_rows * nb_cols, prt, 1);</div>
-<div class="line"><a id="l02849" name="l02849"></a><span class="lineno"> 2849</span>    EntityHandle ele = starting_handle + <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
+<div class="line"><a id="l02849" name="l02849"></a><span class="lineno"> 2849</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ele = starting_handle + <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
 <div class="line"><a id="l02850" name="l02850"></a><span class="lineno"> 2850</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_set_data(th_nrm2, &amp;ele, 1, &amp;nrm2);</div>
 <div class="line"><a id="l02851" name="l02851"></a><span class="lineno"> 2851</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_set_data(th_mat_shift, &amp;ele, 1, &amp;mat_shift);</div>
 <div class="line"><a id="l02852" name="l02852"></a><span class="lineno"> 2852</span> </div>
@@ -3143,6 +3143,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aLogManager_8hpp_html_afebc04c745581aa8f72c6ace26073f6c"><div class="ttname"><a href="LogManager_8hpp.html#afebc04c745581aa8f72c6ace26073f6c">MOFEM_TAG_AND_LOG</a></div><div class="ttdeci">#define MOFEM_TAG_AND_LOG(channel, severity, tag)</div><div class="ttdoc">Tag and log in channel.</div><div class="ttdef"><b>Definition</b> <a href="LogManager_8hpp_source.html#l00376">LogManager.hpp:376</a></div></div>
 <div class="ttc" id="aapprox__sphere_8cpp_html_a188caae18b60b66f9f44214c7e28ac1f"><div class="ttname"><a href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a></div><div class="ttdeci">constexpr double a</div><div class="ttdef"><b>Definition</b> <a href="approx__sphere_8cpp_source.html#l00030">approx_sphere.cpp:30</a></div></div>
 <div class="ttc" id="aclassB_html"><div class="ttname"><a href="classB.html">B</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassOP__SCHUR__ASSEMBLE__BASE_html"><div class="ttname"><a href="classOP__SCHUR__ASSEMBLE__BASE.html">OP_SCHUR_ASSEMBLE_BASE</a></div></div>
 <div class="ttc" id="aclassUBlasMatrix_3_01double_01_4_html"><div class="ttname"><a href="classUBlasMatrix_3_01double_01_4.html">UBlasMatrix&lt; double &gt;</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a></div><div class="ttdeci">@ COL</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>

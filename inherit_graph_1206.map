@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structMoFEM_1_1ProblemChangeRefLevelBitDofMaskSet.html" title="set prof dof bit ref mask" alt="" coords="5,5,244,45"/>
+<area shape="rect" id="Node000000" href="$structMoFEM_1_1OpCalculateHVecVectorField__General.html" title="Get vector field for H&#45;div approximation." alt="" coords="5,5,236,60"/>
+<area shape="rect" id="Node000001" href="$structMoFEM_1_1OpCalculateHVecVectorField.html" title="Get vector field for H&#45;div approximation." alt="" coords="284,13,515,53"/>
+<area shape="poly" id="edge786_Node000000_Node000001" title=" " alt="" coords="250,30,284,30,284,35,250,35"/>
 </map>

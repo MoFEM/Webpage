@@ -159,7 +159,7 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a3e4da9fb58f0d03a0af0198026abaadc" id="r_a3e4da9fb58f0d03a0af0198026abaadc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a3e4da9fb58f0d03a0af0198026abaadc">DomainEle</a> = <a class="el" href="structMoFEM_1_1PipelineManager.html#a6295243ff61c13f7aaa4e6be850950a2">PipelineManager::FaceEle</a></td></tr>
 <tr class="separator:a3e4da9fb58f0d03a0af0198026abaadc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d22d16d53b24e827d6002ef0a6fd613" id="r_a9d22d16d53b24e827d6002ef0a6fd613"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a9d22d16d53b24e827d6002ef0a6fd613">DomainEleOp</a> = DomainEle::UserDataOperator</td></tr>
+<tr class="memitem:a9d22d16d53b24e827d6002ef0a6fd613" id="r_a9d22d16d53b24e827d6002ef0a6fd613"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a9d22d16d53b24e827d6002ef0a6fd613">DomainEleOp</a> = <a class="el" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">DomainEle::UserDataOperator</a></td></tr>
 <tr class="separator:a9d22d16d53b24e827d6002ef0a6fd613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63d55fceaf70bcf632f8619ba2c050cf" id="r_a63d55fceaf70bcf632f8619ba2c050cf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a63d55fceaf70bcf632f8619ba2c050cf">EdgeEle</a> = <a class="el" href="structMoFEM_1_1PipelineManager.html#a9f17d56a5b13c864aeba402c882e3595">PipelineManager::EdgeEle</a></td></tr>
 <tr class="separator:a63d55fceaf70bcf632f8619ba2c050cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,15 +184,15 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a29680e68c64040f4884f60691a193226" id="r_a29680e68c64040f4884f60691a193226"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a29680e68c64040f4884f60691a193226">help</a> [] = &quot;...\n\n&quot;</td></tr>
 <tr class="separator:a29680e68c64040f4884f60691a193226"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9107ca8277bfb210abcfbcf3dfee981" id="r_ae9107ca8277bfb210abcfbcf3dfee981"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#ae9107ca8277bfb210abcfbcf3dfee981">heat_conductivity</a> = ((0.4 + 0.7) / 2) * 1e3</td></tr>
+<tr class="memitem:ae9107ca8277bfb210abcfbcf3dfee981" id="r_ae9107ca8277bfb210abcfbcf3dfee981"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#ae9107ca8277bfb210abcfbcf3dfee981">heat_conductivity</a> = ((0.4 + 0.7) / 2) * 1e3</td></tr>
 <tr class="separator:ae9107ca8277bfb210abcfbcf3dfee981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaadbed7307678bb46fc77aaf9a5af00c" id="r_aaadbed7307678bb46fc77aaf9a5af00c"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#aaadbed7307678bb46fc77aaf9a5af00c">emissivity</a> = 1</td></tr>
+<tr class="memitem:aaadbed7307678bb46fc77aaf9a5af00c" id="r_aaadbed7307678bb46fc77aaf9a5af00c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#aaadbed7307678bb46fc77aaf9a5af00c">emissivity</a> = 1</td></tr>
 <tr class="separator:aaadbed7307678bb46fc77aaf9a5af00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f671daacbc8d5f5e9c45d5557a9cf66" id="r_a3f671daacbc8d5f5e9c45d5557a9cf66"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a3f671daacbc8d5f5e9c45d5557a9cf66">boltzmann_constant</a> = 5.670374419e-2</td></tr>
+<tr class="memitem:a3f671daacbc8d5f5e9c45d5557a9cf66" id="r_a3f671daacbc8d5f5e9c45d5557a9cf66"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a3f671daacbc8d5f5e9c45d5557a9cf66">boltzmann_constant</a> = 5.670374419e-2</td></tr>
 <tr class="separator:a3f671daacbc8d5f5e9c45d5557a9cf66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32b86337ba4aeca18f0e121a2978fea7" id="r_a32b86337ba4aeca18f0e121a2978fea7"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a32b86337ba4aeca18f0e121a2978fea7">Beta</a> = <a class="el" href="radiation_8cpp.html#aaadbed7307678bb46fc77aaf9a5af00c">emissivity</a> * <a class="el" href="radiation_8cpp.html#a3f671daacbc8d5f5e9c45d5557a9cf66">boltzmann_constant</a></td></tr>
+<tr class="memitem:a32b86337ba4aeca18f0e121a2978fea7" id="r_a32b86337ba4aeca18f0e121a2978fea7"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a32b86337ba4aeca18f0e121a2978fea7">Beta</a> = <a class="el" href="radiation_8cpp.html#aaadbed7307678bb46fc77aaf9a5af00c">emissivity</a> * <a class="el" href="radiation_8cpp.html#a3f671daacbc8d5f5e9c45d5557a9cf66">boltzmann_constant</a></td></tr>
 <tr class="separator:a32b86337ba4aeca18f0e121a2978fea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4360f39492758b21dad1b5f78f623e02" id="r_a4360f39492758b21dad1b5f78f623e02"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a4360f39492758b21dad1b5f78f623e02">T_ambient</a> = 2.7</td></tr>
+<tr class="memitem:a4360f39492758b21dad1b5f78f623e02" id="r_a4360f39492758b21dad1b5f78f623e02"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="radiation_8cpp.html#a4360f39492758b21dad1b5f78f623e02">T_ambient</a> = 2.7</td></tr>
 <tr class="separator:a4360f39492758b21dad1b5f78f623e02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -219,7 +219,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> =  DomainEle::UserDataOperator</td>
+          <td class="memname">using <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> =  <a class="el" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">DomainEle::UserDataOperator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -287,7 +287,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="approx_sphere_8cpp-example.html#a8">approx_sphere.cpp</a>, <a class="el" href="free_surface_8cpp-example.html#a21">free_surface.cpp</a>, <a class="el" href="level_set_8cpp-example.html#a89">level_set.cpp</a>, <a class="el" href="phase_8cpp-example.html#a21">phase.cpp</a>, <a class="el" href="poisson_2d_homogeneous_8hpp-example.html#a6">poisson_2d_homogeneous.hpp</a>, <a class="el" href="seepage_8cpp-example.html#a9">seepage.cpp</a>, <a class="el" href="shallow_wave_8cpp-example.html#a8">shallow_wave.cpp</a>, <a class="el" href="tensor_divergence_operator_8cpp-example.html#a18">tensor_divergence_operator.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a11">thermo_elastic.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="approx_sphere_8cpp-example.html#a8">approx_sphere.cpp</a>, <a class="el" href="free_surface_8cpp-example.html#a21">free_surface.cpp</a>, <a class="el" href="level_set_8cpp-example.html#a89">level_set.cpp</a>, <a class="el" href="phase_8cpp-example.html#a22">phase.cpp</a>, <a class="el" href="poisson_2d_homogeneous_8hpp-example.html#a6">poisson_2d_homogeneous.hpp</a>, <a class="el" href="seepage_8cpp-example.html#a9">seepage.cpp</a>, <a class="el" href="shallow_wave_8cpp-example.html#a8">shallow_wave.cpp</a>, <a class="el" href="tensor_divergence_operator_8cpp-example.html#a18">tensor_divergence_operator.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a11">thermo_elastic.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="radiation_8cpp_source.html#l00029">29</a> of file <a class="el" href="radiation_8cpp_source.html">radiation.cpp</a>.</p>
@@ -446,7 +446,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr double Beta = <a class="el" href="radiation_8cpp.html#aaadbed7307678bb46fc77aaf9a5af00c">emissivity</a> * <a class="el" href="radiation_8cpp.html#a3f671daacbc8d5f5e9c45d5557a9cf66">boltzmann_constant</a></td>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> Beta = <a class="el" href="radiation_8cpp.html#aaadbed7307678bb46fc77aaf9a5af00c">emissivity</a> * <a class="el" href="radiation_8cpp.html#a3f671daacbc8d5f5e9c45d5557a9cf66">boltzmann_constant</a></td>
         </tr>
       </table>
   </td>
@@ -470,7 +470,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr double boltzmann_constant = 5.670374419e-2</td>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> boltzmann_constant = 5.670374419e-2</td>
         </tr>
       </table>
   </td>
@@ -494,7 +494,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr double emissivity = 1</td>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> emissivity = 1</td>
         </tr>
       </table>
   </td>
@@ -518,7 +518,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr double heat_conductivity = ((0.4 + 0.7) / 2) * 1e3</td>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> heat_conductivity = ((0.4 + 0.7) / 2) * 1e3</td>
         </tr>
       </table>
   </td>
@@ -566,7 +566,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr double T_ambient = 2.7</td>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> T_ambient = 2.7</td>
         </tr>
       </table>
   </td>

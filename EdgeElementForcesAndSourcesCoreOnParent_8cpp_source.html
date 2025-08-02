@@ -172,7 +172,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">auto</span> get_coords = [&amp;](<span class="keyword">const</span> <span class="keyword">auto</span> ent) {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMoFEM_1_1ForcesAndSourcesCore.html#ac1d7ee38dde697833773a3b8cb197a76">mField</a>.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_connectivity(ent, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      std::array&lt;double, 6&gt; node_coords;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_variable" href="structMoFEM_1_1ForcesAndSourcesCore.html#ac1d7ee38dde697833773a3b8cb197a76">mField</a>.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_coords(conn, num_nodes, node_coords.data());</div>
@@ -266,6 +266,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>} <span class="comment">// namespace MoFEM</span></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor0_html"><div class="ttname"><a href="classFTensor_1_1Tensor0.html">FTensor::Tensor0</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor0_8hpp_source.html#l00016">Tensor0.hpp:17</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor1__value_8hpp_source.html#l00008">Tensor1_value.hpp:9</a></div></div>

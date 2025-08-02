@@ -194,7 +194,7 @@ $(function() {
 <div class="line">    std::cout &lt;&lt; mid_nodes.size() &lt;&lt; <span class="stringliteral">&quot; higher order nodes. \n&quot;</span>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> dim : {1, 2, 3}) {</div>
-<div class="line">      EntityHandle sub_meshset;</div>
+<div class="line">      <a id="_a9" name="_a9"></a><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> sub_meshset;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, sub_meshset);</div>
 <div class="line">      <a class="code hl_class" href="classRange.html">Range</a> edges;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_entities_by_dimension(0, dim, edges, <span class="keyword">false</span>);</div>
@@ -211,15 +211,16 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;out.h5m&quot;</span>);</div>
 <div class="line">  }</div>
-<div class="line">  <a id="a9" name="a9"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a id="a10" name="a10"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a id="a10" name="a10"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a id="a11" name="a11"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aactivate__deactivate__dofs_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="activate__deactivate__dofs_8cpp_source.html#l00013">activate_deactivate_dofs.cpp:13</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5fe7ca274d3c5ac11ac61888ce74bc13"><div class="ttname"><a href="definitions_8h.html#a5fe7ca274d3c5ac11ac61888ce74bc13">MYPCOMM_INDEX</a></div><div class="ttdeci">#define MYPCOMM_INDEX</div><div class="ttdoc">default communicator number PCOMM</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00228">definitions.h:228</a></div></div>

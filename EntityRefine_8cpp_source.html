@@ -174,9 +174,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a3c91901060ef372b3ab63d4091426ecb">   29</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="namespaceMoFEM.html#a3c91901060ef372b3ab63d4091426ecb">edge_bits_mark</a>[] = {1, 2, 4, 8, 16, 32};</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a1b977ce5c042a58ccd7c74b2c2788940">   31</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMoFEM.html#a1b977ce5c042a58ccd7c74b2c2788940">tet_type_6</a>(moab::Interface &amp;moab, <span class="keyword">const</span> EntityHandle *conn,</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                EntityHandle *new_tets_conn) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a1b977ce5c042a58ccd7c74b2c2788940">   31</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMoFEM.html#a1b977ce5c042a58ccd7c74b2c2788940">tet_type_6</a>(moab::Interface &amp;moab, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_tets_conn) {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="comment">// 0:01 - 4 1:12-5 2:20-6 3:03-7 4:13-8 5:23-9</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">// TET0</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  new_tets_conn[0 * 4 + 0] = conn[0];</div>
@@ -278,9 +278,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
 </div>
 <div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#ac43c755594ad65187b20409d2f9e557c">  133</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceMoFEM.html#ac43c755594ad65187b20409d2f9e557c">tet_type_5</a>(moab::Interface &amp;moab, <span class="keyword">const</span> EntityHandle *conn,</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>               <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>               EntityHandle *new_tets_conn) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#ac43c755594ad65187b20409d2f9e557c">  133</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceMoFEM.html#ac43c755594ad65187b20409d2f9e557c">tet_type_5</a>(moab::Interface &amp;moab, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>               <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>               <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_tets_conn) {</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keywordtype">int</span> free_edge = -1;</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; 6; ee++) {</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordflow">if</span> (edge_new_nodes[ee] == <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>) {</div>
@@ -289,17 +289,17 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  }</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <span class="keywordtype">int</span> edge0 = <a class="code hl_variable" href="namespaceMoFEM.html#a5b1a74e5361f5a84d98c0f8b66fa3560">oposite_edge</a>[free_edge];</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  EntityHandle conn_[] = {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> conn_[] = {</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[edge0 * 2 + 0]], conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[edge0 * 2 + 1]],</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[free_edge * 2 + 0]], conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[free_edge * 2 + 1]]};</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> *edges_ = &amp;<a class="code hl_variable" href="namespaceMoFEM.html#ababb109cb2fac8edb6cb51488c55d2e7">edge_permutations</a>[edge0][0];</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  EntityHandle edge_new_nodes_[6];</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> edge_new_nodes_[6];</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; 6; ee++)</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    edge_new_nodes_[ee] = edge_new_nodes[edges_[ee]];</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="keywordtype">bool</span> free_edge_swappped = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keywordflow">if</span> (conn_[3] &lt; conn_[2]) {</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    free_edge_swappped = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    EntityHandle conn__2_ = conn_[2];</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> conn__2_ = conn_[2];</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    conn_[2] = conn_[3];</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    conn_[3] = conn__2_;</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  }</div>
@@ -386,13 +386,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>}</div>
 </div>
 <div class="foldopen" id="foldopen00239" data-start="{" data-end="}">
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#ad097466ea27189b837bac98197156a8c">  239</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceMoFEM.html#ad097466ea27189b837bac98197156a8c">tet_type_4</a>(<span class="keyword">const</span> EntityHandle *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> *split_edges,</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>               <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>               EntityHandle *new_tets_conn) {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#ad097466ea27189b837bac98197156a8c">  239</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceMoFEM.html#ad097466ea27189b837bac98197156a8c">tet_type_4</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> *split_edges,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>               <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>               <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_tets_conn) {</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="keywordtype">char</span> mach_pattern = 0;</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; 4; ee++)</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    mach_pattern |= <a class="code hl_variable" href="namespaceMoFEM.html#a3c91901060ef372b3ab63d4091426ecb">edge_bits_mark</a>[split_edges[ee]];</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  EntityHandle conn_[4] = {<a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>};</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> conn_[4] = {<a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>};</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <span class="keywordtype">int</span> edges_[6];</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="keywordtype">int</span> type = -1;</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; 6; ee++) {</div>
@@ -445,7 +445,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    }</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  }</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  assert(type != -1);</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  EntityHandle edge_new_nodes_[6];</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> edge_new_nodes_[6];</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; 6; ee++)</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    edge_new_nodes_[ee] = edge_new_nodes[edges_[ee]];</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  <span class="keywordflow">if</span> (type == 0) {</div>
@@ -714,13 +714,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>}</div>
 </div>
 <div class="foldopen" id="foldopen00565" data-start="{" data-end="}">
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a09ec223a6cb950da0f6a573875b6f74e">  565</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceMoFEM.html#a09ec223a6cb950da0f6a573875b6f74e">tet_type_3</a>(<span class="keyword">const</span> EntityHandle *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> *split_edges,</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>               <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>               EntityHandle *new_tets_conn) {</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a09ec223a6cb950da0f6a573875b6f74e">  565</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceMoFEM.html#a09ec223a6cb950da0f6a573875b6f74e">tet_type_3</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> *split_edges,</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>               <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>               <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_tets_conn) {</div>
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>  <span class="keywordtype">char</span> mach_pattern = 0;</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; 3; ee++)</div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>    mach_pattern |= <a class="code hl_variable" href="namespaceMoFEM.html#a3c91901060ef372b3ab63d4091426ecb">edge_bits_mark</a>[split_edges[ee]];</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  EntityHandle conn_[4];</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> conn_[4];</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>  <span class="keywordtype">int</span> edges_[6];</div>
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>  <span class="keywordtype">int</span> type = -1;</div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  <span class="keywordtype">bool</span> is_rotated = <span class="keyword">false</span>;</div>
@@ -832,14 +832,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>    }</div>
 <div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>  }</div>
 <div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>  assert(type != -1);</div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>  EntityHandle edge_new_nodes_[6];</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> edge_new_nodes_[6];</div>
 <div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; 6; ee++)</div>
 <div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>    edge_new_nodes_[ee] = edge_new_nodes[edges_[ee]];</div>
 <div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>  <span class="keywordflow">if</span> (type == 0) {</div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>    EntityHandle conn__[4];</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>    EntityHandle edge_new_nodes__[6];</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>    bcopy(conn_, conn__, 4 * <span class="keyword">sizeof</span>(EntityHandle));</div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>    bcopy(edge_new_nodes_, edge_new_nodes__, 6 * <span class="keyword">sizeof</span>(EntityHandle));</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> conn__[4];</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> edge_new_nodes__[6];</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>    bcopy(conn_, conn__, 4 * <span class="keyword">sizeof</span>(<a class="code hl_class" href="classEntityHandle.html">EntityHandle</a>));</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>    bcopy(edge_new_nodes_, edge_new_nodes__, 6 * <span class="keyword">sizeof</span>(<a class="code hl_class" href="classEntityHandle.html">EntityHandle</a>));</div>
 <div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> rotate_idx = 0; rotate_idx &lt; 3; rotate_idx++) {</div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>      <span class="comment">// fprintf(stderr,&quot;%d\n&quot;,rotate_idx);</span></div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii &lt; 4; ii++)</div>
@@ -1139,15 +1139,15 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>}</div>
 </div>
 <div class="foldopen" id="foldopen00988" data-start="{" data-end="}">
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#aaff39bae46926a7938069e620fdd0ee3">  988</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceMoFEM.html#aaff39bae46926a7938069e620fdd0ee3">tet_type_2</a>(<span class="keyword">const</span> EntityHandle *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> *split_edges,</div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>               <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>               EntityHandle *new_tets_conn) {</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#aaff39bae46926a7938069e620fdd0ee3">  988</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceMoFEM.html#aaff39bae46926a7938069e620fdd0ee3">tet_type_2</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> *split_edges,</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>               <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>               <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_tets_conn) {</div>
 <div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  <span class="keywordflow">if</span> (split_edges[0] == <a class="code hl_variable" href="namespaceMoFEM.html#a5b1a74e5361f5a84d98c0f8b66fa3560">oposite_edge</a>[split_edges[1]]) {</div>
 <div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>    <span class="comment">// type 2b</span></div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    EntityHandle n0 = conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[2 * split_edges[0] + 0]];</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>    EntityHandle n1 = conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[2 * split_edges[0] + 1]];</div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    EntityHandle n2 = conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[2 * split_edges[1] + 0]];</div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>    EntityHandle n3 = conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[2 * split_edges[1] + 1]];</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> n0 = conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[2 * split_edges[0] + 0]];</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> n1 = conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[2 * split_edges[0] + 1]];</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> n2 = conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[2 * split_edges[1] + 0]];</div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> n3 = conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[2 * split_edges[1] + 1]];</div>
 <div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>    <span class="comment">// TET0</span></div>
 <div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>    new_tets_conn[0 * 4 + 0] = edge_new_nodes[split_edges[0]];</div>
 <div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>    new_tets_conn[0 * 4 + 1] = edge_new_nodes[split_edges[1]];</div>
@@ -1174,7 +1174,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>    <span class="comment">// type 2a</span></div>
 <div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> mach_pattern =</div>
 <div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>        <a class="code hl_variable" href="namespaceMoFEM.html#a3c91901060ef372b3ab63d4091426ecb">edge_bits_mark</a>[split_edges[0]] | <a class="code hl_variable" href="namespaceMoFEM.html#a3c91901060ef372b3ab63d4091426ecb">edge_bits_mark</a>[split_edges[1]];</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    EntityHandle conn_[4] = {<a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>};</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> conn_[4] = {<a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>, <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>};</div>
 <div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    <span class="keywordtype">int</span> edges_[6];</div>
 <div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; 6; ee++) {</div>
 <div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>      <span class="keywordtype">char</span> pattern;</div>
@@ -1205,7 +1205,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>      }</div>
 <div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>    }</div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    EntityHandle edge_new_nodes_[6];</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> edge_new_nodes_[6];</div>
 <div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; 6; ee++)</div>
 <div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>      edge_new_nodes_[ee] = edge_new_nodes[edges_[ee]];</div>
 <div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>    assert(edge_new_nodes_[1] != <a class="code hl_variable" href="namespaceMoFEM.html#ac4e6ecdc1c4668e5613f6e1ec821ddb3">no_handle</a>);</div>
@@ -1249,8 +1249,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>}</div>
 </div>
 <div class="foldopen" id="foldopen01096" data-start="{" data-end="}">
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#ae167f5d30580719040fba4e48730ddff"> 1096</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMoFEM.html#ae167f5d30580719040fba4e48730ddff">tet_type_1</a>(<span class="keyword">const</span> EntityHandle *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> split_edge,</div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>                <span class="keyword">const</span> EntityHandle edge_new_node, EntityHandle *new_tets_conn) {</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#ae167f5d30580719040fba4e48730ddff"> 1096</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMoFEM.html#ae167f5d30580719040fba4e48730ddff">tet_type_1</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> split_edge,</div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>                <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> edge_new_node, <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_tets_conn) {</div>
 <div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>  <span class="comment">// TET0</span></div>
 <div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>  new_tets_conn[0 * 4 + 0] = edge_new_node;</div>
 <div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>  new_tets_conn[0 * 4 + 1] = conn[<a class="code hl_variable" href="namespaceMoFEM.html#af106327ab637a445d2735a6f524e43b7">edges_conn</a>[2 * split_edge + 0]];</div>
@@ -1266,9 +1266,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span> </div>
 <div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span><span class="comment">// TRIS</span></div>
 <div class="foldopen" id="foldopen01111" data-start="{" data-end="}">
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a74b9cf06b42abb1192d2b896f357ab65"> 1111</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a74b9cf06b42abb1192d2b896f357ab65">tri_type_3</a>(<span class="keyword">const</span> EntityHandle *conn,</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>                          <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>                          EntityHandle *new_tris_conn) {</div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a74b9cf06b42abb1192d2b896f357ab65"> 1111</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a74b9cf06b42abb1192d2b896f357ab65">tri_type_3</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn,</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>                          <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>                          <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_tris_conn) {</div>
 <div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>  <span class="comment">// TRI0</span></div>
 <div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>  new_tris_conn[0 * 3 + 0] = conn[0];</div>
@@ -1294,9 +1294,9 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span> </div>
 <div class="foldopen" id="foldopen01137" data-start="{" data-end="}">
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a4bf647b144c7379bf90471ec18e36820"> 1137</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a4bf647b144c7379bf90471ec18e36820">tri_type_1</a>(<span class="keyword">const</span> EntityHandle *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> split_edge,</div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>                          <span class="keyword">const</span> EntityHandle edge_new_node,</div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>                          EntityHandle *new_tris_conn) {</div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a4bf647b144c7379bf90471ec18e36820"> 1137</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a4bf647b144c7379bf90471ec18e36820">tri_type_1</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> split_edge,</div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>                          <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> edge_new_node,</div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>                          <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_tris_conn) {</div>
 <div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span> </div>
 <div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span> </div>
@@ -1336,9 +1336,9 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span> </div>
 <div class="foldopen" id="foldopen01177" data-start="{" data-end="}">
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a25376784490a06a00b8e4093bb0eb655"> 1177</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a25376784490a06a00b8e4093bb0eb655">tri_type_2</a>(<span class="keyword">const</span> EntityHandle *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> *split_edges,</div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>                          <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>                          EntityHandle *new_tris_conn) {</div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a25376784490a06a00b8e4093bb0eb655"> 1177</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a25376784490a06a00b8e4093bb0eb655">tri_type_2</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn, <span class="keyword">const</span> <span class="keywordtype">int</span> *split_edges,</div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>                          <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>                          <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_tris_conn) {</div>
 <div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span> </div>
 <div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span> </div>
@@ -1391,10 +1391,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span> </div>
 <div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span><span class="comment">// PRISM</span></div>
 <div class="foldopen" id="foldopen01230" data-start="{" data-end="}">
-<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a789889a6f2cb8b9c8c913af51e9eb01e"> 1230</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a789889a6f2cb8b9c8c913af51e9eb01e">prism_type_1</a>(<span class="keyword">const</span> EntityHandle *conn,</div>
+<div class="line"><a id="l01230" name="l01230"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a789889a6f2cb8b9c8c913af51e9eb01e"> 1230</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a789889a6f2cb8b9c8c913af51e9eb01e">prism_type_1</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn,</div>
 <div class="line"><a id="l01231" name="l01231"></a><span class="lineno"> 1231</span>                            <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a9fef11e1cc5bbc397bff767f4e6b8f63">BitRefEdges</a> split_edges,</div>
-<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>                            <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>                            EntityHandle *new_prism_conn) {</div>
+<div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>                            <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>                            <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_prism_conn) {</div>
 <div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>  <span class="keywordtype">int</span> ee = 0;</div>
 <div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>  <span class="keywordflow">for</span> (; ee &lt; 6; ee++) {</div>
@@ -1429,10 +1429,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>}</div>
 </div>
 <div class="foldopen" id="foldopen01266" data-start="{" data-end="}">
-<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a39dac1cd7f89f16e2aa8c69ba54e5539"> 1266</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a39dac1cd7f89f16e2aa8c69ba54e5539">prism_type_2</a>(<span class="keyword">const</span> EntityHandle *conn,</div>
+<div class="line"><a id="l01266" name="l01266"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a39dac1cd7f89f16e2aa8c69ba54e5539"> 1266</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a39dac1cd7f89f16e2aa8c69ba54e5539">prism_type_2</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn,</div>
 <div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span>                            <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a9fef11e1cc5bbc397bff767f4e6b8f63">BitRefEdges</a> split_edges,</div>
-<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>                            <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>                            EntityHandle *new_prism_conn) {</div>
+<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>                            <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>                            <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_prism_conn) {</div>
 <div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> cycle_edges[3][6] = {</div>
 <div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>      {0, 1, 2, 3, 4, 5}, {1, 2, 0, 4, 5, 3}, {2, 0, 1, 5, 3, 4}};</div>
@@ -1450,14 +1450,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>  }</div>
 <div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>  <span class="keywordflow">if</span> (ee &gt; 2)</div>
 <div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a>, <span class="stringliteral">&quot;data inconsistency&quot;</span>);</div>
-<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span>  EntityHandle _conn_[6], _edge_new_nodes_[6];</div>
+<div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> _conn_[6], _edge_new_nodes_[6];</div>
 <div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span>  <span class="keywordtype">int</span> nn = 0;</div>
 <div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span>  <span class="keywordflow">for</span> (; nn &lt; 6; nn++) {</div>
 <div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span>    _conn_[nn] = conn[cycle_nodes[ee][nn]];</div>
 <div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span>    _edge_new_nodes_[nn] = edge_new_nodes[cycle_edges[ee][nn]];</div>
 <div class="line"><a id="l01292" name="l01292"></a><span class="lineno"> 1292</span>  }</div>
 <div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>  <span class="keywordflow">if</span> (_conn_[1] &lt; _conn_[2]) {</div>
-<div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>    EntityHandle _conn____;</div>
+<div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> _conn____;</div>
 <div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>    _conn____ = _conn_[2];</div>
 <div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>    _conn_[2] = _conn_[1];</div>
 <div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>    _conn_[1] = _conn____;</div>
@@ -1504,10 +1504,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span>}</div>
 </div>
 <div class="foldopen" id="foldopen01339" data-start="{" data-end="}">
-<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a5319bbceb3b4a69ca34345ea709c1219"> 1339</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a5319bbceb3b4a69ca34345ea709c1219">prism_type_3</a>(<span class="keyword">const</span> EntityHandle *conn,</div>
+<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a5319bbceb3b4a69ca34345ea709c1219"> 1339</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a5319bbceb3b4a69ca34345ea709c1219">prism_type_3</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn,</div>
 <div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span>                            <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a9fef11e1cc5bbc397bff767f4e6b8f63">BitRefEdges</a> split_edges,</div>
-<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span>                            <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span>                            EntityHandle *new_prism_conn) {</div>
+<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span>                            <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span>                            <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_prism_conn) {</div>
 <div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span>  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span>  <span class="keywordtype">int</span> ee = 0;</div>
 <div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span>  <span class="keywordflow">for</span> (; ee &lt; 6; ee++) {</div>
@@ -1547,16 +1547,17 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span> </div>
 <div class="foldopen" id="foldopen01380" data-start="{" data-end="}">
-<div class="line"><a id="l01380" name="l01380"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a21bef9c0378adad9cbb58e9de2b91ed4"> 1380</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a25f361dcae0a23f725e2dd8978b0c53f">quad_split_all_edges</a>(<span class="keyword">const</span> EntityHandle *conn,</div>
+<div class="line"><a id="l01380" name="l01380"></a><span class="lineno"><a class="line" href="namespaceMoFEM.html#a21bef9c0378adad9cbb58e9de2b91ed4"> 1380</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="namespaceMoFEM.html#a25f361dcae0a23f725e2dd8978b0c53f">quad_split_all_edges</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn,</div>
 <div class="line"><a id="l01381" name="l01381"></a><span class="lineno"> 1381</span>                                    <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a9fef11e1cc5bbc397bff767f4e6b8f63">BitRefEdges</a> split_edges,</div>
-<div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>                                    <span class="keyword">const</span> EntityHandle *edge_new_nodes,</div>
-<div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span>                                    EntityHandle *new_quad_conn) {</div>
+<div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>                                    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *edge_new_nodes,</div>
+<div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span>                                    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *new_quad_conn) {</div>
 <div class="line"><a id="l01384" name="l01384"></a><span class="lineno"> 1384</span> </div>
 <div class="line"><a id="l01385" name="l01385"></a><span class="lineno"> 1385</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l01386" name="l01386"></a><span class="lineno"> 1386</span>                                    }</div>
 </div>
 <div class="line"><a id="l01387" name="l01387"></a><span class="lineno"> 1387</span> </div>
 <div class="line"><a id="l01388" name="l01388"></a><span class="lineno"> 1388</span>} <span class="comment">// namespace MoFEM</span></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a59cd650c2f6d3e0dc1ad1c29821e8692"><div class="ttname"><a href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a></div><div class="ttdeci">#define MoFEMFunctionReturnHot(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00463">definitions.h:463</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724"><div class="ttname"><a href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a></div><div class="ttdeci">@ MOFEM_DATA_INCONSISTENCY</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00031">definitions.h:31</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_aee32377dce975c9a64ed73bd3a003404"><div class="ttname"><a href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a></div><div class="ttdeci">#define MoFEMFunctionBeginHot</div><div class="ttdoc">First executable line of each MoFEM function, used for error handling. Final line of MoFEM functions ...</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00456">definitions.h:456</a></div></div>

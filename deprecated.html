@@ -129,10 +129,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>Member <a class="el" href="structArcLengthMatShell.html#a1958ceb22cd6e1f10946aa08b04f3511">ArcLengthMatShell::ArcLengthMatShell</a>  (Mat aij, <a class="el" href="structArcLengthCtx.html" title="Store variables for ArcLength analysis.">ArcLengthCtx</a> *arc_ptr_raw, string problem_name)</dt>
+<dd><a class="anchor" id="_deprecated000093"></a>use constructor with shared_ptr  </dd>
 <dt>Member <a class="el" href="definitions_8h.html#a4829933231844a0fb022a06c8e37a914">BARRIER_RANK_END</a>  (PCMB)</dt>
 <dd><a class="anchor" id="_deprecated000002"></a>Do use this macro, instead use BARRIER_PCOMM_RANK_START  </dd>
 <dt>Member <a class="el" href="definitions_8h.html#a6bf0e5b3cc69cb1d07b86112b6452f00">BARRIER_RANK_START</a>  (PCMB)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Do use this macro, instead use BARRIER_PCOMM_RANK_START  </dd>
+<dt>Member <a class="el" href="DirichletBC_8hpp.html#a94df81558c6ad598dd97c002b6b7386d">DirichletBCFromBlockSetFEMethodPreAndPostProc</a>  </dt>
+<dd><a class="anchor" id="_deprecated000103"></a>use <a class="el" href="structDirichletSetFieldFromBlockWithFlags.html" title="Add boundary conditions form block set having 6 attributes.">DirichletSetFieldFromBlockWithFlags</a>  </dd>
+<dt>Member <a class="el" href="DirichletBC_8hpp.html#ad4ed4c3b39554afa714ef3f69915896e">DirichletBCFromBlockSetFEMethodPreAndPostProcWithFlags</a>  </dt>
+<dd><a class="anchor" id="_deprecated000101"></a>use <a class="el" href="structDirichletSetFieldFromBlockWithFlags.html" title="Add boundary conditions form block set having 6 attributes.">DirichletSetFieldFromBlockWithFlags</a>  </dd>
+<dt>Member <a class="el" href="DirichletBC_8hpp.html#a36e632eeca485e712ce161c2166ef967">DirichletSetFieldFromBlock</a>  </dt>
+<dd><a class="anchor" id="_deprecated000102"></a>use <a class="el" href="structDirichletSetFieldFromBlockWithFlags.html" title="Add boundary conditions form block set having 6 attributes.">DirichletSetFieldFromBlockWithFlags</a>  </dd>
+<dt>Member <a class="el" href="DirichletBC_8hpp.html#a811f91d62116c16632e5791015b97ef1">DisplacementBCFEMethodPreAndPostProc</a>  </dt>
+<dd><a class="anchor" id="_deprecated000097"></a>use <a class="el" href="structDirichletDisplacementBc.html" title="Set Dirichlet boundary conditions on displacements.">DirichletDisplacementBc</a>  </dd>
+<dt>Member <a class="el" href="DirichletBC_8hpp.html#a3decda990c0480a22e299997d2b72e01">FixBcAtEntities</a>  </dt>
+<dd><a class="anchor" id="_deprecated000100"></a>use <a class="el" href="structDirichletFixFieldAtEntitiesBc.html" title="Fix dofs on entities.">DirichletFixFieldAtEntitiesBc</a>  </dd>
+<dt>Member <a class="el" href="SurfacePressure_8hpp.html#a685d70f8cf6ef48fcaed82b1cf39da4b">MetaNeummanForces</a>  </dt>
+<dd><a class="anchor" id="_deprecated000107"></a>Do not use that name it has spelling mistake  </dd>
 <dt>Member <a class="el" href="namespaceMoFEM.html#a62169d7a96ad4c3a3c421d5e6681c257">MoFEM::addHOOpsFace3D</a>  (const std::string field, <a class="el" href="classE.html">E</a> &amp;e, bool hcurl, bool hdiv)</dt>
 <dd><a class="anchor" id="_deprecated000029"></a>do not use this function, instead use <a class="el" href="structMoFEM_1_1AddHOOps.html" title="Add operators pushing bases from local to physical configuration.">AddHOOps</a>. </dd>
 <dt>Member <a class="el" href="namespaceMoFEM.html#af01ee5c3bc1505a09c369d8d455bba1e">MoFEM::addHOOpsVol</a>  (const std::string field, <a class="el" href="classE.html">E</a> &amp;e, bool h1, bool hcurl, bool hdiv, bool l2)</dt>
@@ -311,8 +325,34 @@ $(function() {
 <dd><a class="anchor" id="_deprecated000046"></a>do not use this template, it is obsolete  </dd>
 <dt>Struct <a class="el" href="structMoFEM_1_1VolumeElementForcesAndSourcesCoreSwitch.html">MoFEM::VolumeElementForcesAndSourcesCoreSwitch&lt; SWITCH &gt;</a>  </dt>
 <dd><a class="anchor" id="_deprecated000041"></a>obsolete template. it will be removed in next versions  </dd>
+<dt>Member <a class="el" href="structNeumannForcesSurface.html#acdd266f82ef6112fb9dd8defab605ce3">NeumannForcesSurface::addPreassure</a>  (const std::string field_name, Vec F, int ms_id, bool ho_geometry=false, bool block_set=false)</dt>
+<dd><a class="anchor" id="_deprecated000111"></a>function is deprecated because spelling mistake, use addPressure instead  </dd>
+<dt>Member <a class="el" href="structNeumannForcesSurface.html#a2e852257b860d24982047c4cf73c1bc5">NeumannForcesSurface::bCPreassure</a>  </dt>
+<dd><a class="anchor" id="_deprecated000110"></a>Do not use spelling mistake  </dd>
+<dt>Member <a class="el" href="structNeumannForcesSurface.html#a91ef4c2b674b7e23c14d185fe79d94cd">NeumannForcesSurface::MethodForAnaliticalForce</a>  </dt>
+<dd><a class="anchor" id="_deprecated000109"></a>fixed spelling mistake  </dd>
+<dt>Member <a class="el" href="SurfacePressure_8hpp.html#aa3ff226265091bbf18a1c14728e77aec">NeummanForcesSurface</a>  </dt>
+<dd><a class="anchor" id="_deprecated000108"></a>Do not use that name it has spelling mistake  </dd>
+<dt>Member <a class="el" href="structNonlinearElasticElement.html#a4a3a6ebed6715d311f3b3fc1d927f52c">NonlinearElasticElement::OpRhsEshelbyStrees</a>  </dt>
+<dd><a class="anchor" id="_deprecated000104"></a>name with spelling mistake  </dd>
+<dt>Member <a class="el" href="structPCArcLengthCtx.html#ade9ea4033c06c4c2c424c6a2406efaed">PCArcLengthCtx::PCArcLengthCtx</a>  (Mat shell_Aij, Mat aij, <a class="el" href="structArcLengthCtx.html" title="Store variables for ArcLength analysis.">ArcLengthCtx</a> *arc_ptr_raw)</dt>
+<dd><a class="anchor" id="_deprecated000094"></a>use with shared_ptr  </dd>
+<dt>Member <a class="el" href="structPCArcLengthCtx.html#afb0d770c42e1a16d99a7ed94ae33d05e">PCArcLengthCtx::PCArcLengthCtx</a>  (PC pc, Mat shell_Aij, Mat aij, <a class="el" href="structArcLengthCtx.html" title="Store variables for ArcLength analysis.">ArcLengthCtx</a> *arc_ptr_raw)</dt>
+<dd><a class="anchor" id="_deprecated000095"></a>use with shared_ptr  </dd>
 <dt>Member <a class="el" href="structPlasticOps_1_1OpPlasticStressImpl_3_01DIM_00_01GAUSS_00_01DomainEleOp_01_4.html#a40f89362278a0840db096552b0d6cdad">PlasticOps::OpPlasticStressImpl&lt; DIM, GAUSS, DomainEleOp &gt;::OpPlasticStressImpl</a>  (const std::string field_name, boost::shared_ptr&lt; CommonData &gt; common_data_ptr, boost::shared_ptr&lt; MatrixDouble &gt; mDPtr)</dt>
 <dd><a class="anchor" id="_deprecated000091"></a>do not use this constructor  </dd>
+<dt>Member <a class="el" href="PostProcHookStresses_8hpp.html#a6c58b89e76dbdf62c892d95a00f45d80">PostPorcHookStress</a>  </dt>
+<dd><a class="anchor" id="_deprecated000105"></a>Class name with spelling mistake  </dd>
+<dt>Member <a class="el" href="PostProcStresses_8hpp.html#a1d21d7569ab985fbbcb46eb29f6a694c">PostPorcStress</a>  </dt>
+<dd><a class="anchor" id="_deprecated000106"></a>Use <a class="el" href="structPostProcStress.html">PostProcStress</a>  </dd>
+<dt>Member <a class="el" href="DirichletBC_8hpp.html#aeb7e90b5e0887f91840668f047686626">SpatialPositionsBCFEMethodPreAndPostProc</a>  </dt>
+<dd><a class="anchor" id="_deprecated000098"></a>use <a class="el" href="structDirichletSpatialPositionsBc.html" title="Set Dirichlet boundary conditions on spatial displacements.">DirichletSpatialPositionsBc</a>  </dd>
+<dt>Member <a class="el" href="structSphericalArcLengthControl.html#ab57cd73805c75a7bcf94b1b04a041f4c">SphericalArcLengthControl::SphericalArcLengthControl</a>  (<a class="el" href="structArcLengthCtx.html" title="Store variables for ArcLength analysis.">ArcLengthCtx</a> *arc_ptr_raw)</dt>
+<dd><a class="anchor" id="_deprecated000096"></a>use constructor with shared_ptr  </dd>
+<dt>Member <a class="el" href="DirichletBC_8hpp.html#ae7584e94cbce5e8fa42a8d43e7b6d139">TemperatureBCFEMethodPreAndPostProc</a>  </dt>
+<dd><a class="anchor" id="_deprecated000099"></a>use <a class="el" href="structDirichletTemperatureBc.html">DirichletTemperatureBc</a>  </dd>
+<dt>Member <a class="el" href="structThermalStressElement.html#a09554ca17c0e4541caed5f0f654313cf">ThermalStressElement::addThermalSterssElement</a>  (const std::string fe_name, const std::string field_name, const std::string thermal_field_name, const std::string mesh_nodals_positions="MESH_NODE_POSITIONS")</dt>
+<dd><a class="anchor" id="_deprecated000112"></a>Do not use this fiction with spelling mistake  </dd>
 <dt>Member <a class="el" href="structThermoElasticOps_1_1OpStressThermal.html#a1dd852e893251d411bc2abdbde884018">ThermoElasticOps::OpStressThermal::OpStressThermal</a>  (const std::string field_name, boost::shared_ptr&lt; MatrixDouble &gt; strain_ptr, boost::shared_ptr&lt; VectorDouble &gt; temp_ptr, boost::shared_ptr&lt; MatrixDouble &gt; m_D_ptr, boost::shared_ptr&lt; VectorDouble &gt; coeff_expansion_ptr, boost::shared_ptr&lt; MatrixDouble &gt; stress_ptr)</dt>
 <dd><a class="anchor" id="_deprecated000092"></a>do not use this constructor </dd>
 </dl>

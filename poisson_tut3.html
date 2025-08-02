@@ -258,7 +258,7 @@ Code dissection</h1>
 <div class="line"><span class="keyword">struct </span><a class="code hl_struct" href="structOpS.html">OpS</a> : <span class="keyword">public</span> FaceElementForcesAndSourcesCore::UserDataOperator {</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_struct" href="structOpS.html">OpS</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> beta = 1)</div>
-<div class="line">      : FaceElementForcesAndSourcesCore::<a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a>(<span class="stringliteral">&quot;U&quot;</span>, <span class="stringliteral">&quot;U&quot;</span>, OPROWCOL,</div>
+<div class="line">      : <a class="code hl_class" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>::<a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a>(<span class="stringliteral">&quot;U&quot;</span>, <span class="stringliteral">&quot;U&quot;</span>, OPROWCOL,</div>
 <div class="line">                                                          true),</div>
 <div class="line">        <a class="code hl_variable" href="structOpS.html#a9af67d7ef1771a6993fcaacdaafddf37">bEta</a>(beta) {}</div>
 <div class="line"><span class="comment"></span> </div>
@@ -461,7 +461,7 @@ Code dissection</h1>
 <div class="line"> </div>
 <div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> beta = 1;</div>
 <div class="line">      boundary_penalty_lhs_fe = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(</div>
-<div class="line">          <span class="keyword">new</span> FaceElementForcesAndSourcesCore(m_field));</div>
+<div class="line">          <span class="keyword">new</span> <a class="code hl_class" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>(m_field));</div>
 <div class="line">      boundary_penalty_lhs_fe-&gt;getRuleHook = <a class="code hl_struct" href="structPoissonExample_1_1FaceRule.html">PoissonExample::FaceRule</a>();</div>
 <div class="line">      boundary_penalty_lhs_fe-&gt;getOpPtrVector().push_back(<span class="keyword">new</span> <a class="code hl_struct" href="structOpS.html">OpS</a>(beta));</div>
 <div class="line">      boundary_rhs_fe-&gt;getOpPtrVector().push_back(</div>
@@ -708,6 +708,7 @@ Code dissection</h1>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aAuxPoissonFunctions_8hpp_html"><div class="ttname"><a href="AuxPoissonFunctions_8hpp.html">AuxPoissonFunctions.hpp</a></div></div>
+<div class="ttc" id="aHookeElement_8hpp_html_aee27a2ebc8f3d34a5c1ce71b2607d1a3"><div class="ttname"><a href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a></div><div class="ttdeci">ForcesAndSourcesCore::UserDataOperator UserDataOperator</div><div class="ttdef"><b>Definition</b> <a href="HookeElement_8hpp_source.html#l00075">HookeElement.hpp:75</a></div></div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aPoissonOperators_8hpp_html"><div class="ttname"><a href="PoissonOperators_8hpp.html">PoissonOperators.hpp</a></div></div>
 <div class="ttc" id="aactivate__deactivate__dofs_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="activate__deactivate__dofs_8cpp_source.html#l00013">activate_deactivate_dofs.cpp:13</a></div></div>
@@ -717,7 +718,7 @@ Code dissection</h1>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor0_html"><div class="ttname"><a href="classFTensor_1_1Tensor0.html">FTensor::Tensor0</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor0_8hpp_source.html#l00016">Tensor0.hpp:17</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor1__value_8hpp_source.html#l00008">Tensor1_value.hpp:9</a></div></div>
-<div class="ttc" id="aclassUserDataOperator_html"><div class="ttname"><a href="classUserDataOperator.html">UserDataOperator</a></div></div>
+<div class="ttc" id="aclassFaceElementForcesAndSourcesCore_html"><div class="ttname"><a href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a59cd650c2f6d3e0dc1ad1c29821e8692"><div class="ttname"><a href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a></div><div class="ttdeci">#define MoFEMFunctionReturnHot(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00463">definitions.h:463</a></div></div>
@@ -784,7 +785,7 @@ Code dissection</h1>
 </div><!-- fragment --><h1><a class="anchor" id="poisson_tut3_adding_penalty"></a>
 Creating penalty finite element instance</h1>
 <p>This code is largely the same as in <a class="el" href="analytical_poisson_8cpp-example.html">analytical_poisson.cpp</a>, with only two places where we introduce changes. We will focus only on those parts. First we make pointer new penalty finite element instance, </p><div class="fragment"><div class="line">boost::shared_ptr&lt;ForcesAndSourcesCore&gt; boundary_penalty_lhs_fe;</div>
-</div><!-- fragment --><p> and create finite element class instance itself </p><div class="fragment"><div class="line">boundary_penalty_lhs_fe = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(<span class="keyword">new</span> FaceElementForcesAndSourcesCore(m_field));</div>
+</div><!-- fragment --><p> and create finite element class instance itself </p><div class="fragment"><div class="line">boundary_penalty_lhs_fe = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(<span class="keyword">new</span> <a class="code hl_class" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>(m_field));</div>
 </div><!-- fragment --><p> with that at hand we can add appropriate user data operators </p><div class="fragment"><div class="line">boundary_penalty_lhs_fe-&gt;getOpPtrVector().push_back(<span class="keyword">new</span> PoissonExample::OpS(beta));</div>
 </div><!-- fragment --><p>Implementation of penalty operator <a class="el" href="structOpS.html#a2a11648458c4ca82fa8a5a35b1021ec6">OpS::iNtegrate</a> is in file <a class="el" href="analytical_poisson_field_split_8cpp-example.html">analytical_poisson_field_split.cpp</a> and do not differ to what was shown in <a class="el" href="poisson_tut2.html">COR-3: Implementing operators for the Poisson equation</a>.</p>
 <h1><a class="anchor" id="poisson_tut3_code_dissection"></a>

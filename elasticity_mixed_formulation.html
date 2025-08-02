@@ -477,7 +477,7 @@ Solving the problem</h2>
 <div class="line">feLhs-&gt;ksp_f = F_ext;</div>
 </div><!-- fragment --></li>
 <li>Loop over element to compute and assemble stiffness matrix, vectors of DOFs and RHS <div class="fragment"><div class="line">boost::shared_ptr&lt;DirichletDisplacementBc&gt; dirichlet_bc_ptr(</div>
-<div class="line">    <span class="keyword">new</span> DirichletDisplacementBc(m_field, <span class="stringliteral">&quot;U&quot;</span>, Aij, d, F_ext));</div>
+<div class="line">    <span class="keyword">new</span> <a class="code hl_struct" href="structDirichletDisplacementBc.html">DirichletDisplacementBc</a>(m_field, <span class="stringliteral">&quot;U&quot;</span>, Aij, d, F_ext));</div>
 <div class="line">dirichlet_bc_ptr-&gt;snes_ctx = FEMethod::CTX_SNESNONE;</div>
 <div class="line">dirichlet_bc_ptr-&gt;ts_ctx = FEMethod::CTX_TSNONE;</div>
 <div class="line"><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMoFEMPreProcessFiniteElements(dm, dirichlet_bc_ptr.get());</div>
@@ -485,7 +485,7 @@ Solving the problem</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Assemble pressure and traction forces.</span></div>
 <div class="line">boost::ptr_map&lt;std::string, NeumannForcesSurface&gt; neumann_forces;</div>
-<div class="line"><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MetaNeumannForces::setMomentumFluxOperators(m_field, neumann_forces,</div>
+<div class="line"><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="structMetaNeumannForces.html#ad0f272e64b6937cc53769ecaa409d8b1">MetaNeumannForces::setMomentumFluxOperators</a>(m_field, neumann_forces,</div>
 <div class="line">                                                   F_ext, <span class="stringliteral">&quot;U&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">{</div>
@@ -498,7 +498,7 @@ Solving the problem</h2>
 <div class="line">}</div>
 <div class="line"><span class="comment">// Assemble forces applied to nodes, see implementation in NodalForce</span></div>
 <div class="line">boost::ptr_map&lt;std::string, NodalForce&gt; nodal_forces;</div>
-<div class="line"><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MetaNodalForces::setOperators(m_field, nodal_forces, F_ext, <span class="stringliteral">&quot;U&quot;</span>);</div>
+<div class="line"><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="structMetaNodalForces.html#a84ba4b4c66e9df18c139cb81808cadc2">MetaNodalForces::setOperators</a>(m_field, nodal_forces, F_ext, <span class="stringliteral">&quot;U&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">{</div>
 <div class="line">  boost::ptr_map&lt;std::string, NodalForce&gt;::iterator fit =</div>
@@ -510,7 +510,7 @@ Solving the problem</h2>
 <div class="line">}</div>
 <div class="line"><span class="comment">// Assemble edge forces</span></div>
 <div class="line">boost::ptr_map&lt;std::string, EdgeForce&gt; edge_forces;</div>
-<div class="line"><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MetaEdgeForces::setOperators(m_field, edge_forces, F_ext, <span class="stringliteral">&quot;U&quot;</span>);</div>
+<div class="line"><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="structMetaEdgeForces.html#a46625c9571b0469a5c4a7aa1c8f6c272">MetaEdgeForces::setOperators</a>(m_field, edge_forces, F_ext, <span class="stringliteral">&quot;U&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">{</div>
 <div class="line">  boost::ptr_map&lt;std::string, EdgeForce&gt;::iterator fit =</div>
@@ -528,6 +528,10 @@ Solving the problem</h2>
 <div class="ttc" id="agroup__dm_html_ga3fcdbd5c74eba11ee82492e57d730756"><div class="ttname"><a href="group__dm.html#ga3fcdbd5c74eba11ee82492e57d730756">MoFEM::DMoFEMPostProcessFiniteElements</a></div><div class="ttdeci">PetscErrorCode DMoFEMPostProcessFiniteElements(DM dm, MoFEM::FEMethod *method)</div><div class="ttdoc">execute finite element method for each element in dm (problem)</div><div class="ttdef"><b>Definition</b> <a href="DMMoFEM_8cpp_source.html#l00546">DMMoFEM.cpp:546</a></div></div>
 <div class="ttc" id="agroup__dm_html_gaa77602fddf773ab52fee8369cc135d7e"><div class="ttname"><a href="group__dm.html#gaa77602fddf773ab52fee8369cc135d7e">MoFEM::DMoFEMLoopFiniteElements</a></div><div class="ttdeci">PetscErrorCode DMoFEMLoopFiniteElements(DM dm, const char fe_name[], MoFEM::FEMethod *method, CacheTupleWeakPtr cache_ptr=CacheTupleSharedPtr())</div><div class="ttdoc">Executes FEMethod for finite elements in DM.</div><div class="ttdef"><b>Definition</b> <a href="DMMoFEM_8cpp_source.html#l00576">DMMoFEM.cpp:576</a></div></div>
 <div class="ttc" id="agroup__dm_html_gadf1d5425969ed88f332549c5b4ba5291"><div class="ttname"><a href="group__dm.html#gadf1d5425969ed88f332549c5b4ba5291">MoFEM::DMMoFEMKSPSetComputeOperators</a></div><div class="ttdeci">PetscErrorCode DMMoFEMKSPSetComputeOperators(DM dm, const char fe_name[], MoFEM::FEMethod *method, MoFEM::BasicMethod *pre_only, MoFEM::BasicMethod *post_only)</div><div class="ttdoc">Set KSP operators and push mofem finite element methods.</div><div class="ttdef"><b>Definition</b> <a href="DMMoFEM_8cpp_source.html#l00668">DMMoFEM.cpp:668</a></div></div>
+<div class="ttc" id="astructDirichletDisplacementBc_html"><div class="ttname"><a href="structDirichletDisplacementBc.html">DirichletDisplacementBc</a></div><div class="ttdoc">Set Dirichlet boundary conditions on displacements.</div><div class="ttdef"><b>Definition</b> <a href="DirichletBC_8hpp_source.html#l00057">DirichletBC.hpp:57</a></div></div>
+<div class="ttc" id="astructMetaEdgeForces_html_a46625c9571b0469a5c4a7aa1c8f6c272"><div class="ttname"><a href="structMetaEdgeForces.html#a46625c9571b0469a5c4a7aa1c8f6c272">MetaEdgeForces::setOperators</a></div><div class="ttdeci">static MoFEMErrorCode setOperators(MoFEM::Interface &amp;m_field, boost::ptr_map&lt; std::string, EdgeForce &gt; &amp;edge_forces, Vec F, const std::string field_name, std::string mesh_node_positions=&quot;MESH_NODE_POSITIONS&quot;)</div><div class="ttdoc">Set integration point operators.</div><div class="ttdef"><b>Definition</b> <a href="EdgeForce_8hpp_source.html#l00097">EdgeForce.hpp:97</a></div></div>
+<div class="ttc" id="astructMetaNeumannForces_html_ad0f272e64b6937cc53769ecaa409d8b1"><div class="ttname"><a href="structMetaNeumannForces.html#ad0f272e64b6937cc53769ecaa409d8b1">MetaNeumannForces::setMomentumFluxOperators</a></div><div class="ttdeci">static MoFEMErrorCode setMomentumFluxOperators(MoFEM::Interface &amp;m_field, boost::ptr_map&lt; std::string, NeumannForcesSurface &gt; &amp;neumann_forces, Vec F, const std::string field_name, const std::string mesh_nodals_positions=&quot;MESH_NODE_POSITIONS&quot;)</div><div class="ttdoc">Set operators to finite elements calculating right hand side vector.</div><div class="ttdef"><b>Definition</b> <a href="SurfacePressure_8cpp_source.html#l02069">SurfacePressure.cpp:2069</a></div></div>
+<div class="ttc" id="astructMetaNodalForces_html_a84ba4b4c66e9df18c139cb81808cadc2"><div class="ttname"><a href="structMetaNodalForces.html#a84ba4b4c66e9df18c139cb81808cadc2">MetaNodalForces::setOperators</a></div><div class="ttdeci">static MoFEMErrorCode setOperators(MoFEM::Interface &amp;m_field, boost::ptr_map&lt; std::string, NodalForce &gt; &amp;nodal_forces, Vec F, const std::string field_name)</div><div class="ttdoc">Set integration point operators.</div><div class="ttdef"><b>Definition</b> <a href="NodalForce_8hpp_source.html#l00128">NodalForce.hpp:128</a></div></div>
 </div><!-- fragment --></li>
 <li>The matrix and vectors have been assembled and now the system of equation is solved using KSP solver <div class="fragment"><div class="line">KSP solver;</div>
 <div class="line"> </div>

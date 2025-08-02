@@ -179,8 +179,8 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_number_entities_by_dimension(0, 0, nb_vertices, <span class="keyword">true</span>);</div>
 <div class="line"> </div>
-<div class="line">    EntityHandle root_set = moab.get_root_set();</div>
-<div class="line">    <a id="_a7" name="_a7"></a><a class="code hl_class" href="classRange.html">Range</a> tets;</div>
+<div class="line">    <a id="_a7" name="_a7"></a><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> root_set = moab.get_root_set();</div>
+<div class="line">    <a id="_a8" name="_a8"></a><a class="code hl_class" href="classRange.html">Range</a> tets;</div>
 <div class="line">    moab.get_entities_by_type(root_set, MBTET, tets, <span class="keyword">false</span>);</div>
 <div class="line"> </div>
 <div class="line">    Tag th_vertex_weight;</div>
@@ -189,16 +189,16 @@ $(function() {
 <div class="line">                               th_vertex_weight, MB_TAG_CREAT | MB_TAG_DENSE,</div>
 <div class="line">                               &amp;def_val);</div>
 <div class="line"> </div>
-<div class="line">    <a id="_a8" name="_a8"></a><a class="code hl_struct" href="structMoFEM_1_1CommInterface.html">CommInterface</a> *comm_interafce_ptr = m_field.<a id="a9" name="a9"></a><a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1CommInterface.html">CommInterface</a>&gt;();</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> comm_interafce_ptr-&gt;<a id="a10" name="a10"></a><a class="code hl_function" href="group__mofem__problems__manager.html#gab37ad8b4ac4ef77413435ae826d76ca7">partitionMesh</a>(</div>
-<div class="line">        tets, 3, 2, m_field.<a id="a11" name="a11"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a093526a60371b07213a0be2aaf7afa35">get_comm_size</a>(), &amp;th_vertex_weight, NULL, NULL,</div>
-<div class="line">        <a id="a12" name="a12"></a><a class="code hl_enumvalue" href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2cace3e26676763569084c86b8c3b67d601">VERBOSE</a>, <span class="keyword">false</span>);</div>
+<div class="line">    <a id="_a9" name="_a9"></a><a class="code hl_struct" href="structMoFEM_1_1CommInterface.html">CommInterface</a> *comm_interafce_ptr = m_field.<a id="a10" name="a10"></a><a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1CommInterface.html">CommInterface</a>&gt;();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> comm_interafce_ptr-&gt;<a id="a11" name="a11"></a><a class="code hl_function" href="group__mofem__problems__manager.html#gab37ad8b4ac4ef77413435ae826d76ca7">partitionMesh</a>(</div>
+<div class="line">        tets, 3, 2, m_field.<a id="a12" name="a12"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a093526a60371b07213a0be2aaf7afa35">get_comm_size</a>(), &amp;th_vertex_weight, NULL, NULL,</div>
+<div class="line">        <a id="a13" name="a13"></a><a class="code hl_enumvalue" href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2cace3e26676763569084c86b8c3b67d601">VERBOSE</a>, <span class="keyword">false</span>);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span> (!m_field.<a id="a13" name="a13"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>()) {</div>
+<div class="line">    <span class="keywordflow">if</span> (!m_field.<a id="a14" name="a14"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>()) {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;partitioned_mesh.h5m&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line">  }</div>
-<div class="line">  <a id="a14" name="a14"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a id="a15" name="a15"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
 <div class="line">  PetscBarrier(PETSC_NULLPTR);</div>
 <div class="line"> </div>
@@ -208,7 +208,7 @@ $(function() {
 <div class="line">    moab::Interface &amp;moab2 = mb_instance2;</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">    <a id="_a15" name="_a15"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp.html">MoFEM::CoreTmp&lt;1&gt;</a> core(moab2);</div>
+<div class="line">    <a id="_a16" name="_a16"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp.html">MoFEM::CoreTmp&lt;1&gt;</a> core(moab2);</div>
 <div class="line">    <a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = core;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Register DM Manager</span></div>
@@ -221,30 +221,30 @@ $(function() {
 <div class="line">                         <span class="stringliteral">&quot;PARALLEL_RESOLVE_SHARED_ENTS;&quot;</span></div>
 <div class="line">                         <span class="stringliteral">&quot;PARTITION=PARALLEL_PARTITION;&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a id="_a16" name="_a16"></a><a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;()-&gt;getOptions();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a id="_a17" name="_a17"></a><a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;()-&gt;getOptions();</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;()-&gt;loadFile(option,</div>
 <div class="line">                                                    <span class="stringliteral">&quot;partitioned_mesh.h5m&quot;</span>);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;()-&gt;addDomainField(</div>
-<div class="line">        <span class="stringliteral">&quot;U&quot;</span>, <a id="a17" name="a17"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a id="a18" name="a18"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
+<div class="line">        <span class="stringliteral">&quot;U&quot;</span>, <a id="a18" name="a18"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a id="a19" name="a19"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;()-&gt;setFieldOrder(<span class="stringliteral">&quot;U&quot;</span>, 1);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;()-&gt;setUp();</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">auto</span> dm  = m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;()-&gt;getDM();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> <a id="_a19" name="_a19"></a><a class="code hl_struct" href="structMoFEM_1_1Problem.html">MoFEM::Problem</a> *problem_ptr;</div>
+<div class="line">    <span class="keyword">const</span> <a id="_a20" name="_a20"></a><a class="code hl_struct" href="structMoFEM_1_1Problem.html">MoFEM::Problem</a> *problem_ptr;</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMMoFEMGetProblemPtr(dm, &amp;problem_ptr);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span>(problem_ptr-&gt;<a id="a20" name="a20"></a><a class="code hl_variable" href="structMoFEM_1_1Problem.html#ad8c56a230bfdda8a08e9cc96167f09ad">nbDofsRow</a> != nb_vertices)</div>
-<div class="line">      SETERRQ(PETSC_COMM_WORLD, <a id="a21" name="a21"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>,</div>
+<div class="line">    <span class="keywordflow">if</span>(problem_ptr-&gt;<a id="a21" name="a21"></a><a class="code hl_variable" href="structMoFEM_1_1Problem.html#ad8c56a230bfdda8a08e9cc96167f09ad">nbDofsRow</a> != nb_vertices)</div>
+<div class="line">      SETERRQ(PETSC_COMM_WORLD, <a id="a22" name="a22"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>,</div>
 <div class="line">              <span class="stringliteral">&quot;Number of vertices and DOFs is inconstent&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">    <a id="a22" name="a22"></a><a class="code hl_define" href="group__mofem__log__manager.html#ga47d7053307c012af4b78f8a09e21fa83">MOFEM_LOG_CHANNEL</a>(<span class="stringliteral">&quot;WORLD&quot;</span>);</div>
-<div class="line">    <a id="a23" name="a23"></a><a class="code hl_define" href="LogManager_8hpp.html#afebc04c745581aa8f72c6ace26073f6c">MOFEM_TAG_AND_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform, <span class="stringliteral">&quot;Atom test&quot;</span>)</div>
+<div class="line">    <a id="a23" name="a23"></a><a class="code hl_define" href="group__mofem__log__manager.html#ga47d7053307c012af4b78f8a09e21fa83">MOFEM_LOG_CHANNEL</a>(<span class="stringliteral">&quot;WORLD&quot;</span>);</div>
+<div class="line">    <a id="a24" name="a24"></a><a class="code hl_define" href="LogManager_8hpp.html#afebc04c745581aa8f72c6ace26073f6c">MOFEM_TAG_AND_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform, <span class="stringliteral">&quot;Atom test&quot;</span>)</div>
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;All is good in this test&quot;</span>;</div>
 <div class="line">  }</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a24" name="a24"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a25" name="a25"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
@@ -252,6 +252,7 @@ $(function() {
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aactivate__deactivate__dofs_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="activate__deactivate__dofs_8cpp_source.html#l00013">activate_deactivate_dofs.cpp:13</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2cace3e26676763569084c86b8c3b67d601"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2cace3e26676763569084c86b8c3b67d601">VERBOSE</a></div><div class="ttdeci">@ VERBOSE</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00222">definitions.h:222</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>

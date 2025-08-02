@@ -1,3 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structMoFEM_1_1Composite__Cubit__msId__And__MeshsetType__mi__tag.html" title=" " alt="" coords="5,5,195,60"/>
+<area shape="rect" id="Node000000" href="$structMethodForForceScaling.html" title="Class used to scale loads, f.e. in arc&#45;length control." alt="" coords="5,173,179,198"/>
+<area shape="rect" id="Node000001" href="$structBasicBoundaryConditionsInterface_1_1LoadScale.html" title=" " alt="" coords="227,5,473,45"/>
+<area shape="poly" id="edge236_Node000000_Node000001" title=" " alt="" coords="109,160,158,107,190,79,225,55,252,43,254,48,228,60,193,83,162,111,113,164"/>
+<area shape="rect" id="Node000002" href="$structMetaNodalForces_1_1DofForceScale.html" title="Scale force based on some DOF value." alt="" coords="249,69,451,109"/>
+<area shape="poly" id="edge237_Node000000_Node000002" title=" " alt="" coords="127,164,173,141,226,119,263,107,264,112,228,124,176,146,130,169"/>
+<area shape="rect" id="Node000003" href="$structMetaNodalForces_1_1TagForceScale.html" title="Scale force based on tag value &quot;_LoadFactor_Scale_&quot;." alt="" coords="250,133,450,173"/>
+<area shape="poly" id="edge238_Node000000_Node000003" title=" " alt="" coords="192,170,249,163,250,168,193,176"/>
+<area shape="rect" id="Node000004" href="$structNavierStokesElement_1_1LoadScale.html" title=" " alt="" coords="269,197,431,237"/>
+<area shape="poly" id="edge239_Node000000_Node000004" title=" " alt="" coords="192,195,269,205,268,210,192,200"/>
+<area shape="rect" id="Node000005" href="$structTimeAccelerogram.html" title=" " alt="" coords="277,262,423,287"/>
+<area shape="poly" id="edge240_Node000000_Node000005" title=" " alt="" coords="129,202,175,225,228,247,278,260,276,265,226,252,173,230,127,207"/>
+<area shape="rect" id="Node000006" href="$structTimeForceScale.html" title="Force scale operator for reading two columns." alt="" coords="287,311,413,337"/>
+<area shape="poly" id="edge241_Node000000_Node000006" title=" " alt="" coords="115,206,164,253,195,277,228,296,257,307,288,315,287,320,256,313,226,301,192,281,160,257,112,210"/>
 </map>

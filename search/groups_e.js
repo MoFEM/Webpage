@@ -6,5 +6,6 @@ var searchData=
   ['simple_20interface_3',['Simple interface',['../group__mofem__simple__interface.html',1,'']]],
   ['solvers_4',['PETSc solvers',['../group__mofem__petsc__solvers.html',1,'']]],
   ['sources_5',['Forces and sources',['../group__mofem__forces__and__sources.html',1,'']]],
-  ['structures_20and_20multi_20indices_6',['structures and multi indices',['../group__dof__multi__indices.html',1,'Dofs structures and multi-indices'],['../group__ent__multi__indices.html',1,'Entities structures and multi-indices'],['../group__fe__multi__indices.html',1,'Finite elements structures and multi-indices'],['../group__problems__multi__indices.html',1,'Problems structures and multi-indices'],['../group__series__multi__indices.html',1,'Series structures and multi-indices']]]
+  ['structures_20and_20multi_20indices_6',['structures and multi indices',['../group__dof__multi__indices.html',1,'Dofs structures and multi-indices'],['../group__ent__multi__indices.html',1,'Entities structures and multi-indices'],['../group__fe__multi__indices.html',1,'Finite elements structures and multi-indices'],['../group__problems__multi__indices.html',1,'Problems structures and multi-indices'],['../group__series__multi__indices.html',1,'Series structures and multi-indices']]],
+  ['surface_20area_7',['Minimal surface area',['../group__minimal__surface__area.html',1,'']]]
 ];

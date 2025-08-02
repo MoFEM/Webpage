@@ -231,8 +231,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">auto</span> add_prism_interface = [&amp;](<a class="code hl_class" href="classRange.html">Range</a> &amp;tets, <a class="code hl_class" href="classRange.html">Range</a> &amp;prisms,</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                                   <a class="code hl_class" href="classRange.html">Range</a> &amp;master_tris, <a class="code hl_class" href="classRange.html">Range</a> &amp;slave_tris,</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                                   EntityHandle &amp;meshset_tets,</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                                   EntityHandle &amp;meshset_prisms,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                                   <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> &amp;meshset_tets,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                                   <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> &amp;meshset_prisms,</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                   std::vector&lt;BitRefLevel&gt; &amp;bit_levels) {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <a class="code hl_struct" href="structMoFEM_1_1PrismInterface.html">PrismInterface</a> *interface;</div>
@@ -243,14 +243,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">if</span> (cit-&gt;getName().compare(0, 11, <span class="stringliteral">&quot;INT_CONTACT&quot;</span>) == 0) {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Insert %s (id: %d)\n&quot;</span>,</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                             cit-&gt;getName().c_str(), cit-&gt;getMeshsetId());</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>          EntityHandle cubit_meshset = cit-&gt;getMeshset();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>          <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> cubit_meshset = cit-&gt;getMeshset();</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>          <a class="code hl_class" href="classRange.html">Range</a> tris;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_entities_by_type(cubit_meshset, MBTRI, tris, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>          master_tris.merge(tris);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>          {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="comment">// get tet entities from back bit_level</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            EntityHandle ref_level_meshset = 0;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ref_level_meshset = 0;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, ref_level_meshset);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                -&gt;getEntitiesByTypeAndRefLevel(bit_levels.back(),</div>
@@ -276,7 +276,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>          }</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>          <span class="comment">// update cubit meshsets</span></div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>          <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaa7fc3e87cd6f5fcd5770d87260ea8c1a">_IT_CUBITMESHSETS_FOR_LOOP_</a>(m_field, ciit)) {</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            EntityHandle cubit_meshset = ciit-&gt;meshset;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> cubit_meshset = ciit-&gt;meshset;</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                -&gt;updateMeshsetByEntitiesChildren(</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                    cubit_meshset, bit_levels.back(), cubit_meshset, MBMAXTYPE,</div>
@@ -315,7 +315,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    };</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_class" href="classRange.html">Range</a> all_tets, contact_prisms, master_tris, slave_tris;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    EntityHandle meshset_tets, meshset_prisms;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset_tets, meshset_prisms;</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    std::vector&lt;BitRefLevel&gt; bit_levels;</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    bit_levels.push_back(<a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(0));</div>
@@ -327,7 +327,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                               bit_levels);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="comment">// meshset consisting all entities in mesh</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    EntityHandle root_set = moab.get_root_set();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> root_set = moab.get_root_set();</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="comment">// add entities to field</span></div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(root_set, MBTET, <span class="stringliteral">&quot;F2&quot;</span>);</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(root_set, MBPRISM, <span class="stringliteral">&quot;F2&quot;</span>);</div>
@@ -390,7 +390,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSide.html">VolumeElementForcesAndSourcesCoreOnContactPrismSide</a> volSideFe;</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <span class="keyword">struct </span>OpVolSide : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSide.html">VolumeElementForcesAndSourcesCoreOnContactPrismSide</a>::</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                             <a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a> {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                             <a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a> {</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <a class="code hl_struct" href="structCommonData.html">CommonData</a> &amp;elemData;</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        OpVolSide(<a class="code hl_struct" href="structCommonData.html">CommonData</a> &amp;elem_data)</div>
@@ -465,7 +465,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            }</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>          }</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>          std::string side_fe_name = <span class="stringliteral">&quot;V1&quot;</span>;</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>          <span class="keyword">const</span> EntityHandle tri_master = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7bada8addde9d4210bd2bad229b36b8d">getSideEntity</a>(3, MBTRI);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>          <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> tri_master = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7bada8addde9d4210bd2bad229b36b8d">getSideEntity</a>(3, MBTRI);</div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="structMoFEM_1_1ContactPrismElementForcesAndSourcesCore_1_1UserDataOperator.html#a0bf4842800a8d4189708232c276bf063">loopSideVolumes</a>(side_fe_name, volSideFe, 3, tri_master);</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>          <span class="keyword">auto</span> check_continuity_of_base = [&amp;](<span class="keyword">auto</span> &amp;vol_dot_data) {</div>
@@ -530,7 +530,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>      <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSide.html">VolumeElementForcesAndSourcesCoreOnContactPrismSide</a> volSideFe;</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>      <span class="keyword">struct </span>OpVolSide : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnContactPrismSide.html">VolumeElementForcesAndSourcesCoreOnContactPrismSide</a>::</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                             <a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a> {</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                             <a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a> {</div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>        <a class="code hl_struct" href="structCommonData.html">CommonData</a> &amp;elemData;</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        OpVolSide(<a class="code hl_struct" href="structCommonData.html">CommonData</a> &amp;elem_data)</div>
@@ -606,7 +606,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>          }</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>          std::string side_fe_name = <span class="stringliteral">&quot;V1&quot;</span>;</div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>          <span class="keyword">const</span> EntityHandle tri_slave = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7bada8addde9d4210bd2bad229b36b8d">getSideEntity</a>(4, MBTRI);</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>          <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> tri_slave = <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7bada8addde9d4210bd2bad229b36b8d">getSideEntity</a>(4, MBTRI);</div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="structMoFEM_1_1ContactPrismElementForcesAndSourcesCore_1_1UserDataOperator.html#a0bf4842800a8d4189708232c276bf063">loopSideVolumes</a>(side_fe_name, volSideFe, 3, tri_slave);</div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span> </div>
 <div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>          <span class="keyword">auto</span> check_continuity_of_base = [&amp;](<span class="keyword">auto</span> &amp;vol_dot_data) {</div>
@@ -688,13 +688,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>}</div>
 </div>
+<div class="ttc" id="aHookeElement_8hpp_html_aee27a2ebc8f3d34a5c1ce71b2607d1a3"><div class="ttname"><a href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a></div><div class="ttdeci">ForcesAndSourcesCore::UserDataOperator UserDataOperator</div><div class="ttdef"><b>Definition</b> <a href="HookeElement_8hpp_source.html#l00075">HookeElement.hpp:75</a></div></div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
 <div class="ttc" id="acheck__base__functions__derivatives__on__tet_8cpp_html_a3d8c24629d725b9ef8c238cf27c9b158"><div class="ttname"><a href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a></div><div class="ttdeci">static const double eps</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__on__tet_8cpp_source.html#l00011">check_base_functions_derivatives_on_tet.cpp:11</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor0_html"><div class="ttname"><a href="classFTensor_1_1Tensor0.html">FTensor::Tensor0</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor0_8hpp_source.html#l00016">Tensor0.hpp:17</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="aclassUBlasMatrix_3_01double_01_4_html"><div class="ttname"><a href="classUBlasMatrix_3_01double_01_4.html">UBlasMatrix&lt; double &gt;</a></div></div>
-<div class="ttc" id="aclassUserDataOperator_html"><div class="ttname"><a href="classUserDataOperator.html">UserDataOperator</a></div></div>
 <div class="ttc" id="acontinuity__check__on__contact__prism__side__ele_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="continuity__check__on__contact__prism__side__ele_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="continuity__check__on__contact__prism__side__ele_8cpp_source.html#l00014">continuity_check_on_contact_prism_side_ele.cpp:14</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5">FieldApproximationBase</a></div><div class="ttdeci">FieldApproximationBase</div><div class="ttdoc">approximation base</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00058">definitions.h:58</a></div></div>

@@ -6,7 +6,7 @@ var searchData=
   ['non_20homogeneous_20bc_3',['SCL-2: Poisson&apos;s equation (non-homogeneous BC)',['../basic_tutorials_poisson_nonhomogeneous.html',1,'']]],
   ['nonlinear_20dynamic_20elastic_4',['VEC-3: Nonlinear dynamic elastic',['../tutorial_nonlinear_dynamic_elastic.html',1,'']]],
   ['nonlinear_20elastic_5',['VEC-2: Nonlinear elastic',['../tutorial_nonlinear_elastic.html',1,'']]],
-  ['nonlinear_20elasticity_6',['COR-11: Mixed formulation of nonlinear elasticity',['../tutorial_ep.html',1,'tutorials']]],
+  ['nonlinear_20elasticity_6',['nonlinear elasticity',['../tutorial_ep.html',1,'COR-11: Mixed formulation of nonlinear elasticity'],['../elastic_dynamics.html',1,'Nonlinear Elasticity']]],
   ['nonlinear_20mix_20formulation_20unsaturated_20flow_7',['COR-1: Time dependent nonlinear mix formulation (unsaturated flow)',['../mix_us_flow.html',1,'tutorials']]],
   ['nonlinear_20poisson_20equation_8',['COR-5: A nonlinear Poisson equation',['../poisson_tut4.html',1,'tutorials']]],
   ['nonlinear_20poisson_20s_20equation_9',['SCL-4: Nonlinear Poisson&apos;s equation',['../basic_tutorials_poisson_nonlinear.html',1,'']]],

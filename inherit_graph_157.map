@@ -1,3 +1,23 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classFTensor_1_1d__one__sided__Tensor1.html" title=" " alt="" coords="5,5,165,60"/>
+<area shape="rect" id="Node000000" href="$classFEMethod.html" title=" " alt="" coords="5,234,92,259"/>
+<area shape="rect" id="Node000001" href="$structCohesiveElement_1_1ArcLengthIntElemFEMethod.html" title=" " alt="" coords="141,5,350,45"/>
+<area shape="poly" id="edge165_Node000000_Node000001" title=" " alt="" coords="53,220,63,183,80,139,105,94,138,55,156,43,159,48,142,59,109,97,85,141,68,185,58,222"/>
+<area shape="rect" id="Node000003" href="$structContactOps_1_1Monitor.html" title=" " alt="" coords="168,70,323,95"/>
+<area shape="poly" id="edge167_Node000000_Node000003" title=" " alt="" coords="57,220,87,161,110,130,138,104,167,91,169,95,142,109,114,134,91,164,62,223"/>
+<area shape="rect" id="Node000004" href="$structEshelbianMonitor.html" title=" " alt="" coords="178,119,313,145"/>
+<area shape="poly" id="edge168_Node000000_Node000004" title=" " alt="" coords="66,221,97,186,139,155,177,140,179,145,141,160,101,190,70,224"/>
+<area shape="rect" id="Node000005" href="$structPlasticOps_1_1Monitor.html" title=" " alt="" coords="171,169,319,209"/>
+<area shape="poly" id="edge169_Node000000_Node000005" title=" " alt="" coords="105,228,175,207,177,212,106,233"/>
+<area shape="rect" id="Node000006" href="$structSimpleArcLengthControl.html" title=" " alt="" coords="156,234,335,259"/>
+<area shape="poly" id="edge170_Node000000_Node000006" title=" " alt="" coords="106,244,156,244,156,249,106,249"/>
+<area shape="rect" id="Node000007" href="$structSphericalArcLengthControl.html" title="Implementation of spherical arc&#45;length method." alt="" coords="148,283,343,309"/>
+<area shape="poly" id="edge171_Node000000_Node000007" title=" " alt="" coords="106,259,141,268,191,281,190,286,139,273,105,264"/>
+<area shape="rect" id="Node000008" href="$structThermalElement_1_1TimeSeriesMonitor.html" title="TS monitore it records temperature at time steps." alt="" coords="140,333,351,373"/>
+<area shape="poly" id="edge172_Node000000_Node000008" title=" " alt="" coords="74,267,105,293,141,318,170,331,168,336,139,322,102,298,71,271"/>
+<area shape="rect" id="Node000009" href="$structThermalElement_1_1UpdateAndControl.html" title="this calass is to control time stepping" alt="" coords="140,397,351,437"/>
+<area shape="poly" id="edge173_Node000000_Node000009" title=" " alt="" coords="62,271,93,328,115,358,142,383,161,395,158,399,138,387,111,361,88,331,58,273"/>
+<area shape="rect" id="Node000010" href="$structZeroFLmabda.html" title="Zero F_lambda." alt="" coords="189,462,301,487"/>
+<area shape="poly" id="edge174_Node000000_Node000010" title=" " alt="" coords="57,272,66,312,82,359,107,407,123,429,142,447,164,461,190,468,188,473,162,465,138,451,119,432,102,410,77,361,61,313,51,273"/>
+<area shape="rect" id="Node000002" href="$structCohesiveElement_1_1ArcLengthElement.html" title=" " alt="" coords="399,5,608,45"/>
+<area shape="poly" id="edge166_Node000001_Node000002" title=" " alt="" coords="364,23,398,23,398,28,364,28"/>
 </map>

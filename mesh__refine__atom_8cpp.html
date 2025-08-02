@@ -321,7 +321,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  150</span>        <span class="keywordtype">int</span> ii = 0;</div>
 <div class="line"><span class="lineno">  151</span>        <span class="keywordflow">for</span> (Range::iterator tit = tets.begin(); tit != tets.end(); tit++) {</div>
 <div class="line"><span class="lineno">  152</span>          <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><span class="lineno">  153</span>          <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><span class="lineno">  153</span>          <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><span class="lineno">  154</span>          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(*tit, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  155</span> </div>
 <div class="line"><span class="lineno">  156</span>          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn &lt; num_nodes; nn++) {</div>
@@ -362,6 +362,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  191</span> </div>
 <div class="line"><span class="lineno">  192</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  193</span>}</div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28">QUIET</a></div><div class="ttdeci">@ QUIET</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00221">definitions.h:221</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>

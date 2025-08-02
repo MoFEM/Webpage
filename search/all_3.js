@@ -11,7 +11,8 @@ var searchData=
   ['3_3a_20nonlinear_20dynamic_20elastic_8',['VEC-3: Nonlinear dynamic elastic',['../tutorial_nonlinear_dynamic_elastic.html',1,'']]],
   ['3_3a_20poisson_20s_20equation_20lagrange_20multiplier_9',['SCL-3: Poisson&apos;s equation (Lagrange multiplier)',['../basic_tutorials_poisson_lagrange_multiplier.html',1,'']]],
   ['3_5f2level_5f_5fset_20level_5fset_10',['@page md_tutorials_2adv-3_2level__set level_set',['..//home/lk58p/mofem_install/vanilla_dev_release/mofem-cephas/mofem/tutorials/adv-3/level_set.md#autotoc_md126',1,'']]],
-  ['3d_20code_11',['3D Code',['../md_tutorials_2vec-0_2README.html#autotoc_md218',1,'']]],
-  ['3d_20elasticity_20problems_20at_20large_20strains_20with_20weakly_20imposed_20symmetry_12',['A mixed Finite Element method for 3D elasticity problems at large strains with weakly imposed symmetry',['../applications.html#MFE',1,'']]],
-  ['3d_20mesh_20from_20gmsh_13',['MSH-2: Create a 3D mesh from Gmsh',['../basic_tutorials_mesh_generation_3d.html',1,'']]]
+  ['3d_20bar_11',['Dynamic analysis of prismatic 3d bar',['../elastic_dynamics.html#dynamic_elastic_bar',1,'']]],
+  ['3d_20code_12',['3D Code',['../md_tutorials_2vec-0_2README.html#autotoc_md218',1,'']]],
+  ['3d_20elasticity_20problems_20at_20large_20strains_20with_20weakly_20imposed_20symmetry_13',['A mixed Finite Element method for 3D elasticity problems at large strains with weakly imposed symmetry',['../applications.html#MFE',1,'']]],
+  ['3d_20mesh_20from_20gmsh_14',['MSH-2: Create a 3D mesh from Gmsh',['../basic_tutorials_mesh_generation_3d.html',1,'']]]
 ];

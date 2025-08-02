@@ -164,17 +164,17 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">double</span> &amp;<a id="a8" name="a8"></a><a class="code hl_variable" href="structOpFacesFluxes.html#a4d6a20c432323e43c063f3b2ac690ba4">dIv</a>;</div>
 <div class="line">  <a class="code hl_struct" href="structOpFacesFluxes.html">OpFacesFluxes</a>(<span class="keywordtype">double</span> &amp;div)</div>
-<div class="line">      : <a id="_a9" name="_a9"></a><a class="code hl_struct" href="structMoFEM_1_1FaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>::<a id="_a10" name="_a10"></a><a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a>(</div>
-<div class="line">            <span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a>::OPROW),</div>
+<div class="line">      : <a id="_a9" name="_a9"></a><a class="code hl_class" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>::<a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a>(</div>
+<div class="line">            <span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a>::OPROW),</div>
 <div class="line">        <a class="code hl_variable" href="structOpFacesFluxes.html#a4d6a20c432323e43c063f3b2ac690ba4">dIv</a>(div) {}</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a11" name="a11"></a><a class="code hl_function" href="structOpFacesFluxes.html#a1931cbd79a020355e8b6a3ccfb9d1ca8">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a10" name="a10"></a><a class="code hl_function" href="structOpFacesFluxes.html#a1931cbd79a020355e8b6a3ccfb9d1ca8">doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                        <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;data);</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a id="a12" name="a12"></a><a class="code hl_function" href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a id="a11" name="a11"></a><a class="code hl_function" href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"> </div>
-<div class="line">  <a id="a13" name="a13"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, (<span class="keywordtype">char</span> *)0, <a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line">  <a id="a12" name="a12"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, (<span class="keywordtype">char</span> *)0, <a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">try</span> {</div>
 <div class="line"> </div>
@@ -184,10 +184,10 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    PetscBool flg;</div>
 <div class="line">    PetscInt choice_value = AINSWORTH;</div>
-<div class="line">    <a id="a14" name="a14"></a><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="namespaceMoFEM.html#abee82d436d03244c6886fc99f71116f0">PetscOptionsGetEList</a>(PETSC_NULLPTR, NULL, <span class="stringliteral">&quot;-base&quot;</span>, list, LASTOP,</div>
+<div class="line">    <a id="a13" name="a13"></a><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="namespaceMoFEM.html#abee82d436d03244c6886fc99f71116f0">PetscOptionsGetEList</a>(PETSC_NULLPTR, NULL, <span class="stringliteral">&quot;-base&quot;</span>, list, LASTOP,</div>
 <div class="line">                                &amp;choice_value, &amp;flg);</div>
 <div class="line">    <span class="keywordflow">if</span> (flg != PETSC_TRUE) {</div>
-<div class="line">      SETERRQ(PETSC_COMM_SELF, <a id="a15" name="a15"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2ea75f611e0673e99085edc1b5ac5343023">MOFEM_IMPOSSIBLE_CASE</a>, <span class="stringliteral">&quot;base not set&quot;</span>);</div>
+<div class="line">      SETERRQ(PETSC_COMM_SELF, <a id="a14" name="a14"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2ea75f611e0673e99085edc1b5ac5343023">MOFEM_IMPOSSIBLE_CASE</a>, <span class="stringliteral">&quot;base not set&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    PetscBool ho_geometry = PETSC_FALSE;</div>
@@ -206,25 +206,25 @@ $(function() {
 <div class="line">    moab::Interface &amp;moab = mb_instance; <span class="comment">///&lt; interface</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create MoFEM</span></div>
-<div class="line">    <a id="_a16" name="_a16"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);</div>
-<div class="line">    <a id="_a17" name="_a17"></a><a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = core;</div>
+<div class="line">    <a id="_a15" name="_a15"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);</div>
+<div class="line">    <a id="_a16" name="_a16"></a><a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = core;</div>
 <div class="line"> </div>
-<div class="line">    <a id="_a18" name="_a18"></a><a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a> *simple_interface = m_field.<a id="a19" name="a19"></a><a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
-<div class="line">    <a id="_a20" name="_a20"></a><a class="code hl_struct" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a> *pipeline_mng = m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a>&gt;();</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a21" name="a21"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a8325447a1773550852f04c1b600af703">getOptions</a>();</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a22" name="a22"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a3d65745e902af842b5c490eedbcd30d1">loadFile</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line">    <a id="_a17" name="_a17"></a><a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a> *simple_interface = m_field.<a id="a18" name="a18"></a><a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
+<div class="line">    <a id="_a19" name="_a19"></a><a class="code hl_struct" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a> *pipeline_mng = m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a>&gt;();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a20" name="a20"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a8325447a1773550852f04c1b600af703">getOptions</a>();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a21" name="a21"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a3d65745e902af842b5c490eedbcd30d1">loadFile</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// fields</span></div>
 <div class="line">    <span class="keywordflow">switch</span> (choice_value) {</div>
 <div class="line">    <span class="keywordflow">case</span> AINSWORTH:</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a23" name="a23"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a0e57a0b25756ae72ee7864646d564c0e">addDomainField</a>(<span class="stringliteral">&quot;HDIV&quot;</span>, <a id="a24" name="a24"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12ab360a65247d7fe5efc6f3a533d47e5c8">HDIV</a>,</div>
-<div class="line">                                              <a id="a25" name="a25"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a26" name="a26"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a629f3f53162620530b250118935d75ee">addBoundaryField</a>(<span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12ab360a65247d7fe5efc6f3a533d47e5c8">HDIV</a>,</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a22" name="a22"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a0e57a0b25756ae72ee7864646d564c0e">addDomainField</a>(<span class="stringliteral">&quot;HDIV&quot;</span>, <a id="a23" name="a23"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12ab360a65247d7fe5efc6f3a533d47e5c8">HDIV</a>,</div>
+<div class="line">                                              <a id="a24" name="a24"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a25" name="a25"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a629f3f53162620530b250118935d75ee">addBoundaryField</a>(<span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12ab360a65247d7fe5efc6f3a533d47e5c8">HDIV</a>,</div>
 <div class="line">                                                <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
 <div class="line">      <span class="keywordflow">break</span>;</div>
 <div class="line">    <span class="keywordflow">case</span> DEMKOWICZ:</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a class="code hl_function" href="structMoFEM_1_1Simple.html#a0e57a0b25756ae72ee7864646d564c0e">addDomainField</a>(<span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12ab360a65247d7fe5efc6f3a533d47e5c8">HDIV</a>,</div>
-<div class="line">                                              <a id="a27" name="a27"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a9b4f9fbc1a88eda9b2cde0df10ca23bf">DEMKOWICZ_JACOBI_BASE</a>, 1);</div>
+<div class="line">                                              <a id="a26" name="a26"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a9b4f9fbc1a88eda9b2cde0df10ca23bf">DEMKOWICZ_JACOBI_BASE</a>, 1);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a class="code hl_function" href="structMoFEM_1_1Simple.html#a629f3f53162620530b250118935d75ee">addBoundaryField</a>(<span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12ab360a65247d7fe5efc6f3a533d47e5c8">HDIV</a>,</div>
 <div class="line">                                                <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a9b4f9fbc1a88eda9b2cde0df10ca23bf">DEMKOWICZ_JACOBI_BASE</a>, 1);</div>
 <div class="line">      <span class="keywordflow">break</span>;</div>
@@ -233,7 +233,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">if</span> (ho_geometry == PETSC_TRUE) {</div>
 <div class="line">      <span class="keywordflow">switch</span> (ho_choice_value) {</div>
 <div class="line">      <span class="keywordflow">case</span> AINSWORTH:</div>
-<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a28" name="a28"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#abe99a1264dff3c0c31e3756362803e9d">addDataField</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, <a id="a29" name="a29"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>,</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a27" name="a27"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#abe99a1264dff3c0c31e3756362803e9d">addDataField</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, <a id="a28" name="a28"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>,</div>
 <div class="line">                                              <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 3);</div>
 <div class="line">      <span class="keywordflow">case</span> DEMKOWICZ:</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a class="code hl_function" href="structMoFEM_1_1Simple.html#abe99a1264dff3c0c31e3756362803e9d">addDataField</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>,</div>
@@ -241,11 +241,11 @@ $(function() {
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a id="a30" name="a30"></a><a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a> = 3;</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a31" name="a31"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#ab233701869a6020eb4a2cb348bd7978d">setFieldOrder</a>(<span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>);</div>
+<div class="line">    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a id="a29" name="a29"></a><a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a> = 3;</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a30" name="a30"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#ab233701869a6020eb4a2cb348bd7978d">setFieldOrder</a>(<span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>);</div>
 <div class="line">    <span class="keywordflow">if</span> (ho_geometry == PETSC_TRUE)</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a class="code hl_function" href="structMoFEM_1_1Simple.html#ab233701869a6020eb4a2cb348bd7978d">setFieldOrder</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, 2);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a32" name="a32"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#acf413f83e47d1e092a8d5fdb27996cbf">setUp</a>();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a31" name="a31"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#acf413f83e47d1e092a8d5fdb27996cbf">setUp</a>();</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">    /// This has no real effect, folling line are only for atom test purpose</span></div>
 <div class="line"><span class="comment"></span>    pipeline_mng-&gt;getDomainLhsFE().reset();</div>
@@ -255,15 +255,15 @@ $(function() {
 <div class="line">    pipeline_mng-&gt;getSkeletonLhsFE().reset();</div>
 <div class="line">    pipeline_mng-&gt;getSkeletonRhsFE().reset();</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> <a id="a33" name="a33"></a><a class="code hl_variable" href="free__surface_8cpp.html#a28f0c075108bbb02a47f54fccb48ea1a">integration_rule</a> = [](<a class="code hl_variable" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <a class="code hl_variable" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <span class="keywordtype">int</span> p_data) { <span class="keywordflow">return</span> 2 * p_data; };</div>
+<div class="line">    <span class="keyword">auto</span> <a id="a32" name="a32"></a><a class="code hl_variable" href="free__surface_8cpp.html#a28f0c075108bbb02a47f54fccb48ea1a">integration_rule</a> = [](<a class="code hl_variable" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <a class="code hl_variable" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <span class="keywordtype">int</span> p_data) { <span class="keywordflow">return</span> 2 * p_data; };</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> pipeline_mng-&gt;setDomainRhsIntegrationRule(<a class="code hl_variable" href="free__surface_8cpp.html#a28f0c075108bbb02a47f54fccb48ea1a">integration_rule</a>);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> pipeline_mng-&gt;setBoundaryRhsIntegrationRule(<a class="code hl_variable" href="free__surface_8cpp.html#a28f0c075108bbb02a47f54fccb48ea1a">integration_rule</a>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordtype">double</span> divergence_vol = 0;</div>
 <div class="line">    <span class="keywordtype">double</span> divergence_skin = 0;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">if</span> (m_field.<a id="a34" name="a34"></a><a class="code hl_function" href="group__mofem__field.html#gad43a6631f7d465ad31403cbb1d1896ba">check_field</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>)) {</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a35" name="_a35"></a><a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;3, 3, 3&gt;::add</a>(pipeline_mng-&gt;getOpDomainRhsPipeline(),</div>
+<div class="line">    <span class="keywordflow">if</span> (m_field.<a id="a33" name="a33"></a><a class="code hl_function" href="group__mofem__field.html#gad43a6631f7d465ad31403cbb1d1896ba">check_field</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>)) {</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a34" name="_a34"></a><a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;3, 3, 3&gt;::add</a>(pipeline_mng-&gt;getOpDomainRhsPipeline(),</div>
 <div class="line">                                    {HDIV}, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;2, 3, 3&gt;::add</a>(pipeline_mng-&gt;getOpBoundaryRhsPipeline(),</div>
 <div class="line">                                    {HDIV}, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
@@ -283,47 +283,47 @@ $(function() {
 <div class="line"> </div>
 <div class="line">    <span class="comment">// project geometry form 10 node tets on higher order approx. functions</span></div>
 <div class="line">    <span class="keywordflow">if</span> (ho_geometry == PETSC_TRUE) {</div>
-<div class="line">      <a id="_a36" name="_a36"></a><a class="code hl_struct" href="structMoFEM_1_1Projection10NodeCoordsOnField.html">Projection10NodeCoordsOnField</a> ent_method(m_field, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a37" name="a37"></a><a class="code hl_function" href="group__mofem__loops.html#ga06843828fb475925d003a31b991c425e">loop_dofs</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, ent_method);</div>
+<div class="line">      <a id="_a35" name="_a35"></a><a class="code hl_struct" href="structMoFEM_1_1Projection10NodeCoordsOnField.html">Projection10NodeCoordsOnField</a> ent_method(m_field, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a36" name="a36"></a><a class="code hl_function" href="group__mofem__loops.html#ga06843828fb475925d003a31b991c425e">loop_dofs</a>(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, ent_method);</div>
 <div class="line">    }</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> pipeline_mng-&gt;loopFiniteElements();</div>
 <div class="line"> </div>
-<div class="line">    <a id="a38" name="a38"></a><a class="code hl_define" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform)</div>
+<div class="line">    <a id="a37" name="a37"></a><a class="code hl_define" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform)</div>
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;divergence_vol &quot;</span> &lt;&lt; std::setprecision(12) &lt;&lt; divergence_vol;</div>
 <div class="line">    <a class="code hl_define" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform)</div>
 <div class="line">        &lt;&lt; <span class="stringliteral">&quot;divergence_skin &quot;</span> &lt;&lt; std::setprecision(12) &lt;&lt; divergence_skin;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a id="a39" name="a39"></a><a class="code hl_variable" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> = 1e-8;</div>
+<div class="line">    <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a id="a38" name="a38"></a><a class="code hl_variable" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a> = 1e-8;</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">double</span> error = divergence_skin - divergence_vol;</div>
 <div class="line">    <span class="keywordflow">if</span> (fabs(error) &gt; <a class="code hl_variable" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a>)</div>
-<div class="line">      SETERRQ(PETSC_COMM_SELF, <a id="a40" name="a40"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>,</div>
+<div class="line">      SETERRQ(PETSC_COMM_SELF, <a id="a39" name="a39"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>,</div>
 <div class="line">               <span class="stringliteral">&quot;invalid surface flux or divergence or both error = %3.4e&quot;</span>,</div>
 <div class="line">               error);</div>
 <div class="line">  }</div>
-<div class="line">  <a id="a41" name="a41"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a id="a40" name="a40"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a42" name="a42"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a41" name="a41"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a></div>
 <div class="line"><a class="code hl_function" href="structOpVolDivergence.html#ab2d9bd5063f937219506fbf54dde0743">OpVolDivergence::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                        <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;data) {</div>
-<div class="line">  <a id="a43" name="a43"></a><a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line">  <a id="a42" name="a42"></a><a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (CN::Dimension(type) &lt; 2)</div>
-<div class="line">    <a id="a44" name="a44"></a><a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
+<div class="line">    <a id="a43" name="a43"></a><a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordflow">if</span> (data.<a id="a45" name="a45"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6fb60e6aba0a189316962e4e96bce5e4">getFieldData</a>().size() == 0)</div>
+<div class="line">  <span class="keywordflow">if</span> (data.<a id="a44" name="a44"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6fb60e6aba0a189316962e4e96bce5e4">getFieldData</a>().size() == 0)</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">int</span> nb_gauss_pts = data.<a id="a46" name="a46"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a37ce62a0e0398b57b8ed23d01c38d755">getDiffN</a>().size1();</div>
+<div class="line">  <span class="keywordtype">int</span> nb_gauss_pts = data.<a id="a45" name="a45"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a37ce62a0e0398b57b8ed23d01c38d755">getDiffN</a>().size1();</div>
 <div class="line">  <span class="keywordtype">int</span> nb_dofs = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6fb60e6aba0a189316962e4e96bce5e4">getFieldData</a>().size();</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aab2f28b2af54eb9f62cc60a53e1c6d3b">VectorDouble</a> div_vec;</div>
 <div class="line">  div_vec.resize(nb_dofs, 0);</div>
 <div class="line"> </div>
-<div class="line">  <a id="_a47" name="_a47"></a><a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a48" name="a48"></a><a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
-<div class="line">  <span class="keyword">auto</span> t_base_diff_hdiv = data.<a id="a49" name="a49"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a002e0cac5ab200233eee99620089dde4">getFTensor2DiffN</a>&lt;3, 3&gt;();</div>
+<div class="line">  <a id="_a46" name="_a46"></a><a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 3&gt; <a id="a47" name="a47"></a><a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
+<div class="line">  <span class="keyword">auto</span> t_base_diff_hdiv = data.<a id="a48" name="a48"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a002e0cac5ab200233eee99620089dde4">getFTensor2DiffN</a>&lt;3, 3&gt;();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> gg = 0; gg &lt; nb_gauss_pts; gg++) {</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> dd = 0; <a class="code hl_function" href="namespaceFTensor.html#ad4a6ecc7f7a6e3b3903a9cff27887f39">dd</a> != div_vec.size(); <a class="code hl_function" href="namespaceFTensor.html#ad4a6ecc7f7a6e3b3903a9cff27887f39">dd</a>++) {</div>
@@ -333,17 +333,17 @@ $(function() {
 <div class="line">    }</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <a id="a50" name="a50"></a><a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">  <a id="a49" name="a49"></a><a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="structOpFacesFluxes.html#a1931cbd79a020355e8b6a3ccfb9d1ca8">OpFacesFluxes::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                                     <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;data) {</div>
-<div class="line">  <a id="a51" name="a51"></a><a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
+<div class="line">  <a id="a50" name="a50"></a><a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (CN::Dimension(type) != 2)</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">int</span> nb_gauss_pts = data.<a id="a52" name="a52"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6803bfc79169740e108bd5e2666de739">getN</a>().size1();</div>
+<div class="line">  <span class="keywordtype">int</span> nb_gauss_pts = data.<a id="a51" name="a51"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6803bfc79169740e108bd5e2666de739">getN</a>().size1();</div>
 <div class="line">  <span class="keywordtype">int</span> nb_dofs = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6fb60e6aba0a189316962e4e96bce5e4">getFieldData</a>().size();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gg = 0; gg &lt; nb_gauss_pts; gg++) {</div>
@@ -357,7 +357,7 @@ $(function() {
 <div class="line">        <a class="code hl_variable" href="namespacesdf__wavy__2d.html#ab736ce7138c0ba29f61877ebea4f2bc6">w</a> *= 0.5;</div>
 <div class="line">      }</div>
 <div class="line"> </div>
-<div class="line">      <a class="code hl_variable" href="structOpFacesFluxes.html#a4d6a20c432323e43c063f3b2ac690ba4">dIv</a> += (n0 * data.<a id="a53" name="a53"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a83cf121da90b1d958bfcb4ef7e0ce588">getVectorN</a>&lt;3&gt;(gg)(dd, 0) +</div>
+<div class="line">      <a class="code hl_variable" href="structOpFacesFluxes.html#a4d6a20c432323e43c063f3b2ac690ba4">dIv</a> += (n0 * data.<a id="a52" name="a52"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a83cf121da90b1d958bfcb4ef7e0ce588">getVectorN</a>&lt;3&gt;(gg)(dd, 0) +</div>
 <div class="line">              n1 * data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a83cf121da90b1d958bfcb4ef7e0ce588">getVectorN</a>&lt;3&gt;(gg)(dd, 1) +</div>
 <div class="line">              n2 * data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a83cf121da90b1d958bfcb4ef7e0ce588">getVectorN</a>&lt;3&gt;(gg)(dd, 2)) *</div>
 <div class="line">             w;</div>
@@ -366,12 +366,13 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line">}</div>
+<div class="ttc" id="aHookeElement_8hpp_html_aee27a2ebc8f3d34a5c1ce71b2607d1a3"><div class="ttname"><a href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a></div><div class="ttdeci">ForcesAndSourcesCore::UserDataOperator UserDataOperator</div><div class="ttdef"><b>Definition</b> <a href="HookeElement_8hpp_source.html#l00075">HookeElement.hpp:75</a></div></div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aactivate__deactivate__dofs_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="activate__deactivate__dofs_8cpp_source.html#l00013">activate_deactivate_dofs.cpp:13</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
 <div class="ttc" id="acheck__base__functions__derivatives__on__tet_8cpp_html_a3d8c24629d725b9ef8c238cf27c9b158"><div class="ttname"><a href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a></div><div class="ttdeci">static const double eps</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__on__tet_8cpp_source.html#l00011">check_base_functions_derivatives_on_tet.cpp:11</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
-<div class="ttc" id="aclassUserDataOperator_html"><div class="ttname"><a href="classUserDataOperator.html">UserDataOperator</a></div></div>
+<div class="ttc" id="aclassFaceElementForcesAndSourcesCore_html"><div class="ttname"><a href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a9b4f9fbc1a88eda9b2cde0df10ca23bf"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a9b4f9fbc1a88eda9b2cde0df10ca23bf">DEMKOWICZ_JACOBI_BASE</a></div><div class="ttdeci">@ DEMKOWICZ_JACOBI_BASE</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00067">definitions.h:66</a></div></div>
@@ -411,7 +412,6 @@ $(function() {
 <div class="ttc" id="astructMoFEM_1_1EntitiesFieldData_1_1EntData_html_a6fb60e6aba0a189316962e4e96bce5e4"><div class="ttname"><a href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6fb60e6aba0a189316962e4e96bce5e4">MoFEM::EntitiesFieldData::EntData::getFieldData</a></div><div class="ttdeci">const VectorDouble &amp; getFieldData() const</div><div class="ttdoc">get dofs values</div><div class="ttdef"><b>Definition</b> <a href="EntitiesFieldData_8hpp_source.html#l01254">EntitiesFieldData.hpp:1254</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1EntitiesFieldData_1_1EntData_html_a83cf121da90b1d958bfcb4ef7e0ce588"><div class="ttname"><a href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a83cf121da90b1d958bfcb4ef7e0ce588">MoFEM::EntitiesFieldData::EntData::getVectorN</a></div><div class="ttdeci">const MatrixAdaptor getVectorN(const FieldApproximationBase base, const int gg)</div><div class="ttdoc">get Hdiv of base functions at Gauss pts</div><div class="ttdef"><b>Definition</b> <a href="EntitiesFieldData_8hpp_source.html#l01447">EntitiesFieldData.hpp:1447</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator_html"><div class="ttname"><a href="structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html">MoFEM::FaceElementForcesAndSourcesCore::UserDataOperator</a></div><div class="ttdoc">default operator for TRI element</div><div class="ttdef"><b>Definition</b> <a href="FaceElementForcesAndSourcesCore_8hpp_source.html#l00094">FaceElementForcesAndSourcesCore.hpp:95</a></div></div>
-<div class="ttc" id="astructMoFEM_1_1FaceElementForcesAndSourcesCore_html"><div class="ttname"><a href="structMoFEM_1_1FaceElementForcesAndSourcesCore.html">MoFEM::FaceElementForcesAndSourcesCore</a></div><div class="ttdoc">Face finite element.</div><div class="ttdef"><b>Definition</b> <a href="FaceElementForcesAndSourcesCore_8hpp_source.html#l00023">FaceElementForcesAndSourcesCore.hpp:23</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1PipelineManager_html"><div class="ttname"><a href="structMoFEM_1_1PipelineManager.html">MoFEM::PipelineManager</a></div><div class="ttdoc">PipelineManager interface.</div><div class="ttdef"><b>Definition</b> <a href="PipelineManager_8hpp_source.html#l00024">PipelineManager.hpp:24</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1Projection10NodeCoordsOnField_html"><div class="ttname"><a href="structMoFEM_1_1Projection10NodeCoordsOnField.html">MoFEM::Projection10NodeCoordsOnField</a></div><div class="ttdoc">Projection of edge entities with one mid-node on hierarchical basis.</div><div class="ttdef"><b>Definition</b> <a href="Projection10NodeCoordsOnField_8hpp_source.html#l00024">Projection10NodeCoordsOnField.hpp:24</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1Simple_html"><div class="ttname"><a href="structMoFEM_1_1Simple.html">MoFEM::Simple</a></div><div class="ttdoc">Simple interface for fast problem set-up.</div><div class="ttdef"><b>Definition</b> <a href="Simple_8hpp_source.html#l00027">Simple.hpp:27</a></div></div>

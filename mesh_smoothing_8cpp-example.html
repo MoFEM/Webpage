@@ -140,9 +140,9 @@ $(function() {
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceMoFEM.html">MoFEM</a>;</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Smoother_8hpp.html">Smoother.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="SurfaceSlidingConstrains_8hpp.html">SurfaceSlidingConstrains.hpp</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="VolumeLengthQuality_8hpp.html">VolumeLengthQuality.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;Smoother.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;SurfaceSlidingConstrains.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;VolumeLengthQuality.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceMoFEM.html">MoFEM</a>;</div>
 <div class="line"> </div>
@@ -338,9 +338,9 @@ $(function() {
 <div class="line">        <a id="a54" name="a54"></a><a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">        smootherFe = boost::shared_ptr&lt;Smoother&gt;(<span class="keyword">new</span> <a id="_a55" name="_a55"></a><a class="code hl_struct" href="structSmoother.html">Smoother</a>(mField));</div>
 <div class="line">        volumeLengthAdouble = boost::shared_ptr&lt;VolumeLengthQuality&lt;adouble&gt; &gt;(</div>
-<div class="line">            <span class="keyword">new</span> <a id="_a56" name="_a56"></a><a class="code hl_struct" href="structVolumeLengthQuality.html">VolumeLengthQuality&lt;adouble&gt;</a>(<a id="a57" name="a57"></a><a class="code hl_enumvalue" href="VolumeLengthQuality_8hpp.html#a72216e26906a379bc1162e436d3bf839ac2a9576547e95a2349fa0b163b0b1adf">BARRIER_AND_QUALITY</a>, 1, 0));</div>
+<div class="line">            <span class="keyword">new</span> <a id="_a56" name="_a56"></a><a class="code hl_struct" href="structVolumeLengthQuality.html">VolumeLengthQuality&lt;adouble&gt;</a>(<a id="a57" name="a57"></a><a class="code hl_enumvalue" href="tools_2src_2VolumeLengthQuality_8hpp.html#a72216e26906a379bc1162e436d3bf839ac2a9576547e95a2349fa0b163b0b1adf">BARRIER_AND_QUALITY</a>, 1, 0));</div>
 <div class="line">        volumeLengthDouble = boost::shared_ptr&lt;VolumeLengthQuality&lt;double&gt; &gt;(</div>
-<div class="line">            <span class="keyword">new</span> <a class="code hl_struct" href="structVolumeLengthQuality.html">VolumeLengthQuality&lt;double&gt;</a>(<a class="code hl_enumvalue" href="VolumeLengthQuality_8hpp.html#a72216e26906a379bc1162e436d3bf839ac2a9576547e95a2349fa0b163b0b1adf">BARRIER_AND_QUALITY</a>, 1, 0));</div>
+<div class="line">            <span class="keyword">new</span> <a class="code hl_struct" href="structVolumeLengthQuality.html">VolumeLengthQuality&lt;double&gt;</a>(<a class="code hl_enumvalue" href="tools_2src_2VolumeLengthQuality_8hpp.html#a72216e26906a379bc1162e436d3bf839ac2a9576547e95a2349fa0b163b0b1adf">BARRIER_AND_QUALITY</a>, 1, 0));</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_class" href="classRange.html">Range</a> tets;</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> mField.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_entities_by_type(0, MBTET, tets);</div>
@@ -363,32 +363,32 @@ $(function() {
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Smoother right hand side</span></div>
 <div class="line">        feSmootherRhs-&gt;getOpPtrVector().push_back(</div>
-<div class="line">            <span class="keyword">new</span> NonlinearElasticElement::OpGetCommonDataAtGaussPts(</div>
+<div class="line">            <span class="keyword">new</span> <a id="_a58" name="_a58"></a><a class="code hl_struct" href="structNonlinearElasticElement_1_1OpGetCommonDataAtGaussPts.html">NonlinearElasticElement::OpGetCommonDataAtGaussPts</a>(</div>
 <div class="line">                <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, smootherFe-&gt;commonData));</div>
 <div class="line">        feSmootherRhs-&gt;getOpPtrVector().push_back(</div>
-<div class="line">            <span class="keyword">new</span> <a id="_a58" name="_a58"></a><a class="code hl_struct" href="structSmoother_1_1OpJacobianSmoother.html">Smoother::OpJacobianSmoother</a>(</div>
+<div class="line">            <span class="keyword">new</span> <a id="_a59" name="_a59"></a><a class="code hl_struct" href="structSmoother_1_1OpJacobianSmoother.html">Smoother::OpJacobianSmoother</a>(</div>
 <div class="line">                <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, smootherFe-&gt;setOfBlocks.at(0),</div>
 <div class="line">                smootherFe-&gt;commonData, SMOOTHING_TAG, <span class="keyword">false</span>));</div>
-<div class="line">        feSmootherRhs-&gt;getOpPtrVector().push_back(<span class="keyword">new</span> <a id="_a59" name="_a59"></a><a class="code hl_struct" href="structSmoother_1_1OpRhsSmoother.html">Smoother::OpRhsSmoother</a>(</div>
+<div class="line">        feSmootherRhs-&gt;getOpPtrVector().push_back(<span class="keyword">new</span> <a id="_a60" name="_a60"></a><a class="code hl_struct" href="structSmoother_1_1OpRhsSmoother.html">Smoother::OpRhsSmoother</a>(</div>
 <div class="line">            <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, smootherFe-&gt;setOfBlocks[0],</div>
 <div class="line">            smootherFe-&gt;commonData, smootherFe-&gt;smootherData));</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Smoother left hand side</span></div>
 <div class="line">        feSmootherLhs-&gt;getOpPtrVector().push_back(</div>
-<div class="line">            <span class="keyword">new</span> NonlinearElasticElement::OpGetCommonDataAtGaussPts(</div>
+<div class="line">            <span class="keyword">new</span> <a class="code hl_struct" href="structNonlinearElasticElement_1_1OpGetCommonDataAtGaussPts.html">NonlinearElasticElement::OpGetCommonDataAtGaussPts</a>(</div>
 <div class="line">                <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, smootherFe-&gt;commonData));</div>
 <div class="line">        feSmootherLhs-&gt;getOpPtrVector().push_back(</div>
 <div class="line">            <span class="keyword">new</span> <a class="code hl_struct" href="structSmoother_1_1OpJacobianSmoother.html">Smoother::OpJacobianSmoother</a>(</div>
 <div class="line">                <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, smootherFe-&gt;setOfBlocks.at(0),</div>
 <div class="line">                smootherFe-&gt;commonData, SMOOTHING_TAG, <span class="keyword">true</span>));</div>
-<div class="line">        feSmootherLhs-&gt;getOpPtrVector().push_back(<span class="keyword">new</span> <a id="_a60" name="_a60"></a><a class="code hl_struct" href="structSmoother_1_1OpLhsSmoother.html">Smoother::OpLhsSmoother</a>(</div>
+<div class="line">        feSmootherLhs-&gt;getOpPtrVector().push_back(<span class="keyword">new</span> <a id="_a61" name="_a61"></a><a class="code hl_struct" href="structSmoother_1_1OpLhsSmoother.html">Smoother::OpLhsSmoother</a>(</div>
 <div class="line">            <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>,</div>
 <div class="line">            smootherFe-&gt;setOfBlocks.at(0), smootherFe-&gt;commonData,</div>
 <div class="line">            smootherFe-&gt;smootherData, <span class="stringliteral">&quot;LAMBDA_CRACKFRONT_AREA_TANGENT&quot;</span>));</div>
 <div class="line"> </div>
 <div class="line">        minQualityFe =</div>
 <div class="line">            boost::shared_ptr&lt;MoFEM::VolumeElementForcesAndSourcesCore&gt;(</div>
-<div class="line">                <span class="keyword">new</span> <a id="_a61" name="_a61"></a><a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore.html">MoFEM::VolumeElementForcesAndSourcesCore</a>(mField));</div>
+<div class="line">                <span class="keyword">new</span> <a id="_a62" name="_a62"></a><a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore.html">MoFEM::VolumeElementForcesAndSourcesCore</a>(mField));</div>
 <div class="line">        minQualityFe-&gt;getOpPtrVector().push_back(</div>
 <div class="line">            <span class="keyword">new</span> MinQualityOp(minQualityPtr));</div>
 <div class="line"> </div>
@@ -399,22 +399,22 @@ $(function() {
 <div class="line">              <a class="code hl_variable" href="mesh__smoothing_8cpp.html#ad6c7dc35f120f5c33d8483b74550f325">vertex_block_set</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efcac77b6cdcfb446c668fd1d7c66cfd15ab">BLOCKSET</a>, 0, fixed_vertex, <span class="keyword">true</span>);</div>
 <div class="line">        }</div>
 <div class="line">        fixMaterialEnts = boost::shared_ptr&lt;DirichletFixFieldAtEntitiesBc&gt;(</div>
-<div class="line">            <span class="keyword">new</span> DirichletFixFieldAtEntitiesBc(mField, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>,</div>
+<div class="line">            <span class="keyword">new</span> <a id="_a63" name="_a63"></a><a class="code hl_struct" href="structDirichletFixFieldAtEntitiesBc.html">DirichletFixFieldAtEntitiesBc</a>(mField, <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>,</div>
 <div class="line">                                              fixed_vertex));</div>
 <div class="line">        fixMaterialEnts-&gt;fieldNames.push_back(<span class="stringliteral">&quot;LAMBDA_SURFACE&quot;</span>);</div>
 <div class="line">        fixMaterialEnts-&gt;fieldNames.push_back(<span class="stringliteral">&quot;LAMBDA_EDGE&quot;</span>);</div>
 <div class="line"> </div>
-<div class="line">        <a id="a62" name="a62"></a><a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">        <a id="a64" name="a64"></a><a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">      }</div>
 <div class="line"> </div>
 <div class="line">      <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> createConstrians() {</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">        skinOrientation = boost::shared_ptr&lt;</div>
-<div class="line">            <a id="_a63" name="_a63"></a><a class="code hl_struct" href="structSurfaceSlidingConstrains_1_1DriverElementOrientation.html">SurfaceSlidingConstrains::DriverElementOrientation</a>&gt;(</div>
+<div class="line">            <a id="_a65" name="_a65"></a><a class="code hl_struct" href="structSurfaceSlidingConstrains_1_1DriverElementOrientation.html">SurfaceSlidingConstrains::DriverElementOrientation</a>&gt;(</div>
 <div class="line">            <span class="keyword">new</span> <a class="code hl_struct" href="structSurfaceSlidingConstrains_1_1DriverElementOrientation.html">SurfaceSlidingConstrains::DriverElementOrientation</a>());</div>
 <div class="line">        surfaceConstrain = boost::shared_ptr&lt;SurfaceSlidingConstrains&gt;(</div>
 <div class="line">            skinOrientation,</div>
-<div class="line">            <span class="keyword">new</span> <a id="_a64" name="_a64"></a><a class="code hl_struct" href="structSurfaceSlidingConstrains.html">SurfaceSlidingConstrains</a>(mField, *skinOrientation));</div>
+<div class="line">            <span class="keyword">new</span> <a id="_a66" name="_a66"></a><a class="code hl_struct" href="structSurfaceSlidingConstrains.html">SurfaceSlidingConstrains</a>(mField, *skinOrientation));</div>
 <div class="line">        surfaceConstrain-&gt;setOperators(SURFACE_CONSTRAINS_TAG, <span class="stringliteral">&quot;LAMBDA_SURFACE&quot;</span>,</div>
 <div class="line">                                       <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
 <div class="line"> </div>
@@ -432,7 +432,7 @@ $(function() {
 <div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> skin.find_skin(0, tets, <span class="keyword">false</span>, skin_faces);</div>
 <div class="line"> </div>
 <div class="line">          edgeConstrain = boost::shared_ptr&lt;EdgeSlidingConstrains&gt;(</div>
-<div class="line">              <span class="keyword">new</span> <a id="_a65" name="_a65"></a><a class="code hl_struct" href="structEdgeSlidingConstrains.html">EdgeSlidingConstrains</a>(mField));</div>
+<div class="line">              <span class="keyword">new</span> <a id="_a67" name="_a67"></a><a class="code hl_struct" href="structEdgeSlidingConstrains.html">EdgeSlidingConstrains</a>(mField));</div>
 <div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> edgeConstrain-&gt;setOperators(EDGE_CONSTRAINS_TAG, edges,</div>
 <div class="line">                                             skin_faces, <span class="stringliteral">&quot;LAMBDA_EDGE&quot;</span>,</div>
 <div class="line">                                             <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
@@ -448,7 +448,7 @@ $(function() {
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">        boost::shared_ptr&lt;ForcesAndSourcesCore&gt; null;</div>
 <div class="line"> </div>
-<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMMoFEMSNESSetFunction(dm, <a id="a66" name="a66"></a><a class="code hl_define" href="DMMoFEM_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a>, null, fixMaterialEnts,</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMMoFEMSNESSetFunction(dm, <a id="a68" name="a68"></a><a class="code hl_define" href="DMMoFEM_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a>, null, fixMaterialEnts,</div>
 <div class="line">                                      null);</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMMoFEMSNESSetFunction(dm, <span class="stringliteral">&quot;SMOOTHING&quot;</span>, feSmootherRhs, null,</div>
 <div class="line">                                      null);</div>
@@ -491,7 +491,7 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> elements_and_operators.createConstrians();</div>
 <div class="line"> </div>
 <div class="line">    DM dm;</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a67" name="a67"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a9261d3ef9b39a00cb7d0acc612702275">getDM</a>(&amp;dm);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> simple_interface-&gt;<a id="a69" name="a69"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a9261d3ef9b39a00cb7d0acc612702275">getDM</a>(&amp;dm);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> elements_and_operators.addFEtoDM(dm);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">struct </span>Solve {</div>
@@ -500,7 +500,7 @@ $(function() {
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Create the right hand side vector and vector of unknowns</span></div>
-<div class="line">        Vec <a id="a68" name="a68"></a><a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a id="a69" name="a69"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>;</div>
+<div class="line">        Vec <a id="a70" name="a70"></a><a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a id="a71" name="a71"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>;</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMCreateGlobalVector(dm, &amp;<a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>);</div>
 <div class="line">        <span class="comment">// Create unknown vector by creating duplicate copy of F vector. only</span></div>
 <div class="line">        <span class="comment">// structure is duplicated no values.</span></div>
@@ -536,14 +536,14 @@ $(function() {
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">        <a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> *m_field_ptr;</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMoFEMGetInterfacePtr(dm, &amp;m_field_ptr);</div>
-<div class="line">        <span class="keywordflow">for</span> (<a id="a70" name="a70"></a><a class="code hl_define" href="group__mofem__access.html#gab4f81c4bb83e7023a2e236b3735123b7">_IT_GET_ENT_FIELD_BY_NAME_FOR_LOOP_</a>(*m_field_ptr,</div>
+<div class="line">        <span class="keywordflow">for</span> (<a id="a72" name="a72"></a><a class="code hl_define" href="group__mofem__access.html#gab4f81c4bb83e7023a2e236b3735123b7">_IT_GET_ENT_FIELD_BY_NAME_FOR_LOOP_</a>(*m_field_ptr,</div>
 <div class="line">                                                 <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, it)) {</div>
 <div class="line">          <span class="keywordflow">if</span> (it-&gt;get()-&gt;getEntType() != MBVERTEX)</div>
 <div class="line">            <span class="keywordflow">continue</span>;</div>
 <div class="line">          <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> coords(3);</div>
 <div class="line">          <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dd = 0;dd!=3;++dd)</div>
 <div class="line">            coords[dd] = it-&gt;get()-&gt;getEntFieldData()[dd];</div>
-<div class="line">          EntityHandle ent = it-&gt;get()-&gt;getEnt();</div>
+<div class="line">          <a id="_a73" name="_a73"></a><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent = it-&gt;get()-&gt;getEnt();</div>
 <div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field_ptr-&gt;<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().set_coords(&amp;ent, 1, &amp;*coords.begin());</div>
 <div class="line">        }</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
@@ -557,7 +557,7 @@ $(function() {
 <div class="line">                                                 <span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>, it)) {</div>
 <div class="line">          <span class="keywordflow">if</span> (it-&gt;get()-&gt;getEntType() != MBVERTEX)</div>
 <div class="line">            <span class="keywordflow">continue</span>;</div>
-<div class="line">          EntityHandle ent = it-&gt;get()-&gt;getEnt();</div>
+<div class="line">          <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent = it-&gt;get()-&gt;getEnt();</div>
 <div class="line">          <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> coords(3);</div>
 <div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field_ptr-&gt;<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_coords(&amp;ent, 1, &amp;*coords.begin());</div>
 <div class="line">          <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dd = 0;dd!=3;++dd) </div>
@@ -571,7 +571,7 @@ $(function() {
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">        <a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> *m_field_ptr;</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DMoFEMGetInterfacePtr(dm, &amp;m_field_ptr);</div>
-<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field_ptr-&gt;<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a id="_a71" name="_a71"></a><a class="code hl_struct" href="structMoFEM_1_1FieldBlas.html">FieldBlas</a>&gt;()-&gt;setField(</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field_ptr-&gt;<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a id="_a74" name="_a74"></a><a class="code hl_struct" href="structMoFEM_1_1FieldBlas.html">FieldBlas</a>&gt;()-&gt;setField(</div>
 <div class="line">            0, MBVERTEX, <span class="stringliteral">&quot;LAMBDA_SURFACE&quot;</span>);</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">      }</div>
@@ -590,7 +590,7 @@ $(function() {
 <div class="line">    elements_and_operators.volumeLengthDouble-&gt;gAmma = gamma;</div>
 <div class="line">    elements_and_operators.volumeLengthAdouble-&gt;gAmma = gamma;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordtype">double</span> min_quality_p, <a id="a72" name="a72"></a><a class="code hl_variable" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a>;</div>
+<div class="line">    <span class="keywordtype">double</span> min_quality_p, <a id="a75" name="a75"></a><a class="code hl_variable" href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a>;</div>
 <div class="line">    <span class="keywordflow">do</span> {</div>
 <div class="line"> </div>
 <div class="line">      min_quality_p = min_quality;</div>
@@ -631,25 +631,22 @@ $(function() {
 <div class="line">    <span class="comment">// }</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (<a class="code hl_variable" href="mesh__smoothing_8cpp.html#a279c56c6e6a001259dcb1ee5545ba0e8">output_vtk</a>)</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a id="_a73" name="_a73"></a><a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;writeBitLevelByType(</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a id="_a76" name="_a76"></a><a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;writeBitLevelByType(</div>
 <div class="line">          <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(0), <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), MBTET, <span class="stringliteral">&quot;out.vtk&quot;</span>, <span class="stringliteral">&quot;VTK&quot;</span>,</div>
 <div class="line">          <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line">  }</div>
-<div class="line">  <a id="a74" name="a74"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a id="a77" name="a77"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a id="a75" name="a75"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a id="a78" name="a78"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="ttc" id="aDMMoFEM_8hpp_html_a8643d43312bdd9afb90733cfdcc77cf9"><div class="ttname"><a href="DMMoFEM_8hpp.html#a8643d43312bdd9afb90733cfdcc77cf9">DM_NO_ELEMENT</a></div><div class="ttdeci">#define DM_NO_ELEMENT</div><div class="ttdef"><b>Definition</b> <a href="DMMoFEM_8hpp_source.html#l00010">DMMoFEM.hpp:10</a></div></div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
-<div class="ttc" id="aSmoother_8hpp_html"><div class="ttname"><a href="Smoother_8hpp.html">Smoother.hpp</a></div></div>
-<div class="ttc" id="aSurfaceSlidingConstrains_8hpp_html"><div class="ttname"><a href="SurfaceSlidingConstrains_8hpp.html">SurfaceSlidingConstrains.hpp</a></div><div class="ttdoc">Implementing surface sliding constrains.</div></div>
-<div class="ttc" id="aVolumeLengthQuality_8hpp_html"><div class="ttname"><a href="VolumeLengthQuality_8hpp.html">VolumeLengthQuality.hpp</a></div><div class="ttdoc">Implementation of Volume-Length-Quality measure with barrier.</div></div>
-<div class="ttc" id="aVolumeLengthQuality_8hpp_html_a72216e26906a379bc1162e436d3bf839ac2a9576547e95a2349fa0b163b0b1adf"><div class="ttname"><a href="VolumeLengthQuality_8hpp.html#a72216e26906a379bc1162e436d3bf839ac2a9576547e95a2349fa0b163b0b1adf">BARRIER_AND_QUALITY</a></div><div class="ttdeci">@ BARRIER_AND_QUALITY</div><div class="ttdef"><b>Definition</b> <a href="VolumeLengthQuality_8hpp_source.html#l00017">VolumeLengthQuality.hpp:17</a></div></div>
 <div class="ttc" id="aactivate__deactivate__dofs_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="activate__deactivate__dofs_8cpp_source.html#l00013">activate_deactivate_dofs.cpp:13</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
 <div class="ttc" id="abase__functions_8c_html_a56d2889a19d8d7affaa85cfca4aadd67"><div class="ttname"><a href="base__functions_8c.html#a56d2889a19d8d7affaa85cfca4aadd67">ierr</a></div><div class="ttdeci">static PetscErrorCode ierr</div><div class="ttdef"><b>Definition</b> <a href="base__functions_8c_source.html#l00013">base_functions.c:13</a></div></div>
 <div class="ttc" id="acheck__base__functions__derivatives__on__tet_8cpp_html_a3d8c24629d725b9ef8c238cf27c9b158"><div class="ttname"><a href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a></div><div class="ttdeci">static const double eps</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__on__tet_8cpp_source.html#l00011">check_base_functions_derivatives_on_tet.cpp:11</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264"><div class="ttname"><a href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a0bb920c38e835e0fbae45b0c0c029264">MF_ZERO</a></div><div class="ttdeci">@ MF_ZERO</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00111">definitions.h:111</a></div></div>
@@ -685,7 +682,8 @@ $(function() {
 <div class="ttc" id="anamespaceMoFEM_1_1Types_html_a2a1a0695ea7feb3a1e73a8707ef9f083"><div class="ttname"><a href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">MoFEM::Types::VectorDouble3</a></div><div class="ttdeci">VectorBoundedArray&lt; double, 3 &gt; VectorDouble3</div><div class="ttdef"><b>Definition</b> <a href="Types_8hpp_source.html#l00092">Types.hpp:92</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_1_1Types_html_aa9495b406c5326b7bca937846ec421c5"><div class="ttname"><a href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">MoFEM::Types::BitRefLevel</a></div><div class="ttdeci">std::bitset&lt; BITREFLEVEL_SIZE &gt; BitRefLevel</div><div class="ttdoc">Bit structure attached to each entity identifying to what mesh entity is attached.</div><div class="ttdef"><b>Definition</b> <a href="Types_8hpp_source.html#l00040">Types.hpp:40</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_html"><div class="ttname"><a href="namespaceMoFEM.html">MoFEM</a></div><div class="ttdoc">implementation of Data Operators for Forces and Sources</div><div class="ttdef"><b>Definition</b> <a href="Common_8hpp_source.html#l00010">Common.hpp:10</a></div></div>
-<div class="ttc" id="astructEdgeSlidingConstrains_html"><div class="ttname"><a href="structEdgeSlidingConstrains.html">EdgeSlidingConstrains</a></div><div class="ttdef"><b>Definition</b> <a href="SurfaceSlidingConstrains_8hpp_source.html#l00637">SurfaceSlidingConstrains.hpp:637</a></div></div>
+<div class="ttc" id="astructDirichletFixFieldAtEntitiesBc_html"><div class="ttname"><a href="structDirichletFixFieldAtEntitiesBc.html">DirichletFixFieldAtEntitiesBc</a></div><div class="ttdoc">Fix dofs on entities.</div><div class="ttdef"><b>Definition</b> <a href="DirichletBC_8hpp_source.html#l00258">DirichletBC.hpp:258</a></div></div>
+<div class="ttc" id="astructEdgeSlidingConstrains_html"><div class="ttname"><a href="structEdgeSlidingConstrains.html">EdgeSlidingConstrains</a></div><div class="ttdef"><b>Definition</b> <a href="tools_2src_2SurfaceSlidingConstrains_8hpp_source.html#l00637">SurfaceSlidingConstrains.hpp:637</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1BitRefManager_html"><div class="ttname"><a href="structMoFEM_1_1BitRefManager.html">MoFEM::BitRefManager</a></div><div class="ttdoc">Managing BitRefLevels.</div><div class="ttdef"><b>Definition</b> <a href="BitRefManager_8hpp_source.html#l00021">BitRefManager.hpp:21</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1CommInterface_html"><div class="ttname"><a href="structMoFEM_1_1CommInterface.html">MoFEM::CommInterface</a></div><div class="ttdoc">Managing BitRefLevels.</div><div class="ttdef"><b>Definition</b> <a href="CommInterface_8hpp_source.html#l00021">CommInterface.hpp:21</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1CoreInterface_html_a093526a60371b07213a0be2aaf7afa35"><div class="ttname"><a href="structMoFEM_1_1CoreInterface.html#a093526a60371b07213a0be2aaf7afa35">MoFEM::CoreInterface::get_comm_size</a></div><div class="ttdeci">virtual int get_comm_size() const =0</div></div>
@@ -717,13 +715,15 @@ $(function() {
 <div class="ttc" id="astructMoFEM_1_1Simple_html_ad7be306d6140fff96459dae0b5eddfcb"><div class="ttname"><a href="structMoFEM_1_1Simple.html#ad7be306d6140fff96459dae0b5eddfcb">MoFEM::Simple::getDomainFEName</a></div><div class="ttdeci">const std::string getDomainFEName() const</div><div class="ttdoc">Get the Domain FE Name.</div><div class="ttdef"><b>Definition</b> <a href="Simple_8hpp_source.html#l00387">Simple.hpp:387</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1UnknownInterface_html_a7ab248ec45fca778800dcd92e5171beb"><div class="ttname"><a href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">MoFEM::UnknownInterface::getInterface</a></div><div class="ttdeci">MoFEMErrorCode getInterface(IFACE *&amp;iface) const</div><div class="ttdoc">Get interface reference to pointer of interface.</div><div class="ttdef"><b>Definition</b> <a href="UnknownInterface_8hpp_source.html#l00093">UnknownInterface.hpp:93</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1VolumeElementForcesAndSourcesCore_html"><div class="ttname"><a href="structMoFEM_1_1VolumeElementForcesAndSourcesCore.html">MoFEM::VolumeElementForcesAndSourcesCore</a></div><div class="ttdoc">Volume finite element base.</div><div class="ttdef"><b>Definition</b> <a href="VolumeElementForcesAndSourcesCore_8hpp_source.html#l00026">VolumeElementForcesAndSourcesCore.hpp:26</a></div></div>
-<div class="ttc" id="astructSmoother_1_1OpJacobianSmoother_html"><div class="ttname"><a href="structSmoother_1_1OpJacobianSmoother.html">Smoother::OpJacobianSmoother</a></div><div class="ttdef"><b>Definition</b> <a href="Smoother_8hpp_source.html#l00130">Smoother.hpp:131</a></div></div>
-<div class="ttc" id="astructSmoother_1_1OpLhsSmoother_html"><div class="ttname"><a href="structSmoother_1_1OpLhsSmoother.html">Smoother::OpLhsSmoother</a></div><div class="ttdef"><b>Definition</b> <a href="Smoother_8hpp_source.html#l00212">Smoother.hpp:213</a></div></div>
-<div class="ttc" id="astructSmoother_1_1OpRhsSmoother_html"><div class="ttname"><a href="structSmoother_1_1OpRhsSmoother.html">Smoother::OpRhsSmoother</a></div><div class="ttdef"><b>Definition</b> <a href="Smoother_8hpp_source.html#l00158">Smoother.hpp:158</a></div></div>
-<div class="ttc" id="astructSmoother_html"><div class="ttname"><a href="structSmoother.html">Smoother</a></div><div class="ttdef"><b>Definition</b> <a href="Smoother_8hpp_source.html#l00010">Smoother.hpp:10</a></div></div>
-<div class="ttc" id="astructSurfaceSlidingConstrains_1_1DriverElementOrientation_html"><div class="ttname"><a href="structSurfaceSlidingConstrains_1_1DriverElementOrientation.html">SurfaceSlidingConstrains::DriverElementOrientation</a></div><div class="ttdoc">Class implemented by user to detect face orientation.</div><div class="ttdef"><b>Definition</b> <a href="SurfaceSlidingConstrains_8hpp_source.html#l00334">SurfaceSlidingConstrains.hpp:334</a></div></div>
-<div class="ttc" id="astructSurfaceSlidingConstrains_html"><div class="ttname"><a href="structSurfaceSlidingConstrains.html">SurfaceSlidingConstrains</a></div><div class="ttdoc">Shape preserving constrains, i.e. nodes sliding on body surface.</div><div class="ttdef"><b>Definition</b> <a href="SurfaceSlidingConstrains_8hpp_source.html#l00323">SurfaceSlidingConstrains.hpp:323</a></div></div>
-<div class="ttc" id="astructVolumeLengthQuality_html"><div class="ttname"><a href="structVolumeLengthQuality.html">VolumeLengthQuality</a></div><div class="ttdoc">Volume Length Quality.</div><div class="ttdef"><b>Definition</b> <a href="VolumeLengthQuality_8hpp_source.html#l00032">VolumeLengthQuality.hpp:34</a></div></div>
+<div class="ttc" id="astructNonlinearElasticElement_1_1OpGetCommonDataAtGaussPts_html"><div class="ttname"><a href="structNonlinearElasticElement_1_1OpGetCommonDataAtGaussPts.html">NonlinearElasticElement::OpGetCommonDataAtGaussPts</a></div><div class="ttdef"><b>Definition</b> <a href="NonLinearElasticElement_8hpp_source.html#l00362">NonLinearElasticElement.hpp:362</a></div></div>
+<div class="ttc" id="astructSmoother_1_1OpJacobianSmoother_html"><div class="ttname"><a href="structSmoother_1_1OpJacobianSmoother.html">Smoother::OpJacobianSmoother</a></div><div class="ttdef"><b>Definition</b> <a href="tools_2src_2Smoother_8hpp_source.html#l00130">Smoother.hpp:131</a></div></div>
+<div class="ttc" id="astructSmoother_1_1OpLhsSmoother_html"><div class="ttname"><a href="structSmoother_1_1OpLhsSmoother.html">Smoother::OpLhsSmoother</a></div><div class="ttdef"><b>Definition</b> <a href="tools_2src_2Smoother_8hpp_source.html#l00212">Smoother.hpp:213</a></div></div>
+<div class="ttc" id="astructSmoother_1_1OpRhsSmoother_html"><div class="ttname"><a href="structSmoother_1_1OpRhsSmoother.html">Smoother::OpRhsSmoother</a></div><div class="ttdef"><b>Definition</b> <a href="tools_2src_2Smoother_8hpp_source.html#l00158">Smoother.hpp:158</a></div></div>
+<div class="ttc" id="astructSmoother_html"><div class="ttname"><a href="structSmoother.html">Smoother</a></div><div class="ttdef"><b>Definition</b> <a href="tools_2src_2Smoother_8hpp_source.html#l00010">Smoother.hpp:10</a></div></div>
+<div class="ttc" id="astructSurfaceSlidingConstrains_1_1DriverElementOrientation_html"><div class="ttname"><a href="structSurfaceSlidingConstrains_1_1DriverElementOrientation.html">SurfaceSlidingConstrains::DriverElementOrientation</a></div><div class="ttdoc">Class implemented by user to detect face orientation.</div><div class="ttdef"><b>Definition</b> <a href="tools_2src_2SurfaceSlidingConstrains_8hpp_source.html#l00334">SurfaceSlidingConstrains.hpp:334</a></div></div>
+<div class="ttc" id="astructSurfaceSlidingConstrains_html"><div class="ttname"><a href="structSurfaceSlidingConstrains.html">SurfaceSlidingConstrains</a></div><div class="ttdoc">Shape preserving constrains, i.e. nodes sliding on body surface.</div><div class="ttdef"><b>Definition</b> <a href="tools_2src_2SurfaceSlidingConstrains_8hpp_source.html#l00323">SurfaceSlidingConstrains.hpp:323</a></div></div>
+<div class="ttc" id="astructVolumeLengthQuality_html"><div class="ttname"><a href="structVolumeLengthQuality.html">VolumeLengthQuality</a></div><div class="ttdoc">Volume Length Quality.</div><div class="ttdef"><b>Definition</b> <a href="tools_2src_2VolumeLengthQuality_8hpp_source.html#l00032">VolumeLengthQuality.hpp:34</a></div></div>
+<div class="ttc" id="atools_2src_2VolumeLengthQuality_8hpp_html_a72216e26906a379bc1162e436d3bf839ac2a9576547e95a2349fa0b163b0b1adf"><div class="ttname"><a href="tools_2src_2VolumeLengthQuality_8hpp.html#a72216e26906a379bc1162e436d3bf839ac2a9576547e95a2349fa0b163b0b1adf">BARRIER_AND_QUALITY</a></div><div class="ttdeci">@ BARRIER_AND_QUALITY</div><div class="ttdef"><b>Definition</b> <a href="tools_2src_2VolumeLengthQuality_8hpp_source.html#l00017">VolumeLengthQuality.hpp:17</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->

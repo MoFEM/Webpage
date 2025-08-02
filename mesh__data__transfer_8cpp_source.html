@@ -431,7 +431,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        std::vector&lt;double&gt; tet_data(interp_tag_len, 0.0);</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_get_data(interp_tag, &amp;tet, 1, &amp;tet_data[0]);</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keyword">const</span> EntityHandle *vert_conn;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *vert_conn;</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        <span class="keywordtype">int</span> vert_num;</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(tet, vert_conn, vert_num, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        std::vector&lt;double&gt; vpos(3 * vert_num);</div>
@@ -514,6 +514,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9"><div class="ttname"><a href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a></div><div class="ttdeci">@ MOFEM_ATOM_TEST_INVALID</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00040">definitions.h:40</a></div></div>

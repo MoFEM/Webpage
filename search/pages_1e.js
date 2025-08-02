@@ -9,5 +9,7 @@ var searchData=
   ['user_20data_20operators_20table_6',['User data operators table',['../user_data_operators_table.html',1,'']]],
   ['users_20modules_7',['Users modules',['../mod_gallery.html',1,'']]],
   ['using_20fieldsplit_20solver_20and_20dm_20sub_20problem_8',['COR-4: Using fieldsplit solver and DM sub problem.',['../poisson_tut3.html',1,'tutorials']]],
-  ['using_20mofem_9',['Selected publications featuring results obtained using MoFEM',['../publications.html',1,'']]]
+  ['using_20gmsh_9',['Using Gmsh',['../using_Gmsh_tut.html',1,'runningprograms']]],
+  ['using_20mofem_10',['Selected publications featuring results obtained using MoFEM',['../publications.html',1,'']]],
+  ['using_20salome_11',['Using Salome',['../using_salome_tut_elasticity.html',1,'runningprograms']]]
 ];

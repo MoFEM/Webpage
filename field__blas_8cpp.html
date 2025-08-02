@@ -312,7 +312,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  148</span>        <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="structMoFEM_1_1BasicMethod.html#aae6e16b4e8770cb1b74d09000d3d04dd">operator()</a>() {</div>
 <div class="line"><span class="lineno">  149</span>          <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><span class="lineno">  150</span>          <span class="keywordflow">if</span> (entPtr-&gt;getEntType() == MBVERTEX) {</div>
-<div class="line"><span class="lineno">  151</span>            EntityHandle <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> = entPtr-&gt;getEnt();</div>
+<div class="line"><span class="lineno">  151</span>            <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> = entPtr-&gt;getEnt();</div>
 <div class="line"><span class="lineno">  152</span>            <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">VectorDouble3</a> coords(3);</div>
 <div class="line"><span class="lineno">  153</span>            <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_coords(&amp;<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, 1, &amp;coords[0]);</div>
 <div class="line"><span class="lineno">  154</span>            <span class="keywordflow">if</span> (std::abs(entPtr-&gt;getEntFieldData()[0] - norm_2(coords)) &gt;</div>
@@ -431,6 +431,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  267</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  268</span>}</div>
 <div class="ttc" id="acheck__base__functions__derivatives__on__tet_8cpp_html_a3d8c24629d725b9ef8c238cf27c9b158"><div class="ttname"><a href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a></div><div class="ttdeci">static const double eps</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__on__tet_8cpp_source.html#l00011">check_base_functions_derivatives_on_tet.cpp:11</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor1__value_8hpp_source.html#l00008">Tensor1_value.hpp:9</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>

@@ -129,20 +129,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>File <a class="el" href="arc__length__interface_8cpp.html">arc_length_interface.cpp</a>  </dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000061"></a>Make more clever step adaptation</p>
+<p class="enddd"><a class="anchor" id="_todo000060"></a>Mak it work with multi-grid and distributed mesh </p>
+</dd>
 <dt>File <a class="el" href="BiLinearFormsIntegrators_8hpp.html">BiLinearFormsIntegrators.hpp</a>  </dt>
 <dd><a class="anchor" id="_todo000007"></a>SSome operators could be optimised. To do that, we need to write tests and use Valgrind to profile code, shaking cache misses. For example, some operators should have iteration first over columns, then rows. ome operators. Since those operators are used in many problems, an implementation must be efficient. </dd>
 <dt>File <a class="el" href="BiLinearFormsIntegratorsImpl_8hpp.html">BiLinearFormsIntegratorsImpl.hpp</a>  </dt>
 <dd><a class="anchor" id="_todo000009"></a>Some operators could be optimised. To do that, we need to write tests and use Valgrind to profile code, shaking cache misses. For example, some operators should have iteration first over columns, then rows. ome operators. Since those operators are used in many problems, an implementation must be efficient. </dd>
 <dt>Page <a class="el" href="mix_transport.html">COR-0: Mixed formulation and integration on skeleton (h-adaptivity)</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000050"></a>Make this documentation better</p>
+<dd><p class="startdd"><a class="anchor" id="_todo000045"></a>Should be implemented and tested problem from this article <b>[demkowicz2011analysis]</b>. In this paper analytical solution is available, allowing to tested efficiency of evaluated error. You are very welcome to improve that documentation.</p>
 <p class="interdd"><a class="anchor" id="_todo000051"></a>hp-adaptive</p>
-<p class="interdd"><a class="anchor" id="_todo000052"></a>Problem tailored preconditioner for Krylov solver</p>
-<p class="interdd"><a class="anchor" id="_todo000053"></a>Convergence study, estimation of constants</p>
-<p class="interdd"><a class="anchor" id="_todo000045"></a>Should be implemented and tested problem from this article <b>[demkowicz2011analysis]</b>. In this paper analytical solution is available, allowing to tested efficiency of evaluated error. You are very welcome to improve that documentation.</p>
+<p class="interdd"><a class="anchor" id="_todo000050"></a>Make this documentation better</p>
 <p class="interdd"><a class="anchor" id="_todo000049"></a>A useful add-on is to construct preconditioner, which will take into account hierarchy created during hp-adaptivity, this involves some work, again we are happy to help.</p>
 <p class="interdd"><a class="anchor" id="_todo000048"></a>Based on this work, you can write a good journal article about the efficiency of error estimator, taking into account two above remarks. If you are interested, we are happy to help. Extension to hp-adaptivity is straightforward.</p>
-<p class="interdd"><a class="anchor" id="_todo000046"></a>You can find two other papers, <b>[carstensen1997posteriori]</b> and <b>[ainsworth2007posteriori]</b> which have efficient error estimator working in the natural norm. Those error estimators are not very different from an implementation point of view and could be easily added here.</p>
-<p class="enddd"><a class="anchor" id="_todo000047"></a>To do numerical experiment testing error bound, we can solve the problem from <b>[demkowicz2011analysis]</b> where analytical solutions are given. That will involve modification how boundary conditions are applied. Again, this is easy to implement, so if you are willing to add this to this documentation, it is very welcome. </p>
+<p class="interdd"><a class="anchor" id="_todo000047"></a>To do numerical experiment testing error bound, we can solve the problem from <b>[demkowicz2011analysis]</b> where analytical solutions are given. That will involve modification how boundary conditions are applied. Again, this is easy to implement, so if you are willing to add this to this documentation, it is very welcome.</p>
+<p class="interdd"><a class="anchor" id="_todo000052"></a>Problem tailored preconditioner for Krylov solver</p>
+<p class="interdd"><a class="anchor" id="_todo000053"></a>Convergence study, estimation of constants</p>
+<p class="enddd"><a class="anchor" id="_todo000046"></a>You can find two other papers, <b>[carstensen1997posteriori]</b> and <b>[ainsworth2007posteriori]</b> which have efficient error estimator working in the natural norm. Those error estimators are not very different from an implementation point of view and could be easily added here. </p>
 </dd>
 <dt>Page <a class="el" href="mix_us_flow.html">COR-1: Time dependent nonlinear mix formulation (unsaturated flow)</a>  </dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000054"></a>Add example with hp-adaptivity </p>
@@ -166,13 +170,15 @@ $(function() {
 <dt>File <a class="el" href="EdgePolynomialBase_8hpp.html">EdgePolynomialBase.hpp</a>  </dt>
 <dd><a class="anchor" id="_todo000004"></a>L2 base on edge </dd>
 <dt>File <a class="el" href="EshelbianPlasticity_8hpp.html">EshelbianPlasticity.hpp</a>  </dt>
-<dd><a class="anchor" id="_todo000062"></a>Implementation of plasticity  </dd>
+<dd><a class="anchor" id="_todo000070"></a>Implementation of plasticity  </dd>
 <dt>File <a class="el" href="FatPrismPolynomialBase_8cpp.html">FatPrismPolynomialBase.cpp</a>  </dt>
 <dd><a class="anchor" id="_todo000005"></a>Prism element can be integrated exploiting tonsorial product. Current implementation do not take that opportunity. That can be viewed as a bug.  </dd>
 <dt>File <a class="el" href="FEMultiIndices_8hpp.html">FEMultiIndices.hpp</a>  </dt>
 <dd><a class="anchor" id="_todo000043"></a>Add proc into feUId to reduce number of keys is multi-index  </dd>
 <dt>File <a class="el" href="FluidLevel_8hpp.html">FluidLevel.hpp</a>  </dt>
 <dd><a class="anchor" id="_todo000059"></a>Implement time depended fluid level. </dd>
+<dt>Struct <a class="el" href="structFluidPressure.html">FluidPressure</a>  </dt>
+<dd><a class="anchor" id="_todo000062"></a>Implementation for large displacements </dd>
 <dt>Page <a class="el" href="group__ftensor.html">FTensor library</a>  </dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000021"></a>Some operator for tensor4 and Tensor4_ddg are not tested for varied number of dimensions. For example first two indices has dimension 2 and last two 4.</p>
 <p class="interdd"><a class="anchor" id="_todo000024"></a>More documentation and examples. Documentation of functions and very limited at this point</p>
@@ -207,10 +213,10 @@ the Poisson equation." SIAM Journal on Numerical Analysis 49.5 (2011): 1788-1809
 <dt>Member <a class="el" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#ad007153651bc0e08e3ccc58136864e8a">MoFEM::CoreTmp&lt; 0 &gt;::add_field</a>  (const std::string name, const FieldSpace space, const FieldApproximationBase base, const FieldCoefficientsNumber nb_coefficients, const TagType tag_type=MB_TAG_SPARSE, const enum MoFEMTypes bh=MF_EXCL, int verb=DEFAULT_VERBOSITY)</dt>
 <dd><a class="anchor" id="_todo000029"></a>MB_TAG_DENSE will not work properly in general case. It is need to separate field tags for each entity separately. That will allow for HO orders but homogenous approx. order on each entity. Need some discussion what is optimal solution. MB_TAG_SPARSE gives flexibility, but it not memory efficient. MB_TAG_DENSE uses memory more efficient and in principle allow for better efficiency if properly utilized. </dd>
 <dt>Struct <a class="el" href="structMoFEM_1_1CreateRowCompressedADJMatrix.html">MoFEM::CreateRowCompressedADJMatrix</a>  </dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000034"></a>It is obsolete implementation, code should be moved to interface <a class="el" href="structMoFEM_1_1MatrixManager.html" title="Matrix manager is used to build and partition problems.">MatrixManager</a>.</p>
-<p class="interdd"><a class="anchor" id="_todo000035"></a>While matrix is created is assumed that all entities on element are adjacent to each other, in some cases, this is created denser matrices than it should be. Some kind of filtering can be added.</p>
+<dd><p class="startdd"><a class="anchor" id="_todo000037"></a>Some efficiency improvement are possible</p>
 <p class="interdd"><a class="anchor" id="_todo000036"></a>Creation of the block matrices</p>
-<p class="enddd"><a class="anchor" id="_todo000037"></a>Some efficiency improvement are possible </p>
+<p class="interdd"><a class="anchor" id="_todo000035"></a>While matrix is created is assumed that all entities on element are adjacent to each other, in some cases, this is created denser matrices than it should be. Some kind of filtering can be added.</p>
+<p class="enddd"><a class="anchor" id="_todo000034"></a>It is obsolete implementation, code should be moved to interface <a class="el" href="structMoFEM_1_1MatrixManager.html" title="Matrix manager is used to build and partition problems.">MatrixManager</a>. </p>
 </dd>
 <dt>Member <a class="el" href="structMoFEM_1_1DeprecatedCoreInterface.html#a99746b844704e78167482954bb5e52b0">MoFEM::DeprecatedCoreInterface::seed_ref_level</a>  (const Range &amp;ents, const BitRefLevel &amp;bit, const bool only_tets=true, int verb=-1)</dt>
 <dd><a class="anchor" id="_todo000032"></a>Should be outsourced to separate interface, i.e. BitLevelManager  </dd>
@@ -252,10 +258,35 @@ the Poisson equation." SIAM Journal on Numerical Analysis 49.5 (2011): 1788-1809
 <dd><a class="anchor" id="_todo000020"></a>That this is not general, e.g., for prism or hex, opoosite node is not unique. </dd>
 <dt>Member <a class="el" href="structMoFEM_1_1VolumeElementForcesAndSourcesCoreOnSide.html#a0d3c61de1e722f6e60b4881616d3d1a4">MoFEM::VolumeElementForcesAndSourcesCoreOnSide::getTetConnMap</a>  () const</dt>
 <dd><a class="anchor" id="_todo000019"></a>That this is not general, e.g., for prism or hex, size of fixed array is wrong. </dd>
+<dt>Struct <a class="el" href="structNeumannForcesSurfaceComplexForLazy.html">NeumannForcesSurfaceComplexForLazy</a>  </dt>
+<dd><a class="anchor" id="_todo000065"></a>This is old implementation, need to be reimplemented, using auto-differentiation. It is well tested and works. well. </dd>
+<dt>Struct <a class="el" href="structPostProcCommonOnRefMesh_1_1OpGetFieldGradientValues.html">PostProcCommonOnRefMesh::OpGetFieldGradientValues</a>  </dt>
+<dd><a class="anchor" id="_todo000064"></a>Implementation for Hdiv and Hcurl to be implemented </dd>
+<dt>Struct <a class="el" href="structPostProcCommonOnRefMesh_1_1OpGetFieldValues.html">PostProcCommonOnRefMesh::OpGetFieldValues</a>  </dt>
+<dd><a class="anchor" id="_todo000063"></a>Implamentation of setting values to fieldMap for Hcurl and Hdiv not implemented </dd>
 <dt>File <a class="el" href="PrismInterface_8cpp.html">PrismInterface.cpp</a>  </dt>
 <dd><a class="anchor" id="_todo000038"></a>FIXME this is not so good implementation </dd>
 <dt>File <a class="el" href="QuadPolynomialBase_8hpp.html">QuadPolynomialBase.hpp</a>  </dt>
 <dd><a class="anchor" id="_todo000006"></a>Quad element can be integrated exploiting tonsorial product. Current implementation do not take that opportunity. That can be viewed as a bug.  </dd>
+<dt>Page <a class="el" href="sope_film.html">Soap film spanned on wire</a>  </dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000071"></a>Make this documentation better </p>
+<p class="interdd"></p>
+<p class="interdd">Error estimator for L2, H1 and H1 semi-norm </p>
+<p class="interdd"></p>
+<p class="interdd">Mesh hp-adaptivity (All tools are there, need be used in this example). </p>
+<p class="interdd"></p>
+<p class="interdd">Generalization to arbitrary wire curve in 3d space. </p>
+<p class="interdd"></p>
+<p class="interdd">Write documentation about mesh bit levels and mesh refining. </p>
+<p class="interdd"></p>
+<p class="interdd">Convergence analysis h- vs. p- refinement. </p>
+<p class="interdd"></p>
+<p class="enddd">Adaptive time stepping </p>
+</dd>
+<dt>File <a class="el" href="thermal__steady_8cpp.html">thermal_steady.cpp</a>  </dt>
+<dd><a class="anchor" id="_todo000066"></a>Make it work in distributed meshes with multigird solver. At the moment it is not working efficient as can.  </dd>
+<dt>File <a class="el" href="thermal__unsteady_8cpp.html">thermal_unsteady.cpp</a>  </dt>
+<dd><a class="anchor" id="_todo000067"></a>Make it work in distributed meshes with multigird solver. At the moment it is not working efficient as can.  </dd>
 <dt>Page <a class="el" href="a_guide_to_writing_documentation.html">Writing documentation</a>  </dt>
 <dd><a class="anchor" id="_todo000001"></a>Each module can copy figures to a directory with the unique name for USER_MODULE_figures.</dd>
 </dl>

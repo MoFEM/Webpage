@@ -193,7 +193,7 @@ $(function() {
 <div class="line">  <span class="keywordflow">return</span> std::make_tuple(block_name, v_analytical_expr);</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a8" name="a8"></a><a class="code hl_function" href="structOpCalculateEshelbyStress.html#a545e0ced9123a5d44222b5c93ca22549">OpCalculateEshelbyStress::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a8" name="a8"></a><a class="code hl_function" href="structOpCalculateEshelbyStress.html#a3973777d822ad00105354038c01f3b2f">OpCalculateEshelbyStress::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                                                <a id="_a9" name="_a9"></a><a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a id="a10" name="a10"></a><a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">  <a id="a11" name="a11"></a><a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a id="a12" name="a12"></a><a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, <a id="a13" name="a13"></a><a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>);</div>
@@ -1323,19 +1323,19 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;L&#39;</span>, <a class="code hl_variable" href="namespaceEshelbianPlasticity.html#abfe57e2b001e7aa96f031c6955f1021e">size_symm</a>&gt; L;</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">double</span> time = OpAssembleVolume::getFEMethod()-&gt;ts_t;</div>
+<div class="line">  <span class="keywordtype">double</span> time = <a id="a73" name="a73"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">OpAssembleVolume::getFEMethod</a>()-&gt;<a id="a74" name="a74"></a><a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#a5eb15bd118b06018110428672a4821c7">ts_t</a>;</div>
 <div class="line">  <span class="keywordflow">if</span> (<a class="code hl_variable" href="structEshelbianCore.html#a5d5c5ee0702329b9063b5e2c1ab13979">EshelbianCore::dynamicRelaxation</a>) {</div>
 <div class="line">    time = <a class="code hl_variable" href="structEshelbianCore.html#a211ebd365f858409286dbe3a973daead">EshelbianCore::dynamicTime</a>;</div>
 <div class="line">  }</div>
 <div class="line">  <span class="comment">// get entity of tet</span></div>
-<div class="line">  EntityHandle fe_ent = OpAssembleVolume::getFEEntityHandle();</div>
+<div class="line">  <a id="_a75" name="_a75"></a><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = <a id="a76" name="a76"></a><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a13bff815dc945f24e23f12156fe901b7">OpAssembleVolume::getFEEntityHandle</a>();</div>
 <div class="line">  <span class="comment">// iterate over all block data</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ext_strain_block : (*externalStrainVecPtr)) {</div>
 <div class="line">    <span class="comment">// check if finite element entity is part of the EXTERNALSTRAIN block</span></div>
 <div class="line">    <span class="keywordflow">if</span> (ext_strain_block.ents.find(fe_ent) != ext_strain_block.ents.end()) {</div>
 <div class="line"> </div>
-<div class="line">      <span class="keywordtype">double</span> <a id="a73" name="a73"></a><a class="code hl_variable" href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a> = 1;</div>
+<div class="line">      <span class="keywordtype">double</span> <a id="a77" name="a77"></a><a class="code hl_variable" href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a> = 1;</div>
 <div class="line">      <span class="keywordflow">if</span> (scalingMethodsMap.find(ext_strain_block.blockName) != scalingMethodsMap.end()) {</div>
 <div class="line">        <a class="code hl_variable" href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a> *= scalingMethodsMap.at(ext_strain_block.blockName)-&gt;getScale(time);</div>
 <div class="line">      } <span class="keywordflow">else</span> {</div>
@@ -1401,7 +1401,7 @@ $(function() {
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a74" name="a74"></a><a class="code hl_function" href="structOpGetInternalStress.html#a61b0f793cc6a0c2c339b2f7d46572ef0">OpGetInternalStress&lt;0&gt;::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a78" name="a78"></a><a class="code hl_function" href="structOpGetInternalStress.html#a61b0f793cc6a0c2c339b2f7d46572ef0">OpGetInternalStress&lt;0&gt;::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                                              <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -1456,7 +1456,7 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> fe_ent = getNumeredEntFiniteElementPtr()-&gt;getEnt();</div>
-<div class="line">  <span class="keyword">const</span> EntityHandle *vert_conn;</div>
+<div class="line">  <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *vert_conn;</div>
 <div class="line">  <span class="keywordtype">int</span> vert_num;</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> getPtrFE() -&gt; mField.get_moab().get_connectivity(fe_ent, vert_conn,</div>
 <div class="line">                                                          vert_num, <span class="keyword">true</span>);</div>
@@ -1470,7 +1470,7 @@ $(function() {
 <div class="line">      getFTensor1FromMat&lt;9&gt;(dataAtPts-&gt;internalStressAtPts);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> t_shape_n = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a1effe6c5260104eb70a930d993942675">getFTensor0N</a>();</div>
-<div class="line">  <span class="keywordtype">int</span> nb_shape_fn = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6803bfc79169740e108bd5e2666de739">getN</a>(<a id="a75" name="a75"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a8cce63994b9a5ff42c90de590f0bb5c5">NOBASE</a>).size2();</div>
+<div class="line">  <span class="keywordtype">int</span> nb_shape_fn = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6803bfc79169740e108bd5e2666de739">getN</a>(<a id="a79" name="a79"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a8cce63994b9a5ff42c90de590f0bb5c5">NOBASE</a>).size2();</div>
 <div class="line">  <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;L&#39;</span>, 9&gt; L;</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gg = 0; gg != nb_integration_pts; ++gg) {</div>
 <div class="line">    <span class="keyword">auto</span> t_vert_data = getFTensor1FromArray&lt;9, 9&gt;(vert_data);</div>
@@ -1486,7 +1486,7 @@ $(function() {
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a76" name="a76"></a><a class="code hl_function" href="structOpSpatialPhysicalInternalStress.html#a3f2245e2c63b3b0602df76c0f3034138">OpSpatialPhysicalInternalStress&lt;false&gt;::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a80" name="a80"></a><a class="code hl_function" href="structOpSpatialPhysicalInternalStress.html#a3f2245e2c63b3b0602df76c0f3034138">OpSpatialPhysicalInternalStress&lt;false&gt;::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">int</span> nb_dofs = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
@@ -1556,7 +1556,7 @@ $(function() {
 <div class="line">  <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;L&#39;</span>, <a class="code hl_variable" href="namespaceEshelbianPlasticity.html#abfe57e2b001e7aa96f031c6955f1021e">size_symm</a>&gt; L;</div>
 <div class="line">  <a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;M&#39;</span>, <a class="code hl_variable" href="namespaceEshelbianPlasticity.html#abfe57e2b001e7aa96f031c6955f1021e">size_symm</a>&gt; M;</div>
 <div class="line">  <a class="code hl_class" href="classFTensor_1_1Tensor2.html">FTensor::Tensor2&lt;double, size_symm, size_symm&gt;</a> t_L;</div>
-<div class="line">  t_L = <a id="a77" name="a77"></a><a class="code hl_function" href="namespaceEshelbianPlasticity.html#ae05bb4c8aaeec65cc110c3853b4a789e">voigt_to_symm</a>();</div>
+<div class="line">  t_L = <a id="a81" name="a81"></a><a class="code hl_function" href="namespaceEshelbianPlasticity.html#ae05bb4c8aaeec65cc110c3853b4a789e">voigt_to_symm</a>();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">int</span> nb_base_functions = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6803bfc79169740e108bd5e2666de739">getN</a>().size2();</div>
 <div class="line">  <span class="keyword">auto</span> t_row_base_fun = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a1effe6c5260104eb70a930d993942675">getFTensor0N</a>();</div>
@@ -1583,10 +1583,10 @@ $(function() {
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;AssemblyType A&gt;</div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a78" name="_a78"></a><a class="code hl_struct" href="structOpDispBcImpl.html">OpDispBcImpl&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a82" name="_a82"></a><a class="code hl_struct" href="structOpDispBcImpl.html">OpDispBcImpl&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">  <span class="comment">// get entity of face</span></div>
-<div class="line">  EntityHandle fe_ent = OP::getFEEntityHandle();</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = OP::getFEEntityHandle();</div>
 <div class="line">  <span class="comment">// iterate over all boundary data</span></div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bc : (*bcDispPtr)) {</div>
 <div class="line">    <span class="comment">// check if finite element entity is part of boundary condition</span></div>
@@ -1640,12 +1640,12 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a79" name="a79"></a><a class="code hl_function" href="structOpDispBc.html#a3da0a89eff326e4c12dfcb7bcf17af75">OpDispBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a83" name="a83"></a><a class="code hl_function" href="structOpDispBc.html#a3da0a89eff326e4c12dfcb7bcf17af75">OpDispBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <span class="keywordflow">return</span> OP::iNtegrate(data);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;AssemblyType A&gt;</div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a80" name="_a80"></a><a class="code hl_struct" href="structOpRotationBcImpl.html">OpRotationBcImpl&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a84" name="_a84"></a><a class="code hl_struct" href="structOpRotationBcImpl.html">OpRotationBcImpl&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(3, <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>);</div>
@@ -1658,7 +1658,7 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// get entity of face</span></div>
-<div class="line">  EntityHandle fe_ent = OP::getFEEntityHandle();</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = OP::getFEEntityHandle();</div>
 <div class="line">  <span class="comment">// interate over all boundary data</span></div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bc : (*bcRotPtr)) {</div>
 <div class="line">    <span class="comment">// check if finite element entity is part of boundary condition</span></div>
@@ -1702,12 +1702,12 @@ $(function() {
 <div class="line">          <span class="comment">// Use gemetric face normal as rotation axis</span></div>
 <div class="line">          t_omega(<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>) = OP::getFTensor1Normal()(<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>);</div>
 <div class="line">        }</div>
-<div class="line">        t_omega.<a id="a81" name="a81"></a><a class="code hl_function" href="classFTensor_1_1Tensor1.html#acd2e7c8da26f682eb6c6b1017f817c19">normalize</a>();</div>
+<div class="line">        t_omega.<a id="a85" name="a85"></a><a class="code hl_function" href="classFTensor_1_1Tensor1.html#acd2e7c8da26f682eb6c6b1017f817c19">normalize</a>();</div>
 <div class="line">        t_omega(<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>) *= theta;</div>
 <div class="line">        <span class="keywordflow">return</span> <a class="code hl_function" href="structLieGroups_1_1SO3.html#af80491b46de29b3959da57bb3bfce5b9">LieGroups::SO3::exp</a>(t_omega, <a class="code hl_variable" href="structEshelbianCore.html#a5246a7a72fbbc8943410a3de2b95647b">EshelbianCore::rotSelector</a> ==</div>
 <div class="line">                                                    <a class="code hl_enumvalue" href="namespaceEshelbianPlasticity.html#aad51dbcb3d4d470a0d589df584a43e17abda7fcbd4e5150d5a9cce58e690ea085">RotSelector::SMALL_ROT</a></div>
 <div class="line">                                                ? 0.</div>
-<div class="line">                                                : t_omega.<a id="a82" name="a82"></a><a class="code hl_function" href="classFTensor_1_1Tensor1.html#afebf8aa1d76c7b1f048efd271154adc6">l2</a>());</div>
+<div class="line">                                                : t_omega.<a id="a86" name="a86"></a><a class="code hl_function" href="classFTensor_1_1Tensor1.html#afebf8aa1d76c7b1f048efd271154adc6">l2</a>());</div>
 <div class="line">      };</div>
 <div class="line"> </div>
 <div class="line">      <span class="keyword">auto</span> t_R = get_rotation(get_rotation_angle());</div>
@@ -1738,12 +1738,12 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a83" name="a83"></a><a class="code hl_function" href="structOpRotationBc.html#abbae0a9b41925af4c2cfc14b9c0c9e0a">OpRotationBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a87" name="a87"></a><a class="code hl_function" href="structOpRotationBc.html#abbae0a9b41925af4c2cfc14b9c0c9e0a">OpRotationBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <span class="keywordflow">return</span> OP::iNtegrate(data);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;AssemblyType A&gt;</div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a84" name="_a84"></a><a class="code hl_struct" href="structOpNormalDispBcRhsImpl.html">OpNormalDispBcRhsImpl&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a88" name="_a88"></a><a class="code hl_struct" href="structOpNormalDispBcRhsImpl.html">OpNormalDispBcRhsImpl&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">double</span> time = OP::getFEMethod()-&gt;ts_t;</div>
@@ -1752,7 +1752,7 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// get entity of face</span></div>
-<div class="line">  EntityHandle fe_ent = OP::getFEEntityHandle();</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = OP::getFEEntityHandle();</div>
 <div class="line">  <span class="comment">// iterate over all boundary data</span></div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bc : (*bcDispPtr)) {</div>
 <div class="line">    <span class="comment">// check if finite element entity is part of boundary condition</span></div>
@@ -1824,7 +1824,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;AssemblyType A&gt;</div>
 <div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a></div>
-<div class="line"><a id="_a85" name="_a85"></a><a class="code hl_struct" href="structOpNormalDispBcLhsImpl__dU.html">OpNormalDispBcLhsImpl_dU&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a id="_a89" name="_a89"></a><a class="code hl_struct" href="structOpNormalDispBcLhsImpl__dU.html">OpNormalDispBcLhsImpl_dU&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                              <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -1840,7 +1840,7 @@ $(function() {
 <div class="line">  locMat.clear();</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// get entity of face</span></div>
-<div class="line">  EntityHandle fe_ent = OP::getFEEntityHandle();</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = OP::getFEEntityHandle();</div>
 <div class="line">  <span class="comment">// iterate over all boundary data</span></div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bc : (*bcDispPtr)) {</div>
 <div class="line">    <span class="comment">// check if finite element entity is part of boundary condition</span></div>
@@ -1912,7 +1912,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;AssemblyType A&gt;</div>
 <div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a></div>
-<div class="line"><a id="_a86" name="_a86"></a><a class="code hl_struct" href="structOpNormalDispBcLhsImpl__dP.html">OpNormalDispBcLhsImpl_dP&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a id="_a90" name="_a90"></a><a class="code hl_struct" href="structOpNormalDispBcLhsImpl__dP.html">OpNormalDispBcLhsImpl_dP&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                              <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -1928,7 +1928,7 @@ $(function() {
 <div class="line">  locMat.clear();</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// get entity of face</span></div>
-<div class="line">  EntityHandle fe_ent = OP::getFEEntityHandle();</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = OP::getFEEntityHandle();</div>
 <div class="line">  <span class="comment">// iterate over all boundary data</span></div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bc : (*bcDispPtr)) {</div>
 <div class="line">    <span class="comment">// check if finite element entity is part of boundary condition</span></div>
@@ -1999,22 +1999,22 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a87" name="a87"></a><a class="code hl_function" href="structOpNormalDispRhsBc.html#ac9beffe0eaa5704f2f47a0c9f61a5c51">OpNormalDispRhsBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a91" name="a91"></a><a class="code hl_function" href="structOpNormalDispRhsBc.html#ac9beffe0eaa5704f2f47a0c9f61a5c51">OpNormalDispRhsBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <span class="keywordflow">return</span> OP::iNtegrate(data);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a88" name="a88"></a><a class="code hl_function" href="structOpNormalDispLhsBc__dU.html#a1682c74266013f8abef87ce5d8aca6ef">OpNormalDispLhsBc_dU::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a92" name="a92"></a><a class="code hl_function" href="structOpNormalDispLhsBc__dU.html#a1682c74266013f8abef87ce5d8aca6ef">OpNormalDispLhsBc_dU::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                               <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <span class="keywordflow">return</span> OP::iNtegrate(row_data, col_data);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a89" name="a89"></a><a class="code hl_function" href="structOpNormalDispLhsBc__dP.html#aa36b958413e148d5a2876c307fbe9156">OpNormalDispLhsBc_dP::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a93" name="a93"></a><a class="code hl_function" href="structOpNormalDispLhsBc__dP.html#aa36b958413e148d5a2876c307fbe9156">OpNormalDispLhsBc_dP::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                               <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <span class="keywordflow">return</span> OP::iNtegrate(row_data, col_data);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;AssemblyType A&gt;</div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a90" name="_a90"></a><a class="code hl_struct" href="structOpAnalyticalDispBcImpl.html">OpAnalyticalDispBcImpl&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a94" name="_a94"></a><a class="code hl_struct" href="structOpAnalyticalDispBcImpl.html">OpAnalyticalDispBcImpl&lt;A, GAUSS&gt;::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">double</span> time = OP::getFEMethod()-&gt;ts_t;</div>
@@ -2023,7 +2023,7 @@ $(function() {
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// get entity of face</span></div>
-<div class="line">  EntityHandle fe_ent = OP::getFEEntityHandle();</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = OP::getFEEntityHandle();</div>
 <div class="line">  <span class="comment">// iterate over all boundary data</span></div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bc : (*bcDispPtr)) {</div>
 <div class="line">    <span class="comment">// check if finite element entity is part of boundary condition</span></div>
@@ -2073,16 +2073,16 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a91" name="a91"></a><a class="code hl_function" href="structOpAnalyticalDispBc.html#a0d4c32a25a575def2834e835ec35d3c4">OpAnalyticalDispBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a95" name="a95"></a><a class="code hl_function" href="structOpAnalyticalDispBc.html#a0d4c32a25a575def2834e835ec35d3c4">OpAnalyticalDispBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <span class="keywordflow">return</span> OP::iNtegrate(data);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a92" name="a92"></a><a class="code hl_function" href="structOpBrokenTractionBc.html#afb1452db65c8dbb8ce97a15ebbee618d">OpBrokenTractionBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a96" name="a96"></a><a class="code hl_function" href="structOpBrokenTractionBc.html#afb1452db65c8dbb8ce97a15ebbee618d">OpBrokenTractionBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(3, <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>);</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordtype">int</span> nb_dofs = data.<a id="a93" name="a93"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6fb60e6aba0a189316962e4e96bce5e4">getFieldData</a>().size();</div>
+<div class="line">  <span class="keywordtype">int</span> nb_dofs = data.<a id="a97" name="a97"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6fb60e6aba0a189316962e4e96bce5e4">getFieldData</a>().size();</div>
 <div class="line">  <span class="keywordtype">int</span> nb_integration_pts = getGaussPts().size2();</div>
 <div class="line">  <span class="keywordtype">int</span> nb_base_functions = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6803bfc79169740e108bd5e2666de739">getN</a>().size2();</div>
 <div class="line"> </div>
@@ -2130,7 +2130,7 @@ $(function() {
 <div class="line">  };</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// get entity of face</span></div>
-<div class="line">  EntityHandle fe_ent = getFEEntityHandle();</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = getFEEntityHandle();</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bc : *(bcData)) {</div>
 <div class="line">    <span class="keywordflow">if</span> (bc.faces.find(fe_ent) != bc.faces.end()) {</div>
 <div class="line"> </div>
@@ -2143,7 +2143,7 @@ $(function() {
 <div class="line">      <span class="keywordflow">if</span> (nb_dofs) {</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">if</span> (std::regex_match(bc.blockName, std::regex(<span class="stringliteral">&quot;.*COOK.*&quot;</span>))) {</div>
-<div class="line">          <span class="keyword">auto</span> calc_tau = [](double, <span class="keywordtype">double</span> y, double) {</div>
+<div class="line">          <span class="keyword">auto</span> calc_tau = [](<a id="_a98" name="_a98"></a><a class="code hl_class" href="classdouble.html">double</a>, <span class="keywordtype">double</span> y, <a class="code hl_class" href="classdouble.html">double</a>) {</div>
 <div class="line">            y -= 44;</div>
 <div class="line">            y /= (60 - 44);</div>
 <div class="line">            <span class="keywordflow">return</span> -y * (y - 1) / 0.25;</div>
@@ -2159,7 +2159,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a94" name="a94"></a><a class="code hl_function" href="structOpBrokenPressureBc.html#a9bf107f6047a6e70cfedbacf60b623bb">OpBrokenPressureBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a99" name="a99"></a><a class="code hl_function" href="structOpBrokenPressureBc.html#a9bf107f6047a6e70cfedbacf60b623bb">OpBrokenPressureBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(3, <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>);</div>
@@ -2217,7 +2217,7 @@ $(function() {
 <div class="line">  };</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// get entity of face</span></div>
-<div class="line">  EntityHandle fe_ent = getFEEntityHandle();</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = getFEEntityHandle();</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bc : *(bcData)) {</div>
 <div class="line">    <span class="keywordflow">if</span> (bc.faces.find(fe_ent) != bc.faces.end()) {</div>
 <div class="line"> </div>
@@ -2236,7 +2236,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a95" name="a95"></a><a class="code hl_function" href="structOpBrokenAnalyticalTractionBc.html#abbd8f97678a43ef724feea6959f8f6bd">OpBrokenAnalyticalTractionBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a100" name="a100"></a><a class="code hl_function" href="structOpBrokenAnalyticalTractionBc.html#abbd8f97678a43ef724feea6959f8f6bd">OpBrokenAnalyticalTractionBc::iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(3, <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>);</div>
@@ -2257,7 +2257,7 @@ $(function() {
 <div class="line"><span class="preprocessor">#endif </span><span class="comment">// NDEBUG</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// get entity of face</span></div>
-<div class="line">  EntityHandle fe_ent = getFEEntityHandle();</div>
+<div class="line">  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = getFEEntityHandle();</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bc : *(bcData)) {</div>
 <div class="line">    <span class="keywordflow">if</span> (bc.faces.find(fe_ent) != bc.faces.end()) {</div>
 <div class="line"> </div>
@@ -2297,13 +2297,13 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a96" name="a96"></a><a class="code hl_function" href="structOpSpatialEquilibrium__dw__dP.html#af5bacd7127d99e7f49dbcdac6d26e872">OpSpatialEquilibrium_dw_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a101" name="a101"></a><a class="code hl_function" href="structOpSpatialEquilibrium__dw__dP.html#af5bacd7127d99e7f49dbcdac6d26e872">OpSpatialEquilibrium_dw_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                     <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">  <span class="keywordtype">int</span> nb_integration_pts = row_data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6803bfc79169740e108bd5e2666de739">getN</a>().size1();</div>
 <div class="line">  <span class="keywordtype">int</span> row_nb_dofs = row_data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
 <div class="line">  <span class="keywordtype">int</span> col_nb_dofs = col_data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
-<div class="line">  <span class="keyword">auto</span> get_ftensor1 = [](<a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MatrixDouble</a> &amp;<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> r, <span class="keyword">const</span> <span class="keywordtype">int</span> <a id="a97" name="a97"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#a8fc6defe4e499b1b9b9c275689e44352">c</a>) {</div>
+<div class="line">  <span class="keyword">auto</span> get_ftensor1 = [](<a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MatrixDouble</a> &amp;<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>, <span class="keyword">const</span> <span class="keywordtype">int</span> r, <span class="keyword">const</span> <span class="keywordtype">int</span> <a id="a102" name="a102"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#a8fc6defe4e499b1b9b9c275689e44352">c</a>) {</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_class" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt;FTensor::PackPtr&lt;double *, 3&gt;</a>, 3&gt;(</div>
 <div class="line">        &amp;<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>(r + 0, <a class="code hl_variable" href="initial__diffusion_8cpp.html#a8fc6defe4e499b1b9b9c275689e44352">c</a> + 0), &amp;<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>(r + 1, <a class="code hl_variable" href="initial__diffusion_8cpp.html#a8fc6defe4e499b1b9b9c275689e44352">c</a> + 1), &amp;<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>(r + 2, <a class="code hl_variable" href="initial__diffusion_8cpp.html#a8fc6defe4e499b1b9b9c275689e44352">c</a> + 2));</div>
 <div class="line">  };</div>
@@ -2333,7 +2333,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a98" name="a98"></a><a class="code hl_function" href="structOpSpatialEquilibrium__dw__dw.html#a1857de95fe780b385f599b28c1b8ed50">OpSpatialEquilibrium_dw_dw::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a103" name="a103"></a><a class="code hl_function" href="structOpSpatialEquilibrium__dw__dw.html#a1857de95fe780b385f599b28c1b8ed50">OpSpatialEquilibrium_dw_dw::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                     <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -2392,7 +2392,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a99" name="a99"></a><a class="code hl_function" href="structOpSpatialPhysical__du__dP.html#a672bb43e445fc2455ae857a20165e512">OpSpatialPhysical_du_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a104" name="a104"></a><a class="code hl_function" href="structOpSpatialPhysical__du__dP.html#a672bb43e445fc2455ae857a20165e512">OpSpatialPhysical_du_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                  <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -2457,7 +2457,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a100" name="a100"></a><a class="code hl_function" href="structOpSpatialPhysical__du__dBubble.html#ae44da8ff22bedee46c28905897c9e9ee">OpSpatialPhysical_du_dBubble::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a105" name="a105"></a><a class="code hl_function" href="structOpSpatialPhysical__du__dBubble.html#ae44da8ff22bedee46c28905897c9e9ee">OpSpatialPhysical_du_dBubble::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                       <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -2508,7 +2508,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a101" name="a101"></a><a class="code hl_function" href="structOpSpatialPhysical__du__domega.html#a0477b79c748652ee83d9be848e31b2e4">OpSpatialPhysical_du_domega::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a106" name="a106"></a><a class="code hl_function" href="structOpSpatialPhysical__du__domega.html#a0477b79c748652ee83d9be848e31b2e4">OpSpatialPhysical_du_domega::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                      <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -2576,7 +2576,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a102" name="a102"></a><a class="code hl_function" href="structOpSpatialRotation__domega__du.html#aea4c0c6e557a8868b6142dc1086a0fed">OpSpatialRotation_domega_du::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a107" name="a107"></a><a class="code hl_function" href="structOpSpatialRotation__domega__du.html#aea4c0c6e557a8868b6142dc1086a0fed">OpSpatialRotation_domega_du::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                      <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">  <span class="keywordtype">int</span> nb_integration_pts = getGaussPts().size2();</div>
@@ -2630,7 +2630,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a103" name="a103"></a><a class="code hl_function" href="structOpSpatialRotation__domega__dP.html#abc0278bb178b409ab264df57d5d7ebd2">OpSpatialRotation_domega_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a108" name="a108"></a><a class="code hl_function" href="structOpSpatialRotation__domega__dP.html#abc0278bb178b409ab264df57d5d7ebd2">OpSpatialRotation_domega_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                      <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -2688,7 +2688,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a104" name="a104"></a><a class="code hl_function" href="structOpSpatialRotation__domega__dBubble.html#a0eee00e7ce3aa0aea59bf470cd251cd5">OpSpatialRotation_domega_dBubble::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a109" name="a109"></a><a class="code hl_function" href="structOpSpatialRotation__domega__dBubble.html#a0eee00e7ce3aa0aea59bf470cd251cd5">OpSpatialRotation_domega_dBubble::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                           <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">  <span class="keywordtype">int</span> nb_integration_pts = getGaussPts().size2();</div>
@@ -2736,7 +2736,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a105" name="a105"></a><a class="code hl_function" href="structOpSpatialRotation__domega__domega.html#ad436fbf2e91edb9883a50059fbfe4c78">OpSpatialRotation_domega_domega::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a110" name="a110"></a><a class="code hl_function" href="structOpSpatialRotation__domega__domega.html#ad436fbf2e91edb9883a50059fbfe4c78">OpSpatialRotation_domega_domega::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                          <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">  <span class="keywordtype">int</span> nb_integration_pts = getGaussPts().size2();</div>
@@ -2799,9 +2799,9 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a106" name="a106"></a><a class="code hl_function" href="structOpSpatialConsistency__dP__dP.html#a54a9b6a760a721e53459c7804aa1b5af">OpSpatialConsistency_dP_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a111" name="a111"></a><a class="code hl_function" href="structOpSpatialConsistency__dP__dP.html#a54a9b6a760a721e53459c7804aa1b5af">OpSpatialConsistency_dP_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                     <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
-<div class="line">  <a id="a107" name="a107"></a><a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
+<div class="line">  <a id="a112" name="a112"></a><a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line">  <span class="keywordflow">if</span> (dataAtPts-&gt;matInvD.size1() == <a class="code hl_variable" href="namespaceEshelbianPlasticity.html#abfe57e2b001e7aa96f031c6955f1021e">size_symm</a> &amp;&amp;</div>
 <div class="line">      dataAtPts-&gt;matInvD.size2() == <a class="code hl_variable" href="namespaceEshelbianPlasticity.html#abfe57e2b001e7aa96f031c6955f1021e">size_symm</a>) {</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(integrateImpl&lt;0&gt;(row_data, col_data));</div>
@@ -2812,7 +2812,7 @@ $(function() {
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> S&gt;</div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a108" name="a108"></a><a class="code hl_function" href="structOpSpatialConsistency__dP__dP.html#a5a9065c35eb9d2698bedecc94078171b">OpSpatialConsistency_dP_dP::integrateImpl</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a113" name="a113"></a><a class="code hl_function" href="structOpSpatialConsistency__dP__dP.html#a5a9065c35eb9d2698bedecc94078171b">OpSpatialConsistency_dP_dP::integrateImpl</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                         <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -2871,7 +2871,7 @@ $(function() {
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a></div>
-<div class="line"><a id="a109" name="a109"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__dBubble.html#a84246d4bc0dee344183ca0a8d0591dfa">OpSpatialConsistency_dBubble_dBubble::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a id="a114" name="a114"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__dBubble.html#a84246d4bc0dee344183ca0a8d0591dfa">OpSpatialConsistency_dBubble_dBubble::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line">  <span class="keywordflow">if</span> (dataAtPts-&gt;matInvD.size1() == <a class="code hl_variable" href="namespaceEshelbianPlasticity.html#abfe57e2b001e7aa96f031c6955f1021e">size_symm</a> &amp;&amp;</div>
@@ -2885,7 +2885,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> S&gt;</div>
 <div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a></div>
-<div class="line"><a id="a110" name="a110"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__dBubble.html#af0ff69cf3b96c4c12d91745009b4d3b9">OpSpatialConsistency_dBubble_dBubble::integrateImpl</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a id="a115" name="a115"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__dBubble.html#af0ff69cf3b96c4c12d91745009b4d3b9">OpSpatialConsistency_dBubble_dBubble::integrateImpl</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                    <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -2929,7 +2929,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a111" name="a111"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__dP.html#a8c48a2d80f17324440f7bfa29534d387">OpSpatialConsistency_dBubble_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a116" name="a116"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__dP.html#a8c48a2d80f17324440f7bfa29534d387">OpSpatialConsistency_dBubble_dP::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                          <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line">  <span class="keywordflow">if</span> (dataAtPts-&gt;matInvD.size1() == <a class="code hl_variable" href="namespaceEshelbianPlasticity.html#abfe57e2b001e7aa96f031c6955f1021e">size_symm</a> &amp;&amp;</div>
@@ -2943,7 +2943,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="keyword">template</span> &lt;<span class="keywordtype">int</span> S&gt;</div>
 <div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a></div>
-<div class="line"><a id="a112" name="a112"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__dP.html#a586d0edc44464c45edca93a36100e3bb">OpSpatialConsistency_dBubble_dP::integrateImpl</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a id="a117" name="a117"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__dP.html#a586d0edc44464c45edca93a36100e3bb">OpSpatialConsistency_dBubble_dP::integrateImpl</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                               <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -2999,7 +2999,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a113" name="a113"></a><a class="code hl_function" href="structOpSpatialConsistency__dP__domega.html#a0424bbac409a0e40e53c75b8bcfee88f">OpSpatialConsistency_dP_domega::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a118" name="a118"></a><a class="code hl_function" href="structOpSpatialConsistency__dP__domega.html#a0424bbac409a0e40e53c75b8bcfee88f">OpSpatialConsistency_dP_domega::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                                         <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -3063,7 +3063,7 @@ $(function() {
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a></div>
-<div class="line"><a id="a114" name="a114"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__domega.html#a9259622c6a849904be9aa6dfebac930b">OpSpatialConsistency_dBubble_domega::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
+<div class="line"><a id="a119" name="a119"></a><a class="code hl_function" href="structOpSpatialConsistency__dBubble__domega.html#a9259622c6a849904be9aa6dfebac930b">OpSpatialConsistency_dBubble_domega::integrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;row_data,</div>
 <div class="line">                                               <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;col_data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -3120,7 +3120,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a115" name="a115"></a><a class="code hl_function" href="structOpPostProcDataStructure.html#aced7bd56020ea07879e1364632562af1">OpPostProcDataStructure::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a120" name="a120"></a><a class="code hl_function" href="structOpPostProcDataStructure.html#aced7bd56020ea07879e1364632562af1">OpPostProcDataStructure::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                                               <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -3130,7 +3130,7 @@ $(function() {
 <div class="line">  <span class="keyword">auto</span> get_tag = [&amp;](<span class="keyword">auto</span> name) {</div>
 <div class="line">    <span class="keyword">auto</span> &amp;mob = getPtrFE()-&gt;mField.get_moab();</div>
 <div class="line">    Tag tag;</div>
-<div class="line">    <a id="a116" name="a116"></a><a class="code hl_define" href="definitions_8h.html#a793899f524a281eb88e3ff2b01ce6acb">CHK_MOAB_THROW</a>(mob.tag_get_handle(name, tag), <span class="stringliteral">&quot;get tag&quot;</span>);</div>
+<div class="line">    <a id="a121" name="a121"></a><a class="code hl_define" href="definitions_8h.html#a793899f524a281eb88e3ff2b01ce6acb">CHK_MOAB_THROW</a>(mob.tag_get_handle(name, tag), <span class="stringliteral">&quot;get tag&quot;</span>);</div>
 <div class="line">    <span class="keywordflow">return</span> tag;</div>
 <div class="line">  };</div>
 <div class="line"> </div>
@@ -3215,7 +3215,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="comment">// tensors</span></div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#ac1d820a203fd9a7f34f3a3257b2d38b7">MatrixDouble3by3</a> <a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>(3, 3);</div>
+<div class="line">  <a id="_a122" name="_a122"></a><a class="code hl_class" href="classMatrixBoundedArray_3_01double_00_019_01_4.html">MatrixDouble3by3</a> <a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>(3, 3);</div>
 <div class="line">  <a class="code hl_class" href="classFTensor_1_1Tensor2.html">FTensor::Tensor2&lt;FTensor::PackPtr&lt;double *, 0&gt;</a>, 3, 3&gt; t_m(</div>
 <div class="line">      &amp;<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>(0, 0), &amp;<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>(0, 1), &amp;<a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>(0, 2),</div>
 <div class="line"> </div>
@@ -3257,7 +3257,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a117" name="_a117"></a><a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;2, 3, 3&gt;::add</a>(</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="_a123" name="_a123"></a><a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;2, 3, 3&gt;::add</a>(</div>
 <div class="line">    boost::ptr_deque&lt;ForcesAndSourcesCore::UserDataOperator&gt; &amp;pipeline,</div>
 <div class="line">    std::vector&lt;FieldSpace&gt; spaces, std::string geom_field_name,</div>
 <div class="line">    boost::shared_ptr&lt;Range&gt; crack_front_edges_ptr) {</div>
@@ -3267,18 +3267,18 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (scale_l2) {</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">struct </span><a id="_a118" name="_a118"></a><a class="code hl_struct" href="structMoFEM_1_1OpGetHONormalsOnFace.html">OpGetHONormalsOnFace</a></div>
+<div class="line">    <span class="keyword">struct </span><a id="_a124" name="_a124"></a><a class="code hl_struct" href="structMoFEM_1_1OpGetHONormalsOnFace.html">OpGetHONormalsOnFace</a></div>
 <div class="line">        : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1OpGetHONormalsOnFace.html">MoFEM::OpGetHONormalsOnFace</a>&lt;SPACE_DIM&gt; {</div>
 <div class="line"> </div>
-<div class="line">      <span class="keyword">using </span><a id="_a119" name="_a119"></a><a class="code hl_class" href="classOP.html">OP</a> = <a class="code hl_struct" href="structMoFEM_1_1OpGetHONormalsOnFace.html">MoFEM::OpGetHONormalsOnFace&lt;SPACE_DIM&gt;</a>;</div>
+<div class="line">      <span class="keyword">using </span><a id="_a125" name="_a125"></a><a class="code hl_class" href="classOP.html">OP</a> = <a class="code hl_struct" href="structMoFEM_1_1OpGetHONormalsOnFace.html">MoFEM::OpGetHONormalsOnFace&lt;SPACE_DIM&gt;</a>;</div>
 <div class="line"> </div>
-<div class="line">      <a class="code hl_struct" href="structMoFEM_1_1OpGetHONormalsOnFace.html">OpGetHONormalsOnFace</a>(std::string &amp;<a id="a120" name="a120"></a><a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>,</div>
+<div class="line">      <a class="code hl_struct" href="structMoFEM_1_1OpGetHONormalsOnFace.html">OpGetHONormalsOnFace</a>(std::string &amp;<a id="a126" name="a126"></a><a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>,</div>
 <div class="line">                           boost::shared_ptr&lt;Range&gt; edges_ptr)</div>
 <div class="line">          : <a class="code hl_class" href="classOP.html">OP</a>(<a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>), edgesPtr(edges_ptr) {}</div>
 <div class="line"> </div>
 <div class="line">      <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> doWork(<span class="keywordtype">int</span> side, EntityType type, <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line"> </div>
-<div class="line">        <span class="keyword">auto</span> ent = data.<a id="a121" name="a121"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a3f36c9f2b1859de1e45da63dbb8a4002">getFieldEntities</a>().size()</div>
+<div class="line">        <span class="keyword">auto</span> ent = data.<a id="a127" name="a127"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a3f36c9f2b1859de1e45da63dbb8a4002">getFieldEntities</a>().size()</div>
 <div class="line">                       ? data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a3f36c9f2b1859de1e45da63dbb8a4002">getFieldEntities</a>()[0]-&gt;getEnt()</div>
 <div class="line">                       : 0;</div>
 <div class="line"> </div>
@@ -3296,16 +3296,16 @@ $(function() {
 <div class="line">    <span class="keyword">auto</span> jac = boost::make_shared&lt;MatrixDouble&gt;();</div>
 <div class="line">    <span class="keyword">auto</span> det = boost::make_shared&lt;VectorDouble&gt;();</div>
 <div class="line">    pipeline.push_back(<span class="keyword">new</span> <a class="code hl_struct" href="structMoFEM_1_1OpGetHONormalsOnFace.html">OpGetHONormalsOnFace</a>(</div>
-<div class="line">        geom_field_name, <a id="a122" name="a122"></a><a class="code hl_variable" href="structEshelbianCore.html#abfb627d240daa3e65a6c556d486c3775">EshelbianCore::setSingularity</a></div>
+<div class="line">        geom_field_name, <a id="a128" name="a128"></a><a class="code hl_variable" href="structEshelbianCore.html#abfb627d240daa3e65a6c556d486c3775">EshelbianCore::setSingularity</a></div>
 <div class="line">                             ? crack_front_edges_ptr</div>
 <div class="line">                             : boost::make_shared&lt;Range&gt;()));</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="_a123" name="_a123"></a><a class="code hl_struct" href="structMoFEM_1_1OpCalculateHOJacForFaceImpl_3_013_01_4.html">OpCalculateHOJacForFaceEmbeddedIn3DSpace</a>(jac));</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="_a124" name="_a124"></a><a class="code hl_struct" href="structMoFEM_1_1OpInvertMatrix.html">OpInvertMatrix&lt;3&gt;</a>(jac, det, <span class="keyword">nullptr</span>));</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="_a125" name="_a125"></a><a class="code hl_struct" href="structMoFEM_1_1OpScaleBaseBySpaceInverseOfMeasure.html">OpScaleBaseBySpaceInverseOfMeasure</a>(</div>
-<div class="line">        <a id="a126" name="a126"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>, <a id="a127" name="a127"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, det));</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="_a129" name="_a129"></a><a class="code hl_struct" href="structMoFEM_1_1OpCalculateHOJacForFaceImpl_3_013_01_4.html">OpCalculateHOJacForFaceEmbeddedIn3DSpace</a>(jac));</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="_a130" name="_a130"></a><a class="code hl_struct" href="structMoFEM_1_1OpInvertMatrix.html">OpInvertMatrix&lt;3&gt;</a>(jac, det, <span class="keyword">nullptr</span>));</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="_a131" name="_a131"></a><a class="code hl_struct" href="structMoFEM_1_1OpScaleBaseBySpaceInverseOfMeasure.html">OpScaleBaseBySpaceInverseOfMeasure</a>(</div>
+<div class="line">        <a id="a132" name="a132"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>, <a id="a133" name="a133"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, det));</div>
 <div class="line">  }</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a128" name="_a128"></a><a class="code hl_struct" href="structMoFEM_1_1AddHOOps.html">MoFEM::AddHOOps&lt;2, 3, 3&gt;::add</a>(pipeline, spaces, geom_field_name);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="_a134" name="_a134"></a><a class="code hl_struct" href="structMoFEM_1_1AddHOOps.html">MoFEM::AddHOOps&lt;2, 3, 3&gt;::add</a>(pipeline, spaces, geom_field_name);</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
@@ -3319,7 +3319,7 @@ $(function() {
 <div class="line">  <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> scale_l2 = <span class="keyword">false</span>;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (scale_l2) {</div>
-<div class="line">    SETERRQ(PETSC_COMM_WORLD, <a id="a129" name="a129"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>,</div>
+<div class="line">    SETERRQ(PETSC_COMM_WORLD, <a id="a135" name="a135"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a>,</div>
 <div class="line">            <span class="stringliteral">&quot;Scale L2 Ainsworth Legendre base is not implemented&quot;</span>);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
@@ -3334,14 +3334,14 @@ $(function() {
 <div class="line">    boost::shared_ptr&lt;Range&gt; crack_front_edges_ptr) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordflow">if</span> (<a id="a130" name="a130"></a><a class="code hl_variable" href="structEshelbianCore.html#a2ab70613ca1c05f21fc1092acf0b0585">EshelbianCore::l2UserBaseScale</a>) {</div>
+<div class="line">  <span class="keywordflow">if</span> (<a id="a136" name="a136"></a><a class="code hl_variable" href="structEshelbianCore.html#a2ab70613ca1c05f21fc1092acf0b0585">EshelbianCore::l2UserBaseScale</a>) {</div>
 <div class="line">    <span class="keyword">auto</span> jac = boost::make_shared&lt;MatrixDouble&gt;();</div>
 <div class="line">    <span class="keyword">auto</span> det = boost::make_shared&lt;VectorDouble&gt;();</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="_a131" name="_a131"></a><a class="code hl_struct" href="structMoFEM_1_1OpCalculateVectorFieldGradient.html">OpCalculateVectorFieldGradient&lt;SPACE_DIM, SPACE_DIM&gt;</a>(</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="_a137" name="_a137"></a><a class="code hl_struct" href="structMoFEM_1_1OpCalculateVectorFieldGradient.html">OpCalculateVectorFieldGradient&lt;SPACE_DIM, SPACE_DIM&gt;</a>(</div>
 <div class="line">        geom_field_name, jac));</div>
 <div class="line">    pipeline.push_back(<span class="keyword">new</span> <a class="code hl_struct" href="structMoFEM_1_1OpInvertMatrix.html">OpInvertMatrix&lt;3&gt;</a>(jac, det, <span class="keyword">nullptr</span>));</div>
 <div class="line">    pipeline.push_back(</div>
-<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="structMoFEM_1_1OpScaleBaseBySpaceInverseOfMeasure.html">OpScaleBaseBySpaceInverseOfMeasure</a>(<a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>, <a id="a132" name="a132"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a82793ffff09a202573242f6ca519e530">USER_BASE</a>, det));</div>
+<div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="structMoFEM_1_1OpScaleBaseBySpaceInverseOfMeasure.html">OpScaleBaseBySpaceInverseOfMeasure</a>(<a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>, <a id="a138" name="a138"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a82793ffff09a202573242f6ca519e530">USER_BASE</a>, det));</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> scale_l2_ainsworth_legendre_base = <span class="keyword">false</span>;</div>
@@ -3392,14 +3392,14 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a133" name="a133"></a><a class="code hl_function" href="structOpFaceSideMaterialForce.html#a14437df76347aac05a081eb15d16ec5e">OpFaceSideMaterialForce::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a139" name="a139"></a><a class="code hl_function" href="structOpFaceSideMaterialForce.html#a14437df76347aac05a081eb15d16ec5e">OpFaceSideMaterialForce::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                                        <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>);</div>
 <div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a>);</div>
-<div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, <a id="a134" name="a134"></a><a class="code hl_variable" href="level__set_8cpp.html#a771a8d2443d7bec47aef196b5d23ade2">J</a>);</div>
-<div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, <a id="a135" name="a135"></a><a class="code hl_variable" href="operators__tests_8cpp.html#a99b759dd71581f497626034776727d3d">I</a>);</div>
+<div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, <a id="a140" name="a140"></a><a class="code hl_variable" href="level__set_8cpp.html#a771a8d2443d7bec47aef196b5d23ade2">J</a>);</div>
+<div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, <a id="a141" name="a141"></a><a class="code hl_variable" href="operators__tests_8cpp.html#a99b759dd71581f497626034776727d3d">I</a>);</div>
 <div class="line">  <a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, K);</div>
 <div class="line"> </div>
 <div class="line">  dataAtPts-&gt;faceMaterialForceAtPts.resize(3, getGaussPts().size2(), <span class="keyword">false</span>);</div>
@@ -3431,8 +3431,8 @@ $(function() {
 <div class="line">      getFTensor2SymmetricFromMat&lt;SPACE_DIM&gt;(dataAtPts-&gt;logStretchTensorAtPts);</div>
 <div class="line">  <span class="keyword">auto</span> sense = getSkeletonSense();</div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordflow">switch</span> (<a id="a136" name="a136"></a><a class="code hl_variable" href="structEshelbianCore.html#ae8387101883105f158f223898dcc0cb8">EshelbianCore::energyReleaseSelector</a>) {</div>
-<div class="line">  <span class="keywordflow">case</span> <a id="a137" name="a137"></a><a class="code hl_enumvalue" href="namespaceEshelbianPlasticity.html#ab5c6383b3ae44d5fa5c2ee36f94a1e9aaf0450ba88e72057e299572c0cb42a8c3">GRIFFITH_FORCE</a>:</div>
+<div class="line">  <span class="keywordflow">switch</span> (<a id="a142" name="a142"></a><a class="code hl_variable" href="structEshelbianCore.html#ae8387101883105f158f223898dcc0cb8">EshelbianCore::energyReleaseSelector</a>) {</div>
+<div class="line">  <span class="keywordflow">case</span> <a id="a143" name="a143"></a><a class="code hl_enumvalue" href="namespaceEshelbianPlasticity.html#ab5c6383b3ae44d5fa5c2ee36f94a1e9aaf0450ba88e72057e299572c0cb42a8c3">GRIFFITH_FORCE</a>:</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> gg = 0; gg != getGaussPts().size2(); ++gg) {</div>
 <div class="line">      <a class="code hl_class" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt;double, SPACE_DIM&gt;</a> t_N;</div>
 <div class="line">      t_N(<a class="code hl_variable" href="operators__tests_8cpp.html#a99b759dd71581f497626034776727d3d">I</a>) = t_normal(<a class="code hl_variable" href="operators__tests_8cpp.html#a99b759dd71581f497626034776727d3d">I</a>);</div>
@@ -3457,7 +3457,7 @@ $(function() {
 <div class="line">      ++t_p;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
-<div class="line">  <span class="keywordflow">case</span> <a id="a138" name="a138"></a><a class="code hl_enumvalue" href="namespaceEshelbianPlasticity.html#ab5c6383b3ae44d5fa5c2ee36f94a1e9aa8430cfd5241f35fe229c7eb6be7f2580">GRIFFITH_SKELETON</a>:</div>
+<div class="line">  <span class="keywordflow">case</span> <a id="a144" name="a144"></a><a class="code hl_enumvalue" href="namespaceEshelbianPlasticity.html#ab5c6383b3ae44d5fa5c2ee36f94a1e9aa8430cfd5241f35fe229c7eb6be7f2580">GRIFFITH_SKELETON</a>:</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> gg = 0; gg != getGaussPts().size2(); ++gg) {</div>
 <div class="line">      <a class="code hl_class" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt;double, SPACE_DIM&gt;</a> t_N;</div>
 <div class="line">      t_N(<a class="code hl_variable" href="operators__tests_8cpp.html#a99b759dd71581f497626034776727d3d">I</a>) = t_normal(<a class="code hl_variable" href="operators__tests_8cpp.html#a99b759dd71581f497626034776727d3d">I</a>);</div>
@@ -3499,7 +3499,7 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a139" name="a139"></a><a class="code hl_function" href="structOpFaceMaterialForce.html#a0de344c9e4bb8fd61667506c5b9a0c7a">OpFaceMaterialForce::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
+<div class="line"><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a145" name="a145"></a><a class="code hl_function" href="structOpFaceMaterialForce.html#a0de344c9e4bb8fd61667506c5b9a0c7a">OpFaceMaterialForce::doWork</a>(<span class="keywordtype">int</span> side, EntityType type,</div>
 <div class="line">                                           <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntData</a> &amp;data) {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
@@ -3574,7 +3574,7 @@ $(function() {
 <div class="line">    } <span class="keywordflow">catch</span> (bp::error_already_set <span class="keyword">const</span> &amp;) {</div>
 <div class="line">      <span class="comment">// print all other errors to stderr</span></div>
 <div class="line">      PyErr_Print();</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#a4a351b736710aa3cd92f1cc18c476e61">CHK_THROW_MESSAGE</a>(<a id="a140" name="a140"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaa4d3788e72b298f5fc901644e3f1ad95">MOFEM_OPERATION_UNSUCCESSFUL</a>, <span class="stringliteral">&quot;Python error&quot;</span>);</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#a4a351b736710aa3cd92f1cc18c476e61">CHK_THROW_MESSAGE</a>(<a id="a146" name="a146"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaa4d3788e72b298f5fc901644e3f1ad95">MOFEM_OPERATION_UNSUCCESSFUL</a>, <span class="stringliteral">&quot;Python error&quot;</span>);</div>
 <div class="line">    }</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">  }</div>
@@ -3701,6 +3701,7 @@ $(function() {
 <div class="ttc" id="aTemplates_8hpp_html_ab9006f32b4309540b5b2a3a4d9fa82ff"><div class="ttname"><a href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a></div><div class="ttdeci">#define FTENSOR_INDEX(DIM, I)</div><div class="ttdef"><b>Definition</b> <a href="Templates_8hpp_source.html#l02013">Templates.hpp:2013</a></div></div>
 <div class="ttc" id="aapprox__sphere_8cpp_html_a188caae18b60b66f9f44214c7e28ac1f"><div class="ttname"><a href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a></div><div class="ttdeci">constexpr double a</div><div class="ttdef"><b>Definition</b> <a href="approx__sphere_8cpp_source.html#l00030">approx_sphere.cpp:30</a></div></div>
 <div class="ttc" id="achild__and__parent_8cpp_html_a541ffc988889246e44b233b777828847"><div class="ttname"><a href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a></div><div class="ttdeci">constexpr int SPACE_DIM</div><div class="ttdef"><b>Definition</b> <a href="child__and__parent_8cpp_source.html#l00016">child_and_parent.cpp:16</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Kronecker__Delta__symmetric_html"><div class="ttname"><a href="classFTensor_1_1Kronecker__Delta__symmetric.html">FTensor::Kronecker_Delta_symmetric</a></div><div class="ttdoc">Kronecker Delta class symmetric.</div><div class="ttdef"><b>Definition</b> <a href="Kronecker__Delta_8hpp_source.html#l00049">Kronecker_Delta.hpp:49</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Kronecker__Delta_html"><div class="ttname"><a href="classFTensor_1_1Kronecker__Delta.html">FTensor::Kronecker_Delta</a></div><div class="ttdoc">Kronecker Delta class.</div><div class="ttdef"><b>Definition</b> <a href="Kronecker__Delta_8hpp_source.html#l00015">Kronecker_Delta.hpp:15</a></div></div>
@@ -3712,7 +3713,9 @@ $(function() {
 <div class="ttc" id="aclassFTensor_1_1Tensor2_html"><div class="ttname"><a href="classFTensor_1_1Tensor2.html">FTensor::Tensor2</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor2__value_8hpp_source.html#l00016">Tensor2_value.hpp:17</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor3_html"><div class="ttname"><a href="classFTensor_1_1Tensor3.html">FTensor::Tensor3</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor3__value_8hpp_source.html#l00012">Tensor3_value.hpp:13</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor4_html"><div class="ttname"><a href="classFTensor_1_1Tensor4.html">FTensor::Tensor4</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor4__value_8hpp_source.html#l00018">Tensor4_value.hpp:19</a></div></div>
+<div class="ttc" id="aclassMatrixBoundedArray_3_01double_00_019_01_4_html"><div class="ttname"><a href="classMatrixBoundedArray_3_01double_00_019_01_4.html">MatrixBoundedArray&lt; double, 9 &gt;</a></div></div>
 <div class="ttc" id="aclassOP_html"><div class="ttname"><a href="classOP.html">OP</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a82793ffff09a202573242f6ca519e530"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a82793ffff09a202573242f6ca519e530">USER_BASE</a></div><div class="ttdeci">@ USER_BASE</div><div class="ttdoc">user implemented approximation base</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00068">definitions.h:68</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a8cce63994b9a5ff42c90de590f0bb5c5"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a8cce63994b9a5ff42c90de590f0bb5c5">NOBASE</a></div><div class="ttdeci">@ NOBASE</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00059">definitions.h:59</a></div></div>
@@ -3761,7 +3764,6 @@ $(function() {
 <div class="ttc" id="anamespaceMoFEM_1_1Types_html_a2a1a0695ea7feb3a1e73a8707ef9f083"><div class="ttname"><a href="namespaceMoFEM_1_1Types.html#a2a1a0695ea7feb3a1e73a8707ef9f083">MoFEM::Types::VectorDouble3</a></div><div class="ttdeci">VectorBoundedArray&lt; double, 3 &gt; VectorDouble3</div><div class="ttdef"><b>Definition</b> <a href="Types_8hpp_source.html#l00092">Types.hpp:92</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_1_1Types_html_a71f706f784fbf6fd240806b70ed7d933"><div class="ttname"><a href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MoFEM::Types::MatrixDouble</a></div><div class="ttdeci">UBlasMatrix&lt; double &gt; MatrixDouble</div><div class="ttdef"><b>Definition</b> <a href="Types_8hpp_source.html#l00077">Types.hpp:77</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_1_1Types_html_aab2f28b2af54eb9f62cc60a53e1c6d3b"><div class="ttname"><a href="namespaceMoFEM_1_1Types.html#aab2f28b2af54eb9f62cc60a53e1c6d3b">MoFEM::Types::VectorDouble</a></div><div class="ttdeci">UBlasVector&lt; double &gt; VectorDouble</div><div class="ttdef"><b>Definition</b> <a href="Types_8hpp_source.html#l00068">Types.hpp:68</a></div></div>
-<div class="ttc" id="anamespaceMoFEM_1_1Types_html_ac1d820a203fd9a7f34f3a3257b2d38b7"><div class="ttname"><a href="namespaceMoFEM_1_1Types.html#ac1d820a203fd9a7f34f3a3257b2d38b7">MoFEM::Types::MatrixDouble3by3</a></div><div class="ttdeci">MatrixBoundedArray&lt; double, 9 &gt; MatrixDouble3by3</div><div class="ttdef"><b>Definition</b> <a href="Types_8hpp_source.html#l00105">Types.hpp:105</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_html"><div class="ttname"><a href="namespaceMoFEM.html">MoFEM</a></div><div class="ttdoc">implementation of Data Operators for Forces and Sources</div><div class="ttdef"><b>Definition</b> <a href="Common_8hpp_source.html#l00010">Common.hpp:10</a></div></div>
 <div class="ttc" id="aoperators__tests_8cpp_html_a99b759dd71581f497626034776727d3d"><div class="ttname"><a href="operators__tests_8cpp.html#a99b759dd71581f497626034776727d3d">I</a></div><div class="ttdeci">constexpr IntegrationType I</div><div class="ttdef"><b>Definition</b> <a href="operators__tests_8cpp_source.html#l00031">operators_tests.cpp:31</a></div></div>
 <div class="ttc" id="aplastic_8cpp_html_a80d402d10e8341004c0caf10133b80ab"><div class="ttname"><a href="plastic_8cpp.html#a80d402d10e8341004c0caf10133b80ab">scale</a></div><div class="ttdeci">double scale</div><div class="ttdef"><b>Definition</b> <a href="plastic_8cpp_source.html#l00123">plastic.cpp:123</a></div></div>
@@ -3795,19 +3797,22 @@ $(function() {
 <div class="ttc" id="astructMoFEM_1_1EntitiesFieldData_1_1EntData_html_a6fb60e6aba0a189316962e4e96bce5e4"><div class="ttname"><a href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a6fb60e6aba0a189316962e4e96bce5e4">MoFEM::EntitiesFieldData::EntData::getFieldData</a></div><div class="ttdeci">const VectorDouble &amp; getFieldData() const</div><div class="ttdoc">get dofs values</div><div class="ttdef"><b>Definition</b> <a href="EntitiesFieldData_8hpp_source.html#l01254">EntitiesFieldData.hpp:1254</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1EntitiesFieldData_1_1EntData_html_aa4170505c39e158e733761b8dbc629f1"><div class="ttname"><a href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#aa4170505c39e158e733761b8dbc629f1">MoFEM::EntitiesFieldData::EntData::getFTensor1N</a></div><div class="ttdeci">FTensor::Tensor1&lt; FTensor::PackPtr&lt; double *, Tensor_Dim &gt;, Tensor_Dim &gt; getFTensor1N(FieldApproximationBase base)</div><div class="ttdoc">Get base functions for Hdiv/Hcurl spaces.</div><div class="ttdef"><b>Definition</b> <a href="EntitiesFieldData_8cpp_source.html#l00640">EntitiesFieldData.cpp:640</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1EntitiesFieldData_1_1EntData_html_ae5f8ff17de93c9dbb9701dc0bf067b2e"><div class="ttname"><a href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">MoFEM::EntitiesFieldData::EntData::getIndices</a></div><div class="ttdeci">const VectorInt &amp; getIndices() const</div><div class="ttdoc">Get global indices of dofs on entity.</div><div class="ttdef"><b>Definition</b> <a href="EntitiesFieldData_8hpp_source.html#l01214">EntitiesFieldData.hpp:1214</a></div></div>
+<div class="ttc" id="astructMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator_html_a13bff815dc945f24e23f12156fe901b7"><div class="ttname"><a href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a13bff815dc945f24e23f12156fe901b7">MoFEM::ForcesAndSourcesCore::UserDataOperator::getFEEntityHandle</a></div><div class="ttdeci">EntityHandle getFEEntityHandle() const</div><div class="ttdoc">Return finite element entity handle.</div><div class="ttdef"><b>Definition</b> <a href="ForcesAndSourcesCore_8hpp_source.html#l01021">ForcesAndSourcesCore.hpp:1021</a></div></div>
+<div class="ttc" id="astructMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator_html_acfe45d604c4b50bc9a6ecb79102c931f"><div class="ttname"><a href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">MoFEM::ForcesAndSourcesCore::UserDataOperator::getFEMethod</a></div><div class="ttdeci">const FEMethod * getFEMethod() const</div><div class="ttdoc">Return raw pointer to Finite Element Method object.</div><div class="ttdef"><b>Definition</b> <a href="ForcesAndSourcesCore_8hpp_source.html#l01059">ForcesAndSourcesCore.hpp:1059</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1OpCalculateHOJacForFaceImpl_3_013_01_4_html"><div class="ttname"><a href="structMoFEM_1_1OpCalculateHOJacForFaceImpl_3_013_01_4.html">MoFEM::OpCalculateHOJacForFaceImpl&lt; 3 &gt;</a></div><div class="ttdef"><b>Definition</b> <a href="HODataOperators_8hpp_source.html#l00256">HODataOperators.hpp:256</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1OpCalculateVectorFieldGradient_html"><div class="ttname"><a href="structMoFEM_1_1OpCalculateVectorFieldGradient.html">MoFEM::OpCalculateVectorFieldGradient</a></div><div class="ttdoc">Get field gradients at integration pts for scalar field rank 0, i.e. vector field.</div><div class="ttdef"><b>Definition</b> <a href="UserDataOperators_8hpp_source.html#l01561">UserDataOperators.hpp:1563</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1OpGetHONormalsOnFace_html"><div class="ttname"><a href="structMoFEM_1_1OpGetHONormalsOnFace.html">MoFEM::OpGetHONormalsOnFace</a></div><div class="ttdoc">Calculate normals at Gauss points of triangle element.</div><div class="ttdef"><b>Definition</b> <a href="HODataOperators_8hpp_source.html#l00281">HODataOperators.hpp:282</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1OpInvertMatrix_html"><div class="ttname"><a href="structMoFEM_1_1OpInvertMatrix.html">MoFEM::OpInvertMatrix</a></div><div class="ttdef"><b>Definition</b> <a href="UserDataOperators_8hpp_source.html#l03700">UserDataOperators.hpp:3700</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1OpScaleBaseBySpaceInverseOfMeasure_html"><div class="ttname"><a href="structMoFEM_1_1OpScaleBaseBySpaceInverseOfMeasure.html">MoFEM::OpScaleBaseBySpaceInverseOfMeasure</a></div><div class="ttdoc">Scale base functions by inverses of measure of element.</div><div class="ttdef"><b>Definition</b> <a href="HODataOperators_8hpp_source.html#l00390">HODataOperators.hpp:391</a></div></div>
+<div class="ttc" id="astructMoFEM_1_1TSMethod_html_a5eb15bd118b06018110428672a4821c7"><div class="ttname"><a href="structMoFEM_1_1TSMethod.html#a5eb15bd118b06018110428672a4821c7">MoFEM::TSMethod::ts_t</a></div><div class="ttdeci">PetscReal ts_t</div><div class="ttdoc">time</div><div class="ttdef"><b>Definition</b> <a href="LoopMethods_8hpp_source.html#l00166">LoopMethods.hpp:166</a></div></div>
 <div class="ttc" id="astructOpAnalyticalDispBcImpl_html"><div class="ttname"><a href="structOpAnalyticalDispBcImpl.html">OpAnalyticalDispBcImpl</a></div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8hpp_source.html#l00540">EshelbianOperators.hpp:540</a></div></div>
 <div class="ttc" id="astructOpAnalyticalDispBc_html_a0d4c32a25a575def2834e835ec35d3c4"><div class="ttname"><a href="structOpAnalyticalDispBc.html#a0d4c32a25a575def2834e835ec35d3c4">OpAnalyticalDispBc::iNtegrate</a></div><div class="ttdeci">MoFEMErrorCode iNtegrate(EntData &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l01944">EshelbianOperators.cpp:1944</a></div></div>
 <div class="ttc" id="astructOpBrokenAnalyticalTractionBc_html_abbd8f97678a43ef724feea6959f8f6bd"><div class="ttname"><a href="structOpBrokenAnalyticalTractionBc.html#abbd8f97678a43ef724feea6959f8f6bd">OpBrokenAnalyticalTractionBc::iNtegrate</a></div><div class="ttdeci">MoFEMErrorCode iNtegrate(EntData &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l02107">EshelbianOperators.cpp:2107</a></div></div>
 <div class="ttc" id="astructOpBrokenPressureBc_html_a9bf107f6047a6e70cfedbacf60b623bb"><div class="ttname"><a href="structOpBrokenPressureBc.html#a9bf107f6047a6e70cfedbacf60b623bb">OpBrokenPressureBc::iNtegrate</a></div><div class="ttdeci">MoFEMErrorCode iNtegrate(EntData &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l02030">EshelbianOperators.cpp:2030</a></div></div>
 <div class="ttc" id="astructOpBrokenTractionBc_html_afb1452db65c8dbb8ce97a15ebbee618d"><div class="ttname"><a href="structOpBrokenTractionBc.html#afb1452db65c8dbb8ce97a15ebbee618d">OpBrokenTractionBc::iNtegrate</a></div><div class="ttdeci">MoFEMErrorCode iNtegrate(EntData &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l01948">EshelbianOperators.cpp:1948</a></div></div>
-<div class="ttc" id="astructOpCalculateEshelbyStress_html_a545e0ced9123a5d44222b5c93ca22549"><div class="ttname"><a href="structOpCalculateEshelbyStress.html#a545e0ced9123a5d44222b5c93ca22549">OpCalculateEshelbyStress::doWork</a></div><div class="ttdeci">MoFEMErrorCode doWork(int side, EntityType type, EntData &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l00064">EshelbianOperators.cpp:64</a></div></div>
+<div class="ttc" id="astructOpCalculateEshelbyStress_html_a3973777d822ad00105354038c01f3b2f"><div class="ttname"><a href="structOpCalculateEshelbyStress.html#a3973777d822ad00105354038c01f3b2f">OpCalculateEshelbyStress::doWork</a></div><div class="ttdeci">MoFEMErrorCode doWork(int row_side, EntityType row_type, EntData &amp;row_data)</div><div class="ttdoc">Operator for linear form, usually to calculate values on right hand side.</div><div class="ttdef"><b>Definition</b> <a href="HookeElement_8cpp_source.html#l00138">HookeElement.cpp:138</a></div></div>
 <div class="ttc" id="astructOpCalculateReactionForces_html_a46b180ee9e682cfc98c5652ebd318fdc"><div class="ttname"><a href="structOpCalculateReactionForces.html#a46b180ee9e682cfc98c5652ebd318fdc">OpCalculateReactionForces::doWork</a></div><div class="ttdeci">MoFEMErrorCode doWork(int side, EntityType type, EntData &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l00865">EshelbianOperators.cpp:865</a></div></div>
-<div class="ttc" id="astructOpCalculateRotationAndSpatialGradient_html_a4148f32dae81299218135a0d566caa94"><div class="ttname"><a href="structOpCalculateRotationAndSpatialGradient.html#a4148f32dae81299218135a0d566caa94">OpCalculateRotationAndSpatialGradient::doWork</a></div><div class="ttdeci">MoFEMErrorCode doWork(int side, EntityType type, EntData &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l00095">EshelbianOperators.cpp:95</a></div></div>
+<div class="ttc" id="astructOpCalculateRotationAndSpatialGradient_html_a4148f32dae81299218135a0d566caa94"><div class="ttname"><a href="structOpCalculateRotationAndSpatialGradient.html#a4148f32dae81299218135a0d566caa94">OpCalculateRotationAndSpatialGradient::doWork</a></div><div class="ttdeci">MoFEMErrorCode doWork(int side, EntityType type, EntData &amp;data)</div><div class="ttdoc">Operator for linear form, usually to calculate values on right hand side.</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l00095">EshelbianOperators.cpp:95</a></div></div>
 <div class="ttc" id="astructOpCalculateTractionFromSideEl_html_add56ddd3d4a77717f46c5ba83bc793d2"><div class="ttname"><a href="structOpCalculateTractionFromSideEl.html#add56ddd3d4a77717f46c5ba83bc793d2">OpCalculateTractionFromSideEl::doWork</a></div><div class="ttdeci">MoFEMErrorCode doWork(int side, EntityType type, EntData &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l00835">EshelbianOperators.cpp:835</a></div></div>
 <div class="ttc" id="astructOpDispBcImpl_html"><div class="ttname"><a href="structOpDispBcImpl.html">OpDispBcImpl</a></div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8hpp_source.html#l00317">EshelbianOperators.hpp:317</a></div></div>
 <div class="ttc" id="astructOpDispBc_html_a3da0a89eff326e4c12dfcb7bcf17af75"><div class="ttname"><a href="structOpDispBc.html#a3da0a89eff326e4c12dfcb7bcf17af75">OpDispBc::iNtegrate</a></div><div class="ttdeci">MoFEMErrorCode iNtegrate(EntData &amp;data)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianOperators_8cpp_source.html#l01511">EshelbianOperators.cpp:1511</a></div></div>

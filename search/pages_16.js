@@ -27,7 +27,7 @@ var searchData=
   ['module_24',['Eshelbian plasticity module',['../um_eshelbian_plasticity_readme.html',1,'']]],
   ['module_20and_20program_25',['How to add a new module and program',['../how_to_add_new_module_and_program.html',1,'']]],
   ['modules_26',['Users modules',['../mod_gallery.html',1,'']]],
-  ['mofem_27',['mofem',['../contributing_to_mofem.html',1,'Contributing to MoFEM'],['../publications.html',1,'Selected publications featuring results obtained using MoFEM']]],
+  ['mofem_27',['mofem',['../md_users__modules_2basic__finite__elements_2CONTRIBUTING.html',1,'Contributing to MoFEM'],['../contributing_to_mofem.html',1,'Contributing to MoFEM'],['../publications.html',1,'Selected publications featuring results obtained using MoFEM']]],
   ['mofem_20architecture_28',['MoFEM Architecture',['../general_data_structure.html',1,'']]],
   ['mofem_20authors_29',['MoFEM Authors',['../authors.html',1,'']]],
   ['mofem_20cephas_20strong_30',['&lt;strong&gt;MoFEM (Cephas)&lt;/strong&gt;',['../md__2home_2lk58p_2mofem__install_2vanilla__dev__release_2mofem-cephas_2README.html',1,'']]],

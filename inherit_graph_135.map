@@ -1,11 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classFormsIntegrators_3_01FaceUserDataOperator_01_4_1_1Assembly_3_01PETSC_01_4_1_1OpBase.html" title=" " alt="" coords="5,73,211,113"/>
-<area shape="rect" id="Node000001" href="$structOpBrokenAnalyticalTractionBc.html" title=" " alt="" coords="259,5,476,31"/>
-<area shape="poly" id="edge133_Node000000_Node000001" title=" " alt="" coords="176,66,258,39,303,28,304,33,259,45,178,71"/>
-<area shape="rect" id="Node000002" href="$structOpBrokenPressureBc.html" title=" " alt="" coords="289,55,446,80"/>
-<area shape="poly" id="edge134_Node000000_Node000002" title=" " alt="" coords="224,79,288,72,289,78,225,84"/>
-<area shape="rect" id="Node000003" href="$structOpBrokenTractionBc.html" title=" " alt="" coords="291,104,443,129"/>
-<area shape="poly" id="edge135_Node000000_Node000003" title=" " alt="" coords="224,101,291,107,291,112,224,106"/>
-<area shape="rect" id="Node000004" href="$structOpNormalDispBcRhsImpl_3_01A_00_01GAUSS_01_4.html" title=" " alt="" coords="274,154,461,194"/>
-<area shape="poly" id="edge136_Node000000_Node000004" title=" " alt="" coords="185,114,259,138,301,151,300,156,258,143,184,119"/>
+<area shape="rect" id="Node000000" href="$structEshelbianPlasticity_1_1OpConstrainBoundaryHDivLhs__dU.html" title=" " alt="" coords="5,5,232,60"/>
 </map>

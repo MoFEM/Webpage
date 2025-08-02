@@ -171,11 +171,11 @@ Typedefs</h2></td></tr>
 <tr class="separator:a1342a5bb82a44eb578a7246723649d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadd077aede6e10a3f6977fad5d6bb6ae" id="r_aadd077aede6e10a3f6977fad5d6bb6ae"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#aadd077aede6e10a3f6977fad5d6bb6ae">DomainEle</a> = <a class="el" href="structMoFEM_1_1PipelineManager_1_1ElementsAndOpsByDim.html">PipelineManager::ElementsAndOpsByDim</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a> &gt;<a class="el" href="child__and__parent_8cpp.html#a80b637c04b8c449d54efa75ab73b67df">::DomainEle</a></td></tr>
 <tr class="separator:aadd077aede6e10a3f6977fad5d6bb6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d22d16d53b24e827d6002ef0a6fd613" id="r_a9d22d16d53b24e827d6002ef0a6fd613"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a9d22d16d53b24e827d6002ef0a6fd613">DomainEleOp</a> = DomainEle::UserDataOperator</td></tr>
+<tr class="memitem:a9d22d16d53b24e827d6002ef0a6fd613" id="r_a9d22d16d53b24e827d6002ef0a6fd613"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a9d22d16d53b24e827d6002ef0a6fd613">DomainEleOp</a> = <a class="el" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">DomainEle::UserDataOperator</a></td></tr>
 <tr class="separator:a9d22d16d53b24e827d6002ef0a6fd613"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc7e13f92a48728400895a2a74d5757" id="r_a7bc7e13f92a48728400895a2a74d5757"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a7bc7e13f92a48728400895a2a74d5757">BoundaryEle</a> = <a class="el" href="structMoFEM_1_1PipelineManager_1_1ElementsAndOpsByDim.html">PipelineManager::ElementsAndOpsByDim</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a> &gt;<a class="el" href="child__and__parent_8cpp.html#abd1f0351e167546d82adc28b4dd0e681">::BoundaryEle</a></td></tr>
 <tr class="separator:a7bc7e13f92a48728400895a2a74d5757"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae10756998f42b8da25b7a1d2f5c51ee5" id="r_ae10756998f42b8da25b7a1d2f5c51ee5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#ae10756998f42b8da25b7a1d2f5c51ee5">BoundaryEleOp</a> = BoundaryEle::UserDataOperator</td></tr>
+<tr class="memitem:ae10756998f42b8da25b7a1d2f5c51ee5" id="r_ae10756998f42b8da25b7a1d2f5c51ee5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#ae10756998f42b8da25b7a1d2f5c51ee5">BoundaryEleOp</a> = <a class="el" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">BoundaryEle::UserDataOperator</a></td></tr>
 <tr class="separator:ae10756998f42b8da25b7a1d2f5c51ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b9f43805bca45844ead8d4fbe6f3032" id="r_a9b9f43805bca45844ead8d4fbe6f3032"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a9b9f43805bca45844ead8d4fbe6f3032">PostProcEle</a> = <a class="el" href="structMoFEM_1_1PostProcBrokenMeshInMoab.html">PostProcBrokenMeshInMoab</a>&lt; <a class="el" href="child__and__parent_8cpp.html#a80b637c04b8c449d54efa75ab73b67df">DomainEle</a> &gt;</td></tr>
 <tr class="separator:a9b9f43805bca45844ead8d4fbe6f3032"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,20 +224,20 @@ Variables</h2></td></tr>
 <tr class="separator:a1615e8c5bc3857dde832b2aadca5b3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27f07ec7ec1b09221f6f421d6d7c9e58" id="r_a27f07ec7ec1b09221f6f421d6d7c9e58"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="group__mofem__forms.html#ga2136fdd1cb130ca18f645e799b05569f">IntegrationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a27f07ec7ec1b09221f6f421d6d7c9e58">IT</a></td></tr>
 <tr class="separator:a27f07ec7ec1b09221f6f421d6d7c9e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a995d681861c2ecdd8a371ae37b3c3e67" id="r_a995d681861c2ecdd8a371ae37b3c3e67"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a995d681861c2ecdd8a371ae37b3c3e67">default_young_modulus</a> = 1</td></tr>
+<tr class="memitem:a995d681861c2ecdd8a371ae37b3c3e67" id="r_a995d681861c2ecdd8a371ae37b3c3e67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a995d681861c2ecdd8a371ae37b3c3e67">default_young_modulus</a> = 1</td></tr>
 <tr class="memdesc:a995d681861c2ecdd8a371ae37b3c3e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Essential boundary conditions (Least square approach)]  <br /></td></tr>
 <tr class="separator:a995d681861c2ecdd8a371ae37b3c3e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af220d8b0f53034e34f9f9b540999da87" id="r_af220d8b0f53034e34f9f9b540999da87"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#af220d8b0f53034e34f9f9b540999da87">default_poisson_ratio</a> = 0.25</td></tr>
+<tr class="memitem:af220d8b0f53034e34f9f9b540999da87" id="r_af220d8b0f53034e34f9f9b540999da87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#af220d8b0f53034e34f9f9b540999da87">default_poisson_ratio</a> = 0.25</td></tr>
 <tr class="separator:af220d8b0f53034e34f9f9b540999da87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b04bae1a94c45675c81f9f209c73e29" id="r_a6b04bae1a94c45675c81f9f209c73e29"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a6b04bae1a94c45675c81f9f209c73e29">default_ref_temp</a> = 0.0</td></tr>
+<tr class="memitem:a6b04bae1a94c45675c81f9f209c73e29" id="r_a6b04bae1a94c45675c81f9f209c73e29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a6b04bae1a94c45675c81f9f209c73e29">default_ref_temp</a> = 0.0</td></tr>
 <tr class="separator:a6b04bae1a94c45675c81f9f209c73e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef588e2b623b38c37f92ad2751f82580" id="r_aef588e2b623b38c37f92ad2751f82580"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#aef588e2b623b38c37f92ad2751f82580">default_init_temp</a> = 0.0</td></tr>
+<tr class="memitem:aef588e2b623b38c37f92ad2751f82580" id="r_aef588e2b623b38c37f92ad2751f82580"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#aef588e2b623b38c37f92ad2751f82580">default_init_temp</a> = 0.0</td></tr>
 <tr class="separator:aef588e2b623b38c37f92ad2751f82580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa17254357fe8f8f27f11cd8baa45579a" id="r_aa17254357fe8f8f27f11cd8baa45579a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#aa17254357fe8f8f27f11cd8baa45579a">default_coeff_expansion</a> = 1</td></tr>
+<tr class="memitem:aa17254357fe8f8f27f11cd8baa45579a" id="r_aa17254357fe8f8f27f11cd8baa45579a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#aa17254357fe8f8f27f11cd8baa45579a">default_coeff_expansion</a> = 1</td></tr>
 <tr class="separator:aa17254357fe8f8f27f11cd8baa45579a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad81834e0204df7942518c9fdff3c740f" id="r_ad81834e0204df7942518c9fdff3c740f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#ad81834e0204df7942518c9fdff3c740f">default_heat_conductivity</a></td></tr>
+<tr class="memitem:ad81834e0204df7942518c9fdff3c740f" id="r_ad81834e0204df7942518c9fdff3c740f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#ad81834e0204df7942518c9fdff3c740f">default_heat_conductivity</a></td></tr>
 <tr class="separator:ad81834e0204df7942518c9fdff3c740f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70a57f379998a77a6521a1a14428af5a" id="r_a70a57f379998a77a6521a1a14428af5a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a70a57f379998a77a6521a1a14428af5a">default_heat_capacity</a> = 1</td></tr>
+<tr class="memitem:a70a57f379998a77a6521a1a14428af5a" id="r_a70a57f379998a77a6521a1a14428af5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#a70a57f379998a77a6521a1a14428af5a">default_heat_capacity</a> = 1</td></tr>
 <tr class="separator:a70a57f379998a77a6521a1a14428af5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4b6b6145556789230d82dcdebfbbce6" id="r_aa4b6b6145556789230d82dcdebfbbce6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thermo__elastic_8cpp.html#aa4b6b6145556789230d82dcdebfbbce6">order_temp</a> = 2</td></tr>
 <tr class="separator:aa4b6b6145556789230d82dcdebfbbce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -334,7 +334,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="child__and__parent_8cpp.html#ae10756998f42b8da25b7a1d2f5c51ee5">BoundaryEleOp</a> =  BoundaryEle::UserDataOperator</td>
+          <td class="memname">using <a class="el" href="child__and__parent_8cpp.html#ae10756998f42b8da25b7a1d2f5c51ee5">BoundaryEleOp</a> =  <a class="el" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">BoundaryEle::UserDataOperator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -385,7 +385,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> =  DomainEle::UserDataOperator</td>
+          <td class="memname">using <a class="el" href="child__and__parent_8cpp.html#a7f9745be36b787c00b54f701980e8bce">DomainEleOp</a> =  <a class="el" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">DomainEle::UserDataOperator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -773,7 +773,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double default_coeff_expansion = 1</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> default_coeff_expansion = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -791,7 +791,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double default_heat_capacity = 1</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> default_heat_capacity = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -809,7 +809,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double default_heat_conductivity</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> default_heat_conductivity</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -829,7 +829,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double default_init_temp = 0.0</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> default_init_temp = 0.0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -847,7 +847,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double default_poisson_ratio = 0.25</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> default_poisson_ratio = 0.25</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -865,7 +865,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double default_ref_temp = 0.0</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> default_ref_temp = 0.0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -883,7 +883,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double default_young_modulus = 1</td>
+          <td class="memname"><a class="el" href="classdouble.html">double</a> default_young_modulus = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1109,7 +1109,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="adefinitions_8h_html_a6c0b52978f1abc88bf8a1ba70b7308e3"><div class="ttname"><a href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a></div><div class="ttdeci">#define MoFEMFunctionBegin</div><div class="ttdoc">First executable line of each MoFEM function, used for error handling. Final line of MoFEM functions ...</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00359">definitions.h:359</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_acb0a46d159695a01bf667313b7788b45"><div class="ttname"><a href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a></div><div class="ttdeci">#define MoFEMFunctionReturn(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00432">definitions.h:432</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_html_ad17eefd5d88d2b51c71ec46cae8569ac"><div class="ttname"><a href="namespaceMoFEM.html#ad17eefd5d88d2b51c71ec46cae8569ac">MoFEM::get_temp_meshset_ptr</a></div><div class="ttdeci">auto get_temp_meshset_ptr(moab::Interface &amp;moab)</div><div class="ttdoc">Create smart pointer to temporary meshset.</div><div class="ttdef"><b>Definition</b> <a href="Templates_8hpp_source.html#l01886">Templates.hpp:1886</a></div></div>
-</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="EshelbianPlasticity_8cpp-example.html#a18">EshelbianPlasticity.cpp</a>, <a class="el" href="free_surface_8cpp-example.html#a98">free_surface.cpp</a>, <a class="el" href="level_set_8cpp-example.html#a209">level_set.cpp</a>, <a class="el" href="seepage_8cpp-example.html#a20">seepage.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a32">thermo_elastic.cpp</a>.</dd>
+</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="EshelbianPlasticity_8cpp-example.html#a18">EshelbianPlasticity.cpp</a>, <a class="el" href="free_surface_8cpp-example.html#a99">free_surface.cpp</a>, <a class="el" href="level_set_8cpp-example.html#a210">level_set.cpp</a>, <a class="el" href="seepage_8cpp-example.html#a20">seepage.cpp</a>, and <a class="el" href="thermo_elastic_8cpp-example.html#a32">thermo_elastic.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="thermo__elastic_8cpp_source.html#l00121">121</a> of file <a class="el" href="thermo__elastic_8cpp_source.html">thermo_elastic.cpp</a>.</p>

@@ -195,10 +195,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(m_field, <a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca86c05035d6a2fbc5762f39215d6a8a22">SIDESET</a>, cit)) {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Insert Interface %d\n&quot;</span>,</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                         cit-&gt;getMeshsetId());</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      EntityHandle cubit_meshset = cit-&gt;getMeshset();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> cubit_meshset = cit-&gt;getMeshset();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">// get tet enties form back bit_level</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        EntityHandle ref_level_meshset = 0;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ref_level_meshset = 0;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, ref_level_meshset);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            -&gt;getEntitiesByTypeAndRefLevel(bit_levels.back(),</div>
@@ -223,7 +223,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="comment">// update cubit meshsets</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaa7fc3e87cd6f5fcd5770d87260ea8c1a">_IT_CUBITMESHSETS_FOR_LOOP_</a>(m_field, ciit)) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        EntityHandle cubit_meshset = ciit-&gt;meshset;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> cubit_meshset = ciit-&gt;meshset;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            -&gt;updateMeshsetByEntitiesChildren(cubit_meshset, bit_levels.back(),</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                              cubit_meshset, MBMAXTYPE, <span class="keyword">true</span>);</div>
@@ -305,7 +305,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(m_field, <a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efcac77b6cdcfb446c668fd1d7c66cfd15ab">BLOCKSET</a>, cit)) {</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      EntityHandle cubit_meshset = cit-&gt;getMeshset();</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> cubit_meshset = cit-&gt;getMeshset();</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <a class="code hl_struct" href="structMoFEM_1_1BlockSetAttributes.html">BlockSetAttributes</a> mydata;</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> cit-&gt;getAttributeDataStructure(mydata);</div>
@@ -344,7 +344,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    std::ofstream myfile;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    myfile.open((<a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a> + std::string(<span class="stringliteral">&quot;_log&quot;</span>)).c_str());</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    EntityHandle out_meshset_tet;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> out_meshset_tet;</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, out_meshset_tet);</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;getEntitiesByTypeAndRefLevel(</div>
@@ -353,7 +353,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_entities_by_handle(out_meshset_tet, tets, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">for</span> (Range::iterator tit = tets.begin(); tit != tets.end(); tit++) {</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>      <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(*tit, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn &lt; num_nodes; nn++) {</div>
@@ -363,7 +363,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      std::cout &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      myfile &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    EntityHandle out_meshset_prism;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> out_meshset_prism;</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, out_meshset_prism);</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;getEntitiesByTypeAndRefLevel(</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        bit_levels.back(), <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), MBPRISM, out_meshset_prism);</div>
@@ -371,7 +371,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_entities_by_handle(out_meshset_prism, prisms);</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">for</span> (Range::iterator pit = prisms.begin(); pit != prisms.end(); pit++) {</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(*pit, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn &lt; num_nodes; nn++) {</div>
@@ -387,14 +387,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;out_tet.vtk&quot;</span>, <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, &amp;out_meshset_tet, 1);</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;out_prism.vtk&quot;</span>, <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, &amp;out_meshset_prism, 1);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      EntityHandle out_meshset_tets_and_prism;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> out_meshset_tets_and_prism;</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, out_meshset_tets_and_prism);</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.add_entities(out_meshset_tets_and_prism, tets);</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.add_entities(out_meshset_tets_and_prism, prisms);</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;out_tets_and_prisms.vtk&quot;</span>, <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                             &amp;out_meshset_tets_and_prism, 1);</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      EntityHandle out_meshset_tris;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> out_meshset_tris;</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, out_meshset_tris);</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      <a class="code hl_class" href="classRange.html">Range</a> tris;</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_adjacencies(prisms, 2, <span class="keyword">false</span>, tris,</div>
@@ -411,6 +411,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>

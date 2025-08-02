@@ -300,11 +300,12 @@ Code Structure</h1>
 <div class="line"><span class="comment">// Declare FTensor index for 2D problem</span></div>
 <div class="line"><a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 2&gt; <a class="code hl_variable" href="namespacePoisson2DNonhomogeneousOperators.html#aeef92563540fd05ef13a932c02c13a96">i</a>;</div>
 <div class="line"><span class="comment">//declare a Lambda  function </span></div>
-<div class="line"><span class="keyword">typedef</span> boost::function&lt;double(<span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>)&gt;</div>
+<div class="line"><span class="keyword">typedef</span> boost::function&lt;<a class="code hl_class" href="classdouble.html">double</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>)&gt;</div>
 <div class="line">    <a class="code hl_typedef" href="namespacePoisson2DNonhomogeneousOperators.html#ad9994064117952c0a0f59e9853fb568f">ScalarFunc</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//.. .. Implementation of the UDOs below this point .. ..</span></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="anamespacePoisson2DNonhomogeneousOperators_html"><div class="ttname"><a href="namespacePoisson2DNonhomogeneousOperators.html">Poisson2DNonhomogeneousOperators</a></div><div class="ttdef"><b>Definition</b> <a href="poisson__2d__nonhomogeneous_8hpp_source.html#l00014">poisson_2d_nonhomogeneous.hpp:14</a></div></div>
 <div class="ttc" id="anamespacePoisson2DNonhomogeneousOperators_html_ad9994064117952c0a0f59e9853fb568f"><div class="ttname"><a href="namespacePoisson2DNonhomogeneousOperators.html#ad9994064117952c0a0f59e9853fb568f">Poisson2DNonhomogeneousOperators::ScalarFunc</a></div><div class="ttdeci">boost::function&lt; double(const double, const double, const double)&gt; ScalarFunc</div><div class="ttdef"><b>Definition</b> <a href="poisson__2d__nonhomogeneous_8hpp_source.html#l00019">poisson_2d_nonhomogeneous.hpp:19</a></div></div>
 <div class="ttc" id="anamespacePoisson2DNonhomogeneousOperators_html_aeef92563540fd05ef13a932c02c13a96"><div class="ttname"><a href="namespacePoisson2DNonhomogeneousOperators.html#aeef92563540fd05ef13a932c02c13a96">Poisson2DNonhomogeneousOperators::i</a></div><div class="ttdeci">FTensor::Index&lt; 'i', 2 &gt; i</div><div class="ttdef"><b>Definition</b> <a href="poisson__2d__nonhomogeneous_8hpp_source.html#l00016">poisson_2d_nonhomogeneous.hpp:16</a></div></div>
@@ -895,7 +896,7 @@ Implementation of User Data Operators (*.hpp)</h2>
 <div class="line"> </div>
 <div class="line"><a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, 2&gt; <a class="code hl_variable" href="namespacePoisson2DNonhomogeneousOperators.html#aeef92563540fd05ef13a932c02c13a96">i</a>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">typedef</span> boost::function&lt;double(<span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>)&gt;</div>
+<div class="line"><span class="keyword">typedef</span> boost::function&lt;<a class="code hl_class" href="classdouble.html">double</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>)&gt;</div>
 <div class="line">    <a class="code hl_typedef" href="namespacePoisson2DNonhomogeneousOperators.html#ad9994064117952c0a0f59e9853fb568f">ScalarFunc</a>;<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [OpDomainLhs]</span></div>
 <div class="line"><span class="comment"></span><span class="keyword">struct </span>OpDomainLhs : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1FaceElementForcesAndSourcesCore_1_1UserDataOperator.html">OpFaceEle</a> {</div>
@@ -1039,7 +1040,7 @@ Implementation of User Data Operators (*.hpp)</h2>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line">  <a class="code hl_typedef" href="namespacePoisson2DNonhomogeneousOperators.html#ad9994064117952c0a0f59e9853fb568f">ScalarFunc</a> <a class="code hl_variable" href="structPoisson2DNonhomogeneousOperators_1_1OpDomainRhs.html#a3fa746c4b0bb6e736df0b2407ac01bce">sourceTermFunc</a>;</div>
-<div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aab2f28b2af54eb9f62cc60a53e1c6d3b">VectorDouble</a> <a class="code hl_variable" href="structPoisson2DNonhomogeneousOperators_1_1OpDomainRhs.html#a2bee5328590f59af59006ccf39968986">locRhs</a>;</div>
+<div class="line">  <a class="code hl_class" href="classUBlasVector_3_01double_01_4.html">VectorDouble</a> <a class="code hl_variable" href="structPoisson2DNonhomogeneousOperators_1_1OpDomainRhs.html#a2bee5328590f59af59006ccf39968986">locRhs</a>;</div>
 <div class="line">};<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [OpDomainRhs]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
@@ -1179,7 +1180,7 @@ Implementation of User Data Operators (*.hpp)</h2>
 <div class="line"> </div>
 <div class="line"><span class="keyword">private</span>:</div>
 <div class="line">  <a class="code hl_typedef" href="namespacePoisson2DNonhomogeneousOperators.html#ad9994064117952c0a0f59e9853fb568f">ScalarFunc</a> <a class="code hl_variable" href="structPoisson2DNonhomogeneousOperators_1_1OpBoundaryRhs.html#a28ac844ceeebe2e7db6f94a6329d6a75">boundaryFunc</a>;</div>
-<div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aab2f28b2af54eb9f62cc60a53e1c6d3b">VectorDouble</a> <a class="code hl_variable" href="structPoisson2DNonhomogeneousOperators_1_1OpBoundaryRhs.html#a799aa16b52bf68762e935e6c1e2ca920">locBoundaryRhs</a>;</div>
+<div class="line">  <a class="code hl_class" href="classUBlasVector_3_01double_01_4.html">VectorDouble</a> <a class="code hl_variable" href="structPoisson2DNonhomogeneousOperators_1_1OpBoundaryRhs.html#a799aa16b52bf68762e935e6c1e2ca920">locBoundaryRhs</a>;</div>
 <div class="line">};<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [OpBoundaryRhs]</span></div>
 <div class="line"><span class="comment"></span>}; <span class="comment">// namespace Poisson2DNonhomogeneousOperators</span></div>
@@ -1187,6 +1188,7 @@ Implementation of User Data Operators (*.hpp)</h2>
 <div class="line"><span class="preprocessor">#endif </span><span class="comment">//__POISSON2DNONHOMOGENEOUS_HPP__</span></div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aclassUBlasMatrix_3_01double_01_4_html"><div class="ttname"><a href="classUBlasMatrix_3_01double_01_4.html">UBlasMatrix&lt; double &gt;</a></div></div>
+<div class="ttc" id="aclassUBlasVector_3_01double_01_4_html"><div class="ttname"><a href="classUBlasVector_3_01double_01_4.html">UBlasVector&lt; double &gt;</a></div></div>
 <div class="ttc" id="anamespaceMoFEM_html"><div class="ttname"><a href="namespaceMoFEM.html">MoFEM</a></div><div class="ttdoc">implementation of Data Operators for Forces and Sources</div><div class="ttdef"><b>Definition</b> <a href="Common_8hpp_source.html#l00010">Common.hpp:10</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1DataOperator_html_a300b85aefcf2cf7203ada5d6d501f25f"><div class="ttname"><a href="structMoFEM_1_1DataOperator.html#a300b85aefcf2cf7203ada5d6d501f25f">MoFEM::DataOperator::sYmm</a></div><div class="ttdeci">bool sYmm</div><div class="ttdoc">If true assume that matrix is symmetric structure.</div><div class="ttdef"><b>Definition</b> <a href="DataOperators_8hpp_source.html#l00082">DataOperators.hpp:82</a></div></div>
 <div class="ttc" id="astructMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator_html_ac99de5ec6fa9bad3ccc5c5d60bc48e40a2d8d202342fada158e521ef00be491e1"><div class="ttname"><a href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ac99de5ec6fa9bad3ccc5c5d60bc48e40a2d8d202342fada158e521ef00be491e1">MoFEM::ForcesAndSourcesCore::UserDataOperator::OPROW</a></div><div class="ttdeci">@ OPROW</div><div class="ttdoc">operator doWork function is executed on FE rows</div><div class="ttdef"><b>Definition</b> <a href="ForcesAndSourcesCore_8hpp_source.html#l00567">ForcesAndSourcesCore.hpp:567</a></div></div>

@@ -754,7 +754,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="comment">   * \brief Return finite element entity handle</span></div>
 <div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span><span class="comment">   * @return Finite element entity handle</span></div>
 <div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  <span class="keyword">inline</span> EntityHandle <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a13bff815dc945f24e23f12156fe901b7">getFEEntityHandle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  <span class="keyword">inline</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a13bff815dc945f24e23f12156fe901b7">getFEEntityHandle</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span><span class="comment"></span> </div>
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span><span class="comment">  /**</span></div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span><span class="comment">   * @brief Get dimension of finite element</span></div>
@@ -816,7 +816,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span><span class="comment">   * @param side_number</span></div>
 <div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span><span class="comment">   * @param type</span></div>
 <div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span><span class="comment">   */</span></div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>  <span class="keyword">inline</span> EntityHandle <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7bada8addde9d4210bd2bad229b36b8d">getSideEntity</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> side_number,</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>  <span class="keyword">inline</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7bada8addde9d4210bd2bad229b36b8d">getSideEntity</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> side_number,</div>
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>                                    <span class="keyword">const</span> EntityType type);</div>
 <div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span><span class="comment"></span> </div>
 <div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span><span class="comment">  /**</span></div>
@@ -1050,7 +1050,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span><span class="comment">  /** \name Loops */</span></div>
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span> </div>
 <div class="line"><a id="l00902" name="l00902"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab32f610fc4c4b65865e76685f7925d14">  902</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab32f610fc4c4b65865e76685f7925d14">AdjCache</a> =</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>      std::map&lt;EntityHandle,</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>      std::map&lt;<a class="code hl_class" href="classEntityHandle.html">EntityHandle</a>,</div>
 <div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>               std::vector&lt;boost::weak_ptr&lt;NumeredEntFiniteElement&gt;&gt;&gt;;</div>
 <div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span><span class="comment"></span> </div>
 <div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span><span class="comment">  /**</span></div>
@@ -1069,7 +1069,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span><span class="comment">   * @return MoFEMErrorCode</span></div>
 <div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span><span class="comment">   */</span></div>
 <div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>  <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a33b26d05e254ab944bcce9637b86d7ff">loopSide</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;fe_name, <a class="code hl_struct" href="structMoFEM_1_1ForcesAndSourcesCore.html">ForcesAndSourcesCore</a> *side_fe,</div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>                          <span class="keyword">const</span> <span class="keywordtype">size_t</span> dim, <span class="keyword">const</span> EntityHandle ent_for_side = 0,</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>                          <span class="keyword">const</span> <span class="keywordtype">size_t</span> dim, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent_for_side = 0,</div>
 <div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>                          boost::shared_ptr&lt;Range&gt; fe_range = <span class="keyword">nullptr</span>,</div>
 <div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>                          <span class="keyword">const</span> <span class="keywordtype">int</span> verb = <a class="code hl_enumvalue" href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28">QUIET</a>,</div>
 <div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>                          <span class="keyword">const</span> <a class="code hl_enumeration" href="group__mofem__log__manager.html#ga1d256cf4cf0b698de94c0907f7f0fe93">LogManager::SeverityLevel</a> sev = Sev::noisy,</div>
@@ -1166,32 +1166,32 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span> </div>
 <div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>boost::shared_ptr&lt;const NumeredEntFiniteElement&gt;</div>
 <div class="foldopen" id="foldopen01017" data-start="{" data-end="}">
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615"> 1017</a></span><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615">ForcesAndSourcesCore::UserDataOperator::getNumeredEntFiniteElementPtr</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab1001cc939d6a6b797c22099281d9615"> 1017</a></span>ForcesAndSourcesCore::UserDataOperator::getNumeredEntFiniteElementPtr()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7b44debcde616a9186510d1c0d9719bf">ptrFE</a>-&gt;<a class="code hl_variable" href="structMoFEM_1_1FEMethod.html#ad26ef8112c7903794a5b084ebef6db57">numeredEntFiniteElementPtr</a>;</div>
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>};</div>
 </div>
 <div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span> </div>
 <div class="foldopen" id="foldopen01021" data-start="{" data-end="}">
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a13bff815dc945f24e23f12156fe901b7"> 1021</a></span>EntityHandle <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a13bff815dc945f24e23f12156fe901b7">ForcesAndSourcesCore::UserDataOperator::getFEEntityHandle</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a13bff815dc945f24e23f12156fe901b7"> 1021</a></span><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ForcesAndSourcesCore::UserDataOperator::getFEEntityHandle()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>  <span class="keywordflow">return</span> getNumeredEntFiniteElementPtr()-&gt;getEnt();</div>
 <div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>}</div>
 </div>
 <div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span> </div>
 <div class="foldopen" id="foldopen01025" data-start="{" data-end="}">
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae609c77a75a6eada9b8e9c82a398ee1d"> 1025</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae609c77a75a6eada9b8e9c82a398ee1d">ForcesAndSourcesCore::UserDataOperator::getFEDim</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae609c77a75a6eada9b8e9c82a398ee1d"> 1025</a></span><span class="keywordtype">int</span> ForcesAndSourcesCore::UserDataOperator::getFEDim()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceMoFEM.html#a547f150d6e8a8c414d476a66671396d8">dimension_from_handle</a>(<a class="code hl_function" href="structMoFEM_1_1FEMethod.html#aa4946e9adb55c814d9e16b91c9c35f8a">getFEEntityHandle</a>());</div>
 <div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>};</div>
 </div>
 <div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span> </div>
 <div class="foldopen" id="foldopen01029" data-start="{" data-end="}">
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a28906b83840d119ec9542ce2eb1db52b"> 1029</a></span>EntityType <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a28906b83840d119ec9542ce2eb1db52b">ForcesAndSourcesCore::UserDataOperator::getFEType</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a28906b83840d119ec9542ce2eb1db52b"> 1029</a></span>EntityType ForcesAndSourcesCore::UserDataOperator::getFEType()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespaceMoFEM.html#a01f67868b6366749021d5258535655cd">type_from_handle</a>(<a class="code hl_function" href="structMoFEM_1_1FEMethod.html#aa4946e9adb55c814d9e16b91c9c35f8a">getFEEntityHandle</a>());</div>
 <div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>};</div>
 </div>
 <div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span> </div>
 <div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>boost::weak_ptr&lt;SideNumber&gt;</div>
 <div class="foldopen" id="foldopen01034" data-start="{" data-end="}">
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a59375bc0efc784b7172edb1f1abb1de6"> 1034</a></span><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a59375bc0efc784b7172edb1f1abb1de6">ForcesAndSourcesCore::UserDataOperator::getSideNumberPtr</a>(</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a59375bc0efc784b7172edb1f1abb1de6"> 1034</a></span>ForcesAndSourcesCore::UserDataOperator::getSideNumberPtr(</div>
 <div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> side_number, <span class="keyword">const</span> EntityType type) {</div>
 <div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>  <span class="keyword">auto</span> &amp;side_table_by_side_and_type =</div>
 <div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>      ptrFE-&gt;numeredEntFiniteElementPtr-&gt;getSideNumberTable().get&lt;1&gt;();</div>
@@ -1204,9 +1204,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>}</div>
 </div>
 <div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span> </div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>EntityHandle</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a></div>
 <div class="foldopen" id="foldopen01047" data-start="{" data-end="}">
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7bada8addde9d4210bd2bad229b36b8d"> 1047</a></span><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7bada8addde9d4210bd2bad229b36b8d">ForcesAndSourcesCore::UserDataOperator::getSideEntity</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> side_number,</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7bada8addde9d4210bd2bad229b36b8d"> 1047</a></span>ForcesAndSourcesCore::UserDataOperator::getSideEntity(<span class="keyword">const</span> <span class="keywordtype">int</span> side_number,</div>
 <div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>                                                      <span class="keyword">const</span> EntityType type) {</div>
 <div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>  <span class="keywordflow">if</span> (<span class="keyword">auto</span> side_ptr = getSideNumberPtr(side_number, type).lock())</div>
 <div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>    <span class="keywordflow">return</span> side_ptr-&gt;ent;</div>
@@ -1216,79 +1216,79 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span> </div>
 <div class="foldopen" id="foldopen01055" data-start="{" data-end="}">
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5650156b4c37e6033faaddcba8674795"> 1055</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5650156b4c37e6033faaddcba8674795">ForcesAndSourcesCore::UserDataOperator::getNumberOfNodesOnElement</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5650156b4c37e6033faaddcba8674795"> 1055</a></span><span class="keywordtype">int</span> ForcesAndSourcesCore::UserDataOperator::getNumberOfNodesOnElement()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>  <span class="keywordflow">return</span> ptrFE-&gt;getNumberOfNodes();</div>
 <div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>}</div>
 </div>
 <div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span> </div>
 <div class="foldopen" id="foldopen01059" data-start="{" data-end="}">
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f"> 1059</a></span><span class="keyword">const</span> <a class="code hl_struct" href="structMoFEM_1_1FEMethod.html">FEMethod</a> *<a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f">ForcesAndSourcesCore::UserDataOperator::getFEMethod</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acfe45d604c4b50bc9a6ecb79102c931f"> 1059</a></span><span class="keyword">const</span> <a class="code hl_struct" href="structMoFEM_1_1FEMethod.html">FEMethod</a> *ForcesAndSourcesCore::UserDataOperator::getFEMethod()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>  <span class="keywordflow">return</span> ptrFE;</div>
 <div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>}</div>
 </div>
 <div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span> </div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ac15b112ea91a4b9d240b458011f3ae21"> 1063</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ac15b112ea91a4b9d240b458011f3ae21">ForcesAndSourcesCore::UserDataOperator::getOpType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> opType; }</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ac15b112ea91a4b9d240b458011f3ae21"> 1063</a></span><span class="keywordtype">int</span> ForcesAndSourcesCore::UserDataOperator::getOpType()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> opType; }</div>
 <div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span> </div>
 <div class="foldopen" id="foldopen01065" data-start="{" data-end="}">
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a0b245f3058ed6f800339a23c0b4192c9"> 1065</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a0b245f3058ed6f800339a23c0b4192c9">ForcesAndSourcesCore::UserDataOperator::setOpType</a>(<span class="keyword">const</span> <a class="code hl_enumeration" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ac99de5ec6fa9bad3ccc5c5d60bc48e40">OpType</a> type) {</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a0b245f3058ed6f800339a23c0b4192c9"> 1065</a></span><span class="keywordtype">void</span> ForcesAndSourcesCore::UserDataOperator::setOpType(<span class="keyword">const</span> <a class="code hl_enumeration" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ac99de5ec6fa9bad3ccc5c5d60bc48e40">OpType</a> type) {</div>
 <div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>  opType = type;</div>
 <div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>}</div>
 </div>
 <div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span> </div>
 <div class="foldopen" id="foldopen01069" data-start="{" data-end="}">
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#abaa28b9de75f1d42a4d1d01e3acf92b9"> 1069</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#abaa28b9de75f1d42a4d1d01e3acf92b9">ForcesAndSourcesCore::UserDataOperator::addOpType</a>(<span class="keyword">const</span> <a class="code hl_enumeration" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ac99de5ec6fa9bad3ccc5c5d60bc48e40">OpType</a> type) {</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#abaa28b9de75f1d42a4d1d01e3acf92b9"> 1069</a></span><span class="keywordtype">void</span> ForcesAndSourcesCore::UserDataOperator::addOpType(<span class="keyword">const</span> <a class="code hl_enumeration" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ac99de5ec6fa9bad3ccc5c5d60bc48e40">OpType</a> type) {</div>
 <div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>  opType |= type;</div>
 <div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>}</div>
 </div>
 <div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span> </div>
 <div class="foldopen" id="foldopen01073" data-start="{" data-end="}">
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a41da6f80c5d5527da27ba9ab632ff519"> 1073</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a41da6f80c5d5527da27ba9ab632ff519">ForcesAndSourcesCore::UserDataOperator::getNinTheLoop</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a41da6f80c5d5527da27ba9ab632ff519"> 1073</a></span><span class="keywordtype">int</span> ForcesAndSourcesCore::UserDataOperator::getNinTheLoop()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>  <span class="keywordflow">return</span> getFEMethod()-&gt;getNinTheLoop();</div>
 <div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>}</div>
 </div>
 <div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span> </div>
 <div class="foldopen" id="foldopen01077" data-start="{" data-end="}">
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a23569a5c7e95ede7d61db86f0bd240ea"> 1077</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a23569a5c7e95ede7d61db86f0bd240ea">ForcesAndSourcesCore::UserDataOperator::getLoopSize</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a23569a5c7e95ede7d61db86f0bd240ea"> 1077</a></span><span class="keywordtype">int</span> ForcesAndSourcesCore::UserDataOperator::getLoopSize()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>  <span class="keywordflow">return</span> getFEMethod()-&gt;getLoopSize();</div>
 <div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>}</div>
 </div>
 <div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span> </div>
 <div class="foldopen" id="foldopen01081" data-start="{" data-end="}">
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa1e8ff6a3c643d0bc3ed9b93f6029758"> 1081</a></span>std::string <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa1e8ff6a3c643d0bc3ed9b93f6029758">ForcesAndSourcesCore::UserDataOperator::getFEName</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa1e8ff6a3c643d0bc3ed9b93f6029758"> 1081</a></span>std::string ForcesAndSourcesCore::UserDataOperator::getFEName()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>  <span class="keywordflow">return</span> getFEMethod()-&gt;getFEName();</div>
 <div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>}</div>
 </div>
 <div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span> </div>
 <div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span><span class="keyword">const</span> <a class="code hl_typedef" href="structMoFEM_1_1PetscData.html#a718787af1c76c7dbb7e6bd0416fc6272">PetscData::Switches</a> &amp;</div>
 <div class="foldopen" id="foldopen01086" data-start="{" data-end="}">
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7084adb5b5016ebb9cb2a929441a60ee"> 1086</a></span><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7084adb5b5016ebb9cb2a929441a60ee">ForcesAndSourcesCore::UserDataOperator::getDataCtx</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a7084adb5b5016ebb9cb2a929441a60ee"> 1086</a></span>ForcesAndSourcesCore::UserDataOperator::getDataCtx()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>  <span class="keywordflow">return</span> getFEMethod()-&gt;data_ctx;</div>
 <div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>}</div>
 </div>
 <div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span> </div>
 <div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span><span class="keyword">const</span> <a class="code hl_enumeration" href="structMoFEM_1_1KspMethod.html#a9e99e6c046a7d088b04482ed36f88a2c">KspMethod::KSPContext</a></div>
 <div class="foldopen" id="foldopen01091" data-start="{" data-end="}">
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a30ae8a686c6f2b2eb91029e68bd4f219"> 1091</a></span><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a30ae8a686c6f2b2eb91029e68bd4f219">ForcesAndSourcesCore::UserDataOperator::getKSPCtx</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a30ae8a686c6f2b2eb91029e68bd4f219"> 1091</a></span>ForcesAndSourcesCore::UserDataOperator::getKSPCtx()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>  <span class="keywordflow">return</span> getFEMethod()-&gt;ksp_ctx;</div>
 <div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>}</div>
 </div>
 <div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span> </div>
 <div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span><span class="keyword">const</span> <a class="code hl_enumeration" href="structMoFEM_1_1SnesMethod.html#a271bba1f52a84d1a813117473339911a">SnesMethod::SNESContext</a></div>
 <div class="foldopen" id="foldopen01096" data-start="{" data-end="}">
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a643186e91f29f795ddbd3ad44b8695cf"> 1096</a></span><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a643186e91f29f795ddbd3ad44b8695cf">ForcesAndSourcesCore::UserDataOperator::getSNESCtx</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a643186e91f29f795ddbd3ad44b8695cf"> 1096</a></span>ForcesAndSourcesCore::UserDataOperator::getSNESCtx()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>  <span class="keywordflow">return</span> getFEMethod()-&gt;snes_ctx;</div>
 <div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>}</div>
 </div>
 <div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span> </div>
 <div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span><span class="keyword">const</span> <a class="code hl_enumeration" href="structMoFEM_1_1TSMethod.html#a0c125a07b85ceceb72d9f3afea241dfe">TSMethod::TSContext</a></div>
 <div class="foldopen" id="foldopen01101" data-start="{" data-end="}">
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a9771798b9c043e82a09b41ca9ee77d27"> 1101</a></span><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a9771798b9c043e82a09b41ca9ee77d27">ForcesAndSourcesCore::UserDataOperator::getTSCtx</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a9771798b9c043e82a09b41ca9ee77d27"> 1101</a></span>ForcesAndSourcesCore::UserDataOperator::getTSCtx()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>  <span class="keywordflow">return</span> getFEMethod()-&gt;ts_ctx;</div>
 <div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>}</div>
 </div>
 <div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span> </div>
 <div class="foldopen" id="foldopen01105" data-start="{" data-end="}">
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5776797a630374d6b06e3aea772cdc39"> 1105</a></span>Vec <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5776797a630374d6b06e3aea772cdc39">ForcesAndSourcesCore::UserDataOperator::getKSPf</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5776797a630374d6b06e3aea772cdc39"> 1105</a></span>Vec ForcesAndSourcesCore::UserDataOperator::getKSPf()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1KspMethod.html#ad7d80a709dec612d8491f9667cc30cef">ksp_f</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;KSP not set F vector&quot;</span>);</div>
@@ -1298,7 +1298,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span> </div>
 <div class="foldopen" id="foldopen01113" data-start="{" data-end="}">
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa2f3a05951e205c8f7f0058ccc088400"> 1113</a></span>Mat <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa2f3a05951e205c8f7f0058ccc088400">ForcesAndSourcesCore::UserDataOperator::getKSPA</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa2f3a05951e205c8f7f0058ccc088400"> 1113</a></span>Mat ForcesAndSourcesCore::UserDataOperator::getKSPA()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1KspMethod.html#acd7bbe1a389c9b0b8fa36eb045bbf854">ksp_A</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;KSP not set A vector&quot;</span>);</div>
@@ -1308,7 +1308,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span> </div>
 <div class="foldopen" id="foldopen01121" data-start="{" data-end="}">
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae6b967017977d2f79550627e2a6e89bd"> 1121</a></span>Mat <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae6b967017977d2f79550627e2a6e89bd">ForcesAndSourcesCore::UserDataOperator::getKSPB</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae6b967017977d2f79550627e2a6e89bd"> 1121</a></span>Mat ForcesAndSourcesCore::UserDataOperator::getKSPB()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1KspMethod.html#a18d603d8a983e8aba704d4c38f809b4c">ksp_B</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;KSP not set B vector&quot;</span>);</div>
@@ -1318,7 +1318,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span> </div>
 <div class="foldopen" id="foldopen01129" data-start="{" data-end="}">
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a578e27839058f328d80ff2e6bc5f190b"> 1129</a></span>Vec <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a578e27839058f328d80ff2e6bc5f190b">ForcesAndSourcesCore::UserDataOperator::getSNESf</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a578e27839058f328d80ff2e6bc5f190b"> 1129</a></span>Vec ForcesAndSourcesCore::UserDataOperator::getSNESf()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1SnesMethod.html#a63ba32f28c2969723b21644ed738b959">snes_f</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;SNES not set F vector&quot;</span>);</div>
@@ -1328,7 +1328,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span> </div>
 <div class="foldopen" id="foldopen01137" data-start="{" data-end="}">
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a6d4c0a1ca13ebfbd23ecd62d2926d13a"> 1137</a></span>Vec <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a6d4c0a1ca13ebfbd23ecd62d2926d13a">ForcesAndSourcesCore::UserDataOperator::getSNESx</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a6d4c0a1ca13ebfbd23ecd62d2926d13a"> 1137</a></span>Vec ForcesAndSourcesCore::UserDataOperator::getSNESx()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1SnesMethod.html#a792004e9847d219a04389202ae47d17c">snes_x</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;SNESnot set X vector&quot;</span>);</div>
@@ -1338,7 +1338,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span> </div>
 <div class="foldopen" id="foldopen01145" data-start="{" data-end="}">
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a174380fcab8cdc158d26db2d5d070609"> 1145</a></span>Mat <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a174380fcab8cdc158d26db2d5d070609">ForcesAndSourcesCore::UserDataOperator::getSNESA</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a174380fcab8cdc158d26db2d5d070609"> 1145</a></span>Mat ForcesAndSourcesCore::UserDataOperator::getSNESA()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1SnesMethod.html#ad362409898c2c4f5f2a676e0026fb05c">snes_A</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;SNES not set A vector&quot;</span>);</div>
@@ -1348,7 +1348,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span> </div>
 <div class="foldopen" id="foldopen01153" data-start="{" data-end="}">
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ad9e8aaece516a3a6405c7fc77a384db5"> 1153</a></span>Mat <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ad9e8aaece516a3a6405c7fc77a384db5">ForcesAndSourcesCore::UserDataOperator::getSNESB</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ad9e8aaece516a3a6405c7fc77a384db5"> 1153</a></span>Mat ForcesAndSourcesCore::UserDataOperator::getSNESB()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1SnesMethod.html#abe24f80bfa98800b9c3b1ad28ffb2b4e">snes_B</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;SNES not set A matrix&quot;</span>);</div>
@@ -1358,7 +1358,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span> </div>
 <div class="foldopen" id="foldopen01161" data-start="{" data-end="}">
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aec2fe21cbc5ef9fd89e435d7ed15ee47"> 1161</a></span>Vec <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aec2fe21cbc5ef9fd89e435d7ed15ee47">ForcesAndSourcesCore::UserDataOperator::getTSu</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aec2fe21cbc5ef9fd89e435d7ed15ee47"> 1161</a></span>Vec ForcesAndSourcesCore::UserDataOperator::getTSu()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#ae0de4df2f11111bfe346397319afdb72">ts_u</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;TS not set U vector&quot;</span>);</div>
@@ -1368,7 +1368,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span> </div>
 <div class="foldopen" id="foldopen01169" data-start="{" data-end="}">
-<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acaa4a81de99f5117316c0e1eace73b6d"> 1169</a></span>Vec <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acaa4a81de99f5117316c0e1eace73b6d">ForcesAndSourcesCore::UserDataOperator::getTSu_t</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#acaa4a81de99f5117316c0e1eace73b6d"> 1169</a></span>Vec ForcesAndSourcesCore::UserDataOperator::getTSu_t()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#ac21f5404851ac05ed2ba1bb57c4d7f49">ts_u_t</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;TS not set U_t vector&quot;</span>);</div>
@@ -1378,7 +1378,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span> </div>
 <div class="foldopen" id="foldopen01177" data-start="{" data-end="}">
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a457e21ee9c176ca4f2e9b6a71ccabf94"> 1177</a></span>Vec <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a457e21ee9c176ca4f2e9b6a71ccabf94">ForcesAndSourcesCore::UserDataOperator::getTSu_tt</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a457e21ee9c176ca4f2e9b6a71ccabf94"> 1177</a></span>Vec ForcesAndSourcesCore::UserDataOperator::getTSu_tt()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#ab5154cbfb7fc13589511c521485fcd6f">ts_u_tt</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;TS not set U_tt vector&quot;</span>);</div>
@@ -1388,7 +1388,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span> </div>
 <div class="foldopen" id="foldopen01185" data-start="{" data-end="}">
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a4d7e74857dff95ca8fe208fdca9a4628"> 1185</a></span>Vec <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a4d7e74857dff95ca8fe208fdca9a4628">ForcesAndSourcesCore::UserDataOperator::getTSf</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a4d7e74857dff95ca8fe208fdca9a4628"> 1185</a></span>Vec ForcesAndSourcesCore::UserDataOperator::getTSf()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#a776871f5d2d71eedf73adf100ae9fd01">ts_F</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;TS not set F vector&quot;</span>);</div>
@@ -1398,7 +1398,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span> </div>
 <div class="foldopen" id="foldopen01193" data-start="{" data-end="}">
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a3efd3f93fa78ebf89bd06db4aa811572"> 1193</a></span>Mat <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a3efd3f93fa78ebf89bd06db4aa811572">ForcesAndSourcesCore::UserDataOperator::getTSA</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a3efd3f93fa78ebf89bd06db4aa811572"> 1193</a></span>Mat ForcesAndSourcesCore::UserDataOperator::getTSA()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#a70bb9d3bab9d4a2174734dc47e372d1c">ts_A</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;TS not set A matrix&quot;</span>);</div>
@@ -1408,7 +1408,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span> </div>
 <div class="foldopen" id="foldopen01201" data-start="{" data-end="}">
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a50574b228a3808f895b166088a804686"> 1201</a></span>Mat <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a50574b228a3808f895b166088a804686">ForcesAndSourcesCore::UserDataOperator::getTSB</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a50574b228a3808f895b166088a804686"> 1201</a></span>Mat ForcesAndSourcesCore::UserDataOperator::getTSB()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>  <span class="keywordflow">if</span> (getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1TSMethod.html#aff339f69e372284157eb6eebcf0ed333">ts_B</a> == PETSC_NULLPTR)</div>
 <div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;TS not set B matrix&quot;</span>);</div>
@@ -1418,7 +1418,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span> </div>
 <div class="foldopen" id="foldopen01209" data-start="{" data-end="}">
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a80e6b514787280c7204c18c6f52adc6c"> 1209</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a80e6b514787280c7204c18c6f52adc6c">ForcesAndSourcesCore::UserDataOperator::getTSstep</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a80e6b514787280c7204c18c6f52adc6c"> 1209</a></span><span class="keywordtype">int</span> ForcesAndSourcesCore::UserDataOperator::getTSstep()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>  <span class="keywordflow">if</span> ((getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1PetscData.html#a92f3ce3172fe2bf334cfc7b40856dc05">data_ctx</a> &amp; PetscData::PetscData::CtxSetTime).none())</div>
 <div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;TS not set time&quot;</span>);</div>
@@ -1428,7 +1428,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span> </div>
 <div class="foldopen" id="foldopen01217" data-start="{" data-end="}">
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa7d672543f15f3c2d3b3159a4331d7bf"> 1217</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa7d672543f15f3c2d3b3159a4331d7bf">ForcesAndSourcesCore::UserDataOperator::getTStime</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa7d672543f15f3c2d3b3159a4331d7bf"> 1217</a></span><span class="keywordtype">double</span> ForcesAndSourcesCore::UserDataOperator::getTStime()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>  <span class="keywordflow">if</span> ((getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1PetscData.html#a92f3ce3172fe2bf334cfc7b40856dc05">data_ctx</a> &amp; PetscData::PetscData::CtxSetTime).none())</div>
 <div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;TS not set time&quot;</span>);</div>
@@ -1438,7 +1438,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span> </div>
 <div class="foldopen" id="foldopen01225" data-start="{" data-end="}">
-<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab9b7bcb88c0ed96bf26ee530f863bf61"> 1225</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab9b7bcb88c0ed96bf26ee530f863bf61">ForcesAndSourcesCore::UserDataOperator::getTStimeStep</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ab9b7bcb88c0ed96bf26ee530f863bf61"> 1225</a></span><span class="keywordtype">double</span> ForcesAndSourcesCore::UserDataOperator::getTStimeStep()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>  <span class="keywordflow">if</span> ((getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1PetscData.html#a92f3ce3172fe2bf334cfc7b40856dc05">data_ctx</a> &amp; PetscData::PetscData::CtxSetTime).none())</div>
 <div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;TS not set time&quot;</span>);</div>
@@ -1448,7 +1448,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span> </div>
 <div class="foldopen" id="foldopen01233" data-start="{" data-end="}">
-<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a9cf1180a721ed3a57492165a1fb9ad11"> 1233</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a9cf1180a721ed3a57492165a1fb9ad11">ForcesAndSourcesCore::UserDataOperator::getTSa</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01233" name="l01233"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a9cf1180a721ed3a57492165a1fb9ad11"> 1233</a></span><span class="keywordtype">double</span> ForcesAndSourcesCore::UserDataOperator::getTSa()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>  <span class="keywordflow">if</span> ((getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1PetscData.html#a92f3ce3172fe2bf334cfc7b40856dc05">data_ctx</a> &amp; (<a class="code hl_variable" href="structMoFEM_1_1PetscData.html#a0a921ffb71a2f2f9e7d4e39bf835b233">PetscData::CtxSetA</a> | <a class="code hl_variable" href="structMoFEM_1_1PetscData.html#acc6f3c3f5087b7e9dd2e535a71a7038d">PetscData::CtxSetB</a>))</div>
 <div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>          .none() ||</div>
@@ -1460,7 +1460,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span> </div>
 <div class="foldopen" id="foldopen01243" data-start="{" data-end="}">
-<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#afadf0f547506aee7f02bc31344bc29c3"> 1243</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#afadf0f547506aee7f02bc31344bc29c3">ForcesAndSourcesCore::UserDataOperator::getTSaa</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#afadf0f547506aee7f02bc31344bc29c3"> 1243</a></span><span class="keywordtype">double</span> ForcesAndSourcesCore::UserDataOperator::getTSaa()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span><span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span>  <span class="keywordflow">if</span> ((getFEMethod()-&gt;<a class="code hl_variable" href="structMoFEM_1_1PetscData.html#a92f3ce3172fe2bf334cfc7b40856dc05">data_ctx</a> &amp; (<a class="code hl_variable" href="structMoFEM_1_1PetscData.html#a0a921ffb71a2f2f9e7d4e39bf835b233">PetscData::CtxSetA</a> | <a class="code hl_variable" href="structMoFEM_1_1PetscData.html#acc6f3c3f5087b7e9dd2e535a71a7038d">PetscData::CtxSetB</a>))</div>
 <div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span>          .none() ||</div>
@@ -1472,13 +1472,13 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01252" name="l01252"></a><span class="lineno"> 1252</span> </div>
 <div class="foldopen" id="foldopen01253" data-start="{" data-end="}">
-<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae90a09d3c36b0a4ed9ab1d99fcce0c1d"> 1253</a></span><a class="code hl_class" href="classUBlasMatrix_3_01double_01_4.html">MatrixDouble</a> &amp;<a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae90a09d3c36b0a4ed9ab1d99fcce0c1d">ForcesAndSourcesCore::UserDataOperator::getGaussPts</a>() {</div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ae90a09d3c36b0a4ed9ab1d99fcce0c1d"> 1253</a></span><a class="code hl_class" href="classUBlasMatrix_3_01double_01_4.html">MatrixDouble</a> &amp;ForcesAndSourcesCore::UserDataOperator::getGaussPts() {</div>
 <div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_struct" href="structMoFEM_1_1ForcesAndSourcesCore.html">ForcesAndSourcesCore</a> *<span class="keyword">&gt;</span>(ptrFE)-&gt;<a class="code hl_variable" href="structMoFEM_1_1ForcesAndSourcesCore.html#a91c6f5f96b8f4ec76ed7c87ea96bbd9c">gaussPts</a>;</div>
 <div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span>}</div>
 </div>
 <div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span> </div>
 <div class="foldopen" id="foldopen01257" data-start="{" data-end="}">
-<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8d917e73cbaa9f177cdea72e1e7500dd"> 1257</a></span><span class="keyword">auto</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8d917e73cbaa9f177cdea72e1e7500dd">ForcesAndSourcesCore::UserDataOperator::getFTensor0IntegrationWeight</a>() {</div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8d917e73cbaa9f177cdea72e1e7500dd"> 1257</a></span><span class="keyword">auto</span> ForcesAndSourcesCore::UserDataOperator::getFTensor0IntegrationWeight() {</div>
 <div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classFTensor_1_1Tensor0.html">FTensor::Tensor0&lt;FTensor::PackPtr&lt;double *, 1&gt;</a>&gt;(</div>
 <div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>      &amp;(getGaussPts()(getGaussPts().size1() - 1, 0)));</div>
 <div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>}</div>
@@ -1491,33 +1491,33 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span><span class="comment">// }</span></div>
 <div class="line"><a id="l01267" name="l01267"></a><span class="lineno"> 1267</span> </div>
 <div class="foldopen" id="foldopen01268" data-start="{" data-end="}">
-<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#abedc738563813c0dd4011cd892855947"> 1268</a></span><a class="code hl_struct" href="structMoFEM_1_1ForcesAndSourcesCore.html">ForcesAndSourcesCore</a> *<a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#abedc738563813c0dd4011cd892855947">ForcesAndSourcesCore::UserDataOperator::getPtrFE</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01268" name="l01268"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#abedc738563813c0dd4011cd892855947"> 1268</a></span><a class="code hl_struct" href="structMoFEM_1_1ForcesAndSourcesCore.html">ForcesAndSourcesCore</a> *ForcesAndSourcesCore::UserDataOperator::getPtrFE()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>  <span class="keywordflow">return</span> ptrFE;</div>
 <div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>}</div>
 </div>
 <div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span> </div>
 <div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span><a class="code hl_struct" href="structMoFEM_1_1ForcesAndSourcesCore.html">ForcesAndSourcesCore</a> *</div>
 <div class="foldopen" id="foldopen01273" data-start="{" data-end="}">
-<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ad520012b9b623fb90b294b8de3c5f0e0"> 1273</a></span><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ad520012b9b623fb90b294b8de3c5f0e0">ForcesAndSourcesCore::UserDataOperator::getSidePtrFE</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01273" name="l01273"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ad520012b9b623fb90b294b8de3c5f0e0"> 1273</a></span>ForcesAndSourcesCore::UserDataOperator::getSidePtrFE()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>  <span class="keywordflow">return</span> ptrFE-&gt;<a class="code hl_variable" href="structMoFEM_1_1ForcesAndSourcesCore.html#a4a88ef10b94b2c5103ec4eb33035cfa8">sidePtrFE</a>;</div>
 <div class="line"><a id="l01275" name="l01275"></a><span class="lineno"> 1275</span>}</div>
 </div>
 <div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span> </div>
 <div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span><a class="code hl_struct" href="structMoFEM_1_1ForcesAndSourcesCore.html">ForcesAndSourcesCore</a> *</div>
 <div class="foldopen" id="foldopen01278" data-start="{" data-end="}">
-<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa94b82c0cbbbab075bfa938e4ac53d4c"> 1278</a></span><a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa94b82c0cbbbab075bfa938e4ac53d4c">ForcesAndSourcesCore::UserDataOperator::getRefinePtrFE</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01278" name="l01278"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa94b82c0cbbbab075bfa938e4ac53d4c"> 1278</a></span>ForcesAndSourcesCore::UserDataOperator::getRefinePtrFE()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01279" name="l01279"></a><span class="lineno"> 1279</span>  <span class="keywordflow">return</span> ptrFE-&gt;<a class="code hl_variable" href="structMoFEM_1_1ForcesAndSourcesCore.html#acb982fc7420ec975cf875425a9288c2e">refinePtrFE</a>;</div>
 <div class="line"><a id="l01280" name="l01280"></a><span class="lineno"> 1280</span>}</div>
 </div>
 <div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span> </div>
 <div class="foldopen" id="foldopen01282" data-start="{" data-end="}">
-<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8c24ba4a5a415ae0b9b1a3da21cfe066"> 1282</a></span><a class="code hl_class" href="classUBlasMatrix_3_01double_01_4.html">MatrixDouble</a> &amp;<a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8c24ba4a5a415ae0b9b1a3da21cfe066">ForcesAndSourcesCore::UserDataOperator::getCoordsAtGaussPts</a>() {</div>
+<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a8c24ba4a5a415ae0b9b1a3da21cfe066"> 1282</a></span><a class="code hl_class" href="classUBlasMatrix_3_01double_01_4.html">MatrixDouble</a> &amp;ForcesAndSourcesCore::UserDataOperator::getCoordsAtGaussPts() {</div>
 <div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_struct" href="structMoFEM_1_1ForcesAndSourcesCore.html">ForcesAndSourcesCore</a> *<span class="keyword">&gt;</span>(ptrFE)-&gt;<a class="code hl_variable" href="structMoFEM_1_1ForcesAndSourcesCore.html#a60462701576c247bfef0182a4500c770">coordsAtGaussPts</a>;</div>
 <div class="line"><a id="l01284" name="l01284"></a><span class="lineno"> 1284</span>}</div>
 </div>
 <div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span> </div>
 <div class="foldopen" id="foldopen01286" data-start="{" data-end="}">
-<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5022d618bbaf375d0a07588e50a297a5"> 1286</a></span><span class="keyword">auto</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5022d618bbaf375d0a07588e50a297a5">ForcesAndSourcesCore::UserDataOperator::getFTensor1CoordsAtGaussPts</a>() {</div>
+<div class="line"><a id="l01286" name="l01286"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#a5022d618bbaf375d0a07588e50a297a5"> 1286</a></span><span class="keyword">auto</span> ForcesAndSourcesCore::UserDataOperator::getFTensor1CoordsAtGaussPts() {</div>
 <div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classFTensor_1_1Tensor1.html">FTensor::Tensor1&lt;FTensor::PackPtr&lt;double *, 3&gt;</a>, 3&gt;(</div>
 <div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span>      &amp;getCoordsAtGaussPts()(0, 0), &amp;getCoordsAtGaussPts()(0, 1),</div>
 <div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span>      &amp;getCoordsAtGaussPts()(0, 2));</div>
@@ -1525,13 +1525,13 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span> </div>
 <div class="foldopen" id="foldopen01292" data-start="{" data-end="}">
-<div class="line"><a id="l01292" name="l01292"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa0f5b68e1ab8bc7e79ea1b3d969eb400"> 1292</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa0f5b68e1ab8bc7e79ea1b3d969eb400">ForcesAndSourcesCore::UserDataOperator::getMeasure</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l01292" name="l01292"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa0f5b68e1ab8bc7e79ea1b3d969eb400"> 1292</a></span><span class="keywordtype">double</span> ForcesAndSourcesCore::UserDataOperator::getMeasure()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_struct" href="structMoFEM_1_1ForcesAndSourcesCore.html">ForcesAndSourcesCore</a> *<span class="keyword">&gt;</span>(ptrFE)-&gt;<a class="code hl_variable" href="structMoFEM_1_1ForcesAndSourcesCore.html#a4ee814b2620771684ec2cebc413b4421">elementMeasure</a>;</div>
 <div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>}</div>
 </div>
 <div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span> </div>
 <div class="foldopen" id="foldopen01296" data-start="{" data-end="}">
-<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aaf1b5273fe0f90ae0048154456ba96ea"> 1296</a></span><span class="keywordtype">double</span> &amp;<a class="code hl_function" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aa0f5b68e1ab8bc7e79ea1b3d969eb400">ForcesAndSourcesCore::UserDataOperator::getMeasure</a>() {</div>
+<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"><a class="line" href="structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#aaf1b5273fe0f90ae0048154456ba96ea"> 1296</a></span><span class="keywordtype">double</span> &amp;ForcesAndSourcesCore::UserDataOperator::getMeasure() {</div>
 <div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_struct" href="structMoFEM_1_1ForcesAndSourcesCore.html">ForcesAndSourcesCore</a> *<span class="keyword">&gt;</span>(ptrFE)-&gt;<a class="code hl_variable" href="structMoFEM_1_1ForcesAndSourcesCore.html#a4ee814b2620771684ec2cebc413b4421">elementMeasure</a>;</div>
 <div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>}</div>
 </div>
@@ -1670,6 +1670,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span><span class="comment"> *</span></div>
 <div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span><span class="comment"> **/</span></div>
 <div class="ttc" id="aclassE_html"><div class="ttname"><a href="classE.html">E</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor0_html"><div class="ttname"><a href="classFTensor_1_1Tensor0.html">FTensor::Tensor0</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor0_8hpp_source.html#l00016">Tensor0.hpp:17</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor1__value_8hpp_source.html#l00008">Tensor1_value.hpp:9</a></div></div>
 <div class="ttc" id="aclassUBlasMatrix_3_01double_01_4_html"><div class="ttname"><a href="classUBlasMatrix_3_01double_01_4.html">UBlasMatrix&lt; double &gt;</a></div></div>

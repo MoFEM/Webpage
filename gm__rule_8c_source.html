@@ -373,7 +373,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  <span class="keywordflow">for</span> ( <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> = 0; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> &lt;= s; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>++ )</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  {</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    weight = ( double ) one_pm;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    weight = ( <a class="code hl_class" href="classdouble.html">double</a> ) one_pm;</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    j_hi = <a class="code hl_function" href="gm__rule_8c.html#a36f800e4593bdd258feaeb43cf42adf7">i4_max</a> ( <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>, <a class="code hl_function" href="gm__rule_8c.html#a36f800e4593bdd258feaeb43cf42adf7">i4_max</a> ( d, d + <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> - <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> ) );</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
@@ -381,11 +381,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    {</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      <span class="keywordflow">if</span> ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> &lt;= <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> )</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        weight = weight * ( double ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> );</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        weight = weight * ( <a class="code hl_class" href="classdouble.html">double</a> ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> );</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      }</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      <span class="keywordflow">if</span> ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> &lt;= d )</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      {</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        weight = weight * ( double ) ( d + <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> - 2 * <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> );</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        weight = weight * ( <a class="code hl_class" href="classdouble.html">double</a> ) ( d + <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> - 2 * <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> );</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      }</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="keywordflow">if</span> ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> &lt;= 2 * s )</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      {</div>
@@ -393,11 +393,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      }</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <span class="keywordflow">if</span> ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> &lt;= <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> )</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        weight = weight / ( double ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> );</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        weight = weight / ( <a class="code hl_class" href="classdouble.html">double</a> ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> );</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      }</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <span class="keywordflow">if</span> ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> &lt;= d + <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> - <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> )</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      {</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        weight = weight / ( double ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> );</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        weight = weight / ( <a class="code hl_class" href="classdouble.html">double</a> ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> );</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      }</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    }</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
@@ -415,8 +415,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      w[<a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a>] = weight;</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      <span class="keywordflow">for</span> ( dim = 0; dim &lt; dim_num; dim++ )</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      {</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        x[dim+<a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a>*dim_num] = ( double ) ( 2 * beta[dim+1] + 1 )</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                         / ( double ) ( d + <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> - 2 * <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> );</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        x[dim+<a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a>*dim_num] = ( <a class="code hl_class" href="classdouble.html">double</a> ) ( 2 * beta[dim+1] + 1 )</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                         / ( <a class="code hl_class" href="classdouble.html">double</a> ) ( d + <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> - 2 * <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> );</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      }</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> = <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> + 1;</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
@@ -926,7 +926,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span> </div>
 <div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>  <span class="keywordflow">for</span> ( <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> = 1; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> &lt;= <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>++ )</div>
 <div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>  {</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    value = value * ( double ) ( <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> );</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    value = value * ( <a class="code hl_class" href="classdouble.html">double</a> ) ( <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> );</div>
 <div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>  }</div>
 <div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span> </div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>  <span class="keywordflow">return</span> value;</div>
@@ -1072,7 +1072,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>      *seed = *seed + <a class="code hl_function" href="gm__rule_8c.html#ad1935d1c08580ef92b8e690f3c47a1ae">i4_huge</a>;</div>
 <div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>    }</div>
 <div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span> </div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    r[<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>] = ( double ) ( *seed ) * 4.656612875E-10;</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    r[<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>] = ( <a class="code hl_class" href="classdouble.html">double</a> ) ( *seed ) * 4.656612875E-10;</div>
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>  }</div>
 <div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
 <div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>  <span class="keywordflow">return</span> r;</div>
@@ -1135,14 +1135,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>    <span class="keywordflow">for</span> ( <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> = 1; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> &lt;= expon[dim]; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>++ )</div>
 <div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>    {</div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>      <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> = <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> + 1;</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>      value = value * ( double ) ( <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> ) / ( double ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> );</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>      value = value * ( <a class="code hl_class" href="classdouble.html">double</a> ) ( <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> ) / ( <a class="code hl_class" href="classdouble.html">double</a> ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> );</div>
 <div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>    }</div>
 <div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>  }</div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span> </div>
 <div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>  <span class="keywordflow">for</span> ( dim = 0; dim &lt; dim_num; dim++ )</div>
 <div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>  {</div>
 <div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>    <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> = <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> + 1;</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>    value = value / ( double ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> );</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>    value = value / ( <a class="code hl_class" href="classdouble.html">double</a> ) ( <a class="code hl_variable" href="matrix__function_8cpp.html#ac93d777bbf9336cad5c09007df789c95">k</a> );</div>
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>  }</div>
 <div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span> </div>
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>  <span class="keywordflow">return</span> value;</div>
@@ -1432,7 +1432,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>  volume = 1.0;</div>
 <div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>  <span class="keywordflow">for</span> ( <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> = 1; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> &lt;= dim_num; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>++ )</div>
 <div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span>  {</div>
-<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>    volume = volume / ( ( double ) <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> );</div>
+<div class="line"><a id="l01261" name="l01261"></a><span class="lineno"> 1261</span>    volume = volume / ( ( <a class="code hl_class" href="classdouble.html">double</a> ) <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> );</div>
 <div class="line"><a id="l01262" name="l01262"></a><span class="lineno"> 1262</span>  }</div>
 <div class="line"><a id="l01263" name="l01263"></a><span class="lineno"> 1263</span> </div>
 <div class="line"><a id="l01264" name="l01264"></a><span class="lineno"> 1264</span>  <span class="keywordflow">return</span> volume;</div>
@@ -1492,6 +1492,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span> </div>
 <div class="ttc" id="aapprox__sphere_8cpp_html_a188caae18b60b66f9f44214c7e28ac1f"><div class="ttname"><a href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a></div><div class="ttdeci">constexpr double a</div><div class="ttdef"><b>Definition</b> <a href="approx__sphere_8cpp_source.html#l00030">approx_sphere.cpp:30</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="agm__rule_8c_html_a02d8f81e512334c1e2e5be025c41afa8"><div class="ttname"><a href="gm__rule_8c.html#a02d8f81e512334c1e2e5be025c41afa8">timestamp</a></div><div class="ttdeci">void timestamp(void)</div><div class="ttdef"><b>Definition</b> <a href="gm__rule_8c_source.html#l01268">gm_rule.c:1268</a></div></div>
 <div class="ttc" id="agm__rule_8c_html_a36f800e4593bdd258feaeb43cf42adf7"><div class="ttname"><a href="gm__rule_8c.html#a36f800e4593bdd258feaeb43cf42adf7">i4_max</a></div><div class="ttdeci">int i4_max(int i1, int i2)</div><div class="ttdef"><b>Definition</b> <a href="gm__rule_8c_source.html#l00459">gm_rule.c:459</a></div></div>
 <div class="ttc" id="agm__rule_8c_html_a3a0f06f55c8d1b94209ab390a72b9ba9"><div class="ttname"><a href="gm__rule_8c.html#a3a0f06f55c8d1b94209ab390a72b9ba9">r8_factorial</a></div><div class="ttdeci">double r8_factorial(int n)</div><div class="ttdef"><b>Definition</b> <a href="gm__rule_8c_source.html#l00730">gm_rule.c:730</a></div></div>

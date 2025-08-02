@@ -704,7 +704,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="foldopen" id="foldopen00556" data-start="{" data-end="}">
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno"><a class="line" href="h1__hdiv__hcurl__l2_8h.html#ab43f51f752539268460cebde75af2486">  556</a></span>PetscErrorCode <a class="code hl_function" href="h1_8c.html#ab43f51f752539268460cebde75af2486">H1_EdgeShapeDiffMBTETinvJ</a>(<span class="keywordtype">int</span> *base_p, <span class="keywordtype">int</span> *p,</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                                         <span class="keywordtype">double</span> *edge_diffN[], <span class="keywordtype">double</span> *invJac,</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                                         <span class="keywordtype">double</span> *edge_diffN[], <span class="keywordtype">double</span> *<a class="code hl_variable" href="HookeElement_8hpp.html#ad231e62173ae2a67709c00b3c866a198">invJac</a>,</div>
 <div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>                                         <span class="keywordtype">double</span> *edge_diffNinvJac[], <span class="keywordtype">int</span> GDIM) {</div>
 <div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>  <span class="keywordtype">int</span> ee = 0, ii, gg;</div>
@@ -713,7 +713,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>      <span class="keywordflow">for</span> (gg = 0; gg &lt; GDIM; gg++) {</div>
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        <span class="keywordtype">int</span> shift1 = <a class="code hl_define" href="h1__hdiv__hcurl__l2_8h.html#a5db727e1f969a6d48385130246d08be0">NBEDGE_H1</a>(base_p[ee]) * gg;</div>
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        <span class="keywordtype">int</span> shift2 = <a class="code hl_define" href="h1__hdiv__hcurl__l2_8h.html#a5db727e1f969a6d48385130246d08be0">NBEDGE_H1</a>(p[ee]) * gg;</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        cblas_dgemv(CblasRowMajor, CblasTrans, 3, 3, 1., invJac, 3,</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        cblas_dgemv(CblasRowMajor, CblasTrans, 3, 3, 1., <a class="code hl_variable" href="HookeElement_8hpp.html#ad231e62173ae2a67709c00b3c866a198">invJac</a>, 3,</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>                    &amp;(edge_diffN[ee])[3 * shift1 + 3 * ii], 1, 0.,</div>
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>                    &amp;(edge_diffNinvJac[ee])[3 * shift2 + 3 * ii], 1);</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>      }</div>
@@ -724,7 +724,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="foldopen" id="foldopen00574" data-start="{" data-end="}">
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno"><a class="line" href="h1__hdiv__hcurl__l2_8h.html#aa51ce682717a8f78d25d7007d00ec15c">  574</a></span>PetscErrorCode <a class="code hl_function" href="h1_8c.html#aa51ce682717a8f78d25d7007d00ec15c">H1_FaceShapeDiffMBTETinvJ</a>(<span class="keywordtype">int</span> *base_p, <span class="keywordtype">int</span> *p,</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>                                         <span class="keywordtype">double</span> *face_diffN[], <span class="keywordtype">double</span> *invJac,</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>                                         <span class="keywordtype">double</span> *face_diffN[], <span class="keywordtype">double</span> *<a class="code hl_variable" href="HookeElement_8hpp.html#ad231e62173ae2a67709c00b3c866a198">invJac</a>,</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>                                         <span class="keywordtype">double</span> *face_diffNinvJac[], <span class="keywordtype">int</span> GDIM) {</div>
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>  <span class="keywordtype">int</span> ff = 0, ii, gg;</div>
@@ -733,7 +733,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>      <span class="keywordflow">for</span> (gg = 0; gg &lt; GDIM; gg++) {</div>
 <div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>        <span class="keywordtype">int</span> shift1 = <a class="code hl_define" href="h1__hdiv__hcurl__l2_8h.html#ade63e3c6dba0afe9eeeb22af31d21606">NBFACETRI_H1</a>(base_p[ff]) * gg;</div>
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>        <span class="keywordtype">int</span> shift2 = <a class="code hl_define" href="h1__hdiv__hcurl__l2_8h.html#ade63e3c6dba0afe9eeeb22af31d21606">NBFACETRI_H1</a>(p[ff]) * gg;</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>        cblas_dgemv(CblasRowMajor, CblasTrans, 3, 3, 1., invJac, 3,</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>        cblas_dgemv(CblasRowMajor, CblasTrans, 3, 3, 1., <a class="code hl_variable" href="HookeElement_8hpp.html#ad231e62173ae2a67709c00b3c866a198">invJac</a>, 3,</div>
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>                    &amp;(face_diffN[ff])[3 * shift1 + 3 * ii], 1, 0.,</div>
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>                    &amp;(face_diffNinvJac[ff])[3 * shift2 + 3 * ii], 1);</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>      }</div>
@@ -744,7 +744,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="foldopen" id="foldopen00592" data-start="{" data-end="}">
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno"><a class="line" href="h1__hdiv__hcurl__l2_8h.html#a4232b1584b298d7f0c3295f8be17f578">  592</a></span>PetscErrorCode <a class="code hl_function" href="h1_8c.html#a4232b1584b298d7f0c3295f8be17f578">H1_VolumeShapeDiffMBTETinvJ</a>(<span class="keywordtype">int</span> base_p, <span class="keywordtype">int</span> p,</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>                                           <span class="keywordtype">double</span> *volume_diffN, <span class="keywordtype">double</span> *invJac,</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>                                           <span class="keywordtype">double</span> *volume_diffN, <span class="keywordtype">double</span> *<a class="code hl_variable" href="HookeElement_8hpp.html#ad231e62173ae2a67709c00b3c866a198">invJac</a>,</div>
 <div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>                                           <span class="keywordtype">double</span> *volume_diffNinvJac,</div>
 <div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>                                           <span class="keywordtype">int</span> GDIM) {</div>
 <div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>  <a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
@@ -753,7 +753,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>    <span class="keywordflow">for</span> (gg = 0; gg &lt; GDIM; gg++) {</div>
 <div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>      <span class="keywordtype">int</span> shift1 = <a class="code hl_define" href="h1__hdiv__hcurl__l2_8h.html#a09bdfd6be0a7ff2fedf8ad91b690954f">NBVOLUMETET_H1</a>(base_p) * gg;</div>
 <div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>      <span class="keywordtype">int</span> shift2 = <a class="code hl_define" href="h1__hdiv__hcurl__l2_8h.html#a09bdfd6be0a7ff2fedf8ad91b690954f">NBVOLUMETET_H1</a>(p) * gg;</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>      cblas_dgemv(CblasRowMajor, CblasTrans, 3, 3, 1., invJac, 3,</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>      cblas_dgemv(CblasRowMajor, CblasTrans, 3, 3, 1., <a class="code hl_variable" href="HookeElement_8hpp.html#ad231e62173ae2a67709c00b3c866a198">invJac</a>, 3,</div>
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>                  &amp;(volume_diffN)[3 * shift1 + 3 * ii], 1, 0.,</div>
 <div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>                  &amp;(volume_diffNinvJac)[3 * shift2 + 3 * ii], 1);</div>
 <div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    }</div>
@@ -1441,6 +1441,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>  <a class="code hl_define" href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a>(0);</div>
 <div class="line"><a id="l01274" name="l01274"></a><span class="lineno"> 1274</span>}</div>
 </div>
+<div class="ttc" id="aHookeElement_8hpp_html_ad231e62173ae2a67709c00b3c866a198"><div class="ttname"><a href="HookeElement_8hpp.html#ad231e62173ae2a67709c00b3c866a198">invJac</a></div><div class="ttdeci">MatrixDouble invJac</div><div class="ttdef"><b>Definition</b> <a href="HookeElement_8hpp_source.html#l00683">HookeElement.hpp:683</a></div></div>
 <div class="ttc" id="adefinitions_8h_html"><div class="ttname"><a href="definitions_8h.html">definitions.h</a></div><div class="ttdoc">useful compiler derivatives and definitions</div></div>
 <div class="ttc" id="adefinitions_8h_html_a59cd650c2f6d3e0dc1ad1c29821e8692"><div class="ttname"><a href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a></div><div class="ttdeci">#define MoFEMFunctionReturnHot(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00463">definitions.h:463</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a></div><div class="ttdeci">@ L2</div><div class="ttdoc">field with C-1 continuity</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00088">definitions.h:88</a></div></div>

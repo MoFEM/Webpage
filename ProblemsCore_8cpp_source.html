@@ -172,7 +172,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordflow">if</span> (verb == -1)</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    verb = verbose;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  EntityHandle meshset;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().create_meshset(MESHSET_SET, meshset);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().tag_set_data(th_ProblemId, &amp;meshset, 1, &amp;<span class="keywordtype">id</span>);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
@@ -258,7 +258,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2ea2ed69dd8a1568d1e9b634b9fb37df873">MOFEM_NOT_FOUND</a>, <span class="stringliteral">&quot;no such problem like &lt; %s &gt;&quot;</span>,</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>             name.c_str());</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  }</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keyword">const</span> EntityHandle meshset = p_miit-&gt;meshset;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = p_miit-&gt;meshset;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  pRoblems.get&lt;<a class="code hl_struct" href="structMoFEM_1_1Problem__mi__tag.html">Problem_mi_tag</a>&gt;().erase(p_miit);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().delete_entities(&amp;meshset, 1);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
@@ -884,7 +884,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>          ordered_unique&lt;</div>
 <div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span> </div>
 <div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>              tag&lt;Ent_mi_tag&gt;,</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>              const_mem_fun&lt;<a class="code hl_typedef" href="structMoFEM_1_1FieldEntity.html#a91b26dddc3e36250148820bd017514f7">FieldEntity::interface_type_RefEntity</a>, EntityHandle,</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>              const_mem_fun&lt;<a class="code hl_typedef" href="structMoFEM_1_1FieldEntity.html#a91b26dddc3e36250148820bd017514f7">FieldEntity::interface_type_RefEntity</a>, <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a>,</div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>                            &amp;<a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#af0c40ab44e4bde74024bf0263a07f22a">FieldEntity::getEnt</a>&gt;&gt;</div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span> </div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>          &gt;&gt;;</div>
@@ -966,7 +966,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>      boost::shared_ptr&lt;FieldEntity&gt;,</div>
 <div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>      indexed_by&lt;ordered_unique&lt;</div>
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>          tag&lt;Ent_mi_tag&gt;, const_mem_fun&lt;<a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#aec969ce8945f5dfded17acbad7e69825">FieldEntity::interface_RefEntity</a>,</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>                                         EntityHandle, &amp;<a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#af0c40ab44e4bde74024bf0263a07f22a">FieldEntity::getEnt</a>&gt;&gt;&gt;&gt;</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>                                         <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a>, &amp;<a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#af0c40ab44e4bde74024bf0263a07f22a">FieldEntity::getEnt</a>&gt;&gt;&gt;&gt;</div>
 <div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>      FieldEntity_view_multiIndex;</div>
 <div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span> </div>
 <div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>  FieldEntity_view_multiIndex ents_view;</div>
@@ -1096,6 +1096,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aProblemsCore_8cpp_html_a5e1d815e3668def796654898701e49f7"><div class="ttname"><a href="ProblemsCore_8cpp.html#a5e1d815e3668def796654898701e49f7">ProblemCoreFunctionBegin</a></div><div class="ttdeci">#define ProblemCoreFunctionBegin</div><div class="ttdef"><b>Definition</b> <a href="ProblemsCore_8cpp_source.html#l00008">ProblemsCore.cpp:8</a></div></div>
 <div class="ttc" id="aProblemsCore_8cpp_html_ab60e656bdbd9ae005d16147a00e42f98"><div class="ttname"><a href="ProblemsCore_8cpp.html#ab60e656bdbd9ae005d16147a00e42f98">SET_BASIC_METHOD</a></div><div class="ttdeci">#define SET_BASIC_METHOD(METHOD, PROBLEM_PTR)</div><div class="ttdef"><b>Definition</b> <a href="ProblemsCore_8cpp_source.html#l00348">ProblemsCore.cpp:348</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca8d51b8918fe33e9750d285a25977f435"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca8d51b8918fe33e9750d285a25977f435">DEFAULT_VERBOSITY</a></div><div class="ttdeci">@ DEFAULT_VERBOSITY</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00220">definitions.h:220</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69db"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69db">RowColData</a></div><div class="ttdeci">RowColData</div><div class="ttdoc">RowColData.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>

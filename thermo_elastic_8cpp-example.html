@@ -1062,23 +1062,23 @@ $(function() {
 <div class="line">        <a class="code hl_variable" href="structThermoElasticProblem.html#a3e44e41e60df85337dc7d0695854e3f9">mField</a>, pipeline, <span class="stringliteral">&quot;U&quot;</span>, <span class="stringliteral">&quot;MAT_ELASTIC&quot;</span>, <span class="stringliteral">&quot;MAT_THERMAL&quot;</span>,</div>
 <div class="line">        <span class="stringliteral">&quot;MAT_THERMOELASTIC&quot;</span>, Sev::inform);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> resistance = [heat_conductivity_ptr](<span class="keyword">const</span> double, <span class="keyword">const</span> double,</div>
-<div class="line">                                              <span class="keyword">const</span> double) {</div>
+<div class="line">    <span class="keyword">auto</span> resistance = [heat_conductivity_ptr](<span class="keyword">const</span> <a id="_a136" name="_a136"></a><a class="code hl_class" href="classdouble.html">double</a>, <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>,</div>
+<div class="line">                                              <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>) {</div>
 <div class="line">      <span class="keywordflow">return</span> (1. / (*heat_conductivity_ptr));</div>
 <div class="line">    };</div>
 <div class="line">    <span class="comment">// negative value is consequence of symmetric system</span></div>
-<div class="line">    <span class="keyword">auto</span> capacity = [heat_capacity_ptr](<span class="keyword">const</span> double, <span class="keyword">const</span> double,</div>
-<div class="line">                                        <span class="keyword">const</span> double) {</div>
+<div class="line">    <span class="keyword">auto</span> capacity = [heat_capacity_ptr](<span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>, <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>,</div>
+<div class="line">                                        <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>) {</div>
 <div class="line">      <span class="keywordflow">return</span> -(*heat_capacity_ptr);</div>
 <div class="line">    };</div>
-<div class="line">    <span class="keyword">auto</span> unity = [](<span class="keyword">const</span> double, <span class="keyword">const</span> double, <span class="keyword">const</span> double) <span class="keyword">constexpr</span> {</div>
+<div class="line">    <span class="keyword">auto</span> unity = [](<span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>, <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>, <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>) <span class="keyword">constexpr</span> {</div>
 <div class="line">      <span class="keywordflow">return</span> -1.;</div>
 <div class="line">    };</div>
 <div class="line">    pipeline.push_back(</div>
-<div class="line">        <span class="keyword">new</span> <a id="a136" name="a136"></a><a class="code hl_typedef" href="namespaceThermalOps.html#aa1efa8c82665a5df95a83675e56ad954">OpHdivFlux</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, mat_flux_ptr, resistance, mat_grad_ptr));</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="a137" name="a137"></a><a class="code hl_typedef" href="namespaceThermalOps.html#ab1918bf4aa2744c9c9483d3bd1215fd9">OpHDivTemp</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, vec_temp_ptr, unity));</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="a138" name="a138"></a><a class="code hl_typedef" href="namespaceThermalOps.html#ac17d2b808cd84a6bc359202e21075c0f">OpBaseDivFlux</a>(<span class="stringliteral">&quot;T&quot;</span>, vec_temp_div_ptr, unity));</div>
-<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="a139" name="a139"></a><a class="code hl_typedef" href="namespaceThermalOps.html#ae5133ccb4d49ee8606b965d332bc536a">OpBaseDotT</a>(<span class="stringliteral">&quot;T&quot;</span>, vec_temp_dot_ptr, capacity));</div>
+<div class="line">        <span class="keyword">new</span> <a id="a137" name="a137"></a><a class="code hl_typedef" href="namespaceThermalOps.html#aa1efa8c82665a5df95a83675e56ad954">OpHdivFlux</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, mat_flux_ptr, resistance, mat_grad_ptr));</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="a138" name="a138"></a><a class="code hl_typedef" href="namespaceThermalOps.html#ab1918bf4aa2744c9c9483d3bd1215fd9">OpHDivTemp</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, vec_temp_ptr, unity));</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="a139" name="a139"></a><a class="code hl_typedef" href="namespaceThermalOps.html#ac17d2b808cd84a6bc359202e21075c0f">OpBaseDivFlux</a>(<span class="stringliteral">&quot;T&quot;</span>, vec_temp_div_ptr, unity));</div>
+<div class="line">    pipeline.push_back(<span class="keyword">new</span> <a id="a140" name="a140"></a><a class="code hl_typedef" href="namespaceThermalOps.html#ae5133ccb4d49ee8606b965d332bc536a">OpBaseDotT</a>(<span class="stringliteral">&quot;T&quot;</span>, vec_temp_dot_ptr, capacity));</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Set source terms</span></div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> DomainNaturalBCRhs::AddFluxToPipeline&lt;OpHeatSource&gt;::add(</div>
@@ -1108,32 +1108,32 @@ $(function() {
 <div class="line">    <span class="keyword">auto</span> mat_D_ptr = hencky_common_data_ptr-&gt;matDPtr;</div>
 <div class="line">    <span class="keyword">auto</span> mat_grad_ptr = hencky_common_data_ptr-&gt;matGradPtr;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> resistance = [heat_conductivity_ptr](<span class="keyword">const</span> double, <span class="keyword">const</span> double,</div>
-<div class="line">                                              <span class="keyword">const</span> double) {</div>
+<div class="line">    <span class="keyword">auto</span> resistance = [heat_conductivity_ptr](<span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>, <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>,</div>
+<div class="line">                                              <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>) {</div>
 <div class="line">      <span class="keywordflow">return</span> (1. / (*heat_conductivity_ptr));</div>
 <div class="line">    };</div>
-<div class="line">    <span class="keyword">auto</span> capacity = [heat_capacity_ptr](<span class="keyword">const</span> double, <span class="keyword">const</span> double,</div>
-<div class="line">                                        <span class="keyword">const</span> double) {</div>
+<div class="line">    <span class="keyword">auto</span> capacity = [heat_capacity_ptr](<span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>, <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>,</div>
+<div class="line">                                        <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>) {</div>
 <div class="line">      <span class="keywordflow">return</span> -(*heat_capacity_ptr);</div>
 <div class="line">    };</div>
 <div class="line">    pipeline.push_back(</div>
-<div class="line">        <span class="keyword">new</span> <a id="a140" name="a140"></a><a class="code hl_typedef" href="namespaceThermalOps.html#aec8522142fc568b38f42fdd8f340eec0">OpHdivHdiv</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, <span class="stringliteral">&quot;FLUX&quot;</span>, resistance, mat_grad_ptr));</div>
+<div class="line">        <span class="keyword">new</span> <a id="a141" name="a141"></a><a class="code hl_typedef" href="namespaceThermalOps.html#aec8522142fc568b38f42fdd8f340eec0">OpHdivHdiv</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, <span class="stringliteral">&quot;FLUX&quot;</span>, resistance, mat_grad_ptr));</div>
 <div class="line">    pipeline.push_back(</div>
-<div class="line">        <span class="keyword">new</span> <a id="a141" name="a141"></a><a class="code hl_typedef" href="namespaceThermalOps.html#a616725577287e53a3eff726d15c30da9">OpHdivT</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, <span class="stringliteral">&quot;T&quot;</span>, []() <span class="keyword">constexpr</span> { <span class="keywordflow">return</span> -1; }, <span class="keyword">true</span>));</div>
+<div class="line">        <span class="keyword">new</span> <a id="a142" name="a142"></a><a class="code hl_typedef" href="namespaceThermalOps.html#a616725577287e53a3eff726d15c30da9">OpHdivT</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, <span class="stringliteral">&quot;T&quot;</span>, []() <span class="keyword">constexpr</span> { <span class="keywordflow">return</span> -1; }, <span class="keyword">true</span>));</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">auto</span> mat_flux_ptr = boost::make_shared&lt;MatrixDouble&gt;();</div>
 <div class="line">    pipeline.push_back(</div>
 <div class="line">        <span class="keyword">new</span> <a class="code hl_struct" href="structMoFEM_1_1OpCalculateHVecVectorField.html">OpCalculateHVecVectorField&lt;3, SPACE_DIM&gt;</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, mat_flux_ptr));</div>
 <div class="line"> </div>
 <div class="line">    pipeline.push_back(</div>
-<div class="line">        <span class="keyword">new</span> <a id="a142" name="a142"></a><a class="code hl_typedef" href="namespaceThermalOps.html#a2d9d20159a7559792cdde9543759e123">OpHdivU</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, <span class="stringliteral">&quot;U&quot;</span>, mat_flux_ptr, resistance, mat_grad_ptr));</div>
+<div class="line">        <span class="keyword">new</span> <a id="a143" name="a143"></a><a class="code hl_typedef" href="namespaceThermalOps.html#a2d9d20159a7559792cdde9543759e123">OpHdivU</a>(<span class="stringliteral">&quot;FLUX&quot;</span>, <span class="stringliteral">&quot;U&quot;</span>, mat_flux_ptr, resistance, mat_grad_ptr));</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> opThermoElasticFactoryDomainLhs&lt;SPACE_DIM, AT, IT, DomainEleOp&gt;(</div>
 <div class="line">        <a class="code hl_variable" href="structThermoElasticProblem.html#a3e44e41e60df85337dc7d0695854e3f9">mField</a>, pipeline, <span class="stringliteral">&quot;U&quot;</span>, <span class="stringliteral">&quot;T&quot;</span>, <span class="stringliteral">&quot;MAT_ELASTIC&quot;</span>, <span class="stringliteral">&quot;MAT_THERMAL&quot;</span>,</div>
 <div class="line">        <span class="stringliteral">&quot;MAT_THERMOELASTIC&quot;</span>, Sev::inform);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> op_capacity = <span class="keyword">new</span> <a id="a143" name="a143"></a><a class="code hl_typedef" href="namespaceThermalOps.html#a031223a4a7e1e9d4faaa1ef98f901d28">OpCapacity</a>(<span class="stringliteral">&quot;T&quot;</span>, <span class="stringliteral">&quot;T&quot;</span>, capacity);</div>
-<div class="line">    op_capacity-&gt;feScalingFun = [](<span class="keyword">const</span> <a id="_a144" name="_a144"></a><a class="code hl_class" href="classFEMethod.html">FEMethod</a> *fe_ptr) {</div>
+<div class="line">    <span class="keyword">auto</span> op_capacity = <span class="keyword">new</span> <a id="a144" name="a144"></a><a class="code hl_typedef" href="namespaceThermalOps.html#a031223a4a7e1e9d4faaa1ef98f901d28">OpCapacity</a>(<span class="stringliteral">&quot;T&quot;</span>, <span class="stringliteral">&quot;T&quot;</span>, capacity);</div>
+<div class="line">    op_capacity-&gt;feScalingFun = [](<span class="keyword">const</span> <a id="_a145" name="_a145"></a><a class="code hl_class" href="classFEMethod.html">FEMethod</a> *fe_ptr) {</div>
 <div class="line">      <span class="keywordflow">return</span> fe_ptr-&gt;ts_a;</div>
 <div class="line">    };</div>
 <div class="line">    pipeline.push_back(op_capacity);</div>
@@ -1174,7 +1174,7 @@ $(function() {
 <div class="line">        pipeline, <a class="code hl_variable" href="structThermoElasticProblem.html#a3e44e41e60df85337dc7d0695854e3f9">mField</a>, <span class="stringliteral">&quot;TBC&quot;</span>, {time_scale, time_flux_scaling}, <span class="stringliteral">&quot;FLUX&quot;</span>,</div>
 <div class="line">        Sev::inform);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">using </span>T = <a class="code hl_struct" href="structMoFEM_1_1NaturalBC_1_1Assembly.html">NaturalBC&lt;BoundaryEleOp&gt;::Assembly</a>&lt;<a id="a145" name="a145"></a><a class="code hl_enumvalue" href="group__mofem__forms.html#ggabb82cd10e89a1d4d25fa7756360b181ba2243b0abb08ad80d05c47e734f3134bc">PETSC</a>&gt;<a class="code hl_class" href="classLinearForm.html">::LinearForm&lt;GAUSS&gt;</a>;</div>
+<div class="line">    <span class="keyword">using </span>T = <a class="code hl_struct" href="structMoFEM_1_1NaturalBC_1_1Assembly.html">NaturalBC&lt;BoundaryEleOp&gt;::Assembly</a>&lt;<a id="a146" name="a146"></a><a class="code hl_enumvalue" href="group__mofem__forms.html#ggabb82cd10e89a1d4d25fa7756360b181ba2243b0abb08ad80d05c47e734f3134bc">PETSC</a>&gt;<a class="code hl_class" href="classLinearForm.html">::LinearForm&lt;GAUSS&gt;</a>;</div>
 <div class="line">    <span class="keyword">using </span>OpConvectionRhsBC =</div>
 <div class="line">        T::OpFlux&lt;ThermoElasticOps::ConvectionBcType&lt;BLOCKSET&gt;, 1, 1&gt;;</div>
 <div class="line">    <span class="keyword">using </span>OpRadiationRhsBC =</div>
@@ -1196,9 +1196,9 @@ $(function() {
 <div class="line">    <span class="comment">// would be not needed.</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">struct </span>OpTBCTimesNormalFlux</div>
-<div class="line">        : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt;BoundaryEleOp&gt;::Assembly&lt;PETSC&gt;<a id="_a146" name="_a146"></a><a class="code hl_struct" href="structMoFEM_1_1OpBaseImpl.html">::OpBase</a> {</div>
+<div class="line">        : <span class="keyword">public</span> <a class="code hl_struct" href="structMoFEM_1_1FormsIntegrators.html">FormsIntegrators</a>&lt;BoundaryEleOp&gt;::Assembly&lt;PETSC&gt;<a id="_a147" name="_a147"></a><a class="code hl_struct" href="structMoFEM_1_1OpBaseImpl.html">::OpBase</a> {</div>
 <div class="line"> </div>
-<div class="line">      <span class="keyword">using </span><a id="_a147" name="_a147"></a><a class="code hl_class" href="classOP.html">OP</a> = <a class="code hl_struct" href="structMoFEM_1_1FormsIntegrators_1_1Assembly.html">FormsIntegrators&lt;BoundaryEleOp&gt;::Assembly</a>&lt;<a class="code hl_enumvalue" href="group__mofem__forms.html#ggabb82cd10e89a1d4d25fa7756360b181ba2243b0abb08ad80d05c47e734f3134bc">PETSC</a>&gt;<a class="code hl_typedef" href="radiation_8cpp.html#a62d290f01cfc65a09faa805099b2e06f">::OpBase</a>;</div>
+<div class="line">      <span class="keyword">using </span><a id="_a148" name="_a148"></a><a class="code hl_class" href="classOP.html">OP</a> = <a class="code hl_struct" href="structMoFEM_1_1FormsIntegrators_1_1Assembly.html">FormsIntegrators&lt;BoundaryEleOp&gt;::Assembly</a>&lt;<a class="code hl_enumvalue" href="group__mofem__forms.html#ggabb82cd10e89a1d4d25fa7756360b181ba2243b0abb08ad80d05c47e734f3134bc">PETSC</a>&gt;<a class="code hl_typedef" href="radiation_8cpp.html#a62d290f01cfc65a09faa805099b2e06f">::OpBase</a>;</div>
 <div class="line"> </div>
 <div class="line">      OpTBCTimesNormalFlux(<span class="keyword">const</span> std::string <a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>,</div>
 <div class="line">                           boost::shared_ptr&lt;MatrixDouble&gt; vec,</div>
@@ -1207,11 +1207,11 @@ $(function() {
 <div class="line"> </div>
 <div class="line">      <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> iNtegrate(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;row_data) {</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line">        <a id="a148" name="a148"></a><a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, <a id="a149" name="a149"></a><a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>);</div>
+<div class="line">        <a id="a149" name="a149"></a><a class="code hl_define" href="Templates_8hpp.html#ab9006f32b4309540b5b2a3a4d9fa82ff">FTENSOR_INDEX</a>(<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, <a id="a150" name="a150"></a><a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>);</div>
 <div class="line">        <span class="comment">// get integration weights</span></div>
 <div class="line">        <span class="keyword">auto</span> t_w = OP::getFTensor0IntegrationWeight();</div>
 <div class="line">        <span class="comment">// get base function values on rows</span></div>
-<div class="line">        <span class="keyword">auto</span> t_row_base = row_data.<a id="a150" name="a150"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a1effe6c5260104eb70a930d993942675">getFTensor0N</a>();</div>
+<div class="line">        <span class="keyword">auto</span> t_row_base = row_data.<a id="a151" name="a151"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a1effe6c5260104eb70a930d993942675">getFTensor0N</a>();</div>
 <div class="line">        <span class="comment">// get normal vector</span></div>
 <div class="line">        <span class="keyword">auto</span> t_normal = OP::getFTensor1NormalsAtGaussPts();</div>
 <div class="line">        <span class="comment">// get vector values</span></div>
@@ -1260,7 +1260,7 @@ $(function() {
 <div class="line">        <span class="comment">// get integration weights</span></div>
 <div class="line">        <span class="keyword">auto</span> t_w = OP::getFTensor0IntegrationWeight();</div>
 <div class="line">        <span class="comment">// get base function values on rows</span></div>
-<div class="line">        <span class="keyword">auto</span> t_row_base = row_data.<a id="a151" name="a151"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#aa4170505c39e158e733761b8dbc629f1">getFTensor1N</a>&lt;3&gt;();</div>
+<div class="line">        <span class="keyword">auto</span> t_row_base = row_data.<a id="a152" name="a152"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#aa4170505c39e158e733761b8dbc629f1">getFTensor1N</a>&lt;3&gt;();</div>
 <div class="line">        <span class="comment">// get normal vector</span></div>
 <div class="line">        <span class="keyword">auto</span> t_normal = OP::getFTensor1NormalsAtGaussPts();</div>
 <div class="line">        <span class="comment">// get vector values</span></div>
@@ -1303,7 +1303,7 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_struct" href="structAddHOOps.html">AddHOOps&lt;SPACE_DIM - 1, SPACE_DIM, SPACE_DIM&gt;::add</a>(pipeline, {<a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12ab360a65247d7fe5efc6f3a533d47e5c8">HDIV</a>});</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">using </span>T =</div>
-<div class="line">        <a id="_a152" name="_a152"></a><a class="code hl_struct" href="structMoFEM_1_1NaturalBC.html">NaturalBC&lt;BoundaryEleOp&gt;::template</a> Assembly&lt;PETSC&gt;::BiLinearForm&lt;<a id="a153" name="a153"></a><a class="code hl_enumvalue" href="group__mofem__forms.html#gga2136fdd1cb130ca18f645e799b05569faccb6b64b4a909e6408f40132996fdced">GAUSS</a>&gt;;</div>
+<div class="line">        <a id="_a153" name="_a153"></a><a class="code hl_struct" href="structMoFEM_1_1NaturalBC.html">NaturalBC&lt;BoundaryEleOp&gt;::template</a> Assembly&lt;PETSC&gt;::BiLinearForm&lt;<a id="a154" name="a154"></a><a class="code hl_enumvalue" href="group__mofem__forms.html#gga2136fdd1cb130ca18f645e799b05569faccb6b64b4a909e6408f40132996fdced">GAUSS</a>&gt;;</div>
 <div class="line">    <span class="keyword">using </span>OpConvectionLhsBC =</div>
 <div class="line">        T::OpFlux&lt;ThermoElasticOps::ConvectionBcType&lt;BLOCKSET&gt;, 1, 1&gt;;</div>
 <div class="line">    <span class="keyword">using </span>OpRadiationLhsBC =</div>
@@ -1387,7 +1387,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Set BCs by eliminating degrees of freedom</span></div>
 <div class="line">  <span class="keyword">auto</span> get_bc_hook_rhs = [&amp;]() {</div>
-<div class="line">    <a id="_a154" name="_a154"></a><a class="code hl_struct" href="structMoFEM_1_1EssentialPreProc.html">EssentialPreProc&lt;DisplacementCubitBcData&gt;</a> hook(</div>
+<div class="line">    <a id="_a155" name="_a155"></a><a class="code hl_struct" href="structMoFEM_1_1EssentialPreProc.html">EssentialPreProc&lt;DisplacementCubitBcData&gt;</a> hook(</div>
 <div class="line">        <a class="code hl_variable" href="structThermoElasticProblem.html#a3e44e41e60df85337dc7d0695854e3f9">mField</a>, pipeline_mng-&gt;getDomainRhsFE(),</div>
 <div class="line">        {time_scale, time_displacement_scaling});</div>
 <div class="line">    <span class="keywordflow">return</span> hook;</div>
@@ -1417,19 +1417,19 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a> *<a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a> = <a class="code hl_variable" href="structThermoElasticProblem.html#a3e44e41e60df85337dc7d0695854e3f9">mField</a>.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
 <div class="line">  <a class="code hl_struct" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a> *pipeline_mng = <a class="code hl_variable" href="structThermoElasticProblem.html#a3e44e41e60df85337dc7d0695854e3f9">mField</a>.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a>&gt;();</div>
-<div class="line">  <a id="_a155" name="_a155"></a><a class="code hl_struct" href="structMoFEM_1_1ISManager.html">ISManager</a> *is_manager = <a class="code hl_variable" href="structThermoElasticProblem.html#a3e44e41e60df85337dc7d0695854e3f9">mField</a>.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1ISManager.html">ISManager</a>&gt;();</div>
+<div class="line">  <a id="_a156" name="_a156"></a><a class="code hl_struct" href="structMoFEM_1_1ISManager.html">ISManager</a> *is_manager = <a class="code hl_variable" href="structThermoElasticProblem.html#a3e44e41e60df85337dc7d0695854e3f9">mField</a>.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1ISManager.html">ISManager</a>&gt;();</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> dm = <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDM();</div>
 <div class="line">  <span class="keyword">auto</span> solver = pipeline_mng-&gt;createTSIM();</div>
-<div class="line">  <span class="keyword">auto</span> snes_ctx_ptr = <a id="a156" name="a156"></a><a class="code hl_function" href="namespaceMoFEM.html#addce2077b77e610d248ae548a01e77e3">getDMSnesCtx</a>(dm);</div>
+<div class="line">  <span class="keyword">auto</span> snes_ctx_ptr = <a id="a157" name="a157"></a><a class="code hl_function" href="namespaceMoFEM.html#addce2077b77e610d248ae548a01e77e3">getDMSnesCtx</a>(dm);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> set_section_monitor = [&amp;](<span class="keyword">auto</span> solver) {</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">    SNES snes;</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSGetSNES(solver, &amp;snes);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> SNESMonitorSet(snes,</div>
-<div class="line">                          (<a id="a157" name="a157"></a><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>(*)(SNES, PetscInt, PetscReal,</div>
-<div class="line">                                             <span class="keywordtype">void</span> *))<a id="a158" name="a158"></a><a class="code hl_function" href="namespaceMoFEM.html#a37c8aa74d57ef9fcf60e6c508b987113">MoFEMSNESMonitorFields</a>,</div>
+<div class="line">                          (<a id="a158" name="a158"></a><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>(*)(SNES, PetscInt, PetscReal,</div>
+<div class="line">                                             <span class="keywordtype">void</span> *))<a id="a159" name="a159"></a><a class="code hl_function" href="namespaceMoFEM.html#a37c8aa74d57ef9fcf60e6c508b987113">MoFEMSNESMonitorFields</a>,</div>
 <div class="line">                          (<span class="keywordtype">void</span> *)(snes_ctx_ptr.get()), <span class="keyword">nullptr</span>);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">  };</div>
@@ -1492,12 +1492,12 @@ $(function() {
 <div class="line">    <span class="keyword">auto</span> push_post_proc_ops = [&amp;](<span class="keyword">auto</span> &amp;pp_fe) {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line">      <span class="keyword">auto</span> &amp;pip = pp_fe-&gt;getOpPtrVector();</div>
-<div class="line">      <span class="keyword">using </span><a class="code hl_typedef" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a> = <a id="_a159" name="_a159"></a><a class="code hl_struct" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPostProcMapInMoab&lt;SPACE_DIM, SPACE_DIM&gt;</a>;</div>
+<div class="line">      <span class="keyword">using </span><a class="code hl_typedef" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a> = <a id="_a160" name="_a160"></a><a class="code hl_struct" href="structMoFEM_1_1OpPostProcMapInMoab.html">OpPostProcMapInMoab&lt;SPACE_DIM, SPACE_DIM&gt;</a>;</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="thermo__elastic_8cpp.html#a3d060027ef2564c365c1b768fa60fb12">IS_LARGE_STRAINS</a>) {</div>
 <div class="line">        pip.push_back(</div>
 <div class="line"> </div>
-<div class="line">            <span class="keyword">new</span> <a id="a160" name="a160"></a><a class="code hl_typedef" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(</div>
+<div class="line">            <span class="keyword">new</span> <a id="a161" name="a161"></a><a class="code hl_typedef" href="photon__diffusion_8cpp.html#ada3f24ae35ae50faea3df2b474ea2f37">OpPPMap</a>(</div>
 <div class="line"> </div>
 <div class="line">                pp_fe-&gt;getPostProcMesh(), pp_fe-&gt;getMapGaussPts(),</div>
 <div class="line"> </div>
@@ -1539,7 +1539,7 @@ $(function() {
 <div class="line">      <span class="keywordflow">if</span> (<a class="code hl_variable" href="thermo__elastic_8cpp.html#acab2fbadd5d8baad93895efd7909d9dd">do_output_domain</a> == PETSC_FALSE)</div>
 <div class="line">        <span class="keywordflow">return</span> boost::shared_ptr&lt;PostProcEle&gt;();</div>
 <div class="line">      <span class="keyword">auto</span> pp_fe = boost::make_shared&lt;PostProcEle&gt;(mField);</div>
-<div class="line">      <a id="a161" name="a161"></a><a class="code hl_define" href="definitions_8h.html#a793899f524a281eb88e3ff2b01ce6acb">CHK_MOAB_THROW</a>(push_domain_ops(pp_fe),</div>
+<div class="line">      <a id="a162" name="a162"></a><a class="code hl_define" href="definitions_8h.html#a793899f524a281eb88e3ff2b01ce6acb">CHK_MOAB_THROW</a>(push_domain_ops(pp_fe),</div>
 <div class="line">                     <span class="stringliteral">&quot;push domain ops to domain element&quot;</span>);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a793899f524a281eb88e3ff2b01ce6acb">CHK_MOAB_THROW</a>(push_post_proc_ops(pp_fe),</div>
 <div class="line">                     <span class="stringliteral">&quot;push post proc ops to domain element&quot;</span>);</div>
@@ -1551,7 +1551,7 @@ $(function() {
 <div class="line">        <span class="keywordflow">return</span> boost::shared_ptr&lt;SkinPostProcEle&gt;();</div>
 <div class="line">      <span class="keyword">auto</span> pp_fe = boost::make_shared&lt;SkinPostProcEle&gt;(mField);</div>
 <div class="line">      <span class="keyword">auto</span> <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a> = mField.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
-<div class="line">      <span class="keyword">auto</span> op_side = <span class="keyword">new</span> <a id="_a162" name="_a162"></a><a class="code hl_struct" href="structMoFEM_1_1OpLoopSide.html">OpLoopSide&lt;SideEle&gt;</a>(mField, <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDomainFEName(),</div>
+<div class="line">      <span class="keyword">auto</span> op_side = <span class="keyword">new</span> <a id="_a163" name="_a163"></a><a class="code hl_struct" href="structMoFEM_1_1OpLoopSide.html">OpLoopSide&lt;SideEle&gt;</a>(mField, <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDomainFEName(),</div>
 <div class="line">                                             <a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, Sev::verbose);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#a793899f524a281eb88e3ff2b01ce6acb">CHK_MOAB_THROW</a>(push_domain_ops(op_side),</div>
 <div class="line">                     <span class="stringliteral">&quot;push domain ops to side element&quot;</span>);</div>
@@ -1591,14 +1591,14 @@ $(function() {
 <div class="line">        }</div>
 <div class="line">      }</div>
 <div class="line"> </div>
-<div class="line">      <span class="keywordflow">if</span> (<a id="a163" name="a163"></a><a class="code hl_variable" href="incompressible__elasticity_8cpp.html#adfac94c5ea8b42b1dc74c3e3b04ea286">doEvalField</a>) {</div>
+<div class="line">      <span class="keywordflow">if</span> (<a id="a164" name="a164"></a><a class="code hl_variable" href="incompressible__elasticity_8cpp.html#adfac94c5ea8b42b1dc74c3e3b04ea286">doEvalField</a>) {</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> mField.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1FieldEvaluatorInterface.html">FieldEvaluatorInterface</a>&gt;()</div>
 <div class="line">            -&gt;evalFEAtThePoint&lt;SPACE_DIM&gt;(</div>
 <div class="line">                fieldEvalCoords.data(), 1e-12, <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getProblemName(),</div>
 <div class="line">                <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDomainFEName(), fieldEvalData,</div>
 <div class="line">                mField.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>(), mField.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#af2224ce77b33637b5cfad66a275a2ffb">get_comm_rank</a>(), <span class="keyword">nullptr</span>,</div>
-<div class="line">                <a id="a164" name="a164"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a4f6e3b96dbc5db09c3281b676d448b7f">MF_EXIST</a>, <a id="a165" name="a165"></a><a class="code hl_enumvalue" href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28">QUIET</a>);</div>
+<div class="line">                <a id="a165" name="a165"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1a4f6e3b96dbc5db09c3281b676d448b7f">MF_EXIST</a>, <a id="a166" name="a166"></a><a class="code hl_enumvalue" href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28">QUIET</a>);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">if</span> (<a class="code hl_variable" href="plastic_8cpp.html#a430541141aec0d16dbb370f87663aa03">atom_test</a>) {</div>
 <div class="line">          <span class="keyword">auto</span> eval_num_vec =</div>
@@ -1613,7 +1613,7 @@ $(function() {
 <div class="line">          <span class="keywordtype">double</span> eval_num;</div>
 <div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecSum(eval_num_vec, &amp;eval_num);</div>
 <div class="line">          <span class="keywordflow">if</span> (!(<span class="keywordtype">int</span>)eval_num) {</div>
-<div class="line">            SETERRQ(PETSC_COMM_WORLD, <a id="a166" name="a166"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>,</div>
+<div class="line">            SETERRQ(PETSC_COMM_WORLD, <a id="a167" name="a167"></a><a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eab22230d41f866f427f7fa9496875bcc9">MOFEM_ATOM_TEST_INVALID</a>,</div>
 <div class="line">                     <span class="stringliteral">&quot;atom test %d failed: did not find elements to evaluate &quot;</span></div>
 <div class="line">                     <span class="stringliteral">&quot;the field, check the coordinates&quot;</span>,</div>
 <div class="line">                     <a class="code hl_variable" href="plastic_8cpp.html#a430541141aec0d16dbb370f87663aa03">atom_test</a>);</div>
@@ -1643,7 +1643,7 @@ $(function() {
 <div class="line">          }</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">if</span> (fluxFieldPtr-&gt;size1()) {</div>
-<div class="line">          <a id="_a167" name="_a167"></a><a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, <a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>&gt; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
+<div class="line">          <a id="_a168" name="_a168"></a><a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, <a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>&gt; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>;</div>
 <div class="line">          <span class="keyword">auto</span> t_flux = getFTensor1FromMat&lt;SPACE_DIM&gt;(*fluxFieldPtr);</div>
 <div class="line">          <span class="keyword">auto</span> flux_mag = sqrt(t_flux(<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>) * t_flux(<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>));</div>
 <div class="line">          <a class="code hl_define" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;ThermoElasticSync&quot;</span>, Sev::inform)</div>
@@ -1765,7 +1765,7 @@ $(function() {
 <div class="line">          }</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        <a id="a168" name="a168"></a><a class="code hl_define" href="LogManager_8hpp.html#adacc7b9e7c4fa95cc0959ca359f999f5">MOFEM_LOG_SYNCHRONISE</a>(mField.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>());</div>
+<div class="line">        <a id="a169" name="a169"></a><a class="code hl_define" href="LogManager_8hpp.html#adacc7b9e7c4fa95cc0959ca359f999f5">MOFEM_LOG_SYNCHRONISE</a>(mField.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a9b2bc8c1b980f49d31a0b5f7fbe756f5">get_comm</a>());</div>
 <div class="line">      }</div>
 <div class="line"> </div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
@@ -1777,7 +1777,7 @@ $(function() {
 <div class="line">  };</div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> set_fieldsplit_preconditioner = [&amp;](<span class="keyword">auto</span> solver) {</div>
-<div class="line">    <a id="a169" name="a169"></a><a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
+<div class="line">    <a id="a170" name="a170"></a><a class="code hl_define" href="definitions_8h.html#aee32377dce975c9a64ed73bd3a003404">MoFEMFunctionBeginHot</a>;</div>
 <div class="line"> </div>
 <div class="line">    SNES snes;</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSGetSNES(solver, &amp;snes);</div>
@@ -1793,8 +1793,8 @@ $(function() {
 <div class="line">      <span class="keyword">auto</span> is_mng = mField.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1ISManager.html">ISManager</a>&gt;();</div>
 <div class="line">      <span class="keyword">auto</span> name_prb = <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getProblemName();</div>
 <div class="line"> </div>
-<div class="line">      <a id="_a170" name="_a170"></a><a class="code hl_struct" href="structMoFEM_1_1SmartPetscObj.html">SmartPetscObj&lt;IS&gt;</a> is_u;</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> is_mng-&gt;isCreateProblemFieldAndRank(name_prb, <a id="a171" name="a171"></a><a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>, <span class="stringliteral">&quot;U&quot;</span>, 0,</div>
+<div class="line">      <a id="_a171" name="_a171"></a><a class="code hl_struct" href="structMoFEM_1_1SmartPetscObj.html">SmartPetscObj&lt;IS&gt;</a> is_u;</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> is_mng-&gt;isCreateProblemFieldAndRank(name_prb, <a id="a172" name="a172"></a><a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>, <span class="stringliteral">&quot;U&quot;</span>, 0,</div>
 <div class="line">                                                 <a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, is_u);</div>
 <div class="line">      <a class="code hl_struct" href="structMoFEM_1_1SmartPetscObj.html">SmartPetscObj&lt;IS&gt;</a> is_flux;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> is_mng-&gt;isCreateProblemFieldAndRank(name_prb, <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>, <span class="stringliteral">&quot;FLUX&quot;</span>, 0, 0,</div>
@@ -1822,7 +1822,7 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> <a class="code hl_class" href="classB.html">B</a> = <a class="code hl_function" href="group__dm.html#gad0c8678dac27b8ef08e604406ba783c7">createDMMatrix</a>(dm);</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetIJacobian(solver, <a class="code hl_class" href="classB.html">B</a>, <a class="code hl_class" href="classB.html">B</a>, PETSC_NULLPTR, PETSC_NULLPTR);</div>
-<div class="line">  <span class="keyword">auto</span> <a id="a172" name="a172"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a> = <a class="code hl_function" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(dm);</div>
+<div class="line">  <span class="keyword">auto</span> <a id="a173" name="a173"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a> = <a class="code hl_function" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(dm);</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(dm, <a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetSolution(solver, <a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>);</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> TSSetFromOptions(solver);</div>
@@ -1841,20 +1841,20 @@ $(function() {
 <div class="line">}<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [Solve]</span></div>
 <div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="keyword">static</span> <span class="keywordtype">char</span> <a id="a173" name="a173"></a><a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>[] = <span class="stringliteral">&quot;...\n\n&quot;</span>;</div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">char</span> <a id="a174" name="a174"></a><a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>[] = <span class="stringliteral">&quot;...\n\n&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a id="a174" name="a174"></a><a class="code hl_function" href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a id="a175" name="a175"></a><a class="code hl_function" href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Initialisation of MoFEM/PETSc and MOAB data structures</span></div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> param_file[] = <span class="stringliteral">&quot;param_file.petsc&quot;</span>;</div>
-<div class="line">  <a id="a175" name="a175"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line">  <a id="a176" name="a176"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, param_file, <a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Add logging channel for example</span></div>
 <div class="line">  <span class="keyword">auto</span> core_log = logging::core::get();</div>
 <div class="line">  core_log-&gt;add_sink(</div>
 <div class="line">      LogManager::createSink(LogManager::getStrmWorld(), <span class="stringliteral">&quot;ThermoElastic&quot;</span>));</div>
 <div class="line">  LogManager::setLog(<span class="stringliteral">&quot;ThermoElastic&quot;</span>);</div>
-<div class="line">  <a id="a176" name="a176"></a><a class="code hl_define" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;ThermoElastic&quot;</span>, <span class="stringliteral">&quot;ThermoElastic&quot;</span>);</div>
+<div class="line">  <a id="a177" name="a177"></a><a class="code hl_define" href="group__mofem__log__manager.html#ga202c2d0258d78f4c0d60ecac64bf2252">MOFEM_LOG_TAG</a>(<span class="stringliteral">&quot;ThermoElastic&quot;</span>, <span class="stringliteral">&quot;ThermoElastic&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">  core_log-&gt;add_sink(</div>
 <div class="line">      LogManager::createSink(LogManager::getStrmSync(), <span class="stringliteral">&quot;ThermoElasticSync&quot;</span>));</div>
@@ -1874,13 +1874,13 @@ $(function() {
 <div class="line"><span class="comment">    //! [Create MoAB]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">    //! [Create MoFEM]</span></div>
-<div class="line"><span class="comment"></span>    <a id="_a177" name="_a177"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
+<div class="line"><span class="comment"></span>    <a id="_a178" name="_a178"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
 <div class="line">    <a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = core; <span class="comment">///&lt; finite element database interface</span><span class="comment"></span></div>
 <div class="line"><span class="comment">    //! [Create MoFEM]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">    //! [Load mesh]</span></div>
 <div class="line"><span class="comment"></span>    <a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a> *<a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a> = m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;<a id="a178" name="a178"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a8325447a1773550852f04c1b600af703">getOptions</a>();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;<a id="a179" name="a179"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a8325447a1773550852f04c1b600af703">getOptions</a>();</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;loadFile();<span class="comment"></span></div>
 <div class="line"><span class="comment">    //! [Load mesh]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
@@ -1889,9 +1889,9 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ex.runProblem();<span class="comment"></span></div>
 <div class="line"><span class="comment">    //! [ThermoElasticProblem]</span></div>
 <div class="line"><span class="comment"></span>  }</div>
-<div class="line">  <a id="a179" name="a179"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a id="a180" name="a180"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a180" name="a180"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a181" name="a181"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line">}</div>
 <div class="ttc" id="aEshelbianPlasticity_8cpp_html_acbdb074a26e17860f61191108d21d8a8"><div class="ttname"><a href="EshelbianPlasticity_8cpp.html#acbdb074a26e17860f61191108d21d8a8">filter_true_skin</a></div><div class="ttdeci">static auto filter_true_skin(MoFEM::Interface &amp;m_field, Range &amp;&amp;skin)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianPlasticity_8cpp_source.html#l00166">EshelbianPlasticity.cpp:166</a></div></div>
 <div class="ttc" id="aEshelbianPlasticity_8cpp_html_acd5f3538620db1687d2800eafd99e75d"><div class="ttname"><a href="EshelbianPlasticity_8cpp.html#acd5f3538620db1687d2800eafd99e75d">get_skin</a></div><div class="ttdeci">static auto get_skin(MoFEM::Interface &amp;m_field, Range body_ents)</div><div class="ttdef"><b>Definition</b> <a href="EshelbianPlasticity_8cpp_source.html#l00187">EshelbianPlasticity.cpp:187</a></div></div>
@@ -1923,6 +1923,7 @@ $(function() {
 <div class="ttc" id="aclassLinearForm_html"><div class="ttname"><a href="classLinearForm.html">LinearForm</a></div></div>
 <div class="ttc" id="aclassOP_html"><div class="ttname"><a href="classOP.html">OP</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28">QUIET</a></div><div class="ttdeci">@ QUIET</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00221">definitions.h:221</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a></div><div class="ttdeci">@ ROW</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>

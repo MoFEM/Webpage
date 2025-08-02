@@ -11,12 +11,12 @@
 <!-- Node0 -->
 <g id="Node000000" class="node">
 <title>Node0</title>
-<g id="a_Node000000"><a xlink:href="classFTensor_1_1Tensor2__symmetric__Expr_3_01Ddg__number__rhs__01_3_01A_00_01T_00_01N0_00_01N1_0708956ed86255976a8f22bd9d07215aa.html" target="_top" xlink:title=" ">
+<g id="a_Node000000"><a xlink:href="classFTensor_1_1Tensor2__symmetric__and__Tensor2__symmetric_3_01A_00_01B_00_01T_00_01U_00_01Dim_d42ef339a5405a24f208118f27fbb14d.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="155,-52 0,-52 0,0 155,0 155,-52"/>
 <text text-anchor="start" x="8" y="-40" font-family="Helvetica,sans-Serif" font-size="10.00">FTensor::Tensor2_symmetric</text>
-<text text-anchor="start" x="8" y="-29" font-family="Helvetica,sans-Serif" font-size="10.00">_Expr&lt; Ddg_number_rhs_01</text>
-<text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; A, T, N0, N1 &gt;, T, Dim,</text>
-<text text-anchor="middle" x="77.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00"> i, j &gt;</text>
+<text text-anchor="start" x="8" y="-29" font-family="Helvetica,sans-Serif" font-size="10.00">_and_Tensor2_symmetric&lt;</text>
+<text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00"> A, B, T, U, Dim, Dim, i,</text>
+<text text-anchor="middle" x="77.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00"> j, i, j &gt;</text>
 </a>
 </g>
 </g>

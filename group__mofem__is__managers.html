@@ -425,7 +425,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  545</span>              composite_key&lt;</div>
 <div class="line"><span class="lineno">  546</span>                  NumeredDofEntity,</div>
 <div class="line"><span class="lineno">  547</span>                  const_mem_fun&lt;<a class="code hl_typedef" href="structMoFEM_1_1NumeredDofEntity.html#aec95b90791b54c2b0313629720daf86c">NumeredDofEntity::interface_type_DofEntity</a>,</div>
-<div class="line"><span class="lineno">  548</span>                                EntityHandle, &amp;<a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#af0c40ab44e4bde74024bf0263a07f22a">NumeredDofEntity::getEnt</a>&gt;,</div>
+<div class="line"><span class="lineno">  548</span>                                <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a>, &amp;<a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#af0c40ab44e4bde74024bf0263a07f22a">NumeredDofEntity::getEnt</a>&gt;,</div>
 <div class="line"><span class="lineno">  549</span>                  const_mem_fun&lt;<a class="code hl_typedef" href="structMoFEM_1_1NumeredDofEntity.html#aec95b90791b54c2b0313629720daf86c">NumeredDofEntity::interface_type_DofEntity</a>,</div>
 <div class="line"><span class="lineno">  550</span>                                <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a2cb126d359d48ddf277e1985549b94a9">DofIdx</a>, &amp;<a class="code hl_function" href="structMoFEM_1_1interface__DofEntity.html#a8c035b020ea9937673212d7f88f2f927">NumeredDofEntity::getEntDofIdx</a>&gt;&gt;&gt;</div>
 <div class="line"><span class="lineno">  551</span> </div>
@@ -502,6 +502,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  622</span>  }</div>
 <div class="line"><span class="lineno">  623</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><span class="lineno">  624</span>}</div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dba3e66f07732b51f2cb52e13d598f8abda">COL</a></div><div class="ttdeci">@ COL</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0"><div class="ttname"><a href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a></div><div class="ttdeci">@ ROW</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00136">definitions.h:136</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf"><div class="ttname"><a href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaef48b40a28ec42fda55bc4824e906baf">MOFEM_NOT_IMPLEMENTED</a></div><div class="ttdeci">@ MOFEM_NOT_IMPLEMENTED</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00032">definitions.h:32</a></div></div>
@@ -954,7 +955,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  508</span>                                                      {</div>
 <div class="line"><span class="lineno">  509</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = <a class="code hl_variable" href="structMoFEM_1_1ISManager.html#a772e780446980ad9a4e6af1ab8accbd2">cOre</a>;</div>
 <div class="line"><span class="lineno">  510</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line"><span class="lineno">  511</span>  EntityHandle field_meshset = m_field.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a1c6b68dd3f48fc34347938bb5f0227a8">get_field_meshset</a>(field);</div>
+<div class="line"><span class="lineno">  511</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> field_meshset = m_field.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a1c6b68dd3f48fc34347938bb5f0227a8">get_field_meshset</a>(field);</div>
 <div class="line"><span class="lineno">  512</span>  <a class="code hl_class" href="classRange.html">Range</a> ents;</div>
 <div class="line"><span class="lineno">  513</span>  <span class="keywordflow">for</span> (; low_type &lt;= hi_type; ++low_type)</div>
 <div class="line"><span class="lineno">  514</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().get_entities_by_type(field_meshset, low_type,</div>

@@ -142,7 +142,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6995e5e7271c1cbca8708208d30889e9" id="r_a6995e5e7271c1cbca8708208d30889e9"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__base__functions_8cpp.html#a6995e5e7271c1cbca8708208d30889e9">sum_matrix</a> (<a class="el" href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MatrixDouble</a> &amp;<a class="el" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>)</td></tr>
+<tr class="memitem:a6995e5e7271c1cbca8708208d30889e9" id="r_a6995e5e7271c1cbca8708208d30889e9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__base__functions_8cpp.html#a6995e5e7271c1cbca8708208d30889e9">sum_matrix</a> (<a class="el" href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MatrixDouble</a> &amp;<a class="el" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>)</td></tr>
 <tr class="separator:a6995e5e7271c1cbca8708208d30889e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testing__base__functions_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,7 +292,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  129</span> </div>
 <div class="line"><span class="lineno">  130</span>    pts_1d.resize(1, 11, <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  131</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii != 11; ii++) {</div>
-<div class="line"><span class="lineno">  132</span>      pts_1d(0, ii) = 2 * ((double)ii / 10) - 1;</div>
+<div class="line"><span class="lineno">  132</span>      pts_1d(0, ii) = 2 * ((<a class="code hl_class" href="classdouble.html">double</a>)ii / 10) - 1;</div>
 <div class="line"><span class="lineno">  133</span>    }</div>
 <div class="line"><span class="lineno">  134</span> </div>
 <div class="line"><span class="lineno">  135</span>    boost::shared_ptr&lt;MatrixDouble&gt; kernel_base_ptr(<span class="keyword">new</span> <a class="code hl_class" href="classUBlasMatrix_3_01double_01_4.html">MatrixDouble</a>);</div>
@@ -356,7 +356,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  193</span>      pts_1d.resize(1, <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>, <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  194</span>      <a class="code hl_class" href="classUBlasMatrix_3_01double_01_4.html">MatrixDouble</a> pts_1d_t(1, <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>);</div>
 <div class="line"><span class="lineno">  195</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii != <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>; ii++) {</div>
-<div class="line"><span class="lineno">  196</span>        pts_1d(0, ii) = (double)ii / (<a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> - 1);</div>
+<div class="line"><span class="lineno">  196</span>        pts_1d(0, ii) = (<a class="code hl_class" href="classdouble.html">double</a>)ii / (<a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> - 1);</div>
 <div class="line"><span class="lineno">  197</span>        pts_1d_t(0, ii) = 1;</div>
 <div class="line"><span class="lineno">  198</span>      }</div>
 <div class="line"><span class="lineno">  199</span> </div>
@@ -407,7 +407,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  244</span>      pts_1d.resize(1, <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>, <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  245</span>      <a class="code hl_class" href="classUBlasMatrix_3_01double_01_4.html">MatrixDouble</a> pts_1d_t(1, <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>);</div>
 <div class="line"><span class="lineno">  246</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii != <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>; ii++) {</div>
-<div class="line"><span class="lineno">  247</span>        pts_1d(0, ii) = (double)ii / 20.;</div>
+<div class="line"><span class="lineno">  247</span>        pts_1d(0, ii) = (<a class="code hl_class" href="classdouble.html">double</a>)ii / 20.;</div>
 <div class="line"><span class="lineno">  248</span>        pts_1d_t(0, ii) = 1 - pts_1d(0, ii);</div>
 <div class="line"><span class="lineno">  249</span>      }</div>
 <div class="line"><span class="lineno">  250</span> </div>
@@ -423,7 +423,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  260</span>      <a class="code hl_define" href="definitions_8h.html#a6eadfb97993ab556555ad084fe088482">CHKERRG</a>(<a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a4e27e82eaf63e387dd653941d6245b49">ierr</a>);</div>
 <div class="line"><span class="lineno">  261</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ii = 0; ii != <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>; ii++) {</div>
 <div class="line"><span class="lineno">  262</span>        <span class="keywordtype">double</span> s = pts_1d(0, ii);</div>
-<div class="line"><span class="lineno">  263</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;integrated_jacobi_plot &quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (double)ii / 20.</div>
+<div class="line"><span class="lineno">  263</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;integrated_jacobi_plot &quot;</span> &lt;&lt; s &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (<a class="code hl_class" href="classdouble.html">double</a>)ii / 20.</div>
 <div class="line"><span class="lineno">  264</span>                  &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (*base_ptr)(ii, 1) &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (*base_ptr)(ii, 2)</div>
 <div class="line"><span class="lineno">  265</span>                  &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (*base_ptr)(ii, 3) &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (*base_ptr)(ii, 4)</div>
 <div class="line"><span class="lineno">  266</span>                  &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (*base_ptr)(ii, 5) &lt;&lt; endl;</div>
@@ -1443,6 +1443,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno"> 1280</span>}</div>
 <div class="ttc" id="acheck__base__functions__derivatives__on__tet_8cpp_html_a3d8c24629d725b9ef8c238cf27c9b158"><div class="ttname"><a href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a></div><div class="ttdeci">static const double eps</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__on__tet_8cpp_source.html#l00011">check_base_functions_derivatives_on_tet.cpp:11</a></div></div>
 <div class="ttc" id="aclassUBlasMatrix_3_01double_01_4_html"><div class="ttname"><a href="classUBlasMatrix_3_01double_01_4.html">UBlasMatrix&lt; double &gt;</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a6949a4bcc0920ad35e91d7a2d3312988"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a6949a4bcc0920ad35e91d7a2d3312988">AINSWORTH_LOBATTO_BASE</a></div><div class="ttdeci">@ AINSWORTH_LOBATTO_BASE</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00063">definitions.h:62</a></div></div>
@@ -1530,7 +1531,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static double sum_matrix </td>
+          <td class="memname">static <a class="el" href="classdouble.html">double</a> sum_matrix </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespaceMoFEM_1_1Types.html#a71f706f784fbf6fd240806b70ed7d933">MatrixDouble</a> &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>

@@ -178,7 +178,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">const</span> boost::shared_ptr&lt;SideNumber&gt; &amp;</div>
 <div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElement__MESHSET.html#ab3b6b21538353b024b9ba602700e2245">   35</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElement_MESHSET::getSideNumberPtr</a>(<span class="keyword">const</span> EntityHandle ent)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElement__MESHSET.html#ab3b6b21538353b024b9ba602700e2245">   35</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElement_MESHSET::getSideNumberPtr</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_define" href="definitions_8h.html#a05a7b30aaf65db56c27346272aa681e5">NOT_USED</a>(ent);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  SideNumber_multiIndex::iterator miit;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  miit =</div>
@@ -205,9 +205,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordflow">default</span>:</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;this work only for PRISMs&quot;</span>);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  EntityHandle prism = <a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#af0c40ab44e4bde74024bf0263a07f22a">getEnt</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> prism = <a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#af0c40ab44e4bde74024bf0263a07f22a">getEnt</a>();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a> = moab.get_connectivity(prism, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_define" href="definitions_8h.html#a493fcd6f5f4b7e36007a9020980bb819">MOAB_THROW</a>(<a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a>);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  assert(num_nodes == 6);</div>
@@ -229,7 +229,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">const</span> boost::shared_ptr&lt;SideNumber&gt; &amp;</div>
 <div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElement__PRISM.html#ac53e43a3999901ec5313d1e2a7342866">   82</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElement_PRISM::getSideNumberPtr</a>(<span class="keyword">const</span> EntityHandle ent)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElement__PRISM.html#ac53e43a3999901ec5313d1e2a7342866">   82</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElement_PRISM::getSideNumberPtr</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  moab::Interface &amp;moab = <a class="code hl_function" href="structMoFEM_1_1RefElement.html#a91d1427212ede212f586c4964f160003">getRefEntityPtr</a>()-&gt;getBasicDataPtr()-&gt;moab;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
@@ -272,12 +272,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment">// get prism connectivity</span></div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a> = moab.get_connectivity(<a class="code hl_variable" href="structMoFEM_1_1interface__RefEntity.html#a2dff199c3a758ecaf7005d6f798a5467">sPtr</a>-&gt;ent, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_define" href="definitions_8h.html#a493fcd6f5f4b7e36007a9020980bb819">MOAB_THROW</a>(<a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a>);</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    assert(num_nodes == 6);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment">// get ent connectivity</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">const</span> EntityHandle *conn_ent;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn_ent;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a> = moab.get_connectivity(ent, conn_ent, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_define" href="definitions_8h.html#a493fcd6f5f4b7e36007a9020980bb819">MOAB_THROW</a>(<a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a>);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
@@ -291,13 +291,13 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="comment">// std::cerr &lt;&lt; std::endl;</span></div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="comment">// bottom face</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    EntityHandle face3[3] = {conn[0], conn[1], conn[2]};</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> face3[3] = {conn[0], conn[1], conn[2]};</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="comment">// top face</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    EntityHandle face4[3] = {conn[3], conn[4], conn[5]};</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> face4[3] = {conn[3], conn[4], conn[5]};</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">if</span> (num_nodes == 3) {</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <span class="keywordtype">int</span> sense_p1_map[3][3] = {{0, 1, 2}, {1, 2, 0}, {2, 0, 1}};</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      <span class="keywordtype">int</span> sense_m1_map[3][3] = {{0, 2, 1}, {1, 0, 2}, {2, 1, 0}};</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      EntityHandle *conn0_3_ptr = std::find(face3, &amp;face3[3], conn_ent[0]);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn0_3_ptr = std::find(face3, &amp;face3[3], conn_ent[0]);</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      <span class="keywordflow">if</span> (conn0_3_ptr != &amp;face3[3]) {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        offset = std::distance(face3, conn0_3_ptr);</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">if</span> (face3[sense_p1_map[offset][0]] == conn_ent[0] &amp;&amp;</div>
@@ -318,7 +318,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>          <span class="keywordflow">return</span> *miit;</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        }</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      }</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      EntityHandle *conn0_4_ptr = std::find(face4, &amp;face4[3], conn_ent[0]);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn0_4_ptr = std::find(face4, &amp;face4[3], conn_ent[0]);</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      <span class="keywordflow">if</span> (conn0_4_ptr != &amp;face4[3]) {</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        offset = std::distance(face4, conn0_4_ptr);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">if</span> (face4[sense_p1_map[offset][0]] == conn_ent[0] &amp;&amp;</div>
@@ -354,7 +354,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keywordflow">if</span> (num_nodes == 2) {</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      {</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="comment">// Triangle edges</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        EntityHandle edges[6][2] = {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> edges[6][2] = {</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            {conn[0], conn[1]} <span class="comment">/*0*/</span>,   {conn[1], conn[2]} <span class="comment">/*1*/</span>,</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            {conn[2], conn[0]} <span class="comment">/*2*/</span>,   {conn[3], conn[4]} <span class="comment">/*3+3*/</span>,</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            {conn[4], conn[5]} <span class="comment">/*3+4*/</span>, {conn[5], conn[3]} <span class="comment">/*3+5*/</span></div>
@@ -367,11 +367,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            side_number = ee;</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <span class="keywordflow">if</span> (ee &gt;= 3) {</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>              side_number += 3;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>              EntityHandle *conn0_4_ptr =</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>              <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn0_4_ptr =</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                  std::find(face4, &amp;face4[3], conn_ent[0]);</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>              offset = std::distance(face4, conn0_4_ptr) + 3;</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>              EntityHandle *conn0_3_ptr =</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>              <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn0_3_ptr =</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                  std::find(face3, &amp;face3[3], conn_ent[0]);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>              offset = std::distance(face3, conn0_3_ptr);</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            }</div>
@@ -454,7 +454,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="keyword">const</span> boost::shared_ptr&lt;SideNumber&gt; &amp;</div>
 <div class="foldopen" id="foldopen00303" data-start="{" data-end="}">
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElementVolume.html#af42dabc7c6e986c6a97d05682bd30003">  303</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElementVolume::getSideNumberPtr</a>(<span class="keyword">const</span> EntityHandle ent)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElementVolume.html#af42dabc7c6e986c6a97d05682bd30003">  303</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElementVolume::getSideNumberPtr</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  moab::Interface &amp;moab = <a class="code hl_function" href="structMoFEM_1_1RefElement.html#a91d1427212ede212f586c4964f160003">getRefEntityPtr</a>()-&gt;getBasicDataPtr()-&gt;moab;</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <span class="keyword">auto</span> miit = <a class="code hl_variable" href="structMoFEM_1_1RefElement.html#ac3957cfa712faf3350b8a010fef5181a">side_number_table</a>.find(ent);</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <span class="keywordflow">if</span> (miit != <a class="code hl_variable" href="structMoFEM_1_1RefElement.html#ac3957cfa712faf3350b8a010fef5181a">side_number_table</a>.end())</div>
@@ -509,9 +509,9 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <a class="code hl_define" href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a>(<span class="stringliteral">&quot;this works only for TRIs and QUADs&quot;</span>);</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>  }</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  <span class="keywordtype">int</span> side_number, sense, offset;</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  EntityHandle tri = <a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#af0c40ab44e4bde74024bf0263a07f22a">getEnt</a>();</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> tri = <a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#af0c40ab44e4bde74024bf0263a07f22a">getEnt</a>();</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>  <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>  moab::Interface &amp;moab = <a class="code hl_function" href="structMoFEM_1_1RefElement.html#a91d1427212ede212f586c4964f160003">getRefEntityPtr</a>()-&gt;getBasicDataPtr()-&gt;moab;</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  <a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a> = moab.get_connectivity(tri, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>  <a class="code hl_define" href="definitions_8h.html#a493fcd6f5f4b7e36007a9020980bb819">MOAB_THROW</a>(<a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a>);</div>
@@ -521,7 +521,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            boost::shared_ptr&lt;SideNumber&gt;(<span class="keyword">new</span> <a class="code hl_struct" href="structMoFEM_1_1SideNumber.html">SideNumber</a>(conn[nn], nn, 0, 0)));</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>  }</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ee = 0; ee &lt; nb_edges; ee++) {</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    EntityHandle edge;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> edge;</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    <a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a> = moab.side_element(tri, 1, ee, edge);</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <a class="code hl_define" href="definitions_8h.html#a493fcd6f5f4b7e36007a9020980bb819">MOAB_THROW</a>(<a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a>);</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <a class="code hl_variable" href="namespaceMoFEM_1_1Exceptions.html#a6ffd47b9e0afb9f78ad9e88ca71e65a7">rval</a> = moab.side_number(tri, edge, side_number, sense, offset);</div>
@@ -536,7 +536,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="keyword">const</span> boost::shared_ptr&lt;SideNumber&gt; &amp;</div>
 <div class="foldopen" id="foldopen00379" data-start="{" data-end="}">
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElementFace.html#a20e52317bce94485649bb3aebca23ee7">  379</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElementFace::getSideNumberPtr</a>(<span class="keyword">const</span> EntityHandle ent)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElementFace.html#a20e52317bce94485649bb3aebca23ee7">  379</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElementFace::getSideNumberPtr</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>  moab::Interface &amp;moab = <a class="code hl_function" href="structMoFEM_1_1RefElement.html#a91d1427212ede212f586c4964f160003">getRefEntityPtr</a>()-&gt;getBasicDataPtr()-&gt;moab;</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>  SideNumber_multiIndex::iterator miit = <a class="code hl_variable" href="structMoFEM_1_1RefElement.html#ac3957cfa712faf3350b8a010fef5181a">side_number_table</a>.find(ent);</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>  <span class="keywordflow">if</span> (miit != <a class="code hl_variable" href="structMoFEM_1_1RefElement.html#ac3957cfa712faf3350b8a010fef5181a">side_number_table</a>.end())</div>
@@ -586,7 +586,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span><span class="keyword">const</span> boost::shared_ptr&lt;SideNumber&gt; &amp;</div>
 <div class="foldopen" id="foldopen00423" data-start="{" data-end="}">
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElement__EDGE.html#aba4d7c0d381498db6da529d452e006a2">  423</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElement_EDGE::getSideNumberPtr</a>(<span class="keyword">const</span> EntityHandle ent)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElement__EDGE.html#aba4d7c0d381498db6da529d452e006a2">  423</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElement_EDGE::getSideNumberPtr</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>  moab::Interface &amp;moab = <a class="code hl_function" href="structMoFEM_1_1RefElement.html#a91d1427212ede212f586c4964f160003">getRefEntityPtr</a>()-&gt;getBasicDataPtr()-&gt;moab;</div>
 <div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>  SideNumber_multiIndex::iterator miit = <a class="code hl_variable" href="structMoFEM_1_1RefElement.html#ac3957cfa712faf3350b8a010fef5181a">side_number_table</a>.find(ent);</div>
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>  <span class="keywordflow">if</span> (miit != <a class="code hl_variable" href="structMoFEM_1_1RefElement.html#ac3957cfa712faf3350b8a010fef5181a">side_number_table</a>.end())</div>
@@ -636,7 +636,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span><span class="keyword">const</span> boost::shared_ptr&lt;SideNumber&gt; &amp;</div>
 <div class="foldopen" id="foldopen00467" data-start="{" data-end="}">
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElement__VERTEX.html#a44846e437f3bd17b79bc96996230fcd4">  467</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElement_VERTEX::getSideNumberPtr</a>(<span class="keyword">const</span> EntityHandle ent)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno"><a class="line" href="structMoFEM_1_1RefElement__VERTEX.html#a44846e437f3bd17b79bc96996230fcd4">  467</a></span><a class="code hl_function" href="structMoFEM_1_1interface__RefEntity.html#a96fe9bc48fd7b473a9d3415d59a0f527">RefElement_VERTEX::getSideNumberPtr</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>  SideNumber_multiIndex::iterator miit = <a class="code hl_variable" href="structMoFEM_1_1RefElement.html#ac3957cfa712faf3350b8a010fef5181a">side_number_table</a>.find(ent);</div>
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>  <span class="keywordflow">if</span> (miit != <a class="code hl_variable" href="structMoFEM_1_1RefElement.html#ac3957cfa712faf3350b8a010fef5181a">side_number_table</a>.end())</div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>    <span class="keywordflow">return</span> *miit;</div>
@@ -666,6 +666,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span> </div>
 <div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>} <span class="comment">// namespace MoFEM</span></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a05a7b30aaf65db56c27346272aa681e5"><div class="ttname"><a href="definitions_8h.html#a05a7b30aaf65db56c27346272aa681e5">NOT_USED</a></div><div class="ttdeci">#define NOT_USED(x)</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00255">definitions.h:255</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a493fcd6f5f4b7e36007a9020980bb819"><div class="ttname"><a href="definitions_8h.html#a493fcd6f5f4b7e36007a9020980bb819">MOAB_THROW</a></div><div class="ttdeci">#define MOAB_THROW(err)</div><div class="ttdoc">Check error code of MoAB function and throw MoFEM exception.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00557">definitions.h:557</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_af1d7ca96eafbfaebd5f26bf7fcc4c285"><div class="ttname"><a href="definitions_8h.html#af1d7ca96eafbfaebd5f26bf7fcc4c285">THROW_MESSAGE</a></div><div class="ttdeci">#define THROW_MESSAGE(msg)</div><div class="ttdoc">Throw MoFEM exception.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00577">definitions.h:577</a></div></div>

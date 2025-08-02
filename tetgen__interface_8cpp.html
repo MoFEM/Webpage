@@ -255,7 +255,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   80</span>                                 bit_level1, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   81</span> </div>
 <div class="line"><span class="lineno">   82</span>    <span class="comment">// save results</span></div>
-<div class="line"><span class="lineno">   83</span>    EntityHandle meshset_level1;</div>
+<div class="line"><span class="lineno">   83</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset_level1;</div>
 <div class="line"><span class="lineno">   84</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset_level1);</div>
 <div class="line"><span class="lineno">   85</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;getEntitiesByTypeAndRefLevel(</div>
 <div class="line"><span class="lineno">   86</span>        bit_level1, <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), MBTET, meshset_level1);</div>
@@ -389,13 +389,13 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  214</span>    <span class="comment">// out.save_elements(tetgen_out_file_name);</span></div>
 <div class="line"><span class="lineno">  215</span> </div>
 <div class="line"><span class="lineno">  216</span>    <span class="comment">// post-process results, save a mesh and skin</span></div>
-<div class="line"><span class="lineno">  217</span>    EntityHandle meshset_level2;</div>
+<div class="line"><span class="lineno">  217</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset_level2;</div>
 <div class="line"><span class="lineno">  218</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset_level2);</div>
 <div class="line"><span class="lineno">  219</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;getEntitiesByTypeAndRefLevel(</div>
 <div class="line"><span class="lineno">  220</span>        bit_level2, <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), MBTET, meshset_level2);</div>
 <div class="line"><span class="lineno">  221</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="tetgen__interface_8cpp.html#ac3e1795766a80ec63b157951b4b9a7d4">debug</a>)</div>
 <div class="line"><span class="lineno">  222</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;level2.vtk&quot;</span>, <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, &amp;meshset_level2, 1);</div>
-<div class="line"><span class="lineno">  223</span>    EntityHandle meshset_skin_level2;</div>
+<div class="line"><span class="lineno">  223</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset_skin_level2;</div>
 <div class="line"><span class="lineno">  224</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset_skin_level2);</div>
 <div class="line"><span class="lineno">  225</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;getEntitiesByTypeAndRefLevel(</div>
 <div class="line"><span class="lineno">  226</span>        bit_level2, <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), MBTRI, meshset_skin_level2);</div>
@@ -407,6 +407,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  232</span> </div>
 <div class="line"><span class="lineno">  233</span>  <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"><span class="lineno">  234</span>}</div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a82340fd7aca566defb002f93cc299efca86c05035d6a2fbc5762f39215d6a8a22"><div class="ttname"><a href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca86c05035d6a2fbc5762f39215d6a8a22">SIDESET</a></div><div class="ttdeci">@ SIDESET</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00160">definitions.h:160</a></div></div>

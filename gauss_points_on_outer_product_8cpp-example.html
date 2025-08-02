@@ -272,14 +272,14 @@ $(function() {
 <div class="line">              &lt;&lt; triangles[6 * <a class="code hl_variable" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a> + 0] &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; triangles[6 * <a class="code hl_variable" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a> + 1] &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
 <div class="line">              &lt;&lt; triangles[6 * <a class="code hl_variable" href="plate_8cpp.html#a95479f31dffaa5e5858822a5e4c231d6">t</a> + 2] &lt;&lt; std::endl;</div>
 <div class="line"> </div>
-<div class="line">          EntityHandle tri;</div>
+<div class="line">          <a id="_a14" name="_a14"></a><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> tri;</div>
 <div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_element(MBTRI, conn.data(), 3, tri);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> = 0; <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a> &lt; new_nb_gauss_pts; ++<a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>) {</div>
 <div class="line">          std::array&lt;double, 3&gt; coords{new_gauss_pts(0, <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>), new_gauss_pts(1, <a class="code hl_variable" href="hcurl__divergence__operator__2d_8cpp.html#a4c0436605284b64f6b0b5482594d86bc">i</a>),</div>
 <div class="line">                                       0};</div>
-<div class="line">          EntityHandle node;</div>
+<div class="line">          <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> node;</div>
 <div class="line">          <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_vertex(coords.data(), node);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
@@ -293,14 +293,15 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> test_hex();</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> test_refined_triangle();</div>
 <div class="line">  }</div>
-<div class="line">  <a id="a14" name="a14"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a id="a15" name="a15"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a15" name="a15"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a16" name="a16"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line">}</div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aactivate__deactivate__dofs_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="activate__deactivate__dofs_8cpp_source.html#l00013">activate_deactivate_dofs.cpp:13</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
 <div class="ttc" id="acheck__base__functions__derivatives__on__tet_8cpp_html_a3d8c24629d725b9ef8c238cf27c9b158"><div class="ttname"><a href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a></div><div class="ttdeci">static const double eps</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__on__tet_8cpp_source.html#l00011">check_base_functions_derivatives_on_tet.cpp:11</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a6c0b52978f1abc88bf8a1ba70b7308e3"><div class="ttname"><a href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a></div><div class="ttdeci">#define MoFEMFunctionBegin</div><div class="ttdoc">First executable line of each MoFEM function, used for error handling. Final line of MoFEM functions ...</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00359">definitions.h:359</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724"><div class="ttname"><a href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a></div><div class="ttdeci">@ MOFEM_DATA_INCONSISTENCY</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00031">definitions.h:31</a></div></div>

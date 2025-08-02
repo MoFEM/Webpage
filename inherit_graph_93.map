@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structEshelbianCore_1_1SetUpSchur.html" title=" " alt="" coords="5,5,204,31"/>
-<area shape="rect" id="Node000001" href="$structSetUpSchurImpl.html" title=" " alt="" coords="252,31,379,56"/>
-<area shape="poly" id="edge100_Node000000_Node000001" title=" " alt="" coords="218,29,252,33,252,38,217,34"/>
-<area shape="rect" id="Node000002" href="$structSetUpSchur.html" title="[Push operators to pipeline]" alt="" coords="56,55,153,80"/>
-<area shape="poly" id="edge101_Node000002_Node000001" title=" " alt="" coords="167,58,252,48,252,53,168,63"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,53,232,93"/>
+<area shape="rect" id="Node000001" href="$structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssmebleBcLhs.html" title="Integrate vector on lhs,." alt="" coords="280,5,467,60"/>
+<area shape="poly" id="edge144_Node000000_Node000001" title=" " alt="" coords="245,50,279,45,280,50,246,55"/>
+<area shape="rect" id="Node000002" href="$structMinimalSurfaceEquation_1_1MinimalSurfaceElement_1_1OpAssmebleBcRhs.html" title="Integrate vector on rhs,." alt="" coords="280,84,467,139"/>
+<area shape="poly" id="edge145_Node000000_Node000002" title=" " alt="" coords="246,89,280,95,279,100,245,95"/>
 </map>

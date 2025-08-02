@@ -178,11 +178,11 @@ Variables</h2></td></tr>
 <tr class="separator:a27d9a8345981b63087082272a1c49226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10670dea227b5d32902985904ceb3c2a" id="r_a10670dea227b5d32902985904ceb3c2a"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prism__elements__from__surface_8cpp.html#a10670dea227b5d32902985904ceb3c2a">number_of_prisms_layers</a> = 18</td></tr>
 <tr class="separator:a10670dea227b5d32902985904ceb3c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9eb248cd425bb908c67fa311945029cc" id="r_a9eb248cd425bb908c67fa311945029cc"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prism__elements__from__surface_8cpp.html#a9eb248cd425bb908c67fa311945029cc">delta</a></td></tr>
+<tr class="memitem:a9eb248cd425bb908c67fa311945029cc" id="r_a9eb248cd425bb908c67fa311945029cc"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classdouble.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prism__elements__from__surface_8cpp.html#a9eb248cd425bb908c67fa311945029cc">delta</a></td></tr>
 <tr class="separator:a9eb248cd425bb908c67fa311945029cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1498fb92fcdd77776b0fdabf6c49df2" id="r_ac1498fb92fcdd77776b0fdabf6c49df2"><td class="memItemLeft" align="right" valign="top">static constexpr std::array&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prism__elements__from__surface_8cpp.html#ac1498fb92fcdd77776b0fdabf6c49df2">d3</a> = {0, 0, 0}</td></tr>
+<tr class="memitem:ac1498fb92fcdd77776b0fdabf6c49df2" id="r_ac1498fb92fcdd77776b0fdabf6c49df2"><td class="memItemLeft" align="right" valign="top">static constexpr std::array&lt; <a class="el" href="classdouble.html">double</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prism__elements__from__surface_8cpp.html#ac1498fb92fcdd77776b0fdabf6c49df2">d3</a> = {0, 0, 0}</td></tr>
 <tr class="separator:ac1498fb92fcdd77776b0fdabf6c49df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99fecb101240e864100fe142c6bd6501" id="r_a99fecb101240e864100fe142c6bd6501"><td class="memItemLeft" align="right" valign="top">static constexpr std::array&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prism__elements__from__surface_8cpp.html#a99fecb101240e864100fe142c6bd6501">d4</a> = {0, 0, <a class="el" href="prism__elements__from__surface_8cpp.html#a9eb248cd425bb908c67fa311945029cc">delta</a>}</td></tr>
+<tr class="memitem:a99fecb101240e864100fe142c6bd6501" id="r_a99fecb101240e864100fe142c6bd6501"><td class="memItemLeft" align="right" valign="top">static constexpr std::array&lt; <a class="el" href="classdouble.html">double</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prism__elements__from__surface_8cpp.html#a99fecb101240e864100fe142c6bd6501">d4</a> = {0, 0, <a class="el" href="prism__elements__from__surface_8cpp.html#a9eb248cd425bb908c67fa311945029cc">delta</a>}</td></tr>
 <tr class="separator:a99fecb101240e864100fe142c6bd6501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -213,7 +213,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="prism_elements_from_surface_8cpp-example.html#a14">prism_elements_from_surface.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="prism_elements_from_surface_8cpp-example.html#a16">prism_elements_from_surface.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="prism__elements__from__surface_8cpp_source.html#l00048">48</a> of file <a class="el" href="prism__elements__from__surface_8cpp_source.html">prism_elements_from_surface.cpp</a>.</p>
@@ -309,7 +309,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  190</span>      add_prims_layer.clear();</div>
 <div class="line"><span class="lineno">  191</span>    }</div>
 <div class="line"><span class="lineno">  192</span> </div>
-<div class="line"><span class="lineno">  193</span>    EntityHandle meshset;</div>
+<div class="line"><span class="lineno">  193</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset;</div>
 <div class="line"><span class="lineno">  194</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET | MESHSET_TRACK_OWNER, meshset);</div>
 <div class="line"><span class="lineno">  195</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.add_entities(meshset, prisms);</div>
 <div class="line"><span class="lineno">  196</span> </div>
@@ -322,7 +322,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  203</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> = 0; <a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a> != verts.size(); ++<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>)</div>
 <div class="line"><span class="lineno">  204</span>      map_coords.insert(<a class="code hl_struct" href="structCoordsAndHandle.html">CoordsAndHandle</a>(&amp;coords(<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>, 0), verts[<a class="code hl_variable" href="initial__diffusion_8cpp.html#af16c6805bd7f1a6a9acfe503216a5555">v</a>]));</div>
 <div class="line"><span class="lineno">  205</span> </div>
-<div class="line"><span class="lineno">  206</span>    EntityHandle one_prism_meshset;</div>
+<div class="line"><span class="lineno">  206</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> one_prism_meshset;</div>
 <div class="line"><span class="lineno">  207</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET | MESHSET_TRACK_OWNER,</div>
 <div class="line"><span class="lineno">  208</span>                               one_prism_meshset);</div>
 <div class="line"><span class="lineno">  209</span> </div>
@@ -331,7 +331,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  212</span>    std::array&lt;EntityHandle, 6&gt; one_prism_nodes;</div>
 <div class="line"><span class="lineno">  213</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> = 0; <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a> != 6; ++<a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>)</div>
 <div class="line"><span class="lineno">  214</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_vertex(&amp;one_prism_coords[3 * <a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>], one_prism_nodes[<a class="code hl_variable" href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a>]);</div>
-<div class="line"><span class="lineno">  215</span>    EntityHandle one_prism;</div>
+<div class="line"><span class="lineno">  215</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> one_prism;</div>
 <div class="line"><span class="lineno">  216</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a174e70b67f4f235d096d3c45d865645b">get_moab</a>().create_element(MBPRISM, one_prism_nodes.data(), 6,</div>
 <div class="line"><span class="lineno">  217</span>                                             one_prism);</div>
 <div class="line"><span class="lineno">  218</span>    <a class="code hl_class" href="classRange.html">Range</a> one_prism_range;</div>
@@ -457,6 +457,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  338</span>  <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"><span class="lineno">  339</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  340</span>}</div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="aclassUBlasMatrix_3_01double_01_4_html"><div class="ttname"><a href="classUBlasMatrix_3_01double_01_4.html">UBlasMatrix&lt; double &gt;</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2caec6eb52aa79824668fa314f4d08cf2fa"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2caec6eb52aa79824668fa314f4d08cf2fa">VERY_NOISY</a></div><div class="ttdeci">@ VERY_NOISY</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00226">definitions.h:225</a></div></div>
@@ -534,7 +535,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr std::array&lt;double, 3&gt; d3 = {0, 0, 0}</td>
+          <td class="memname">constexpr std::array&lt;<a class="el" href="classdouble.html">double</a>, 3&gt; d3 = {0, 0, 0}</td>
         </tr>
       </table>
   </td>
@@ -561,7 +562,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr std::array&lt;double, 3&gt; d4 = {0, 0, <a class="el" href="prism__elements__from__surface_8cpp.html#a9eb248cd425bb908c67fa311945029cc">delta</a>}</td>
+          <td class="memname">constexpr std::array&lt;<a class="el" href="classdouble.html">double</a>, 3&gt; d4 = {0, 0, <a class="el" href="prism__elements__from__surface_8cpp.html#a9eb248cd425bb908c67fa311945029cc">delta</a>}</td>
         </tr>
       </table>
   </td>
@@ -589,7 +590,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr double delta</td>
+          <td class="memname">constexpr <a class="el" href="classdouble.html">double</a> delta</td>
         </tr>
       </table>
   </td>

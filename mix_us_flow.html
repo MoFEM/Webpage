@@ -479,11 +479,11 @@ Adding new material</h2>
 <div class="line">      recordKr();</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    adouble ah;</div>
-<div class="line">    adouble aTheta;</div>
-<div class="line">    adouble aKr;</div>
-<div class="line">    adouble aSe;</div>
-<div class="line">    adouble aSeStar;</div>
+<div class="line">    <a class="code hl_class" href="classadouble.html">adouble</a> ah;</div>
+<div class="line">    <a class="code hl_class" href="classadouble.html">adouble</a> aTheta;</div>
+<div class="line">    <a class="code hl_class" href="classadouble.html">adouble</a> aKr;</div>
+<div class="line">    <a class="code hl_class" href="classadouble.html">adouble</a> aSe;</div>
+<div class="line">    <a class="code hl_class" href="classadouble.html">adouble</a> aSeStar;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TYPE&gt;</div>
 <div class="line">    <span class="keyword">inline</span> TYPE funTheta(TYPE &amp;<a class="code hl_variable" href="photon__diffusion_8cpp.html#a8ee9be1b5aa75abae556de3088cba6d9">h</a>,<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a>) {</div>
@@ -515,6 +515,7 @@ Adding new material</h2>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">};</div>
+<div class="ttc" id="aclassadouble_html"><div class="ttname"><a href="classadouble.html">adouble</a></div></div>
 <div class="ttc" id="ainitial__diffusion_8cpp_html_afd53743d1af6bfa2856255b23b5a41a9"><div class="ttname"><a href="initial__diffusion_8cpp.html#afd53743d1af6bfa2856255b23b5a41a9">n</a></div><div class="ttdeci">const double n</div><div class="ttdoc">refractive index of diffusive medium</div><div class="ttdef"><b>Definition</b> <a href="initial__diffusion_8cpp_source.html#l00038">initial_diffusion.cpp:38</a></div></div>
 <div class="ttc" id="aphoton__diffusion_8cpp_html_a8ee9be1b5aa75abae556de3088cba6d9"><div class="ttname"><a href="photon__diffusion_8cpp.html#a8ee9be1b5aa75abae556de3088cba6d9">h</a></div><div class="ttdeci">double h</div><div class="ttdef"><b>Definition</b> <a href="photon__diffusion_8cpp_source.html#l00060">photon_diffusion.cpp:60</a></div></div>
 <div class="ttc" id="ashallow__wave_8cpp_html_ac1bb4bfd31a408c2fed3ca69bcad99fc"><div class="ttname"><a href="shallow__wave_8cpp.html#ac1bb4bfd31a408c2fed3ca69bcad99fc">m</a></div><div class="ttdeci">FTensor::Index&lt; 'm', 3 &gt; m</div><div class="ttdef"><b>Definition</b> <a href="shallow__wave_8cpp_source.html#l00080">shallow_wave.cpp:80</a></div></div>
@@ -907,11 +908,12 @@ Creating finite element instances</h2>
 Figure 4. Sequence of operators on instance of MIX element</div></div>
 <p>We have already discussed the last four operators in sequence for <em>feVolLhs</em> finite element instance, those are used to assemble tangent matrix blocks, i.e. \(\mathbf{C}\), \(\mathbf{G}\), \(\mathbf{H}\) and \(\mathbf{A}\). The first three operators are used to evaluate fields at integration points, i.e. capillary head, flux and rate of capillary head. Note that the first three operators have been reused from other tutorials.</p>
 <p>In this problem, we use two generic implementations of finite element, <a class="el" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore.html" title="Volume finite element base.">MoFEM::VolumeElementForcesAndSourcesCore</a> and <a class="el" href="structMoFEM_1_1FaceElementForcesAndSourcesCore.html" title="Face finite element.">MoFEM::FaceElementForcesAndSourcesCore</a>, for integrating fields on volumes and faces. Finite element instances are iterated over a particular element in the problem, and for each entity on finite element entity, the sequence of UDO is called.</p>
-<p>We use smart pointers to create the finite element instances, which gives the code flexibility and a safe memory management. The finite element instances are created in method <a class="el" href="structMixTransport_1_1UnsaturatedFlowElement.html#a2fe2664b246c11462fc96422231627dc" title="Create finite element instances.">MixTransport::UnsaturatedFlowElement::setFiniteElements</a> as follows </p><div class="fragment"><div class="line">feFaceBc = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(<span class="keyword">new</span> FaceElementForcesAndSourcesCore(mField));</div>
-<div class="line">feFaceRhs = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(<span class="keyword">new</span> FaceElementForcesAndSourcesCore(mField));</div>
+<p>We use smart pointers to create the finite element instances, which gives the code flexibility and a safe memory management. The finite element instances are created in method <a class="el" href="structMixTransport_1_1UnsaturatedFlowElement.html#a2fe2664b246c11462fc96422231627dc" title="Create finite element instances.">MixTransport::UnsaturatedFlowElement::setFiniteElements</a> as follows </p><div class="fragment"><div class="line">feFaceBc = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(<span class="keyword">new</span> <a class="code hl_class" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>(mField));</div>
+<div class="line">feFaceRhs = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(<span class="keyword">new</span> <a class="code hl_class" href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>(mField));</div>
 <div class="line">feVolInitialPc = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(<span class="keyword">new</span> VolumeElementForcesAndSourcesCore(mField));</div>
 <div class="line">feVolLhs = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(<span class="keyword">new</span> VolumeElementForcesAndSourcesCore(mField));</div>
 <div class="line">feVolRhs = boost::shared_ptr&lt;ForcesAndSourcesCore&gt;(<span class="keyword">new</span> VolumeElementForcesAndSourcesCore(mField));</div>
+<div class="ttc" id="aclassFaceElementForcesAndSourcesCore_html"><div class="ttname"><a href="classFaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a></div></div>
 </div><!-- fragment --><p> Next, we set the integration rule, as has been discussed in tutorial <a class="el" href="poisson_tut1.html">COR-2: Solving the Poisson equation</a> as follows </p><div class="fragment"><div class="line"><span class="comment">// set integration rule to elements</span></div>
 <div class="line">feFaceBc-&gt;getRuleHook = face_rule;</div>
 <div class="line">feFaceRhs-&gt;getRuleHook = face_rule;</div>

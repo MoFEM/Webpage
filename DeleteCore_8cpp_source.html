@@ -207,8 +207,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">for</span> (Range::const_pair_iterator p_eit = ents.pair_begin();</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>       p_eit != ents.pair_end(); p_eit++) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    EntityHandle first = p_eit-&gt;first;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    EntityHandle second = p_eit-&gt;second;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> first = p_eit-&gt;first;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> second = p_eit-&gt;second;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// get dofs range</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    DofEntityByEnt::iterator dit, hi_dit;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    dit = dofsField.get&lt;<a class="code hl_struct" href="structMoFEM_1_1Ent__mi__tag.html">Ent_mi_tag</a>&gt;().lower_bound(first);</div>
@@ -270,8 +270,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> clear_adjacencies_entities(ents, verb);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keywordflow">for</span> (Range::const_pair_iterator p_eit = ents.pair_begin();</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>       p_eit != ents.pair_end(); p_eit++) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    EntityHandle first = p_eit-&gt;first;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    EntityHandle second = p_eit-&gt;second;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> first = p_eit-&gt;first;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> second = p_eit-&gt;second;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    FieldEntity_multiIndex::index&lt;Ent_mi_tag&gt;::type::iterator dit, hi_dit;</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    dit = entsFields.get&lt;<a class="code hl_struct" href="structMoFEM_1_1Ent__mi__tag.html">Ent_mi_tag</a>&gt;().lower_bound(first);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    hi_dit = entsFields.get&lt;<a class="code hl_struct" href="structMoFEM_1_1Ent__mi__tag.html">Ent_mi_tag</a>&gt;().upper_bound(second);</div>
@@ -306,7 +306,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
 <div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a7e47c6d8569e377d93bb1250c1e80ce5">  152</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a7e47c6d8569e377d93bb1250c1e80ce5">Core::remove_ents_from_field</a>(<span class="keyword">const</span> std::string name,</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                                            <span class="keyword">const</span> EntityHandle meshset,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                                            <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset,</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                                            <span class="keyword">const</span> EntityType type, <span class="keywordtype">int</span> verb) {</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keywordflow">if</span> (verb == -1)</div>
@@ -324,7 +324,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keywordflow">if</span> (verb == -1)</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    verb = verbose;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  EntityHandle meshset;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset;</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  meshset = get_field_meshset(name);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> clear_ents_fields(name, ents, verb);</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().remove_entities(meshset, ents);</div>
@@ -340,7 +340,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> clear_ents_fields(ents, verb);</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="keywordflow">for</span> (Field_multiIndex::iterator fit = fIelds.begin(); fit != fIelds.end();</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>       fit++) {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    EntityHandle meshset = fit-&gt;get()-&gt;getMeshset();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = fit-&gt;get()-&gt;getMeshset();</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().remove_entities(meshset, ents);</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  }</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
@@ -382,8 +382,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    verb = verbose;</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="keywordflow">for</span> (Range::const_pair_iterator p_eit = ents.pair_begin();</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>       p_eit != ents.pair_end(); ++p_eit) {</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">const</span> EntityHandle first = p_eit-&gt;first;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">const</span> EntityHandle second = p_eit-&gt;second;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> first = p_eit-&gt;first;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> second = p_eit-&gt;second;</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    FieldEntityEntFiniteElementAdjacencyMap_multiIndex::index&lt;</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <a class="code hl_struct" href="structMoFEM_1_1Ent__mi__tag.html">Ent_mi_tag</a>&gt;::type::iterator ait,</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        hi_ait;</div>
@@ -409,8 +409,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>       p_eit != ents.pair_end(); p_eit++) {</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="comment">// First and last handle</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keyword">const</span> EntityHandle first = p_eit-&gt;first;</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keyword">const</span> EntityHandle second = p_eit-&gt;second;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> first = p_eit-&gt;first;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> second = p_eit-&gt;second;</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="comment">// Get UId</span></div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a6e2e24dfdf43940a5a3d7c72a975b289">UId</a> first_uid =</div>
@@ -449,8 +449,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> clear_adjacencies_finite_elements(ents, verb);</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keywordflow">for</span> (Range::const_pair_iterator p_eit = ents.pair_begin();</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>       p_eit != ents.pair_end(); p_eit++) {</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    EntityHandle first = p_eit-&gt;first;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    EntityHandle second = p_eit-&gt;second;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> first = p_eit-&gt;first;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> second = p_eit-&gt;second;</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    EntFiniteElement_multiIndex::index&lt;Ent_mi_tag&gt;::type::iterator fit, hi_fit;</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    fit = entsFiniteElements.get&lt;<a class="code hl_struct" href="structMoFEM_1_1Ent__mi__tag.html">Ent_mi_tag</a>&gt;().lower_bound(first);</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    hi_fit = entsFiniteElements.get&lt;<a class="code hl_struct" href="structMoFEM_1_1Ent__mi__tag.html">Ent_mi_tag</a>&gt;().upper_bound(second);</div>
@@ -504,8 +504,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    verb = verbose;</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  <span class="keywordflow">for</span> (Range::const_pair_iterator p_eit = ents.pair_begin();</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>       p_eit != ents.pair_end(); p_eit++) {</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    EntityHandle first = p_eit-&gt;first;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    EntityHandle second = p_eit-&gt;second;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> first = p_eit-&gt;first;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> second = p_eit-&gt;second;</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    FieldEntityEntFiniteElementAdjacencyMap_multiIndex::index&lt;</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        <a class="code hl_struct" href="structMoFEM_1_1FEEnt__mi__tag.html">FEEnt_mi_tag</a>&gt;::type::iterator ait,</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        hi_ait;</div>
@@ -535,8 +535,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>         p_eit != ents.pair_end(); p_eit++) {</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>      <span class="comment">// First and last handle</span></div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      <span class="keyword">const</span> EntityHandle first = p_eit-&gt;first;</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>      <span class="keyword">const</span> EntityHandle second = p_eit-&gt;second;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> first = p_eit-&gt;first;</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> second = p_eit-&gt;second;</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>      <span class="comment">// Get UId</span></div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#a6e2e24dfdf43940a5a3d7c72a975b289">UId</a> first_uid =</div>
@@ -559,7 +559,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
 <div class="foldopen" id="foldopen00379" data-start="{" data-end="}">
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno"><a class="line" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a06ddbb629c938e271cd8300d9575c52b">  379</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a06ddbb629c938e271cd8300d9575c52b">Core::remove_ents_from_finite_element</a>(<span class="keyword">const</span> std::string name,</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                                                     <span class="keyword">const</span> EntityHandle meshset,</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                                                     <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset,</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                                                     <span class="keyword">const</span> EntityType type,</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                                                     <span class="keywordtype">int</span> verb) {</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
@@ -580,7 +580,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>  <span class="keywordflow">if</span> (verb == -1)</div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    verb = verbose;</div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> clear_finite_elements(name, ents, verb);</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>  <span class="keyword">const</span> EntityHandle idm = get_finite_element_meshset(name);</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>  <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> idm = get_finite_element_meshset(name);</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().remove_entities(idm, ents);</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>}</div>
@@ -595,7 +595,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> clear_finite_elements(ents, verb);</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>  <span class="keywordflow">for</span> (FiniteElement_multiIndex::iterator fe_it = finiteElements.begin();</div>
 <div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>       fe_it != finiteElements.end(); fe_it++) {</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    EntityHandle meshset = fe_it-&gt;get()-&gt;getMeshset();</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = fe_it-&gt;get()-&gt;getMeshset();</div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().remove_entities(meshset, ents);</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>  }</div>
 <div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
@@ -678,8 +678,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span> </div>
 <div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> pit = ents.pair_begin(); pit != ents.pair_end(); ++pit) {</div>
 <div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span> </div>
-<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>    EntityHandle f = pit-&gt;first;</div>
-<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>    <span class="keyword">const</span> EntityHandle s = pit-&gt;second;</div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> f = pit-&gt;first;</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> s = pit-&gt;second;</div>
 <div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>    <span class="keyword">auto</span> lo = refinedEntities.lower_bound(f);</div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>    <span class="keywordflow">for</span> (; f &lt;= s; ++f) {</div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span> </div>
@@ -799,7 +799,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaa4d3788e72b298f5fc901644e3f1ad95">MOFEM_OPERATION_UNSUCCESSFUL</a>,</div>
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>             <span class="stringliteral">&quot;Finite element &lt;%s&gt; not found&quot;</span>, name.c_str());</div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>  }</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>  EntityHandle meshset = mit-&gt;get()-&gt;getMeshset();</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = mit-&gt;get()-&gt;getMeshset();</div>
 <div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>  <a class="code hl_class" href="classRange.html">Range</a> ents;</div>
 <div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().get_entities_by_handle(meshset, ents, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> remove_ents_from_finite_element(name, ents, verb);</div>
@@ -818,7 +818,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eaa4d3788e72b298f5fc901644e3f1ad95">MOFEM_OPERATION_UNSUCCESSFUL</a>,</div>
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>             <span class="stringliteral">&quot;Finite element &lt;%s&gt; not found&quot;</span>, name.c_str());</div>
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>  }</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>  EntityHandle meshset = mit-&gt;get()-&gt;getMeshset();</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset = mit-&gt;get()-&gt;getMeshset();</div>
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>  <a class="code hl_class" href="classRange.html">Range</a> ents;</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().get_entities_by_handle(meshset, ents, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> remove_ents_from_field(name, ents, verb);</div>
@@ -834,6 +834,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aDeleteCore_8cpp_html_ad76597786cfecced940b20ace97e8432"><div class="ttname"><a href="DeleteCore_8cpp.html#ad76597786cfecced940b20ace97e8432">DeleteCoreFunctionBegin</a></div><div class="ttdeci">#define DeleteCoreFunctionBegin</div><div class="ttdef"><b>Definition</b> <a href="DeleteCore_8cpp_source.html#l00021">DeleteCore.cpp:21</a></div></div>
 <div class="ttc" id="aLogManager_8hpp_html_aef9b5316ec6db54581633adf7c670011"><div class="ttname"><a href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a></div><div class="ttdeci">#define MOFEM_LOG_C(channel, severity, format,...)</div><div class="ttdef"><b>Definition</b> <a href="LogManager_8hpp_source.html#l00319">LogManager.hpp:319</a></div></div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28">QUIET</a></div><div class="ttdeci">@ QUIET</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00221">definitions.h:221</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2cace3e26676763569084c86b8c3b67d601"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2cace3e26676763569084c86b8c3b67d601">VERBOSE</a></div><div class="ttdeci">@ VERBOSE</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00222">definitions.h:222</a></div></div>

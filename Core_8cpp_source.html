@@ -713,7 +713,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span> </div>
 <div class="foldopen" id="foldopen00538" data-start="{" data-end="}">
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno"><a class="line" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a767509c84bf6ae4b9ab524183adca634">  538</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a767509c84bf6ae4b9ab524183adca634">Core::addPrismToDatabase</a>(<span class="keyword">const</span> EntityHandle prism, <span class="keywordtype">int</span> verb) {</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno"><a class="line" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a767509c84bf6ae4b9ab524183adca634">  538</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a767509c84bf6ae4b9ab524183adca634">Core::addPrismToDatabase</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> prism, <span class="keywordtype">int</span> verb) {</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>  <span class="keywordflow">if</span> (verb == -1)</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>    verb = verbose;</div>
@@ -725,7 +725,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    p = refinedFiniteElements.insert(</div>
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        boost::shared_ptr&lt;RefElement&gt;(<span class="keyword">new</span> <a class="code hl_struct" href="structMoFEM_1_1RefElement__PRISM.html">RefElement_PRISM</a>(*p_ent.first)));</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>    <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>    <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().get_connectivity(prism, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    <a class="code hl_class" href="classRange.html">Range</a> face_side3, face_side4;</div>
 <div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().get_adjacencies(conn, 3, 2, <span class="keyword">false</span>, face_side3);</div>
@@ -747,7 +747,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno"><a class="line" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#ac2756481ac3dc9c9be38946e8803b4f2">  567</a></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#ac2756481ac3dc9c9be38946e8803b4f2">Core::getTags</a>(<span class="keywordtype">int</span> verb) {</div>
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span> </div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>  <span class="keyword">const</span> EntityHandle root_meshset = get_moab().get_root_set();</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>  <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> root_meshset = get_moab().get_root_set();</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  <span class="keywordflow">if</span> (root_meshset) {</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    SETERRQ(PETSC_COMM_SELF, <a class="code hl_enumvalue" href="definitions_8h.html#a980bf270a5c3f2f984262f7e74786a2eac345e9ce83307109886a56dcaf5ab724">MOFEM_DATA_INCONSISTENCY</a>,</div>
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>            <span class="stringliteral">&quot;Root meshset should be 0&quot;</span>);</div>
@@ -799,7 +799,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().tag_get_handle(<span class="stringliteral">&quot;_MeshsetPartition&quot;</span>, 1, MB_TYPE_INTEGER,</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>                                     th_Part, MB_TAG_CREAT | MB_TAG_SPARSE,</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>                                     &amp;def_part);</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>    EntityHandle def_handle = 0;</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> def_handle = 0;</div>
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> get_moab().tag_get_handle(<span class="stringliteral">&quot;_RefParentHandle&quot;</span>, 1, MB_TYPE_HANDLE,</div>
 <div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>                                     th_RefParentHandle,</div>
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>                                     MB_TAG_CREAT | MB_TAG_SPARSE, &amp;def_handle);</div>
@@ -1217,7 +1217,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span> </div>
 <div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>boost::shared_ptr&lt;RefEntityTmp&lt;0&gt;&gt;</div>
 <div class="foldopen" id="foldopen00982" data-start="{" data-end="}">
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno"><a class="line" href="structMoFEM_1_1CoreTmp_3-1_01_4.html#a40dfd92b713f495fc963904c85867487">  982</a></span><a class="code hl_struct" href="structMoFEM_1_1CoreTmp.html">CoreTmp&lt;-1&gt;::make_shared_ref_entity</a>(<span class="keyword">const</span> EntityHandle ent) {</div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno"><a class="line" href="structMoFEM_1_1CoreTmp_3-1_01_4.html#a40dfd92b713f495fc963904c85867487">  982</a></span><a class="code hl_struct" href="structMoFEM_1_1CoreTmp.html">CoreTmp&lt;-1&gt;::make_shared_ref_entity</a>(<span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ent) {</div>
 <div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>  <span class="keywordflow">return</span> this-&gt;makeSharedRefEntity(*<span class="keyword">this</span>, ent);</div>
 <div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>}</div>
 </div>
@@ -1231,6 +1231,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aLogManager_8hpp_html_aef9b5316ec6db54581633adf7c670011"><div class="ttname"><a href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a></div><div class="ttdeci">#define MOFEM_LOG_C(channel, severity, format,...)</div><div class="ttdef"><b>Definition</b> <a href="LogManager_8hpp_source.html#l00319">LogManager.hpp:319</a></div></div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aactivate__deactivate__dofs_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="activate__deactivate__dofs_8cpp_source.html#l00013">activate_deactivate_dofs.cpp:13</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca4e8e36e4a6c3348cb98fd3223fb07b28">QUIET</a></div><div class="ttdeci">@ QUIET</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00221">definitions.h:221</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2caec6eb52aa79824668fa314f4d08cf2fa"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2caec6eb52aa79824668fa314f4d08cf2fa">VERY_NOISY</a></div><div class="ttdeci">@ VERY_NOISY</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00226">definitions.h:225</a></div></div>

@@ -320,7 +320,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  174</span>        std::vector&lt;double&gt; tet_data(tag_len, 0.0);</div>
 <div class="line"><span class="lineno">  175</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.tag_get_data(data_tag, &amp;tet, 1, &amp;tet_data[0]);</div>
 <div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>        <span class="keyword">const</span> EntityHandle *vert_conn;</div>
+<div class="line"><span class="lineno">  177</span>        <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *vert_conn;</div>
 <div class="line"><span class="lineno">  178</span>        <span class="keywordtype">int</span> vert_num;</div>
 <div class="line"><span class="lineno">  179</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(tet, vert_conn, vert_num, <span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">  180</span>        std::vector&lt;double&gt; vpos(3 * vert_num);</div>
@@ -382,6 +382,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  236</span> </div>
 <div class="line"><span class="lineno">  237</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  238</span>}</div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Dg_html"><div class="ttname"><a href="classFTensor_1_1Dg.html">FTensor::Dg</a></div><div class="ttdef"><b>Definition</b> <a href="Dg__value_8hpp_source.html#l00009">Dg_value.hpp:10</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Kronecker__Delta__symmetric_html"><div class="ttname"><a href="classFTensor_1_1Kronecker__Delta__symmetric.html">FTensor::Kronecker_Delta_symmetric</a></div><div class="ttdoc">Kronecker Delta class symmetric.</div><div class="ttdef"><b>Definition</b> <a href="Kronecker__Delta_8hpp_source.html#l00049">Kronecker_Delta.hpp:49</a></div></div>

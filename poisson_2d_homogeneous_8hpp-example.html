@@ -166,20 +166,20 @@ $(function() {
 <div class="line"><a id="_a7" name="_a7"></a><a class="code hl_class" href="classFTensor_1_1Index.html">FTensor::Index</a>&lt;<span class="charliteral">&#39;i&#39;</span>, <a id="a8" name="a8"></a><a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>&gt; <a id="a9" name="a9"></a><a class="code hl_variable" href="namespacePoisson2DHomogeneousOperators.html#a6de501e93282da2d382d3e918cda7d80">i</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//function type</span></div>
-<div class="line"><span class="keyword">typedef</span> boost::function&lt;double(<span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>)&gt;</div>
-<div class="line">    <a id="a10" name="a10"></a><a class="code hl_typedef" href="namespacePoisson2DHomogeneousOperators.html#a3ce3d5eb34454087b3fa62d84ddfef21">ScalarFunc</a>;</div>
+<div class="line"><span class="keyword">typedef</span> boost::function&lt;<a id="_a10" name="_a10"></a><a class="code hl_class" href="classdouble.html">double</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>)&gt;</div>
+<div class="line">    <a id="a11" name="a11"></a><a class="code hl_typedef" href="namespacePoisson2DHomogeneousOperators.html#a3ce3d5eb34454087b3fa62d84ddfef21">ScalarFunc</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">struct </span><a class="code hl_typedef" href="electrostatics_8hpp.html#a71ad1ac5a6ee3d13d65782a9767d0766">OpDomainLhsMatrixK</a> : <span class="keyword">public</span> <a class="code hl_class" href="classAssemblyDomainEleOp.html">AssemblyDomainEleOp</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
 <div class="line">  <a class="code hl_typedef" href="electrostatics_8hpp.html#a71ad1ac5a6ee3d13d65782a9767d0766">OpDomainLhsMatrixK</a>(std::string row_field_name, std::string col_field_name)</div>
-<div class="line">      : <a id="a11" name="a11"></a><a class="code hl_typedef" href="tensor__divergence__operator_8cpp.html#a614aff059c889b5343fba0aaadecebb4">AssemblyDomainEleOp</a>(row_field_name, col_field_name,</div>
+<div class="line">      : <a id="a12" name="a12"></a><a class="code hl_typedef" href="tensor__divergence__operator_8cpp.html#a614aff059c889b5343fba0aaadecebb4">AssemblyDomainEleOp</a>(row_field_name, col_field_name,</div>
 <div class="line">                            DomainEleOp::OPROWCOL) {}</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a12" name="a12"></a><a class="code hl_function" href="structPoisson2DHomogeneousOperators_1_1OpDomainLhsMatrixK.html#a24ba67b685608659b085ea5f9417540f">iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;row_data,</div>
+<div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a13" name="a13"></a><a class="code hl_function" href="structPoisson2DHomogeneousOperators_1_1OpDomainLhsMatrixK.html#a24ba67b685608659b085ea5f9417540f">iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;row_data,</div>
 <div class="line">                           <a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;col_data) {</div>
-<div class="line">    <a id="a13" name="a13"></a><a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
+<div class="line">    <a id="a14" name="a14"></a><a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> nb_row_dofs = row_data.<a id="a14" name="a14"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> nb_row_dofs = row_data.<a id="a15" name="a15"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> nb_col_dofs = col_data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
 <div class="line"> </div>
 <div class="line">    this-&gt;locMat.resize(nb_row_dofs, nb_col_dofs, <span class="keyword">false</span>);</div>
@@ -194,11 +194,11 @@ $(function() {
 <div class="line">    <span class="keyword">auto</span> t_w = getFTensor0IntegrationWeight();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// get derivatives of base functions on row</span></div>
-<div class="line">    <span class="keyword">auto</span> t_row_diff_base = row_data.<a id="a15" name="a15"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a0488e04e389071c795c0233b028de015">getFTensor1DiffN</a>&lt;<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>&gt;();</div>
+<div class="line">    <span class="keyword">auto</span> t_row_diff_base = row_data.<a id="a16" name="a16"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a0488e04e389071c795c0233b028de015">getFTensor1DiffN</a>&lt;<a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>&gt;();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// START THE LOOP OVER INTEGRATION POINTS TO CALCULATE LOCAL MATRIX</span></div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gg = 0; gg != nb_integration_points; gg++) {</div>
-<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> <a id="a16" name="a16"></a><a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a> = t_w * area;</div>
+<div class="line">      <span class="keyword">const</span> <span class="keywordtype">double</span> <a id="a17" name="a17"></a><a class="code hl_variable" href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a> = t_w * area;</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> rr = 0; rr != nb_row_dofs; ++rr) {</div>
 <div class="line">        <span class="comment">// get derivatives of base functions on column</span></div>
@@ -219,17 +219,17 @@ $(function() {
 <div class="line">      ++t_w;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a id="a17" name="a17"></a><a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
+<div class="line">    <a id="a18" name="a18"></a><a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">  }</div>
 <div class="line">};</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">struct </span>OpDomainRhsVectorF : <span class="keyword">public</span> <a class="code hl_class" href="classAssemblyDomainEleOp.html">AssemblyDomainEleOp</a> {</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  OpDomainRhsVectorF(std::string <a id="a18" name="a18"></a><a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, <a class="code hl_typedef" href="namespacePoisson2DHomogeneousOperators.html#a3ce3d5eb34454087b3fa62d84ddfef21">ScalarFunc</a> source_term_function)</div>
+<div class="line">  OpDomainRhsVectorF(std::string <a id="a19" name="a19"></a><a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, <a class="code hl_typedef" href="namespacePoisson2DHomogeneousOperators.html#a3ce3d5eb34454087b3fa62d84ddfef21">ScalarFunc</a> source_term_function)</div>
 <div class="line">      : <a class="code hl_typedef" href="tensor__divergence__operator_8cpp.html#a614aff059c889b5343fba0aaadecebb4">AssemblyDomainEleOp</a>(<a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, <a class="code hl_variable" href="poisson__2d__homogeneous_8cpp.html#a3917f3987bad1f4e24b85c9d0ab84a5e">field_name</a>, DomainEleOp::OPROW),</div>
-<div class="line">        <a id="a19" name="a19"></a><a class="code hl_variable" href="structPoisson2DHomogeneousOperators_1_1OpDomainRhsVectorF.html#adede8241770f41f0bdf92da513de6104">sourceTermFunc</a>(source_term_function) {}</div>
+<div class="line">        <a id="a20" name="a20"></a><a class="code hl_variable" href="structPoisson2DHomogeneousOperators_1_1OpDomainRhsVectorF.html#adede8241770f41f0bdf92da513de6104">sourceTermFunc</a>(source_term_function) {}</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a20" name="a20"></a><a class="code hl_function" href="structPoisson2DHomogeneousOperators_1_1OpDomainRhsVectorF.html#a89586936da8f6918e006ec3a176f66d4">iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;data) {</div>
+<div class="line">  <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a id="a21" name="a21"></a><a class="code hl_function" href="structPoisson2DHomogeneousOperators_1_1OpDomainRhsVectorF.html#a89586936da8f6918e006ec3a176f66d4">iNtegrate</a>(<a class="code hl_struct" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html">EntitiesFieldData::EntData</a> &amp;data) {</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">int</span> nb_dofs = data.<a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#ae5f8ff17de93c9dbb9701dc0bf067b2e">getIndices</a>().size();</div>
@@ -247,7 +247,7 @@ $(function() {
 <div class="line">    <span class="keyword">auto</span> t_coords = getFTensor1CoordsAtGaussPts();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// get base function</span></div>
-<div class="line">    <span class="keyword">auto</span> t_base = data.<a id="a21" name="a21"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a1effe6c5260104eb70a930d993942675">getFTensor0N</a>();</div>
+<div class="line">    <span class="keyword">auto</span> t_base = data.<a id="a22" name="a22"></a><a class="code hl_function" href="structMoFEM_1_1EntitiesFieldData_1_1EntData.html#a1effe6c5260104eb70a930d993942675">getFTensor0N</a>();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// START THE LOOP OVER INTEGRATION POINTS TO CALCULATE LOCAL VECTOR</span></div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> gg = 0; gg != nb_integration_points; gg++) {</div>
@@ -286,6 +286,7 @@ $(function() {
 <div class="ttc" id="aclassAssemblyDomainEleOp_html"><div class="ttname"><a href="classAssemblyDomainEleOp.html">AssemblyDomainEleOp</a></div></div>
 <div class="ttc" id="aclassDomainEleOp_html"><div class="ttname"><a href="classDomainEleOp.html">DomainEleOp</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a6c0b52978f1abc88bf8a1ba70b7308e3"><div class="ttname"><a href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a></div><div class="ttdeci">#define MoFEMFunctionBegin</div><div class="ttdoc">First executable line of each MoFEM function, used for error handling. Final line of MoFEM functions ...</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00359">definitions.h:359</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_acb0a46d159695a01bf667313b7788b45"><div class="ttname"><a href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a></div><div class="ttdeci">#define MoFEMFunctionReturn(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00432">definitions.h:432</a></div></div>
 <div class="ttc" id="aelectrostatics_8hpp_html_a71ad1ac5a6ee3d13d65782a9767d0766"><div class="ttname"><a href="electrostatics_8hpp.html#a71ad1ac5a6ee3d13d65782a9767d0766">OpDomainLhsMatrixK</a></div><div class="ttdeci">FormsIntegrators&lt; DomainEleOp &gt;::Assembly&lt; PETSC &gt;::BiLinearForm&lt; GAUSS &gt;::OpGradGrad&lt; BASE_DIM, FIELD_DIM, SPACE_DIM &gt; OpDomainLhsMatrixK</div><div class="ttdef"><b>Definition</b> <a href="electrostatics_8hpp_source.html#l00038">electrostatics.hpp:40</a></div></div>

@@ -308,11 +308,11 @@ $(function() {
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> pipeline_mng-&gt;<a id="a56" name="a56"></a><a class="code hl_function" href="structMoFEM_1_1PipelineManager.html#ac81815a59f303199fc9f63e598040f00">setDomainLhsIntegrationRule</a>(rule);</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> pipeline_mng-&gt;<a id="a57" name="a57"></a><a class="code hl_function" href="structMoFEM_1_1PipelineManager.html#a74a8e58051a774d8259456da159cba23">setDomainRhsIntegrationRule</a>(rule);</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> beta = [](<span class="keyword">const</span> double, <span class="keyword">const</span> double, <span class="keyword">const</span> double) { <span class="keywordflow">return</span> 1; };</div>
-<div class="line">  pipeline_mng-&gt;<a id="a58" name="a58"></a><a class="code hl_function" href="group__mofem__basic__interface.html#ga4b4225b4e1f114d604552ad8ec176486">getOpDomainLhsPipeline</a>().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a id="a59" name="a59"></a><a class="code hl_typedef" href="higher__derivatives_8cpp.html#abe871b85a0bb91262b5f799ce7bd7eee">OpDomainMass</a>(<a class="code hl_variable" href="higher__derivatives_8cpp.html#a36920f26cd6caab3af383e5ef4ae568f">FIELD_NAME</a>, <a class="code hl_variable" href="higher__derivatives_8cpp.html#a36920f26cd6caab3af383e5ef4ae568f">FIELD_NAME</a>, beta));</div>
-<div class="line">  pipeline_mng-&gt;<a id="a60" name="a60"></a><a class="code hl_function" href="group__mofem__basic__interface.html#gac52cdc08eaadd124e0224d7d9e0a13f5">getOpDomainRhsPipeline</a>().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a id="a61" name="a61"></a><a class="code hl_typedef" href="higher__derivatives_8cpp.html#adadbaa083c43fb2c68bb16526a6e4c9b">OpDomainSource</a>(<a class="code hl_variable" href="higher__derivatives_8cpp.html#a36920f26cd6caab3af383e5ef4ae568f">FIELD_NAME</a>, <a class="code hl_variable" href="higher__derivatives_8cpp.html#a47f5c9a54ebf753d18651f417f81f4e8">fun</a>));</div>
+<div class="line">  <span class="keyword">auto</span> beta = [](<span class="keyword">const</span> <a id="_a58" name="_a58"></a><a class="code hl_class" href="classdouble.html">double</a>, <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>, <span class="keyword">const</span> <a class="code hl_class" href="classdouble.html">double</a>) { <span class="keywordflow">return</span> 1; };</div>
+<div class="line">  pipeline_mng-&gt;<a id="a59" name="a59"></a><a class="code hl_function" href="group__mofem__basic__interface.html#ga4b4225b4e1f114d604552ad8ec176486">getOpDomainLhsPipeline</a>().push_back(</div>
+<div class="line">      <span class="keyword">new</span> <a id="a60" name="a60"></a><a class="code hl_typedef" href="higher__derivatives_8cpp.html#abe871b85a0bb91262b5f799ce7bd7eee">OpDomainMass</a>(<a class="code hl_variable" href="higher__derivatives_8cpp.html#a36920f26cd6caab3af383e5ef4ae568f">FIELD_NAME</a>, <a class="code hl_variable" href="higher__derivatives_8cpp.html#a36920f26cd6caab3af383e5ef4ae568f">FIELD_NAME</a>, beta));</div>
+<div class="line">  pipeline_mng-&gt;<a id="a61" name="a61"></a><a class="code hl_function" href="group__mofem__basic__interface.html#gac52cdc08eaadd124e0224d7d9e0a13f5">getOpDomainRhsPipeline</a>().push_back(</div>
+<div class="line">      <span class="keyword">new</span> <a id="a62" name="a62"></a><a class="code hl_typedef" href="higher__derivatives_8cpp.html#adadbaa083c43fb2c68bb16526a6e4c9b">OpDomainSource</a>(<a class="code hl_variable" href="higher__derivatives_8cpp.html#a36920f26cd6caab3af383e5ef4ae568f">FIELD_NAME</a>, <a class="code hl_variable" href="higher__derivatives_8cpp.html#a47f5c9a54ebf753d18651f417f81f4e8">fun</a>));</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}<span class="comment"></span></div>
@@ -325,25 +325,25 @@ $(function() {
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="group__mofem__log__manager.html#ga19fe81dc9081ceb92ced847e619ca654">MOFEM_LOG</a>(<span class="stringliteral">&quot;WORLD&quot;</span>, Sev::inform) &lt;&lt; <span class="stringliteral">&quot;Solve problem&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> solver = pipeline_mng-&gt;<a id="a62" name="a62"></a><a class="code hl_function" href="group__mofem__basic__interface.html#gaa983d7ca3e82c5a0711991a730bfbcbb">createKSP</a>();</div>
+<div class="line">  <span class="keyword">auto</span> solver = pipeline_mng-&gt;<a id="a63" name="a63"></a><a class="code hl_function" href="group__mofem__basic__interface.html#gaa983d7ca3e82c5a0711991a730bfbcbb">createKSP</a>();</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSetFromOptions(solver);</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSetUp(solver);</div>
 <div class="line"> </div>
-<div class="line">  <span class="keyword">auto</span> dm = <a class="code hl_variable" href="structAtomTest.html#a0e4eb81a61c54a097ac135675186fdcd">simpleInterface</a>-&gt;<a id="a63" name="a63"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a9261d3ef9b39a00cb7d0acc612702275">getDM</a>();</div>
-<div class="line">  <span class="keyword">auto</span> <a id="a64" name="a64"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a> = <a id="a65" name="a65"></a><a class="code hl_function" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(dm);</div>
-<div class="line">  <span class="keyword">auto</span> <a id="a66" name="a66"></a><a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a> = <a id="a67" name="a67"></a><a class="code hl_function" href="namespaceMoFEM.html#a681e912e2d0043503d2da810dc186d73">vectorDuplicate</a>(<a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>);</div>
+<div class="line">  <span class="keyword">auto</span> dm = <a class="code hl_variable" href="structAtomTest.html#a0e4eb81a61c54a097ac135675186fdcd">simpleInterface</a>-&gt;<a id="a64" name="a64"></a><a class="code hl_function" href="structMoFEM_1_1Simple.html#a9261d3ef9b39a00cb7d0acc612702275">getDM</a>();</div>
+<div class="line">  <span class="keyword">auto</span> <a id="a65" name="a65"></a><a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a> = <a id="a66" name="a66"></a><a class="code hl_function" href="group__dm.html#gac26499a0d7716b8a666c872f0e900254">createDMVector</a>(dm);</div>
+<div class="line">  <span class="keyword">auto</span> <a id="a67" name="a67"></a><a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a> = <a id="a68" name="a68"></a><a class="code hl_function" href="namespaceMoFEM.html#a681e912e2d0043503d2da810dc186d73">vectorDuplicate</a>(<a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>);</div>
 <div class="line"> </div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPSolve(solver, <a class="code hl_enumvalue" href="free__surface_8cpp.html#a275fe82762dca6ff32ecbb73db0b3b84af382a63cc3d6491bf26b59e66f46826d">F</a>, <a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>);</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateBegin(<a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> VecGhostUpdateEnd(<a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>, INSERT_VALUES, SCATTER_FORWARD);</div>
-<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a68" name="a68"></a><a class="code hl_function" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(dm, <a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>, INSERT_VALUES, SCATTER_REVERSE);</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a69" name="a69"></a><a class="code hl_function" href="group__dm.html#ga490784c9685a7e4068b83ca2babc1ba1">DMoFEMMeshToLocalVector</a>(dm, <a class="code hl_variable" href="initial__diffusion_8cpp.html#ad8657a5ec76e12f3066fb4b4eb75ace9">D</a>, INSERT_VALUES, SCATTER_REVERSE);</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">//! [Check results]</span></div>
 <div class="line"><span class="comment"></span><a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> <a class="code hl_function" href="structAtomTest.html#a275f9e9f71aab06f2b4d686107571f6b">AtomTest::checkResults</a>() {</div>
 <div class="line">  <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
-<div class="line">  <span class="keyword">auto</span> <a id="a69" name="a69"></a><a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a> = <a class="code hl_variable" href="structAtomTest.html#aa202dd363f7f0d2072f0eac2b54eeebe">mField</a>.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
+<div class="line">  <span class="keyword">auto</span> <a id="a70" name="a70"></a><a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a> = <a class="code hl_variable" href="structAtomTest.html#aa202dd363f7f0d2072f0eac2b54eeebe">mField</a>.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1Simple.html">Simple</a>&gt;();</div>
 <div class="line">  <span class="keyword">auto</span> pipeline_mng = <a class="code hl_variable" href="structAtomTest.html#aa202dd363f7f0d2072f0eac2b54eeebe">mField</a>.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1PipelineManager.html">PipelineManager</a>&gt;();</div>
 <div class="line">  pipeline_mng-&gt;getDomainLhsFE().reset();</div>
 <div class="line">  pipeline_mng-&gt;getDomainRhsFE().reset();</div>
@@ -369,24 +369,24 @@ $(function() {
 <div class="line">                                          <span class="comment">// the post proc element</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> op_this =</div>
-<div class="line">      <span class="keyword">new</span> <a id="_a70" name="_a70"></a><a class="code hl_struct" href="structMoFEM_1_1OpLoopThis.html">OpLoopThis&lt;DomainEle&gt;</a>(<a class="code hl_variable" href="structAtomTest.html#aa202dd363f7f0d2072f0eac2b54eeebe">mField</a>, <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDomainFEName(), Sev::noisy);</div>
+<div class="line">      <span class="keyword">new</span> <a id="_a71" name="_a71"></a><a class="code hl_struct" href="structMoFEM_1_1OpLoopThis.html">OpLoopThis&lt;DomainEle&gt;</a>(<a class="code hl_variable" href="structAtomTest.html#aa202dd363f7f0d2072f0eac2b54eeebe">mField</a>, <a class="code hl_function" href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a>-&gt;getDomainFEName(), Sev::noisy);</div>
 <div class="line">  pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(op_this); <span class="comment">// 1</span></div>
-<div class="line">  pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(<span class="keyword">new</span> <a id="_a71" name="_a71"></a><a class="code hl_struct" href="structMoFEM_1_1OpDGProjectionEvaluation.html">OpDGProjectionEvaluation</a>(</div>
+<div class="line">  pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(<span class="keyword">new</span> <a id="_a72" name="_a72"></a><a class="code hl_struct" href="structMoFEM_1_1OpDGProjectionEvaluation.html">OpDGProjectionEvaluation</a>(</div>
 <div class="line">      data_ptr, coeffs_ptr, entity_data_l2, <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>,</div>
-<div class="line">      <a id="a72" name="a72"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>)); <span class="comment">// 5</span></div>
+<div class="line">      <a id="a73" name="a73"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>)); <span class="comment">// 5</span></div>
 <div class="line">  pipeline_mng-&gt;getOpDomainRhsPipeline().push_back(</div>
 <div class="line">      <span class="keyword">new</span> <a class="code hl_struct" href="structOpError.html">OpError</a>(data_ptr)); <span class="comment">// 6</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="keyword">auto</span> fe_physics_ptr = op_this-&gt;getThisFEPtr();</div>
 <div class="line">  fe_physics_ptr-&gt;getRuleHook = [](<a class="code hl_variable" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <a class="code hl_variable" href="namespaceconvert.html#a4db4d50b047acc94e54fdf4df9f3077c">int</a>, <span class="keywordtype">int</span> p) { <span class="keywordflow">return</span> 2 * p; };</div>
 <div class="line"> </div>
-<div class="line">  fe_physics_ptr-&gt;getOpPtrVector().push_back(<span class="keyword">new</span> <a id="_a73" name="_a73"></a><a class="code hl_struct" href="structMoFEM_1_1OpDGProjectionMassMatrix.html">OpDGProjectionMassMatrix</a>(</div>
+<div class="line">  fe_physics_ptr-&gt;getOpPtrVector().push_back(<span class="keyword">new</span> <a id="_a74" name="_a74"></a><a class="code hl_struct" href="structMoFEM_1_1OpDGProjectionMassMatrix.html">OpDGProjectionMassMatrix</a>(</div>
 <div class="line">      <a class="code hl_variable" href="dg__projection_8cpp.html#ad7eceded84ace5678d9df3e44f47d475">order</a>, mass_ptr, entity_data_l2, <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>)); <span class="comment">// 2</span></div>
 <div class="line">  fe_physics_ptr-&gt;getOpPtrVector().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a id="_a74" name="_a74"></a><a class="code hl_struct" href="structMoFEM_1_1OpCalculateVectorFieldValues.html">OpCalculateVectorFieldValues&lt;FIELD_DIM&gt;</a>(<a class="code hl_variable" href="higher__derivatives_8cpp.html#a36920f26cd6caab3af383e5ef4ae568f">FIELD_NAME</a>,</div>
+<div class="line">      <span class="keyword">new</span> <a id="_a75" name="_a75"></a><a class="code hl_struct" href="structMoFEM_1_1OpCalculateVectorFieldValues.html">OpCalculateVectorFieldValues&lt;FIELD_DIM&gt;</a>(<a class="code hl_variable" href="higher__derivatives_8cpp.html#a36920f26cd6caab3af383e5ef4ae568f">FIELD_NAME</a>,</div>
 <div class="line">                                                  data_ptr)); <span class="comment">// 3</span></div>
 <div class="line">  fe_physics_ptr-&gt;getOpPtrVector().push_back(</div>
-<div class="line">      <span class="keyword">new</span> <a id="_a75" name="_a75"></a><a class="code hl_struct" href="structMoFEM_1_1OpDGProjectionCoefficients.html">OpDGProjectionCoefficients</a>(data_ptr, coeffs_ptr, mass_ptr,</div>
+<div class="line">      <span class="keyword">new</span> <a id="_a76" name="_a76"></a><a class="code hl_struct" href="structMoFEM_1_1OpDGProjectionCoefficients.html">OpDGProjectionCoefficients</a>(data_ptr, coeffs_ptr, mass_ptr,</div>
 <div class="line">                                     entity_data_l2, <a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>,</div>
 <div class="line">                                     <a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a>)); <span class="comment">// 4</span></div>
 <div class="line"> </div>
@@ -396,10 +396,10 @@ $(function() {
 <div class="line">}<span class="comment"></span></div>
 <div class="line"><span class="comment">//! [Check results]</span></div>
 <div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="keywordtype">int</span> <a id="a76" name="a76"></a><a class="code hl_function" href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><span class="keywordtype">int</span> <a id="a77" name="a77"></a><a class="code hl_function" href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Initialisation of MoFEM/PETSc and MOAB data structures</span></div>
-<div class="line">  <a id="a77" name="a77"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, NULL, <a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
+<div class="line">  <a id="a78" name="a78"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#a137f1f2092d00ef0c1ec679db94b8cb0">MoFEM::Core::Initialize</a>(&amp;argc, &amp;argv, NULL, <a class="code hl_variable" href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a>);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">try</span> {</div>
 <div class="line"><span class="comment"></span> </div>
@@ -414,7 +414,7 @@ $(function() {
 <div class="line"><span class="comment">    //! [Create MoAB]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
 <div class="line"><span class="comment">    //! [Create MoFEM]</span></div>
-<div class="line"><span class="comment"></span>    <a id="_a78" name="_a78"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
+<div class="line"><span class="comment"></span>    <a id="_a79" name="_a79"></a><a class="code hl_struct" href="structMoFEM_1_1CoreTmp_3_010_01_4.html">MoFEM::Core</a> core(moab);           <span class="comment">///&lt; finite element database</span></div>
 <div class="line">    <a class="code hl_struct" href="structMoFEM_1_1DeprecatedCoreInterface.html">MoFEM::Interface</a> &amp;m_field = core; <span class="comment">///&lt; finite element database insterface</span><span class="comment"></span></div>
 <div class="line"><span class="comment">    //! [Create MoFEM]</span></div>
 <div class="line"><span class="comment"></span><span class="comment"></span> </div>
@@ -423,9 +423,9 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> ex.runProblem();<span class="comment"></span></div>
 <div class="line"><span class="comment">    //! [AtomTest]</span></div>
 <div class="line"><span class="comment"></span>  }</div>
-<div class="line">  <a id="a79" name="a79"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a id="a80" name="a80"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a80" name="a80"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a id="a81" name="a81"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line">}</div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aacoustic_8cpp_html_ad68ed57e17c71816ecfad0ea6746c8d3"><div class="ttname"><a href="acoustic_8cpp.html#ad68ed57e17c71816ecfad0ea6746c8d3">simple</a></div><div class="ttdeci">void simple(double P1[], double P2[], double P3[], double c[], const int N)</div><div class="ttdef"><b>Definition</b> <a href="acoustic_8cpp_source.html#l00069">acoustic.cpp:69</a></div></div>
@@ -441,6 +441,7 @@ $(function() {
 <div class="ttc" id="aclassBiLinearForm_html"><div class="ttname"><a href="classBiLinearForm.html">BiLinearForm</a></div></div>
 <div class="ttc" id="aclassDomainEleOp_html"><div class="ttname"><a href="classDomainEleOp.html">DomainEleOp</a></div></div>
 <div class="ttc" id="aclassLinearForm_html"><div class="ttname"><a href="classLinearForm.html">LinearForm</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a0adffb24dae0c41be5b803f4d444f066">L2</a></div><div class="ttdeci">@ L2</div><div class="ttdoc">field with C-1 continuity</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00088">definitions.h:88</a></div></div>

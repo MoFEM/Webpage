@@ -190,11 +190,11 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   23</span> </div>
 <div class="line"><span class="lineno">   24</span>    <span class="comment">// create one tet</span></div>
 <div class="line"><span class="lineno">   25</span>    <span class="keywordtype">double</span> tet_coords[] = {0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 2};</div>
-<div class="line"><span class="lineno">   26</span>    EntityHandle nodes[4];</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> nodes[4];</div>
 <div class="line"><span class="lineno">   27</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn &lt; 4; nn++) {</div>
 <div class="line"><span class="lineno">   28</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_vertex(&amp;tet_coords[3 * nn], nodes[nn]);</div>
 <div class="line"><span class="lineno">   29</span>    }</div>
-<div class="line"><span class="lineno">   30</span>    EntityHandle tet;</div>
+<div class="line"><span class="lineno">   30</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> tet;</div>
 <div class="line"><span class="lineno">   31</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_element(MBTET, nodes, 4, tet);</div>
 <div class="line"><span class="lineno">   32</span> </div>
 <div class="line"><span class="lineno">   33</span>    <span class="comment">// Create MoFEM (Joseph) database</span></div>
@@ -204,7 +204,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   37</span>    <span class="comment">// set entitities bit level</span></div>
 <div class="line"><span class="lineno">   38</span>    <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a> bit_level0;</div>
 <div class="line"><span class="lineno">   39</span>    bit_level0.set(0);</div>
-<div class="line"><span class="lineno">   40</span>    EntityHandle meshset_level0;</div>
+<div class="line"><span class="lineno">   40</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset_level0;</div>
 <div class="line"><span class="lineno">   41</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, meshset_level0);</div>
 <div class="line"><span class="lineno">   42</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;setBitRefLevelByDim(</div>
 <div class="line"><span class="lineno">   43</span>        0, 3, bit_level0);</div>
@@ -238,7 +238,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   71</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__problems.html#gab02fceb7ce0b4be564ff8b2c7144ba12">modify_problem_ref_level_add_bit</a>(<span class="stringliteral">&quot;TEST_PROBLEM&quot;</span>, bit_level0);</div>
 <div class="line"><span class="lineno">   72</span> </div>
 <div class="line"><span class="lineno">   73</span>    <span class="comment">// meshset consisting all entities in mesh</span></div>
-<div class="line"><span class="lineno">   74</span>    EntityHandle root_set = moab.get_root_set();</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> root_set = moab.get_root_set();</div>
 <div class="line"><span class="lineno">   75</span>    <span class="comment">// add entities to field</span></div>
 <div class="line"><span class="lineno">   76</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(root_set, MBTET, <span class="stringliteral">&quot;HDIV&quot;</span>);</div>
 <div class="line"><span class="lineno">   77</span>    <span class="comment">// add entities to finite element</span></div>
@@ -293,8 +293,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  126</span> </div>
 <div class="line"><span class="lineno">  127</span>      <a class="code hl_typedef" href="forces__and__sources__testing__contact__prism__element_8cpp.html#ab72fcccadd450ef96e31f22462283232">TeeStream</a> &amp;mySplit;</div>
 <div class="line"><span class="lineno">  128</span>      OpPrintingHdivApproximationFunctions(<a class="code hl_typedef" href="forces__and__sources__testing__contact__prism__element_8cpp.html#ab72fcccadd450ef96e31f22462283232">TeeStream</a> &amp;my_split)</div>
-<div class="line"><span class="lineno">  129</span>          : <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore.html">VolumeElementForcesAndSourcesCore</a>::<a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a>(</div>
-<div class="line"><span class="lineno">  130</span>                <span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a>::OPROW),</div>
+<div class="line"><span class="lineno">  129</span>          : <a class="code hl_struct" href="structMoFEM_1_1VolumeElementForcesAndSourcesCore.html">VolumeElementForcesAndSourcesCore</a>::<a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a>(</div>
+<div class="line"><span class="lineno">  130</span>                <span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a>::OPROW),</div>
 <div class="line"><span class="lineno">  131</span>            mySplit(my_split) {}</div>
 <div class="line"><span class="lineno">  132</span> </div>
 <div class="line"><span class="lineno">  133</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> doWork(<span class="keywordtype">int</span> side, EntityType type,</div>
@@ -338,8 +338,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  171</span> </div>
 <div class="line"><span class="lineno">  172</span>      <a class="code hl_typedef" href="forces__and__sources__testing__contact__prism__element_8cpp.html#ab72fcccadd450ef96e31f22462283232">TeeStream</a> &amp;mySplit;</div>
 <div class="line"><span class="lineno">  173</span>      OpFacePrintingHdivApproximationFunctions(<a class="code hl_typedef" href="forces__and__sources__testing__contact__prism__element_8cpp.html#ab72fcccadd450ef96e31f22462283232">TeeStream</a> &amp;my_split)</div>
-<div class="line"><span class="lineno">  174</span>          : <a class="code hl_struct" href="structMoFEM_1_1FaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>::<a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a>(</div>
-<div class="line"><span class="lineno">  175</span>                <span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_class" href="classUserDataOperator.html">UserDataOperator</a>::OPROW),</div>
+<div class="line"><span class="lineno">  174</span>          : <a class="code hl_struct" href="structMoFEM_1_1FaceElementForcesAndSourcesCore.html">FaceElementForcesAndSourcesCore</a>::<a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a>(</div>
+<div class="line"><span class="lineno">  175</span>                <span class="stringliteral">&quot;HDIV&quot;</span>, <a class="code hl_typedef" href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a>::OPROW),</div>
 <div class="line"><span class="lineno">  176</span>            mySplit(my_split) {}</div>
 <div class="line"><span class="lineno">  177</span> </div>
 <div class="line"><span class="lineno">  178</span>      <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> doWork(<span class="keywordtype">int</span> side, EntityType type,</div>
@@ -396,9 +396,10 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  229</span> </div>
 <div class="line"><span class="lineno">  230</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> <a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line"><span class="lineno">  231</span>}</div>
+<div class="ttc" id="aHookeElement_8hpp_html_aee27a2ebc8f3d34a5c1ce71b2607d1a3"><div class="ttname"><a href="HookeElement_8hpp.html#aee27a2ebc8f3d34a5c1ce71b2607d1a3">UserDataOperator</a></div><div class="ttdeci">ForcesAndSourcesCore::UserDataOperator UserDataOperator</div><div class="ttdef"><b>Definition</b> <a href="HookeElement_8hpp_source.html#l00075">HookeElement.hpp:75</a></div></div>
 <div class="ttc" id="acheck__base__functions__derivatives__on__tet_8cpp_html_a3d8c24629d725b9ef8c238cf27c9b158"><div class="ttname"><a href="check__base__functions__derivatives__on__tet_8cpp.html#a3d8c24629d725b9ef8c238cf27c9b158">eps</a></div><div class="ttdeci">static const double eps</div><div class="ttdef"><b>Definition</b> <a href="check__base__functions__derivatives__on__tet_8cpp_source.html#l00011">check_base_functions_derivatives_on_tet.cpp:11</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
-<div class="ttc" id="aclassUserDataOperator_html"><div class="ttname"><a href="classUserDataOperator.html">UserDataOperator</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a59cd650c2f6d3e0dc1ad1c29821e8692"><div class="ttname"><a href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a></div><div class="ttdeci">#define MoFEMFunctionReturnHot(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00463">definitions.h:463</a></div></div>

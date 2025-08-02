@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classFTensor_1_1Ddg__carat__Tensor2__symmetric__13.html" title=" " alt="" coords="5,5,184,75"/>
+<area shape="rect" id="Node000000" href="$classFormsIntegrators_3_01OpBase_01_4_1_1template_01Assembly_3_01A_01_4_1_1template_01LinearForm01b9a7c64a97a7697a57c46e02e3c4c6.html" title=" " alt="" coords="5,59,292,114"/>
+<area shape="rect" id="Node000001" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01UNKNOWNSET_01_4_00_013_00_01FIELD__DIM_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="340,52,549,121"/>
+<area shape="poly" id="edge204_Node000000_Node000001" title=" " alt="" coords="306,84,340,84,340,89,306,89"/>
+<area shape="rect" id="Node000002" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01BLOCKSET_01_4_00_013_00_01FIELD__DIM_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="606,5,787,75"/>
+<area shape="poly" id="edge205_Node000001_Node000002" title=" " alt="" coords="562,62,605,54,606,59,563,67"/>
+<area shape="rect" id="Node000003" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01TEMPERATURESET_01_4_00_013_00_01FIELD__D4f2a44f1fb41424a4826c12cb7f21627.html" title=" " alt="" coords="597,99,796,168"/>
+<area shape="poly" id="edge206_Node000001_Node000003" title=" " alt="" coords="563,106,598,112,597,118,562,111"/>
 </map>

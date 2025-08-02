@@ -268,7 +268,7 @@ How to make 2nd order geometry in cubit and transfer it to MoFEM?</h2>
 <div class="line"><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.set_field_order(0,MBVERTEX,<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>,1);</div>
 </div><!-- fragment --><p>The last step is to prject information from 10 node terahedrons on hierarchical approximation field, as follows </p><div class="fragment"><div class="line">Projection10NodeCoordsOnField ent_method_material(m_field,<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>);</div>
 <div class="line"><a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.loop_dofs(<span class="stringliteral">&quot;MESH_NODE_POSITIONS&quot;</span>,ent_method_material); </div>
-</div><!-- fragment --><p>Look at examples of use to user modules, for example elasticity.cpp.</p>
+</div><!-- fragment --><p>Look at examples of use to user modules, for example <a class="el" href="elasticity_8cpp.html">elasticity.cpp</a>.</p>
 <h2><a class="anchor" id="own_documentation"></a>
 How to generate this documentation on your local machine?</h2>
 <p>In you library directory execute </p><div class="fragment"><div class="line">make doc</div>
@@ -401,12 +401,12 @@ How to add user module?</h2>
 <div class="line">make -<a class="code hl_variable" href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a> 4</div>
 <div class="ttc" id="amatrix__function_8cpp_html_a8191f28ba278df9c5d32a75cadb2bbd5"><div class="ttname"><a href="matrix__function_8cpp.html#a8191f28ba278df9c5d32a75cadb2bbd5">j</a></div><div class="ttdeci">FTensor::Index&lt; 'j', 3 &gt; j</div><div class="ttdef"><b>Definition</b> <a href="matrix__function_8cpp_source.html#l00019">matrix_function.cpp:19</a></div></div>
 </div><!-- fragment --><p> Note the first command is used to trigger reconfiguration of users modules with the new module.</p>
-<p>Note, each user module consist <a class="el" href="InstalledAddModule_8cmake.html">InstalledAddModule.cmake</a>, with beginning lines, </p><div class="fragment"><div class="line"><span class="preprocessor"># Check minimum version of MoFEM with this module works</span></div>
+<p>Note, each user module consist InstalledAddModule.cmake, with beginning lines, </p><div class="fragment"><div class="line"><span class="preprocessor"># Check minimum version of MoFEM with this module works</span></div>
 <div class="line">check_mofem_version(0 5 63)</div>
 <div class="line">add_subdirectory(${PROJECT_SOURCE_DIR}/homogenisation)</div>
 </div><!-- fragment --><p> In that file minimal version of the core library is given (e.g. v0.5.63). Thus if you have too old version of core lib, it won't be added and cmake will generate an error. In that case, you need to update core library by pulling most recent version from Bitbucket repository and install core library.</p>
 <p>User module can be independent repository, private or public and independently managed and owned form <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> library. If user module is part of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> repository can be simply added by adding it to <em>ModulesLists.cmake</em> in users modules directory. However is recommended that user module is project/respository by its own, repository should be cloned to users modules directory, f.e. in mofem-cephas/mofem/users_modules </p><div class="fragment"><div class="line">git clone https:<span class="comment">//bitbucket.org/likask/mofem_um_homogenisation.git homogenisation</span></div>
-</div><!-- fragment --><p>In user module directory directory should be file file, <em><a class="el" href="InstalledAddModule_8cmake.html">InstalledAddModule.cmake</a></em>, with content, </p><div class="fragment"><div class="line"><span class="preprocessor"># Check monimimal version of MoFEM with this module works</span></div>
+</div><!-- fragment --><p>In user module directory directory should be file file, <em>InstalledAddModule.cmake</em>, with content, </p><div class="fragment"><div class="line"><span class="preprocessor"># Check monimimal version of MoFEM with this module works</span></div>
 <div class="line">check_mofem_version(0 3 6)</div>
 <div class="line">add_subdirectory(${PROJECT_SOURCE_DIR}/homogenisation)</div>
 </div><!-- fragment --><h2><a class="anchor" id="openmpi_error_in_docer"></a>

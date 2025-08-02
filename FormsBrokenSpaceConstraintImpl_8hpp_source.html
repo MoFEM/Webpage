@@ -523,7 +523,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>      <span class="keywordtype">double</span> beta, <span class="keyword">const</span> <span class="keywordtype">bool</span> assmb_transpose, <span class="keyword">const</span> <span class="keywordtype">bool</span> only_transpose,</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>      boost::shared_ptr&lt;Range&gt; ents_ptr = <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      : <a class="code hl_struct" href="structMoFEM_1_1OpBrokenSpaceConstrainImpl.html">OpBrokenSpaceConstrainImpl</a>(row_field, broken_base_side_data,</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                                   boost::make_shared&lt;double&gt;(beta),</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                                   boost::make_shared&lt;<a class="code hl_class" href="classdouble.html">double</a>&gt;(beta),</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                                   assmb_transpose, only_transpose, ents_ptr) {}</div>
 </div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
@@ -631,7 +631,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>      boost::shared_ptr&lt;MatrixDouble&gt; lagrange_ptr, <span class="keywordtype">double</span> beta,</div>
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>      boost::shared_ptr&lt;Range&gt; ents_ptr = <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>      : <a class="code hl_struct" href="structMoFEM_1_1OpBrokenSpaceConstrainDFluxImpl.html">OpBrokenSpaceConstrainDFluxImpl</a>(broken_base_side_data, lagrange_ptr,</div>
-<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>                                        boost::make_shared&lt;double&gt;(beta),</div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>                                        boost::make_shared&lt;<a class="code hl_class" href="classdouble.html">double</a>&gt;(beta),</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>                                        ents_ptr) {}</div>
 </div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span> </div>
@@ -703,7 +703,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>      boost::shared_ptr&lt;std::vector&lt;BrokenBaseSideData&gt;&gt; broken_side_data_ptr,</div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>      <span class="keywordtype">double</span> beta, boost::shared_ptr&lt;Range&gt; ents_ptr = <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>      : <a class="code hl_struct" href="structMoFEM_1_1OpBrokenSpaceConstrainDHybridImpl.html">OpBrokenSpaceConstrainDHybridImpl</a>(row_field, broken_side_data_ptr,</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>                                          boost::make_shared&lt;double&gt;(beta),</div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>                                          boost::make_shared&lt;<a class="code hl_class" href="classdouble.html">double</a>&gt;(beta),</div>
 <div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>                                          ents_ptr) {}</div>
 </div>
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span> </div>
@@ -765,6 +765,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassE_html"><div class="ttname"><a href="classE.html">E</a></div></div>
 <div class="ttc" id="aclassOpBrokenBase_html"><div class="ttname"><a href="classOpBrokenBase.html">OpBrokenBase</a></div></div>
 <div class="ttc" id="aclassUBlasMatrix_3_01double_01_4_html"><div class="ttname"><a href="classUBlasMatrix_3_01double_01_4.html">UBlasMatrix&lt; double &gt;</a></div></div>
+<div class="ttc" id="aclassdouble_html"><div class="ttname"><a href="classdouble.html">double</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a59cd650c2f6d3e0dc1ad1c29821e8692"><div class="ttname"><a href="definitions_8h.html#a59cd650c2f6d3e0dc1ad1c29821e8692">MoFEMFunctionReturnHot</a></div><div class="ttdeci">#define MoFEMFunctionReturnHot(a)</div><div class="ttdoc">Last executable line of each PETSc function used for error handling. Replaces return()</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00463">definitions.h:463</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12a870cba1f12f133e280384cbaffdeec0f"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a870cba1f12f133e280384cbaffdeec0f">NOSPACE</a></div><div class="ttdeci">@ NOSPACE</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00083">definitions.h:83</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a5ed4cb303bab8cd0673ae12e5bc73c12aa30e505d5df1a8d715b9d175cd97ae82"><div class="ttname"><a href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12aa30e505d5df1a8d715b9d175cd97ae82">HCURL</a></div><div class="ttdeci">@ HCURL</div><div class="ttdoc">field with continuous tangents</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00086">definitions.h:86</a></div></div>

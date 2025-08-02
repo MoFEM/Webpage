@@ -187,10 +187,10 @@ $(function() {
 <div class="line">    <span class="keywordflow">for</span> (<a id="a12" name="a12"></a><a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(m_field, <a id="a13" name="a13"></a><a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca86c05035d6a2fbc5762f39215d6a8a22">SIDESET</a>, cit)) {</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, <span class="stringliteral">&quot;Insert Interface %d\n&quot;</span>,</div>
 <div class="line">                         cit-&gt;getMeshsetId());</div>
-<div class="line">      EntityHandle cubit_meshset = cit-&gt;getMeshset();</div>
+<div class="line">      <a id="_a14" name="_a14"></a><a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> cubit_meshset = cit-&gt;getMeshset();</div>
 <div class="line">      {</div>
 <div class="line">        <span class="comment">// get tet enties form back bit_level</span></div>
-<div class="line">        EntityHandle ref_level_meshset = 0;</div>
+<div class="line">        <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> ref_level_meshset = 0;</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, ref_level_meshset);</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()</div>
 <div class="line">            -&gt;getEntitiesByTypeAndRefLevel(bit_levels.back(),</div>
@@ -200,22 +200,22 @@ $(function() {
 <div class="line">            -&gt;getEntitiesByTypeAndRefLevel(bit_levels.back(),</div>
 <div class="line">                                           <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), MBPRISM,</div>
 <div class="line">                                           ref_level_meshset);</div>
-<div class="line">        <a id="_a14" name="_a14"></a><a class="code hl_class" href="classRange.html">Range</a> ref_level_tets;</div>
+<div class="line">        <a id="_a15" name="_a15"></a><a class="code hl_class" href="classRange.html">Range</a> ref_level_tets;</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_entities_by_handle(ref_level_meshset, ref_level_tets,</div>
 <div class="line">                                           <span class="keyword">true</span>);</div>
 <div class="line">        <span class="comment">// get faces and test to split</span></div>
-<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> interface-&gt;<a id="a15" name="a15"></a><a class="code hl_function" href="structMoFEM_1_1PrismInterface.html#a647ba4accc02b9b9c863af097045bb42">getSides</a>(cubit_meshset, bit_levels.back(), <span class="keyword">true</span>, 0);</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> interface-&gt;<a id="a16" name="a16"></a><a class="code hl_function" href="structMoFEM_1_1PrismInterface.html#a647ba4accc02b9b9c863af097045bb42">getSides</a>(cubit_meshset, bit_levels.back(), <span class="keyword">true</span>, 0);</div>
 <div class="line">        <span class="comment">// set new bit level</span></div>
 <div class="line">        bit_levels.push_back(<a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(ll++));</div>
 <div class="line">        <span class="comment">// split faces and</span></div>
-<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> interface-&gt;<a id="a16" name="a16"></a><a class="code hl_function" href="structMoFEM_1_1PrismInterface.html#ada01f8c0c3d86a8ae0e5cc2abdf59ceb">splitSides</a>(ref_level_meshset, bit_levels.back(),</div>
+<div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> interface-&gt;<a id="a17" name="a17"></a><a class="code hl_function" href="structMoFEM_1_1PrismInterface.html#ada01f8c0c3d86a8ae0e5cc2abdf59ceb">splitSides</a>(ref_level_meshset, bit_levels.back(),</div>
 <div class="line">                                     cubit_meshset, <span class="keyword">true</span>, <span class="keyword">true</span>, 0);</div>
 <div class="line">        <span class="comment">// clean meshsets</span></div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.delete_entities(&amp;ref_level_meshset, 1);</div>
 <div class="line">      }</div>
 <div class="line">      <span class="comment">// update cubit meshsets</span></div>
-<div class="line">      <span class="keywordflow">for</span> (<a id="a17" name="a17"></a><a class="code hl_define" href="group__mofem__meshset__mng.html#gaa7fc3e87cd6f5fcd5770d87260ea8c1a">_IT_CUBITMESHSETS_FOR_LOOP_</a>(m_field, ciit)) {</div>
-<div class="line">        EntityHandle cubit_meshset = ciit-&gt;meshset;</div>
+<div class="line">      <span class="keywordflow">for</span> (<a id="a18" name="a18"></a><a class="code hl_define" href="group__mofem__meshset__mng.html#gaa7fc3e87cd6f5fcd5770d87260ea8c1a">_IT_CUBITMESHSETS_FOR_LOOP_</a>(m_field, ciit)) {</div>
+<div class="line">        <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> cubit_meshset = ciit-&gt;meshset;</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()</div>
 <div class="line">            -&gt;updateMeshsetByEntitiesChildren(cubit_meshset, bit_levels.back(),</div>
 <div class="line">                                              cubit_meshset, MBMAXTYPE, <span class="keyword">true</span>);</div>
@@ -223,15 +223,15 @@ $(function() {
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// add fields</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a18" name="a18"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(<span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>, <a id="a19" name="a19"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a id="a20" name="a20"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a19" name="a19"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a8008ad16315eb609dcb0fd88746b991a">add_field</a>(<span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>, <a id="a20" name="a20"></a><a class="code hl_enumvalue" href="definitions_8h.html#a5ed4cb303bab8cd0673ae12e5bc73c12a7ec6526640e5add74fe4b322e6343120">H1</a>, <a id="a21" name="a21"></a><a class="code hl_enumvalue" href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a>, 1);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// add finite elements</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a21" name="a21"></a><a class="code hl_function" href="group__mofem__fe.html#ga4a5b822f605f1a4faa668595a3f2a5ae">add_finite_element</a>(<span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a22" name="a22"></a><a class="code hl_function" href="group__mofem__fe.html#gad29d66fc5706d3b20e4acd02eac81c9d">modify_finite_element_add_field_row</a>(<span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>,</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a22" name="a22"></a><a class="code hl_function" href="group__mofem__fe.html#ga4a5b822f605f1a4faa668595a3f2a5ae">add_finite_element</a>(<span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a23" name="a23"></a><a class="code hl_function" href="group__mofem__fe.html#gad29d66fc5706d3b20e4acd02eac81c9d">modify_finite_element_add_field_row</a>(<span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>,</div>
 <div class="line">                                                       <span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a23" name="a23"></a><a class="code hl_function" href="group__mofem__fe.html#ga8a9935d6f31d07ed365e6cc76bd041d2">modify_finite_element_add_field_col</a>(<span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>,</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a24" name="a24"></a><a class="code hl_function" href="group__mofem__fe.html#ga8a9935d6f31d07ed365e6cc76bd041d2">modify_finite_element_add_field_col</a>(<span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>,</div>
 <div class="line">                                                       <span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a24" name="a24"></a><a class="code hl_function" href="group__mofem__fe.html#gaef2eb2d85b90b55bd7c4f355e10fa498">modify_finite_element_add_field_data</a>(<span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>,</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a25" name="a25"></a><a class="code hl_function" href="group__mofem__fe.html#gaef2eb2d85b90b55bd7c4f355e10fa498">modify_finite_element_add_field_data</a>(<span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>,</div>
 <div class="line">                                                        <span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>);</div>
 <div class="line">    <span class="comment">// finite element interface</span></div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__fe.html#ga4a5b822f605f1a4faa668595a3f2a5ae">add_finite_element</a>(<span class="stringliteral">&quot;INTERFACE&quot;</span>);</div>
@@ -243,15 +243,15 @@ $(function() {
 <div class="line">                                                        <span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// add ents to field and set app. order</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a25" name="a25"></a><a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(0, MBTET, <span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>);</div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a26" name="a26"></a><a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBVERTEX, <span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>, 1);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a26" name="a26"></a><a class="code hl_function" href="group__mofem__field.html#gaa584a5c9cc28f5ae0a7088d130683be8">add_ents_to_field_by_type</a>(0, MBTET, <span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a27" name="a27"></a><a class="code hl_function" href="group__mofem__field.html#ga86f0c16b69cc30dabc5d7dd292299b07">set_field_order</a>(0, MBVERTEX, <span class="stringliteral">&quot;H1FIELD_SCALAR&quot;</span>, 1);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// add finite elements entities</span></div>
 <div class="line">    <span class="comment">// all TETS and PRIMS are added to finite elements, for testin purposes.</span></div>
 <div class="line">    <span class="comment">// in some practical applications to save memory, you would like to add</span></div>
 <div class="line">    <span class="comment">// elements from particular refinement level (see:</span></div>
 <div class="line">    <span class="comment">// m_field.add_ents_to_finite_element_by_bit_ref(...)</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a27" name="a27"></a><a class="code hl_function" href="group__mofem__fe.html#gacbb3bbf1fa80b85848bc3cfcd604182b">add_ents_to_finite_element_by_type</a>(0, MBTET, <span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>,</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a28" name="a28"></a><a class="code hl_function" href="group__mofem__fe.html#gacbb3bbf1fa80b85848bc3cfcd604182b">add_ents_to_finite_element_by_type</a>(0, MBTET, <span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>,</div>
 <div class="line">                                                      <span class="keyword">true</span>);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__fe.html#gacbb3bbf1fa80b85848bc3cfcd604182b">add_ents_to_finite_element_by_type</a>(0, MBPRISM, <span class="stringliteral">&quot;INTERFACE&quot;</span>,</div>
 <div class="line">                                                      <span class="keyword">true</span>);</div>
@@ -261,9 +261,9 @@ $(function() {
 <div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> lll = ll - 2; lll &lt; ll; lll++) {</div>
 <div class="line">      std::stringstream problem_name;</div>
 <div class="line">      problem_name &lt;&lt; <span class="stringliteral">&quot;PROBLEM_SCALAR_&quot;</span> &lt;&lt; lll;</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a28" name="a28"></a><a class="code hl_function" href="group__mofem__problems.html#ga6afc6820fa64d4ceb733bd778adb925a">add_problem</a>(problem_name.str());</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a29" name="a29"></a><a class="code hl_function" href="group__mofem__problems.html#ga6afc6820fa64d4ceb733bd778adb925a">add_problem</a>(problem_name.str());</div>
 <div class="line">      <span class="comment">// define problems and finite elements</span></div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a29" name="a29"></a><a class="code hl_function" href="group__mofem__problems.html#gaf165948ec92b5fcfbe5ec19ea1918ba1">modify_problem_add_finite_element</a>(problem_name.str(),</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a30" name="a30"></a><a class="code hl_function" href="group__mofem__problems.html#gaf165948ec92b5fcfbe5ec19ea1918ba1">modify_problem_add_finite_element</a>(problem_name.str(),</div>
 <div class="line">                                                       <span class="stringliteral">&quot;ELEM_SCALAR&quot;</span>);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="group__mofem__problems.html#gaf165948ec92b5fcfbe5ec19ea1918ba1">modify_problem_add_finite_element</a>(problem_name.str(),</div>
 <div class="line">                                                       <span class="stringliteral">&quot;INTERFACE&quot;</span>);</div>
@@ -277,29 +277,29 @@ $(function() {
 <div class="line">      message &lt;&lt; <span class="stringliteral">&quot;set problem problem &lt; &quot;</span> &lt;&lt; problem_name.str()</div>
 <div class="line">              &lt;&lt; <span class="stringliteral">&quot; &gt; bit level &quot;</span> &lt;&lt; bit_levels[lll] &lt;&lt; std::endl;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PetscPrintf(PETSC_COMM_WORLD, message.str().c_str());</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a30" name="a30"></a><a class="code hl_function" href="group__mofem__problems.html#gab02fceb7ce0b4be564ff8b2c7144ba12">modify_problem_ref_level_add_bit</a>(problem_name.str(),</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a31" name="a31"></a><a class="code hl_function" href="group__mofem__problems.html#gab02fceb7ce0b4be564ff8b2c7144ba12">modify_problem_ref_level_add_bit</a>(problem_name.str(),</div>
 <div class="line">                                                      bit_levels[lll]);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// build fields</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a31" name="a31"></a><a class="code hl_function" href="group__mofem__field.html#ga126ea0bb04802f9d1946435279c3da56">build_fields</a>();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a32" name="a32"></a><a class="code hl_function" href="group__mofem__field.html#ga126ea0bb04802f9d1946435279c3da56">build_fields</a>();</div>
 <div class="line">    <span class="comment">// build finite elements</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a32" name="a32"></a><a class="code hl_function" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">build_finite_elements</a>();</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a33" name="a33"></a><a class="code hl_function" href="group__mofem__fe.html#ga735f920686a9c958073ec14ea0dc1da0">build_finite_elements</a>();</div>
 <div class="line">    <span class="comment">// build adjacencies</span></div>
 <div class="line">    <span class="comment">// Its build adjacencies for all elements in database,</span></div>
 <div class="line">    <span class="comment">// for practical applications consider to build adjacencies</span></div>
 <div class="line">    <span class="comment">// only for refinemnt levels which you use for calculations</span></div>
-<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a33" name="a33"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a727653d1367e758daf2a74cb65d4dfa5">build_adjacencies</a>(<a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set());</div>
+<div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a id="a34" name="a34"></a><a class="code hl_function" href="structMoFEM_1_1CoreInterface.html#a727653d1367e758daf2a74cb65d4dfa5">build_adjacencies</a>(<a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set());</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_class" href="classRange.html">Range</a> tets_back_bit_level;</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;getEntitiesByRefLevel(</div>
 <div class="line">        bit_levels.back(), <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), tets_back_bit_level);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(m_field, <a id="a34" name="a34"></a><a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efcac77b6cdcfb446c668fd1d7c66cfd15ab">BLOCKSET</a>, cit)) {</div>
+<div class="line">    <span class="keywordflow">for</span> (<a class="code hl_define" href="group__mofem__meshset__mng.html#gaff36ed0367e6b0a57541419546aa1323">_IT_CUBITMESHSETS_BY_SET_TYPE_FOR_LOOP_</a>(m_field, <a id="a35" name="a35"></a><a class="code hl_enumvalue" href="definitions_8h.html#a82340fd7aca566defb002f93cc299efcac77b6cdcfb446c668fd1d7c66cfd15ab">BLOCKSET</a>, cit)) {</div>
 <div class="line"> </div>
-<div class="line">      EntityHandle cubit_meshset = cit-&gt;getMeshset();</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> cubit_meshset = cit-&gt;getMeshset();</div>
 <div class="line"> </div>
-<div class="line">      <a id="_a35" name="_a35"></a><a class="code hl_struct" href="structMoFEM_1_1BlockSetAttributes.html">BlockSetAttributes</a> mydata;</div>
+<div class="line">      <a id="_a36" name="_a36"></a><a class="code hl_struct" href="structMoFEM_1_1BlockSetAttributes.html">BlockSetAttributes</a> mydata;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> cit-&gt;getAttributeDataStructure(mydata);</div>
 <div class="line">      std::cout &lt;&lt; mydata &lt;&lt; std::endl;</div>
 <div class="line"> </div>
@@ -312,14 +312,14 @@ $(function() {
 <div class="line">      <span class="keywordflow">for</span> (Range::iterator nit = nodes.begin(); nit != nodes.end(); nit++) {</div>
 <div class="line">        <span class="keywordtype">double</span> coords[3];</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_coords(&amp;*nit, 1, coords);</div>
-<div class="line">        coords[0] += mydata.<a id="a36" name="a36"></a><a class="code hl_variable" href="structMoFEM_1_1BlockSetAttributes.html#a524cef10896f5b0e2f2696621e2d33cb">data</a>.User1;</div>
+<div class="line">        coords[0] += mydata.<a id="a37" name="a37"></a><a class="code hl_variable" href="structMoFEM_1_1BlockSetAttributes.html#a524cef10896f5b0e2f2696621e2d33cb">data</a>.User1;</div>
 <div class="line">        coords[1] += mydata.<a class="code hl_variable" href="structMoFEM_1_1BlockSetAttributes.html#a524cef10896f5b0e2f2696621e2d33cb">data</a>.User2;</div>
 <div class="line">        coords[2] += mydata.<a class="code hl_variable" href="structMoFEM_1_1BlockSetAttributes.html#a524cef10896f5b0e2f2696621e2d33cb">data</a>.User3;</div>
 <div class="line">        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.set_coords(&amp;*nit, 1, coords);</div>
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    <a id="_a37" name="_a37"></a><a class="code hl_struct" href="structMoFEM_1_1ProblemsManager.html">ProblemsManager</a> *prb_mng_ptr;</div>
+<div class="line">    <a id="_a38" name="_a38"></a><a class="code hl_struct" href="structMoFEM_1_1ProblemsManager.html">ProblemsManager</a> *prb_mng_ptr;</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>(prb_mng_ptr);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// partition</span></div>
@@ -327,16 +327,16 @@ $(function() {
 <div class="line">      <span class="comment">// build problem</span></div>
 <div class="line">      std::stringstream problem_name;</div>
 <div class="line">      problem_name &lt;&lt; <span class="stringliteral">&quot;PROBLEM_SCALAR_&quot;</span> &lt;&lt; lll;</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a id="a38" name="a38"></a><a class="code hl_function" href="group__mofem__problems__manager.html#ga98070af58a9cd97f9202c6488698ba96">buildProblem</a>(problem_name.str(), <span class="keyword">true</span>);</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a id="a39" name="a39"></a><a class="code hl_function" href="group__mofem__problems__manager.html#gaa0e280c88443b6240bf3255c0dce0ef2">partitionProblem</a>(problem_name.str());</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a id="a40" name="a40"></a><a class="code hl_function" href="group__mofem__problems__manager.html#gabfd48a196686d30eeacb978b81d1a656">partitionFiniteElements</a>(problem_name.str());</div>
-<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a id="a41" name="a41"></a><a class="code hl_function" href="group__mofem__problems__manager.html#ga20ecb1883ad47d08f22a66d871a48114">partitionGhostDofs</a>(problem_name.str());</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a id="a39" name="a39"></a><a class="code hl_function" href="group__mofem__problems__manager.html#ga98070af58a9cd97f9202c6488698ba96">buildProblem</a>(problem_name.str(), <span class="keyword">true</span>);</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a id="a40" name="a40"></a><a class="code hl_function" href="group__mofem__problems__manager.html#gaa0e280c88443b6240bf3255c0dce0ef2">partitionProblem</a>(problem_name.str());</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a id="a41" name="a41"></a><a class="code hl_function" href="group__mofem__problems__manager.html#gabfd48a196686d30eeacb978b81d1a656">partitionFiniteElements</a>(problem_name.str());</div>
+<div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> prb_mng_ptr-&gt;<a id="a42" name="a42"></a><a class="code hl_function" href="group__mofem__problems__manager.html#ga20ecb1883ad47d08f22a66d871a48114">partitionGhostDofs</a>(problem_name.str());</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    std::ofstream myfile;</div>
 <div class="line">    myfile.open((<a class="code hl_variable" href="mesh__smoothing_8cpp.html#ae20b66af13b03d8e8a4593186c23cd07">mesh_file_name</a> + std::string(<span class="stringliteral">&quot;_log&quot;</span>)).c_str());</div>
 <div class="line"> </div>
-<div class="line">    EntityHandle out_meshset_tet;</div>
+<div class="line">    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> out_meshset_tet;</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, out_meshset_tet);</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;getEntitiesByTypeAndRefLevel(</div>
@@ -345,7 +345,7 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_entities_by_handle(out_meshset_tet, tets, <span class="keyword">true</span>);</div>
 <div class="line">    <span class="keywordflow">for</span> (Range::iterator tit = tets.begin(); tit != tets.end(); tit++) {</div>
 <div class="line">      <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line">      <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(*tit, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn &lt; num_nodes; nn++) {</div>
@@ -355,7 +355,7 @@ $(function() {
 <div class="line">      std::cout &lt;&lt; std::endl;</div>
 <div class="line">      myfile &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
-<div class="line">    EntityHandle out_meshset_prism;</div>
+<div class="line">    <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> out_meshset_prism;</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, out_meshset_prism);</div>
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> m_field.<a class="code hl_function" href="structMoFEM_1_1UnknownInterface.html#a7ab248ec45fca778800dcd92e5171beb">getInterface</a>&lt;<a class="code hl_struct" href="structMoFEM_1_1BitRefManager.html">BitRefManager</a>&gt;()-&gt;getEntitiesByTypeAndRefLevel(</div>
 <div class="line">        bit_levels.back(), <a class="code hl_typedef" href="namespaceMoFEM_1_1Types.html#aa9495b406c5326b7bca937846ec421c5">BitRefLevel</a>().set(), MBPRISM, out_meshset_prism);</div>
@@ -363,7 +363,7 @@ $(function() {
 <div class="line">    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_entities_by_handle(out_meshset_prism, prisms);</div>
 <div class="line">    <span class="keywordflow">for</span> (Range::iterator pit = prisms.begin(); pit != prisms.end(); pit++) {</div>
 <div class="line">      <span class="keywordtype">int</span> num_nodes;</div>
-<div class="line">      <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line">      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_connectivity(*pit, conn, num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"> </div>
 <div class="line">      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn &lt; num_nodes; nn++) {</div>
@@ -379,14 +379,14 @@ $(function() {
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;out_tet.vtk&quot;</span>, <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, &amp;out_meshset_tet, 1);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;out_prism.vtk&quot;</span>, <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, &amp;out_meshset_prism, 1);</div>
 <div class="line"> </div>
-<div class="line">      EntityHandle out_meshset_tets_and_prism;</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> out_meshset_tets_and_prism;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, out_meshset_tets_and_prism);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.add_entities(out_meshset_tets_and_prism, tets);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.add_entities(out_meshset_tets_and_prism, prisms);</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;out_tets_and_prisms.vtk&quot;</span>, <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
 <div class="line">                             &amp;out_meshset_tets_and_prism, 1);</div>
 <div class="line"> </div>
-<div class="line">      EntityHandle out_meshset_tris;</div>
+<div class="line">      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> out_meshset_tris;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_meshset(MESHSET_SET, out_meshset_tris);</div>
 <div class="line">      <a class="code hl_class" href="classRange.html">Range</a> tris;</div>
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_adjacencies(prisms, 2, <span class="keyword">false</span>, tris,</div>
@@ -396,13 +396,14 @@ $(function() {
 <div class="line">      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.write_file(<span class="stringliteral">&quot;out_tris.vtk&quot;</span>, <span class="stringliteral">&quot;VTK&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, &amp;out_meshset_tris, 1);</div>
 <div class="line">    }</div>
 <div class="line">  }</div>
-<div class="line">  <a id="a42" name="a42"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
+<div class="line">  <a id="a43" name="a43"></a><a class="code hl_define" href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a>;</div>
 <div class="line"> </div>
-<div class="line">  <a id="a43" name="a43"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
+<div class="line">  <a id="a44" name="a44"></a><a class="code hl_function" href="structMoFEM_1_1CoreTmp_3_010_01_4.html#aa5abe3b5d998e2dc50e4ef6916915eb1">MoFEM::Core::Finalize</a>();</div>
 <div class="line">}</div>
 <div class="ttc" id="aMoFEM_8hpp_html"><div class="ttname"><a href="MoFEM_8hpp.html">MoFEM.hpp</a></div></div>
 <div class="ttc" id="aactivate__deactivate__dofs_8cpp_html_a29680e68c64040f4884f60691a193226"><div class="ttname"><a href="activate__deactivate__dofs_8cpp.html#a29680e68c64040f4884f60691a193226">help</a></div><div class="ttdeci">static char help[]</div><div class="ttdef"><b>Definition</b> <a href="activate__deactivate__dofs_8cpp_source.html#l00013">activate_deactivate_dofs.cpp:13</a></div></div>
 <div class="ttc" id="aadol-c__atom_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="adol-c__atom_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="adol-c__atom_8cpp_source.html#l00046">adol-c_atom.cpp:46</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a1e74d797bf522e2b291419cddab27835"><div class="ttname"><a href="definitions_8h.html#a1e74d797bf522e2b291419cddab27835">CATCH_ERRORS</a></div><div class="ttdeci">#define CATCH_ERRORS</div><div class="ttdoc">Catch errors.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00385">definitions.h:385</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d"><div class="ttname"><a href="definitions_8h.html#a2ed4ed94b56d2843840bb7c55adcf0c5a54a26843865f4712f50a74fa4f8d025d">AINSWORTH_LEGENDRE_BASE</a></div><div class="ttdeci">@ AINSWORTH_LEGENDRE_BASE</div><div class="ttdoc">Ainsworth Cole (Legendre) approx. base .</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00061">definitions.h:60</a></div></div>

@@ -1,3 +1,19 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structMoFEM_1_1GetFTensor4DdgFromMatImpl.html" title=" " alt="" coords="5,5,223,60"/>
+<area shape="rect" id="Node000000" href="$structMoFEM_1_1GenericAttributeData.html" title="Generic attribute data structure." alt="" coords="5,193,221,219"/>
+<area shape="rect" id="Node000001" href="$structMoFEM_1_1BlockSetAttributes.html" title="Arbitrary block attributes data structure." alt="" coords="269,5,468,31"/>
+<area shape="poly" id="edge727_Node000000_Node000001" title=" " alt="" coords="129,180,184,110,224,72,268,40,294,28,296,33,271,44,227,76,188,113,133,183"/>
+<area shape="rect" id="Node000002" href="$structMoFEM_1_1Block__BodyForces.html" title="Body force data structure." alt="" coords="271,55,467,80"/>
+<area shape="poly" id="edge728_Node000000_Node000002" title=" " alt="" coords="136,182,193,135,230,110,268,89,299,78,301,83,270,94,232,115,197,139,139,186"/>
+<area shape="rect" id="Node000003" href="$structMoFEM_1_1Mat__Elastic.html" title="Elastic material data structure." alt="" coords="292,104,445,129"/>
+<area shape="poly" id="edge729_Node000000_Node000003" title=" " alt="" coords="154,185,268,139,312,127,313,132,270,145,156,190"/>
+<area shape="rect" id="Node000004" href="$structMoFEM_1_1Mat__Elastic__EberleinHolzapfel1.html" title="Mat_Elastic with Fibres." alt="" coords="292,154,445,194"/>
+<area shape="poly" id="edge730_Node000000_Node000004" title=" " alt="" coords="228,189,291,181,292,186,229,194"/>
+<area shape="rect" id="Node000005" href="$structMoFEM_1_1Mat__Elastic__TransIso.html" title="Transverse Isotropic material data structure." alt="" coords="292,218,445,258"/>
+<area shape="poly" id="edge731_Node000000_Node000005" title=" " alt="" coords="229,218,292,226,291,231,228,223"/>
+<area shape="rect" id="Node000006" href="$structMoFEM_1_1Mat__Interf.html" title="Linear interface data structure." alt="" coords="296,283,441,308"/>
+<area shape="poly" id="edge732_Node000000_Node000006" title=" " alt="" coords="156,222,270,267,313,280,312,285,268,273,154,227"/>
+<area shape="rect" id="Node000007" href="$structMoFEM_1_1Mat__Moisture.html" title="moisture transport material data structure" alt="" coords="285,332,452,357"/>
+<area shape="poly" id="edge733_Node000000_Node000007" title=" " alt="" coords="140,226,197,272,233,296,270,317,304,329,302,334,268,322,230,301,194,276,137,230"/>
+<area shape="rect" id="Node000008" href="$structMoFEM_1_1Mat__Thermal.html" title="Thermal material data structure." alt="" coords="287,381,451,407"/>
+<area shape="poly" id="edge734_Node000000_Node000008" title=" " alt="" coords="133,228,189,298,227,335,271,366,299,379,297,384,268,371,224,339,185,301,129,232"/>
 </map>

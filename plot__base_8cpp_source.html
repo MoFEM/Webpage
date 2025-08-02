@@ -242,11 +242,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="comment">// create one tet</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      <span class="keywordtype">double</span> tet_coords[] = {0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1};</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      EntityHandle nodes[4];</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> nodes[4];</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn &lt; 4; nn++) {</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_vertex(&amp;tet_coords[3 * nn], nodes[nn]);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      EntityHandle tet;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> tet;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_element(MBTET, nodes, 4, tet);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <a class="code hl_class" href="classRange.html">Range</a> adj;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> d : {1, 2})</div>
@@ -257,11 +257,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="comment">// create one triangle</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <span class="keywordtype">double</span> tri_coords[] = {0, 0, 0, 1, 0, 0, 0, 1, 0};</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      EntityHandle nodes[3];</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> nodes[3];</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn &lt; 3; nn++) {</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_vertex(&amp;tri_coords[3 * nn], nodes[nn]);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      }</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      EntityHandle tri;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> tri;</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.create_element(MBTRI, nodes, 3, tri);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <a class="code hl_class" href="classRange.html">Range</a> adj;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab.get_adjacencies(&amp;tri, 1, 1, <span class="keyword">true</span>, adj);</div>
@@ -594,7 +594,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab_ref.get_entities_by_dimension(0, <a class="code hl_variable" href="plot__base_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, elems);</div>
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span> </div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>  <span class="comment">// Add mid-nodes on edges</span></div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>  EntityHandle meshset;</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> meshset;</div>
 <div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab_ref.create_meshset(MESHSET_SET, meshset);</div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab_ref.add_entities(meshset, elems);</div>
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab_ref.convert_entities(meshset, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
@@ -630,7 +630,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>  <span class="comment">// Set adjacency matrix</span></div>
 <div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>  Range::iterator tit = elems.begin();</div>
 <div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> tt = 0; tit != elems.end(); ++tit, ++tt) {</div>
-<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>    <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>    <span class="keywordtype">int</span> num_nodes;</div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> moab_ref.get_connectivity(*tit, conn, num_nodes, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nn = 0; nn != num_nodes; ++nn) {</div>
@@ -702,7 +702,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span> </div>
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>  std::vector&lt;double *&gt; arrays; <span class="comment">/// pointers to memory allocated by MoAB for</span><span class="comment"></span></div>
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span><span class="comment">                                /// storing X, Y, and Z coordinates</span></div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span><span class="comment"></span>  EntityHandle startv;          <span class="comment">// Starting handle for vertex</span></div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span><span class="comment"></span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> startv;          <span class="comment">// Starting handle for vertex</span></div>
 <div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>  <span class="comment">// Allocate memory for num_nodes, and return starting handle, and access to</span></div>
 <div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>  <span class="comment">// memort.</span></div>
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> iface-&gt;get_node_coords(3, num_nodes, 0, startv, arrays);</div>
@@ -722,8 +722,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_el = <a class="code hl_variable" href="structMyPostProc.html#a81919d07e218397bba7acd13876ed914">refEleMap</a>.size1();</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> num_nodes_on_ele = <a class="code hl_variable" href="structMyPostProc.html#a81919d07e218397bba7acd13876ed914">refEleMap</a>.size2();</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  EntityHandle starte; <span class="comment">// Starting handle to first created element</span></div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>  EntityHandle *conn;  <span class="comment">// Access to MOAB memory with connectivity of elements</span></div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> starte; <span class="comment">// Starting handle to first created element</span></div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;  <span class="comment">// Access to MOAB memory with connectivity of elements</span></div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
 <div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>  <span class="comment">// Create tris/tets in the bulk in MoAB database</span></div>
 <div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="plot__base_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a> == 2)</div>
@@ -750,10 +750,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  <span class="keyword">auto</span> physical_elements = <a class="code hl_class" href="classRange.html">Range</a>(starte, starte + num_el - 1);</div>
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> getPostProcMesh().tag_clear_data(<a class="code hl_variable" href="namespaceMoFEM.html#a75aed9eb5f422c1955dbbdacb26c2b38">th</a>, physical_elements, &amp;(nInTheLoop));</div>
 <div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span> </div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>  EntityHandle fe_ent = numeredEntFiniteElementPtr-&gt;getEnt();</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> fe_ent = numeredEntFiniteElementPtr-&gt;getEnt();</div>
 <div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>  <span class="keywordtype">int</span> fe_num_nodes;</div>
 <div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  {</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    <span class="keyword">const</span> EntityHandle *conn;</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *conn;</div>
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>    mField.get_moab().get_connectivity(fe_ent, conn, fe_num_nodes, <span class="keyword">true</span>);</div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    coords.resize(3 * fe_num_nodes, <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> mField.get_moab().get_coords(conn, fe_num_nodes, &amp;coords[0]);</div>
@@ -831,6 +831,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="achild__and__parent_8cpp_html_a541ffc988889246e44b233b777828847"><div class="ttname"><a href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a></div><div class="ttdeci">constexpr int SPACE_DIM</div><div class="ttdef"><b>Definition</b> <a href="child__and__parent_8cpp_source.html#l00016">child_and_parent.cpp:16</a></div></div>
 <div class="ttc" id="achild__and__parent_8cpp_html_a80b637c04b8c449d54efa75ab73b67df"><div class="ttname"><a href="child__and__parent_8cpp.html#a80b637c04b8c449d54efa75ab73b67df">DomainEle</a></div><div class="ttdeci">ElementsAndOps&lt; SPACE_DIM &gt;::DomainEle DomainEle</div><div class="ttdef"><b>Definition</b> <a href="child__and__parent_8cpp_source.html#l00034">child_and_parent.cpp:34</a></div></div>
 <div class="ttc" id="aclassDomainEleOp_html"><div class="ttname"><a href="classDomainEleOp.html">DomainEleOp</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Index_html"><div class="ttname"><a href="classFTensor_1_1Index.html">FTensor::Index</a></div><div class="ttdef"><b>Definition</b> <a href="Index_8hpp_source.html#l00023">Index.hpp:24</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor0_html"><div class="ttname"><a href="classFTensor_1_1Tensor0.html">FTensor::Tensor0</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor0_8hpp_source.html#l00016">Tensor0.hpp:17</a></div></div>
 <div class="ttc" id="aclassFTensor_1_1Tensor1_html"><div class="ttname"><a href="classFTensor_1_1Tensor1.html">FTensor::Tensor1</a></div><div class="ttdef"><b>Definition</b> <a href="Tensor1__value_8hpp_source.html#l00008">Tensor1_value.hpp:9</a></div></div>

@@ -228,7 +228,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga125fe8c4c80f4eb5317cbc18dace562e" id="r_ga125fe8c4c80f4eb5317cbc18dace562e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__meshset__mng.html#ga125fe8c4c80f4eb5317cbc18dace562e">MoFEM::MeshsetsManager::getEntitiesByDimension</a> (const int ms_id, const unsigned int cubit_bc_type, <a class="el" href="classRange.html">Range</a> &amp;entities, const <a class="el" href="classbool.html">bool</a> recursive=true) const</td></tr>
 <tr class="memdesc:ga125fe8c4c80f4eb5317cbc18dace562e"><td class="mdescLeft">&#160;</td><td class="mdescRight">get entities related to CUBIT/meshset,  <br /></td></tr>
 <tr class="separator:ga125fe8c4c80f4eb5317cbc18dace562e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ca1b58c9fb5abc1be1e62729577daa8" id="r_ga1ca1b58c9fb5abc1be1e62729577daa8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__meshset__mng.html#ga1ca1b58c9fb5abc1be1e62729577daa8">MoFEM::MeshsetsManager::getMeshset</a> (const int ms_id, const unsigned int cubit_bc_type, EntityHandle &amp;meshset) const</td></tr>
+<tr class="memitem:ga1ca1b58c9fb5abc1be1e62729577daa8" id="r_ga1ca1b58c9fb5abc1be1e62729577daa8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__meshset__mng.html#ga1ca1b58c9fb5abc1be1e62729577daa8">MoFEM::MeshsetsManager::getMeshset</a> (const int ms_id, const unsigned int cubit_bc_type, <a class="el" href="classEntityHandle.html">EntityHandle</a> &amp;meshset) const</td></tr>
 <tr class="memdesc:ga1ca1b58c9fb5abc1be1e62729577daa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">get meshset from CUBIT Id and CUBIT type  <br /></td></tr>
 <tr class="separator:ga1ca1b58c9fb5abc1be1e62729577daa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa3a73d21d09fc3ccff1ccd612ed7ca50" id="r_gaa3a73d21d09fc3ccff1ccd612ed7ca50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mofem__meshset__mng.html#gaa3a73d21d09fc3ccff1ccd612ed7ca50">MoFEM::MeshsetsManager::getMeshsetsByType</a> (const unsigned int cubit_bc_type, <a class="el" href="classRange.html">Range</a> &amp;meshsets) const</td></tr>
@@ -284,7 +284,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="ElasticityMixedFormulation_8hpp-example.html#a34">ElasticityMixedFormulation.hpp</a>, <a class="el" href="add_cubit_meshsets_8cpp-example.html#a29">add_cubit_meshsets.cpp</a>, <a class="el" href="field_blas_8cpp-example.html#a29">field_blas.cpp</a>, and <a class="el" href="simple_elasticity_8cpp-example.html#a75">simple_elasticity.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="ElasticityMixedFormulation_8hpp-example.html#a35">ElasticityMixedFormulation.hpp</a>, <a class="el" href="HookeElement_8cpp-example.html#a26">HookeElement.cpp</a>, <a class="el" href="add_cubit_meshsets_8cpp-example.html#a29">add_cubit_meshsets.cpp</a>, <a class="el" href="elasticity_8cpp-example.html#a57">elasticity.cpp</a>, <a class="el" href="field_blas_8cpp-example.html#a30">field_blas.cpp</a>, <a class="el" href="nonlinear_dynamics_8cpp-example.html#a134">nonlinear_dynamics.cpp</a>, and <a class="el" href="simple_elasticity_8cpp-example.html#a74">simple_elasticity.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="MeshsetsManager_8hpp_source.html#l00049">49</a> of file <a class="el" href="MeshsetsManager_8hpp_source.html">MeshsetsManager.hpp</a>.</p>
@@ -613,7 +613,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  425</span><span class="comment">   * @return               error code</span></div>
 <div class="line"><span class="lineno">  426</span><span class="comment">   */</span></div>
 <div class="line"><span class="lineno">  427</span>  <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> addEntitiesToMeshset(<span class="keyword">const</span> CubitBCType cubit_bc_type,</div>
-<div class="line"><span class="lineno">  428</span>                                      <span class="keyword">const</span> <span class="keywordtype">int</span> ms_id, <span class="keyword">const</span> EntityHandle *ents,</div>
+<div class="line"><span class="lineno">  428</span>                                      <span class="keyword">const</span> <span class="keywordtype">int</span> ms_id, <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *ents,</div>
 <div class="line"><span class="lineno">  429</span>                                      <span class="keyword">const</span> <span class="keywordtype">int</span> nb_ents);</div>
 <div class="line"><span class="lineno">  430</span><span class="comment"></span> </div>
 <div class="line"><span class="lineno">  431</span><span class="comment">  /**</span></div>
@@ -830,7 +830,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  642</span><span class="comment">   * \param meshset where to store the retrieved entities</span></div>
 <div class="line"><span class="lineno">  643</span><span class="comment">   */</span></div>
 <div class="line"><span class="lineno">  644</span>  <a class="code hl_typedef" href="namespaceMoFEM_1_1Exceptions.html#a8fb6351034eac301fc47fdf2748c1b45">MoFEMErrorCode</a> getMeshset(<span class="keyword">const</span> <span class="keywordtype">int</span> ms_id, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cubit_bc_type,</div>
-<div class="line"><span class="lineno">  645</span>                            EntityHandle &amp;meshset) <span class="keyword">const</span>;</div>
+<div class="line"><span class="lineno">  645</span>                            <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> &amp;meshset) <span class="keyword">const</span>;</div>
 <div class="line"><span class="lineno">  646</span><span class="comment"></span> </div>
 <div class="line"><span class="lineno">  647</span><span class="comment">  /**</span></div>
 <div class="line"><span class="lineno">  648</span><span class="comment">   * @brief Check if meshset constains entities</span></div>
@@ -845,7 +845,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  657</span><span class="comment">   */</span></div>
 <div class="line"><span class="lineno">  658</span>  <span class="keywordtype">bool</span> checkIfMeshsetContainsEntities(</div>
 <div class="line"><span class="lineno">  659</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> ms_id, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cubit_bc_type,</div>
-<div class="line"><span class="lineno">  660</span>      <span class="keyword">const</span> EntityHandle *entities, <span class="keywordtype">int</span> num_entities,</div>
+<div class="line"><span class="lineno">  660</span>      <span class="keyword">const</span> <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> *entities, <span class="keywordtype">int</span> num_entities,</div>
 <div class="line"><span class="lineno">  661</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> operation_type = moab::Interface::INTERSECT);</div>
 <div class="line"><span class="lineno">  662</span><span class="comment"></span> </div>
 <div class="line"><span class="lineno">  663</span><span class="comment">  /**</span></div>
@@ -1125,6 +1125,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  937</span><span class="comment"> * \ingroup mofem</span></div>
 <div class="line"><span class="lineno">  938</span><span class="comment"> **/</span></div>
 <div class="ttc" id="aLogManager_8hpp_html_a3b22f6000e678d07d69a2c790177a352"><div class="ttname"><a href="LogManager_8hpp.html#a3b22f6000e678d07d69a2c790177a352">MOFEM_LOG_SEVERITY_SYNC</a></div><div class="ttdeci">#define MOFEM_LOG_SEVERITY_SYNC(comm, severity)</div><div class="ttdoc">Synchronise &quot;SYNC&quot; on curtain severity level.</div><div class="ttdef"><b>Definition</b> <a href="LogManager_8hpp_source.html#l00360">LogManager.hpp:360</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca8d51b8918fe33e9750d285a25977f435"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca8d51b8918fe33e9750d285a25977f435">DEFAULT_VERBOSITY</a></div><div class="ttdeci">@ DEFAULT_VERBOSITY</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00220">definitions.h:220</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a2c740dc34f8edf00c432912eaa5484c1"><div class="ttname"><a href="definitions_8h.html#a2c740dc34f8edf00c432912eaa5484c1">MoFEMTypes</a></div><div class="ttdeci">MoFEMTypes</div><div class="ttdoc">Those types control how functions respond on arguments, f.e. error handling.</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00110">definitions.h:110</a></div></div>
@@ -1251,7 +1252,7 @@ Functions</h2></td></tr>
 <div class="line">  } </div>
 <div class="ttc" id="adefinitions_8h_html_a82340fd7aca566defb002f93cc299efca7b4c0e5ae1385e1224a6e59abf47ecc0"><div class="ttname"><a href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca7b4c0e5ae1385e1224a6e59abf47ecc0">NODESET</a></div><div class="ttdeci">@ NODESET</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00159">definitions.h:159</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a82340fd7aca566defb002f93cc299efca9617e89781f10fe417167bc4bd86a843"><div class="ttname"><a href="definitions_8h.html#a82340fd7aca566defb002f93cc299efca9617e89781f10fe417167bc4bd86a843">DISPLACEMENTSET</a></div><div class="ttdeci">@ DISPLACEMENTSET</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00163">definitions.h:163</a></div></div>
-</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="MagneticElement_8hpp-example.html#a29">MagneticElement.hpp</a>, <a class="el" href="UnsaturatedFlow_8hpp-example.html#a144">UnsaturatedFlow.hpp</a>, <a class="el" href="add_cubit_meshsets_8cpp-example.html#a17">add_cubit_meshsets.cpp</a>, <a class="el" href="continuity_check_on_contact_prism_side_ele_8cpp-example.html#a19">continuity_check_on_contact_prism_side_ele.cpp</a>, <a class="el" href="cubit_bc_test_8cpp-example.html#a8">cubit_bc_test.cpp</a>, <a class="el" href="forces_and_sources_testing_flat_prism_element_8cpp-example.html#a10">forces_and_sources_testing_flat_prism_element.cpp</a>, <a class="el" href="helmholtz_8cpp-example.html#a38">helmholtz.cpp</a>, <a class="el" href="mesh_cut_8cpp-example.html#a19">mesh_cut.cpp</a>, <a class="el" href="mesh_insert_interface_atom_8cpp-example.html#a12">mesh_insert_interface_atom.cpp</a>, <a class="el" href="navier_stokes_8cpp-example.html#a60">navier_stokes.cpp</a>, <a class="el" href="photon_diffusion_8cpp-example.html#a100">photon_diffusion.cpp</a>, and <a class="el" href="unsaturated_transport_8cpp-example.html#a26">unsaturated_transport.cpp</a>.</dd>
+</div><!-- fragment --> <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="MagneticElement_8hpp-example.html#a29">MagneticElement.hpp</a>, <a class="el" href="UnsaturatedFlow_8hpp-example.html#a147">UnsaturatedFlow.hpp</a>, <a class="el" href="add_cubit_meshsets_8cpp-example.html#a17">add_cubit_meshsets.cpp</a>, <a class="el" href="continuity_check_on_contact_prism_side_ele_8cpp-example.html#a20">continuity_check_on_contact_prism_side_ele.cpp</a>, <a class="el" href="cubit_bc_test_8cpp-example.html#a8">cubit_bc_test.cpp</a>, <a class="el" href="elasticity_8cpp-example.html#a37">elasticity.cpp</a>, <a class="el" href="forces_and_sources_testing_flat_prism_element_8cpp-example.html#a10">forces_and_sources_testing_flat_prism_element.cpp</a>, <a class="el" href="helmholtz_8cpp-example.html#a39">helmholtz.cpp</a>, <a class="el" href="mesh_cut_8cpp-example.html#a19">mesh_cut.cpp</a>, <a class="el" href="mesh_insert_interface_atom_8cpp-example.html#a12">mesh_insert_interface_atom.cpp</a>, <a class="el" href="navier_stokes_8cpp-example.html#a62">navier_stokes.cpp</a>, <a class="el" href="photon_diffusion_8cpp-example.html#a100">photon_diffusion.cpp</a>, and <a class="el" href="unsaturated_transport_8cpp-example.html#a26">unsaturated_transport.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="MeshsetsManager_8hpp_source.html#l00071">71</a> of file <a class="el" href="MeshsetsManager_8hpp_source.html">MeshsetsManager.hpp</a>.</p>
@@ -1296,7 +1297,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="add_cubit_meshsets_8cpp-example.html#a32">add_cubit_meshsets.cpp</a>, <a class="el" href="continuity_check_on_contact_prism_side_ele_8cpp-example.html#a24">continuity_check_on_contact_prism_side_ele.cpp</a>, <a class="el" href="forces_and_sources_testing_flat_prism_element_8cpp-example.html#a15">forces_and_sources_testing_flat_prism_element.cpp</a>, <a class="el" href="mesh_insert_interface_atom_8cpp-example.html#a17">mesh_insert_interface_atom.cpp</a>, <a class="el" href="split_sideset_8cpp-example.html#a20">split_sideset.cpp</a>, and <a class="el" href="unsaturated_transport_8cpp-example.html#a22">unsaturated_transport.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="add_cubit_meshsets_8cpp-example.html#a32">add_cubit_meshsets.cpp</a>, <a class="el" href="continuity_check_on_contact_prism_side_ele_8cpp-example.html#a25">continuity_check_on_contact_prism_side_ele.cpp</a>, <a class="el" href="forces_and_sources_testing_flat_prism_element_8cpp-example.html#a16">forces_and_sources_testing_flat_prism_element.cpp</a>, <a class="el" href="mesh_insert_interface_atom_8cpp-example.html#a18">mesh_insert_interface_atom.cpp</a>, <a class="el" href="split_sideset_8cpp-example.html#a20">split_sideset.cpp</a>, and <a class="el" href="unsaturated_transport_8cpp-example.html#a22">unsaturated_transport.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="MeshsetsManager_8hpp_source.html#l00034">34</a> of file <a class="el" href="MeshsetsManager_8hpp_source.html">MeshsetsManager.hpp</a>.</p>
@@ -1345,7 +1346,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="EshelbianPlasticity_8cpp-example.html#a366">EshelbianPlasticity.cpp</a>, <a class="el" href="add_cubit_meshsets_8cpp-example.html#a12">add_cubit_meshsets.cpp</a>, and <a class="el" href="mesh_cut_8cpp-example.html#a42">mesh_cut.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="EshelbianPlasticity_8cpp-example.html#a368">EshelbianPlasticity.cpp</a>, <a class="el" href="add_cubit_meshsets_8cpp-example.html#a12">add_cubit_meshsets.cpp</a>, and <a class="el" href="mesh_cut_8cpp-example.html#a43">mesh_cut.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="MeshsetsManager_8cpp_source.html#l00396">396</a> of file <a class="el" href="MeshsetsManager_8cpp_source.html">MeshsetsManager.cpp</a>.</p>
@@ -2155,7 +2156,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="mesh_cut_8cpp-example.html#a24">mesh_cut.cpp</a>, and <a class="el" href="prism_elements_from_surface_8cpp-example.html#a64">prism_elements_from_surface.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="mesh_cut_8cpp-example.html#a24">mesh_cut.cpp</a>, and <a class="el" href="prism_elements_from_surface_8cpp-example.html#a66">prism_elements_from_surface.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="MeshsetsManager_8cpp_source.html#l00680">680</a> of file <a class="el" href="MeshsetsManager_8cpp_source.html">MeshsetsManager.cpp</a>.</p>
@@ -2270,7 +2271,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">EntityHandle &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classEntityHandle.html">EntityHandle</a> &amp;&#160;</td>
           <td class="paramname"><em>meshset</em>&#160;</td>
         </tr>
         <tr>
@@ -2290,7 +2291,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="EshelbianPlasticity_8cpp-example.html#a17">EshelbianPlasticity.cpp</a>, <a class="el" href="free_surface_8cpp-example.html#a266">free_surface.cpp</a>, and <a class="el" href="mesh_cut_8cpp-example.html#a39">mesh_cut.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="free_surface_8cpp-example.html#a268">free_surface.cpp</a>, and <a class="el" href="mesh_cut_8cpp-example.html#a40">mesh_cut.cpp</a>.</dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="MeshsetsManager_8cpp_source.html#l00719">719</a> of file <a class="el" href="MeshsetsManager_8cpp_source.html">MeshsetsManager.cpp</a>.</p>

@@ -1371,7 +1371,7 @@ Typedefs</h2></td></tr>
 <div class="line"><span class="lineno"> 1195</span>  }</div>
 <div class="line"><span class="lineno"> 1196</span> </div>
 <div class="line"><span class="lineno"> 1197</span>  <a class="code hl_class" href="classRange.html">Range</a> adj;</div>
-<div class="line"><span class="lineno"> 1198</span>  EntityHandle prev_ent = 0;</div>
+<div class="line"><span class="lineno"> 1198</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> prev_ent = 0;</div>
 <div class="line"><span class="lineno"> 1199</span>  <span class="keywordtype">int</span> prev_dim = -1;</div>
 <div class="line"><span class="lineno"> 1200</span> </div>
 <div class="line"><span class="lineno"> 1201</span>  <span class="keyword">auto</span> get_adj = [&amp;](<span class="keyword">auto</span> ent, <span class="keyword">auto</span> dim) {</div>
@@ -1391,8 +1391,8 @@ Typedefs</h2></td></tr>
 <div class="line"><span class="lineno"> 1215</span>  };</div>
 <div class="line"><span class="lineno"> 1216</span> </div>
 <div class="line"><span class="lineno"> 1217</span>  <span class="keywordtype">int</span> prev_bit_number = -1;</div>
-<div class="line"><span class="lineno"> 1218</span>  EntityHandle prev_first_ent = 0;</div>
-<div class="line"><span class="lineno"> 1219</span>  EntityHandle prev_second_ent = 0;</div>
+<div class="line"><span class="lineno"> 1218</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> prev_first_ent = 0;</div>
+<div class="line"><span class="lineno"> 1219</span>  <a class="code hl_class" href="classEntityHandle.html">EntityHandle</a> prev_second_ent = 0;</div>
 <div class="line"><span class="lineno"> 1220</span>  <span class="keyword">using </span><a class="code hl_variable" href="test__broken__space_8cpp.html#a27f07ec7ec1b09221f6f421d6d7c9e58">IT</a> = boost::multi_index::index&lt;<a class="code hl_typedef" href="group__dof__multi__indices.html#ga5688631bd2bcf927612519092e127d36">NumeredDofEntity_multiIndex</a>,</div>
 <div class="line"><span class="lineno"> 1221</span>                                       Unique_mi_tag&gt;::type::iterator;</div>
 <div class="line"><span class="lineno"> 1222</span>  std::pair&lt;IT, IT&gt; pair_lo_hi;</div>
@@ -1547,6 +1547,7 @@ Typedefs</h2></td></tr>
 <div class="ttc" id="aLogManager_8hpp_html_aef9b5316ec6db54581633adf7c670011"><div class="ttname"><a href="LogManager_8hpp.html#aef9b5316ec6db54581633adf7c670011">MOFEM_LOG_C</a></div><div class="ttdeci">#define MOFEM_LOG_C(channel, severity, format,...)</div><div class="ttdef"><b>Definition</b> <a href="LogManager_8hpp_source.html#l00319">LogManager.hpp:319</a></div></div>
 <div class="ttc" id="aMatrixManager_8cpp_html_a83bb835ad96fbc310e0688fdca0e6330"><div class="ttname"><a href="MatrixManager_8cpp.html#a83bb835ad96fbc310e0688fdca0e6330">MatrixManagerFunctionBegin</a></div><div class="ttdeci">#define MatrixManagerFunctionBegin</div><div class="ttdoc">Create adjacent matrices using different indices.</div><div class="ttdef"><b>Definition</b> <a href="MatrixManager_8cpp_source.html#l00006">MatrixManager.cpp:6</a></div></div>
 <div class="ttc" id="aapprox__sphere_8cpp_html_a188caae18b60b66f9f44214c7e28ac1f"><div class="ttname"><a href="approx__sphere_8cpp.html#a188caae18b60b66f9f44214c7e28ac1f">a</a></div><div class="ttdeci">constexpr double a</div><div class="ttdef"><b>Definition</b> <a href="approx__sphere_8cpp_source.html#l00030">approx_sphere.cpp:30</a></div></div>
+<div class="ttc" id="aclassEntityHandle_html"><div class="ttname"><a href="classEntityHandle.html">EntityHandle</a></div></div>
 <div class="ttc" id="aclassFEMethod_html"><div class="ttname"><a href="classFEMethod.html">FEMethod</a></div></div>
 <div class="ttc" id="aclassRange_html"><div class="ttname"><a href="classRange.html">Range</a></div></div>
 <div class="ttc" id="adefinitions_8h_html_a018e38d630e7ebef4cfa48ab69889f2ca05ac9ca266f9e1731e2832c50fc14849"><div class="ttname"><a href="definitions_8h.html#a018e38d630e7ebef4cfa48ab69889f2ca05ac9ca266f9e1731e2832c50fc14849">VERY_VERBOSE</a></div><div class="ttdeci">@ VERY_VERBOSE</div><div class="ttdef"><b>Definition</b> <a href="definitions_8h_source.html#l00223">definitions.h:223</a></div></div>

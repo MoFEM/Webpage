@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structElectrostatics.html" title=" " alt="" coords="5,5,116,31"/>
+<area shape="rect" id="Node000000" href="$classE.html" title=" " alt="" coords="5,77,44,102"/>
+<area shape="rect" id="Node000001" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBase.html" title=" " alt="" coords="92,69,307,109"/>
+<area shape="poly" id="edge139_Node000000_Node000001" title=" " alt="" coords="58,87,92,87,92,92,58,92"/>
+<area shape="rect" id="Node000002" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBaseBeginImpl.html" title=" " alt="" coords="355,5,569,45"/>
+<area shape="poly" id="edge140_Node000001_Node000002" title=" " alt="" coords="295,63,379,43,380,48,296,69"/>
+<area shape="rect" id="Node000003" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBaseContImpl.html" title=" " alt="" coords="355,69,569,109"/>
+<area shape="poly" id="edge141_Node000001_Node000003" title=" " alt="" coords="320,87,354,87,354,92,320,92"/>
+<area shape="rect" id="Node000004" href="$structMoFEM_1_1PostProcBrokenMeshInMoabBaseEndImpl.html" title=" " alt="" coords="355,133,569,173"/>
+<area shape="poly" id="edge142_Node000001_Node000004" title=" " alt="" coords="296,110,380,131,379,136,295,115"/>
 </map>
