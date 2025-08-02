@@ -1,10 +1,10 @@
 var searchData=
 [
   ['3_20and_204_3a_20mixed_20formulations_20for_20plasticity_20contact_20and_20hyperelasticity_0',['Lectures 3 and 4: Mixed Formulations for Plasticity, Contact and Hyperelasticity',['../mofem_school_2023.html#lectures_3_4',1,'']]],
-  ['3_20clone_20the_20mofem_20repository_1',['3. Clone the MoFEM Repository',['../install_spack.html#autotoc_md58',1,'']]],
+  ['3_20clone_20the_20mofem_20repository_1',['3. Clone the MoFEM Repository',['../install_spack.html#autotoc_md71',1,'']]],
   ['3_20how_20to_3a_2',['3. How to:',['../SquashFAQ.html#autotoc_md106',1,'']]],
   ['3_3a_20dg_20upwind_20for_20advection_20problem_20or_20level_20set_3',['ADV-3: DG Upwind for advection problem or level set',['../tutorial_level_set.html',1,'']]],
-  ['3_3a_20download_20and_20unpack_20spack_4',['📥 Step 3: Download and Unpack Spack',['../install_spack.html#autotoc_md67',1,'']]],
+  ['3_3a_20download_20and_20unpack_20spack_4',['📥 Step 3: Download and Unpack Spack',['../install_spack.html#autotoc_md60',1,'']]],
   ['3_3a_20implementing_20operators_20for_20the_20poisson_20equation_5',['COR-3: Implementing operators for the Poisson equation',['../poisson_tut2.html',1,'tutorials']]],
   ['3_3a_20jupyter_20tutorial_20on_20mixed_20formulation_20for_20thermo_20elasticity_6',['Hands-on 3: Jupyter tutorial on mixed formulation for thermo-elasticity',['../mofem_school_2023.html#hands_on_3',1,'']]],
   ['3_3a_20nonlinear_20dynamic_20elastic_7',['VEC-3: Nonlinear dynamic elastic',['../tutorial_nonlinear_dynamic_elastic.html',1,'']]],
