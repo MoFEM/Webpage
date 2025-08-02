@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reactiondiffusionequation_0',['ReactionDiffusionEquation',['../namespace_reaction_diffusion_equation.html',1,'']]]
+  ['thermalops_0',['ThermalOps',['../namespaceThermalOps.html',1,'']]],
+  ['thermoelasticops_1',['ThermoElasticOps',['../namespaceThermoElasticOps.html',1,'']]]
 ];

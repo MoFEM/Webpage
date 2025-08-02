@@ -1,3 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_mo_f_e_m_1_1_idx_data_type_ptr.html" title=" " alt="" coords="5,5,172,31"/>
+<area shape="rect" id="Node000000" href="$structMoFEM_1_1ScalingMethod.html" title=" " alt="" coords="5,156,180,181"/>
+<area shape="rect" id="Node000001" href="$structMoFEM_1_1TimeScale.html" title="Force scale operator for reading two columns." alt="" coords="248,127,395,152"/>
+<area shape="poly" id="edge571_Node000000_Node000001" title=" " alt="" coords="193,153,247,146,248,151,194,158"/>
+<area shape="rect" id="Node000007" href="$structMoFEM_1_1TimeScaleVector.html" title="Force scale operator for reading four columns (time and vector)" alt="" coords="228,177,415,217"/>
+<area shape="poly" id="edge577_Node000000_Node000007" title=" " alt="" coords="194,178,228,183,227,188,193,184"/>
+<area shape="rect" id="Node000002" href="$structContact_1_1ScaledTimeScale.html" title=" " alt="" coords="472,5,663,31"/>
+<area shape="poly" id="edge572_Node000001_Node000002" title=" " alt="" coords="346,116,398,77,462,41,498,28,500,33,464,46,400,82,349,120"/>
+<area shape="rect" id="Node000003" href="$structExample_1_1DynamicFirstOrderConsConstantTimeScale.html" title=" " alt="" coords="463,55,672,95"/>
+<area shape="poly" id="edge573_Node000001_Node000003" title=" " alt="" coords="384,120,489,93,490,98,385,126"/>
+<area shape="rect" id="Node000004" href="$structExample_1_1DynamicFirstOrderConsSinusTimeScale.html" title=" " alt="" coords="463,119,672,159"/>
+<area shape="poly" id="edge574_Node000001_Node000004" title=" " alt="" coords="409,137,462,137,462,142,409,142"/>
+<area shape="rect" id="Node000005" href="$structExample_1_1ScaledTimeScale.html" title=" " alt="" coords="468,184,667,209"/>
+<area shape="poly" id="edge575_Node000001_Node000005" title=" " alt="" coords="390,153,513,181,512,187,389,158"/>
+<area shape="rect" id="Node000006" href="$structLinMomTimeScale.html" title=" " alt="" coords="496,233,639,259"/>
+<area shape="poly" id="edge576_Node000001_Node000006" title=" " alt="" coords="402,155,416,162,432,177,441,192,449,207,464,220,497,234,495,239,461,224,445,210,436,195,428,180,413,167,399,159"/>
 </map>

@@ -1,3 +1,25 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_edge_force_1_1b_c_force.html" title=" " alt="" coords="5,5,150,29"/>
+<area shape="rect" id="Node000000" href="$classFormsIntegrators_3_01OpBase_01_4_1_1template_01Assembly_3_01A_01_4_1_1template_01LinearForm95a8d1e36d84f821183d94b67e1b6418.html" title=" " alt="" coords="5,171,239,225"/>
+<area shape="rect" id="Node000001" href="$structMoFEM_1_1OpEssentialRhsImpl_3_01DisplacementCubitBcData_00_011_00_01FIELD__DIM_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="309,5,523,60"/>
+<area shape="poly" id="edge153_Node000000_Node000001" title=" " alt="" coords="160,159,217,113,285,69,311,58,313,63,288,74,220,117,164,164"/>
+<area shape="rect" id="Node000002" href="$structMoFEM_1_1OpEssentialRhsImpl_3_01TemperatureCubitBcData_00_011_00_011_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="312,84,520,139"/>
+<area shape="poly" id="edge154_Node000000_Node000002" title=" " alt="" coords="228,164,322,136,323,141,229,169"/>
+<area shape="rect" id="Node000003" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01UNKNOWNSET_01_4_00_011_00_011_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="324,163,508,233"/>
+<area shape="poly" id="edge155_Node000000_Node000003" title=" " alt="" coords="252,195,324,195,324,201,252,201"/>
+<area shape="rect" id="Node000006" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01UNKNOWNSET_01_4_00_011_00_01FIELD__DIM_00_01A_00_01I_00_01OpBase_01_4.html" title="Base class for OpFluxRhsImpl&lt;NaturalMeshsetType&lt;T&gt;, 1, FIELD_DIM, A, I, OpBase&gt;" alt="" coords="311,303,521,373"/>
+<area shape="poly" id="edge158_Node000000_Node000006" title=" " alt="" coords="194,229,343,301,341,306,192,234"/>
+<area shape="rect" id="Node000010" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetTypeVectorScaling_3_01UNKNOWNSET_01_4_00_011_00_0771e605d9e858a0adf36062af7a900fd.html" title=" " alt="" coords="287,443,545,513"/>
+<area shape="poly" id="edge162_Node000000_Node000010" title=" " alt="" coords="155,235,214,306,288,383,363,441,360,445,285,387,210,310,151,238"/>
+<area shape="rect" id="Node000004" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01BLOCKSET_01_4_00_011_00_011_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="634,46,811,115"/>
+<area shape="poly" id="edge156_Node000003_Node000004" title=" " alt="" coords="520,157,544,148,592,125,633,109,635,114,594,130,546,152,522,162"/>
+<area shape="rect" id="Node000005" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01HEATFLUXSET_01_4_00_011_00_011_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="633,139,813,209"/>
+<area shape="poly" id="edge157_Node000003_Node000005" title=" " alt="" coords="522,187,632,178,633,184,522,192"/>
+<area shape="rect" id="Node000007" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01BLOCKSET_01_4_00_011_00_01FIELD__DIM_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="632,233,813,302"/>
+<area shape="poly" id="edge159_Node000006_Node000007" title=" " alt="" coords="533,308,631,286,633,291,535,313"/>
+<area shape="rect" id="Node000008" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01FORCESET_01_4_00_011_00_01FIELD__DIM_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="632,326,813,395"/>
+<area shape="poly" id="edge160_Node000006_Node000008" title=" " alt="" coords="535,344,632,351,632,357,534,349"/>
+<area shape="rect" id="Node000009" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetType_3_01PRESSURESET_01_4_00_011_00_01FIELD__DIM_00_01A_00_01I_00_01OpBase_01_4.html" title=" " alt="" coords="620,419,825,489"/>
+<area shape="poly" id="edge161_Node000006_Node000009" title=" " alt="" coords="518,375,594,405,626,417,624,422,592,410,516,380"/>
+<area shape="rect" id="Node000011" href="$structMoFEM_1_1OpFluxRhsImpl_3_01NaturalMeshsetTypeVectorScaling_3_01BLOCKSET_01_4_00_011_00_01F78eaefb6a91fbb83864b93ac37043a80.html" title=" " alt="" coords="593,513,852,582"/>
+<area shape="poly" id="edge163_Node000010_Node000011" title=" " alt="" coords="559,508,594,515,592,521,558,513"/>
 </map>

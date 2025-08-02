@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['obosleteusersmodules_0',['ObosleteUsersModules',['../namespace_oboslete_users_modules.html',1,'']]]
+  ['reactiondiffusionequation_0',['ReactionDiffusionEquation',['../namespaceReactionDiffusionEquation.html',1,'']]]
 ];

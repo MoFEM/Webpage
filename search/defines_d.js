@@ -16,10 +16,9 @@ var searchData=
   ['perm31_13',['Perm31',['../quad-permu_8h.html#a5e1bec575b91a5390dfe692bb5301fe0',1,'quad-permu.h']]],
   ['perm4_14',['Perm4',['../quad-permu_8h.html#a53cac57913bc76339e83868bd19693ff',1,'quad-permu.h']]],
   ['perm40_15',['Perm40',['../quad-permu_8h.html#aefed82093bf4ebab29bb3b5161007bba',1,'quad-permu.h']]],
-  ['petsc_5fversion_5frelease_16',['PETSC_VERSION_RELEASE',['../_p_c_m_g_set_up_via_approx_orders_8cpp.html#afe70d34e2ee668685958b901c5011975',1,'PCMGSetUpViaApproxOrders.cpp']]],
+  ['petsc_5fversion_5frelease_16',['PETSC_VERSION_RELEASE',['../PCMGSetUpViaApproxOrders_8cpp.html#afe70d34e2ee668685958b901c5011975',1,'PCMGSetUpViaApproxOrders.cpp']]],
   ['phg_5fquad_5fh_17',['PHG_QUAD_H',['../quad_8h.html#a1bc9f863c3000247f9b108be0b2c7743',1,'quad.h']]],
   ['phg_5fquad_5fpermu_5fh_18',['PHG_QUAD_PERMU_H',['../quad-permu_8h.html#a1a90c968d2f2521d4c3219348ec31bd3',1,'quad-permu.h']]],
-  ['platform_5fid_19',['PLATFORM_ID',['../_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID:&#160;CMakeCXXCompilerId.cpp']]],
-  ['problemcorefunctionbegin_20',['ProblemCoreFunctionBegin',['../_problems_core_8cpp.html#a5e1d815e3668def796654898701e49f7',1,'ProblemsCore.cpp']]],
-  ['problemmanagerfunctionbegin_21',['ProblemManagerFunctionBegin',['../_problems_manager_8cpp.html#a7b48fee6ededa6018fb84bef11790d4f',1,'ProblemsManager.cpp']]]
+  ['problemcorefunctionbegin_19',['ProblemCoreFunctionBegin',['../ProblemsCore_8cpp.html#a5e1d815e3668def796654898701e49f7',1,'ProblemsCore.cpp']]],
+  ['problemmanagerfunctionbegin_20',['ProblemManagerFunctionBegin',['../ProblemsManager_8cpp.html#a7b48fee6ededa6018fb84bef11790d4f',1,'ProblemsManager.cpp']]]
 ];

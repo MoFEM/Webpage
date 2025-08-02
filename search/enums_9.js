@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kspcontext_0',['KSPContext',['../struct_mo_f_e_m_1_1_ksp_method.html#a9e99e6c046a7d088b04482ed36f88a2c',1,'MoFEM::KspMethod']]]
+  ['layout_0',['Layout',['../namespaceFTensor.html#a03937afdfedf29711648d535cbd8e87a',1,'FTensor']]],
+  ['logattributesbits_1',['LogAttributesBits',['../group__mofem__log__manager.html#ga343ada4fb4e1030236aaeaa2d3cef5ad',1,'MoFEM::LogManager']]]
 ];

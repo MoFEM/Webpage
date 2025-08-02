@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['getdiffdiffmatimpl_0',['GetDiffDiffMatImpl',['../struct_eigen_matrix_1_1_eigen_matrix_imp.html#afa5c2d8e8b7c2488b370978366d1768a',1,'EigenMatrix::EigenMatrixImp']]],
-  ['getdiffmatimpl_1',['GetDiffMatImpl',['../struct_eigen_matrix_1_1_eigen_matrix_imp.html#a034c41895ae2ea07b212193ad45a21f0',1,'EigenMatrix::EigenMatrixImp']]]
+  ['kspmat_0',['KspMat',['../structMoFEM_1_1KspCtx.html#aecb8d1791c9b810135d199f4168c173e',1,'MoFEM::KspCtx']]],
+  ['ksprhs_1',['KspRhs',['../structMoFEM_1_1KspCtx.html#a6dc37594eaa3a2e73aa59884ddc5fbd2',1,'MoFEM::KspCtx']]]
 ];

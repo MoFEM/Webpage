@@ -1,4 +1,4 @@
 <map id="Get entities and adjacencies" name="Get entities and adjacencies">
-<area shape="rect" id="Node000002" href="$group__mofem.html" title=" " alt="" coords="5,5,73,29"/>
-<area shape="rect" id="Node000001" title="Get adjacencies/entities for given BitRefLevel (mesh refinement)" alt="" coords="121,5,310,29"/>
+<area shape="rect" id="Node000002" href="$group__mofem.html" title=" " alt="" coords="5,5,76,31"/>
+<area shape="rect" id="Node000001" title="Get adjacencies/entities for given BitRefLevel (mesh refinement)" alt="" coords="124,5,331,31"/>
 </map>

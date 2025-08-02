@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['paramsindexes_0',['ParamsIndexes',['../struct_plastic_ops_1_1_common_data.html#a2f540deed8723768f41d76450f32843e',1,'PlasticOps::CommonData']]],
-  ['polyfilltype_1',['PolyFillType',['../namespace_clipper_lib.html#a95a41ff8fa6b351d304829c267d638d7',1,'ClipperLib']]],
-  ['polytype_2',['PolyType',['../namespace_clipper_lib.html#a50d662440e5e100070014ed91281e960',1,'ClipperLib']]]
+  ['rotselector_0',['RotSelector',['../namespaceEshelbianPlasticity.html#aad51dbcb3d4d470a0d589df584a43e17',1,'EshelbianPlasticity']]],
+  ['rowcoldata_1',['RowColData',['../definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69db',1,'definitions.h']]]
 ];

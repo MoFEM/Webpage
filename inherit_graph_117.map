@@ -1,23 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,348,245,385"/>
-<area shape="rect" id="Node000001" href="$struct_simple_contact_problem_1_1_op_cal_augmented_traction_rhs_master.html" title="RHS&#45;operator for the simple contact element." alt="" coords="304,5,510,56"/>
-<area shape="poly" id="edge130_Node000000_Node000001" title=" " alt="" coords="133,332,154,275,186,203,232,130,260,96,291,66,308,54,311,59,294,70,263,99,236,133,191,206,159,277,139,334"/>
-<area shape="rect" id="Node000002" href="$struct_simple_contact_problem_1_1_op_cal_augmented_traction_rhs_slave.html" title="RHS&#45;operator for the simple contact element." alt="" coords="304,80,510,131"/>
-<area shape="poly" id="edge131_Node000000_Node000002" title=" " alt="" coords="140,332,164,289,198,238,241,186,291,141,310,129,313,134,294,145,245,189,202,241,169,292,145,335"/>
-<area shape="rect" id="Node000003" href="$struct_simple_contact_problem_1_1_op_cal_contact_augmented_traction_over_lambda_master_slave.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="293,155,521,205"/>
-<area shape="poly" id="edge132_Node000000_Node000003" title=" " alt="" coords="151,334,212,274,250,243,291,215,315,203,317,208,294,220,253,247,215,278,155,338"/>
-<area shape="rect" id="Node000004" href="$struct_simple_contact_problem_1_1_op_cal_contact_augmented_traction_over_lambda_slave_slave.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="293,229,521,280"/>
-<area shape="poly" id="edge133_Node000000_Node000004" title=" " alt="" coords="179,339,292,290,323,278,325,283,294,294,181,343"/>
-<area shape="rect" id="Node000005" href="$struct_simple_contact_problem_1_1_op_cal_contact_augmented_traction_over_spatial_master_master.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="293,304,521,355"/>
-<area shape="poly" id="edge134_Node000000_Node000005" title=" " alt="" coords="260,346,292,342,292,347,260,351"/>
-<area shape="rect" id="Node000006" href="$struct_simple_contact_problem_1_1_op_cal_contact_augmented_traction_over_spatial_master_slave.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="293,379,521,429"/>
-<area shape="poly" id="edge135_Node000000_Node000006" title=" " alt="" coords="260,382,292,386,292,391,260,387"/>
-<area shape="rect" id="Node000007" href="$struct_simple_contact_problem_1_1_op_cal_contact_augmented_traction_over_spatial_slave_master.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="293,453,521,504"/>
-<area shape="poly" id="edge136_Node000000_Node000007" title=" " alt="" coords="181,390,294,439,325,450,323,455,292,444,179,395"/>
-<area shape="rect" id="Node000008" href="$struct_simple_contact_problem_1_1_op_cal_contact_augmented_traction_over_spatial_slave_slave.html" title="LHS&#45;operator for the simple contact element with Augmented Lagrangian Method." alt="" coords="293,528,521,579"/>
-<area shape="poly" id="edge137_Node000000_Node000008" title=" " alt="" coords="155,395,215,455,253,486,294,514,317,525,315,530,291,518,250,491,212,459,151,399"/>
-<area shape="rect" id="Node000009" href="$struct_simple_contact_problem_1_1_op_gap_constraint_augmented_rhs.html" title="RHS&#45;operator for the simple contact element for Augmented Lagrangian Method." alt="" coords="295,603,519,640"/>
-<area shape="poly" id="edge138_Node000000_Node000009" title=" " alt="" coords="144,398,168,442,201,493,244,545,294,588,315,600,312,605,291,593,240,549,197,496,163,444,139,401"/>
-<area shape="rect" id="Node000010" href="$struct_simple_contact_problem_1_1_op_get_augmented_lambda_slave.html" title="Operator for the simple contact element for Augmented Lagrangian Method." alt="" coords="298,664,516,701"/>
-<area shape="poly" id="edge139_Node000000_Node000010" title=" " alt="" coords="139,399,159,454,192,522,236,591,264,623,294,650,313,661,310,666,291,654,260,626,232,595,187,525,154,456,134,401"/>
+<area shape="rect" id="Node000000" href="$structEshelbianPlasticity_1_1VolRule.html" title="Set integration rule on element." alt="" coords="5,5,151,45"/>
 </map>

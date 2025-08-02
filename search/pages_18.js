@@ -11,10 +11,9 @@ var searchData=
   ['on_20skeleton_20h_20adaptivity_8',['COR-0: Mixed formulation and integration on skeleton (h-adaptivity)',['../mix_transport.html',1,'tutorials']]],
   ['on_20sphere_9',['VEC-4: Shallow wave equation on sphere',['../shallow_wave_doc.html',1,'']]],
   ['on_20ubuntu_10',['Installation on Ubuntu',['../install_ubuntu.html',1,'']]],
-  ['on_20wire_11',['Soap film spanned on wire',['../sope_film.html',1,'tutorials']]],
-  ['operators_20for_20the_20poisson_20equation_12',['COR-3: Implementing operators for the Poisson equation',['../poisson_tut2.html',1,'tutorials']]],
-  ['operators_20table_13',['User data operators table',['../user_data_operators_table.html',1,'']]],
-  ['opportunities_14',['Research Opportunities',['../research_opportunities.html',1,'']]],
-  ['or_20level_20set_15',['ADV-3: DG Upwind for advection problem or level set',['../tutorial_level_set.html',1,'']]],
-  ['other_20tutorials_16',['Other tutorials',['../other_tutorials.html',1,'']]]
+  ['operators_20for_20the_20poisson_20equation_11',['COR-3: Implementing operators for the Poisson equation',['../poisson_tut2.html',1,'tutorials']]],
+  ['operators_20table_12',['User data operators table',['../user_data_operators_table.html',1,'']]],
+  ['opportunities_13',['Research Opportunities',['../research_opportunities.html',1,'']]],
+  ['or_20level_20set_14',['ADV-3: DG Upwind for advection problem or level set',['../tutorial_level_set.html',1,'']]],
+  ['other_20tutorials_15',['Other tutorials',['../other_tutorials.html',1,'']]]
 ];

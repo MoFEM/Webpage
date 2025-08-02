@@ -1,17 +1,31 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_assembly_boundary_ele_op.html" title=" " alt="" coords="5,236,179,260"/>
-<area shape="rect" id="Node000001" href="$struct_contact_ops_1_1_op_constrain_boundary_lhs__d_traction_impl_3_01_d_i_m_00_01_g_a_u_s_s_00_7ed50b8d303f11d89b1821addaa26da6.html" title=" " alt="" coords="263,5,494,56"/>
-<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="103,221,122,185,149,143,184,101,225,66,261,48,264,52,228,70,187,105,153,146,126,188,108,223"/>
-<area shape="rect" id="Node000002" href="$struct_contact_ops_1_1_op_constrain_boundary_lhs__d_u_impl_3_01_d_i_m_00_01_g_a_u_s_s_00_01_assembly_boundary_ele_op_01_4.html" title=" " alt="" coords="227,80,531,131"/>
-<area shape="poly" id="edge7_Node000000_Node000002" title=" " alt="" coords="114,223,163,181,193,159,225,140,253,129,255,134,228,145,196,163,166,185,118,227"/>
-<area shape="rect" id="Node000003" href="$struct_contact_ops_1_1_op_constrain_boundary_rhs_impl_3_01_d_i_m_00_01_g_a_u_s_s_00_01_assembly_boundary_ele_op_01_4.html" title=" " alt="" coords="238,155,520,205"/>
-<area shape="poly" id="edge8_Node000000_Node000003" title=" " alt="" coords="160,229,268,203,270,209,161,234"/>
-<area shape="rect" id="Node000004" href="$struct_free_surface_ops_1_1_op_normal_constrain_lhs.html" title=" " alt="" coords="285,229,472,267"/>
-<area shape="poly" id="edge9_Node000000_Node000004" title=" " alt="" coords="194,245,284,245,284,251,194,251"/>
-<area shape="rect" id="Node000005" href="$struct_free_surface_ops_1_1_op_normal_constrain_rhs.html" title=" " alt="" coords="285,291,472,328"/>
-<area shape="poly" id="edge10_Node000000_Node000005" title=" " alt="" coords="162,261,227,276,285,288,284,293,226,281,161,267"/>
-<area shape="rect" id="Node000006" href="$struct_free_surface_ops_1_1_op_normal_force_rhs.html" title=" " alt="" coords="285,352,472,389"/>
-<area shape="poly" id="edge11_Node000000_Node000006" title=" " alt="" coords="120,268,168,304,228,338,285,355,284,360,226,342,165,309,117,272"/>
-<area shape="rect" id="Node000007" href="$struct_free_surface_ops_1_1_op_wetting_angle_rhs.html" title=" " alt="" coords="284,413,473,451"/>
-<area shape="poly" id="edge12_Node000000_Node000007" title=" " alt="" coords="110,272,157,337,190,371,228,399,255,412,284,420,283,425,253,417,225,404,186,375,153,340,106,275"/>
+<area shape="rect" id="Node000000" href="$classBoundaryEleOp.html" title=" " alt="" coords="5,428,128,453"/>
+<area shape="rect" id="Node000001" href="$structAtomTest_1_1OpErrorSkel_3_011_01_4.html" title=" " alt="" coords="197,5,403,31"/>
+<area shape="poly" id="edge77_Node000000_Node000001" title=" " alt="" coords="69,414,82,329,104,217,135,110,154,68,174,40,196,26,198,30,178,44,158,71,140,112,110,218,87,330,74,415"/>
+<area shape="rect" id="Node000002" href="$structContactOps_1_1OpAssembleTotalContactAreaImpl_3_01DIM_00_01GAUSS_00_01BoundaryEleOp_01_4.html" title=" " alt="" coords="185,55,415,109"/>
+<area shape="poly" id="edge78_Node000000_Node000002" title=" " alt="" coords="67,414,73,354,90,275,104,233,122,192,145,153,174,119,188,107,192,111,178,123,150,156,127,194,109,235,95,276,78,355,72,414"/>
+<area shape="rect" id="Node000003" href="$structContactOps_1_1OpAssembleTotalContactTractionImpl_3_01DIM_00_01GAUSS_00_01BoundaryEleOp_01_4.html" title=" " alt="" coords="191,133,409,188"/>
+<area shape="poly" id="edge79_Node000000_Node000003" title=" " alt="" coords="70,414,81,368,101,310,131,250,151,223,174,199,191,186,195,190,178,203,155,226,136,253,106,312,86,369,75,415"/>
+<area shape="rect" id="Node000004" href="$structContactOps_1_1OpEvaluateSDFImpl_3_01DIM_00_01GAUSS_00_01BoundaryEleOp_01_4.html" title=" " alt="" coords="181,213,419,253"/>
+<area shape="poly" id="edge80_Node000000_Node000004" title=" " alt="" coords="74,414,89,379,110,338,138,297,174,263,195,250,197,255,178,267,142,301,114,341,93,381,79,416"/>
+<area shape="rect" id="Node000005" href="$structElasticExample_1_1OpCalculateTraction.html" title=" " alt="" coords="195,277,405,317"/>
+<area shape="poly" id="edge81_Node000000_Node000005" title=" " alt="" coords="83,415,121,370,147,346,175,326,200,314,202,319,177,331,150,350,125,373,87,418"/>
+<area shape="rect" id="Node000006" href="$structFreeSurfaceOps_1_1OpCalculateLift.html" title=" " alt="" coords="185,341,415,367"/>
+<area shape="poly" id="edge82_Node000000_Node000006" title=" " alt="" coords="96,418,133,396,175,377,218,364,219,369,177,382,135,401,99,423"/>
+<area shape="rect" id="Node000007" href="$structFreeSurfaceOps_1_1OpWettingAngleLhs.html" title=" " alt="" coords="200,391,400,431"/>
+<area shape="poly" id="edge83_Node000000_Node000007" title=" " alt="" coords="141,429,199,421,200,427,142,434"/>
+<area shape="rect" id="Node000008" href="$structLevelSet_1_1OpLhsSkeleton.html" title=" " alt="" coords="209,456,391,481"/>
+<area shape="poly" id="edge84_Node000000_Node000008" title=" " alt="" coords="142,447,209,455,208,460,141,452"/>
+<area shape="rect" id="Node000009" href="$structLevelSet_1_1OpRhsSkeleton.html" title=" " alt="" coords="208,505,392,531"/>
+<area shape="poly" id="edge85_Node000000_Node000009" title=" " alt="" coords="104,458,177,490,223,503,222,508,175,495,101,462"/>
+<area shape="rect" id="Node000010" href="$structOpH1LhsSkeleton.html" title="Operator the left hand side matrix." alt="" coords="232,555,368,580"/>
+<area shape="poly" id="edge86_Node000000_Node000010" title=" " alt="" coords="88,462,126,503,151,523,177,540,204,551,232,558,231,563,202,556,175,544,148,527,123,507,84,466"/>
+<area shape="rect" id="Node000011" href="$structPhotonDiffusion_1_1OpCameraInteg.html" title=" " alt="" coords="199,605,401,645"/>
+<area shape="poly" id="edge87_Node000000_Node000011" title=" " alt="" coords="82,464,118,528,145,561,178,589,201,602,199,607,174,594,142,565,114,531,77,467"/>
+<area shape="rect" id="Node000012" href="$structPhotonDiffusion_1_1OpGetScalarFieldGradientValuesOnSkin.html" title=" " alt="" coords="193,669,407,709"/>
+<area shape="poly" id="edge88_Node000000_Node000012" title=" " alt="" coords="76,467,88,508,108,559,138,611,156,634,178,655,196,666,193,671,174,659,152,638,133,614,104,562,83,510,71,468"/>
+<area shape="rect" id="Node000013" href="$structPoisson2DiscontGalerkinOperators_1_1OpL2BoundaryRhs.html" title="Operator to evaluate Dirichlet boundary conditions using DG." alt="" coords="176,733,424,773"/>
+<area shape="poly" id="edge89_Node000000_Node000013" title=" " alt="" coords="73,467,81,520,99,588,113,624,130,659,152,691,178,719,194,730,191,735,174,723,148,694,126,661,108,626,94,590,76,521,68,468"/>
+<area shape="rect" id="Node000014" href="$structPoisson2DiscontGalerkinOperators_1_1OpL2LhsPenalty.html" title="Operator the left hand side matrix." alt="" coords="176,797,424,837"/>
+<area shape="poly" id="edge90_Node000000_Node000014" title=" " alt="" coords="71,467,75,531,91,616,104,661,123,706,147,747,178,783,193,794,190,799,174,787,143,750,118,708,99,663,86,617,70,532,65,467"/>
 </map>

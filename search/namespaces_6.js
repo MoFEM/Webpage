@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gelmodule_0',['GelModule',['../namespace_gel_module.html',1,'']]]
+  ['jupyterhub_5fconfig_0',['jupyterhub_config',['../namespacejupyterhub__config.html',1,'']]]
 ];

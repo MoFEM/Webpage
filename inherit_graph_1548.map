@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,230,87"/>
-<area shape="rect" id="Node000001" href="$struct_meta_spring_b_c_1_1_op_calculate_deformation.html" title="Operator for computing deformation gradients in side volumes." alt="" coords="278,5,464,46"/>
-<area shape="poly" id="edge1312_Node000000_Node000001" title=" " alt="" coords="245,40,277,35,278,41,246,45"/>
-<area shape="rect" id="Node000002" href="$struct_simple_contact_problem_1_1_op_calculate_deformation.html" title="Operator for computing deformation gradients in side volumes." alt="" coords="285,71,457,111"/>
-<area shape="poly" id="edge1313_Node000000_Node000002" title=" " alt="" coords="245,72,284,77,284,83,245,78"/>
-</map>

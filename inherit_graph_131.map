@@ -1,3 +1,25 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_data_from_bc.html" title="Data from Cubit blocksets." alt="" coords="5,5,101,29"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,312,176,352"/>
+<area shape="rect" id="Node000001" href="$structFreeSurfaceOps_1_1OpLoopSideGetDataForSideEle.html" title=" " alt="" coords="239,5,448,45"/>
+<area shape="poly" id="edge118_Node000000_Node000001" title=" " alt="" coords="96,298,110,245,135,179,172,112,195,82,222,55,241,43,244,48,226,59,199,85,176,115,140,181,115,246,101,299"/>
+<area shape="rect" id="Node000002" href="$structOpCalculateDeformationGradient.html" title=" " alt="" coords="224,69,463,109"/>
+<area shape="poly" id="edge119_Node000000_Node000002" title=" " alt="" coords="101,298,119,257,145,209,180,160,222,119,243,107,245,112,226,123,184,164,150,211,124,259,106,300"/>
+<area shape="rect" id="Node000003" href="$structOpCalculateDisplacement.html" title=" " alt="" coords="248,133,439,173"/>
+<area shape="poly" id="edge120_Node000000_Node000003" title=" " alt="" coords="110,298,157,239,188,209,223,183,247,171,249,176,225,188,191,213,161,243,114,302"/>
+<area shape="rect" id="Node000004" href="$structOpCalculateEshelbyStress.html" title=" " alt="" coords="247,198,439,223"/>
+<area shape="poly" id="edge121_Node000000_Node000004" title=" " alt="" coords="122,301,168,266,223,234,260,221,261,226,225,238,171,270,125,305"/>
+<area shape="rect" id="Node000005" href="$structOpCalculateFStab.html" title=" " alt="" coords="254,248,433,288"/>
+<area shape="poly" id="edge122_Node000000_Node000005" title=" " alt="" coords="183,306,263,285,265,291,184,311"/>
+<area shape="rect" id="Node000006" href="$structOpCalculateLameStress.html" title=" " alt="" coords="255,312,432,352"/>
+<area shape="poly" id="edge123_Node000000_Node000006" title=" " alt="" coords="190,329,255,329,255,335,190,335"/>
+<area shape="rect" id="Node000007" href="$structOpCalculatePiola.html" title=" " alt="" coords="256,376,431,416"/>
+<area shape="poly" id="edge124_Node000000_Node000007" title=" " alt="" coords="184,353,265,373,263,379,183,358"/>
+<area shape="rect" id="Node000008" href="$structOpCalculatePiolaIncompressibleNH.html" title=" " alt="" coords="227,440,459,480"/>
+<area shape="poly" id="edge125_Node000000_Node000008" title=" " alt="" coords="126,359,171,394,225,426,255,437,253,442,223,430,168,398,123,363"/>
+<area shape="rect" id="Node000009" href="$structOpElectricField.html" title=" " alt="" coords="284,505,403,530"/>
+<area shape="poly" id="edge126_Node000000_Node000009" title=" " alt="" coords="112,363,158,429,189,462,225,490,254,503,285,510,283,515,252,508,223,494,186,466,154,432,107,366"/>
+<area shape="rect" id="Node000010" href="$structOpRow.html" title=" " alt="" coords="309,554,377,579"/>
+<area shape="poly" id="edge127_Node000000_Node000010" title=" " alt="" coords="106,364,123,405,149,453,183,500,226,539,245,550,267,557,310,564,309,569,266,562,243,555,222,544,179,504,145,456,119,408,101,366"/>
+<area shape="rect" id="Node000011" href="$structOpRowCol.html" title=" " alt="" coords="299,603,388,629"/>
+<area shape="poly" id="edge128_Node000000_Node000011" title=" " alt="" coords="102,365,117,415,141,476,177,538,200,565,225,588,261,606,299,613,298,618,259,611,223,593,196,569,173,541,136,479,112,417,97,366"/>
 </map>

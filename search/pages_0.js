@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['0_0',['0',['../md_users__modules_2fracture__mechanics_2_c_h_a_n_g_e_l_o_g.html',1,'Fracture Module v0.12.0'],['../md__c_h_a_n_g_e_l_o_g.html',1,'MoFEM v0.13.0'],['../md_users__modules_2mortar__contact_2_c_h_a_n_g_e_l_o_g.html',1,'Mortar Contact Module v0.10.0']]],
+  ['0_0',['MoFEM v0.13.0',['../md_CHANGELOG.html',1,'']]],
   ['0_3a_20hello_20world_1',['FUN-0: Hello world',['../hello_world_tut1.html',1,'']]],
   ['0_3a_20helmholtz_20problem_2',['CLX-0: Helmholtz problem',['../tutorial_hemholtz_problem.html',1,'']]],
   ['0_3a_20least_20square_20approximaton_3',['SCL-0: Least square approximaton',['../basic_tutorials_least_square_approximation.html',1,'']]],

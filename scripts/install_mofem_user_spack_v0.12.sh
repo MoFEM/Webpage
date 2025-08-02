@@ -2,7 +2,7 @@
 # This script automises installation of MoFEM user version with basic modules
 # and fracture module
 # Full description of the installation process using spack can be found at:
-# http://mofem.eng.gla.ac.uk/mofem/html/install_spack.html
+# https://mofem.eng.gla.ac.uk/install_spack.html
 # The script should work for both Ubuntu and macOS platforms
 # The last known working platforms are Ubuntu (18.04) and macOS (10.13, 10.14)
 # The installation may take two to three hours

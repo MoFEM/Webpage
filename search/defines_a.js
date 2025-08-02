@@ -21,5 +21,7 @@ var searchData=
   ['lobatto_5fphi8_18',['LOBATTO_PHI8',['../base__functions_8h.html#a106dfa512f71a4d4a3dee00b8356ada6',1,'base_functions.h']]],
   ['lobatto_5fphi8x_19',['LOBATTO_PHI8X',['../base__functions_8h.html#a98fa88b64d843a5230697bcf879b0ade',1,'base_functions.h']]],
   ['lobatto_5fphi9_20',['LOBATTO_PHI9',['../base__functions_8h.html#ae58ed08e68b4b1d11279c1062f1b7dfa',1,'base_functions.h']]],
-  ['lobatto_5fphi9x_21',['LOBATTO_PHI9X',['../base__functions_8h.html#a6ddd414e192779dfad7c448bbec7cc10',1,'base_functions.h']]]
+  ['lobatto_5fphi9x_21',['LOBATTO_PHI9X',['../base__functions_8h.html#a6ddd414e192779dfad7c448bbec7cc10',1,'base_functions.h']]],
+  ['log_5ffunction_5fname_5fwith_5fop_5fname_22',['LOG_FUNCTION_NAME_WITH_OP_NAME',['../ForcesAndSourcesCore_8cpp.html#a71e85189530f1f972a103f07394dd126',1,'ForcesAndSourcesCore.cpp']]],
+  ['log_5fop_23',['LOG_OP',['../ForcesAndSourcesCore_8cpp.html#a99c6334bbdc3d61296d1aa3d77052295',1,'ForcesAndSourcesCore.cpp']]]
 ];

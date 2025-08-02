@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$struct_convective_mass_element_1_1_p_c_shell_ctx.html" title=" " alt="" coords="5,5,173,43"/>
+<area shape="rect" id="Node000000" href="$classFEMethod.html" title=" " alt="" coords="5,55,92,80"/>
+<area shape="rect" id="Node000001" href="$structContactOps_1_1Monitor.html" title=" " alt="" coords="140,5,295,31"/>
+<area shape="poly" id="edge113_Node000000_Node000001" title=" " alt="" coords="105,48,172,28,174,33,106,53"/>
+<area shape="rect" id="Node000002" href="$structEshelbianMonitor.html" title=" " alt="" coords="150,55,285,80"/>
+<area shape="poly" id="edge114_Node000000_Node000002" title=" " alt="" coords="106,65,150,65,150,70,106,70"/>
+<area shape="rect" id="Node000003" href="$structPlasticOps_1_1Monitor.html" title=" " alt="" coords="143,105,291,145"/>
+<area shape="poly" id="edge115_Node000000_Node000003" title=" " alt="" coords="100,82,159,102,157,107,99,87"/>
 </map>

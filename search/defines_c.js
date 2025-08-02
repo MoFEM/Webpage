@@ -74,13 +74,12 @@ var searchData=
   ['nbvolumetet_5fainsworth_5fhdiv_71',['NBVOLUMETET_AINSWORTH_HDIV',['../h1__hdiv__hcurl__l2_8h.html#a0ad5a73eb2e1da0845085f3c77791139',1,'h1_hdiv_hcurl_l2.h']]],
   ['nbvolumetet_5fainsworth_5ftet_5fhcurl_72',['NBVOLUMETET_AINSWORTH_TET_HCURL',['../h1__hdiv__hcurl__l2_8h.html#a0860d329268e0e94fbeb670d225e7536',1,'h1_hdiv_hcurl_l2.h']]],
   ['nbvolumetet_5fainsworth_5fvolume_5fhdiv_73',['NBVOLUMETET_AINSWORTH_VOLUME_HDIV',['../h1__hdiv__hcurl__l2_8h.html#ac273387a638dcf4d84ffc763a59e6d61',1,'h1_hdiv_hcurl_l2.h']]],
-  ['nbvolumetet_5fccg_5fbubble_74',['NBVOLUMETET_CCG_BUBBLE',['../_c_g_g_tonsorial_bubble_base_8hpp.html#af88c539f45e4ad3e7407169d8539d25e',1,'CGGTonsorialBubbleBase.hpp']]],
+  ['nbvolumetet_5fccg_5fbubble_74',['NBVOLUMETET_CCG_BUBBLE',['../CGGTonsorialBubbleBase_8hpp.html#af88c539f45e4ad3e7407169d8539d25e',1,'CGGTonsorialBubbleBase.hpp']]],
   ['nbvolumetet_5fdemkowicz_5fhcurl_75',['NBVOLUMETET_DEMKOWICZ_HCURL',['../h1__hdiv__hcurl__l2_8h.html#a7f5a907658dcb376a07fe427eb94c55d',1,'h1_hdiv_hcurl_l2.h']]],
   ['nbvolumetet_5fdemkowicz_5fhdiv_76',['NBVOLUMETET_DEMKOWICZ_HDIV',['../h1__hdiv__hcurl__l2_8h.html#a2d5d5780f45ed16d86c6d1e0537a67a3',1,'h1_hdiv_hcurl_l2.h']]],
   ['nbvolumetet_5fh1_77',['NBVOLUMETET_H1',['../h1__hdiv__hcurl__l2_8h.html#a09bdfd6be0a7ff2fedf8ad91b690954f',1,'h1_hdiv_hcurl_l2.h']]],
   ['nbvolumetet_5fl2_78',['NBVOLUMETET_L2',['../h1__hdiv__hcurl__l2_8h.html#afff51d616c826e4714c19b69816fa74f',1,'h1_hdiv_hcurl_l2.h']]],
-  ['near_5fzero_79',['NEAR_ZERO',['../clipper_8cpp.html#abc7dddd0f7b471d49cce3e0ea6790d84',1,'clipper.cpp']]],
-  ['neohookean_5foff_5finverse_80',['NEOHOOKEAN_OFF_INVERSE',['../_h_m_h_neohookean_8cpp.html#a2f79c4a0281993280768a85ef074f2c6',1,'HMHNeohookean.cpp']]],
-  ['not_5fused_81',['NOT_USED',['../definitions_8h.html#a05a7b30aaf65db56c27346272aa681e5',1,'definitions.h']]],
-  ['number_5fdirections_82',['NUMBER_DIRECTIONS',['../ftensor__and__adolc__tapeless_8cpp.html#a4e80afe2e901fc560d9e8aa163c48691',1,'ftensor_and_adolc_tapeless.cpp']]]
+  ['neohookean_5foff_5finverse_79',['NEOHOOKEAN_OFF_INVERSE',['../HMHNeohookean_8cpp.html#a2f79c4a0281993280768a85ef074f2c6',1,'HMHNeohookean.cpp']]],
+  ['not_5fused_80',['NOT_USED',['../definitions_8h.html#a05a7b30aaf65db56c27346272aa681e5',1,'definitions.h']]],
+  ['number_5fdirections_81',['NUMBER_DIRECTIONS',['../ftensor__and__adolc__tapeless_8cpp.html#a4e80afe2e901fc560d9e8aa163c48691',1,'ftensor_and_adolc_tapeless.cpp']]]
 ];

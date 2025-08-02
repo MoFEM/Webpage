@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['d2mcoefficients_0',['d2MCoefficients',['../struct_eigen_matrix_1_1_eigen_matrix_imp.html#a31fa11da003eaf13ce89d12104c26ae5',1,'EigenMatrix::EigenMatrixImp']]],
-  ['d2mimpl_1',['d2MImpl',['../struct_eigen_matrix_1_1_eigen_matrix_imp.html#a4519b9118110c50ce461e6280d1b69d2',1,'EigenMatrix::EigenMatrixImp']]],
-  ['dofentity_5factive_5fchange_2',['DofEntity_active_change',['../struct_mo_f_e_m_1_1_dof_entity.html#aa6b26ca6a596e49cb279edee565da620',1,'MoFEM::DofEntity']]]
+  ['edgeelementforcesandsourcescore_0',['EdgeElementForcesAndSourcesCore',['../structMoFEM_1_1ForcesAndSourcesCore_1_1UserDataOperator.html#ad6599a88c71998818e6424ed0ec39728',1,'MoFEM::ForcesAndSourcesCore::UserDataOperator']]],
+  ['edgeelementforcesandsourcescoreonchildparent_1',['EdgeElementForcesAndSourcesCoreOnChildParent',['../structMoFEM_1_1ForcesAndSourcesCore.html#add70755f0b5909ed01b7e58ec4a33b0b',1,'MoFEM::ForcesAndSourcesCore']]],
+  ['entfiniteelement_2',['EntFiniteElement',['../structMoFEM_1_1RefEntityTmp_3_010_01_4.html#adf033044311e3a2ab4208827586491b4',1,'MoFEM::RefEntityTmp&lt; 0 &gt;']]]
 ];
