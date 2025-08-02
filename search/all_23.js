@@ -11,10 +11,10 @@ var searchData=
   ['you_20will_20need_20on_20host_20system_8',['What you will need on host system',['../install_docker_advanced.html#docker_prerequisites',1,'']]],
   ['young_9',['young',['../structDataAtIntegrationPts.html#a5de64f1d8e5e8d16383a1aa0d8c8b4f9',1,'DataAtIntegrationPts::yOung'],['../structBlockData.html#a87f82720b0914e77dc6eed317d5084f1',1,'BlockData::yOung'],['../structOpK.html#a1a35f709652c33ea9ba863091aae1a4d',1,'OpK::yOung']]],
   ['young_5fmodulus_10',['young_modulus',['../structPlasticOps_1_1CommonData.html#a2f540deed8723768f41d76450f32843eae449edf094f27a333690516009d4f484',1,'PlasticOps::CommonData::YOUNG_MODULUS'],['../nonlinear__dynamic__elastic_8cpp.html#afa35f18c42c65583aba1091c8af09754',1,'young_modulus:&#160;nonlinear_dynamic_elastic.cpp'],['../eigen__elastic_8cpp.html#a0447f1370e525557f8d7c6a1ed22be14',1,'young_modulus:&#160;eigen_elastic.cpp'],['../elastic_8cpp.html#afa35f18c42c65583aba1091c8af09754',1,'young_modulus:&#160;elastic.cpp'],['../incompressible__elasticity_8cpp.html#a0447f1370e525557f8d7c6a1ed22be14',1,'young_modulus:&#160;incompressible_elasticity.cpp'],['../dynamic__first__order__con__law_8cpp.html#afa35f18c42c65583aba1091c8af09754',1,'young_modulus:&#160;dynamic_first_order_con_law.cpp'],['../contact_8cpp.html#a0447f1370e525557f8d7c6a1ed22be14',1,'young_modulus:&#160;contact.cpp'],['../plastic_8cpp.html#a0447f1370e525557f8d7c6a1ed22be14',1,'young_modulus:&#160;plastic.cpp']]],
-  ['your_20local_20machine_11',['How to generate this documentation on your local machine?',['../faqs.html#own_documentation',1,'']]],
-  ['your_20own_20mirror_12',['Making your own mirror',['../install_spack.html#autotoc_md77',1,'']]],
-  ['your_20own_20purpose_13',['New module for your own purpose',['../how_to_add_new_module_and_program.html#autotoc_md52',1,'']]],
-  ['your_20tt_20bashrc_20tt_14',['1. Update your &lt;tt&gt;~/.bashrc&lt;/tt&gt;',['../install_spack.html#autotoc_md57',1,'']]],
+  ['your_20bashrc_11',['1. Update your ~/.bashrc',['../install_spack.html#autotoc_md56',1,'']]],
+  ['your_20local_20machine_12',['How to generate this documentation on your local machine?',['../faqs.html#own_documentation',1,'']]],
+  ['your_20own_20mirror_13',['Making your own mirror',['../install_spack.html#autotoc_md73',1,'']]],
+  ['your_20own_20purpose_14',['New module for your own purpose',['../how_to_add_new_module_and_program.html#autotoc_md52',1,'']]],
   ['yplane_15',['yplane',['../classsdf_1_1yPlane.html',1,'sdf.yPlane'],['../classsdf__ydirection_1_1yPlane.html',1,'sdf_ydirection.yPlane'],['../classsdf__plane__2d_1_1yPlane.html',1,'sdf_plane_2d.yPlane'],['../classsdf__hertz__2d__plane_1_1yPlane.html',1,'sdf_hertz_2d_plane.yPlane'],['../classsdf__hertz__2d__axisymm__plane_1_1yPlane.html',1,'sdf_hertz_2d_axisymm_plane.yPlane']]],
   ['yproblem_16',['yProblem',['../structMoFEM_1_1ConstrainMatrixCtx.html#a8d67355646f2dd5c59fc2269bdca7ada',1,'MoFEM::ConstrainMatrixCtx']]]
 ];

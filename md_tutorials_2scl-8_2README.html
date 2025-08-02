@@ -128,11 +128,11 @@ $(function() {
   <div class="headertitle"><div class="title">Command: make notebook_scl-8</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md187"></a> The <code>make notebook_scl-8</code> command is similar to the <code>make notebook</code> command, but it works locally for the scl-8 tutorial. When executed, this command will copy markdown files (excluding README.md) from the source directory <b>scl-8</b> to the build directory <b>scl-8</b> and convert them to Jupyter Notebooks. This command relies on the <code>make notebook_pluto</code> target, where <em><b>pluto</b></em> represents the markdown filename. For multiple markdown files, each file will have an associated <code>make notebook_filename_xyz</code> command, and <code>make notebook_scl-8</code> will be a collection of these commands.</p>
-<h1><a class="anchor" id="autotoc_md188"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md183"></a> The <code>make notebook_scl-8</code> command is similar to the <code>make notebook</code> command, but it works locally for the scl-8 tutorial. When executed, this command will copy markdown files (excluding README.md) from the source directory <b>scl-8</b> to the build directory <b>scl-8</b> and convert them to Jupyter Notebooks. This command relies on the <code>make notebook_pluto</code> target, where <em><b>pluto</b></em> represents the markdown filename. For multiple markdown files, each file will have an associated <code>make notebook_filename_xyz</code> command, and <code>make notebook_scl-8</code> will be a collection of these commands.</p>
+<h1><a class="anchor" id="autotoc_md184"></a>
 Modifying CMakeLists.txt</h1>
 <p>To enable the <code>make notebook_scl-8</code> functionality, add the following line to the <b>CMakeLists.txt</b> file: </p><div class="fragment"><div class="line">copy_and_convert_md_to_ipynb(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md189"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md185"></a>
 How to execute</h1>
 <p>Navigate to the <b>scl-8</b> directory and run <code>make notebook_scl-8</code>. </p>
 </div></div><!-- contents -->
