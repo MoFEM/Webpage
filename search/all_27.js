@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['⚙️_20create_20and_20configure_20the_20debug_20environment_0',['⚙️ Create and Configure the Debug Environment',['../install_spack.html#autotoc_md75',1,'']]]
+  ['⚙️_20create_20and_20configure_20the_20debug_20environment_0',['⚙️ Create and Configure the Debug Environment',['../install_spack.html#autotoc_md78',1,'']]]
 ];

@@ -129,8 +129,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#installation_user_version">User version</a></li>
-<li class="level1"><a href="#installation_developer_version">Developer version</a><ul><li class="level2"><a href="#installation_developer_version_add_new_module">Compile codes and add new module in MoFEM</a></li>
+<ul><li class="level1"><a href="#installation_user_version">User version</a><ul><li class="level2"><a href="#installation_developer_version_add_new_module">Compile codes and add new module in MoFEM</a></li>
 </ul>
 </li>
 </ul>
@@ -144,45 +143,18 @@ User version</h1>
 <p>User version of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> installation provides only binary files (not the source codes) that allow users to run analyses in <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> straightaway. You may wish follow these steps for installation that will include binary (executable) files of <em>Basic User Module</em> and <em>Fracture Module</em></p>
 <ul>
 <li>Locate the directory where you would like to install <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a></li>
-<li>Download installation script to that directory <a href="scripts/install_mofem_user.sh"><code>install_mofem_user.sh</code></a></li>
-<li>Change mode of the script (if neccesary) <div class="fragment"><div class="line">chmod +x install_mofem_user.sh</div>
+<li>Download installation script to that directory <a href="scripts/installation_ubuntu.sh"><code>installation_ubuntu.sh</code></a></li>
+<li>Change mode of the script (if neccesary) <div class="fragment"><div class="line">chmod +x installation_ubuntu.sh</div>
 </div><!-- fragment --></li>
-<li>Run the script (sudo privileges may be required) <div class="fragment"><div class="line">./install_mofem_user.sh</div>
-</div><!-- fragment --></li>
-<li>Test run <code>elasticity</code> program <div class="fragment"><div class="line">cd YOUR_INSTALLATION_DIRECTORY</div>
-<div class="line">cd mofem_install/um_view/elasticity</div>
-<div class="line">./elasticity -my_file LShape.h5m -my_order 2</div>
-</div><!-- fragment --></li>
-<li>Test run <code>fracture_mechanics</code> program <div class="fragment"><div class="line">cd YOUR_INSTALLATION_DIRECTORY</div>
-<div class="line">cd mofem_install/um_view/fracture_mechanics</div>
-<div class="line">./crack_propagation -my_file examples/analytical_bc/out_10.h5m -my_order 2 -my_ref 0</div>
-</div><!-- fragment --></li>
-</ul>
-<h1><a class="anchor" id="installation_developer_version"></a>
-Developer version</h1>
-<p>Developer version of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> installation provides you with highest flexibility with all the source codes. You can experiment the codes, create your own module, and always stay up-to-date to the latest developement of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>. You may wish to follow these steps for installation that will include source code and executables of <em>Core Library</em>, <em>Basic User Module</em>, and <em>Fracture Module</em> with both release and debug build types</p>
-<ul>
-<li>Locate the directory where you would like to install <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a></li>
-<li>Download installation script to that directory <a href="scripts/install_mofem_developer.sh"><code>install_mofem_developer.sh</code></a></li>
-<li>Change mode of the script (if neccesary) <div class="fragment"><div class="line">chmod +x install_mofem_developer.sh</div>
-</div><!-- fragment --></li>
-<li>Run the script (sudo privileges may be required) <div class="fragment"><div class="line">./install_mofem_developer.sh</div>
-</div><!-- fragment --></li>
-<li>Test run <code>elasticity</code> program <div class="fragment"><div class="line">cd YOUR_INSTALLATION_DIRECTORY</div>
-<div class="line">cd mofem_install/mofem-cephas/mofem/users_modules/um-build-RelWithDebInfo-abcd1234/tutorials/vec-0/</div>
-<div class="line">./elastic_2d -file_name plate.cub -my_order 2</div>
-</div><!-- fragment --> where <code>abcd1234</code> in <code>um-build-RelWithDebInfo-abcd1234</code> is the package hash and can different every time you install <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>.</li>
-<li>Test run <code>fracture_mechanics</code> program <div class="fragment"><div class="line">cd YOUR_INSTALLATION_DIRECTORY</div>
-<div class="line">cd mofem_install/mofem-cephas/mofem/users_modules/um-build-RelWithDebInfo-abcd1234/mofem_um_fracture_mechanics</div>
-<div class="line">./crack_propagation -my_file examples/analytical_bc/out_10.h5m -my_order 2 -my_ref 0</div>
+<li>Run the script (sudo privileges may be required) <div class="fragment"><div class="line">./installation_ubuntu.sh</div>
 </div><!-- fragment --></li>
 </ul>
 <h2><a class="anchor" id="installation_developer_version_add_new_module"></a>
 Compile codes and add new module in MoFEM</h2>
 <p>For developer, you may wish to have a look at these two tutorials to compile codes and add new module in <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a></p>
 <ul>
-<li><a class="el" href="how_to_compile_program.html">How to compile a program</a></li>
-<li><a class="el" href="how_to_add_new_module_and_program.html">How to add a new module and program</a></li>
+<li><a class="el" href="installation_script.html#how_to_compile_program">How to Compile a Program</a></li>
+<li><a class="el" href="installation_script.html#how_to_add_new_module_and_program">How to Add a New Module and Program</a></li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>If you have issues installing <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>, please let us know on <a href="https://groups.google.com/forum/#!categories/mofem-group">MoFEM Q&amp;A</a>. Enjoy MoFEM! </dd></dl>
 </div></div><!-- contents -->

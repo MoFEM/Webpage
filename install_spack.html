@@ -133,82 +133,44 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md56">Installing MoFEM with Spack on Ubuntu Noble</a><ul><li class="level2"><a href="#autotoc_md57">🧰 Prerequisites</a></li>
-<li class="level2"><a href="#autotoc_md58">📦 Step 1: Install System Dependencies</a></li>
-<li class="level2"><a href="#autotoc_md59">📁 Step 2: Set Up Directories</a></li>
-<li class="level2"><a href="#autotoc_md60">📥 Step 3: Download and Unpack Spack</a></li>
-<li class="level2"><a href="#autotoc_md61">🧠 Step 4: Initialise Spack</a></li>
-<li class="level2"><a href="#autotoc_md62">🔧 Step 5: Configure Spack</a></li>
-<li class="level2"><a href="#autotoc_md63">🧩 Step 6: Add Custom MoFEM Package Repository</a></li>
-<li class="level2"><a href="#autotoc_md64">🚀 Step 7: Install MoFEM Dependencies</a></li>
-<li class="level2"><a href="#autotoc_md65">🧹 Step 8: Clean Build Cache</a></li>
-<li class="level2"><a href="#autotoc_md66">📥 Step 9: Clone and Build MoFEM</a></li>
-<li class="level2"><a href="#autotoc_md67">🏗️ Step 10: Build MoFEM Core Library</a></li>
-<li class="level2"><a href="#autotoc_md68">✅ Done!</a></li>
+<ul><li class="level1"><a href="#autotoc_md61">Installing MoFEM with Spack on Ubuntu Noble</a><ul><li class="level2"><a href="#autotoc_md62">🧰 Prerequisites</a></li>
+<li class="level2"><a href="#autotoc_md63">📦 Step 1: Install System Dependencies</a></li>
+<li class="level2"><a href="#autotoc_md64">📁 Step 2: Set Up Directories</a></li>
+<li class="level2"><a href="#autotoc_md65">📥 Step 3: Download and Unpack Spack</a></li>
+<li class="level2"><a href="#autotoc_md66">🧠 Step 4: Initialise Spack</a></li>
+<li class="level2"><a href="#autotoc_md67">🔧 Step 5: Configure Spack</a></li>
+<li class="level2"><a href="#autotoc_md68">🧩 Step 6: Add Clone and Custom MoFEM Package Repository</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#autotoc_md69">🚧 MoFEM Installation on Oak Development Server</a><ul><li class="level2"><a href="#autotoc_md70">🛠️ 1. Set Up Environment in &lt;tt&gt;~/.bashrc&lt;/tt&gt;</a></li>
-<li class="level2"><a href="#autotoc_md71">📁 2. Prepare Installation Directory</a></li>
-<li class="level2"><a href="#autotoc_md72">📦 3. Clone the MoFEM Repository</a></li>
-<li class="level2"><a href="#autotoc_md73">🧪 4. Create and Configure the Release Environment</a></li>
-<li class="level2"><a href="#autotoc_md74">🐞 5. (Optional) Create a Debugging Environment</a><ul><li class="level3"><a href="#autotoc_md75">⚙️ Create and Configure the Debug Environment</a></li>
-<li class="level3"><a href="#autotoc_md76">🔬 Work on PETSc and MOAB Code (Optional)</a></li>
+<li class="level1"><a href="#autotoc_md69">Set the MoFEM source directory</a><ul><li class="level2"><a href="#autotoc_md70">🏗️ Step 10: Build MoFEM Core Library</a></li>
+<li class="level2"><a href="#autotoc_md71">✅ Done!</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md77">✅ Done!</a></li>
+<li class="level1"><a href="#autotoc_md72">🚧 MoFEM Installation on Oak Development Server</a><ul><li class="level2"><a href="#autotoc_md73">🛠️ 1. Set Up Environment in &lt;tt&gt;~/.bashrc&lt;/tt&gt;</a></li>
+<li class="level2"><a href="#autotoc_md74">📁 2. Prepare Installation Directory</a></li>
+<li class="level2"><a href="#autotoc_md75">📦 3. Clone the MoFEM Repository</a></li>
+<li class="level2"><a href="#autotoc_md76">🧪 4. Create and Configure the Release Environment</a></li>
+<li class="level2"><a href="#autotoc_md77">🐞 5. (Optional) Create a Debugging Environment</a><ul><li class="level3"><a href="#autotoc_md78">⚙️ Create and Configure the Debug Environment</a></li>
+<li class="level3"><a href="#autotoc_md79">🔬 Work on PETSc and MOAB Code (Optional)</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#autotoc_md78">🚧 MoFEM Installation on Buckedhead (SLURM System)</a><ul><li class="level2"><a href="#autotoc_md79">📦 1. Load Required Modules</a></li>
-<li class="level2"><a href="#autotoc_md80">📁 2. Create Directory Layout</a></li>
-<li class="level2"><a href="#autotoc_md81">📥 3. Download and Unpack Spack</a></li>
-<li class="level2"><a href="#autotoc_md82">🧠 4. Initialise Spack</a></li>
-<li class="level2"><a href="#autotoc_md83">🔧 5. Configure Spack with External Packages</a></li>
-<li class="level2"><a href="#autotoc_md84">🧩 6. Clone and Register MoFEM Repo</a></li>
-<li class="level2"><a href="#autotoc_md85">🌱 7. Create and Configure Spack Environment</a></li>
-<li class="level2"><a href="#autotoc_md86">🚀 8. Add and Build MoFEM</a></li>
-<li class="level2"><a href="#autotoc_md87">🧪 9. (Optional) Create Debug Environment</a></li>
-<li class="level2"><a href="#autotoc_md88">✅ 10. Run MoFEM in SLURM Job</a></li>
+<li class="level2"><a href="#autotoc_md80">✅ Done!</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#installation_scripts">Installation using scripts</a></li>
-<li class="level1"><a href="#spack_prerequisites">Prerequisites</a><ul><li class="level2"><a href="#autotoc_md90">Ubuntu/Debian</a></li>
-<li class="level2"><a href="#autotoc_md91">macOS</a></li>
+<li class="level1"><a href="#autotoc_md81">🚧 MoFEM Installation on Buckedhead (SLURM System)</a><ul><li class="level2"><a href="#autotoc_md82">📦 1. Load Required Modules</a></li>
+<li class="level2"><a href="#autotoc_md83">📁 2. Create Directory Layout</a></li>
+<li class="level2"><a href="#autotoc_md84">📥 3. Download and Unpack Spack</a></li>
+<li class="level2"><a href="#autotoc_md85">🧠 4. Initialise Spack</a></li>
+<li class="level2"><a href="#autotoc_md86">🔧 5. Configure Spack with External Packages</a></li>
+<li class="level2"><a href="#autotoc_md87">🧩 6. Clone and Register MoFEM Repo</a></li>
+<li class="level2"><a href="#autotoc_md88">🌱 7. Create and Configure Spack Environment</a></li>
+<li class="level2"><a href="#autotoc_md89">🚀 8. Add and Build MoFEM</a></li>
+<li class="level2"><a href="#autotoc_md90">🧪 9. (Optional) Create Debug Environment</a></li>
+<li class="level2"><a href="#autotoc_md91">✅ 10. Run MoFEM in SLURM Job</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#spack_setup">Spack setup</a></li>
-<li class="level1"><a href="#spack_user">User only</a><ul><li class="level2"><a href="#autotoc_md92">Install basic users module</a></li>
-<li class="level2"><a href="#autotoc_md93">Install additional users modules</a></li>
-<li class="level2"><a href="#spack_running_tests">Running tests</a></li>
-</ul>
-</li>
-<li class="level1"><a href="#spack_developers">Developers</a><ul><li class="level2"><a href="#spack_core_libraries">1. Core libraries</a></li>
-<li class="level2"><a href="#spack_users_modules">2. Install users modules</a></li>
-</ul>
-</li>
-<li class="level1"><a href="#spack_servers">Installation on specific servers</a><ul><li class="level2"><a href="#spack_buckethead">Server Buckethead</a><ul><li class="level3"><a href="#spack_buckedhead_installation">Installation</a><ul><li class="level4"><a href="#autotoc_md94">Setup compiler and external packages</a></li>
-<li class="level4"><a href="#autotoc_md95">Installing dependencies</a></li>
-<li class="level4"><a href="#autotoc_md96">User installation</a></li>
-<li class="level4"><a href="#autotoc_md97">Developer installation</a></li>
-</ul>
-</li>
-<li class="level3"><a href="#spack_buckedhead_job">Job file</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="level1"><a href="#spack_usage_config">Spack usage and configuration</a><ul><li class="level2"><a href="#spack_build_type">Setting build type and compiler flags</a></li>
-<li class="level2"><a href="#spack_mofem_package_versions">MoFEM package versions</a></li>
-<li class="level2"><a href="#spack_adding_package">Adding MoFEM extension to Spack</a></li>
-<li class="level2"><a href="#spack_config">Basic settings in config.yaml</a></li>
-<li class="level2"><a href="#spack_mirrors">Mirrors</a><ul><li class="level3"><a href="#autotoc_md98">Downloading mirror with prerequisites</a></li>
-<li class="level3"><a href="#autotoc_md99">Making your own mirror</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="level1"><a href="#spack_faq">FAQ</a><ul><li class="level2"><a href="#autotoc_md100">Installation on MAC OS X Montery (XCode 13.4.1)</a></li>
-<li class="level2"><a href="#autotoc_md101">How to get packages installed today?</a></li>
-<li class="level2"><a href="#autotoc_md102">How to find packages that were only installed today?</a></li>
+<li class="level1"><a href="#spack_faq">FAQ</a><ul><li class="level2"><a href="#autotoc_md92">How to get packages installed today?</a></li>
+<li class="level2"><a href="#autotoc_md93">How to find packages that were only installed today?</a></li>
 </ul>
 </li>
 <li class="level1"><a href="#spack_contact">Contact</a></li>
@@ -220,13 +182,13 @@ $(function() {
 <p>If you encounter issues, have feedback, or would like to suggest improvements, feel free to contact us at <br  />
  <a href="https://groups.google.com/forum/#!forum/mofem-group">mofem-group@googlegroups.com</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>Installation instructions besides Oak are not valid. We changed patterns how we work with Spack, and change <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> infrastructure. Documentation is not yet updated.</dd></dl>
-<h1><a class="anchor" id="autotoc_md56"></a>
+<h1><a class="anchor" id="autotoc_md61"></a>
 Installing MoFEM with Spack on Ubuntu Noble</h1>
 <p>This guide walks you through setting up <b><a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a></b> using <b>Spack</b> on Ubuntu Noble, based on the official Docker build.</p>
-<h2><a class="anchor" id="autotoc_md57"></a>
+<h2><a class="anchor" id="autotoc_md62"></a>
 🧰 Prerequisites</h2>
 <p>Ensure you're running <b>Ubuntu 24.04 (Noble Numbat)</b> and have <code>sudo</code> privileges.</p>
-<h2><a class="anchor" id="autotoc_md58"></a>
+<h2><a class="anchor" id="autotoc_md63"></a>
 📦 Step 1: Install System Dependencies</h2>
 <div class="fragment"><div class="line">sudo apt update &amp;&amp; sudo apt install -y \</div>
 <div class="line">  file \</div>
@@ -270,17 +232,17 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">  libboost-python-dev \</div>
 <div class="line">  openmpi-bin \</div>
 <div class="line">  libopenmpi-dev</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md59"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md64"></a>
 📁 Step 2: Set Up Directories</h2>
 <div class="fragment"><div class="line">export MOFEM_INSTALL_DIR=$HOME/mofem_install</div>
 <div class="line">export SPACK_ROOT=$MOFEM_INSTALL_DIR/spack</div>
 <div class="line"> </div>
 <div class="line">mkdir -p $SPACK_ROOT</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md60"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md65"></a>
 📥 Step 3: Download and Unpack Spack</h2>
 <div class="fragment"><div class="line">curl -L https://github.com/spack/spack/archive/refs/tags/v0.23.1.tar.gz | \</div>
 <div class="line">  tar -xz -C $SPACK_ROOT --strip-components=1</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md61"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md66"></a>
 🧠 Step 4: Initialise Spack</h2>
 <p>Add to your <code>.bashrc</code> or <code>.bash_profile</code>:</p>
 <div class="fragment"><div class="line">export MOFEM_INSTALL_DIR=$HOME/mofem_install</div>
@@ -288,7 +250,7 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">. $SPACK_ROOT/share/spack/setup-env.sh</div>
 </div><!-- fragment --><p>Then apply:</p>
 <div class="fragment"><div class="line">source ~/.bashrc</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md62"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md67"></a>
 🔧 Step 5: Configure Spack</h2>
 <div class="fragment"><div class="line">spack compiler find</div>
 <div class="line">spack external find</div>
@@ -325,30 +287,24 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">  - spec: icu4c@74.2</div>
 <div class="line">    prefix: /usr</div>
 <div class="line">  buildable: false</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md63"></a>
-🧩 Step 6: Add Custom MoFEM Package Repository</h2>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md68"></a>
+🧩 Step 6: Add Clone and Custom MoFEM Package Repository</h2>
 <p>If you have a custom <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> Spack repo:</p>
-<div class="fragment"><div class="line">spack repo add $MOFEM_INSTALL_DIR/mofem_repo</div>
-</div><!-- fragment --><p>Ensure:</p><ul>
-<li><code>$MOFEM_INSTALL_DIR/mofem_repo/repo.yaml</code></li>
-<li><code>$MOFEM_INSTALL_DIR/mofem_repo/packages/...</code></li>
-</ul>
-<h2><a class="anchor" id="autotoc_md64"></a>
-🚀 Step 7: Install MoFEM Dependencies</h2>
-<div class="fragment"><div class="line">spack install --only dependencies mofem-cephas@0.15.0+mgis ^petsc+X</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md65"></a>
-🧹 Step 8: Clean Build Cache</h2>
-<div class="fragment"><div class="line">spack clean -a</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md66"></a>
-📥 Step 9: Clone and Build MoFEM</h2>
-<div class="fragment"><div class="line"># Set the MoFEM source directory</div>
-<div class="line">export MOFEM_SRC_DIR=$MOFEM_INSTALL_DIR/mofem-cephas</div>
-<div class="line">export MOFEM_BRANCH=Version0.15.0</div>
-<div class="line"> </div>
-<div class="line"># Clone the MoFEM repository</div>
+<div class="fragment"><div class="line"># Clone the MoFEM repository</div>
 <div class="line">cd $MOFEM_INSTALL_DIR</div>
 <div class="line">git clone -b $MOFEM_BRANCH https://bitbucket.org/mofem/mofem-cephas.git</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md67"></a>
+</div><!-- fragment --><p>spack repo add $MOFEM_INSTALL_DIR/mofem_cephas </p><div class="fragment"><div class="line">Ensure:</div>
+<div class="line">- `$MOFEM_INSTALL_DIR/mofem_cephas/repo.yaml`</div>
+<div class="line">- `$MOFEM_INSTALL_DIR/mofem_cephas/packages/...`</div>
+<div class="line"> </div>
+<div class="line">## 🚀 Step 7: Install MoFEM Dependencies</div>
+</div><!-- fragment --><p> bash spack install &ndash;only dependencies <a href="#" onclick="location.href='mai'+'lto:'+'mof'+'em'+'-ce'+'ph'+'as@'+'0.'+'15'; return false;">mofem<span class="obfuscator">.nosp@m.</span>-cep<span class="obfuscator">.nosp@m.</span>has@0<span class="obfuscator">.nosp@m.</span>.15</a>.0+mgis ^petsc+X </p><div class="fragment"><div class="line">## 🧹 Step 8: Clean Build Cache</div>
+</div><!-- fragment --><p> bash spack clean -a </p><div class="fragment"><div class="line">## 📥 Step 9: Build MoFEM</div>
+</div><!-- fragment --><p> bash </p>
+<h1><a class="anchor" id="autotoc_md69"></a>
+Set the MoFEM source directory</h1>
+<p>export MOFEM_SRC_DIR=$MOFEM_INSTALL_DIR/mofem-cephas export MOFEM_BRANCH=Version0.15.0</p>
+<h2><a class="anchor" id="autotoc_md70"></a>
 🏗️ Step 10: Build MoFEM Core Library</h2>
 <div class="fragment"><div class="line">. $SPACK_ROOT/share/spack/setup-env.sh</div>
 <div class="line"> </div>
@@ -366,28 +322,28 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line"> </div>
 <div class="line"># Clean build cache</div>
 <div class="line">spack clean -a</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md68"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md71"></a>
 ✅ Done!</h2>
 <p><a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> is now installed using Spack and ready to use.</p>
 <p>To persist environment setup across sessions, you may add:</p>
 <div class="fragment"><div class="line">echo &quot;. $SPACK_ROOT/share/spack/setup-env.sh&quot; | sudo tee /etc/profile.d/mofem.sh</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md69"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md72"></a>
 🚧 MoFEM Installation on Oak Development Server</h1>
 <p>These instructions describe how to install <b><a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a></b> using <b>Spack</b> on the Oak development server.</p>
-<h2><a class="anchor" id="autotoc_md70"></a>
+<h2><a class="anchor" id="autotoc_md73"></a>
 🛠️ 1. Set Up Environment in &lt;tt&gt;~/.bashrc&lt;/tt&gt;</h2>
 <p>If you have an account on Oak, configure your shell environment by adding the following lines:</p>
 <div class="fragment"><div class="line">echo &quot;export TMPDIR=/home/lk58p/tmp&quot; &gt;&gt; ~/.bashrc</div>
 <div class="line">echo &quot;. /mofem_install/vanilla_spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</div>
 </div><!-- fragment --><p>Then <b>restart your terminal</b>, or run the above lines in your current shell to apply them immediately.</p>
-<h2><a class="anchor" id="autotoc_md71"></a>
+<h2><a class="anchor" id="autotoc_md74"></a>
 📁 2. Prepare Installation Directory</h2>
 <div class="fragment"><div class="line">mkdir -p $HOME/mofem_install</div>
 <div class="line">cd $HOME/mofem_install</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md72"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md75"></a>
 📦 3. Clone the MoFEM Repository</h2>
 <div class="fragment"><div class="line">git clone git@bitbucket.org:mofem/mofem-cephas.git</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md73"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md76"></a>
 🧪 4. Create and Configure the Release Environment</h2>
 <div class="fragment"><div class="line">mkdir -p $HOME/mofem_install/release_env</div>
 <div class="line">cd $HOME/mofem_install/release_env</div>
@@ -404,10 +360,10 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">spack install -v --test=root mofem-cephas@0.15.0</div>
 </div><!-- fragment --><p>To activate the environment in future sessions:</p>
 <div class="fragment"><div class="line">spack env activate -d $HOME/mofem_install/release_env</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md74"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md77"></a>
 🐞 5. (Optional) Create a Debugging Environment</h2>
 <p>Use this to build with debug flags and work on source-level changes to <b>PETSc</b> or <b>MOAB</b>.</p>
-<h3><a class="anchor" id="autotoc_md75"></a>
+<h3><a class="anchor" id="autotoc_md78"></a>
 ⚙️ Create and Configure the Debug Environment</h3>
 <div class="fragment"><div class="line">mkdir -p $HOME/mofem_install/debug_env</div>
 <div class="line">cd $HOME/mofem_install/debug_env</div>
@@ -420,7 +376,7 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">spack install -v --test=root mofem-cephas@0.15.0</div>
 </div><!-- fragment --><p>Activate the environment:</p>
 <div class="fragment"><div class="line">spack env activate -d $HOME/mofem_install/debug_env</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md76"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md79"></a>
 🔬 Work on PETSc and MOAB Code (Optional)</h3>
 <p>If you plan to modify <b>PETSc</b> or <b>MOAB</b>, you can clone and develop them directly:</p>
 <div class="fragment"><div class="line">cd $HOME/mofem_install/debug_env</div>
@@ -436,17 +392,17 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line"># Re-concretise and install</div>
 <div class="line">spack concretize -f</div>
 <div class="line">spack install -v</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md77"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md80"></a>
 ✅ Done!</h2>
 <p><a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> is now installed and ready for use. To make development smoother:</p><ul>
 <li>Use <code>spack env activate -d &lt;path&gt;</code> to switch environments.</li>
 <li>Add common commands to your <code>.bashrc</code> or <code>.bash_aliases</code>.</li>
 <li>Use <code>spack develop</code> to link your changes into the build.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md78"></a>
+<h1><a class="anchor" id="autotoc_md81"></a>
 🚧 MoFEM Installation on Buckedhead (SLURM System)</h1>
 <p>This guide assumes you're using modules and installing into your user space, without admin privileges.</p>
-<h2><a class="anchor" id="autotoc_md79"></a>
+<h2><a class="anchor" id="autotoc_md82"></a>
 📦 1. Load Required Modules</h2>
 <div class="fragment"><div class="line">module purge</div>
 <div class="line">module load gcc/14.2.0</div>
@@ -456,7 +412,7 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="fragment"><div class="line">which gcc</div>
 <div class="line">which mpicc</div>
 <div class="line">python3 --version</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md80"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md83"></a>
 📁 2. Create Directory Layout</h2>
 <div class="fragment"><div class="line">export MOFEM_INSTALL_DIR=$HOME/mofem_install</div>
 <div class="line">export SPACK_ROOT=$MOFEM_INSTALL_DIR/spack</div>
@@ -464,18 +420,18 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">mkdir -p $SPACK_ROOT</div>
 <div class="line">mkdir -p $MOFEM_INSTALL_DIR</div>
 <div class="line">cd $MOFEM_INSTALL_DIR</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md81"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md84"></a>
 📥 3. Download and Unpack Spack</h2>
 <div class="fragment"><div class="line">curl -L https://github.com/spack/spack/archive/refs/tags/v0.23.1.tar.gz | \</div>
 <div class="line">  tar -xz -C $SPACK_ROOT --strip-components=1</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md82"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md85"></a>
 🧠 4. Initialise Spack</h2>
 <p>Add to your <code>.bashrc</code> or run interactively:</p>
 <div class="fragment"><div class="line">export SPACK_ROOT=$HOME/mofem_install/spack</div>
 <div class="line">. $SPACK_ROOT/share/spack/setup-env.sh</div>
 </div><!-- fragment --><p>Apply changes:</p>
 <div class="fragment"><div class="line">source ~/.bashrc</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md83"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md86"></a>
 🔧 5. Configure Spack with External Packages</h2>
 <div class="fragment"><div class="line">spack compiler find</div>
 <div class="line">spack external find</div>
@@ -502,13 +458,13 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">    - spec: boost@1.83.0</div>
 <div class="line">      prefix: /usr</div>
 <div class="line">    buildable: false</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md84"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md87"></a>
 🧩 6. Clone and Register MoFEM Repo</h2>
 <div class="fragment"><div class="line">cd $MOFEM_INSTALL_DIR</div>
 <div class="line">git clone --branch Version0.15.0 https://bitbucket.org/mofem/mofem-cephas.git</div>
 <div class="line"> </div>
 <div class="line">spack repo add $MOFEM_INSTALL_DIR/mofem-cephas</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md85"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md88"></a>
 🌱 7. Create and Configure Spack Environment</h2>
 <div class="fragment"><div class="line">mkdir -p $MOFEM_INSTALL_DIR/release_env</div>
 <div class="line">cd $MOFEM_INSTALL_DIR/release_env</div>
@@ -517,13 +473,13 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line"> </div>
 <div class="line">spack config add &quot;packages:all:target:[x86_64]&quot;</div>
 <div class="line">spack config add &quot;packages:all:variants:build_type=RelWithDebInfo&quot;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md86"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md89"></a>
 🚀 8. Add and Build MoFEM</h2>
 <div class="fragment"><div class="line">spack add mofem-cephas@0.15.0 +adol-c +med +mgis ~shared +slepc +tetgen ~build_tutorials install_id=$USER ^petsc+X</div>
 <div class="line">spack develop -p $MOFEM_INSTALL_DIR/mofem-cephas</div>
 <div class="line">spack concretize -f</div>
 <div class="line">spack install -v</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md87"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md90"></a>
 🧪 9. (Optional) Create Debug Environment</h2>
 <div class="fragment"><div class="line">mkdir -p $MOFEM_INSTALL_DIR/debug_env</div>
 <div class="line">cd $MOFEM_INSTALL_DIR/debug_env</div>
@@ -535,7 +491,7 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">spack develop -p $MOFEM_INSTALL_DIR/mofem-cephas</div>
 <div class="line">spack concretize -f</div>
 <div class="line">spack install -v</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md88"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md91"></a>
 ✅ 10. Run MoFEM in SLURM Job</h2>
 <p><a class="el" href="structExample.html" title="[Example]">Example</a> SLURM script:</p>
 <div class="fragment"><div class="line">#!/bin/bash</div>
@@ -552,370 +508,15 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">spack env activate $HOME/mofem_install/release_env</div>
 <div class="line"> </div>
 <div class="line">mpirun ./my_mofem_app</div>
-</div><!-- fragment --><hr  />
-<h1><a class="anchor" id="installation_scripts"></a>
-Installation using scripts</h1>
-<p>The remainder of this article presents a step-by-step guidance with comments/explanations on how to install <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> using Spack on different platforms (Linux, macOS, HPC). However, those who prefer to automate the process of the installation can use the following scripts for different purposes:</p>
-<ul>
-<li>For user only (just the binary files): <a href="scripts/install_mofem_user.sh"><code>install_mofem_user.sh</code></a></li>
-<li>For developer (full source and binary files): <a href="scripts/install_mofem_developer.sh"><code>install_mofem_developer.sh</code></a></li>
-</ul>
-<p>You should copy the script to the directory where <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> will be installed and run it from the terminal, for example: </p><div class="fragment"><div class="line">./install_mofem_user.sh</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Running the scripts may require user password for sudo privileges.</dd></dl>
-<h1><a class="anchor" id="spack_prerequisites"></a>
-Prerequisites</h1>
-<p>The installation of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> requires <a href="https://www.atlassian.com/git/tutorials/what-is-git">git</a>.</p>
-<dl class="section note"><dt>Note</dt><dd>System requirements: minimum 8GB RAM. On Linux ensure this RAM is free.</dd></dl>
-<h2><a class="anchor" id="autotoc_md90"></a>
-Ubuntu/Debian</h2>
-<p>Install the following packages: </p><div class="fragment"><div class="line">apt-get update \</div>
-<div class="line">&amp;&amp; apt-get install -y --no-install-recommends \</div>
-<div class="line">build-essential \</div>
-<div class="line">ca-certificates \</div>
-<div class="line">coreutils \</div>
-<div class="line">environment-modules \</div>
-<div class="line">python3-distutils \</div>
-<div class="line">gfortran \</div>
-<div class="line">curl \</div>
-<div class="line">git \</div>
-<div class="line">cmake \</div>
-<div class="line">doxygen</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md91"></a>
-macOS</h2>
-<p>Xcode contains required compilers for macOS. The latest known working version of Xcode is 13.3 with clang 13.1.6; there may be issues with future/different versions.</p>
-<p>You can install the latest version of Xcode for your macOS through App Store, or, alternatively, you can see Apple's Xcode <a href="https://developer.apple.com/download/">download page</a> (Apple login required) for other versions.</p>
-<p>Ensure that Xcode command-line tools are installed by running: </p><div class="fragment"><div class="line">xcode-select --install</div>
-<div class="line">sudo xcodebuild -license accept</div>
-</div><!-- fragment --><p>Additional packages may be required - install <a href="https://brew.sh">homebrew</a> package manager: </p><div class="fragment"><div class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</div>
-</div><!-- fragment --><p>Recent releases of macOS stopped shipping a Fortran compiler and therefore require <a href="http://spack.readthedocs.io/en/latest/getting_started.html#mixed-toolchains">Mixed Toolchains</a>. The installation of <code>gfortran</code> through <code>homebrew</code> is one way of solving this: </p><div class="fragment"><div class="line">brew install gcc</div>
-</div><!-- fragment --><p> Note that <code>gfortran</code> if part of <code>GCC</code>.</p>
-<h1><a class="anchor" id="spack_setup"></a>
-Spack setup</h1>
-<p>Create <code>mofem_install</code> directory: </p><div class="fragment"><div class="line">mkdir -p $HOME/mofem_install</div>
-<div class="line">cd $HOME/mofem_install</div>
-</div><!-- fragment --><p>Retrieve Spack for <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>: </p><div class="fragment"><div class="line">git clone -b master  https://bitbucket.org/mofem/mofem-spack.git spack</div>
-</div><!-- fragment --><p>Initialise Spack's environment variables: </p><div class="fragment"><div class="line">. $HOME/mofem_install/spack/share/spack/setup-env.sh</div>
-</div><!-- fragment --><p>Spack's environment variables will be lost when the terminal session is closed. Consider adding the previous command to your <code>.bash_profile</code> or <code>.bashrc</code>, e.g.: </p><div class="fragment"><div class="line">echo &quot;. $HOME/mofem_install/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bash_profile</div>
-</div><!-- fragment --><p>If you are using a newer macOS, you might need to add config to <code>.zshrc</code>, e.g.: </p><div class="fragment"><div class="line">echo &quot;. $HOME/mofem_install/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.zshrc</div>
-</div><!-- fragment --><p>Finally, find already installed compilers and external packages: </p><div class="fragment"><div class="line">spack compiler find</div>
-<div class="line">spack external find</div>
-</div><!-- fragment --><p>Note that there are further instructions on <a class="el" href="install_spack.html#spack_usage_config">Spack usage and configuration</a>.</p>
-<h1><a class="anchor" id="spack_user"></a>
-User only</h1>
-<p>The first time installation of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> takes considerable time (hours). Spack fetches and compiles <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>'s dependencies from source and this includes several large packages.</p>
-<p>Those seeking to develop <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> should see <a class="el" href="install_spack.html#spack_developers">developer's</a> instructions.</p>
-<h2><a class="anchor" id="autotoc_md92"></a>
-Install basic users module</h2>
-<p><a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>'s basic users module consist of tools for solving a range of common problems, from elasticity to the Poisson equation. To install them run the following command:</p>
-<div class="fragment"><div class="line">spack install mofem-users-modules</div>
-</div><!-- fragment --><p>To access the installed users modules, create an <code>um_view</code> directory. This should be created in an appropriate directory. Then you can run: </p><div class="fragment"><div class="line">spack view --verbose symlink -i um_view mofem-users-modules</div>
-</div><!-- fragment --><p>This filesystem view is a single directory tree that is the union of the directory hierarchies of a number of installed packages; it is similar to the directory hierarchy that might exist under <code>/usr/local</code>. The files of the view's installed <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> packages are brought into the view by symbolic or hard links, referencing the original Spack installation. Different 'views' can be created depending on the <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> version you wish to access. To make the new 'view' visible from any directory, add its <code>bin</code> directory to your <code>PATH</code>, e.g.:</p>
-<div class="fragment"><div class="line">export PATH=$PWD/um_view/bin:$PATH </div>
-</div><!-- fragment --><p>Consider also adding this command to your <code>.bash_profile</code> or <code>.bashrc</code>, or <code>.zshrc</code>, e.g.: </p><div class="fragment"><div class="line">echo &quot;export PATH=$PWD/um_view/bin:\$PATH&quot; &gt;&gt; ~/.bash_profile</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md93"></a>
-Install additional users modules</h2>
-<p><a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> can be extended by adding user modules. More modules are available as extensions in Spack. This will show available extensions: </p><div class="fragment"><div class="line">spack extensions mofem-cephas</div>
-</div><!-- fragment --><p>The extensions can be installed using <code>spack install &lt;extension&gt;</code>. For example, the fracture module can be installed by: </p><div class="fragment"><div class="line">spack install mofem-fracture-module</div>
-<div class="line">cd $HOME</div>
-<div class="line">spack view --verbose symlink -i um_view mofem-cephas</div>
-<div class="line">spack activate -v um_view mofem-fracture-module</div>
-</div><!-- fragment --><p> or the minimal surface equation tutorial module: </p><div class="fragment"><div class="line">spack install mofem-minimal-surface-equation</div>
-<div class="line">spack activate -v um_view mofem-minimal-surface-equation</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Not all <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>'s modules have been added to Spack. If your module is not yet there, you can install manually by cloning the appropriate users module.</dd></dl>
-<h2><a class="anchor" id="spack_running_tests"></a>
-Running tests</h2>
-<p>You can automatically run tests after installing a package, for example: </p><div class="fragment"><div class="line">spack install --test=root -j 4 mofem-cephas</div>
-<div class="line">spack install --test=root -j 4 mofem-users-modules</div>
-<div class="line">spack install --test=root -j 4 mofem-fracture-module</div>
-</div><!-- fragment --><h1><a class="anchor" id="spack_developers"></a>
-Developers</h1>
-<p><a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> can be developed in several different ways, here you can find step-by-step installation instructions for core and user modules developers:</p>
-<ol type="1">
-<li><a class="el" href="install_spack.html#spack_core_libraries">Install core library</a></li>
-<li><a class="el" href="install_spack.html#spack_users_modules">Install users modules</a></li>
-</ol>
-<p>The developer installation requires knowing more about how Spack works. See <a class="el" href="install_spack.html#spack_usage_config">Spack usage and configuration</a> before proceeding with the installation. In particular, the instructions below will use so-called <em>specs</em> to obtain the desired build configuration, see <a href="https://spack.readthedocs.io/en/latest/basic_usage.html#specs-dependencies">Spack manual page</a> for more details. For example, the default Spack specifier for the build type is <code>RelWithDebInfo</code>, however keep in mind that two other build types can be specified as <code>build_type=Release</code> or <code>build_type=Debug</code>, see also <a class="el" href="install_spack.html#spack_build_type">Change the build_type</a>.</p>
-<p>You can skip the first installation step and jump to second if you are not going to be the core <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> developer. However, to avoid having multiple installation paths, and potential bugs which are difficult to reproduce, we recommend following installation step 1 and step 2.</p>
-<h2><a class="anchor" id="spack_core_libraries"></a>
-1. Core libraries</h2>
-<p>If you are going to develop <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>'s core library, it means that you are a core developer and you can install <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> directly from the source.</p>
-<p>Create <code>mofem_install</code> folder in the home directory and clone <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> repository: </p><div class="fragment"><div class="line">mkdir $HOME/mofem_install</div>
-<div class="line">cd $HOME/mofem_install</div>
-<div class="line">git clone \</div>
-<div class="line">  -b develop \</div>
-<div class="line">  https://bitbucket.org/likask/mofem-cephas.git mofem-cephas</div>
-</div><!-- fragment --><p> and kick-start installation of the core library. First install all dependencies: </p><div class="fragment"><div class="line">spack install --only dependencies mofem-cephas ^petsc+X ^boost+python+numpy</div>
-</div><!-- fragment --><p> and then core <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> library: </p><div class="fragment"><div class="line">spack dev-build -j4 \</div>
-<div class="line">  --source-path $HOME/mofem_install/mofem-cephas \</div>
-<div class="line">  --keep-prefix \</div>
-<div class="line">  mofem-cephas@develop+adol-c~copy_user_modules~ipo+med+mgis~shared+slepc+tetgen \</div>
-<div class="line">  build_type=Release install_id=0 ^petsc+X ^boost+python+numpy</div>
-</div><!-- fragment --><p> Note that here another specification of the build configuration (<em>spec</em>) was set as <code>~copy_user_modules</code> which is equivalent to <code>copy_user_modules=False</code>.</p>
-<p>If installation is successfully, by executing </p><div class="fragment"><div class="line">spack find -lv mofem-cephas</div>
-</div><!-- fragment --><p> you should see something similar to </p><div class="fragment"><div class="line">-- linux-ubuntu20.04-x86_64 / gcc@9.4.0 -------------------------</div>
-<div class="line">c4fmrqz mofem-cephas@develop+adol-c~copy_user_modules~ipo+med+mgis~shared+slepc+tetgen build_system=cmake build_type=Release dev_path=/mofem_install/mofem-cephas generator=make install_id=0</div>
-<div class="line">==&gt; 1 installed packages</div>
-</div><!-- fragment --><p>Furthermore, in the directory <code>$HOME/mofem_install/mofem-cephas</code> you will find build directory <code>core-build-WithDebugInfo-vhv7opa</code>. Note that the hash in the name of the directory is matching the one in first column in the list printed by executing <code>spack find -lv mofem-cephas</code>.</p>
-<p>You can now start to develop code in the <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> core library. If you change directory to </p><div class="fragment"><div class="line">cd $HOME/mofem_install/mofem-cephas/core-build-Release*</div>
-</div><!-- fragment --><p> you can compile, test and install: </p><div class="fragment"><div class="line">make -j4</div>
-<div class="line">ctest -D Experimental</div>
-<div class="line">make install</div>
-</div><!-- fragment --><p> i.e. do typical developer work.</p>
-<p>Moreover, you can install simultaneously debugging version of code, as follows: </p><div class="fragment"><div class="line">spack dev-build -j4 \</div>
-<div class="line">  --source-path $HOME/mofem_install/mofem-cephas \</div>
-<div class="line">  --keep-prefix \</div>
-<div class="line">  mofem-cephas@develop+adol-c~copy_user_modules~ipo+med+mgis~shared+slepc+tetgen \</div>
-<div class="line">  build_type=Debug install_id=0 ^petsc+X ^boost+python+numpy</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>By default <code>spack dev-build</code> will try to use all available processor slots to run <code>make</code> in parallel. To set a desired number of parallel jobs, you can use the parameter <code>-j NP</code>, where <code>NP</code> is number of parallel processes to be used. Alternatively, you can edit Spack settings as discussed below in the section <a class="el" href="install_spack.html#spack_config">Basic settings in config.yaml</a></dd>
-<dd>
-You can also do partial install, before of after any installation phase, using command line option <code>-b BEFORE</code> or <code>-u UNTIL</code>. For example, if you would like to investigate build issues, you can do <div class="fragment"><div class="line">spack dev-build \</div>
-<div class="line">  -b build \</div>
-<div class="line">  --source-path $HOME/mofem_install/mofem-cephas \</div>
-<div class="line">  --keep-prefix \</div>
-<div class="line">  mofem-cephas@develop+adol-c~copy_user_modules~ipo+med+mgis~shared+slepc+tetgen \</div>
-<div class="line">  build_type=RelWithDebInfo install_id=0 ^petsc+X ^boost+python+numpy</div>
-</div><!-- fragment --> Note that installation at that point is partial.</dd></dl>
-<h2><a class="anchor" id="spack_users_modules"></a>
-2. Install users modules</h2>
-<p>Clone users modules repository: </p><div class="fragment"><div class="line">mkdir $HOME/mofem_install</div>
-<div class="line">cd $HOME/mofem_install</div>
-<div class="line">git clone \</div>
-<div class="line">  -b develop \</div>
-<div class="line">  https://likask@bitbucket.org/mofem/users-modules-cephas.git \</div>
-<div class="line">  mofem-cephas/mofem/users_modules</div>
-</div><!-- fragment --><p>For example, if you want to install users modules against core library which was built with the specification <code>build_type=RelWithDebInfo</code>, pick the corresponding row and copy to clipboard the hash (<code>pa3httg</code>). Next, change the directory: </p><div class="fragment"><div class="line">cd $HOME/mofem_install/mofem-cephas/mofem/users_modules</div>
-</div><!-- fragment --><p> and install users modules: </p><div class="fragment"><div class="line">export hash=$(spack find -v mofem-cephas@develop build_type=Release | grep mofem-cephas@develop)</div>
-<div class="line">spack dev-build \</div>
-<div class="line">  --test root  \</div>
-<div class="line">  --source-path $HOME/mofem_install/mofem-cephas/mofem/users_modules \</div>
-<div class="line">  mofem-users-modules@develop build_type=Release \</div>
-<div class="line">  ^$hash ^petsc+X ^boost+python+numpy</div>
-</div><!-- fragment --><p> In the <code>spack dev-build</code> command of the snippet above <code>^</code> is a <em>dependency spec</em>, i.e. a descriptor defining the dependency of the package that we are currently installing on another package (in this case, a particular version of the core library).</p>
-<p>Once installation is successfully, you can execute </p><div class="fragment"><div class="line">spack find -lv mofem-users-modules</div>
-</div><!-- fragment --><p> and as result you will get something similar to: </p><div class="fragment"><div class="line">-- linux-ubuntu20.04-x86_64 / gcc@9.4.0 -------------------------</div>
-<div class="line">mofem-users-modules@lukasz+basic_fe+basic_tutorials+build_tut_adv0+build_tut_adv1+build_tut_adv2+build_tut_clx0+build_tut_cor0to1+build_tut_cor10+build_tut_cor2to5+build_tut_cor6+build_tut_cor7+build_tut_cor8+build_tut_cor9+build_tut_fun0+build_tut_fun1+build_tut_fun2+build_tut_max0+build_tut_max1+build_tut_mix0+build_tut_mix1+build_tut_msh1+build_tut_msh2+build_tut_scl0+build_tut_scl1+build_tut_scl10+build_tut_scl11+build_tut_scl2+build_tut_scl3+build_tut_scl4+build_tut_scl5+build_tut_scl6+build_tut_scl7+build_tut_scl8+build_tut_scl9+build_tut_vec0+build_tut_vec1+build_tut_vec2+build_tut_vec3+build_tut_vec4+build_tut_vec5+build_tut_vec6+copy_user_modules+docker~ipo~mgis~shared build_system=cmake build_type=RelWithDebInfo dev_path=/mofem_install/mofem-cephas/mofem/users_modules generator=make install_id=0</div>
-<div class="line">==&gt; 1 installed packages</div>
-</div><!-- fragment --><p> Also, you will find new directory <code>$HOME/mofem_install/mofem-cephas/mofem/users_modules/um-build-WithDebugInfo-c6ts56b</code>, which is the build directory for a particular version of <code>mofem-users-modules</code>. There you can do typical developer work: </p><div class="fragment"><div class="line">cd $HOME/mofem_install/mofem-cephas/mofem/users_modules/um-build-WithDebugInfo-c6ts56b</div>
-<div class="line">make -j4</div>
-<div class="line">ctest</div>
-<div class="line">make install</div>
-</div><!-- fragment --><p> Later you can add other modules to that directory if needed.</p>
-<dl class="section note"><dt>Note</dt><dd>You can do partial install, before of after some installation phase, using command line option <code>-b BEFORE</code> or <code>-u UNTIL</code>, for example if you like to investigate build issues, you can do</dd></dl>
-<div class="fragment"><div class="line">export hash=$(spack find -v mofem-cephas@develop  build_type=Debug | grep mofem-cephas@develop)</div>
-<div class="line">spack dev-build \</div>
-<div class="line">  -b build \</div>
-<div class="line">  --test root  \</div>
-<div class="line">  --source-path $HOME/mofem_install/mofem-cephas/mofem/users_modules \</div>
-<div class="line">  mofem-users-modules@develop build_type=Debug \</div>
-<div class="line">  ^$hash ^petsc+X ^boost+python+numpy</div>
-</div><!-- fragment --><h1><a class="anchor" id="spack_servers"></a>
-Installation on specific servers</h1>
-<h2><a class="anchor" id="spack_buckethead"></a>
-Server Buckethead</h2>
-<h3><a class="anchor" id="spack_buckedhead_installation"></a>
-Installation</h3>
-<p>Buckethead is a Linux cluster running CentOS 7. More information about Buckethead you will find <a href="http://malmsteen.eng.gla.ac.uk/wiki/hpc-wiki/index.php/Resources#Buckethead">here</a>.</p>
-<p>Load cluster modules: </p><div class="fragment"><div class="line">module load gcc/9.3.0</div>
-<div class="line">module load mpi/openmpi/3.1.6/gcc-9.3.0</div>
-<div class="line">module load gridengine</div>
-</div><!-- fragment --><p>It is a good idea to put the above lines into your <code>.bash_profile</code> or <code>.bashrc</code> file.</p>
-<p>Clone spack: </p><div class="fragment"><div class="line">git clone -b master  https://bitbucket.org/mofem/mofem-spack.git spack</div>
-</div><!-- fragment --><p>and initialise Spack's environment variables (should also be placed into <code>.bash_profile</code> or <code>.bashrc</code>): </p><div class="fragment"><div class="line">. spack/share/spack/setup-env.sh</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md94"></a>
-Setup compiler and external packages</h4>
-<p>First, find available compilers: </p><div class="fragment"><div class="line">spack compiler find</div>
-</div><!-- fragment --><p>Edit file <code>$HOME/.spack/linux/compilers.yaml</code> and ensure it includes the following: </p><div class="fragment"><div class="line">compilers:</div>
-<div class="line">- compiler:</div>
-<div class="line">    spec: gcc@9.3.0</div>
-<div class="line">    paths:</div>
-<div class="line">      cc: /software/compilers/gcc/9.3.0/bin/gcc</div>
-<div class="line">      cxx: /software/compilers/gcc/9.3.0/bin/g++</div>
-<div class="line">      f77: /software/compilers/gcc/9.3.0/bin/gfortran</div>
-<div class="line">      fc: /software/compilers/gcc/9.3.0/bin/gfortran</div>
-<div class="line">    flags: {}</div>
-<div class="line">    operating_system: centos7</div>
-<div class="line">    target: x86_64</div>
-<div class="line">    modules: []</div>
-<div class="line">    environment: {}</div>
-<div class="line">    extra_rpaths:</div>
-<div class="line">        - /software/compilers/gcc/9.3.0/lib64</div>
-</div><!-- fragment --><p>Note that most of the file was created by the command </p><div class="fragment"><div class="line">spack compiler find</div>
-</div><!-- fragment --><p> however you have to put the line </p><div class="fragment"><div class="line">extra_rpaths: </div>
-<div class="line">    - /software/compilers/gcc/9.3.0/lib64</div>
-</div><!-- fragment --><p> which enables linking std lib c++ libraries.</p>
-<p>Second, find the locally compiled <code>openmpi</code> library: </p><div class="fragment"><div class="line">spack external find openmpi</div>
-</div><!-- fragment --><p>Open the file <code>$HOME/.spack/packages.yaml</code> and ensure that it has information only about the <code>openmpi</code> library, i.e. the file should look as follows: </p><div class="fragment"><div class="line">packages:</div>
-<div class="line">  openmpi:</div>
-<div class="line">    externals:</div>
-<div class="line">    - spec: openmpi@3.1.6%gcc@=9.3.0~cuda~cxx~cxx_exceptions~java~memchecker+pmi~static~wrapper-rpath</div>
-<div class="line">        schedulers=slurm</div>
-<div class="line">      prefix: /software/mpi/openmpi/3.1.6/gcc-9.3.0</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md95"></a>
-Installing dependencies</h4>
-<p>At this point, we can follow the standard installation procedure (with a few adjustments). To install dependencies run the following: </p><div class="fragment"><div class="line">spack install -j8 --only dependencies mofem-cephas%gcc@9.3.0 ^petsc+X ^openmpi@3.1.6%gcc@9.3.0 ^slepc~arpack ^boost+python+numpy</div>
-</div><!-- fragment --><p>Once completed, check the installed packages by running </p><div class="fragment"><div class="line">spack find -p</div>
-</div><!-- fragment --><p> Note that the path for the <code>openmpi</code> library should differ from all other packages: <code>/software/mpi/openmpi/3.1.6/gcc-9.3.0</code></p>
-<h4><a class="anchor" id="autotoc_md96"></a>
-User installation</h4>
-<p>If you would like to have user installation, run the following command: </p><div class="fragment"><div class="line">spack install mofem-users-modules</div>
-</div><!-- fragment --><p>Now you can create a symlink to the install directory including dependent libraries using commands below: </p><div class="fragment"><div class="line">spack view symlink -i um_view mofem-cephas</div>
-<div class="line">spack activate -v um_view mofem-users-modules</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md97"></a>
-Developer installation</h4>
-<p>Alternatively, you may want to follow the developer installation, which will have a few differences from the <a class="el" href="install_spack.html#spack_developers">Developer installation</a> discussed above.</p>
-<p>Create <code>mofem_install</code> folder in the <code>$HOME</code> directory and clone <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> repository: </p><div class="fragment"><div class="line">mkdir $HOME/mofem_install</div>
-<div class="line">cd $HOME/mofem_install</div>
-<div class="line">git clone \</div>
-<div class="line">  -b develop \</div>
-<div class="line">  https://bitbucket.org/likask/mofem-cephas.git \</div>
-<div class="line">  mofem-cephas</div>
-<div class="line">git clone \</div>
-<div class="line">  -b develop \</div>
-<div class="line">  https://likask@bitbucket.org/mofem/users-modules-cephas.git \</div>
-<div class="line">  mofem-cephas/mofem/users_modules</div>
-</div><!-- fragment --><p> Kick-start installation of the core library: </p><div class="fragment"><div class="line">spack dev-build -j8 \</div>
-<div class="line">  --source-path $HOME/mofem_install/mofem-cephas \</div>
-<div class="line">  --keep-prefix \</div>
-<div class="line">  --test root \</div>
-<div class="line">  mofem-cephas@develop~copy_user_modules build_type=RelWithDebInfo ^petsc+X ^openmpi@3.1.6%gcc@9.3.0 ^slepc~arpack ^boost+python+numpy</div>
-</div><!-- fragment --><p>If installation is successful, by executing </p><div class="fragment"><div class="line">spack find -lv mofem-cephas</div>
-</div><!-- fragment --><p> you should see something similar to </p><div class="fragment"><div class="line">==&gt; 1 installed package</div>
-<div class="line">-- linux-centos7-zen / gcc@9.3.0 --------------------------------</div>
-<div class="line">3prnmyj mofem-cephas@develop+adol-c~copy_user_modules~docker~ipo+med~shared+slepc+tetgen build_type=RelWithDebInfo dev_path=/home/staff/as601x/mofem_install/mofem-cephas install_id=0</div>
-</div><!-- fragment --><p>Next, change the directory: </p><div class="fragment"><div class="line">cd $HOME/mofem_install/mofem-cephas/mofem/users_modules</div>
-</div><!-- fragment --><p> and install users modules specifying the dependency on the previously installed core library using the: </p><div class="fragment"><div class="line">export hash=$(spack find -v mofem-cephas@develop | grep mofem-cephas@develop)</div>
-<div class="line">spack dev-build -j8 \</div>
-<div class="line">  --source-path $HOME/mofem_install/mofem-cephas/mofem/users_modules \</div>
-<div class="line">  mofem-users-modules@develop build_type=RelWithDebInfo \</div>
-<div class="line">  ^$hash ^petsc+X ^openmpi@3.1.6%gcc@9.3.0 ^slepc~arpack ^boost+python+numpy</div>
-</div><!-- fragment --><p>Once installation is successfully, you will find a new directory, e.g. <code>$HOME/mofem_install/mofem-cephas/mofem/users_modules/um-build-RelWithDebInfo-646hxk7</code>, which is the build directory for a particular version of <code>mofem-users-modules</code>. There you can do typical developer work: </p><div class="fragment"><div class="line">cd $HOME/mofem_install/mofem-cephas/mofem/users_modules/um-build-WithDebugInfo-646hxk7</div>
-<div class="line">make -j4</div>
-<div class="line">ctest</div>
-<div class="line">make install</div>
-</div><!-- fragment --><p> Later you can add other modules to that directory if needed.</p>
-<h3><a class="anchor" id="spack_buckedhead_job"></a>
-Job file</h3>
-<p>Create a script file with content as below and name it, for example, <em>job_spack</em> </p><div class="fragment"><div class="line">#! /bin/bash</div>
-<div class="line"> </div>
-<div class="line"># The job&#39;s name</div>
-<div class="line">#$ -N MoFEM</div>
-<div class="line"> </div>
-<div class="line"># The queue in which to run the job </div>
-<div class="line">#$ -q gcec.q</div>
-<div class="line"> </div>
-<div class="line"># File to which standard error should be directed</div>
-<div class="line">#$ -e ./stdout_job_$JOB_ID</div>
-<div class="line"> </div>
-<div class="line"># File to which standard output should be directed</div>
-<div class="line">#$ -o ./stderr_job_$JOB_ID</div>
-<div class="line"> </div>
-<div class="line"># E-mail address to which status updates should be sent</div>
-<div class="line"># N.B.: in an array job, a separate e-mail will be sent for each task!</div>
-<div class="line">#$ -M your.email@glasgow.ac.uk</div>
-<div class="line"> </div>
-<div class="line"># Events on which to send a status update</div>
-<div class="line">#$ -m beas</div>
-<div class="line"> </div>
-<div class="line"># Request for 1.0 GB of memory per task (needed on Miffy and Dusty)</div>
-<div class="line">#$ -l mem_tokens=1.0G</div>
-<div class="line"> </div>
-<div class="line">#$ -pe mpi 2 # where N is the number of processors required</div>
-<div class="line"> </div>
-<div class="line"># List of commands which do the actual work</div>
-<div class="line">echo &quot;$NSLOTS received&quot;</div>
-<div class="line">cat $PE_HOSTFILE</div>
-<div class="line"> </div>
-<div class="line"># Load compiler</div>
-<div class="line">module load gcc/9.3.0</div>
-<div class="line">module load mpi/openmpi/3.1.6/gcc-9.3.0</div>
-<div class="line"> </div>
-<div class="line"># List of commands which do the actual work</div>
-<div class="line">cd $HOME/um_view/elasticity</div>
-<div class="line">mpirun -np $NSLOTS \</div>
-<div class="line">./elasticity \</div>
-<div class="line">-my_file LShape.h5m \</div>
-<div class="line">-ksp_type gmres -pc_type lu \</div>
-<div class="line">-pc_factor_mat_solver_type mumps \</div>
-<div class="line">-ksp_monitor \</div>
-<div class="line">-my_order 2 2&gt;&amp;1 | tee log</div>
-</div><!-- fragment --><p> and run it as follows: </p><div class="fragment"><div class="line">qsub job_spack</div>
-</div><!-- fragment --><p> Results of the analysis are located in $HOME/um_view/elasticity.</p>
-<h1><a class="anchor" id="spack_usage_config"></a>
-Spack usage and configuration</h1>
-<h2><a class="anchor" id="spack_build_type"></a>
-Setting build type and compiler flags</h2>
-<p>The build type affects performance and the availability of debugging symbols. Select an appropriate type. With spack you can set the <code>build_type</code> during installation:</p>
-<ul>
-<li><code>Release</code></li>
-<li><code>Debug</code></li>
-<li><code>RelWithDebInfo</code></li>
-</ul>
-<p>By default Spack will use <code>RelWithDebInfo</code>.</p>
-<p>For example: </p><div class="fragment"><div class="line">spack install mofem-cephas build_type=Debug</div>
-</div><!-- fragment --><p>Or when using <code>spack dev-build</code> for developers: </p><div class="fragment"><div class="line">spack dev-build \</div>
-<div class="line">  --source-path $HOME/mofem_install/mofem-cephas \</div>
-<div class="line">  --keep-prefix \</div>
-<div class="line">  --test root \</div>
-<div class="line">  mofem-cephas@develop~copy_user_modules build_type=Debug ^petsc+X</div>
-</div><!-- fragment --><p>An example compiler flag: </p><div class="fragment"><div class="line">spack install mofem-cephas cppflags=&quot;-march=native -O3&quot;</div>
-</div><!-- fragment --><h2><a class="anchor" id="spack_mofem_package_versions"></a>
-MoFEM package versions</h2>
-<p>Spack is capable of managing multiple versions of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>. It stores each version under a unique ID. The following command displays installed <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> packages with their unique ID, build type and other info: </p><div class="fragment"><div class="line">spack find -lvd | grep mofem</div>
-</div><!-- fragment --><p>An example output: </p><div class="fragment"><div class="line">yk45ivx    mofem-cephas@develop+adol-c build_type=Debug ~copy_user_modules+med~slepc+tetgen</div>
-<div class="line">mco5jh5    mofem-cephas@develop+adol-c build_type=RelWithDebInfo ~copy_user_modules+med~slepc+tetgen</div>
-<div class="line">7f4u3sj    mofem-cephas@develop+adol-c build_type=Release ~copy_user_modules+med~slepc+tetgen</div>
-<div class="line">jtolxoh    mofem-users-modules@develop build_type=Debug ~copy_user_modules</div>
-<div class="line">yk45ivx        ^mofem-cephas@develop+adol-c build_type=Debug ~copy_user_modules+med~slepc+tetgen</div>
-</div><!-- fragment --><p>Preceding the name of the package is its ID. e.g. <code>yk45ivx</code>. This is important when specifying which package version you wish to use.</p>
-<h2><a class="anchor" id="spack_adding_package"></a>
-Adding MoFEM extension to Spack</h2>
-<p>Look at <a href="https://spack.readthedocs.io/en/latest/tutorial_packaging.html#packaging-tutorial">Spack creation tutorial</a> and <a href="https://spack.readthedocs.io/en/latest/tutorial_buildsystems.html">Spack Package Build Systems</a>. You can look how we have created packages for <em>fracture module</em> or <em>minimal-surface-equation</em>, located in <code>$HOME/spack/var/spack/repos/builtin/packages/mofem-fracture-module</code> and <code>$HOME/spack/var/spack/repos/builtin/packages/mofem-minimal-surface-equation</code>. You can open package file: </p><div class="fragment"><div class="line">spack edit mofem-minimal-surface-equation</div>
-</div><!-- fragment --><p>To create your package for the user module, you have to</p><ul>
-<li>create directory following naming convention</li>
-<li>copy existing mofem user module package</li>
-<li>create package class following naming convention</li>
-<li>modify file changing names and locations appropriately for your user module</li>
-</ul>
-<h2><a class="anchor" id="spack_config"></a>
-Basic settings in config.yaml</h2>
-<p>Spack's basic configuration options are set in config.yaml. You can see the default settings in <code>$HOME/.spack/config.yaml</code>, for example, you can set the default number of jobs to use when running <code>make</code> in parallel. If set to 4, for example, <code>spack install</code> will run <code>make -j4</code>. This can be done by adding line to <code>config.yaml</code>. Configuration file should look like this: </p><div class="fragment"><div class="line">config:</div>
-<div class="line">  build_jobs: 4 </div>
-</div><!-- fragment --><p> For more details see <a href="https://spack.readthedocs.io/en/latest/config_yaml.html?highlight=-jobs#">here</a>.</p>
-<h2><a class="anchor" id="spack_mirrors"></a>
-Mirrors</h2>
-<h3><a class="anchor" id="autotoc_md98"></a>
-Downloading mirror with prerequisites</h3>
-<p>You can download mirror with all necessary packages from <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> repository and untar or unzip to directory: </p><div class="fragment"><div class="line">mkdir -p mofem_mirror &amp;&amp;</div>
-<div class="line">curl -s -L  http://mofem.eng.gla.ac.uk/downloads/mirror_v0.16.tar.gz \</div>
-<div class="line">| tar xzC $PWD/mofem_mirror  --strip 1</div>
-</div><!-- fragment --><p> Note that packages are expanded to directory <code>mofem_mirror</code>, and mirror is made for <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> version v0.16.0.</p>
-<p>Once mirror is downloaded, you can add it to your spack: </p><div class="fragment"><div class="line">spack mirror add mofem_mirror $PWD/mofem_mirror</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md99"></a>
-Making your own mirror</h3>
-<p>Some sites may not have access to the internet for fetching packages. These sites will need a local repository of tarballs from which they can get their files. Spack has support for this with mirrors. Look to Spack documentation to learn more about mirrors <a href="https://spack.readthedocs.io/en/latest/mirrors.html?highlight=mirror">here</a>. If you run </p><div class="fragment"><div class="line">spack mirror create  --directory mofem-fracture-module --dependencies mofem-fracture-module</div>
-</div><!-- fragment --><p> as a result a directory is created with are prerequisites needed for Spack installation of mofem-fracture-module. You can now move that directory to your secure server with the spack package.</p>
-<p>On a secure server, you add mirror directory to Spack, for example: </p><div class="fragment"><div class="line">spack mirror add local_filesystem /$HOME/spack-mirror-2018-07-21</div>
-</div><!-- fragment --><p> and with that at hand kick-start installation process described above.</p>
-<h1><a class="anchor" id="spack_faq"></a>
+</div><!-- fragment --><h1><a class="anchor" id="spack_faq"></a>
 FAQ</h1>
-<h2><a class="anchor" id="autotoc_md100"></a>
-Installation on MAC OS X Montery (XCode 13.4.1)</h2>
-<p>Not all packages can be installed with spack currentlt. Temprorary solution utill bigs are fixed in other packages is installation following packages with homebrew </p><div class="fragment"><div class="line">brew install openblas</div>
-<div class="line">brew install openmpi</div>
-</div><!-- fragment --><p> Then spack command has to be called </p><div class="fragment"><div class="line">spack external find </div>
-</div><!-- fragment --><p> Command abouve will find homebrew installation for openmpi. Installation for openblas has to be added by editing file $HOME/.spack/packages.yaml, and adding at the end </p><div class="fragment"><div class="line">openblas:</div>
-<div class="line">  version: [0.3.20]</div>
-<div class="line">  buildable: false</div>
-<div class="line">  externals:</div>
-<div class="line">  - spec: openblas@0.3.20%apple-clang@13.1.6 arch=darwin-monterey-m1</div>
-<div class="line">    prefix: /opt/homebrew/opt/openblas</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md101"></a>
+<h2><a class="anchor" id="autotoc_md92"></a>
 How to get packages installed today?</h2>
 <p>Run command: </p><div class="fragment"><div class="line">spack find -p -L --start-date `date +%F`</div>
 </div><!-- fragment --><p> and you will get: </p><div class="fragment"><div class="line">-- darwin-elcapitan-x86_64 / clang@7.3.0-apple ------------------</div>
 <div class="line">ugi2gm7    mofem-cephas@develop     /spack/opt/spack/darwin-elcapitan-x86_64/clang-7.3.0-apple/mofem-cephas-develop-ugi2gm7lydyjwmiwneefhxq7ahvpnuzc</div>
 <div class="line">gu4uheh    mofem-users-modules@develop  /spack/opt/spack/darwin-elcapitan-x86_64/clang-7.3.0-apple/mofem-users-modules-develop-gu4uhehai3edtqow7kivuxgpw5lmvbxz</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md102"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md93"></a>
 How to find packages that were only installed today?</h2>
 <p>Run command: </p><div class="fragment"><div class="line">ls -lhd `spack find -lp  | grep mofem | awk &#39;\&#39;&#39;{print $3}&#39;\&#39;&#39;`</div>
 </div><!-- fragment --><h1><a class="anchor" id="spack_contact"></a>

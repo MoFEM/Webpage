@@ -137,34 +137,33 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">WithSpack.cmake</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="WithSpack_8cmake.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>option(WITHSPACK &quot;Comopile with Spack&quot; OFF)</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>if(WITH_SPACK)</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>  # enable @rpath in the install name for any shared library being built</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>  # note: it is planned that a future version of CMake will enable this by default</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>  set(CMAKE_MACOSX_RPATH 1)</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  # Always use full RPATH</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  # http://www.cmake.org/Wiki/CMake_RPATH_handling</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  # http://www.kitware.com/blog/home/post/510</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  # use, i.e. don&#39;t skip the full RPATH for the build tree</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  set(CMAKE_SKIP_BUILD_RPATH  FALSE)</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  # when building, don&#39;t use the install RPATH already</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  # (but later on when installing)</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  set(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  # add the automatically determined parts of the RPATH</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  # which point to directories outside the build tree to the install RPATH</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  # the RPATH to be used when installing, but only if it&#39;s not a system directory</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  list(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES &quot;${CMAKE_INSTALL_PREFIX}/lib&quot; isSystemDir)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  if(&quot;${isSystemDir}&quot; STREQUAL &quot;-1&quot;)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>     set(CMAKE_INSTALL_RPATH &quot;${CMAKE_INSTALL_PREFIX}/lib&quot;)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  endif(&quot;${isSystemDir}&quot; STREQUAL &quot;-1&quot;)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>endif(WITH_SPACK)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<a href="WithSpack_8cmake.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>if(WITH_SPACK)</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>  # enable @rpath in the install name for any shared library being built</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>  # note: it is planned that a future version of CMake will enable this by default</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>  set(CMAKE_MACOSX_RPATH 1)</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  # Always use full RPATH</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  # http://www.cmake.org/Wiki/CMake_RPATH_handling</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  # http://www.kitware.com/blog/home/post/510</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  # use, i.e. don&#39;t skip the full RPATH for the build tree</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  set(CMAKE_SKIP_BUILD_RPATH  FALSE)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  # when building, don&#39;t use the install RPATH already</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  # (but later on when installing)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  set(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  # add the automatically determined parts of the RPATH</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  # which point to directories outside the build tree to the install RPATH</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  # the RPATH to be used when installing, but only if it&#39;s not a system directory</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  list(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES &quot;${CMAKE_INSTALL_PREFIX}/lib&quot; isSystemDir)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  if(&quot;${isSystemDir}&quot; STREQUAL &quot;-1&quot;)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>     set(CMAKE_INSTALL_RPATH &quot;${CMAKE_INSTALL_PREFIX}/lib&quot;)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  endif(&quot;${isSystemDir}&quot; STREQUAL &quot;-1&quot;)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>endif(WITH_SPACK)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->

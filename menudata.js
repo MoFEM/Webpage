@@ -32,7 +32,7 @@ var menudata={children:[
 {text:"Installation",url:"install_docker_jupyterhub.html",children:[
 {text:"Installation with Docker - JupyterHub",url:"install_docker_jupyterhub.html"},
 {text:"Installation with Docker - Advanced",url:"install_docker_advanced.html"},
-{text:"Installation with Spack - Scripts",url:"installation.html"},
+{text:"Installation with Spack - Scripts",url:"installation_script.html"},
 {text:"Installation with Spack - Advanced",url:"install_spack.html"}]},
 {text:"Videos",url:"^https://www.youtube.com/channel/UCxdPe3nK1n9cB1XPAvl7btQ/playlists",children:[
 {text:"UKACM School 2023",url:"mofem_school_2023.html"},
