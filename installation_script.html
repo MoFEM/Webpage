@@ -129,24 +129,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md55">User Version</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md56">User Version</a></li>
 </ul>
-<li class="level1"><a href="#how_to_compile_program">How to Compile a Program</a><ul><li class="level2"><a href="#autotoc_md56">Option 1: Compile using Spack (automated)</a></li>
-<li class="level2"><a href="#autotoc_md57">Option 2: Compile manually after CMake configuration</a></li>
-</ul>
-</li>
-<li class="level1"><a href="#how_to_add_new_module_and_program">How to Add a New Module and Program</a><ul><li class="level2"><a href="#autotoc_md58">How to Add an Existing Module</a></li>
-<li class="level2"><a href="#autotoc_md59">How to Create a New Module</a></li>
+<li class="level1"><a href="#how_to_compile_program">How to Compile a Program</a><ul><li class="level2"><a href="#autotoc_md57">Option 1: Compile using Spack (automated)</a></li>
+<li class="level2"><a href="#autotoc_md58">Option 2: Compile manually after CMake configuration</a></li>
 </ul>
 </li>
-<li class="level1"><a href="#autotoc_md60">How to Add a New Program</a></li>
+<li class="level1"><a href="#how_to_add_new_module_and_program">How to Add a New Module and Program</a><ul><li class="level2"><a href="#autotoc_md59">How to Add an Existing Module</a></li>
+<li class="level2"><a href="#autotoc_md60">How to Create a New Module</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#autotoc_md61">How to Add a New Program</a></li>
 </ul>
 </div>
 <div class="textblock"><p>We recommend using the scripts provided below to install either the <b>user version</b> or the <b>developer version</b> of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a>, using <a href="https://spack.io">Spack</a> as the package manager.</p>
 <blockquote class="doxtable">
-<p>&zwj;Although we suggest using these scripts for simplicity and consistency, you can also explore other installation methods by visiting <a class="el" href="install_spack.html">Installation with Spack (Advanced)</a>. </p>
+<p>&zwj;Although we suggest using these scripts for simplicity and consistency, you can also explore other installation methods by visiting install_spack. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md55"></a>
+<h2><a class="anchor" id="autotoc_md56"></a>
 User Version</h2>
 <p>The <em>user version</em> of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> installs <b>only binary files</b> (not source code) and allows you to run analyses immediately. This includes compiled versions of the <b>Basic User Module</b> and the <b>Fracture Module</b>.</p>
 <p>To install the user version, follow these steps:</p>
@@ -175,14 +175,14 @@ How to Compile a Program</h1>
 <p>You need to recompile the Core Library whenever you change any source files located in:</p>
 <div class="fragment"><div class="line">$HOME/mofem_install/mofem-cephas/mofem/</div>
 </div><!-- fragment --><p>There are two main ways to compile: using Spack’s automated process, or manually after the CMake configuration step.</p>
-<h2><a class="anchor" id="autotoc_md56"></a>
+<h2><a class="anchor" id="autotoc_md57"></a>
 Option 1: Compile using Spack (automated)</h2>
 <p>If you want Spack to handle the entire compilation process:</p>
 <div class="fragment"><div class="line">spack env activate mofem</div>
 <div class="line">spack concretize -f</div>
 <div class="line">spack install -v test=root mofem-cephas@0.15.0</div>
 </div><!-- fragment --><p>This approach detects what needs to be rebuilt and compiles it.</p>
-<h2><a class="anchor" id="autotoc_md57"></a>
+<h2><a class="anchor" id="autotoc_md58"></a>
 Option 2: Compile manually after CMake configuration</h2>
 <p>If you prefer to run the build process manually after configuration:</p>
 <div class="fragment"><div class="line">spack env activate mofem</div>
@@ -211,7 +211,7 @@ How to Add a New Module and Program</h1>
 <blockquote class="doxtable">
 <p>&zwj;In build directories described above, symbol <code>*</code> stands for the hash of the particular build, e.g. <code>5sehreo</code>. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md58"></a>
+<h2><a class="anchor" id="autotoc_md59"></a>
 How to Add an Existing Module</h2>
 <p>To add a <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> module that already exists, for example the <a href="https://likask@bitbucket.org/mofem/basic_finite_elements.git">Basic Finite Elements</a>, follow these steps:</p>
 <ol type="1">
@@ -231,7 +231,7 @@ How to Add an Existing Module</h2>
 <li>Source code: <code>$HOME/mofem_install/mofem-cephas/mofem/users_modules/basic_finite_elements</code></li>
 <li>Binary files: <code>$HOME/mofem_install/mofem-cephas/build-*/core-*/mofem/users_modules/basic_finite_elements</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md59"></a>
+<h2><a class="anchor" id="autotoc_md60"></a>
 How to Create a New Module</h2>
 <p>To create your own module, the simplest way is to replicate an existing one and modify it. For example, copy the Solid Shell Module and then:</p>
 <ul>
@@ -244,7 +244,7 @@ How to Create a New Module</h2>
 <li>Clone and build the module following the same procedure as for an existing module.</li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>If you have trouble creating a module, feel free to contact us via <a href="https://groups.google.com/forum/#!categories/mofem-group">MoFEM Q&amp;A</a>.</dd></dl>
-<h1><a class="anchor" id="autotoc_md60"></a>
+<h1><a class="anchor" id="autotoc_md61"></a>
 How to Add a New Program</h1>
 <p>To add a new program within an existing module, the simplest approach is to copy an existing program and modify it. For example, copy the <code>vec-0</code> tutorial:</p>
 <ol type="1">

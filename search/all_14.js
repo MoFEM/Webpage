@@ -27,16 +27,16 @@ var searchData=
   ['jacvelrowptr_24',['jacVelRowPtr',['../structConvectiveMassElement_1_1CommonData.html#a1a1bf66fb3c1351e48e6093b54c6cddb',1,'ConvectiveMassElement::CommonData']]],
   ['jl_25',['Jl',['../structLieGroups_1_1SO3.html#a2b41c9f3434c4839e2ca8b732e5c56d2',1,'LieGroups::SO3']]],
   ['jlimpl_26',['JlImpl',['../structLieGroups_1_1SO3.html#a4a307c2f785603777178248b2f6c23f2',1,'LieGroups::SO3']]],
-  ['job_27',['✅ 10. Run MoFEM in SLURM Job',['../install_spack.html#autotoc_md91',1,'']]],
+  ['job_27',['✅ 10. Run MoFEM in SLURM Job',['../installation_with_spack.html#autotoc_md92',1,'']]],
   ['journal_20file_28',['journal file',['../elastic_dynamics.html#journal_dam',1,'Journal file'],['../elastic_dynamics.html#journal',1,'Journal file']]],
-  ['journal_20publications_29',['Selected journal publications',['../publications.html#autotoc_md106',1,'']]],
+  ['journal_20publications_29',['Selected journal publications',['../publications.html#autotoc_md107',1,'']]],
   ['jr_30',['Jr',['../structLieGroups_1_1SO3.html#a0b2f2bf88858335534119f4ba7475753',1,'LieGroups::SO3']]],
   ['jrimpl_31',['JrImpl',['../structLieGroups_1_1SO3.html#a3fc1d8dc65aa5165af8afa077564f53d',1,'LieGroups::SO3']]],
   ['jump_20on_20the_20skeleton_32',['Calculate jump on the skeleton',['../mix_transport.html#mixtransport_jump',1,'']]],
   ['jup_5feigen_5felastic_2edox_33',['jup_eigen_elastic.dox',['../jup__eigen__elastic_8dox.html',1,'']]],
   ['jup_5fplastic_2edox_34',['jup_plastic.dox',['../jup__plastic_8dox.html',1,'']]],
   ['jupyter_20notebook_35',['jupyter notebook',['../jup_tutorial_eigen_elastic.html#jup_vec_1',1,'Jupyter notebook'],['../running_code.html#running_jupyter',1,'Running code in Jupyter notebook'],['../install_docker_advanced.html#docker_jupyter',1,'Running Jupyter notebook'],['../jup_tutorial_eigen_elastic.html#running_eiegn_jupyter',1,'Running Jupyter notebook']]],
-  ['jupyter_20notebooks_20with_20the_20amended_20code_36',['Running jupyter notebooks with the amended code',['../install_docker_jupyterhub.html#autotoc_md105',1,'']]],
+  ['jupyter_20notebooks_20with_20the_20amended_20code_36',['Running jupyter notebooks with the amended code',['../install_docker_jupyterhub.html#autotoc_md106',1,'']]],
   ['jupyter_20tutorial_20on_20mixed_20formulation_20for_20hyperelasticity_37',['Hands-on 5: Jupyter tutorial on mixed formulation for hyperelasticity',['../mofem_school_2023.html#hands_on_5',1,'']]],
   ['jupyter_20tutorial_20on_20mixed_20formulation_20for_20the_20elastodynamics_20problem_38',['Hands-on 6: Jupyter tutorial on mixed formulation for the elastodynamics problem',['../mofem_school_2023.html#hands_on_6',1,'']]],
   ['jupyter_20tutorial_20on_20mixed_20formulation_20for_20the_20poisson_20problem_39',['Hands-on 2: Jupyter tutorial on mixed formulation for the Poisson problem',['../mofem_school_2023.html#hands_on_2',1,'']]],
@@ -46,5 +46,5 @@ var searchData=
   ['jupyterhub_43',['jupyterhub',['../install_docker_jupyterhub.html#docker_access_hub',1,'Accessing and running MoFEM tutorials with JupyterHub'],['../install_docker_jupyterhub.html',1,'Installation with Docker - JupyterHub'],['../install_docker_advanced.html#docker_jupyterhub',1,'Running JupyterHub']]],
   ['jupyterhub_5fconfig_44',['jupyterhub_config',['../namespacejupyterhub__config.html',1,'']]],
   ['jupyterhub_5fconfig_2epy_45',['jupyterhub_config.py',['../jupyterhub__config_8py.html',1,'']]],
-  ['jupytext_46',['Installing jupytext',['../md_tutorials_2README.html#autotoc_md146',1,'']]]
+  ['jupytext_46',['Installing jupytext',['../md_tutorials_2README.html#autotoc_md147',1,'']]]
 ];

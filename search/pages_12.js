@@ -12,7 +12,7 @@ var searchData=
   ['installation_20on_20ubuntu_9',['Installation on Ubuntu',['../install_ubuntu.html',1,'']]],
   ['installation_20with_20docker_20advanced_10',['Installation with Docker - advanced',['../install_docker_advanced.html',1,'']]],
   ['installation_20with_20docker_20jupyterhub_11',['Installation with Docker - JupyterHub',['../install_docker_jupyterhub.html',1,'']]],
-  ['installation_20with_20spack_20advanced_12',['Installation with Spack (Advanced)',['../install_spack.html',1,'installation']]],
+  ['installation_20with_20spack_20advanced_12',['Installation with Spack (Advanced)',['../installation_with_spack.html',1,'']]],
   ['installation_20with_20spack_20scripts_13',['installation with spack scripts',['../installation_script.html',1,'Installation with Spack (Scripts)'],['../installation.html',1,'Installation with Spack (Scripts)']]],
   ['integration_20on_20finite_20element_20mesh_14',['FUN-1: Integration on finite element mesh',['../integration.html',1,'']]],
   ['integration_20on_20skeleton_20h_20adaptivity_15',['COR-0: Mixed formulation and integration on skeleton (h-adaptivity)',['../mix_transport.html',1,'tutorials']]],

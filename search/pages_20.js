@@ -7,7 +7,7 @@ var searchData=
   ['with_20docker_20advanced_4',['Installation with Docker - advanced',['../install_docker_advanced.html',1,'']]],
   ['with_20docker_20jupyterhub_5',['Installation with Docker - JupyterHub',['../install_docker_jupyterhub.html',1,'']]],
   ['with_20hole_6',['Plate with hole',['../jup_plate_with_hole.html',1,'jup_tutorial_plastic_problem']]],
-  ['with_20spack_20advanced_7',['Installation with Spack (Advanced)',['../install_spack.html',1,'installation']]],
+  ['with_20spack_20advanced_7',['Installation with Spack (Advanced)',['../installation_with_spack.html',1,'']]],
   ['with_20spack_20scripts_8',['with spack scripts',['../installation.html',1,'Installation with Spack (Scripts)'],['../installation_script.html',1,'Installation with Spack (Scripts)']]],
   ['world_9',['FUN-0: Hello world',['../hello_world_tut1.html',1,'']]],
   ['writing_20documentation_10',['Writing documentation',['../a_guide_to_writing_documentation.html',1,'']]]

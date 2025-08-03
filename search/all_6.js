@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['6_20clone_20and_20register_20mofem_20repo_0',['🧩 6. Clone and Register MoFEM Repo',['../install_spack.html#autotoc_md87',1,'']]],
-  ['6_3a_20add_20clone_20and_20custom_20mofem_20package_20repository_1',['🧩 Step 6: Add Clone and Custom MoFEM Package Repository',['../install_spack.html#autotoc_md68',1,'']]],
+  ['6_20clone_20and_20register_20mofem_20repo_0',['🧩 6. Clone and Register MoFEM Repo',['../installation_with_spack.html#autotoc_md88',1,'']]],
+  ['6_3a_20add_20clone_20and_20custom_20mofem_20package_20repository_1',['🧩 Step 6: Add Clone and Custom MoFEM Package Repository',['../installation_with_spack.html#autotoc_md69',1,'']]],
   ['6_3a_20computational_20challenges_20for_20fast_20transient_20solid_20dynamics_2',['Lectures 5 and 6: Computational challenges for fast-transient solid dynamics',['../mofem_school_2023.html#lectures_5_6',1,'']]],
   ['6_3a_20discontinuous_20galerkin_20for_20kirchoff_20love_20plate_3',['VEC-6: Discontinuous Galerkin for Kirchoff-Love Plate',['../tutorial_plate.html',1,'']]],
   ['6_3a_20heat_20equation_4',['SCL-6: Heat equation',['../basic_tutorials_heat_equation.html',1,'']]],

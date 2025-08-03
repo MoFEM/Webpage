@@ -15,7 +15,7 @@ var searchData=
   ['adv_202_3a_20thermo_20elastic_20example_12',['ADV-2: Thermo-elastic example',['../tutorial_thermo_elastic.html',1,'']]],
   ['adv_203_3a_20dg_20upwind_20for_20advection_20problem_20or_20level_20set_13',['ADV-3: DG Upwind for advection problem or level set',['../tutorial_level_set.html',1,'']]],
   ['adv_205_3a_20seepage_20in_20elsatic_20body_20example_14',['ADV-5: Seepage in elsatic body example',['../tutorial_seepage.html',1,'']]],
-  ['advanced_15',['advanced',['../install_docker_advanced.html',1,'Installation with Docker - advanced'],['../install_spack.html',1,'Installation with Spack (Advanced)']]],
+  ['advanced_15',['advanced',['../install_docker_advanced.html',1,'Installation with Docker - advanced'],['../installation_with_spack.html',1,'Installation with Spack (Advanced)']]],
   ['advection_20problem_20or_20level_20set_16',['ADV-3: DG Upwind for advection problem or level set',['../tutorial_level_set.html',1,'']]],
   ['an_20external_20pr_17',['How to: Squashing for an external PR',['../SquashFAQ.html',1,'']]],
   ['and_20dm_20sub_20problem_18',['COR-4: Using fieldsplit solver and DM sub problem.',['../poisson_tut3.html',1,'tutorials']]],

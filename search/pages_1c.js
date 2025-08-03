@@ -32,7 +32,7 @@ var searchData=
   ['solver_20and_20dm_20sub_20problem_29',['COR-4: Using fieldsplit solver and DM sub problem.',['../poisson_tut3.html',1,'tutorials']]],
   ['solving_20the_20poisson_20equation_30',['COR-2: Solving the Poisson equation',['../poisson_tut1.html',1,'tutorials']]],
   ['solving_20transport_20of_20intensity_20equation_31',['MIX-1: Retrive phase solving transport-of-intensity equation.',['../tutorial_phase.html',1,'']]],
-  ['spack_20advanced_32',['Installation with Spack (Advanced)',['../install_spack.html',1,'installation']]],
+  ['spack_20advanced_32',['Installation with Spack (Advanced)',['../installation_with_spack.html',1,'']]],
   ['spack_20scripts_33',['spack scripts',['../installation.html',1,'Installation with Spack (Scripts)'],['../installation_script.html',1,'Installation with Spack (Scripts)']]],
   ['spanned_20on_20wire_34',['Soap film spanned on wire',['../sope_film.html',1,'tutorials']]],
   ['sphere_35',['VEC-4: Shallow wave equation on sphere',['../shallow_wave_doc.html',1,'']]],

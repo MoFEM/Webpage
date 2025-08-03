@@ -130,13 +130,19 @@ $(function() {
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#autotoc_md54">Compile the Core Library</a></li>
+<li class="level1"><a href="#autotoc_md55">Compile Users Modules</a></li>
 </ul>
 </div>
 <div class="textblock"><p>This brief tutorial assumes that you have installed <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> with developer version using either instructions in <a class="el" href="install_docker_jupyterhub.html">Installation with Docker - JupyterHub</a> or the script provided in <a class="el" href="installation.html">Installation with Spack (Scripts)</a>. Therefore, you should have paths for the source code and the binary files (e.g. for the <code>Release</code> build type) of the Core Library and Users Modules as follows:</p>
 <ul>
 <li>Core Library<ul>
 <li>Source code: <code>$HOME/mofem_install/mofem-cephas/</code></li>
-<li>Binary files (build directory): <code>$HOME/mofem_install/mofem-cephas/build-*/core-*</code></li>
+<li>Binary files (build directory): <code>$HOME/mofem_install/mofem-cephas/core-build-Release-*</code></li>
+</ul>
+</li>
+<li>Users Modules<ul>
+<li>Source code: <code>$HOME/mofem_install/mofem-cephas/mofem/users_modules/</code></li>
+<li>Binary files (build directory): <code>$HOME/mofem_install/mofem-cephas/mofem/users_modules/um-build-Release-*</code></li>
 </ul>
 </li>
 </ul>
@@ -147,12 +153,23 @@ $(function() {
 Compile the Core Library</h1>
 <p>You will need to compile the Core Library if you change any file related to C++ source codes that are located in </p><div class="fragment"><div class="line">$HOME/mofem_install/mofem-cephas/mofem/</div>
 </div><!-- fragment --><p>You can compile the Core Library by running the following command lines:</p>
-<div class="fragment"><div class="line">spack env activate mofem</div>
-</div><!-- fragment --><p> cd $HOME/mofem_install/mofem-cephas/core-build-Release-* make -j4 install ``<code> where</code>-j4` indicates that you will use four processors to compile the code.</p>
+<div class="fragment"><div class="line">cd $HOME/mofem_install/mofem-cephas/core-build-Release-*</div>
+<div class="line">make -j4 install</div>
+</div><!-- fragment --><p> where <code>-j4</code> indicates that you will use four processors to compile the code.</p>
 <blockquote class="doxtable">
 <p>&zwj;If you have several builds of the Core library, e.g. <code>Debug</code> and <code>Release</code>, you will need to substitute the symbol <code>*</code> in the command above by the <code>hash</code> of the build you want to recompile. </p>
 </blockquote>
-<p># </p>
+<h1><a class="anchor" id="autotoc_md55"></a>
+Compile Users Modules</h1>
+<p>You will need to compile Users Modules if you change any file related to C++ source codes that are located in </p><div class="fragment"><div class="line">$HOME/mofem_install/mofem-cephas/mofem/users_modules/</div>
+</div><!-- fragment --><p> The changes include those when you modify the codes of Basic Users Modules or when you add a new module of your own and change its source code.</p>
+<p>You can compile both the Basic User Modules and your own module (if any) by running the following command lines:</p>
+<div class="fragment"><div class="line">cd $HOME/mofem_install/mofem-cephas/mofem/users_modules/um-build-Release-*</div>
+<div class="line">make -j4 install</div>
+</div><!-- fragment --><blockquote class="doxtable">
+<p>&zwj;If you have several builds of the Users Modules, e.g. <code>Debug</code> and <code>Release</code>, you will need to substitute the symbol <code>*</code> in the command above by the <code>hash</code> of the build you want to recompile. </p>
+</blockquote>
+<dl class="section note"><dt>Note</dt><dd>You only need to compile Core Library before compiling User Modules if you have changes in the Core Library. If you only have changes in Users Modules (either the Basic one or the one added by yourself), you just need to compile the Users Modules. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- HTML footer for doxygen 1.8.13-->

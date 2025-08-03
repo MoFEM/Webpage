@@ -128,9 +128,9 @@ $(function() {
   <div class="headertitle"><div class="title">MIX-2: Mixed formulation for incompressible elasticity</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md138"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md139"></a>
 Theory</h1>
-<h2><a class="anchor" id="autotoc_md139"></a>
+<h2><a class="anchor" id="autotoc_md140"></a>
 Mixed  formulation for incompressible elasticity</h2>
 <p>The governing equations and boundary conditions for the linear elastic problem are:  </p><p class="formulaDsp">
 \[
@@ -235,7 +235,7 @@ Mixed  formulation for incompressible elasticity</h2>
 <p>In the case of incompressible material, the lower right diagonal block of our matrix, \({\bf{B}} = 0\), resulting in the well-known saddle point problem. Careful choice has to be made for the finite element approximations of the displacement and pressure fields to ensure that the discrete problem has a valid and stable solution, i.e. the inf-sup conditions have to be satisfied.</p>
 <p>One element in particular that can be adopted is the well-known Taylor-Hood element, whereby both displacement and pressure fields are continuous and are approximated in Sobolev \(H^1\) functional space. One must note that the polynomial order for the approximation of the displacement field must be greater by one than that of the pressure field to achieve inf-sup stability. Such choice of the element is often denoted as \(P_k - P_{k-1}\) for \(k \geq 2\). See <a class="el" href="incompressible_elasticity.html#boffi_2013">[Boffi, 2013]</a> for more details on Taylor-Hood elements.</p>
 <p>Another element that can be utilised is the Crouzeix-Raviart element. With this element the displacement is approximated in Sobolev \(H^1\) functional space and the pressure field is discontinuous in \(L^2\) space. Two order difference is required between displacement and pressure fields for stability, i.e. such element is denoted as \(P_k - P_{k-2}\). For the 2D case, \(k \geq 2\) is sufficient but for 3D where we require degrees of freedom on the faces, \(k \geq 3\).</p>
-<h3><a class="anchor" id="autotoc_md140"></a>
+<h3><a class="anchor" id="autotoc_md141"></a>
 References:</h3>
 <p><a class="anchor" id="boffi_2013"></a> <b>[Boffi, 2013]</b> Boffi D, Brezzi F, Fortin M. Mixed finite element methods and applications, Springer, 2013 </p>
 </div></div><!-- contents -->

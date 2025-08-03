@@ -129,10 +129,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md94">Watch Docker &amp; Spack installation tutorial</a></li>
+<ul><li class="level1"><a href="#autotoc_md95">Watch Docker &amp; Spack installation tutorial</a></li>
 <li class="level1"><a href="#docker_install">Download and Install Docker</a></li>
 <li class="level1"><a href="#docker_run_container">Running docker container</a></li>
-<li class="level1"><a href="#autotoc_md95">Making changes permanent</a></li>
+<li class="level1"><a href="#autotoc_md96">Making changes permanent</a></li>
 <li class="level1"><a href="#docker_vscode">Developing with VSCode</a></li>
 <li class="level1"><a href="#docker_jupyter">Running Jupyter notebook</a></li>
 <li class="level1"><a href="#docker_jupyterhub">Running JupyterHub</a></li>
@@ -143,7 +143,7 @@ $(function() {
 </div>
 <div class="textblock"><p>Docker is an open platform that allows for the distribution and deployment of applications across different systems. In the context of <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> it allows for the distribution of pre-compiled libraries for the Docker platform that can then run on any system. The Docker platform works by using facilities provided by the Linux kernel to provide lightweight containers and thereby avoiding the need to run costly virtual machines. It’s through the use of containers that <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> is compiled and run.</p>
 <p>This installation is suitable for Linux, macOS and some versions of Windows. In macOS, a lightweight Linux distribution is virtualized to run the Docker containers in.</p>
-<h1><a class="anchor" id="autotoc_md94"></a>
+<h1><a class="anchor" id="autotoc_md95"></a>
 Watch Docker &amp; Spack installation tutorial</h1>
 <p>Flow link <a href="https://youtu.be/I201ZaAnQG8">https://youtu.be/I201ZaAnQG8</a>. In tutorial we briefly explain what is following bellow. </p>
 <h1><a class="anchor" id="docker_install"></a>
@@ -166,7 +166,7 @@ Running docker container</h1>
 <div class="line">  -my_file LShape.h5m -my_order 2</div>
 <div class="line">mbconvert out_skin.h5m /host_home/out_skin.vtk</div>
 </div><!-- fragment --><p> In the above example, two processors are used to do calculations. A number of processors which can be used effectively depends on your hardware and set up of the docker container. For propose of this documentation, the program is executed in <em>mofem_build</em> volume, thus resulting file <em>out.h5m</em> can be accessed from other containers, however, is not visible from the host file system. The last command which creates VTK output file save results to the HOME directory of your host system.</p>
-<h1><a class="anchor" id="autotoc_md95"></a>
+<h1><a class="anchor" id="autotoc_md96"></a>
 Making changes permanent</h1>
 <p>Changes which you do in Docker container are temporary. If you restart the computer, or container content of the container is reset to initial state. If you like to keep changes in container or share volume of the container between another container you can do as follows: </p><div class="fragment"><div class="line">docker run --name mofem_volume likask/mofem-spack-build</div>
 </div><!-- fragment --><p>Now we can run Docker container and attach the previously created volume to it </p><div class="fragment"><div class="line">docker run \</div>
