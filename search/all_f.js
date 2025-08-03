@@ -363,7 +363,7 @@ var searchData=
   ['exercise_360',['Exercise',['../poisson_tut2.html#poisson_tut2_exercise',1,'']]],
   ['exercises_361',['exercises',['../poisson_tut1.html#poisson_tut1_excercise',1,'Exercises'],['../simple_elasticity_1.html#simple_elasticity_exercises',1,'Exercises'],['../poisson_tut3.html#poisson_tut3_excercise',1,'Exercises']]],
   ['exetesthook_362',['exeTestHook',['../structMoFEM_1_1FEMethod.html#af427b6e666c08e64be1fa86470abd9ad',1,'MoFEM::FEMethod']]],
-  ['existing_20module_363',['existing module',['../how_to_add_new_module_and_program.html#autotoc_md51',1,'An existing module'],['../installation_script.html#autotoc_md59',1,'How to Add an Existing Module']]],
+  ['existing_20module_363',['existing module',['../how_to_add_new_module_and_program.html#autotoc_md51',1,'An existing module'],['../installation_with_script.html#autotoc_md59',1,'How to Add an Existing Module']]],
   ['exp_364',['exp',['../structLieGroups_1_1SO3.html#af80491b46de29b3959da57bb3bfce5b9',1,'LieGroups::SO3']]],
   ['expimpl_365',['expImpl',['../structLieGroups_1_1SO3.html#abb1d525c767a3726b52fd2d81957dbb8',1,'LieGroups::SO3']]],
   ['explaining_20mesh_20bitreflevel_366',['Explaining mesh BitRefLevel',['../mix_transport.html#mix_mesh_refinement',1,'']]],

@@ -7,7 +7,7 @@ var searchData=
   ['2_20when_20to_20squash_4',['2. When to squash?',['../SquashFAQ.html#autotoc_md110',1,'']]],
   ['2021_20school_3a_20weak_20form_20in_20many_20flavours_20design_20and_20sustainable_20code_20development_5',['MoFEM UKACM 2021 School: &quot;Weak form&quot; in many flavours. Design and sustainable code development',['../mofem_school_2021.html',1,'']]],
   ['2023_3a_20mixed_20finite_20element_20formulations_20in_20solid_20mechanics_6',['MoFEM UKACM Autumn School 2023: Mixed Finite Element Formulations in Solid Mechanics',['../mofem_school_2023.html',1,'']]],
-  ['2_3a_20compile_20manually_20after_20cmake_20configuration_7',['Option 2: Compile manually after CMake configuration',['../installation_script.html#autotoc_md58',1,'']]],
+  ['2_3a_20compile_20manually_20after_20cmake_20configuration_7',['Option 2: Compile manually after CMake configuration',['../installation_with_script.html#autotoc_md58',1,'']]],
   ['2_3a_20create_20a_203d_20mesh_20from_20gmsh_8',['MSH-2: Create a 3D mesh from Gmsh',['../basic_tutorials_mesh_generation_3d.html',1,'']]],
   ['2_3a_20hierarchical_20approximation_9',['FUN-2: Hierarchical approximation',['../hierarchical_approximation_1.html',1,'']]],
   ['2_3a_20jupyter_20tutorial_20on_20mixed_20formulation_20for_20the_20poisson_20problem_10',['Hands-on 2: Jupyter tutorial on mixed formulation for the Poisson problem',['../mofem_school_2023.html#hands_on_2',1,'']]],

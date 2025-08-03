@@ -15,7 +15,7 @@ var searchData=
   ['11_3a_20mixed_20formulation_20of_20nonlinear_20elasticity_12',['COR-11: Mixed formulation of nonlinear elasticity',['../tutorial_ep.html',1,'tutorials']]],
   ['12_200_13',['MoFEM v0.12.0',['../md_CHANGELOG.html#autotoc_md22',1,'']]],
   ['13_200_14',['MoFEM v0.13.0',['../md_CHANGELOG.html',1,'']]],
-  ['1_3a_20compile_20using_20spack_20automated_15',['Option 1: Compile using Spack (automated)',['../installation_script.html#autotoc_md57',1,'']]],
+  ['1_3a_20compile_20using_20spack_20automated_15',['Option 1: Compile using Spack (automated)',['../installation_with_script.html#autotoc_md57',1,'']]],
   ['1_3a_20contact_20problem_16',['ADV-1: Contact problem',['../tutorial_contact_problem.html',1,'']]],
   ['1_3a_20create_20a_202d_20mesh_20from_20gmsh_17',['MSH-1: Create a 2D mesh from Gmsh',['../basic_tutorials_mesh_generation_2d.html',1,'']]],
   ['1_3a_20eigen_20elastic_18',['VEC-1: Eigen elastic',['../tutorial_eigen_elastic.html',1,'']]],

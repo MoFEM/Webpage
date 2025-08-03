@@ -57,7 +57,7 @@ var searchData=
   ['with_20postprocgeneraterefmeshbase_20and_20derived_20classes_54',['on refined post-proc mesh with PostProcGenerateRefMeshBase and derived classes',['../faqs.html#Postporcessing',1,'']]],
   ['with_20spack_20advanced_55',['Installation with Spack (Advanced)',['../installation_with_spack.html',1,'']]],
   ['with_20spack_20on_20ubuntu_20noble_56',['Installing MoFEM with Spack on Ubuntu Noble',['../installation_with_spack.html#autotoc_md62',1,'']]],
-  ['with_20spack_20scripts_57',['with spack scripts',['../installation_script.html',1,'Installation with Spack (Scripts)'],['../installation.html',1,'Installation with Spack (Scripts)']]],
+  ['with_20spack_20scripts_57',['with spack scripts',['../installation_with_script.html',1,'Installation with Spack (Scripts)'],['../installation.html',1,'Installation with Spack (Scripts)']]],
   ['with_20the_20amended_20code_58',['Running jupyter notebooks with the amended code',['../install_docker_jupyterhub.html#autotoc_md106',1,'']]],
   ['with_20the_20external_20world_59',['with the external world',['../jup_radiation_pluto.html#autotoc_md170',1,'Exchange of energy with the external world'],['../md_tutorials_2scl-8_2pluto.html#autotoc_md188',1,'Exchange of energy with the external world']]],
   ['with_20valgrind_60',['with valgrind',['../faqs.html#faq_profiling_valgrind',1,'How to check for memory leaks and other bugs with Valgrind?'],['../faqs.html#profiling_code_with_valgrind',1,'How to profile code with Valgrind?']]],

@@ -192,7 +192,7 @@ var searchData=
   ['installation_20with_20docker_20advanced_189',['Installation with Docker - advanced',['../install_docker_advanced.html',1,'']]],
   ['installation_20with_20docker_20jupyterhub_190',['Installation with Docker - JupyterHub',['../install_docker_jupyterhub.html',1,'']]],
   ['installation_20with_20spack_20advanced_191',['Installation with Spack (Advanced)',['../installation_with_spack.html',1,'']]],
-  ['installation_20with_20spack_20scripts_192',['installation with spack scripts',['../installation_script.html',1,'Installation with Spack (Scripts)'],['../installation.html',1,'Installation with Spack (Scripts)']]],
+  ['installation_20with_20spack_20scripts_192',['installation with spack scripts',['../installation_with_script.html',1,'Installation with Spack (Scripts)'],['../installation.html',1,'Installation with Spack (Scripts)']]],
   ['installation_2edox_193',['installation.dox',['../installation_8dox.html',1,'']]],
   ['installation_5fon_5fmac_5fosx_2emd_194',['installation_on_mac_osx.md',['../installation__on__mac__osx_8md.html',1,'']]],
   ['installation_5fon_5fubuntu_2emd_195',['installation_on_ubuntu.md',['../installation__on__ubuntu_8md.html',1,'']]],
