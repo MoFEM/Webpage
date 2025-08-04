@@ -350,6 +350,7 @@ Set the MoFEM source directory</h1>
 <div class="fragment"><div class="line">spack repo add $HOME/mofem_install/mofem-cephas</div>
 </div><!-- fragment --><p>Create a new Spack environment and configure it:</p>
 <div class="fragment"><div class="line">spack env create -d .</div>
+<div class="line">spacktivate .</div>
 <div class="line">spack config add &quot;packages:all:variants:build_type=RelWithDebInfo&quot;</div>
 </div><!-- fragment --><p>Add <a class="el" href="namespaceMoFEM.html" title="implementation of Data Operators for Forces and Sources">MoFEM</a> and its dependencies:</p>
 <div class="fragment"><div class="line">spack add mofem-cephas@0.15.0 +adol-c +med +mgis ~shared +slepc +tetgen ~build_tutorials install_id=$USER ^petsc+X</div>
@@ -368,6 +369,7 @@ Set the MoFEM source directory</h1>
 <div class="line">cd $HOME/mofem_install/debug_env</div>
 <div class="line"> </div>
 <div class="line">spack env create -d .</div>
+<div class="line">spacktivate .</div>
 <div class="line">spack config add &quot;packages:all:variants:build_type=Debug&quot;</div>
 <div class="line">spack add mofem-cephas@0.15.0 +adol-c +med +mgis ~shared +slepc +tetgen ~build_tutorials install_id=$USER ^petsc+X</div>
 <div class="line">spack develop -p $HOME/mofem_install/mofem-cephas</div>

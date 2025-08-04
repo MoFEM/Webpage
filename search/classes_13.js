@@ -69,7 +69,7 @@ var searchData=
   ['sphere_66',['sphere',['../classsdf_1_1Sphere.html',1,'sdf.Sphere'],['../classsdf__flat_1_1Sphere.html',1,'sdf_flat.Sphere'],['../classsdf__hertz__2d__axisymm__sphere_1_1Sphere.html',1,'sdf_hertz_2d_axisymm_sphere.Sphere'],['../classsdf__hertz__3d_1_1Sphere.html',1,'sdf_hertz_3d.Sphere'],['../classsdf__sphere_1_1Sphere.html',1,'sdf_sphere.Sphere'],['../classsdf__ydirection_1_1Sphere.html',1,'sdf_ydirection.Sphere']]],
   ['sphericalarclengthcontrol_67',['SphericalArcLengthControl',['../structSphericalArcLengthControl.html',1,'']]],
   ['springalematerialvolonsidelhs_68',['SpringALEMaterialVolOnSideLhs',['../structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs.html',1,'MetaSpringBC']]],
-  ['springalematerialvolonsidelhs_5fdx_5fdx_69',['springalematerialvolonsidelhs_dx_dx',['../structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dX.html',1,'MetaSpringBC::SpringALEMaterialVolOnSideLhs_dX_dX'],['../structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html',1,'MetaSpringBC::SpringALEMaterialVolOnSideLhs_dX_dx']]],
+  ['springalematerialvolonsidelhs_5fdx_5fdx_69',['springalematerialvolonsidelhs_dx_dx',['../structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dx.html',1,'MetaSpringBC::SpringALEMaterialVolOnSideLhs_dX_dx'],['../structMetaSpringBC_1_1SpringALEMaterialVolOnSideLhs__dX__dX.html',1,'MetaSpringBC::SpringALEMaterialVolOnSideLhs_dX_dX']]],
   ['springbctype_70',['SpringBcType',['../structElasticExample_1_1SpringBcType.html',1,'ElasticExample']]],
   ['standardpoisson_71',['StandardPoisson',['../structStandardPoisson.html',1,'']]],
   ['subproblemdata_72',['SubProblemData',['../structMoFEM_1_1Problem_1_1SubProblemData.html',1,'MoFEM::Problem']]],

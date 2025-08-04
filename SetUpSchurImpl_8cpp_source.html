@@ -605,8 +605,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>                        <span class="stringliteral">&quot;ELASTIC_PROBLEM&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>, <a class="code hl_variable" href="structSetUpSchurImpl.html#a0a64b8f9ab1279020e2df4b3a200c7ee">epCorePtr</a>-&gt;<a class="code hl_variable" href="structEshelbianCore.html#aec476e20bd019e3cb5d0d1584518e31c">hybridSpatialDisp</a>, 0,</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>                        <a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, crack_hybrid_is, &amp;*crack_faces);</div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>                <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatZeroRowsColumnsIS(schur_asmb_post_proc_lhs-&gt;B,</div>
-<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>                                            crack_hybrid_is, 1, PETSC_NULL,</div>
-<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>                                            PETSC_NULL);</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>                                            crack_hybrid_is, 1, PETSC_NULLPTR,</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>                                            PETSC_NULLPTR);</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>              }</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>              {</div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>                SmartPetscObj&lt;IS&gt; crack_piola_is;</div>
@@ -614,8 +614,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>                    -&gt;isCreateProblemBrokenFieldAndRank(*<a class="code hl_variable" href="structSetUpSchurImpl.html#a2eac4a006df96f21ed3ebfc4324b1217">piolaZeroDofsVec</a>,</div>
 <div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>                                                        crack_piola_is);</div>
 <div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>                <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatZeroRowsColumnsIS(schur_asmb_post_proc_lhs-&gt;B,</div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>                                            crack_piola_is, 1, PETSC_NULL,</div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>                                            PETSC_NULL);</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>                                            crack_piola_is, 1, PETSC_NULLPTR,</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>                                            PETSC_NULLPTR);</div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>              }</div>
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>              <span class="keyword">auto</span> [a00_field_list, a00_range_list] = <a class="code hl_function" href="structSetUpSchurImpl.html#aa9b71e5f8557f567f7de29720b49e6fd">getA00Fields</a>();</div>
@@ -635,8 +635,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>                      <span class="stringliteral">&quot;SUB_SCHUR&quot;</span>, <a class="code hl_enumvalue" href="definitions_8h.html#a194bf71b1f5ddbc56eef764d19ea69dbabf470e461303b909bf0dc58084ebafa0">ROW</a>, <a class="code hl_variable" href="structSetUpSchurImpl.html#a0a64b8f9ab1279020e2df4b3a200c7ee">epCorePtr</a>-&gt;<a class="code hl_variable" href="structEshelbianCore.html#aec476e20bd019e3cb5d0d1584518e31c">hybridSpatialDisp</a>, 0,</div>
 <div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>                      <a class="code hl_variable" href="child__and__parent_8cpp.html#a541ffc988889246e44b233b777828847">SPACE_DIM</a>, crack_hybrid_is, &amp;*crack_faces);</div>
 <div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>              <a class="code hl_variable" href="structSetUpSchurImpl.html#a0a64b8f9ab1279020e2df4b3a200c7ee">epCorePtr</a>-&gt;<a class="code hl_variable" href="structEshelbianCore.html#a3080b5402cace20f1ec9e970811ee8a0">crackHybridIs</a> = crack_hybrid_is;</div>
-<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>              <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatZeroRowsColumnsIS(<a class="code hl_variable" href="structSetUpSchurImpl.html#a2ea566e74cfe2a386828a77934393325">S</a>, crack_hybrid_is, 1, PETSC_NULL,</div>
-<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>                                          PETSC_NULL);</div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>              <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> MatZeroRowsColumnsIS(<a class="code hl_variable" href="structSetUpSchurImpl.html#a2ea566e74cfe2a386828a77934393325">S</a>, crack_hybrid_is, 1, PETSC_NULLPTR,</div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>                                          PETSC_NULLPTR);</div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span> </div>
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>              <a class="code hl_define" href="definitions_8h.html#acb0a46d159695a01bf667313b7788b45">MoFEMFunctionReturn</a>(0);</div>
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>            };</div>
@@ -674,7 +674,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    <span class="keyword">auto</span> set_diagonal_pc = [&amp;]() {</div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>      <a class="code hl_define" href="definitions_8h.html#a6c0b52978f1abc88bf8a1ba70b7308e3">MoFEMFunctionBegin</a>;</div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>      KSP *subksp;</div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCFieldSplitSchurGetSubKSP(pc, PETSC_NULL, &amp;subksp);</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>      <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> PCFieldSplitSchurGetSubKSP(pc, PETSC_NULLPTR, &amp;subksp);</div>
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>      <span class="keyword">auto</span> get_pc = [](<span class="keyword">auto</span> ksp) {</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>        PC pc_raw;</div>
 <div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>        <a class="code hl_define" href="definitions_8h.html#add80e5ef5f847b2d4b637029f0f671c3">CHKERR</a> KSPGetPC(ksp, &amp;pc_raw);</div>
