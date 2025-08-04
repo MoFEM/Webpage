@@ -297,7 +297,7 @@ Installing MoFEM with Spack on Ubuntu Noble</h1>
 <div class="line">- `$MOFEM_INSTALL_DIR/mofem_cephas/packages/...`</div>
 <div class="line"> </div>
 <div class="line">## 🚀 Step 7: Install MoFEM Dependencies</div>
-</div><!-- fragment --><p> bash spack install &ndash;only dependencies <a href="#" onclick="location.href='mai'+'lto:'+'mof'+'em'+'-ce'+'ph'+'as@'+'0.'+'15'; return false;">mofem<span class="obfuscator">.nosp@m.</span>-cep<span class="obfuscator">.nosp@m.</span>has@0<span class="obfuscator">.nosp@m.</span>.15</a>.0+mgis ^petsc+X </p><div class="fragment"><div class="line">## 🧹 Step 8: Clean Build Cache</div>
+</div><!-- fragment --><p> bash spack repo add $MOFEM_INSTALL_DIR/mofem_cephas spack install &ndash;only dependencies <a href="#" onclick="location.href='mai'+'lto:'+'mof'+'em'+'-ce'+'ph'+'as@'+'0.'+'15'; return false;">mofem<span class="obfuscator">.nosp@m.</span>-cep<span class="obfuscator">.nosp@m.</span>has@0<span class="obfuscator">.nosp@m.</span>.15</a>.0+mgis ^petsc+X </p><div class="fragment"><div class="line">## 🧹 Step 8: Clean Build Cache</div>
 </div><!-- fragment --><p> bash spack clean -a </p><div class="fragment"><div class="line">## 📥 Step 9: Build MoFEM</div>
 </div><!-- fragment --><p> bash </p>
 <h1><a class="anchor" id="autotoc_md70"></a>
@@ -332,7 +332,7 @@ Set the MoFEM source directory</h1>
 <h2><a class="anchor" id="autotoc_md74"></a>
 🛠️ 1. Set Up Environment in &lt;tt&gt;~/.bashrc&lt;/tt&gt;</h2>
 <p>If you have an account on Oak, configure your shell environment by adding the following lines:</p>
-<div class="fragment"><div class="line">echo &quot;export TMPDIR=/home/lk58p/tmp&quot; &gt;&gt; ~/.bashrc</div>
+<div class="fragment"><div class="line">echo &quot;export TMPDIR=$HOME/tmp&quot; &gt;&gt; ~/.bashrc</div>
 <div class="line">echo &quot;. /mofem_install/vanilla_spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</div>
 </div><!-- fragment --><p>Then <b>restart your terminal</b>, or run the above lines in your current shell to apply them immediately.</p>
 <h2><a class="anchor" id="autotoc_md75"></a>
