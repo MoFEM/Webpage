@@ -1,0 +1,38 @@
+<map id="MoFEM" name="MoFEM">
+<area shape="rect" id="Node000004" href="$group__bc__manager.html" title="Implementation manages boundary conditions." alt="" coords="124,5,341,31"/>
+<area shape="rect" id="Node000036" href="$group__dm.html" title="Implementation of PETSc DM, managing interactions between mesh data structures and vectors and matric..." alt="" coords="135,55,331,80"/>
+<area shape="rect" id="Node000030" href="$group__dof__multi__indices.html" title=" " alt="" coords="158,105,307,145"/>
+<area shape="rect" id="Node000032" href="$group__ent__multi__indices.html" title=" " alt="" coords="163,169,303,209"/>
+<area shape="rect" id="Node000031" href="$group__fe__multi__indices.html" title=" " alt="" coords="137,233,329,273"/>
+<area shape="rect" id="Node000008" href="$group__field__evaluator.html" title="Evaluate field at the point." alt="" coords="173,297,292,323"/>
+<area shape="rect" id="Node000007" href="$group__mesh__cut.html" title="Interface to mesh cut mesh." alt="" coords="164,347,301,372"/>
+<area shape="rect" id="Node000026" href="$group__mesh__tetgen.html" title="Interface to run TetGen." alt="" coords="168,396,297,421"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,889,76,915"/>
+<area shape="rect" id="Node000014" href="$group__mofem__access.html" title="Get direct access to multi&#45;indices in database." alt="" coords="142,445,323,471"/>
+<area shape="rect" id="Node000002" href="$group__mofem__base__functions.html" title="Calculation of base functions at integration points." alt="" coords="173,495,292,520"/>
+<area shape="rect" id="Node000021" href="$group__mofem__basic__interface.html" title="Implementation of basic interface for rapid problem implementation." alt="" coords="136,544,329,569"/>
+<area shape="rect" id="Node000029" href="$group__mofem__bc.html" title=" " alt="" coords="155,593,310,619"/>
+<area shape="rect" id="Node000005" href="$group__mofem__bit__ref.html" title="Managing BitRefLevels." alt="" coords="173,643,292,668"/>
+<area shape="rect" id="Node000006" href="$group__mofem__comm.html" title="Comm interface." alt="" coords="173,692,292,717"/>
+<area shape="rect" id="Node000011" href="$group__mofem__fe.html" title="Adding and managing finite elements." alt="" coords="171,741,294,767"/>
+<area shape="rect" id="Node000009" href="$group__mofem__field.html" title="Data structure for adding and managing fields." alt="" coords="203,791,263,816"/>
+<area shape="rect" id="Node000003" href="$group__mofem__forces__and__sources.html" title="Manages complexities related to assembly of vector and matrices at single finite element level." alt="" coords="159,840,306,865"/>
+<area shape="rect" id="Node000015" href="$group__mofem__is__managers.html" title="Construct index sets for MoFEM problems." alt="" coords="175,889,290,915"/>
+<area shape="rect" id="Node000016" href="$group__mofem__log__manager.html" title="Log manager." alt="" coords="153,939,313,964"/>
+<area shape="rect" id="Node000013" href="$group__mofem__loops.html" title="Manages complexities for integrating over finite elements and dofs." alt="" coords="203,988,263,1013"/>
+<area shape="rect" id="Node000017" href="$group__mofem__mat__interface.html" title="Creating and managing matrices." alt="" coords="170,1037,295,1063"/>
+<area shape="rect" id="Node000018" href="$group__mofem__med__files.html" title="Interface for reading and writing med files." alt="" coords="157,1087,309,1127"/>
+<area shape="rect" id="Node000019" href="$group__mofem__meshset__mng.html" title="Interface for meshsets with entities with data and boundary conditions." alt="" coords="162,1152,303,1177"/>
+<area shape="rect" id="Node000020" href="$group__mofem__node__merger.html" title="Node merger interface." alt="" coords="181,1201,284,1227"/>
+<area shape="rect" id="Node000035" href="$group__mofem__petsc__solvers.html" title="PETSc solvers." alt="" coords="177,1251,289,1276"/>
+<area shape="rect" id="Node000022" href="$group__mofem__prism__interface.html" title="Create prism interface between faces." alt="" coords="174,1300,291,1325"/>
+<area shape="rect" id="Node000012" href="$group__mofem__problems.html" title="Adding and managing problems." alt="" coords="191,1349,274,1375"/>
+<area shape="rect" id="Node000023" href="$group__mofem__problems__manager.html" title="Adding and managing problems." alt="" coords="163,1399,303,1424"/>
+<area shape="rect" id="Node000010" href="$group__mofem__ref__ents.html" title="Get adjacencies/entities for given BitRefLevel (mesh refinement)" alt="" coords="129,1448,336,1473"/>
+<area shape="rect" id="Node000024" href="$group__mofem__series.html" title=" " alt="" coords="149,1498,317,1538"/>
+<area shape="rect" id="Node000025" href="$group__mofem__simple__interface.html" title="Implementation of simple interface for fast problem set&#45;up." alt="" coords="168,1563,297,1588"/>
+<area shape="rect" id="Node000027" href="$group__mofem__tools.html" title="Interface for tools." alt="" coords="174,1612,291,1637"/>
+<area shape="rect" id="Node000028" href="$group__mofem__vectors.html" title="Creating and scattering vectors on the mesh for given problem." alt="" coords="179,1661,286,1687"/>
+<area shape="rect" id="Node000033" href="$group__problems__multi__indices.html" title=" " alt="" coords="157,1711,309,1751"/>
+<area shape="rect" id="Node000034" href="$group__series__multi__indices.html" title="Interface used to record fields and play them back (for example response of structure subjected to ea..." alt="" coords="153,1775,312,1815"/>
+</map>

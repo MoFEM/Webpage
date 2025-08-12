@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="219,5,323,31"/>
+<area shape="rect" id="Node000001" href="$classMoFEM_1_1LogManager_1_1InternalData_1_1NulOStream.html" title=" " alt="" coords="420,27,611,67"/>
+<area shape="poly" id="edge1035_Node000000_Node000001" title=" " alt="" coords="338,23,420,33,419,38,337,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,63,123,88"/>
+<area shape="rect" id="Node000002" href="$classMoFEM_1_1LogManager_1_1InternalData_1_1NulStreambuf.html" title=" " alt="" coords="171,55,372,95"/>
+<area shape="poly" id="edge1036_Node000003_Node000002" title=" " alt="" coords="137,73,171,73,171,78,137,78"/>
+<area shape="poly" id="edge1037_Node000002_Node000001" title=" " alt="" coords="385,60,419,56,420,61,386,65"/>
+</map>

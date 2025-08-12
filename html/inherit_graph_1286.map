@@ -1,0 +1,21 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$structMoFEM_1_1ScalingMethod.html" title=" " alt="" coords="5,237,180,263"/>
+<area shape="rect" id="Node000001" href="$structMoFEM_1_1TimeScale.html" title="Force scale operator for reading two columns." alt="" coords="248,156,395,181"/>
+<area shape="poly" id="edge826_Node000000_Node000001" title=" " alt="" coords="141,230,284,179,285,184,143,235"/>
+<area shape="rect" id="Node000007" href="$structMoFEM_1_1TimeScaleVector.html" title="Force scale operator for reading four columns (time and vector)" alt="" coords="228,283,415,323"/>
+<area shape="poly" id="edge832_Node000000_Node000007" title=" " alt="" coords="162,263,236,281,234,286,161,268"/>
+<area shape="rect" id="Node000002" href="$structContact_1_1ScaledTimeScale.html" title=" " alt="" coords="491,5,681,31"/>
+<area shape="poly" id="edge827_Node000001_Node000002" title=" " alt="" coords="339,144,391,91,424,64,461,41,495,28,496,33,464,46,427,68,394,95,343,148"/>
+<area shape="rect" id="Node000003" href="$structExample_1_1DynamicFirstOrderConsConstantTimeScale.html" title=" " alt="" coords="481,55,691,95"/>
+<area shape="poly" id="edge828_Node000001_Node000003" title=" " alt="" coords="360,148,462,105,500,93,502,98,464,110,362,152"/>
+<area shape="rect" id="Node000004" href="$structExample_1_1DynamicFirstOrderConsSinusTimeScale.html" title=" " alt="" coords="481,119,691,159"/>
+<area shape="poly" id="edge829_Node000001_Node000004" title=" " alt="" coords="408,156,481,148,482,154,409,162"/>
+<area shape="rect" id="Node000005" href="$structExample_1_1ScaledTimeScale.html" title=" " alt="" coords="487,184,685,209"/>
+<area shape="poly" id="edge830_Node000001_Node000005" title=" " alt="" coords="409,175,487,184,486,189,408,180"/>
+<area shape="rect" id="Node000006" href="$structLinMomTimeScale.html" title=" " alt="" coords="515,233,657,259"/>
+<area shape="poly" id="edge831_Node000001_Node000006" title=" " alt="" coords="366,184,463,218,515,231,514,236,462,223,365,189"/>
+<area shape="rect" id="Node000008" href="$structBasicBoundaryConditionsInterface_1_1BasicBCVectorConst.html" title=" " alt="" coords="463,283,709,323"/>
+<area shape="poly" id="edge833_Node000007_Node000008" title=" " alt="" coords="428,301,463,301,463,306,428,306"/>
+<area shape="rect" id="Node000009" href="$structBasicBoundaryConditionsInterface_1_1BasicBCVectorScale.html" title=" " alt="" coords="463,347,709,387"/>
+<area shape="poly" id="edge834_Node000007_Node000009" title=" " alt="" coords="419,324,503,345,502,350,417,329"/>
+</map>

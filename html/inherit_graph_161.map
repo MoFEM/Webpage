@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classFaceSideOp.html" title=" " alt="" coords="5,35,103,60"/>
+<area shape="rect" id="Node000001" href="$structOpCalculateSideData.html" title="Operator tp collect data from elements on the side of Edge/Face." alt="" coords="195,5,355,31"/>
+<area shape="poly" id="edge161_Node000000_Node000001" title=" " alt="" coords="116,36,194,26,195,31,117,42"/>
+<area shape="rect" id="Node000002" href="$structPoisson2DiscontGalerkinOperators_1_1OpCalculateSideData.html" title="Operator tp collect data from elements on the side of Edge/Face." alt="" coords="151,55,399,95"/>
+<area shape="poly" id="edge162_Node000000_Node000002" title=" " alt="" coords="117,53,151,57,150,62,116,58"/>
+</map>

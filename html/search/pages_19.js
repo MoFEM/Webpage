@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['page_0',['Landing page',['../index.html',1,'']]],
+  ['partition_1',['partition',['../md_tutorials_2scl-3_2README.html',1,'Mesh partition'],['../md_tutorials_2scl-2_2README.html',1,'Mesh partition']]],
+  ['password_20and_20login_2',['Password and login',['../md__2home_2lk58p_2mofem__install_2vanilla__dev__release_2mofem-cephas_2jupyter_2templates_2login__notes.html',1,'']]],
+  ['phase_20field_20model_20and_20navier_20stokes_3',['VEC-5: Phase field model and Navier-Stokes',['../phase_field_doc.html',1,'']]],
+  ['phase_20solving_20transport_20of_20intensity_20equation_4',['MIX-1: Retrive phase solving transport-of-intensity equation.',['../tutorial_phase.html',1,'']]],
+  ['photon_20diffusion_5',['photon diffusion',['../md_tutorials_2scl-10_2README.html',1,'Photon diffusion'],['../tutorials_photon_diffusion.html',1,'SCL-10: Photon diffusion']]],
+  ['plastic_20problem_6',['ADV-0: Plastic problem',['../tutorial_plastic_problem.html',1,'']]],
+  ['plasticity_7',['Plasticity',['../jup_plasticity.html',1,'jup_tutorial_plastic_problem']]],
+  ['plasticity_20module_8',['Eshelbian plasticity module',['../um_eshelbian_plasticity_readme.html',1,'']]],
+  ['plate_9',['plate',['../jup_tutorial_plastic_problem.html',1,'Elastoplastic plate'],['../tutorial_plate.html',1,'VEC-6: Discontinuous Galerkin for Kirchoff-Love Plate']]],
+  ['plate_20with_20hole_10',['Plate with hole',['../jup_plate_with_hole.html',1,'jup_tutorial_plastic_problem']]],
+  ['poisson_20equation_11',['poisson equation',['../poisson_tut1.html',1,'COR-2: Solving the Poisson equation'],['../poisson_tut2.html',1,'COR-3: Implementing operators for the Poisson equation'],['../poisson_tut4.html',1,'COR-5: A nonlinear Poisson equation'],['../tut_mix_poisson.html',1,'MIX-0: Mixed formulation of Poisson equation']]],
+  ['poisson_20problem_12',['SCL-11: Discontinuous Galerkin for Poisson problem',['../tutorial_dg_poisson.html',1,'']]],
+  ['poisson_20s_20equation_13',['SCL-4: Nonlinear Poisson&apos;s equation',['../basic_tutorials_poisson_nonlinear.html',1,'']]],
+  ['poisson_20s_20equation_20homogeneous_20bc_14',['SCL-1: Poisson&apos;s equation (homogeneous BC)',['../basic_tutorials_poisson_homogeneous.html',1,'']]],
+  ['poisson_20s_20equation_20lagrange_20multiplier_15',['SCL-3: Poisson&apos;s equation (Lagrange multiplier)',['../basic_tutorials_poisson_lagrange_multiplier.html',1,'']]],
+  ['poisson_20s_20equation_20non_20homogeneous_20bc_16',['SCL-2: Poisson&apos;s equation (non-homogeneous BC)',['../basic_tutorials_poisson_nonhomogeneous.html',1,'']]],
+  ['pr_17',['How to: Squashing for an external PR',['../SquashFAQ.html',1,'']]],
+  ['practice_18',['Coding practice',['../coding_practice.html',1,'']]],
+  ['problem_19',['problem',['../tutorial_plastic_problem.html',1,'ADV-0: Plastic problem'],['../tutorial_contact_problem.html',1,'ADV-1: Contact problem'],['../tutorial_hemholtz_problem.html',1,'CLX-0: Helmholtz problem'],['../poisson_tut3.html',1,'COR-4: Using fieldsplit solver and DM sub problem.'],['../md_tutorials_2vec-1_2README.html',1,'Readme for eiegn problem'],['../md_tutorials_2vec-1_2eigen__elastic.html',1,'Running problem'],['../tutorial_dg_poisson.html',1,'SCL-11: Discontinuous Galerkin for Poisson problem']]],
+  ['problem_20or_20level_20set_20',['ADV-3: DG Upwind for advection problem or level set',['../tutorial_level_set.html',1,'']]],
+  ['program_21',['program',['../how_to_add_new_module_and_program.html',1,'How to add a new module and program'],['../how_to_compile_program.html',1,'How to compile a program']]],
+  ['programs_22',['Programs',['../runningprograms.html',1,'']]],
+  ['publications_20featuring_20results_20obtained_20using_20mofem_23',['Selected publications featuring results obtained using MoFEM',['../publications.html',1,'']]]
+];
